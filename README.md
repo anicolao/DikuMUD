@@ -18,7 +18,7 @@ Our goal is to create an immersive MUD experience that captures the spirit and w
 
 **Want to contribute?** We're looking for builders, coders, and Barsoom enthusiasts!
 
-🎮 **Join our Discord:** [Discord Invite Link - TBD]
+🎮 **Join our Discord:** https://discord.gg/MeNQzXNCfb
 
 Whether you're interested in world-building, coding, or just want to follow the development, join our Discord community as a first step. All contributors are welcome!
 
