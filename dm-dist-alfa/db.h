@@ -143,7 +143,7 @@ struct reset_q_element
 
 
 /* structure for the update queue     */
-struct reset_q_type
+extern struct reset_q_type
 {
 	struct reset_q_element *head;
 	struct reset_q_element *tail;

@@ -18,6 +18,7 @@
 
 #define NEW_ZONE_SYSTEM
 
+struct reset_q_type reset_q;
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
 ************************************************************************ */
