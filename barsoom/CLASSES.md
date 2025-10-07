@@ -303,7 +303,11 @@ These classes reflect Barsoom's unique setting:
 17. Jeddak's Champion
 18. Legendary Warlord
 19. Warlord of Mars
-20. Immortal Warlord
+20. Supreme Warlord of Mars
+21. Immortal Warrior
+22. Demi-God of War
+23. God of War
+24. the Implementator
 
 ### Scientist Titles (by level)
 1. Apprentice
@@ -325,7 +329,11 @@ These classes reflect Barsoom's unique setting:
 17. Master Mind
 18. Legendary Master Mind
 19. Supreme Master Mind
-20. Immortal Genius
+20. Transcendent Mind
+21. Immortal Genius
+22. Demi-God of Knowledge
+23. God of Knowledge
+24. the Implementator
 
 ### Noble Titles (by level)
 1. Minor Noble
@@ -347,7 +355,11 @@ These classes reflect Barsoom's unique setting:
 17. High Warlord
 18. Supreme Warlord
 19. Warlord of Mars
-20. Immortal Sovereign
+20. Emperor/Empress of Mars
+21. Immortal Sovereign
+22. Demi-God Ruler
+23. God-King/God-Queen
+24. the Implementator
 
 ### Assassin Titles (by level)
 1. Initiate
@@ -369,7 +381,11 @@ These classes reflect Barsoom's unique setting:
 17. Guild Master
 18. Legendary Shadow
 19. Shadow of Death
-20. Immortal Shadow
+20. Supreme Shadow
+21. Immortal Shadow
+22. Demi-God of Death
+23. God of Death
+24. the Implementator
 
 ---
 
