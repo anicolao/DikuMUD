@@ -94,9 +94,9 @@ No automated tests exist. Testing requires:
 
 ## Important Notes
 
-1. **No Unit Tests**: This is legacy code without test infrastructure. Manual testing is required.
+1. **Testing**: This is legacy code without test infrastructure currently. Manual testing is required by running `./dmserver` and connecting via telnet. However, we are adding test framework code as the codebase is extended, so new features should include appropriate tests.
 
-2. **Buffer Overflow Risks**: The code predates modern security practices. Be aware of `strcpy`, `sprintf`, and buffer handling issues, but maintain compatibility with the original design.
+2. **Buffer Safety**: The original code predates modern security practices and contains unsafe buffer operations like `strcpy` and `sprintf`. **New code must always use safe alternatives** like `strncpy`, `snprintf`, etc. When updating existing functions, it is acceptable and encouraged to convert existing operations to safer versions.
 
 3. **Global State**: Heavy use of global variables is intentional design for this era of MUD development.
 
