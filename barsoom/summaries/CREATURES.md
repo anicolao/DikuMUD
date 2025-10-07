@@ -72,7 +72,7 @@ This document consolidates all creatures and races from the John Carter series i
 
 **DEFAULT ZONE:** Multiple zones - Helium (primary), Zodanga, Ptarth, Gathol, Kaol, Hastor, Dusar, Toonol, Duhor, Phundahl, Morbus, Jahar, Manator, Jhama, Tjanath, Lothar
 
-**POPULATION:** COMMON (majority race across most of Mars)
+**POPULATION:** COMMON (dominant population in their city-states)
 
 **Visual Description:**
 Humanoid figures with smooth copper-red skin, athletic builds, wearing ornate metal harnesses decorated with jewels and precious metals. Carry longswords, pistols, and other weapons. Hair is always black, eyes are large and dark. Minimal clothing, maximum ornamentation. Regal bearing and graceful movements.
@@ -123,7 +123,7 @@ Humanoid figures with smooth copper-red skin, athletic builds, wearing ornate me
 
 **DEFAULT ZONE:** Thark Territory (primary), Warhoon Territory, Torquas Territory, various dead sea bottoms and wilderness areas
 
-**POPULATION:** COMMON (widespread across wilderness areas)
+**POPULATION:** COMMON (dominant population in their territories)
 
 **Visual Description:**
 Towering 15-foot figures with olive-green, leathery skin. Four muscular arms, two at shoulder level, two from mid-torso. Large, powerful legs. Tusks curve up from lower jaw. Eyes are large, protruding, and set wide apart. Ears are antenna-like protrusions on top of skull. Wear minimal clothing and leather harnesses for weapons. Fierce, aggressive bearing.
@@ -170,7 +170,7 @@ Towering 15-foot figures with olive-green, leathery skin. Four muscular arms, tw
 
 **DEFAULT ZONE:** Valley Dor (primary), Thern Temples (underground)
 
-**POPULATION:** RARE (limited to specific regions, population declining)
+**POPULATION:** COMMON (dominant population in Valley Dor and Thern Temples)
 
 **Visual Description:**
 Pale white skin, completely hairless. When in their territory, bald. When disguised, wear elaborate blond wigs. Wear ornate harnesses with white and silver decorations. Carry finely crafted weapons. Beautiful but cold appearance. Expression of haughty superiority.
@@ -228,7 +228,7 @@ Pale white skin, completely hairless. When in their territory, bald. When disgui
 
 **DEFAULT ZONE:** Sea of Omean (primary), Temple of Issus, Underground Ocean territories
 
-**POPULATION:** RARE (limited to underground regions)
+**POPULATION:** COMMON (dominant population in Sea of Omean territories)
 
 **Visual Description:**
 Jet black skin with slight blue sheen. Completely hairless. Powerful muscular build. Wear elaborate black and silver harnesses decorated with jewels. Carry finely crafted weapons. Some have distinctive yellow eyes. Move with confidence and grace. Haughty, aristocratic bearing.
@@ -283,7 +283,7 @@ Jet black skin with slight blue sheen. Completely hairless. Powerful muscular bu
 
 **DEFAULT ZONE:** Kadabra (primary), Marentina, North Polar Region
 
-**POPULATION:** RARE (isolated to north polar region)
+**POPULATION:** COMMON (dominant population in north polar cities)
 
 **Visual Description:**
 Yellow-toned skin, completely bald. Wear elaborate harnesses adapted for cold - furs combined with metal and jewels. Sophisticated dress and armor. Regal bearing. Often wear warming cloaks or furs over harnesses. Proud and dignified appearance.
@@ -343,7 +343,7 @@ Yellow-toned skin, completely bald. Wear elaborate harnesses adapted for cold - 
 
 **DEFAULT ZONE:** Lothar (Dead City)
 
-**POPULATION:** UNIQUE (very few real Lotharians remain, perhaps 20-50 individuals)
+**POPULATION:** RARE (very few real Lotharians remain in Lothar, perhaps 20-50 individuals total)
 
 **Visual Description:**
 Normal red Martians physically, but often unfocused eyes suggesting mental elsewhere. Wear ancient, tattered finery. City ruins around them add to surreal atmosphere.
@@ -405,7 +405,7 @@ Normal red Martians physically, but often unfocused eyes suggesting mental elsew
 
 **DEFAULT ZONE:** Bantoom (Kaldane City)
 
-**POPULATION:** RARE (limited to Bantoom region)
+**POPULATION:** COMMON (dominant population in Bantoom)
 
 **Visual Description:**
 Grotesque yet fascinating - large brain case with translucent skin showing brain matter. Small face with intelligent eyes. Six spider-legs for movement. Chelae for grasping. Riding atop headless body, connected at neck stump. Clinical, alien appearance.
@@ -456,7 +456,7 @@ Grotesque yet fascinating - large brain case with translucent skin showing brain
 
 **DEFAULT ZONE:** U-Gor Territory (wilderness)
 
-**POPULATION:** RARE (limited to specific wilderness territory)
+**POPULATION:** COMMON (dominant population in U-Gor Territory)
 
 **Visual Description:**
 Red Martian features but savage appearance. Crude harnesses and minimal clothing. Weapons functional but not ornate. Tribal decorations. War paint or tattoos. Fierce and primitive bearing. Evidence of savage lifestyle.
@@ -520,7 +520,7 @@ Red Martian features but savage appearance. Crude harnesses and minimal clothing
 
 **DEFAULT ZONE:** Bantoom (Kaldane City)
 
-**POPULATION:** COMMON (within Bantoom, bred as livestock)
+**POPULATION:** COMMON (bred as livestock in Bantoom)
 
 **Visual Description:**
 Headless human body with muscular build. Neck ends in circular stump with nerve endings. Moves with purpose when Kaldane attached, stands motionless when alone. Red Martian coloring. Strong and capable physique.
@@ -592,7 +592,7 @@ Headless human body with muscular build. Neck ends in circular stump with nerve 
 
 **DEFAULT ZONE:** Morbus (primary), Toonol (scientific cities)
 
-**POPULATION:** COMMON (within Morbus, mass-produced)
+**POPULATION:** COMMON (mass-produced in Morbus)
 
 **Visual Description:**
 Muscular red Martian-like figures. Some perfect specimens, others with deformities - misshapen limbs, asymmetric features, irregular growth. Blank expressions on most. Wear simple harnesses. Move with purpose but often mechanical precision.
@@ -646,7 +646,7 @@ Muscular red Martian-like figures. Some perfect specimens, others with deformiti
 
 **DEFAULT ZONE:** Lothar (Dead City)
 
-**POPULATION:** UNIQUE (exist only as mental projections, numbers vary by Lotharian present)
+**POPULATION:** COMMON (numerous projections in Lothar, created by Lotharians as needed)
 
 **Visual Description:**
 Translucent or slightly unreal-looking warriors armed with bows. Appear and disappear. Fight with coordination but lack true substance.
@@ -709,7 +709,7 @@ Translucent or slightly unreal-looking warriors armed with bows. Appear and disa
 
 **DEFAULT ZONE:** Valley Dor (primary), Carrion Caves
 
-**POPULATION:** COMMON (in Valley Dor region)
+**POPULATION:** COMMON (numerous in Valley Dor and Carrion Caves)
 
 **Visual Description:**
 Grotesque humanoid plant. Thick, trunk-like body covered in moss and bark-like growth. Single thick foot for locomotion. Multiple writhing tentacles. Leafy, fern-like growth around head area. Single large white eye. Mouth full of needle-like fangs dripping poison. Greenish-brown coloration. Nightmarish and alien.
@@ -765,7 +765,7 @@ Grotesque humanoid plant. Thick, trunk-like body covered in moss and bark-like g
 
 **DEFAULT ZONE:** Valley Dor (primary), North Polar Region, ruins and dungeons throughout Mars
 
-**POPULATION:** RARE (dangerous apex predators, not numerous)
+**POPULATION:** COMMON (numerous in Valley Dor and polar regions, RARE in other ruins/dungeons)
 
 **Visual Description:**
 Massive white-furred ape, 15+ feet tall. Four muscular arms, two from shoulders, two from mid-torso. Powerful legs. Enormous hands with thick claws. Face is ape-like but with unusual intelligence in the eyes. White fur is shaggy and thick. Fangs visible when roaring. Red eyes glinting with rage.
@@ -821,7 +821,7 @@ Massive white-furred ape, 15+ feet tall. Four muscular arms, two from shoulders,
 
 **DEFAULT ZONE:** Dead Sea Bottoms (wilderness), various territories across Mars
 
-**POPULATION:** COMMON (widespread predators across Mars)
+**POPULATION:** COMMON (frequent encounters in wilderness areas)
 
 **Visual Description:**
 Lion-like beast with ten legs, massive and muscular. Feline head with large fangs and fierce eyes. Tawny or ochre colored fur (white in polar regions). Built for speed and power. Stalks prey with predatory grace.
@@ -859,7 +859,7 @@ Lion-like beast with ten legs, massive and muscular. Feline head with large fang
 
 **DEFAULT ZONE:** Thark Territory (primary), wilderness areas, all cities as mounts
 
-**POPULATION:** COMMON (primary mount animal across Mars)
+**POPULATION:** COMMON (numerous in green Martian territories and as mounts in all cities)
 
 **Visual Description:**
 Eight-legged reptilian creature the size of an elephant with a massive, low-slung body. Broad, flat tail for balance. Large head with powerful jaws full of sharp teeth. Skin is leathery, usually gray, slate, or ochre colored. Saddle and harness made of leather with metal fittings. Moves with surprising speed.
@@ -895,7 +895,7 @@ Eight-legged reptilian creature the size of an elephant with a massive, low-slun
 
 **DEFAULT ZONE:** All cities and settlements (as guard animals), Thark Territory
 
-**POPULATION:** COMMON (widespread as guard/companion animals)
+**POPULATION:** COMMON (numerous in cities and green Martian territories as guards/companions)
 
 **Visual Description:**
 Dog-like creature on ten legs, sized like a pony. Hairless, leathery hide. Elongated body like a dachshund but much more muscular. Head resembles a frog or amphibian with large jaws full of sharp teeth. Eyes are intelligent and alert. Colors vary but often mottled browns and grays.
@@ -943,7 +943,7 @@ Dog-like creature on ten legs, sized like a pony. Hairless, leathery hide. Elong
 
 **DEFAULT ZONE:** Underground Passages, Thern Temples, Carrion Caves, abandoned ruins
 
-**POPULATION:** RARE (only in deep underground areas)
+**POPULATION:** COMMON (numerous in deep underground passages and caves)
 
 **Visual Description:**
 Massive white-furred beast, elephant-sized or larger. No visible eyes, just smooth fur across the face. Multiple powerful legs (six or more) supporting enormous bulk. Jaws that can swallow a person whole, filled with crushing teeth. Pure white fur. Moves with disturbing speed despite size. Terrifying presence.
@@ -1007,7 +1007,7 @@ Massive white-furred beast, elephant-sized or larger. No visible eyes, just smoo
 
 **DEFAULT ZONE:** Ghasta (breeding grounds), Jahar (used by Tul Axtar)
 
-**POPULATION:** RARE (bred only in Ghasta, used as terror weapons)
+**POPULATION:** RARE (limited numbers even in Ghasta breeding grounds, used sparingly as terror weapons)
 
 **Visual Description:**
 Huge spider body with eight powerful legs. Large wings (moth-like or bat-like) enabling silent flight. Multiple eyes glinting with limited intelligence. Venomous fangs. Dark coloring for night hunting. Saddle or harness for rider. Moves with eerie grace in air and on ground. Both beautiful and terrifying. Nightmare creature.
@@ -1047,7 +1047,7 @@ Huge spider body with eight powerful legs. Large wings (moth-like or bat-like) e
 
 **DEFAULT ZONE:** All major cities (as cargo animals), trade routes
 
-**POPULATION:** COMMON (widespread as draft animals)
+**POPULATION:** COMMON (numerous in cities and trade routes as draft animals)
 
 **Visual Description:**
 Massive beast larger than a thoat, elephant-sized. Multiple legs supporting huge bulk. Thick hide. Patient, docile expression when trained. Slow but incredibly strong. Laden with cargo and heavy packs.
@@ -1081,7 +1081,7 @@ Massive beast larger than a thoat, elephant-sized. Multiple legs supporting huge
 
 **DEFAULT ZONE:** Wilderness areas, some cities (as hunting birds)
 
-**POPULATION:** RARE (not commonly domesticated)
+**POPULATION:** RARE (occasional encounters in wilderness, uncommon even as hunting birds)
 
 **Visual Description:**
 Large predatory bird with sharp talons and beak. Fast and agile in flight. Fierce eyes. Often trained with leather jesses and hood.
@@ -1110,7 +1110,7 @@ Large predatory bird with sharp talons and beak. Fast and agile in flight. Fierc
 
 **DEFAULT ZONE:** North Polar Region (ice fields and glaciers)
 
-**POPULATION:** RARE (limited to polar regions)
+**POPULATION:** COMMON (frequent encounters in polar ice fields)
 
 **Visual Description:**
 Large creature with shaggy white fur. Powerful build. Adapted to extreme cold. Fierce and aggressive. Dangerous predator of the northern ice.
@@ -1154,7 +1154,7 @@ Large creature with shaggy white fur. Powerful build. Adapted to extreme cold. F
 
 **DEFAULT ZONE:** Various regions (Valley Dor, Polar regions, wilderness)
 
-**POPULATION:** COMMON (in appropriate habitats, swarm creatures)
+**POPULATION:** COMMON (numerous swarms in their habitats)
 
 **Visual Description:**
 Large hornet-like insects with iridescent bodies. Multiple wings. Prominent stinger dripping venom. Compound eyes. Aggressive posture. Usually shown in swarms. Buzzing and dangerous.
@@ -1173,7 +1173,7 @@ Large hornet-like insects with iridescent bodies. Multiple wings. Prominent stin
 
 **DEFAULT ZONE:** Dead Sea Bottoms (all wilderness areas)
 
-**POPULATION:** COMMON (ubiquitous across Mars)
+**POPULATION:** COMMON (ubiquitous ground cover in wilderness areas)
 
 ---
 
@@ -1188,7 +1188,7 @@ Large hornet-like insects with iridescent bodies. Multiple wings. Prominent stin
 
 **DEFAULT ZONE:** Valley Dor
 
-**POPULATION:** COMMON (within Valley Dor)
+**POPULATION:** COMMON (lush vegetation throughout Valley Dor)
 
 ---
 
@@ -1201,7 +1201,7 @@ Large hornet-like insects with iridescent bodies. Multiple wings. Prominent stin
 
 **DEFAULT ZONE:** Valley Dor, city gardens, rare wilderness oases
 
-**POPULATION:** RARE (trees are uncommon on Mars)
+**POPULATION:** COMMON (in Valley Dor), RARE (in city gardens and oases)
 
 ---
 
@@ -1209,56 +1209,64 @@ Large hornet-like insects with iridescent bodies. Multiple wings. Prominent stin
 
 ### Race Implementation Priorities
 
-**High Priority (Common Races):**
-1. **Red Martians:** Most populous, found everywhere, player character option
-2. **Green Martians:** Widespread wilderness race, major antagonists and potential allies
-3. **Hormads:** Common in Morbus/Toonol region
+**High Priority (Widespread or Player Races):**
+1. **Red Martians:** Found in many zones, player character option, COMMON in their cities
+2. **Green Martians:** Multiple territories, major antagonists and allies, COMMON in their zones
+3. **Hormads:** COMMON in Morbus/Toonol region
 
-**Medium Priority (Rare Races):**
-4. **White Martians (Therns):** Limited to Valley Dor region, declining population
-5. **Black Martians (First Born):** Underground regions only, elite warriors
-6. **Yellow Martians:** North polar region only, potential allies
-7. **Kaldanes/Rykors:** Bantoom only, unique mechanics
+**Medium Priority (Regional Dominants):**
+4. **White Martians (Therns):** COMMON in Valley Dor region and Thern Temples
+5. **Black Martians (First Born):** COMMON in Sea of Omean territories, elite warriors
+6. **Yellow Martians:** COMMON in north polar cities, potential allies
+7. **Kaldanes/Rykors:** COMMON in Bantoom, unique mechanics
+8. **U-Gor:** COMMON in U-Gor Territory
 
-**Low Priority (Unique/Special):**
-8. **Lotharians:** Very few remain in Lothar
-9. **U-Gor:** Limited to specific wilderness territory
-10. **Phantom Bowmen:** Only exist when created by Lotharians
+**Low Priority (Rare Even in Home Zone):**
+9. **Lotharians:** RARE even in Lothar (very few real ones remain)
+10. **Phantom Bowmen:** COMMON in Lothar (created as needed by Lotharians)
 
 ---
 
 ### Creature Implementation Priorities
 
-**High Priority (Common Creatures):**
-1. **Banths:** Apex predators, found everywhere
-2. **Thoats:** Essential mounts, universal
-3. **Calots:** Guard animals, universal
-4. **Zitidars:** Draft animals, cities and trade routes
-5. **Plant Men:** Valley Dor region, iconic horror creatures
+**High Priority (Common in Multiple Zones):**
+1. **Banths:** COMMON in wilderness areas across Mars
+2. **Thoats:** COMMON in green Martian territories and all cities as mounts
+3. **Calots:** COMMON in cities and green Martian territories
+4. **Zitidars:** COMMON in cities and trade routes
+5. **Plant Men:** COMMON in Valley Dor region, iconic horror creatures
 
-**Medium Priority (Regional/Rare):**
-6. **Great White Apes:** Dungeons, ruins, polar regions
-7. **Apt:** Deep underground areas only
-8. **Flying Assassins:** Ghasta/Jahar regions, unique threat
-9. **Sith:** Environmental hazards, various regions
+**Medium Priority (Common in Specific Zones):**
+6. **Great White Apes:** COMMON in Valley Dor and polar regions, RARE in other ruins
+7. **Apt:** COMMON in deep underground passages and caves
+8. **Orluk:** COMMON in polar ice fields
+9. **Sith:** COMMON swarms in their habitats
 
-**Low Priority (Specialized):**
-10. **Sorak:** Hunting birds, optional
-11. **Orluk:** Polar regions only
+**Low Priority (Rare or Specialized):**
+10. **Flying Assassins:** RARE even in Ghasta/Jahar
+11. **Sorak:** RARE even in wilderness, uncommon as hunting birds
 12. **Various Wildlife:** Background/flavor
 
 ---
 
 ### Population Guidelines for Zone Building
 
-**UNIQUE:** 1-5 individuals total (Named NPCs, special encounters)
-- Examples: Specific Lotharians, unique characters
+**NOTE:** Population ratings indicate frequency **within the creature's assigned DEFAULT ZONE**, not globally across Mars. A creature marked COMMON in Valley Dor may be non-existent elsewhere.
 
-**RARE:** 5-50 individuals per zone (Special encounters, limited spawns)
-- Examples: White Martians, Black Martians, Yellow Martians, Kaldanes, U-Gor, Great White Apes, Apt, Flying Assassins, Orluk
+**UNIQUE:** Named individuals or very small populations (1-5 total)
+- Examples: Specific named Lotharians in Lothar
 
-**COMMON:** 50+ individuals per zone (Regular spawns, standard encounters)
-- Examples: Red Martians, Green Martians, Banths, Thoats, Calots, Plant Men, Hormads (in Morbus), Rykors (in Bantoom), Zitidars, Sith swarms
+**RARE:** Limited spawns even in their home zone (5-50 individuals per zone)
+- Examples: Flying Assassins (even in Ghasta), Sorak, actual Lotharians (vs. their phantoms)
+
+**COMMON:** Regular encounters and numerous spawns in their zone (50+ individuals per zone)
+- Examples: 
+  - Red Martians in their cities
+  - Therns in Valley Dor/Thern Temples
+  - Kaldanes in Bantoom
+  - Plant Men in Valley Dor
+  - Banths in wilderness areas
+  - Apt in underground passages
 
 ---
 
