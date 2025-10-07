@@ -134,7 +134,7 @@ The following races are available for player characters:
 
 **Stat Modifiers:**
 - **Bonuses:** +1 CHA (practice in deception), +1 WIS (religious training)
-- **Penalties:** -1 STR (less martial culture than some races)
+- **Penalties:** -1 STR (less martial culture than some races), -1 DEX (less physical training)
 
 **Special Abilities:**
 - **Deceptive Nature:** Bonus to bluff, disguise, and persuasion
@@ -179,7 +179,7 @@ The following races are available for player characters:
 
 **Stat Modifiers:**
 - **Bonuses:** +1 STR (superb physique), +1 CON (perfect specimens)
-- **Penalties:** -1 WIS (arrogant, blind to truths that contradict beliefs)
+- **Penalties:** -1 WIS (arrogant, blind to truths that contradict beliefs), -1 CHA (reputation for cruelty)
 
 **Special Abilities:**
 - **Naval Combat:** Bonus in aquatic or submarine environments
@@ -223,7 +223,7 @@ The following races are available for player characters:
 
 **Stat Modifiers:**
 - **Bonuses:** +1 INT (technical knowledge), +1 STR (hardy northern stock)
-- **Penalties:** -1 CHA (isolated, less diplomatic experience with other races)
+- **Penalties:** -1 CHA (isolated, less diplomatic experience with other races), -1 DEX (cold-adapted movements)
 
 **Special Abilities:**
 - **Cold Adaptation:** Resistance to cold damage, better survival in arctic zones
@@ -273,8 +273,8 @@ The following races are available for player characters:
 - **Cannot be Assassins** - Lack dexterity and stealth
 
 **Stat Modifiers:**
-- **Bonuses:** +3 INT (pure brain), +2 WIS (logical thinking)
-- **Penalties:** -3 STR (Rykor bodies weak), -3 DEX (poor coordination), -2 CHA (horrifying appearance), -2 CON (fragile head)
+- **Bonuses:** +3 INT (pure brain), +2 WIS (logical thinking), +3 CON (kaldane head is tough)
+- **Penalties:** -3 STR (Rykor bodies weak), -3 DEX (poor coordination), -2 CHA (horrifying appearance)
 
 **Special Abilities:**
 - **Detachable:** Can detach from Rykor temporarily
@@ -330,7 +330,7 @@ The following races are available for player characters:
 
 **Stat Modifiers:**
 - **Bonuses:** +1 INT (mental training), +1 WIS (philosophical discipline)
-- **Penalties:** -1 CON (decadent, physically weak dying race)
+- **Penalties:** -1 CON (decadent, physically weak dying race), -1 CHA (detached from reality)
 
 **Special Abilities:**
 - **Create Phantoms:** Can create phantom creatures at higher levels (3/day at level 10+)
@@ -377,12 +377,11 @@ The following races are available for player characters:
 
 **Stat Modifiers:**
 - **Bonuses:** +2 STR (Earth gravity advantage), +1 CON (Earth physiology)
-- **Penalties:** -1 WIS initially (unfamiliar with Barsoom, negated after level 3)
+- **Penalties:** -1 WIS (unfamiliar with Barsoom), -2 DEX (unaccustomed to lower gravity)
 
 **Special Abilities:**
 - **Gravity Advantage:** +50% jump distance, reduced fall damage
 - **Earth Endurance:** Bonus to stamina and movement
-- **Quick Learner:** Penalty to WIS removed at level 3
 - **Outsider's Perspective:** Bonus to discovering hidden truths
 
 **Best For:**
@@ -401,14 +400,12 @@ The following races are available for player characters:
 |----------------|--------|-----|-----|-----|-----|-----|-----|-----------------------|---------------------------|
 | Red Martian    | Medium | +0  | +0  | +0  | +0  | +0  | +0  | Any                   | Versatile, balanced       |
 | Green Martian  | Large  | +2  | +0  | +1  | -1  | +0  | -2  | Warrior               | Four arms, extra attacks  |
-| White Martian  | Medium | -1  | +0  | +0  | +0  | +1  | +1  | Noble, Scientist      | Deception bonus           |
-| Black Martian  | Medium | +1  | +0  | +1  | +0  | -1  | +0  | Warrior, Noble        | Dueling, naval combat     |
-| Yellow Martian | Medium | +1  | +0  | +0  | +1  | +0  | -1  | Scientist, Warrior    | Cold resistance, tech     |
-| Kaldane        | Small  | -3  | -3  | -2  | +3  | +2  | -2  | Scientist only        | Detachable, analytical    |
-| Lotharian      | Medium | +0  | +0  | -1  | +1  | +1  | +0  | Scientist, Noble      | Create phantoms           |
-| Earthman       | Medium | +2  | +0  | +1  | +0  | -1* | +0  | Warrior (any)         | Gravity advantage         |
-
-*Earthman WIS penalty removed at level 3
+| White Martian  | Medium | -1  | -1  | +0  | +0  | +1  | +1  | Noble, Scientist      | Deception bonus           |
+| Black Martian  | Medium | +1  | +0  | +1  | +0  | -1  | -1  | Warrior, Noble        | Dueling, naval combat     |
+| Yellow Martian | Medium | +1  | -1  | +0  | +1  | +0  | -1  | Scientist, Warrior    | Cold resistance, tech     |
+| Kaldane        | Small  | -3  | -3  | +3  | +3  | +2  | -2  | Scientist only        | Detachable, analytical    |
+| Lotharian      | Medium | +0  | +0  | -1  | +1  | +1  | -1  | Scientist, Noble      | Create phantoms           |
+| Earthman       | Medium | +2  | -2  | +1  | +0  | -1  | +0  | Warrior (any)         | Gravity advantage         |
 
 ---
 
