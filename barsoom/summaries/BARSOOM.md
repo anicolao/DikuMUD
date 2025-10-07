@@ -8,6 +8,7 @@ This is the comprehensive world guide for Barsoom (Mars), consolidating informat
 - [**CHARACTERS.md**](CHARACTERS.md) - Comprehensive character database with zone assignments for all characters across the series
 - [**CREATURES.md**](CREATURES.md) - Comprehensive creatures and races guide with zone assignments and population estimates for all creatures across the series
 - [**TECHS.md**](TECHS.md) - Comprehensive technology guide with zone assignments and usage frequencies for all technologies across the series
+- [**OBJECTS.md**](OBJECTS.md) - Comprehensive objects guide with zone assignments and frequency ratings for all objects across the series
 
 ## About This Guide
 
