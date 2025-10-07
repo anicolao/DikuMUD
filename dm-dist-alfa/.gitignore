@@ -1,3 +1,7 @@
+delplay
+dmserver
+*.o
+.direnv
 lib/players
 lib/board.messages
 lib/pcobjs.obj
