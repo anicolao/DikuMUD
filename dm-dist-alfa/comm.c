@@ -235,40 +235,49 @@ int run_the_game(int port)
 
 
 
+/* Maximum number of exits in a room */
+#define MAX_EXITS 6
+
 /* Build prompt string with character status */
-void make_prompt(struct descriptor_data *d, char *prompt_buf)
+void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 {
 	struct char_data *ch;
 	int door;
-	char exits_buf[10];
+	char exits_buf[MAX_EXITS * 3 + 1];  /* 3 chars per exit: X or (X) */
 	char *exit_names = "NESWUD";
-	int exit_count = 0;
+	int exit_pos = 0;
 
 	/* Default prompt for non-playing states */
 	if (!d->character || d->connected) {
-		strcpy(prompt_buf, "> ");
+		strncpy(prompt_buf, "> ", buf_size - 1);
+		prompt_buf[buf_size - 1] = '\0';
 		return;
 	}
 
 	ch = d->character;
 
-	/* Build exits string */
-	exits_buf[0] = '\0';
+	/* Build exits string - initialize entire buffer to 0 */
+	memset(exits_buf, 0, sizeof(exits_buf));
 	for (door = 0; door <= 5; door++) {
-		if (EXIT(ch, door) &&
-		    EXIT(ch, door)->to_room != NOWHERE &&
-		    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
-			exits_buf[exit_count++] = exit_names[door];
+		if (EXIT(ch, door) && EXIT(ch, door)->to_room != NOWHERE) {
+			if (IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
+				/* Show closed exits in parentheses */
+				exits_buf[exit_pos++] = '(';
+				exits_buf[exit_pos++] = exit_names[door];
+				exits_buf[exit_pos++] = ')';
+			} else {
+				/* Show open exits normally */
+				exits_buf[exit_pos++] = exit_names[door];
+			}
 		}
 	}
-	exits_buf[exit_count] = '\0';
 
 	/* Build the full prompt */
-	sprintf(prompt_buf, "%dH %dV %dC Exits:%s> ",
+	snprintf(prompt_buf, buf_size, "%dH %dV %dC Exits:%s> ",
 		GET_HIT(ch),
 		GET_MOVE(ch),
 		GET_GOLD(ch),
-		exit_count > 0 ? exits_buf : "None");
+		exit_pos > 0 ? exits_buf : "None");
 }
 
 /* Accept new connects, relay commands, and call 'heartbeat-functs' */
@@ -427,7 +436,7 @@ int game_loop(int s)
 							"*** Press return ***");
 					else {
 						char prompt[MAX_STRING_LENGTH];
-						make_prompt(point, prompt);
+						make_prompt(point, prompt, sizeof(prompt));
 						write_to_descriptor(point->descriptor, prompt);
 					}
 				point->prompt_mode = 0;
