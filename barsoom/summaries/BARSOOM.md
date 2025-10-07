@@ -5,6 +5,7 @@ This is the comprehensive world guide for Barsoom (Mars), consolidating informat
 ## Contents
 
 - [**PLACES.md**](PLACES.md) - Comprehensive world map and gazetteer of all locations across Barsoom
+- [**CHARACTERS.md**](CHARACTERS.md) - Comprehensive character database with zone assignments for all characters across the series
 
 ## About This Guide
 
