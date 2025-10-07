@@ -162,6 +162,21 @@ void do_action(struct char_data *ch, char *arg, int cmd);
 void do_practice(struct char_data *ch, char *arg, int cmd);
 
 
+const char *make_salt(const char *lsalt) {
+  static char salt[256];
+
+  snprintf(salt, sizeof(salt), "$6$%s$", lsalt);
+  return salt;
+}
+
+const char *encrypt_password(const char *pass, const char *salt, struct crypt_data *crypted) {
+    const char *ret = crypt_r(pass, salt, crypted);
+    if (!ret) {
+        perror("password encryption failure");
+    }
+    return ret;
+}
+
 char *command[]=
 { "north", 	     /* 1 */
   "east",
@@ -1132,7 +1147,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			   close_socket(d);
 			else
 			{
-				if (strcmp(crypt_r(arg, d->pwd, &crypted), d->pwd))
+				if (strcmp(encrypt_password(arg, d->pwd, &crypted), d->pwd))
 				{
 					SEND_TO_Q("Wrong password.\n\r", d);
 					SEND_TO_Q("Password: ", d);
@@ -1179,7 +1194,7 @@ void nanny(struct descriptor_data *d, char *arg)
 				return;
 			}
 
-			strcpy(d->pwd, crypt_r(arg, d->character->player.name, &crypted));
+			strcpy(d->pwd, encrypt_password(arg, make_salt(d->character->player.name), &crypted));
 			
 			SEND_TO_Q("Please retype password: ", d);
 
@@ -1190,7 +1205,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			/* skip whitespaces */
 			for (; isspace(*arg); arg++);
 
-			if (strcmp(crypt_r(arg, d->pwd, &crypted), d->pwd))
+			if (strcmp(encrypt_password(arg, d->pwd, &crypted), d->pwd))
 			{
 				SEND_TO_Q("Passwords don't match.\n\r", d);
 				SEND_TO_Q("Retype password: ", d);
@@ -1376,7 +1391,7 @@ void nanny(struct descriptor_data *d, char *arg)
 				return;
 			}
 
-			strcpy(d->pwd, crypt_r(arg, d->character->player.name, &crypted));
+			strcpy(d->pwd, encrypt_password(arg, d->character->player.name, &crypted));
 			*(d->pwd + 10) = '\0';
 
 			SEND_TO_Q("Please retype password: ", d);
@@ -1387,7 +1402,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			/* skip whitespaces */
 			for (; isspace(*arg); arg++);
 
-			if (strcmp(crypt_r(arg, d->pwd, &crypted), d->pwd))
+			if (strcmp(encrypt_password(arg, d->pwd, &crypted), d->pwd))
 			{
 				SEND_TO_Q("Passwords don't match.\n\r", d);
 				SEND_TO_Q("Retype password: ", d);
