@@ -285,43 +285,91 @@ These classes reflect Barsoom's unique setting:
 
 ### Warrior Titles (by level)
 1. Recruit
-2. Padwar (Lieutenant)
-3. Dwar (Captain)  
-4. Dwar (Veteran Captain)
-5. Odwar (General)
-6. Odwar (High General)
-7. Warlord (Supreme Commander)
-8+. Legendary Warlord
+2. Warrior
+3. Veteran Warrior
+4. Padwar (Lieutenant)
+5. Senior Padwar
+6. Dwar (Captain)
+7. Dwar Commander
+8. Senior Dwar
+9. Odwar (General)
+10. Odwar of the Armies
+11. High Odwar
+12. Supreme Odwar
+13. Warlord
+14. Warlord of Legions
+15. High Warlord
+16. Supreme Warlord
+17. Jeddak's Champion
+18. Legendary Warlord
+19. Warlord of Mars
+20. Immortal Warlord
 
 ### Scientist Titles (by level)
 1. Apprentice
-2. Journeyman
-3. Savant
-4. Master Savant
-5. First Savant
-6. Elder Savant
-7. Master Mind
-8+. Legendary Master Mind
+2. Student
+3. Journeyman
+4. Adept
+5. Savant
+6. Master Savant
+7. First Savant
+8. Elder Savant
+9. High Savant
+10. Supreme Savant
+11. Scientist
+12. Master Scientist
+13. First Scientist
+14. Elder Scientist
+15. High Scientist
+16. Supreme Scientist
+17. Master Mind
+18. Legendary Master Mind
+19. Supreme Master Mind
+20. Immortal Genius
 
 ### Noble Titles (by level)
-1. Odwar (Minor Noble)
-2. Odwar (Noble)
-3. Jed (Lesser Ruler)
-4. Jed (Ruler)
-5. Jeddak (Supreme Ruler)
-6. Jeddak (High Jeddak)
-7. Warlord (Emperor)
-8+. Legendary Warlord
+1. Minor Noble
+2. Noble
+3. High Noble
+4. Odwar (Noble Commander)
+5. Senior Odwar
+6. Jed (Ruler)
+7. High Jed
+8. Supreme Jed
+9. Lesser Jeddak
+10. Jeddak (Supreme Ruler)
+11. High Jeddak
+12. Greater Jeddak
+13. Supreme Jeddak
+14. Jeddak of Jeddaks
+15. Prince/Princess of Mars
+16. Warlord
+17. High Warlord
+18. Supreme Warlord
+19. Warlord of Mars
+20. Immortal Sovereign
 
 ### Assassin Titles (by level)
 1. Initiate
-2. Blade
-3. Silent Blade
-4. Master Blade
-5. Death's Shadow
-6. Master Shadow
-7. Shadow Lord
-8+. Legendary Shadow
+2. Novice Blade
+3. Blade
+4. Skilled Blade
+5. Silent Blade
+6. Master Blade
+7. Guild Blade
+8. Elite Blade
+9. Shadow
+10. Silent Shadow
+11. Death's Shadow
+12. Master Shadow
+13. Elder Shadow
+14. High Shadow
+15. Shadow Lord
+16. Shadow Master
+17. Guild Master
+18. Legendary Shadow
+19. Shadow of Death
+20. Immortal Shadow
 
 ---
 
