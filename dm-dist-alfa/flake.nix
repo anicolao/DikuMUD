@@ -19,7 +19,7 @@
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShells.default = pkgs.mkShell {packages = with pkgs; [gcc gdb libxcrypt inetutils go];};
+        devShells.default = pkgs.mkShell {packages = with pkgs; [gcc gdb libxcrypt inetutils go ollama];};
       }
     );
 }
