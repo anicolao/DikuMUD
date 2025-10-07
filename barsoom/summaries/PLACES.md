@@ -1407,21 +1407,23 @@ The southern polar region is the location of the ancient religious fraud perpetr
     [Korad] --- [Zodanga] --- [Helium] --- [Gathol]
                      |            |            |
     [Atmosphere  [Ptarth] --- [Kaol] --- [Manator]
-     Factory]         |                        |
-                 [Dusar]              [Kaldane City]
-                     |                    (Underground)
-                 [Lothar]
-              (Dead City)
-                     |
-         [Various City-States]
-         - Toonol, Duhor, Phundahl, Morbus
-         - Jahar, Jhama, Tjanath
-                     |
-    [Wilderness Areas]
-    - U-Gor Territory
-    - Ghasta (Secret)
-    - Green Territories
-    - Dead Sea Bottoms
+     Factory]         |            |            |
+                 [Dusar]      [Hastor]  [Kaldane City]
+                     |            |        (Underground)
+                 [Lothar]        |
+              (Dead City)   [U-Gor Territory]
+                                  |     (Wilderness)
+         [Toonol - Duhor - Phundahl - Morbus]
+         (Medical/Scientific Cities - Eastern Region)
+                                  |
+                             [Jahar]
+                          (Tyrannical)
+                          /         \
+                   [Ghasta]      [Jhama]
+                   (Secret)   (Mad Science)
+                                  |
+                             [Tjanath]
+                        (Various Allegiance)
 
 ========================================================
                         SOUTH POLE
@@ -1444,6 +1446,33 @@ The southern polar region is the location of the ancient religious fraud perpetr
               [Submarine Fleet Bases]
 ```
 
+### Wilderness Distribution
+
+**Dead Sea Bottoms:**
+- Present between ALL major city locations across the equatorial belt
+- Separates Helium from Zodanga, Gathol from Manator, etc.
+- Primary travel corridors for both airship and ground routes
+- Ochre moss-covered plains stretching for hundreds of miles
+
+**Green Martian Territories:**
+- Thark Territory: West/northwest of Helium region
+- Warhoon Territory: North of Thark territory
+- Torquas and other hordes: Interspersed throughout dead sea bottoms
+- Mobile nomadic camps can appear anywhere in wilderness
+- Generally avoid immediate city environs but control vast regions
+
+**U-Gor Territory:**
+- Located between Hastor (Helium region) and Jahar
+- Remote wilderness region, southeast of main Helium sphere
+- Isolated from major civilization centers
+- Primitive cannibal territory in wilderness expanse
+
+**Ghasta (Secret Location):**
+- Hidden location near Jahar region
+- Not marked on standard maps (secret assassin guild)
+- Accessible only to those who know its location
+- In wilderness areas east/southeast of main action
+
 ### Regional Relationships
 
 **Northern Polar Region:**
@@ -1454,15 +1483,41 @@ The southern polar region is the location of the ancient religious fraud perpetr
 - Magnetic ship navigation
 
 **Equatorial Belt (Main Action):**
+
+*Central Region (Helium Sphere):*
 - Helium: Central power (~1000 miles from Zodanga)
-- Zodanga: Historical enemy, now subdued
-- Gathol: Allied, days of travel from Helium
-- Manator: Remote, isolated, mountainous
-- Ptarth, Kaol, Dusar: Various political players
-- Toonol, Duhor, Phundahl, Morbus: Scientific and political centers
-- Jahar, Jhama: Distant cities, significant travel required
-- Green Martian territories: Interspersed throughout
-- Dead sea bottoms: Between all major locations
+- Zodanga: Historical enemy west of Helium, now subdued
+- Hastor: Subordinate city of Helium
+- Ptarth: Allied city, west/southwest of Helium
+- Kaol: Allied city, roughly between Ptarth and Helium
+- Dusar: South/southwest of Ptarth region
+- Gathol: Allied, days of airship travel north/northeast of Helium
+
+*Remote Eastern/Northeastern Region:*
+- Manator: Remote, isolated, mountainous (northeast, near Gathol)
+- Kaldane City (Bantoom): Underground, near Manator
+
+*Eastern/Southeastern Region (Medical/Scientific Cities):*
+- Toonol: Eastern region, home of Ras Thavas
+- Duhor: Allied kingdom in eastern region
+- Phundahl: Empire in eastern region
+- Morbus: City of hormads, eastern region
+- Connection between these cities closer than to main Helium sphere
+
+*Distant Southeast Region:*
+- Jahar: Significant distance southeast from Helium (days of airship travel)
+- U-Gor Territory: Between Hastor and Jahar in wilderness
+- Ghasta: Secret location near Jahar
+- Jhama: Isolated beyond Jahar, mad scientist's domain
+- Tjanath: Variable allegiance, in southeastern region
+
+*Isolated/Mysterious:*
+- Lothar: Remote dead city, location uncertain (south of Dusar region)
+- Atmosphere Factory: Remote, isolated for safety
+
+*Interspersed Throughout:*
+- Green Martian territories: Nomadic, throughout equatorial belt
+- Dead sea bottoms: Between all major locations as primary terrain
 
 **Southern Polar Region:**
 - Valley Dor: South pole, beautiful trap
