@@ -235,6 +235,42 @@ int run_the_game(int port)
 
 
 
+/* Build prompt string with character status */
+void make_prompt(struct descriptor_data *d, char *prompt_buf)
+{
+	struct char_data *ch;
+	int door;
+	char exits_buf[10];
+	char *exit_names = "NESWUD";
+	int exit_count = 0;
+
+	/* Default prompt for non-playing states */
+	if (!d->character || d->connected) {
+		strcpy(prompt_buf, "> ");
+		return;
+	}
+
+	ch = d->character;
+
+	/* Build exits string */
+	exits_buf[0] = '\0';
+	for (door = 0; door <= 5; door++) {
+		if (EXIT(ch, door) &&
+		    EXIT(ch, door)->to_room != NOWHERE &&
+		    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
+			exits_buf[exit_count++] = exit_names[door];
+		}
+	}
+	exits_buf[exit_count] = '\0';
+
+	/* Build the full prompt */
+	sprintf(prompt_buf, "%dH %dV %dC Exits:%s> ",
+		GET_HIT(ch),
+		GET_MOVE(ch),
+		GET_GOLD(ch),
+		exit_count > 0 ? exits_buf : "None");
+}
+
 /* Accept new connects, relay commands, and call 'heartbeat-functs' */
 int game_loop(int s)
 {
@@ -389,8 +425,11 @@ int game_loop(int s)
 					if (point->showstr_point)
 						write_to_descriptor(point->descriptor,
 							"*** Press return ***");
-					else					
-						write_to_descriptor(point->descriptor, "> ");
+					else {
+						char prompt[MAX_STRING_LENGTH];
+						make_prompt(point, prompt);
+						write_to_descriptor(point->descriptor, prompt);
+					}
 				point->prompt_mode = 0;
 			}
 
