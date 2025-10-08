@@ -1,0 +1,5920 @@
+zone:
+  number: 35
+  name: Greater Helium
+  top_room: 3999
+  lifespan: 30
+  reset_mode: 2
+rooms:
+- vnum: 3900
+  name: The Grand Plaza of Greater Helium
+  description: '   You stand in the magnificent Grand Plaza of Greater Helium, the
+    elder of the
+
+    Twin Cities.  This vast square is paved with polished crimson stone and surrounded
+
+    by towering edifices of scarlet and gold.  Jeweled domes catch the reddish light
+
+    of Mars, creating a spectacular display.  To the north rises the Palace of the
+
+    Warlord, while the Market District extends to the south.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: You see the imposing gates of the Warlord's Palace.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3901
+  - direction: 1
+    description: The plaza extends eastward toward the Temple District.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3910
+  - direction: 2
+    description: The sounds and smells of the marketplace beckon to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 3
+    description: You see the grand thoroughfare heading west toward the city gates.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
+  extra_descriptions: []
+- vnum: 3901
+  name: Before the Palace of the Warlord
+  description: '   You stand before the magnificent Palace of the Warlord of Mars,
+    residence of
+
+    John Carter himself.  The palace is constructed of gleaming scarlet and gold
+
+    materials, with towers reaching toward the thin Martian sky.  Elite guards in
+
+    jeweled harnesses stand at attention.  The Grand Plaza lies to the south.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The palace gates are guarded by elite warriors.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
+  - direction: 2
+    description: You see the Grand Plaza to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3902
+  name: Palace Entrance Hall
+  description: '   The entrance hall of the Palace of the Warlord is breathtaking
+    in its grandeur.
+
+    Murals depicting the great victories of John Carter adorn the walls.  Precious
+
+    metals and gems are worked into every surface.  To the north you can see the
+
+    throne room, while passages lead east and west to other wings of the palace.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: You see the throne room, where the Warlord holds court.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3903
+  - direction: 1
+    description: The eastern wing contains the royal library and archives.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3904
+  - direction: 2
+    description: The palace gates and the plaza beyond are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3901
+  - direction: 3
+    description: The western wing houses the military command center.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3905
+  extra_descriptions: []
+- vnum: 3903
+  name: The Throne Room of the Warlord
+  description: '   This vast chamber is the throne room of John Carter, Warlord of
+    Mars.  The
+
+    throne itself is carved from a single enormous ruby, catching and refracting the
+
+    light in spectacular fashion.  Banners of all the allied city-states hang from
+
+    the high ceiling.  The authority of the greatest warrior Mars has ever known
+
+    can be felt here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The entrance hall lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
+  extra_descriptions: []
+- vnum: 3904
+  name: The Royal Library
+  description: '   This magnificent library contains the accumulated knowledge of
+    Martian
+
+    civilization.  Ancient tomes and scrolls line shelves reaching to the high
+
+    ceiling.  Scientific instruments and maps cover several tables.  The collected
+
+    wisdom of centuries is preserved here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The entrance hall is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
+  extra_descriptions: []
+- vnum: 3905
+  name: Military Command Center
+  description: '   This chamber serves as the command center for Helium''s military
+    forces.  Large
+
+    maps of Mars cover the walls, showing troop positions and strategic locations.
+
+    Communication devices connect to naval and airship fleets.  Military officers
+
+    consult constantly on matters of defense.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The entrance hall is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
+  extra_descriptions: []
+- vnum: 3910
+  name: Temple Square
+  description: '   You stand in the Temple Square of Greater Helium.  The Great Temple
+    rises to
+
+    the north, its scarlet walls and golden dome dominating the skyline.  Priests
+    in
+
+    ceremonial harnesses move about their duties.  Citizens come here to honor their
+
+    ancestors and the glory of Helium.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The entrance to the Great Temple is before you.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3911
+  - direction: 2
+    description: A broad avenue leads south toward the residential districts.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
+  - direction: 3
+    description: The Grand Plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3911
+  name: The Great Temple
+  description: '   The interior of the Great Temple is awe-inspiring.  Massive pillars
+    of scarlet
+
+    marble support a vaulted ceiling decorated with golden stars.  An altar at the
+
+    northern end is surrounded by offerings.  The temple honors the glory of Helium
+
+    and the ancestors who built this great civilization.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: Temple Square is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3910
+  extra_descriptions: []
+- vnum: 3912
+  name: Boulevard of Heroes
+  description: '   This grand boulevard is lined with statues of Helium''s greatest
+    heroes.  You
+
+    see monuments to Tardos Mors, Mors Kajak, and other legendary figures.  The
+
+    street is paved with polished stone and bordered by magnificent buildings.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: Temple Square is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3910
+  - direction: 1
+    description: The boulevard continues eastward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3913
+  - direction: 2
+    description: You see the entrance to the Noble Quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3914
+  extra_descriptions: []
+- vnum: 3913
+  name: Eastern Boulevard
+  description: '   The boulevard continues here, lined with prosperous shops and elegant
+
+    residences.  Red Martian citizens in jeweled harnesses go about their business.
+
+    The eastern city wall is visible in the distance.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: You see the eastern gate in the distance.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
+  - direction: 3
+    description: The Boulevard of Heroes continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
+  extra_descriptions: []
+- vnum: 3914
+  name: Noble Quarter Entrance
+  description: '   You enter the Noble Quarter, where the wealthiest citizens of Greater
+    Helium
+
+    reside.  The buildings here are especially ornate, with jeweled facades and
+
+    elaborate architecture.  Guards patrol to ensure the security of the residents.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Boulevard of Heroes is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
+  - direction: 1
+    description: An elegant street leads into the heart of the Noble Quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3915
+  extra_descriptions: []
+- vnum: 3915
+  name: Street of Towers
+  description: '   Magnificent towers rise on either side of this street, each more
+    elaborate
+
+    than the last.  Wealthy nobles maintain their residences here, competing to
+
+    display the greatest splendor.  The Guild of Nobles has its headquarters nearby.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: You see the entrance to the Guild of Nobles.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3916
+  - direction: 3
+    description: The entrance to the Noble Quarter is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3914
+  extra_descriptions: []
+- vnum: 3916
+  name: Guild of Nobles
+  description: '   This is the headquarters of the Guild of Nobles, where matters
+    of state and
+
+    diplomacy are discussed.  Rich tapestries and rare furnishings fill the chamber.
+
+    A council table of ancient hardwood dominates the center.  Noble houses send
+
+    their representatives here to coordinate policy.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The Street of Towers is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3915
+  extra_descriptions: []
+- vnum: 3920
+  name: Market District Plaza
+  description: '   You are in the bustling Market District of Greater Helium.  Merchants
+    hawk
+
+    their wares from colorful stalls.  The sounds of bargaining and the aromas of
+
+    exotic goods fill the air.  This marketplace serves the entire eastern region
+
+    of the Helium empire.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The Grand Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  - direction: 1
+    description: The market continues eastward with more shops.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
+  - direction: 2
+    description: You see the armory and weaponsmith district.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3922
+  - direction: 3
+    description: Food and provisions vendors line the western side.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3923
+  extra_descriptions: []
+- vnum: 3921
+  name: Eastern Market Row
+  description: '   This section of the market specializes in luxury goods.  You see
+    jewelers,
+
+    cloth merchants, and dealers in rare Martian artifacts.  Wealthy customers
+
+    examine the finest merchandise available on Mars.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: A jeweler's shop is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3924
+  - direction: 2
+    description: You see a leather worker's establishment.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3925
+  - direction: 3
+    description: The Market District Plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  extra_descriptions: []
+- vnum: 3922
+  name: Armory Row
+  description: '   This street is devoted to weapons and armor.  The ring of hammers
+    on metal
+
+    fills the air as weaponsmiths and armorers ply their trade.  Warriors come here
+
+    to purchase the finest weapons and harnesses available.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The Market District Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 1
+    description: A master weaponsmith has his shop here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3926
+  - direction: 2
+    description: The armor shop is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3927
+  extra_descriptions: []
+- vnum: 3923
+  name: Provisions Market
+  description: '   This area of the market sells food and basic supplies.  Vendors
+    offer dried
+
+    fruits, preserved meats, water, and other necessities for life on Mars.  The
+
+    smells of various foods mingle in the air.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: A provisions shop is here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3928
+  - direction: 1
+    description: The Market District Plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 2
+    description: A general store is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3929
+  extra_descriptions: []
+- vnum: 3924
+  name: Master Jeweler
+  description: '   This elegant shop displays the finest jewelry on Mars.  Cases contain
+
+    spectacular gems, precious metals, and intricate harness decorations.  The
+
+    master jeweler serves only the wealthiest clientele.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: Eastern Market Row is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
+  extra_descriptions: []
+- vnum: 3925
+  name: Leather Worker's Shop
+  description: '   This shop specializes in leather goods and harnesses.  The leather
+    worker
+
+    creates custom harnesses, belts, and equipment from the finest materials.  The
+
+    smell of cured leather fills the air.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: Eastern Market Row is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
+  extra_descriptions: []
+- vnum: 3926
+  name: Master Weaponsmith
+  description: '   The master weaponsmith of Greater Helium works here, creating the
+    finest
+
+    blades and radium weapons on Mars.  Weapons of exceptional quality line the
+
+    walls.  Warriors from across the planet come here to commission custom weapons.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: Armory Row is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3922
+  extra_descriptions: []
+- vnum: 3927
+  name: Armorer's Forge
+  description: '   The armorer''s forge is filled with the heat of the furnace and
+    the ring of
+
+    hammers.  Metal harnesses and armor pieces in various stages of completion are
+
+    everywhere.  The armorer crafts protective gear for Helium''s warriors.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: Armory Row is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3922
+  extra_descriptions: []
+- vnum: 3928
+  name: Provisions Shop
+  description: '   This shop sells food and water for daily living and for expeditions.  Sealed
+
+    barrels and containers hold preserved foods.  Water flasks and survival gear are
+
+    also available.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The Provisions Market is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3923
+  extra_descriptions: []
+- vnum: 3929
+  name: General Store
+  description: '   This general store carries a wide variety of goods for everyday
+    life.  You
+
+    see tools, rope, containers, and various useful items.  The merchant is happy
+
+    to serve any customer.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Provisions Market is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3923
+  extra_descriptions: []
+- vnum: 3930
+  name: Scientific Academy Plaza
+  description: '   You stand before the Scientific Academy of Greater Helium, the
+    most advanced
+
+    research institution on Mars.  Scientists and students hurry about with
+
+    instruments and documents.  The Academy is renowned throughout the solar system
+
+    for its discoveries.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The entrance to the Academy is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3931
+  - direction: 1
+    description: The eastern research wing is accessible here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3932
+  - direction: 2
+    description: A street leads south toward the Warrior's Guild.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
+  extra_descriptions: []
+- vnum: 3931
+  name: Academy Main Hall
+  description: '   The main hall of the Scientific Academy is filled with displays
+    of Martian
+
+    technology and scientific instruments.  Models of airships, weapons, and other
+
+    devices are on exhibit.  Scholars discuss theories and experimental results.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The Academy Plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  extra_descriptions: []
+- vnum: 3932
+  name: Research Laboratory
+  description: '   This laboratory is equipped with the most advanced scientific equipment
+    on
+
+    Mars.  Experiments are in progress studying chemistry, physics, and Martian
+
+    biology.  Chemical apparatus bubbles and glows with various compounds.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The Academy Plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  extra_descriptions: []
+- vnum: 3933
+  name: Scientific Supplies Shop
+  description: '   This shop provides chemicals, equipment, and rare scientific supplies
+    to the
+
+    Academy and independent researchers.  Vials, instruments, and unusual compounds
+
+    are carefully organized on shelves.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The Academy Plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  extra_descriptions: []
+- vnum: 3934
+  name: Warrior's Quarter
+  description: '   This district houses the famous Warrior''s Guild of Greater Helium.  Combat
+
+    training echoes from the practice yards.  Warriors in battle harness come and
+    go,
+
+    honing their skills in the art of war.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Scientific Academy Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  - direction: 1
+    description: The entrance to the Warrior's Guild is here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3935
+  - direction: 2
+    description: Training grounds extend to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3936
+  extra_descriptions: []
+- vnum: 3935
+  name: Warrior's Guild Hall
+  description: '   The great hall of the Warrior''s Guild displays weapons and trophies
+    from
+
+    countless battles.  The guild master trains the finest warriors in Helium.
+
+    Combat techniques and strategies are taught here to maintain Helium''s military
+
+    supremacy.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The Warrior's Quarter is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
+  extra_descriptions: []
+- vnum: 3936
+  name: Practice Grounds
+  description: '   These training grounds are where warriors practice their skills.  Training
+
+    dummies stand ready for sword practice.  Targets are set up for radium pistol
+
+    training.  The sounds of combat practice fill the air.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The Warrior's Quarter is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
+  extra_descriptions: []
+- vnum: 3940
+  name: Western Thoroughfare
+  description: '   This broad avenue runs westward from the Grand Plaza toward the
+    western gate.
+
+    Traffic is heavy with citizens, merchants, and travelers.  The western gate and
+
+    the road to Lesser Helium lie ahead.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The Grand Plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  - direction: 2
+    description: The Royal Inn is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
+  - direction: 3
+    description: You see the western gate ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3948
+  extra_descriptions: []
+- vnum: 3941
+  name: The Royal Helium Inn
+  description: '   You enter the most prestigious inn in Greater Helium.  The furnishings
+    are
+
+    luxurious, with rare woods and precious metals adorning every surface.  This inn
+
+    caters to visiting dignitaries, wealthy merchants, and important travelers.  The
+
+    common room buzzes with conversation.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Western Thoroughfare is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
+  - direction: 1
+    description: A stairway leads up to the guest rooms.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3942
+  - direction: 2
+    description: The inn's private dining area is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3943
+  extra_descriptions: []
+- vnum: 3942
+  name: Inn Upstairs
+  description: '   The upper floor of the inn contains luxurious guest chambers.  Each
+    room is
+
+    appointed with the finest furnishings.  Travelers rest here in comfort and
+
+    security.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The stairs lead down to the common room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
+  extra_descriptions: []
+- vnum: 3943
+  name: Private Dining Hall
+  description: '   This elegant dining area serves the inn''s guests.  Tables are
+    set with fine
+
+    tableware.  Servers bring exotic foods and beverages.  Important business and
+
+    diplomatic discussions often occur here over meals.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The common room is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
+  extra_descriptions: []
+- vnum: 3944
+  name: Residential District
+  description: '   You are in a prosperous residential district.  Well-maintained
+    buildings house
+
+    the middle class of Greater Helium.  The streets are clean and orderly.  Citizens
+
+    go about their daily business.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The street continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3945
+  - direction: 1
+    description: More residences are to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3946
+  extra_descriptions: []
+- vnum: 3945
+  name: Northern Residential Street
+  description: '   This residential street is lined with comfortable homes.  Small
+    gardens grow
+
+    the hardy plants of Mars.  Children play while adults tend to their households.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The residential district continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  extra_descriptions: []
+- vnum: 3946
+  name: Eastern Residential Street
+  description: '   More modest but well-kept homes line this street.  The residents
+    here are
+
+    artisans, merchants, and skilled workers who form the backbone of Helium''s
+
+    economy.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The residential district is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  extra_descriptions: []
+- vnum: 3947
+  name: Calot Kennels
+  description: '   These kennels house the fierce but loyal calots used as guard animals.  The
+
+    ten-legged creatures pace in their pens, watchful and alert.  A handler trains
+
+    and sells these valuable animals.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: You see the way out to the street.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  extra_descriptions: []
+- vnum: 3948
+  name: Western Gate - Interior
+  description: '   You stand at the western gate of Greater Helium.  Guards check
+    travelers
+
+    coming and going.  The gate opens onto the elevated roadway that connects to
+
+    Lesser Helium, 75 miles to the west.  The massive city walls extend north and
+
+    south from here.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The Western Thoroughfare extends back into the city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
+  - direction: 3
+    description: The western gate opens onto the wilderness road.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3949
+  extra_descriptions: []
+- vnum: 3949
+  name: Western Gate - Exterior
+  description: '   You stand just outside the western gate of Greater Helium.  The
+    elevated
+
+    roadway extends westward toward Lesser Helium.  The vast expanse of the dead
+
+    sea bottom spreads out below.  This is the main route between the Twin Cities.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The gate leads back into Greater Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3948
+  - direction: 3
+    description: The wilderness road leads west toward Lesser Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3750
+  extra_descriptions: []
+- vnum: 3950
+  name: Eastern Gate - Interior
+  description: '   You stand at the eastern gate of Greater Helium.  This gate faces
+    the vast
+
+    expanse of Mars to the east.  Guards maintain vigilance against potential
+
+    threats.  Travelers heading to distant cities pass through here.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The eastern gate opens to the wilderness beyond.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3951
+  - direction: 3
+    description: The eastern boulevard leads back into the city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3913
+  extra_descriptions: []
+- vnum: 3951
+  name: Eastern Gate - Exterior
+  description: '   You stand outside the eastern gate of Greater Helium.  The Martian
+    wilderness
+
+    stretches endlessly to the east.  Ancient ruins and distant cities lie somewhere
+
+    beyond the horizon.  This is the start of long and dangerous journeys.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The gate leads back into Greater Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
+  extra_descriptions: []
+- vnum: 3952
+  name: South Plaza
+  description: '   This plaza on the southern side of the city serves as a gathering
+    place for
+
+    citizens.  Smaller markets and local establishments surround the open space.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: A street leads north toward the main market.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 1
+    description: The Assassin's Quarter lies in the shadows to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3953
+  - direction: 2
+    description: The southern wall and gate are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3956
+  extra_descriptions: []
+- vnum: 3953
+  name: Shadowed Alley
+  description: '   This narrow alley is perpetually in shadow.  Few honest citizens
+    venture here.
+
+    Whispers speak of the Assassin''s Guild operating somewhere in these dark passages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The alley continues deeper into the shadows.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3954
+  - direction: 3
+    description: South Plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  extra_descriptions: []
+- vnum: 3954
+  name: Assassin's Guild
+  description: '   You have found the secret headquarters of the Assassin''s Guild.  This
+    place
+
+    operates in the shadows, training those who deal in silent death.  The guild
+
+    master trains skilled assassins in the deadly arts.'
+  zone: 35
+  room_flags: 28
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The shadowed alley is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3953
+  extra_descriptions: []
+- vnum: 3955
+  name: Training Room
+  description: '   This hidden room is where assassins practice their deadly craft.  Training
+
+    dummies and practice weapons are arranged for skill development.  The art of
+
+    silent killing is perfected here.'
+  zone: 35
+  room_flags: 28
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The guild hall is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3954
+  extra_descriptions: []
+- vnum: 3956
+  name: Southern Gate - Interior
+  description: '   The southern gate of Greater Helium provides access to the dead
+    sea bottom
+
+    plains to the south.  Guards monitor traffic in and out of the city.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: South Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  - direction: 2
+    description: The gate opens to the southern wilderness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3957
+  extra_descriptions: []
+- vnum: 3957
+  name: Southern Gate - Exterior
+  description: '   You stand outside the southern gate of Greater Helium.  The dead
+    sea bottom
+
+    stretches southward, a vast expanse of ancient ocean floor now dry and desolate.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The gate leads back into the city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3956
+  extra_descriptions: []
+- vnum: 3958
+  name: Common Square
+  description: '   This is the common square where ordinary citizens gather.  Small
+    vendors sell
+
+    basic goods.  The atmosphere is less grand than the main plaza but more
+
+    welcoming to common folk.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The market district is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3923
+  - direction: 1
+    description: A modest inn is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3959
+  - direction: 2
+    description: The poor quarter begins to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3960
+  extra_descriptions: []
+- vnum: 3959
+  name: The Common Rest Inn
+  description: '   This modest inn serves common citizens and travelers of limited
+    means.  The
+
+    furnishings are simple but clean.  The rates are affordable and the atmosphere
+
+    is welcoming.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The Common Square is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3958
+  extra_descriptions: []
+- vnum: 3960
+  name: Poor Quarter
+  description: '   This district houses the poorest citizens of Greater Helium.  The
+    buildings
+
+    are run-down and crowded.  Despite the poverty, the residents maintain their
+
+    pride and honor as citizens of Helium.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Common Square is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3958
+  - direction: 1
+    description: The streets wind through the poor district.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3961
+  extra_descriptions: []
+- vnum: 3961
+  name: Poor Quarter Street
+  description: '   Narrow streets wind through the poor quarter.  The residents here
+    struggle to
+
+    survive but maintain hope for a better future.  Some find work in the markets
+    or
+
+    as laborers.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The poor quarter continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3960
+  extra_descriptions: []
+- vnum: 3962
+  name: Warehouse District
+  description: '   This area contains warehouses storing goods for the markets.  Large
+    buildings
+
+    hold supplies, trade goods, and equipment.  Workers load and unload cargo.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: You see the market districts to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
+  - direction: 2
+    description: The old docks area is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3963
+  extra_descriptions: []
+- vnum: 3963
+  name: Old Docks
+  description: '   These ancient docks once served water vessels when Mars had seas.  Now
+    they
+
+    are used for storage and less reputable activities.  The area has a rough
+
+    reputation.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The warehouse district is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3962
+  extra_descriptions: []
+- vnum: 3964
+  name: Airship Landing Platform
+  description: '   This elevated platform serves as a landing pad for airships.  The
+    thin
+
+    Martian atmosphere makes air travel challenging but essential.  Ships come and
+
+    go, connecting Greater Helium to distant cities.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 2
+    description: A ramp leads down to the ground level.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3965
+  name: Military Barracks
+  description: '   These barracks house the standing army of Greater Helium.  Warriors
+    in
+
+    training and veteran soldiers share quarters here.  Weapons and equipment are
+
+    maintained in readiness.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The parade ground is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3966
+  extra_descriptions: []
+- vnum: 3966
+  name: Parade Ground
+  description: '   This open space is used for military formations and ceremonies.  Troops
+    drill
+
+    and train here under the watchful eyes of officers.  The might of Helium is on
+
+    display.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The barracks are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3965
+  extra_descriptions: []
+- vnum: 3967
+  name: Naval Command
+  description: '   This headquarters coordinates Helium''s powerful airship navy.  Maps
+    show
+
+    fleet positions and patrol routes.  Officers plan strategies and deployments.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: You see the shipyards to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3968
+  extra_descriptions: []
+- vnum: 3968
+  name: Airship Shipyards
+  description: '   These shipyards construct and repair the airships of Helium''s
+    navy.  Massive
+
+    vessels are in various stages of construction.  The technology of Martian flight
+
+    is evident in every detail.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: Naval Command is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3967
+  extra_descriptions: []
+- vnum: 3969
+  name: Northern Plaza
+  description: '   This plaza on the northern side of the city provides access to
+    the northern
+
+    districts.  Citizens gather here to socialize and conduct business.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The palace district is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3901
+  - direction: 2
+    description: The main plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  - direction: 3
+    description: The northern residential areas are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3970
+  extra_descriptions: []
+- vnum: 3970
+  name: Northern Residential Area
+  description: '   Comfortable homes for middle-class citizens line these northern
+    streets.  The
+
+    area is quiet and well-maintained.  Gardens grow hardy Martian plants.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The northern plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3969
+  extra_descriptions: []
+- vnum: 3971
+  name: Observatory Tower
+  description: '   This tower houses astronomical instruments.  Martian scientists
+    study the
+
+    heavens from here, tracking Earth and other planets.  The thin atmosphere
+
+    provides excellent viewing conditions.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 5
+    description: Stairs lead down to the ground level.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  extra_descriptions: []
+- vnum: 3972
+  name: Archives Hall
+  description: '   This hall contains the historical records of Greater Helium and
+    the broader
+
+    Helium empire.  Ancient documents detail the history of the red Martian race.
+
+    Scholars research the past here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The library is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3904
+  extra_descriptions: []
+- vnum: 3973
+  name: Hall of Heroes
+  description: '   This magnificent hall displays portraits and statues of Helium''s
+    greatest
+
+    heroes.  John Carter, Tardos Mors, Mors Kajak, Carthoris, and many others are
+
+    honored here.  Their deeds inspire future generations.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The throne room is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3903
+  extra_descriptions: []
+- vnum: 3974
+  name: Guard Barracks
+  description: '   These barracks house the elite palace guard.  Only the finest warriors
+    serve
+
+    here, protecting the Warlord and his family.  Training is constant and rigorous.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The military command center is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3905
+  extra_descriptions: []
+- vnum: 3975
+  name: Diplomatic Reception Hall
+  description: '   This elegant hall is where the Warlord receives foreign dignitaries
+    and
+
+    ambassadors.  Meetings and negotiations that affect all of Mars occur here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The palace entrance hall is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
+  extra_descriptions: []
+- vnum: 3976
+  name: Royal Gardens
+  description: '   These magnificent gardens grow the rarest plants of Mars.  Carefully
+    tended
+
+    by expert gardeners, they provide beauty and tranquility.  The royal family
+
+    walks here in contemplation.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 3
+    description: A gate leads back to the palace grounds.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3901
+  extra_descriptions: []
+- vnum: 3977
+  name: Meditation Chamber
+  description: '   This quiet chamber is used for meditation and reflection.  The
+    Warlord
+
+    sometimes retreats here to think and plan.  Silence and peace pervade the space.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The throne room is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3903
+  extra_descriptions: []
+- vnum: 3978
+  name: Treasure Vault
+  description: '   This secure vault holds the treasures of Greater Helium.  Gems,
+    precious
+
+    metals, and rare artifacts are carefully guarded.  The wealth of the city-state
+
+    is stored here.'
+  zone: 35
+  room_flags: 28
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The military command center is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3905
+  extra_descriptions: []
+- vnum: 3979
+  name: Central Tower
+  description: '   This tower rises high above the city, providing views in all directions.
+
+    Guards watch for approaching threats or arriving ships.  Signal systems
+
+    coordinate city defenses.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 5
+    description: The ground level is far below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3980
+  name: Eastern Tower
+  description: '   This tower on the eastern wall provides observation of the eastern
+    approaches.
+
+    Guards maintain constant vigilance.  Warning systems are ready to alert the city
+
+    to any danger.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 5
+    description: The eastern gate is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
+  extra_descriptions: []
+- vnum: 3981
+  name: Western Tower
+  description: '   This tower guards the western approaches and the road to Lesser
+    Helium.
+
+    Guards watch the traffic on the elevated roadway and scan the dead sea bottom
+
+    for threats.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 5
+    description: The western gate is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3948
+  extra_descriptions: []
+- vnum: 3982
+  name: Southern Tower
+  description: '   This tower provides a commanding view of the southern approaches.  The
+    vast
+
+    expanse of the dead sea bottom stretches endlessly to the south.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 5
+    description: The southern gate is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3956
+  extra_descriptions: []
+- vnum: 3983
+  name: Temple Courtyard
+  description: '   This courtyard outside the Great Temple is a place of peace.  Citizens
+    come
+
+    here to rest and reflect.  Gardens surround a central fountain.'
+  zone: 35
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The Great Temple is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3911
+  extra_descriptions: []
+- vnum: 3984
+  name: Priest's Quarters
+  description: '   These chambers house the priests who serve the Great Temple.  Simple
+    but
+
+    comfortable rooms provide rest for those dedicated to religious service.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The temple is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3911
+  extra_descriptions: []
+- vnum: 3985
+  name: Smithy
+  description: '   This smithy serves the city, producing tools and hardware for everyday
+    use.
+
+    The heat of the forge and the ring of hammers fill the space.  A skilled smith
+
+    works here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The market area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3923
+  extra_descriptions: []
+- vnum: 3986
+  name: Tannery
+  description: '   This tannery processes leather for various uses.  The smell is
+    strong but the
+
+    work is essential.  Skilled tanners create quality leather for the city''s needs.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The market area is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3925
+  extra_descriptions: []
+- vnum: 3987
+  name: Healer's Hall
+  description: '   This hall is where the injured and sick receive care.  Martian
+    medical
+
+    knowledge combines with traditional healing.  Healers tend to those in need.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: You see the street outside.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  extra_descriptions: []
+- vnum: 3988
+  name: Training Hall
+  description: '   This hall is where young warriors begin their training.  Basic
+    combat skills
+
+    and weapon use are taught here.  The next generation of Helium''s defenders
+
+    starts their education here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The warrior's guild is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3935
+  extra_descriptions: []
+- vnum: 3989
+  name: Arena
+  description: '   This arena hosts combat demonstrations and competitions.  Warriors
+    test their
+
+    skills against each other in non-lethal contests.  Spectators watch the displays
+
+    of martial prowess.'
+  zone: 35
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The exit leads back to the city streets.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
+  extra_descriptions: []
+- vnum: 3990
+  name: Bath House
+  description: '   This bath house provides cleansing and relaxation for citizens.  Martian
+
+    customs of bathing and grooming are practiced here.  The atmosphere is peaceful.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The street is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  extra_descriptions: []
+- vnum: 3991
+  name: Merchant Guild Hall
+  description: '   This hall serves as the headquarters for the merchant''s guild.  Trade
+
+    agreements are negotiated and disputes settled here.  The economic health of
+
+    Greater Helium depends on successful commerce.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The market plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  extra_descriptions: []
+- vnum: 3992
+  name: City Administration
+  description: '   This building houses the administrative functions of Greater Helium.  Clerks
+
+    maintain records, issue permits, and handle the bureaucratic needs of the city.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The grand plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3993
+  name: Hall of Records
+  description: '   This hall contains records of property, genealogy, and legal matters.  The
+
+    meticulous records of Helium''s citizens are maintained here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The city administration is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
+  extra_descriptions: []
+- vnum: 3994
+  name: Prison
+  description: '   This secure facility holds those who have violated the laws of
+    Greater Helium.
+
+    Guards maintain strict watch over the prisoners.  Justice in Helium is swift but
+
+    fair.'
+  zone: 35
+  room_flags: 28
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The guard headquarters is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3995
+  extra_descriptions: []
+- vnum: 3995
+  name: Guard Headquarters
+  description: '   This building serves as headquarters for the city guard.  Patrols
+    are
+
+    coordinated and reports filed here.  The guard maintains order and security
+
+    throughout Greater Helium.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The prison is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3994
+  - direction: 3
+    description: The plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3996
+  name: Scholars Quarter
+  description: '   This district houses scholars, researchers, and intellectuals.  Libraries
+    and
+
+    study halls are found here.  The pursuit of knowledge is celebrated.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The scientific academy is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  extra_descriptions: []
+- vnum: 3997
+  name: Library Annex
+  description: '   This annex to the royal library contains additional texts and research
+
+    materials.  Scholars study ancient documents and contemporary works here.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The main library is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3904
+  extra_descriptions: []
+- vnum: 3998
+  name: Music Hall
+  description: '   This hall is dedicated to Martian music and performance.  While
+    Martians are
+
+    not as musically inclined as Earth cultures, they appreciate artistic expression.
+
+    Performances occur here occasionally.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The street is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
+  extra_descriptions: []
+- vnum: 3999
+  name: Hall of Antiquities
+  description: '   This museum displays artifacts from Mars'' ancient past.  Relics
+    from lost
+
+    civilizations and historical items are preserved here.  The long history of Mars
+
+    is on display.'
+  zone: 35
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The boulevard is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
+  extra_descriptions: []
+mobiles:
+- vnum: 3900
+  namelist: scientist elder red martian
+  short_desc: the Elder Red Martian Scientist
+  long_desc: An elderly Red Martian scientist examines rare compounds and instruments.
+  detailed_desc: 'This ancient scientist has copper-red skin weathered by centuries
+    of life. His
+
+    coal-black hair is streaked with silver. He wears an ornate harness decorated
+
+    with rare gems and scientific emblems. His eyes gleam with profound knowledge.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d8+14
+    gold: 15000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3901
+  namelist: baker master red martian
+  short_desc: the Master Red Martian Baker
+  long_desc: A master baker works here, preparing traditional Martian breads and pastries.
+  detailed_desc: 'This baker has smooth copper-red skin and powerful arms from years
+    of kneading
+
+    dough. His simple but quality harness is dusted with flour from his trade. Scars
+
+    on his arms show his warrior past before he chose the baker''s life.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 3000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3902
+  namelist: grocer provisions merchant red martian
+  short_desc: the Red Martian Provisions Merchant
+  long_desc: A prosperous provisions merchant manages his extensive inventory.
+  detailed_desc: 'A tall red Martian with athletic build and copper-red skin. His
+    jeweled harness
+
+    marks him as a successful merchant. He moves with efficiency between shelves
+
+    stocked with preserved foods and supplies.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 3000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3903
+  namelist: weaponsmith master artisan red martian
+  short_desc: the Master Weaponsmith
+  long_desc: A renowned weaponsmith examines blades with a critical eye.
+  detailed_desc: 'This master craftsman has copper-red skin marked with forge burns
+    and scars from
+
+    testing weapons. His harness displays weapons of his own creation. His
+
+    reputation extends across all of Mars for producing the finest blades.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d8+14
+    gold: 5000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3904
+  namelist: armorer master craftsman red martian
+  short_desc: the Master Armorer
+  long_desc: A master armorer inspects harnesses and armor with expert attention.
+  detailed_desc: 'A powerful red Martian with copper-red skin and muscular build.
+    His hands show
+
+    the marks of his craft. He wears an example of his finest work - a jeweled
+
+    battle harness of exceptional quality.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d8+14
+    gold: 5000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3905
+  namelist: jeweler master artisan red martian
+  short_desc: the Master Jeweler
+  long_desc: A distinguished jeweler examines precious gems through a magnifying lens.
+  detailed_desc: 'This elderly jeweler has copper-red skin and delicate hands perfect
+    for
+
+    intricate work. His harness is a masterwork of gems and precious metals,
+
+    advertising his skill. His eyes are sharp despite his age.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d8+13
+    gold: 8000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3906
+  namelist: leather worker master craftsman red martian
+  short_desc: the Master Leather Worker
+  long_desc: A skilled leather worker creates custom harnesses and equipment.
+  detailed_desc: 'This craftsman has copper-red skin and strong, steady hands. He
+    wears a simple
+
+    but perfectly fitted leather harness of his own design. The smell of cured
+
+    leather clings to him.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 3000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3907
+  namelist: noble guildmaster red martian
+  short_desc: the Noble Guildmaster
+  long_desc: A distinguished guildmaster of the Noble's Guild stands here imperiously.
+  detailed_desc: 'This noble has the bearing of ancient lineage. His copper-red skin
+    is
+
+    unblemished, his coal-black hair perfectly groomed. His harness is adorned with
+
+    the finest gems and precious metals, marking his high station.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+40000
+    damage_dice: 1d10+15
+    gold: 20000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3908
+  namelist: warrior guildmaster red martian
+  short_desc: the Warrior Guildmaster
+  long_desc: A legendary warrior stands here, his presence commanding respect.
+  detailed_desc: 'This warrior guildmaster is a living legend. His copper-red skin
+    bears countless
+
+    battle scars earned in decades of combat. His eyes are hard and calculating. His
+
+    battle harness is functional and deadly, decorated only with marks of rank.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+45000
+    damage_dice: 2d8+16
+    gold: 25000
+    experience: 120000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3909
+  namelist: scientist guildmaster red martian
+  short_desc: the Scientific Guildmaster
+  long_desc: The guildmaster of the Scientific Academy works at a complex apparatus.
+  detailed_desc: 'This brilliant scientist has copper-red skin and intense, focused
+    eyes. His
+
+    harness is decorated with scientific instruments and rare materials. His mind
+    is
+
+    one of the greatest on Mars, advancing knowledge in multiple fields.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+40000
+    damage_dice: 1d10+15
+    gold: 20000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3910
+  namelist: assassin guildmaster red martian
+  short_desc: the Assassin Guildmaster
+  long_desc: A figure cloaked in shadows watches you with cold, calculating eyes.
+  detailed_desc: 'This master assassin moves with deadly grace. His copper-red skin
+    is pale from
+
+    working in shadows. His harness is black and minimal, designed for silence. His
+
+    eyes miss nothing, and death follows his silent movements.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+40000
+    damage_dice: 2d8+15
+    gold: 20000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3911
+  namelist: innkeeper royal red martian
+  short_desc: the Royal Innkeeper
+  long_desc: The distinguished innkeeper of the Royal Helium Inn greets guests warmly.
+  detailed_desc: 'This innkeeper has copper-red skin and a welcoming demeanor. His
+    fine harness
+
+    shows his establishment''s quality. He has served countless dignitaries and
+
+    maintains the highest standards.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3912
+  namelist: innkeeper common red martian
+  short_desc: the Common Rest Innkeeper
+  long_desc: A friendly innkeeper welcomes travelers of modest means.
+  detailed_desc: 'This innkeeper has copper-red skin and a warm smile. His simple
+    but clean
+
+    harness reflects his honest trade. He treats all guests with respect regardless
+
+    of their wealth.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+11
+    gold: 2000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3913
+  namelist: guard palace elite red martian
+  short_desc: a Palace Guard
+  long_desc: An elite palace guard stands at attention, alert and dangerous.
+  detailed_desc: 'This elite warrior has copper-red skin and a hardened demeanor.
+    His jeweled
+
+    battle harness marks him as part of the palace guard. He is trained to defend
+
+    the Warlord with his life. His hand rests casually on his longsword.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d10+14
+    gold: 10000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3914
+  namelist: guard city red martian
+  short_desc: a City Guard
+  long_desc: A city guard patrols here, maintaining order.
+  detailed_desc: 'This guard has copper-red skin and the alert bearing of a trained
+    warrior. His
+
+    battle harness is functional and well-maintained. He watches for trouble and
+
+    enforces the laws of Greater Helium.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3915
+  namelist: guard gate red martian
+  short_desc: a Gate Guard
+  long_desc: A vigilant gate guard monitors all who pass through.
+  detailed_desc: 'This guard has copper-red skin weathered from standing watch. His
+    battle harness
+
+    shows signs of long service. He questions travelers and watches for threats to
+
+    the city.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3916
+  namelist: priest temple red martian
+  short_desc: a Temple Priest
+  long_desc: A priest in ceremonial harness performs his sacred duties.
+  detailed_desc: 'This priest has copper-red skin and a serene expression. His ceremonial
+    harness
+
+    is adorned with religious symbols and precious metals. He serves the Great
+
+    Temple and the spiritual needs of Helium''s citizens.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3917
+  namelist: scholar red martian
+  short_desc: a Red Martian Scholar
+  long_desc: A scholar pores over ancient texts and documents.
+  detailed_desc: 'This scholar has copper-red skin and the distracted air of one lost
+    in thought.
+
+    His harness is modest but adorned with writing instruments and scrolls. He
+
+    pursues knowledge above all else.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 3000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3918
+  namelist: warrior student red martian
+  short_desc: a Warrior Student
+  long_desc: A young warrior practices combat forms with dedication.
+  detailed_desc: 'This student has copper-red skin unmarked by battle scars. His simple
+    battle
+
+    harness shows he is still in training. Eagerness and determination shine in his
+
+    eyes as he masters the warrior''s art.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3919
+  namelist: scientist student red martian
+  short_desc: a Scientific Student
+  long_desc: A student scientist works on an experiment with intense focus.
+  detailed_desc: 'This student has copper-red skin and hands stained with various
+    chemicals. His
+
+    simple harness holds scientific instruments. He studies under the greatest minds
+
+    on Mars.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3920
+  namelist: merchant red martian
+  short_desc: a Red Martian Merchant
+  long_desc: A merchant conducts business with customers.
+  detailed_desc: 'This merchant has copper-red skin and a shrewd expression. His harness
+    is good
+
+    quality, showing his success in trade. He deals fairly but drives a hard
+
+    bargain.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 3000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3921
+  namelist: citizen wealthy red martian
+  short_desc: a Wealthy Citizen
+  long_desc: A prosperous citizen goes about their business.
+  detailed_desc: 'This citizen has copper-red skin and wears an expensive jeweled
+    harness. They
+
+    move with the confidence of wealth and status. Their life in Greater Helium is
+
+    comfortable and secure.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 5000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3922
+  namelist: citizen common red martian
+  short_desc: a Common Citizen
+  long_desc: An ordinary citizen of Greater Helium hurries past.
+  detailed_desc: 'This citizen has copper-red skin and wears a simple but serviceable
+    harness.
+
+    They work hard to support themselves and their family. Pride in being a citizen
+
+    of Helium shows in their bearing.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 1000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3923
+  namelist: citizen poor red martian
+  short_desc: a Poor Citizen
+  long_desc: A struggling citizen tries to make their way.
+  detailed_desc: 'This citizen has copper-red skin and wears a worn, patched harness.
+    Life is hard
+
+    in the poor quarter but they maintain their dignity. Hope for better times keeps
+
+    them going.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+15000
+    damage_dice: 1d6+6
+    gold: 500
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3924
+  namelist: worker laborer red martian
+  short_desc: a Red Martian Laborer
+  long_desc: A muscular laborer carries goods and materials.
+  detailed_desc: 'This worker has copper-red skin darkened by sun exposure and muscular
+    arms from
+
+    hard labor. His simple harness is practical and worn. He earns his living
+
+    through strength and toil.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d8+8
+    gold: 1000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3925
+  namelist: officer military red martian
+  short_desc: a Military Officer
+  long_desc: A military officer reviews strategic documents.
+  detailed_desc: 'This officer has copper-red skin marked with battle scars. His decorated
+    battle
+
+    harness shows his rank and service. He commands troops and plans military
+
+    operations for Helium''s forces.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+35000
+    damage_dice: 1d10+13
+    gold: 8000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3926
+  namelist: pilot airship red martian
+  short_desc: an Airship Pilot
+  long_desc: An airship pilot checks navigation instruments.
+  detailed_desc: 'This pilot has copper-red skin and the keen eyes of one who navigates
+    the thin
+
+    Martian air. His harness includes navigation tools and safety equipment. He
+
+    pilots the airships that connect distant cities.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+11
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3927
+  namelist: healer physician red martian
+  short_desc: a Red Martian Healer
+  long_desc: A skilled healer tends to the sick and injured.
+  detailed_desc: 'This healer has copper-red skin and gentle hands skilled in Martian
+    medicine.
+
+    His harness includes medical instruments and pouches of healing compounds. He
+
+    dedicates his life to easing suffering.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+11
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3928
+  namelist: calot handler trainer red martian
+  short_desc: a Calot Handler
+  long_desc: A handler works with fierce but loyal calots.
+  detailed_desc: 'This handler has copper-red skin scarred from working with dangerous
+    animals. His
+
+    heavy leather harness protects against calot claws and teeth. He trains and
+
+    sells these valuable guard animals.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 3000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3929
+  namelist: calot guard ten-legged
+  short_desc: a Calot
+  long_desc: A ten-legged calot watches alertly, ready to defend its territory.
+  detailed_desc: 'This calot is sized like a large pony with ten powerful legs. Its
+    hairless,
+
+    leathery hide is mottled gray and brown. The frog-like head houses a mouth full
+
+    of sharp teeth. Its eyes are intelligent and watchful. It can move with
+
+    incredible speed when needed.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+12000
+    damage_dice: 2d6+8
+    gold: 3000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3930
+  namelist: servant palace red martian
+  short_desc: a Palace Servant
+  long_desc: A palace servant performs their duties with quiet efficiency.
+  detailed_desc: 'This servant has copper-red skin and wears a fine harness befitting
+    palace
+
+    staff. They serve the Warlord''s household with dedication and discretion.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 1000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3931
+  namelist: diplomat ambassador red martian
+  short_desc: a Diplomatic Ambassador
+  long_desc: An ambassador from another city-state conducts official business.
+  detailed_desc: 'This ambassador has copper-red skin and the polished demeanor of
+    a professional
+
+    diplomat. Their elaborate harness displays the symbols of their home city. They
+
+    negotiate treaties and alliances on behalf of their people.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 8000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3932
+  namelist: artisan craftsman red martian
+  short_desc: a Red Martian Artisan
+  long_desc: A skilled artisan works on their craft.
+  detailed_desc: 'This artisan has copper-red skin and the focused expression of someone
+    absorbed
+
+    in their work. Their harness is decorated with tools of their trade. They create
+
+    the goods that make civilization possible.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 2000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3933
+  namelist: child red martian
+  short_desc: a Red Martian Child
+  long_desc: A young Martian child plays here, full of energy.
+  detailed_desc: 'This child has smooth copper-red skin unmarked by age or hardship.
+    Their small
+
+    harness is simple but well-made. They play with the innocent joy of youth,
+
+    unaware of the dangers of Mars.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+5000
+    damage_dice: 1d4+2
+    gold: 100
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3934
+  namelist: guard tower watchman red martian
+  short_desc: a Tower Watchman
+  long_desc: A vigilant watchman scans the horizon for threats.
+  detailed_desc: 'This watchman has copper-red skin weathered from exposure to sun
+    and wind. His
+
+    harness includes observation equipment. He maintains constant watch over the
+
+    approaches to Greater Helium.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3935
+  namelist: clerk administrator red martian
+  short_desc: a City Clerk
+  long_desc: A clerk manages paperwork and administrative duties.
+  detailed_desc: 'This clerk has copper-red skin and ink-stained hands. Their simple
+    harness
+
+    includes pouches for documents and writing instruments. They keep the records
+
+    that allow the city to function.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3936
+  namelist: prisoner criminal red martian
+  short_desc: a Prisoner
+  long_desc: A prisoner sits here, contemplating their crimes.
+  detailed_desc: 'This prisoner has copper-red skin and wears a plain, unmarked harness.
+    They are
+
+    held for crimes against Helium. Guards watch them carefully.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+15000
+    damage_dice: 1d6+6
+    gold: 500
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3937
+  namelist: musician performer red martian
+  short_desc: a Martian Musician
+  long_desc: A musician practices their art.
+  detailed_desc: 'This musician has copper-red skin and sensitive hands. Their harness
+    is adorned
+
+    with musical symbols. While music is not as central to Martian culture as to
+
+    Earth''s, they still create beauty through sound.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3938
+  namelist: gardener red martian
+  short_desc: a Royal Gardener
+  long_desc: A skilled gardener tends to rare Martian plants.
+  detailed_desc: 'This gardener has copper-red skin darkened by sun exposure and hands
+    skilled in
+
+    nurturing plant life. Their harness is practical for outdoor work. They coax
+
+    beauty from the harsh Martian soil.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3939
+  namelist: shipwright builder red martian
+  short_desc: an Airship Shipwright
+  long_desc: A master shipwright works on airship construction.
+  detailed_desc: 'This shipwright has copper-red skin and powerful arms from working
+    with heavy
+
+    materials. Their harness shows the marks of their trade. They build the ships
+
+    that rule Martian skies.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+30000
+    damage_dice: 1d8+12
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3940
+  namelist: carter john warlord mars
+  short_desc: John Carter, Warlord of Mars
+  long_desc: John Carter, the legendary Warlord of Mars, stands here in regal bearing.
+  detailed_desc: 'This is John Carter, the greatest warrior Mars has ever known. Though
+    originally
+
+    from Earth, he appears as a tall, powerful man in his prime. His skin has taken
+
+    on a slight reddish tinge from decades on Mars. His jeweled battle harness is
+
+    magnificent but functional. His eyes hold the wisdom of countless battles and
+
+    the authority of one who rules an entire world. An aura of command surrounds him.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 25
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+100000
+    damage_dice: 4d10+30
+    gold: 100000
+    experience: 250000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3941
+  namelist: thoris dejah princess mars
+  short_desc: Dejah Thoris, Princess of Helium
+  long_desc: Dejah Thoris, the incomparable Princess of Helium, stands here in breathtaking
+    beauty.
+  detailed_desc: 'This is Dejah Thoris, Princess of Helium and wife of John Carter.
+    She is the
+
+    epitome of red Martian beauty with smooth copper-red skin, coal-black hair, and
+
+    large, expressive eyes. Her jeweled harness is a masterwork of art and status.
+
+    She combines grace and intelligence with the warrior spirit of her people. Her
+
+    presence commands respect and admiration.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+50000
+    damage_dice: 2d8+15
+    gold: 50000
+    experience: 150000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3942
+  namelist: carthoris prince helium red martian
+  short_desc: Carthoris, Prince of Helium
+  long_desc: Carthoris, son of John Carter and heir to Helium's throne, stands ready
+    for action.
+  detailed_desc: 'This is Carthoris, son of John Carter and Dejah Thoris. He has copper-red
+    skin
+
+    like his mother and the powerful build of his father. His jeweled battle harness
+
+    marks his royal status. He is a skilled warrior and master of the Heliumite
+
+    fleet. His eyes show intelligence and courage inherited from both parents.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+60000
+    damage_dice: 2d10+18
+    gold: 40000
+    experience: 140000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3943
+  namelist: mors tardos jeddak helium red martian
+  short_desc: Tardos Mors, Jeddak of Helium
+  long_desc: Tardos Mors, the ancient Jeddak of Helium, stands here with centuries
+    of wisdom.
+  detailed_desc: 'This is Tardos Mors, grandfather of Dejah Thoris and Jeddak of Helium.
+    He is
+
+    very ancient, his copper-red skin marked by extreme age. His coal-black hair is
+
+    silver with centuries. Despite his age, he maintains regal bearing. His jeweled
+
+    harness displays his rank as ruler. His eyes still hold the fire of leadership.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+80000
+    damage_dice: 2d10+20
+    gold: 80000
+    experience: 180000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3944
+  namelist: kantos red martian warrior
+  short_desc: Kantos Kan, Admiral of the Fleet
+  long_desc: Kantos Kan, Admiral of Helium's airship fleet, stands here consulting
+    charts.
+  detailed_desc: 'This is Kantos Kan, loyal friend of John Carter and Admiral of Helium''s
+    fleet.
+
+    His copper-red skin bears the scars of many battles in the air and on the
+
+    ground. His naval harness is functional and decorated with marks of rank and
+
+    achievement. His eyes hold the keen intelligence of a brilliant strategist.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+55000
+    damage_dice: 2d10+17
+    gold: 35000
+    experience: 130000
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 3500
+  namelist: water cask
+  short_desc: a water cask
+  long_desc: A large sealed water cask stands here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 60
+  value1: 60
+  value2: 1
+  value3: 0
+  weight: 70
+  cost: 350
+  rent: 120
+  extra_descriptions: []
+  affects: []
+- vnum: 3501
+  namelist: crystal flask water
+  short_desc: a crystal water flask
+  long_desc: An elegant crystal water flask has been left here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 10
+  value2: 1
+  value3: 0
+  weight: 12
+  cost: 25
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3502
+  namelist: vintage wine flask
+  short_desc: a flask of vintage wine
+  long_desc: A flask of vintage wine from Greater Helium has been left here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 10
+  value2: 3
+  value3: 0
+  weight: 12
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3503
+  namelist: aged whiskey flask
+  short_desc: a flask of aged whiskey
+  long_desc: A flask of aged Martian whiskey has been left here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 10
+  value2: 7
+  value3: 0
+  weight: 12
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3504
+  namelist: rare wine flask
+  short_desc: a flask of rare wine
+  long_desc: A flask of rare imported wine has been left here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 10
+  value2: 8
+  value3: 0
+  weight: 12
+  cost: 25
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3510
+  namelist: bread fine loaf
+  short_desc: a fine loaf of bread
+  long_desc: A loaf of fine Martian bread has been left here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 12
+  rent: 12
+  extra_descriptions: []
+  affects: []
+- vnum: 3511
+  namelist: delicacy fruit
+  short_desc: a fruit delicacy
+  long_desc: A delicate pastry with exotic fruits has been placed here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 8
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3520
+  namelist: stiletto dagger fine
+  short_desc: a fine stiletto
+  long_desc: A finely crafted stiletto with jeweled hilt is here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3521
+  namelist: sword short quality
+  short_desc: a quality short sword
+  long_desc: A quality short sword of Greater Helium lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 11
+  weight: 4
+  cost: 70
+  rent: 25
+  extra_descriptions: []
+  affects: []
+- vnum: 3522
+  namelist: longsword warlord
+  short_desc: a Warlord's longsword
+  long_desc: A magnificent longsword worthy of the Warlord's guards lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 9
+  value3: 3
+  weight: 10
+  cost: 700
+  rent: 250
+  extra_descriptions:
+  - keywords: longsword blade
+    description: 'The blade is inscribed with: "For the Glory of Helium"'
+  affects: []
+- vnum: 3523
+  namelist: mace war heavy
+  short_desc: a war mace
+  long_desc: A heavy war mace is here.
+  action_desc: pound
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 7
+  weight: 7
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3524
+  namelist: warhammer great
+  short_desc: a great warhammer
+  long_desc: A massive warhammer for crushing enemies lies here.
+  action_desc: pound
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 8
+  value3: 7
+  weight: 12
+  cost: 120
+  rent: 40
+  extra_descriptions: []
+  affects: []
+- vnum: 3530
+  namelist: radium lantern
+  short_desc: a radium lantern
+  long_desc: An advanced radium lantern provides steady illumination here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 65537
+  value0: 0
+  value1: 0
+  value2: 120
+  value3: 0
+  weight: 2
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3531
+  namelist: glow crystal
+  short_desc: a glow crystal
+  long_desc: A softly glowing crystal lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 65537
+  value0: 0
+  value1: 0
+  value2: 48
+  value3: 0
+  weight: 1
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3532
+  namelist: pack leather fine
+  short_desc: a fine leather pack
+  long_desc: A well-crafted leather pack lies here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 60
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 25
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3533
+  namelist: chest metal ornate
+  short_desc: an ornate metal chest
+  long_desc: An ornate metal chest decorated with gems sits here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 80
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3534
+  namelist: scroll ancient
+  short_desc: an ancient scroll
+  long_desc: An ancient scroll has been left here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3535
+  namelist: stylus jeweled
+  short_desc: a jeweled writing stylus
+  long_desc: A writing stylus with jeweled handle lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3540
+  namelist: chemicals rare
+  short_desc: rare chemicals
+  long_desc: A vial of rare chemicals sits carefully sealed here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 5
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3541
+  namelist: compound scientific
+  short_desc: scientific compound
+  long_desc: A flask of scientific compound is here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 5
+  cost: 120
+  rent: 40
+  extra_descriptions: []
+  affects: []
+- vnum: 3542
+  namelist: crystal magnifying
+  short_desc: a magnifying crystal
+  long_desc: A precision magnifying crystal lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3543
+  namelist: instrument scientific
+  short_desc: a scientific instrument
+  long_desc: A delicate scientific instrument sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3550
+  namelist: harness leather simple
+  short_desc: a simple leather harness
+  long_desc: A simple but well-made leather harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3551
+  namelist: harness battle quality
+  short_desc: a quality battle harness
+  long_desc: A quality leather battle harness reinforced with metal lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3552
+  namelist: harness jeweled noble
+  short_desc: a jeweled noble harness
+  long_desc: An elaborate harness decorated with precious gems lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 200
+  rent: 67
+  extra_descriptions: []
+  affects: []
+- vnum: 3553
+  namelist: harness guard palace
+  short_desc: a palace guard harness
+  long_desc: An elite palace guard harness of exceptional quality lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 300
+  rent: 100
+  extra_descriptions: []
+  affects: []
+- vnum: 3560
+  namelist: helmet battle
+  short_desc: a battle helmet
+  long_desc: A protective battle helmet lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3561
+  namelist: gauntlets armored
+  short_desc: armored gauntlets
+  long_desc: A pair of armored gauntlets lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3562
+  namelist: boots combat
+  short_desc: combat boots
+  long_desc: A pair of sturdy combat boots lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 28
+  rent: 9
+  extra_descriptions: []
+  affects: []
+- vnum: 3563
+  namelist: shield small
+  short_desc: a small shield
+  long_desc: A small shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 35
+  rent: 12
+  extra_descriptions: []
+  affects: []
+- vnum: 3564
+  namelist: shield large
+  short_desc: a large shield
+  long_desc: A large protective shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3570
+  namelist: ruby large
+  short_desc: a large ruby
+  long_desc: A magnificent large ruby catches the light.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 500
+  rent: 167
+  extra_descriptions: []
+  affects: []
+- vnum: 3571
+  namelist: emerald brilliant
+  short_desc: a brilliant emerald
+  long_desc: A brilliant green emerald gleams here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 450
+  rent: 150
+  extra_descriptions: []
+  affects: []
+- vnum: 3572
+  namelist: diamond perfect
+  short_desc: a perfect diamond
+  long_desc: A flawless diamond sparkles with inner fire.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 600
+  rent: 200
+  extra_descriptions: []
+  affects: []
+- vnum: 3573
+  namelist: sapphire blue
+  short_desc: a blue sapphire
+  long_desc: A deep blue sapphire lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 400
+  rent: 133
+  extra_descriptions: []
+  affects: []
+- vnum: 3574
+  namelist: topaz golden
+  short_desc: a golden topaz
+  long_desc: A golden topaz gleams warmly.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 350
+  rent: 117
+  extra_descriptions: []
+  affects: []
+- vnum: 3580
+  namelist: rope silk
+  short_desc: silk rope
+  long_desc: A coil of strong silk rope lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3581
+  namelist: rope climbing
+  short_desc: climbing rope
+  long_desc: A sturdy climbing rope is coiled here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3582
+  namelist: grapnel hook
+  short_desc: a grappling hook
+  long_desc: A metal grappling hook lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 18
+  rent: 6
+  extra_descriptions: []
+  affects: []
+- vnum: 3583
+  namelist: compass navigation
+  short_desc: a navigation compass
+  long_desc: A Martian navigation compass sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 45
+  rent: 15
+  extra_descriptions: []
+  affects: []
+- vnum: 3584
+  namelist: map city
+  short_desc: a city map
+  long_desc: A detailed map of Greater Helium lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3590
+  namelist: pistol radium
+  short_desc: a radium pistol
+  long_desc: A radium pistol, the advanced weapon of Mars, lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 4
+  value3: 3
+  weight: 5
+  cost: 200
+  rent: 67
+  extra_descriptions: []
+  affects: []
+- vnum: 3591
+  namelist: rifle radium
+  short_desc: a radium rifle
+  long_desc: A long-range radium rifle lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 6
+  value3: 3
+  weight: 8
+  cost: 350
+  rent: 117
+  extra_descriptions: []
+  affects: []
+- vnum: 3592
+  namelist: charges radium
+  short_desc: radium charges
+  long_desc: A container of radium charges for weapons sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3600
+  namelist: medicine kit
+  short_desc: a medicine kit
+  long_desc: A comprehensive Martian medicine kit lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3601
+  namelist: bandages
+  short_desc: clean bandages
+  long_desc: Clean bandages for treating wounds are here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3602
+  namelist: healing salve
+  short_desc: healing salve
+  long_desc: A jar of Martian healing salve sits here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 2
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3603
+  namelist: antidote poison
+  short_desc: poison antidote
+  long_desc: A vial of poison antidote is carefully sealed here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 3
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3610
+  namelist: book ancient
+  short_desc: an ancient book
+  long_desc: An ancient tome bound in rare materials lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3611
+  namelist: manual combat
+  short_desc: a combat manual
+  long_desc: A manual on advanced combat techniques lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3612
+  namelist: text scientific
+  short_desc: a scientific text
+  long_desc: A scientific text on Martian technology lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3613
+  namelist: scroll spell
+  short_desc: a spell scroll
+  long_desc: A scroll containing mystical Martian formulas lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 50
+  extra_descriptions: []
+  affects: []
+- vnum: 3620
+  namelist: cloak travel
+  short_desc: a travel cloak
+  long_desc: A practical travel cloak lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3621
+  namelist: cloak noble
+  short_desc: a noble's cloak
+  long_desc: An elegant cloak suitable for nobility lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3622
+  namelist: belt utility
+  short_desc: a utility belt
+  long_desc: A utility belt with many pouches lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3623
+  namelist: pouch coin
+  short_desc: a coin pouch
+  long_desc: A leather coin pouch lies here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3630
+  namelist: rations travel
+  short_desc: travel rations
+  long_desc: A package of preserved travel rations lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 20
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3631
+  namelist: water purifier
+  short_desc: water purification tablets
+  long_desc: A container of water purification tablets sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3632
+  namelist: salt preserved
+  short_desc: preserved salt
+  long_desc: A valuable container of salt for preserving food lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3640
+  namelist: key bronze
+  short_desc: a bronze key
+  long_desc: A bronze key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3641
+  namelist: key silver
+  short_desc: a silver key
+  long_desc: An ornate silver key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3642
+  namelist: key gold
+  short_desc: a golden key
+  long_desc: A golden key decorated with gems lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3650
+  namelist: banner helium
+  short_desc: a banner of Helium
+  long_desc: A scarlet and gold banner of Helium lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3651
+  namelist: medal honor
+  short_desc: a medal of honor
+  long_desc: A medal awarded for great service to Helium lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 67
+  extra_descriptions: []
+  affects: []
+- vnum: 3652
+  namelist: insignia rank
+  short_desc: rank insignia
+  long_desc: Military rank insignia lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3660
+  namelist: incense rare
+  short_desc: rare incense
+  long_desc: Rare incense from the temple fills the air with fragrance.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3661
+  namelist: offering bowl
+  short_desc: offering bowl
+  long_desc: A ceremonial offering bowl sits here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3662
+  namelist: prayer beads
+  short_desc: prayer beads
+  long_desc: A string of ornate prayer beads lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3670
+  namelist: tool repair
+  short_desc: repair tools
+  long_desc: A set of repair tools lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3671
+  namelist: hammer smith
+  short_desc: a smith's hammer
+  long_desc: A heavy smith's hammer lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3672
+  namelist: anvil small
+  short_desc: a small anvil
+  long_desc: A small portable anvil sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 20
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3673
+  namelist: file metal
+  short_desc: a metal file
+  long_desc: A metal file for sharpening weapons lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3674
+  namelist: whetstone
+  short_desc: a whetstone
+  long_desc: A whetstone for sharpening blades lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3680
+  namelist: painting fine
+  short_desc: a fine painting
+  long_desc: A beautiful painting of Martian landscapes hangs here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3681
+  namelist: sculpture small
+  short_desc: a small sculpture
+  long_desc: A small sculpture carved from rare stone sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 150
+  rent: 50
+  extra_descriptions: []
+  affects: []
+- vnum: 3682
+  namelist: tapestry rich
+  short_desc: a rich tapestry
+  long_desc: A richly woven tapestry depicting Helium's history hangs here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 200
+  rent: 67
+  extra_descriptions: []
+  affects: []
+- vnum: 3690
+  namelist: spyglass
+  short_desc: a spyglass
+  long_desc: An optical spyglass for long-range viewing lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3691
+  namelist: telescope small
+  short_desc: a small telescope
+  long_desc: A small astronomical telescope sits here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 120
+  rent: 40
+  extra_descriptions: []
+  affects: []
+- vnum: 3692
+  namelist: charts star
+  short_desc: star charts
+  long_desc: Detailed charts of the Martian night sky lie here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3700
+  namelist: calot collar
+  short_desc: a calot training collar
+  long_desc: A heavy collar for controlling calots lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3701
+  namelist: calot harness
+  short_desc: a calot harness
+  long_desc: A harness designed for riding calots lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3702
+  namelist: calot food
+  short_desc: calot food
+  long_desc: A supply of food for feeding calots sits here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3710
+  namelist: token metal
+  short_desc: a metal token
+  long_desc: A metal token bearing Helium's seal lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3711
+  namelist: coins gold
+  short_desc: gold coins
+  long_desc: A pile of gold coins lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3712
+  namelist: coins silver
+  short_desc: silver coins
+  long_desc: A collection of silver coins lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3713
+  namelist: coins copper
+  short_desc: copper coins
+  long_desc: Some copper coins lie here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3720
+  namelist: dagger throwing
+  short_desc: a throwing dagger
+  long_desc: A balanced throwing dagger lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 3
+  value3: 11
+  weight: 1
+  cost: 12
+  rent: 4
+  extra_descriptions: []
+  affects: []
+- vnum: 3721
+  namelist: dart poison
+  short_desc: a poison dart
+  long_desc: A deadly poison dart lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 2
+  value3: 11
+  weight: 1
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3722
+  namelist: crossbow small
+  short_desc: a small crossbow
+  long_desc: A compact crossbow lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 3
+  weight: 3
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3723
+  namelist: bolts crossbow
+  short_desc: crossbow bolts
+  long_desc: A quiver of crossbow bolts lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3730
+  namelist: saddle thoat
+  short_desc: a thoat saddle
+  long_desc: A large saddle designed for riding thoats lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3731
+  namelist: bridle thoat
+  short_desc: a thoat bridle
+  long_desc: A heavy bridle for controlling thoats lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3732
+  namelist: provisions thoat
+  short_desc: thoat provisions
+  long_desc: Feed and supplies for thoats sit here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 20
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3740
+  namelist: armor plate
+  short_desc: armor plating
+  long_desc: Heavy armor plating for enhanced protection lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3741
+  namelist: vambraces armored
+  short_desc: armored vambraces
+  long_desc: Armored vambraces for forearm protection lie here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 35
+  rent: 12
+  extra_descriptions: []
+  affects: []
+- vnum: 3742
+  namelist: pauldrons shoulder
+  short_desc: shoulder pauldrons
+  long_desc: Ornate shoulder pauldrons lie here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3743
+  namelist: greaves leg
+  short_desc: leg greaves
+  long_desc: Protective leg greaves lie here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 45
+  rent: 15
+  extra_descriptions: []
+  affects: []
+- vnum: 3750
+  namelist: spear long
+  short_desc: a long spear
+  long_desc: A long spear with metal point lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 11
+  weight: 5
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3751
+  namelist: pike
+  short_desc: a pike
+  long_desc: A heavy pike for infantry combat lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 7
+  weight: 8
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3752
+  namelist: halberd
+  short_desc: a halberd
+  long_desc: A versatile halberd combines axe and spear lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 8
+  value3: 7
+  weight: 10
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3753
+  namelist: javelin
+  short_desc: a javelin
+  long_desc: A throwing javelin lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 11
+  weight: 2
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3760
+  namelist: bow short
+  short_desc: a short bow
+  long_desc: A short bow for mounted archery lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 3
+  weight: 3
+  cost: 35
+  rent: 12
+  extra_descriptions: []
+  affects: []
+- vnum: 3761
+  namelist: bow long
+  short_desc: a long bow
+  long_desc: A powerful long bow lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 3
+  weight: 5
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3762
+  namelist: arrows
+  short_desc: a quiver of arrows
+  long_desc: A quiver full of arrows lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3763
+  namelist: bowstring spare
+  short_desc: spare bowstrings
+  long_desc: Extra bowstrings for repairs lie here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3770
+  namelist: axe battle
+  short_desc: a battle axe
+  long_desc: A heavy battle axe lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 7
+  weight: 8
+  cost: 70
+  rent: 23
+  extra_descriptions: []
+  affects: []
+- vnum: 3771
+  namelist: axe throwing
+  short_desc: a throwing axe
+  long_desc: A balanced throwing axe lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 7
+  weight: 3
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3772
+  namelist: flail
+  short_desc: a flail
+  long_desc: A deadly flail with spiked ball lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 7
+  weight: 6
+  cost: 55
+  rent: 18
+  extra_descriptions: []
+  affects: []
+- vnum: 3773
+  namelist: morningstar
+  short_desc: a morningstar
+  long_desc: A brutal morningstar lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 7
+  weight: 7
+  cost: 65
+  rent: 22
+  extra_descriptions: []
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3940
+  arg2: 1
+  arg3: 3903
+- command: M
+  if_flag: 0
+  arg1: 3941
+  arg2: 1
+  arg3: 3902
+- command: M
+  if_flag: 0
+  arg1: 3942
+  arg2: 1
+  arg3: 3905
+- command: M
+  if_flag: 0
+  arg1: 3943
+  arg2: 1
+  arg3: 3903
+- command: M
+  if_flag: 0
+  arg1: 3944
+  arg2: 1
+  arg3: 3967
+- command: M
+  if_flag: 0
+  arg1: 3900
+  arg2: 1
+  arg3: 3933
+- command: G
+  if_flag: 1
+  arg1: 3940
+  arg2: 500
+- command: G
+  if_flag: 1
+  arg1: 3941
+  arg2: 500
+- command: G
+  if_flag: 1
+  arg1: 3942
+  arg2: 500
+- command: G
+  if_flag: 1
+  arg1: 3943
+  arg2: 500
+- command: M
+  if_flag: 0
+  arg1: 3903
+  arg2: 1
+  arg3: 3926
+- command: G
+  if_flag: 1
+  arg1: 3920
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3923
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3924
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3990
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3991
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3992
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3750
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3751
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3752
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3753
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3760
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3761
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3762
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3770
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3771
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3772
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3773
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3904
+  arg2: 1
+  arg3: 3927
+- command: G
+  if_flag: 1
+  arg1: 3950
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3960
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3961
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3962
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3963
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3964
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3740
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3741
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3742
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3743
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3902
+  arg2: 1
+  arg3: 3928
+- command: G
+  if_flag: 1
+  arg1: 3910
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3911
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3930
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3931
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3932
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3901
+  arg2: 1
+  arg3: 3929
+- command: G
+  if_flag: 1
+  arg1: 3930
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3931
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3932
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3933
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3980
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3981
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3982
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3983
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3984
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3905
+  arg2: 1
+  arg3: 3924
+- command: G
+  if_flag: 1
+  arg1: 3970
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3971
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3972
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3973
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3974
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3906
+  arg2: 1
+  arg3: 3925
+- command: G
+  if_flag: 1
+  arg1: 3920
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3923
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3928
+  arg2: 1
+  arg3: 3947
+- command: G
+  if_flag: 1
+  arg1: 3700
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3701
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3702
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3929
+  arg2: 3
+  arg3: 3947
+- command: M
+  if_flag: 0
+  arg1: 3929
+  arg2: 3
+  arg3: 3947
+- command: M
+  if_flag: 0
+  arg1: 3929
+  arg2: 3
+  arg3: 3947
+- command: M
+  if_flag: 0
+  arg1: 3907
+  arg2: 1
+  arg3: 3916
+- command: E
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3908
+  arg2: 1
+  arg3: 3935
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3909
+  arg2: 1
+  arg3: 3931
+- command: E
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3910
+  arg2: 1
+  arg3: 3954
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3911
+  arg2: 1
+  arg3: 3941
+- command: G
+  if_flag: 1
+  arg1: 3900
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3901
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3902
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3903
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3904
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3910
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3911
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3912
+  arg2: 1
+  arg3: 3959
+- command: G
+  if_flag: 1
+  arg1: 3900
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3901
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3904
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3910
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3913
+  arg2: 4
+  arg3: 3901
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3913
+  arg2: 4
+  arg3: 3901
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3913
+  arg2: 4
+  arg3: 3902
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3913
+  arg2: 4
+  arg3: 3902
+- command: E
+  if_flag: 1
+  arg1: 3953
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3948
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3948
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3950
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3950
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3956
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3915
+  arg2: 4
+  arg3: 3956
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3914
+  arg2: 8
+  arg3: 3900
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3914
+  arg2: 8
+  arg3: 3920
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3914
+  arg2: 8
+  arg3: 3910
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3914
+  arg2: 8
+  arg3: 3934
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3916
+  arg2: 1
+  arg3: 3911
+- command: E
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3917
+  arg2: 3
+  arg3: 3904
+- command: M
+  if_flag: 0
+  arg1: 3917
+  arg2: 3
+  arg3: 3996
+- command: M
+  if_flag: 0
+  arg1: 3917
+  arg2: 3
+  arg3: 3997
+- command: M
+  if_flag: 0
+  arg1: 3918
+  arg2: 5
+  arg3: 3936
+- command: M
+  if_flag: 0
+  arg1: 3918
+  arg2: 5
+  arg3: 3988
+- command: M
+  if_flag: 0
+  arg1: 3919
+  arg2: 5
+  arg3: 3932
+- command: M
+  if_flag: 0
+  arg1: 3919
+  arg2: 5
+  arg3: 3996
+- command: M
+  if_flag: 0
+  arg1: 3920
+  arg2: 3
+  arg3: 3920
+- command: M
+  if_flag: 0
+  arg1: 3920
+  arg2: 3
+  arg3: 3921
+- command: M
+  if_flag: 0
+  arg1: 3920
+  arg2: 3
+  arg3: 3991
+- command: M
+  if_flag: 0
+  arg1: 3921
+  arg2: 5
+  arg3: 3900
+- command: M
+  if_flag: 0
+  arg1: 3921
+  arg2: 5
+  arg3: 3914
+- command: M
+  if_flag: 0
+  arg1: 3921
+  arg2: 5
+  arg3: 3915
+- command: M
+  if_flag: 0
+  arg1: 3922
+  arg2: 10
+  arg3: 3900
+- command: M
+  if_flag: 0
+  arg1: 3922
+  arg2: 10
+  arg3: 3920
+- command: M
+  if_flag: 0
+  arg1: 3922
+  arg2: 10
+  arg3: 3944
+- command: M
+  if_flag: 0
+  arg1: 3922
+  arg2: 10
+  arg3: 3958
+- command: M
+  if_flag: 0
+  arg1: 3923
+  arg2: 5
+  arg3: 3960
+- command: M
+  if_flag: 0
+  arg1: 3923
+  arg2: 5
+  arg3: 3961
+- command: M
+  if_flag: 0
+  arg1: 3924
+  arg2: 8
+  arg3: 3962
+- command: M
+  if_flag: 0
+  arg1: 3924
+  arg2: 8
+  arg3: 3963
+- command: M
+  if_flag: 0
+  arg1: 3925
+  arg2: 2
+  arg3: 3905
+- command: E
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3925
+  arg2: 2
+  arg3: 3967
+- command: E
+  if_flag: 1
+  arg1: 3952
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3922
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3926
+  arg2: 2
+  arg3: 3964
+- command: M
+  if_flag: 0
+  arg1: 3926
+  arg2: 2
+  arg3: 3968
+- command: M
+  if_flag: 0
+  arg1: 3927
+  arg2: 1
+  arg3: 3987
+- command: G
+  if_flag: 1
+  arg1: 3900
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3901
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3902
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3903
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3930
+  arg2: 3
+  arg3: 3902
+- command: M
+  if_flag: 0
+  arg1: 3931
+  arg2: 2
+  arg3: 3902
+- command: M
+  if_flag: 0
+  arg1: 3932
+  arg2: 5
+  arg3: 3920
+- command: M
+  if_flag: 0
+  arg1: 3932
+  arg2: 5
+  arg3: 3921
+- command: M
+  if_flag: 0
+  arg1: 3933
+  arg2: 3
+  arg3: 3944
+- command: M
+  if_flag: 0
+  arg1: 3934
+  arg2: 1
+  arg3: 3979
+- command: M
+  if_flag: 0
+  arg1: 3934
+  arg2: 1
+  arg3: 3980
+- command: M
+  if_flag: 0
+  arg1: 3934
+  arg2: 1
+  arg3: 3981
+- command: M
+  if_flag: 0
+  arg1: 3934
+  arg2: 1
+  arg3: 3982
+- command: M
+  if_flag: 0
+  arg1: 3935
+  arg2: 3
+  arg3: 3992
+- command: M
+  if_flag: 0
+  arg1: 3935
+  arg2: 3
+  arg3: 3993
+- command: M
+  if_flag: 0
+  arg1: 3914
+  arg2: 2
+  arg3: 3994
+- command: E
+  if_flag: 1
+  arg1: 3951
+  arg2: 100
+  arg3: 9
+- command: E
+  if_flag: 1
+  arg1: 3921
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3936
+  arg2: 2
+  arg3: 3994
+- command: M
+  if_flag: 0
+  arg1: 3937
+  arg2: 1
+  arg3: 3998
+- command: M
+  if_flag: 0
+  arg1: 3938
+  arg2: 2
+  arg3: 3976
+- command: M
+  if_flag: 0
+  arg1: 3939
+  arg2: 3
+  arg3: 3968
+- command: O
+  if_flag: 0
+  arg1: 3950
+  arg2: 1
+  arg3: 3900
+- command: O
+  if_flag: 0
+  arg1: 3980
+  arg2: 1
+  arg3: 3902
+- command: O
+  if_flag: 0
+  arg1: 3981
+  arg2: 1
+  arg3: 3903
+- command: O
+  if_flag: 0
+  arg1: 3910
+  arg2: 1
+  arg3: 3904
+- command: O
+  if_flag: 0
+  arg1: 3992
+  arg2: 1
+  arg3: 3971
+- command: O
+  if_flag: 0
+  arg1: 3982
+  arg2: 1
+  arg3: 3912
+shops: []

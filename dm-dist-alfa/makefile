@@ -11,21 +11,24 @@ HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
 # Zone files - ordered by zone number
 ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel southern_approach dead_sea_wilderness greater_helium zodanga thark_territory atmosphere_factory atmosphere_lower system
 
-# Build world data files from zone files
-lib/tinyworld.wld: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).wld)
-	cat $^ > $@
+# YAML source files
+YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
 
-lib/tinyworld.mob: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).mob)
-	cat $^ > $@
+# Build world data files from YAML zone files
+lib/tinyworld.wld: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build wld $@ $(YAML_ZONES)
 
-lib/tinyworld.obj: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).obj)
-	cat $^ > $@
+lib/tinyworld.mob: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build mob $@ $(YAML_ZONES)
 
-lib/tinyworld.zon: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).zon)
-	cat $^ > $@
+lib/tinyworld.obj: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build obj $@ $(YAML_ZONES)
 
-lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp)
-	cat $^ > $@
+lib/tinyworld.zon: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build zon $@ $(YAML_ZONES)
+
+lib/tinyworld.shp: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build shp $@ $(YAML_ZONES)
 
 # Main build targets
 all: delplay dmserver worldfiles

@@ -1,0 +1,1068 @@
+zone:
+  number: 32
+  name: Dead Sea Bottom Channel
+  top_room: 3299
+  lifespan: 40
+  reset_mode: 0
+rooms:
+- vnum: 3200
+  name: Under the Bridge
+  description: '   You stand beneath the ancient bridge in the dried channel.  Ochre
+    moss covers
+
+    the channel floor and climbs partway up the bridge supports.  The channel passes
+
+    through an opening in the city wall here.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3201
+  - direction: 3
+    description: You see the dead sea bottom stretching westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  extra_descriptions:
+  - keywords: wall
+    description: 'The city wall is built from massive blocks of ancient stone, seamlessly
+      joined.
+
+      The construction has withstood countless ages.'
+- vnum: 3201
+  name: In the Dried Channel
+  description: '   North of here you can see the lower quarter of Lesser Helium rising
+    above.
+
+    The ancient dried channel extends east and west here, its floor carpeted with
+
+    ochre moss.  The channel banks are too steep to climb easily.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3202
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3200
+  extra_descriptions: []
+- vnum: 3202
+  name: In the Dried Channel
+  description: '   North of here you can see the waste disposal area of Lesser Helium
+    above.
+
+    The ancient channel extends from east to west, ochre moss covering its floor.
+
+    The channel banks are too steep to climb easily.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3203
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3201
+  extra_descriptions: []
+- vnum: 3203
+  name: In the Dried Channel
+  description: '   The channel edge with its descent point is directly north of here.  The
+    ancient
+
+    waterway extends east and west, its floor covered in ochre moss and dotted with
+
+    ancient stone markers.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3049
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3204
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3202
+  extra_descriptions: []
+- vnum: 3204
+  name: In the Dried Channel
+  description: '   You see the old warehouse above on the northern bank.  East of
+    here the city
+
+    wall blocks the channel.  The dried waterway extends west, its ancient bed
+
+    covered with ochre moss.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3205
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3203
+  extra_descriptions: []
+- vnum: 3205
+  name: In the Dried Channel
+  description: '   The ancient channel passes through an opening in the eastern city
+    wall here.
+
+    The opening is blocked by massive iron bars set deep into the stone, preventing
+
+    entry to the city from outside.'
+  zone: 32
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: 'The iron bars make passage impossible.  Beyond them you see the
+      dead sea bottom
+
+      stretching toward Greater Helium in the distance.'
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3204
+  extra_descriptions: []
+mobiles:
+- vnum: 3300
+  namelist: calot companion pet beast
+  short_desc: Papi's favorite calot
+  long_desc: Papi's favorite calot rests here, its ten legs tucked beneath it.
+  detailed_desc: 'This is an exceptionally well-trained calot with sleek, hairless
+    hide
+
+    and an unusually gentle demeanor. Despite its powerful build and the
+
+    large claws on each of its ten feet, it seems docile and affectionate.
+
+    Its frog-like head nuzzles those it trusts. Best not to anger it, though.'
+  action_flags: 66
+  affection_flags: 8
+  alignment: 1000
+  type: simple
+  simple:
+    level: 30
+    thac0: 0
+    ac: -10
+    hp_dice: 1d1+500
+    damage_dice: 20d20+100
+    gold: 0
+    experience: 0
+    position: 5
+    default_position: 5
+    sex: 0
+- vnum: 3600
+  namelist: gardener red martian henry
+  short_desc: Henry the Gardener
+  long_desc: Henry the Red Martian gardener sits here, looking drunk.
+  detailed_desc: 'This red Martian has copper-red skin weathered by outdoor work.
+    Though
+
+    tall and still strong, centuries of labor have worn him down. His
+
+    expression shows deep sorrow and depression, haunted by memories of
+
+    when Mars was green and lush, before the great dying.'
+  action_flags: 64
+  affection_flags: 0
+  alignment: 350
+  type: simple
+  simple:
+    level: 4
+    thac0: 15
+    ac: 8
+    hp_dice: 1d12+48
+    damage_dice: 1d6+1
+    gold: 50
+    experience: 800
+    position: 6
+    default_position: 6
+    sex: 1
+- vnum: 3601
+  namelist: corpse zombie undead red martian
+  short_desc: the reanimated corpse
+  long_desc: A reanimated red Martian corpse staggers toward you.
+  detailed_desc: 'This horror was once a red Martian, but now only a shambling corpse
+
+    remains. Its copper-red skin has turned gray and rotten. Ancient
+
+    Martian science or dark arts have brought it back in this terrible
+
+    state. Maggots crawl over its decaying body as it lurches forward.'
+  action_flags: 34
+  affection_flags: 0
+  alignment: -750
+  type: simple
+  simple:
+    level: 4
+    thac0: 16
+    ac: 5
+    hp_dice: 2d6+60
+    damage_dice: 1d8+2
+    gold: 0
+    experience: 1200
+    position: 8
+    default_position: 8
+    sex: 0
+- vnum: 3602
+  namelist: ghoul undead red martian
+  short_desc: the ghastly ghoul
+  long_desc: A ghastly undead creature lurks here.
+  detailed_desc: 'This abomination was once a red Martian, transformed by forbidden
+
+    science or ancient curses into a walking horror. Its copper-red skin
+
+    has become pale and corpse-like. Long fangs protrude from its mouth,
+
+    and its fingernails have grown into sharp claws. Its eyes glow with
+
+    dark yellow hunger as it glares at you.'
+  action_flags: 34
+  affection_flags: 0
+  alignment: -750
+  type: simple
+  simple:
+    level: 6
+    thac0: 15
+    ac: 4
+    hp_dice: 2d6+72
+    damage_dice: 1d10+2
+    gold: 0
+    experience: 2000
+    position: 8
+    default_position: 8
+    sex: 0
+objects:
+- vnum: 3300
+  namelist: key metal
+  short_desc: a metal key
+  long_desc: A metal key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_papi
+    description: ''
+  - keywords: key metal
+    description: You notice 'My Cottage' has been inscribed on the key.
+  affects: []
+- vnum: 3301
+  namelist: key brass
+  short_desc: a brass key
+  long_desc: A brass key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_quifael
+    description: ''
+  - keywords: key brass
+    description: 'It looks as if it is very old.  There are some small marks on it
+      as if
+
+      somebody with tiny (but strong!) teeth has been biting a lot in it.'
+  affects: []
+- vnum: 3302
+  namelist: key metal
+  short_desc: a metal key
+  long_desc: A metal key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_manxam
+    description: ''
+  - keywords: key metal
+    description: 'It is a small insignificant metal key on which the letter "M" has
+      been
+
+      inscribed.'
+  affects: []
+- vnum: 3303
+  namelist: chest large
+  short_desc: a large chest
+  long_desc: A large wooden chest sits here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 0
+  value0: 100
+  value1: 1
+  value2: -1
+  value3: 0
+  weight: 100
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: chest
+    description: 'It looks too bulky to be moved and does not appear to be equipped
+      with a
+
+      lock.'
+  affects: []
+- vnum: 3304
+  namelist: mace heavy ornate
+  short_desc: an ornate heavy mace
+  long_desc: An ornate heavy mace lies here.
+  action_desc: pound
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 7
+  weight: 6
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: mace
+    description: 'A beautifully crafted mace of mithril.  You can see the owners name
+      on the
+
+      adamantine handle.  The name, which is chiselled into the handle and then
+
+      filled with diamond dust, is Manxam.'
+  affects:
+  - location: 19
+    modifier: 2
+- vnum: 3305
+  namelist: harness brass chest
+  short_desc: a brass chest harness
+  long_desc: A brass chest harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 9
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 80
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: brass breast plate
+    description: 'A good-looking breastplate made of brass.  It''s engraved a lot,
+      the largest
+
+      engraving being the name of the owner, Manxam.'
+  affects: []
+- vnum: 3306
+  namelist: harness brass legs
+  short_desc: a brass leg harness
+  long_desc: A brass leg harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 33
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: leggings brass
+    description: 'A pair of brass leggings, well crafted, with the owners name engraved
+      on
+
+      them.  The name is, of course, Manxam.'
+  affects: []
+- vnum: 3307
+  namelist: key mithril
+  short_desc: a mithril key
+  long_desc: A mithril key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_gimli
+    description: ''
+  - keywords: key mithril
+    description: 'The small mithril key is a sample of exquisite workmanship.  It
+      has the
+
+      letter "G" inscribed.'
+  affects: []
+- vnum: 3308
+  namelist: dispenser water
+  short_desc: a water dispenser
+  long_desc: A water dispenser stands here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 2
+  wear_flags: 0
+  value0: 3
+  value1: 0
+  value2: -1
+  value3: 0
+  weight: 100
+  cost: 3000
+  rent: 300
+  extra_descriptions:
+  - keywords: coke machine
+    description: 'It is a big old-fashioned thing that most of all resembles a cupboard
+      with a
+
+      slot large enough to hold three cans of Coke at once.  It doesn''t appear to
+
+      have any buttons or any other means of control.  Golden letters on its front
+
+      tell that this is a Quifatronic K-1000 mk I.'
+  affects: []
+- vnum: 3309
+  namelist: flask water metal
+  short_desc: a metal water flask
+  long_desc: A metal water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 3
+  value2: 15
+  value3: 0
+  weight: 1
+  cost: 6
+  rent: 3
+  extra_descriptions:
+  - keywords: can coke
+    description: 'It is a small red and white can that has ''Keep MudLand tidy'' written
+      on its
+
+      side and the name Gimli printed on its bottom.'
+  affects: []
+- vnum: 3310
+  namelist: key iron
+  short_desc: an iron key
+  long_desc: An iron key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_doz
+    description: ''
+  - keywords: key iron
+    description: The small iron key has the letter "D" inscribed on its surface.
+  affects: []
+- vnum: 3311
+  namelist: pit
+  short_desc: a pit
+  long_desc: A deep pit opens in the ground here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 0
+  value0: 1000
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: pit
+    description: 'This is where you put money and items to help Doz expand this shrine
+      and
+
+      convert more people to the belief of Eru our creator.'
+  affects: []
+- vnum: 3312
+  namelist: harness golden chest
+  short_desc: a golden chest harness
+  long_desc: A golden chest harness glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 9
+  value0: 7
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 100
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden breast plate
+    description: 'This breast plate is made of solid gold, yet it seems to be as hard
+      as a
+
+      normal steel plate. The name ''Doz'' is engraved in silver letters on it.'
+  affects: []
+- vnum: 3313
+  namelist: helm golden
+  short_desc: a golden helm
+  long_desc: A golden helm glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 17
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden helmet
+    description: 'This helmet is made of solid gold. On the inside of it you find
+      the name
+
+      ''Doz'' engraved in silver letters.'
+  affects: []
+- vnum: 3314
+  namelist: sleeves golden
+  short_desc: a pair of golden sleeves
+  long_desc: A pair of golden sleeves glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 257
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden sleeves
+    description: 'These sleeves are made of gold and they have the name ''Doz'' engraved
+      in
+
+      silver letters on them.'
+  affects: []
+- vnum: 3315
+  namelist: cloak golden silk
+  short_desc: a golden silk cloak
+  long_desc: A golden silk cloak lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 64
+  wear_flags: 1025
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 20
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden cloak
+    description: 'This cloak is woven from the finest threads of gold, and it shimmers
+      as you
+
+      look at it. You find the name ''Doz'' written on the inside of it.'
+  affects:
+  - location: 17
+    modifier: -10
+- vnum: 3316
+  namelist: shield golden
+  short_desc: a golden shield
+  long_desc: A golden shield glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 513
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden shield
+    description: 'This shield is made of gold and it''s covered with strange silver
+      runes
+
+      which you guess must be of protection. The name ''Doz'' is also to be found
+
+      on the shield.'
+  affects: []
+- vnum: 3317
+  namelist: gloves golden
+  short_desc: a pair of golden gloves
+  long_desc: A pair of golden gloves glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 129
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden gauntlets
+    description: 'These gauntlets are made of gold and they have the name ''Doz''
+      engraved in
+
+      silver letters on them.'
+  affects: []
+- vnum: 3318
+  namelist: harness golden legs
+  short_desc: a pair of golden leggings
+  long_desc: A pair of golden leg harnesses glitters here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 33
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 0
+  rent: 1000000
+  extra_descriptions:
+  - keywords: golden leggings
+    description: 'These leggings are made of solid gold, and the name ''Doz'' is engraved
+      in
+
+      silver letters on them.'
+  affects: []
+- vnum: 3319
+  namelist: dispenser water
+  short_desc: a water dispenser
+  long_desc: A water dispenser stands here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 2
+  wear_flags: 0
+  value0: 3
+  value1: 0
+  value2: -1
+  value3: 0
+  weight: 100
+  cost: 3000
+  rent: 300
+  extra_descriptions:
+  - keywords: coke machine
+    description: 'It is a big old-fashioned thing that most of all resembles a cupboard
+      with a
+
+      slot large enough to hold three cans of Coke at once.  It doesn''t appear to
+
+      have any buttons or any other means of control.  Golden letters on its front
+
+      tell that this is a Quifatronic K-1000 mk I.'
+  affects: []
+- vnum: 3320
+  namelist: flask water metal
+  short_desc: a metal water flask
+  long_desc: A metal water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 3
+  value2: 15
+  value3: 0
+  weight: 1
+  cost: 6
+  rent: 3
+  extra_descriptions:
+  - keywords: can coke
+    description: 'It is a small red and white can that has ''Keep MudLand tidy'' written
+      on its
+
+      side and the name Doz printed on its bottom.'
+  affects: []
+- vnum: 3321
+  namelist: key iron
+  short_desc: an iron key
+  long_desc: An iron key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 100
+  extra_descriptions:
+  - keywords: item_for_mapmaker
+    description: ''
+  - keywords: key iron
+    description: The small iron key has the letter "M" inscribed on its surface.
+  affects: []
+- vnum: 3322
+  namelist: dispenser water
+  short_desc: a water dispenser
+  long_desc: A water dispenser stands here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 2
+  wear_flags: 0
+  value0: 3
+  value1: 0
+  value2: -1
+  value3: 0
+  weight: 100
+  cost: 3000
+  rent: 300
+  extra_descriptions:
+  - keywords: coke machine
+    description: 'It is a big old-fashioned thing that most of all resembles a cupboard
+      with a
+
+      slot large enough to hold three cans of Coke at once.  It doesn''t appear to
+
+      have any buttons or any other means of control.  Golden letters on its front
+
+      tell that this is a Quifatronic K-1000 mk I.'
+  affects: []
+- vnum: 3323
+  namelist: flask water metal
+  short_desc: a metal water flask
+  long_desc: A metal water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 3
+  value2: 15
+  value3: 0
+  weight: 1
+  cost: 6
+  rent: 3
+  extra_descriptions:
+  - keywords: can coke
+    description: 'It is a small red and white can that has ''Keep MudLand tidy'' written
+      on its
+
+      side and the name Mapmaker printed on its bottom.'
+  affects: []
+- vnum: 3400
+  namelist: lamp radium
+  short_desc: a radium lamp
+  long_desc: A radium lamp casts soft light here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 24
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 50
+  extra_descriptions:
+  - keywords: candlestick
+    description: 'It is a rather old-looking three-armed candlestick made from pewter.  Its
+
+      candles are a yellowish white colour.'
+  affects: []
+- vnum: 3600
+  namelist: lamp radium
+  short_desc: a radium lamp
+  long_desc: A radium lamp casts soft light here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 24
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 50
+  extra_descriptions:
+  - keywords: candlestick
+    description: 'It is a rather old-looking three-armed candlestick made from pewter.  Its
+
+      candles are a yellowish white colour.'
+  affects: []
+- vnum: 3601
+  namelist: wine bottle
+  short_desc: a bottle of wine
+  long_desc: A bottle of wine sits here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 10
+  value2: 5
+  value3: 0
+  weight: 2
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: brandy bottle
+    description: 'The bottle is a special ''Dragon Blood'' brandy bottle.  Its neck
+      is shaped
+
+      like a small dragon''s head.  Bottles like these are often worth a small
+
+      amount money, even when empty.'
+  affects: []
+- vnum: 3602
+  namelist: wine bottle
+  short_desc: a bottle of wine
+  long_desc: A bottle of wine sits here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 5
+  value3: 0
+  weight: 2
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: brandy bottle
+    description: 'The bottle is a special ''Dragon Blood'' brandy bottle.  Its neck
+      is shaped
+
+      like a small dragon''s head.  Bottles like these are often worth some money,
+
+      even when empty.'
+  affects: []
+- vnum: 3603
+  namelist: cart hand
+  short_desc: a hand cart
+  long_desc: A small hand cart sits here.
+  action_desc: ''
+  type_flag: 22
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 100
+  cost: 100
+  rent: 100
+  extra_descriptions:
+  - keywords: wheelbarrow
+    description: 'It is a heavy wheelbarrow made from solid oaken planks that have
+      been painted
+
+      a dark, green colour.'
+  affects: []
+- vnum: 3604
+  namelist: shovel
+  short_desc: a shovel
+  long_desc: A metal shovel lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 7
+  weight: 8
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: shovel
+    description: It is a large metal shovel with a solid wooden handle.
+  affects: []
+- vnum: 3605
+  namelist: rake
+  short_desc: a rake
+  long_desc: A metal rake lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 7
+  weight: 8
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: rake
+    description: It is a large metal rake with a solid wooden handle.
+  affects: []
+- vnum: 3610
+  namelist: skeleton ancient
+  short_desc: an ancient skeleton
+  long_desc: An ancient skeleton lies here.
+  action_desc: ''
+  type_flag: 0
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: skeleton
+    description: 'The dusty bones are almost brown.  It must have been buried for
+      very long
+
+      time.'
+  affects: []
+- vnum: 3611
+  namelist: gem amethyst
+  short_desc: an amethyst gem
+  long_desc: A purple amethyst gem glitters here.
+  action_desc: ''
+  type_flag: 8
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 40
+  extra_descriptions:
+  - keywords: amethyst
+    description: It has a very deep purple colour.
+  affects: []
+- vnum: 3612
+  namelist: pendant silver
+  short_desc: a silver pendant
+  long_desc: A silver pendant on a chain lies here.
+  action_desc: ''
+  type_flag: 8
+  extra_flags: 0
+  wear_flags: 16389
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 400
+  rent: 80
+  extra_descriptions:
+  - keywords: pendant silver
+    description: It resembles Thor's hammer and appears to be made of solid silver.
+  affects: []
+- vnum: 3613
+  namelist: dagger silver
+  short_desc: a silver dagger
+  long_desc: A silver dagger lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 11
+  weight: 1
+  cost: 100
+  rent: 20
+  extra_descriptions:
+  - keywords: dagger silver
+    description: 'It has a long, sharp blade that is made entirely from silver.  A
+      small rune
+
+      has been engraved on the blade next to the hilt.'
+  affects:
+  - location: 19
+    modifier: 1
+resets: []
+shops: []

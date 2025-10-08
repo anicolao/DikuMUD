@@ -1,0 +1,136 @@
+zone:
+  number: 0
+  name: LIMBO
+  top_room: 3
+  lifespan: 1
+  reset_mode: 0
+rooms:
+- vnum: 0
+  name: The Void
+  description: "  You step out into ......\n  You don't think that you are not floating\
+    \ in nothing."
+  zone: 0
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 4
+    description: void
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3001
+  extra_descriptions: []
+- vnum: 1
+  name: The Void
+  description: '  You don''t think that you are not floating in nothing.'
+  zone: 0
+  room_flags: 8
+  sector_type: 1
+  exits: []
+  extra_descriptions: []
+- vnum: 2
+  name: Limbo
+  description: "   You are floating in a formless void, detached from all sensation\
+    \ of physical\nmatter, surrounded by swirling glowing light, which fades into\
+    \ the relative\ndarkness around you without any trace of edges or shadow.\n  \
+    \ There is a \"No Tipping\" notice pinned to the darkness."
+  zone: 0
+  room_flags: 8
+  sector_type: 1
+  exits: []
+  extra_descriptions: []
+mobiles:
+- vnum: 1
+  namelist: puff banth ancient
+  short_desc: Puff
+  long_desc: Puff, an ancient white banth, rests here contemplating mysteries.
+  detailed_desc: 'This legendary banth is unlike any other on Mars. Its ten legs end
+    in
+
+    massive paws, and its white fur shimmers with an otherworldly quality.
+
+    Ancient beyond measure, it seems to perceive realities beyond normal
+
+    understanding. Its leonine face holds wisdom and power in equal measure.'
+  action_flags: 1
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 26
+    thac0: 1
+    ac: -1
+    hp_dice: 5d10+550
+    damage_dice: 4d6+3
+    gold: 10000
+    experience: 155000
+    position: 8
+    default_position: 8
+    sex: 2
+objects:
+- vnum: 1
+  namelist: parchment rules
+  short_desc: a parchment of rules
+  long_desc: A formal parchment document has been placed here.
+  action_desc: "              Rules for Immortal Player Behaviour\n\nUpon becoming\
+    \ immortal, you are no longer considered a player in DikuMud,\nyou simply cannot\
+    \ get killed. Therefore, there are certain rules you must\nfollow. Knowingly breaking\
+    \ these rules will probably cost you your\ncharacters(s).\n\n - An immortal must\
+    \ not support ANY mortal playing character in the game,\n   including his/her\
+    \ own caracter. Supporting includes grouping, items,\n   money, 'preparing' monsters\
+    \ for easy killing, etc.\n      You may occasionally help low-level players by\
+    \ giving them\n   small amounts of money or items. You may only give them what\
+    \ is\n   buyable in the shops, and never more than 500 gold coins worth.\n   \
+    \   Immortals are welcome to take part in the game, by creating\n   unexpected\
+    \ (but never unreasonably harmful) obstacles for the players,\n   or by providing\
+    \ divine assistance to a newcomer in distress. Usage\n   of the 'switch'-command\
+    \ to make the monsters more challenging or\n   entertaining is also acceptable\
+    \ - see the rules about harming players,\n   below.\n\n - An immortal is allowed\
+    \ to play other characters, provided that he/she\n   does not support them - see\
+    \ above. Beware: It is very hard not to help\n   your mortal player, and we'll\
+    \ show virtually no mercy, should we find out.\n     Exception from this rule\
+    \ can be made ONLY for test purposes, and only\n   by immortals who are actually\
+    \ building or supervising areas of the\n   world. Other players should NEVER benefit\
+    \ or suffer from this.\n   Test characters should not be a nuisance to other players\
+    \ in any way.\n\n - An immortal character is not allowed to harm mortal players\n\
+    \   in any way, unless this player is extremly provocative and\n   annoying to\
+    \ others.\n\n   Any action taken against mortals should have a VERY good reason.\n\
+    \n - Implementors of DikuMUD reserves right to change any of the\n   above rules.\n\
+    \n - A frequently asked question is what to do after a game crash. In general,\n\
+    \   you shouldn't do anything. However, if you feel up to it, and if you\n   feel\
+    \ very confident that you aren't being cheated (grabbed by the nose,\n   as they\
+    \ say in Denmark), you are allowed to make compensations for the\n   losses of\
+    \ the players. Still, the rule in this case is, 'better too\n   little than too\
+    \ much'.\n\n\"Any excuse is a bad excuse\" - Papi\n\nThese are just suggestions:\n\
+    \n - You could hang around talking to other players.\n\n - You may apply for building\
+    \ a new area in the world of DikuMud.\n   Send a letter to the Central Commitee\
+    \ of DikuMud Building Junta\n   Association. This may be sent to either:\n   \
+    \  Tom Madsen (noop@freja.diku.dk)\n     Michael Seifert (seifert@freja.diku.dk)\n\
+    \     Sebastian Hammer (quinn@freja.diku.dk)\n   We will then return a letter\
+    \ explaining the Building rules.\n\n - You may apply for World Supervisor. A supervisor\
+    \ is\n   assigned an area(s) which other immortals are building. The idea\n  \
+    \ is that you test the area, give ideas for changes, inform the\n   creator of\
+    \ rare items which are too easy to obtain. Etc.\n   The Supervisor is \"higher\
+    \ rank\" than the creator, and can always send\n   a letter to the Central Commitee\
+    \ of DikuMud Building Junta Association\n   in cases of disagreement with the\
+    \ creator.\n   This is a highly trusted position, and you will have to prove worthy\n\
+    \   somehow.\n   For more information send a letter asking for more rules."
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 2
+  extra_descriptions: []
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 1
+  arg2: 1
+  arg3: 2
+shops: []

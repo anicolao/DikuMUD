@@ -1,0 +1,3161 @@
+zone:
+  number: 36
+  name: Zodanga - Enemy City
+  top_room: 3649
+  lifespan: 40
+  reset_mode: 2
+rooms:
+- vnum: 3600
+  name: The Main Plaza of Zodanga
+  description: '   You stand in the central plaza of Zodanga, the great rival city
+    of Helium.
+
+    The architecture here is imposing and militaristic, with dark metal and harsh
+
+    angles dominating the design. Massive statues of Zodangan Jeddaks tower over
+
+    the plaza, their stern faces watching all who pass. Red Martian warriors in
+
+    the dark purple harnesses of Zodanga patrol constantly. The atmosphere feels
+
+    oppressive compared to the open grace of Helium.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The Palace District lies to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3601
+  - direction: 1
+    description: The Military Quarter extends to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3610
+  - direction: 2
+    description: The Merchant District is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3620
+  - direction: 3
+    description: The Espionage Quarter lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3630
+  extra_descriptions: []
+- vnum: 3601
+  name: Palace Approach
+  description: '   You walk along a wide avenue leading to the palace of Than Kosis,
+    Jeddak
+
+    of Zodanga. Guards in dark purple harnesses stand at attention, their hands
+
+    never far from their weapons. The palace looms ahead, a massive structure of
+
+    black metal and dark stone, designed more for defense than beauty. Zodangan
+
+    citizens give the guards a wide berth.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The palace gates stand before you.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3602
+  - direction: 2
+    description: The main plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3602
+  name: Palace Gates
+  description: '   You stand before the imposing gates of the Zodangan palace. Two
+    massive
+
+    towers flank the entrance, and elite guards in ornate purple harnesses watch
+
+    everyone who approaches. The gates themselves are crafted from rare metals
+
+    and inscribed with the history of Zodangan conquests. Only those with business
+
+    for the Jeddak are permitted beyond this point.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The outer palace courtyard lies beyond the gates.
+    keywords: gates
+    door_flag: 1
+    key_vnum: 3600
+    to_room: 3603
+  - direction: 2
+    description: The palace approach is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3601
+  extra_descriptions: []
+- vnum: 3603
+  name: Palace Outer Courtyard
+  description: '   This courtyard serves as a buffer between the city and the inner
+    palace.
+
+    Military officers gather here to receive orders, and messengers constantly
+
+    rush in and out. The courtyard is paved with dark stone, and weapon racks
+
+    line the walls. A fountain in the center depicts a Zodangan victory over
+
+    some ancient enemy.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The throne room entrance is ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3604
+  - direction: 2
+    description: The palace gates are to the south.
+    keywords: gates
+    door_flag: 1
+    key_vnum: 3600
+    to_room: 3602
+  extra_descriptions: []
+- vnum: 3604
+  name: Throne Room of Than Kosis
+  description: '   You enter the magnificent throne room of the Jeddak of Zodanga.
+    The chamber
+
+    is vast and imposing, with high ceilings supported by columns of dark metal.
+
+    The throne itself sits on a raised dais, crafted from rare materials and
+
+    decorated with captured banners from defeated enemies. Purple tapestries hang
+
+    from the walls, each depicting Zodangan military victories. The entire room
+
+    is designed to intimidate and impress.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: A corridor leads to the private chambers.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3605
+  - direction: 2
+    description: The outer courtyard is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3603
+  extra_descriptions: []
+- vnum: 3605
+  name: Palace Private Chambers
+  description: '   This corridor leads to the private quarters of the royal family
+    and their
+
+    closest advisors. Guards stand at every doorway, and the walls are decorated
+
+    with expensive art and captured treasures. The atmosphere is one of luxury
+
+    mixed with military readiness - even here, weapons are never far away.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Jeddak's council chamber lies ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3606
+  - direction: 2
+    description: The throne room is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3604
+  extra_descriptions: []
+- vnum: 3606
+  name: War Council Chamber
+  description: '   This chamber serves as the nerve center of Zodangan military planning.
+    A
+
+    large table dominates the room, covered with maps of Barsoom showing troop
+
+    positions, enemy cities, and strategic resources. Military commanders gather
+
+    here to plan campaigns and discuss tactics. The walls are lined with battle
+
+    standards and captured weapons.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A small door leads to the map room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3607
+  - direction: 2
+    description: The private chambers corridor is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3605
+  extra_descriptions: []
+- vnum: 3607
+  name: Map Room
+  description: '   This secure chamber contains detailed maps of all known regions
+    of Barsoom,
+
+    including Helium, other city-states, green Martian territories, and wilderness
+
+    areas. Intelligence reports are filed here, and spy networks are coordinated
+
+    from this room. Access is strictly controlled.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: You see the spy master's office.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3608
+  - direction: 3
+    description: The war council chamber is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3606
+  extra_descriptions: []
+- vnum: 3608
+  name: Spy Master's Office
+  description: '   This private office belongs to the head of Zodangan intelligence
+    operations.
+
+    The walls are lined with encoded messages, reports from agents in other cities,
+
+    and dossiers on important figures across Barsoom. A secret passage is rumored
+
+    to connect this office to the espionage quarter.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A concealed passage leads down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3635
+  - direction: 3
+    description: The map room is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3607
+  extra_descriptions: []
+- vnum: 3609
+  name: Prince's Chambers
+  description: '   These luxurious quarters belong to Sab Than, Prince of Zodanga.
+    The room
+
+    is decorated with expensive furniture, weapons, and trophies from hunts and
+
+    battles. Despite the luxury, everything is arranged with military precision.
+
+    The prince''s ambition and sense of entitlement permeate the space.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The private chambers corridor is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3605
+  extra_descriptions: []
+- vnum: 3610
+  name: Military Quarter - Parade Ground
+  description: '   This vast parade ground serves as the training and assembly area
+    for
+
+    Zodangan forces. Soldiers drill constantly under the watchful eyes of their
+
+    officers. Weapon racks line the edges, and target ranges can be seen in the
+
+    distance. The ground is hard-packed from countless marching feet.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The barracks complex extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3611
+  - direction: 1
+    description: The armory is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3612
+  - direction: 2
+    description: Officers' quarters are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3613
+  - direction: 3
+    description: The main plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3611
+  name: Military Barracks
+  description: '   These barracks house hundreds of Zodangan soldiers. Rows of bunks
+    line
+
+    the walls, and footlockers hold each warrior''s personal gear. The atmosphere
+
+    is one of strict discipline and military readiness. Soldiers maintain their
+
+    equipment and prepare for the next campaign.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The training facilities are to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3614
+  - direction: 2
+    description: The parade ground is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3610
+  extra_descriptions: []
+- vnum: 3612
+  name: Military Armory
+  description: '   This massive armory stores weapons and armor for the Zodangan military.
+
+    Racks of longswords, radium rifles, spears, and other weapons line the walls.
+
+    Armor harnesses of various qualities are organized by size. Master armorsmiths
+
+    work constantly to maintain and repair equipment.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The workshop is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3615
+  - direction: 3
+    description: The parade ground is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3610
+  extra_descriptions: []
+- vnum: 3613
+  name: Officers' Quarters
+  description: '   These quarters house the officers who command Zodangan forces.
+    The rooms
+
+    are more spacious than the common barracks, with private spaces for planning
+
+    and meetings. Maps and tactical documents cover the tables, and officers
+
+    discuss strategy and coordinate their units.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The parade ground is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3610
+  - direction: 1
+    description: The command post is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3616
+  extra_descriptions: []
+- vnum: 3614
+  name: Training Facilities
+  description: '   Warriors train here in various forms of combat. Practice weapons
+    are used
+
+    for sparring, and instructors drill soldiers in swordsmanship, marksmanship,
+
+    and hand-to-hand combat. The clash of weapons and shouts of drill sergeants
+
+    fill the air.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The advanced training area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3617
+  - direction: 3
+    description: The barracks are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3611
+  extra_descriptions: []
+- vnum: 3615
+  name: Armorer's Workshop
+  description: '   Master weaponsmiths and armorers work here, forging and repairing
+    equipment
+
+    for the Zodangan military. The heat from forges fills the air, and the ring
+
+    of hammers on metal creates a constant rhythm. These craftsmen produce some
+
+    of the finest weapons on Barsoom.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The armory is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3612
+  extra_descriptions: []
+- vnum: 3616
+  name: Military Command Post
+  description: '   This fortified structure serves as the command center for military
+    operations.
+
+    Officers receive orders from the palace and coordinate troop movements. Maps
+
+    show current positions of Zodangan forces and intelligence on enemy movements.
+
+    Communication with field units is maintained from here.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The communications room is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3618
+  - direction: 3
+    description: The officers' quarters are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3613
+  extra_descriptions: []
+- vnum: 3617
+  name: Advanced Combat Training
+  description: '   Elite warriors train here in advanced combat techniques. This area
+    is reserved
+
+    for the most skilled soldiers and those being groomed for special missions.
+
+    Training includes assassination techniques, infiltration, and unconventional
+
+    warfare in addition to standard combat skills.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The training facilities are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3614
+  extra_descriptions: []
+- vnum: 3618
+  name: Communications Center
+  description: '   This room houses the equipment and personnel needed to maintain
+    communication
+
+    with Zodangan forces across Barsoom. Heliograph signals, message riders, and
+
+    coded communications are coordinated from here. Intelligence reports flow in
+
+    constantly.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The signal tower access is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3619
+  - direction: 2
+    description: The command post is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3616
+  extra_descriptions: []
+- vnum: 3619
+  name: Signal Tower
+  description: '   This high tower provides a vantage point over the city and surrounding
+
+    territory. Signalmen use heliographs and flags to communicate with distant
+
+    outposts and approaching forces. From here, you can see across the dead sea
+
+    bottom toward distant cities.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 3
+    description: The stairs lead down to the communications center.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3618
+  extra_descriptions: []
+- vnum: 3620
+  name: Merchant District
+  description: '   The merchant quarter of Zodanga is busy with commerce, though the
+    atmosphere
+
+    is more guarded than in Helium. Merchants sell goods from across Barsoom, but
+
+    prices are higher and negotiations more aggressive. Zodangan merchants are known
+
+    for sharp dealing and questionable ethics.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The main plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  - direction: 1
+    description: The market square is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3621
+  - direction: 2
+    description: The warehouse district extends south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3622
+  - direction: 3
+    description: The trading post is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3623
+  extra_descriptions: []
+- vnum: 3621
+  name: Market Square
+  description: '   This open square serves as the main marketplace for Zodanga. Merchants
+    hawk
+
+    their wares, and buyers bargain aggressively. Everything from food to weapons
+
+    to exotic goods from distant cities can be found here - for a price. Pickpockets
+
+    and thieves operate openly, adding to the chaotic atmosphere.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The weaponsmith's shop is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3624
+  - direction: 2
+    description: The armorer's shop is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3625
+  - direction: 3
+    description: The merchant district is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3620
+  extra_descriptions: []
+- vnum: 3622
+  name: Warehouse District
+  description: '   Massive warehouses store goods waiting to be shipped or sold. This
+    area
+
+    is heavily guarded, as valuable merchandise attracts thieves. Workers load
+
+    and unload cargo, and merchants inspect their inventory. The district operates
+
+    day and night.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The merchant district is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3620
+  - direction: 1
+    description: A warehouse entrance is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3626
+  extra_descriptions: []
+- vnum: 3623
+  name: Trading Post
+  description: '   This establishment deals in goods from across Barsoom. Exotic items
+    from
+
+    other cities, captured enemy equipment, and rare materials can be found here.
+
+    The proprietor is a shrewd Zodangan merchant who drives hard bargains.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The merchant district is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3620
+  extra_descriptions: []
+- vnum: 3624
+  name: Weaponsmith Shop
+  description: '   This shop produces and sells weapons for Zodangan warriors and
+    anyone else
+
+    with the gold to pay. The quality is excellent, though the prices reflect that.
+
+    The weaponsmith takes pride in his craft and in equipping Zodanga''s military.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The market square is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3621
+  extra_descriptions: []
+- vnum: 3625
+  name: Armorer's Shop
+  description: '   This shop creates the leather and metal harnesses worn by Zodangan
+    warriors.
+
+    The dark purple color of Zodangan military harnesses is distinctive across
+
+    Barsoom. Civilian harnesses are also available in various colors and styles.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The market square is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3621
+  - direction: 1
+    description: The jeweler's shop is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3627
+  extra_descriptions: []
+- vnum: 3626
+  name: Warehouse Storage
+  description: '   This warehouse contains various goods - food supplies, raw materials,
+    and
+
+    manufactured items. Inventory records track everything, and guards ensure
+
+    nothing disappears without authorization. The warehouse is well-organized
+
+    despite the volume of goods.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The warehouse district is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3622
+  extra_descriptions: []
+- vnum: 3627
+  name: Jeweler's Shop
+  description: '   This shop deals in precious metals and gems. The jeweler crafts
+    ornaments
+
+    for harnesses and other decorative items. While not as renowned as Helium''s
+
+    jewelers, the craftsman here produces quality work and has access to rare
+
+    materials.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The armorer's shop is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3625
+  extra_descriptions: []
+- vnum: 3628
+  name: The Dark Tavern
+  description: '   This tavern caters to soldiers, merchants, and the rougher elements
+    of
+
+    Zodangan society. The atmosphere is tense, with potential violence always
+
+    simmering beneath the surface. Strong drink flows freely, and information
+
+    can be bought for the right price.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A back door leads to a storage room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3629
+  - direction: 2
+    description: The merchant district is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3620
+  extra_descriptions: []
+- vnum: 3629
+  name: Tavern Back Room
+  description: '   This room serves as storage for the tavern, but also as a meeting
+    place for
+
+    those seeking privacy. Deals both legal and illegal are negotiated here, away
+
+    from prying eyes. The room is dimly lit and smells of spilled ale and secrets.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The main tavern is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3628
+  extra_descriptions: []
+- vnum: 3630
+  name: Espionage Quarter
+  description: '   This district is where Zodanga''s spy networks operate. Seemingly
+    innocent
+
+    shops and residences conceal safehouses, dead drops, and meeting places for
+
+    agents. Everyone watches everyone else here, and trust is a rare commodity.
+
+    The atmosphere is one of constant suspicion.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: A nondescript building stands to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3631
+  - direction: 1
+    description: The main plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  - direction: 2
+    description: A narrow alley leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3632
+  extra_descriptions: []
+- vnum: 3631
+  name: Safehouse
+  description: '   This building appears to be a simple residence, but it serves as
+    a safehouse
+
+    for Zodangan agents. Hidden rooms conceal documents, weapons, and supplies.
+
+    Agents use this location to meet, plan operations, and hide when needed.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The street is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3630
+  - direction: 5
+    description: A hidden trapdoor leads down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3633
+  extra_descriptions: []
+- vnum: 3632
+  name: Narrow Alley
+  description: '   This shadowy alley provides concealment for clandestine meetings
+    and quick
+
+    escapes. Dead drops are hidden in the walls, and lookouts watch for any sign
+
+    of interference. The alley connects various parts of the espionage quarter.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The street is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3630
+  - direction: 2
+    description: The alley continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3634
+  extra_descriptions: []
+- vnum: 3633
+  name: Hidden Basement
+  description: '   This secret basement beneath the safehouse contains intelligence
+    documents,
+
+    coded messages, and equipment for covert operations. Only trusted agents know
+
+    of its existence. Maps show the locations of Zodangan agents in other cities,
+
+    including Helium.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: A hidden ladder leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3631
+  extra_descriptions: []
+- vnum: 3634
+  name: Dead Drop Location
+  description: '   This secluded spot in the alley serves as a dead drop for secret
+    messages.
+
+    A loose brick conceals a small cavity where agents leave coded communications
+
+    for their contacts. The location is chosen for its ability to be observed
+
+    from multiple angles.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The alley continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3632
+  extra_descriptions: []
+- vnum: 3635
+  name: Secret Tunnel
+  description: '   This concealed passage connects the palace spy master''s office
+    with the
+
+    espionage quarter. It allows for discreet movement and emergency escapes.
+
+    The tunnel is known only to a select few and is carefully guarded.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads up to the palace.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3608
+  - direction: 2
+    description: The tunnel continues into the quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3633
+  extra_descriptions: []
+- vnum: 3636
+  name: Training Academy
+  description: '   This facility trains new recruits in espionage techniques. Students
+    learn
+
+    codes, disguise, infiltration, assassination, and information gathering. The
+
+    curriculum is intensive and only the most capable graduate. Failure often
+
+    means assignment to more dangerous posts.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The practice range is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3637
+  - direction: 2
+    description: The street is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3630
+  extra_descriptions: []
+- vnum: 3637
+  name: Assassination Practice
+  description: '   This secure facility trains agents in the art of silent killing.
+    Targets
+
+    and practice weapons allow students to hone their skills. The instructors
+
+    are veteran assassins who have survived decades in the trade.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The training academy is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3636
+  extra_descriptions: []
+- vnum: 3638
+  name: Disguise Workshop
+  description: '   This room contains costumes, makeup, and props used to create disguises.
+
+    Agents learn to impersonate various types of people from different cities and
+
+    social classes. Wigs, false facial features, and clothing from across Barsoom
+
+    fill the storage cabinets.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The training academy is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3636
+  extra_descriptions: []
+- vnum: 3639
+  name: Code Breaking Room
+  description: '   Cryptographers work here to break enemy codes and create new cipher
+    systems
+
+    for Zodangan communications. Complex mathematical puzzles and linguistic
+
+    analysis fill the boards. Intercepted messages from other cities are analyzed
+
+    here.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The training academy is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3636
+  extra_descriptions: []
+- vnum: 3640
+  name: Eastern Gate
+  description: '   This heavily fortified gate provides access to the eastern approaches
+    of
+
+    Zodanga. Guards in dark purple harnesses challenge everyone who enters or
+
+    leaves. The gate towers are equipped with signal equipment and defensive
+
+    positions.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The wilderness extends to the east.
+    keywords: gate
+    door_flag: 1
+    key_vnum: 3650
+    to_room: -1
+  - direction: 3
+    description: The main plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3641
+  name: Western Gate
+  description: '   This gate faces toward the distant Helium territories. It is the
+    most heavily
+
+    guarded gate in Zodanga, as threats from Helium are always expected. Multiple
+
+    layers of defenses and constant patrols make this gate nearly impregnable.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The main plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  - direction: 3
+    description: The wilderness extends to the west.
+    keywords: gate
+    door_flag: 1
+    key_vnum: 3651
+    to_room: -1
+  extra_descriptions: []
+- vnum: 3642
+  name: Northern Gate
+  description: '   This gate leads to the northern territories and other city-states.
+    Trade
+
+    caravans and military expeditions depart through this gate. Guards inspect
+
+    all travelers and maintain vigilance against threats from the north.'
+  zone: 36
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The wilderness extends to the north.
+    keywords: gate
+    door_flag: 1
+    key_vnum: 3652
+    to_room: -1
+  - direction: 2
+    description: The main plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3643
+  name: Airship Landing Platform
+  description: '   This platform high above the city serves as Zodanga''s primary
+    airship dock.
+
+    Military fliers and commercial vessels land here to load passengers and cargo.
+
+    The platform provides a commanding view of the city and surrounding territory.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 5
+    description: Stairs lead down to the city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3644
+  name: Arena
+  description: '   This arena hosts combat demonstrations and gladiatorial games.
+    Zodangans
+
+    enjoy watching warriors battle, whether in training exhibitions or fights
+
+    to the death. The arena can hold thousands of spectators, and major events
+
+    draw crowds from across the city.'
+  zone: 36
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The arena entrance is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3645
+  name: Temple of War
+  description: '   This temple is dedicated to the Zodangan ideal of military conquest
+    and
+
+    power. Red Martians come here to pray for victory in battle and to honor
+
+    fallen warriors. The temple is stark and militaristic, with weapons and
+
+    battle standards decorating the walls.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The temple courtyard is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3600
+  extra_descriptions: []
+- vnum: 3646
+  name: Prison
+  description: '   This fortified structure houses prisoners of war, captured spies,
+    and
+
+    criminals. Conditions are harsh, and interrogations are conducted here.
+
+    The prison is designed to break the spirit of anyone held within its walls.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The guard post is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3647
+  extra_descriptions: []
+- vnum: 3647
+  name: Prison Guard Post
+  description: '   Guards stationed here maintain security for the prison and monitor
+    the
+
+    prisoners. Interrogation rooms branch off from this central post, and records
+
+    track every prisoner and their alleged crimes.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The prison cells are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3646
+  extra_descriptions: []
+- vnum: 3648
+  name: Torture Chamber
+  description: '   This grim room is where prisoners are interrogated using brutal
+    methods.
+
+    Zodangan interrogators are skilled at extracting information through pain
+
+    and psychological pressure. The room contains various instruments designed
+
+    to inflict suffering.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The guard post is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3647
+  extra_descriptions: []
+- vnum: 3649
+  name: Jeddak's Treasury
+  description: '   This heavily guarded vault contains the wealth of Zodanga - gold,
+    precious
+
+    gems, rare materials, and tribute from conquered territories. Only the most
+
+    trusted guards are assigned here, and multiple layers of security protect
+
+    the treasury.'
+  zone: 36
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The palace private chambers are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3605
+  extra_descriptions: []
+mobiles:
+- vnum: 3600
+  namelist: than kosis jeddak zodanga ruler king
+  short_desc: Than Kosis, Jeddak of Zodanga
+  long_desc: Than Kosis, the mighty Jeddak of Zodanga, stands here in regal authority.
+  detailed_desc: 'This imposing red Martian stands tall and proud, his bearing that
+    of absolute
+
+    authority. He wears an elaborate harness in the dark purple of Zodangan royalty,
+
+    decorated with captured gems and rare metals. His face is stern and calculating,
+
+    the face of a ruler who has held power through strength and cunning. His eyes
+
+    constantly assess threats and opportunities. As Jeddak of Zodanga, he commands
+
+    one of the most powerful military forces on Barsoom and schemes constantly to
+
+    expand his domain. His ambition knows no bounds, and he sees the marriage of
+
+    his son to Dejah Thoris as the key to dominating Helium.'
+  action_flags: 2
+  affection_flags: 128
+  alignment: 1000
+  type: simple
+  simple:
+    level: 26
+    thac0: -5
+    ac: -5
+    hp_dice: 10d10+700
+    damage_dice: 5d8+10
+    gold: 60000
+    experience: 180000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3601
+  namelist: sab than prince zodanga
+  short_desc: Sab Than, Prince of Zodanga
+  long_desc: Sab Than, arrogant Prince of Zodanga, stands here with evident self-importance.
+  detailed_desc: 'This young red Martian prince carries himself with the confidence
+    of privilege
+
+    and power. He is undeniably handsome and skilled with weapons, but his arrogance
+
+    mars his features. He wears a purple harness decorated with expensive ornaments,
+
+    each one a display of wealth and status. His eyes show ambition inherited from
+
+    his father and a sense of entitlement that comes from never being denied. He
+
+    sees Dejah Thoris not as a person but as a prize to be won, a means to ultimate
+
+    power. His combat skills are formidable, but he lacks the depth of character
+
+    that comes from true adversity.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 24
+    thac0: -3
+    ac: -3
+    hp_dice: 7d10+500
+    damage_dice: 4d8+8
+    gold: 35000
+    experience: 120000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3602
+  namelist: zat arrras jed zodanga schemer
+  short_desc: Zat Arrras, Jed of Zodanga
+  long_desc: Zat Arrras, a scheming Jed of Zodanga, watches everything with calculating
+    eyes.
+  detailed_desc: 'This red Martian nobleman embodies political ambition and treachery.
+    His face
+
+    is pleasant enough, but his eyes constantly calculate advantage and opportunity.
+
+    He dresses richly in purple and black, projecting an image of wealth and power.
+
+    Unlike many red Martians who pride themselves on warrior skills, Zat Arrras
+
+    excels at manipulation, political maneuvering, and backstabbing. He sees chaos
+
+    as opportunity and has no loyalty beyond his own advancement. He hates John
+
+    Carter for representing everything he is not - honor, courage, and genuine
+
+    heroism. He speaks with false courtesy while his mind plots treachery.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: -2
+    ac: -2
+    hp_dice: 6d10+400
+    damage_dice: 3d8+6
+    gold: 28000
+    experience: 95000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3603
+  namelist: spy master intelligence chief zodanga
+  short_desc: the Spy Master
+  long_desc: The head of Zodangan intelligence stands here, his eyes missing nothing.
+  detailed_desc: 'This middle-aged red Martian has the unremarkable appearance of
+    someone you
+
+    would pass on the street without noticing - which is precisely the point. His
+
+    purple harness is functional rather than ornate. His eyes, however, are sharp
+
+    and penetrating, constantly assessing and analyzing. He commands Zodanga''s
+
+    vast intelligence network, with agents in every major city on Barsoom. He knows
+
+    secrets that could topple governments and end lives. His loyalty is to Zodanga
+
+    and to knowledge itself. He maintains files on nearly every important figure
+
+    on the planet.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 25
+    thac0: -4
+    ac: -4
+    hp_dice: 8d10+550
+    damage_dice: 4d8+7
+    gold: 45000
+    experience: 135000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3604
+  namelist: palace guard elite royal zodangan
+  short_desc: an elite palace guard
+  long_desc: An elite guard in ornate purple armor stands at attention here.
+  detailed_desc: 'This red Martian warrior represents the best of Zodangan military
+    prowess.
+
+    Standing tall and alert, he wears elaborate purple armor that marks him as
+
+    palace guard. His weapons are of the finest quality, and his bearing shows
+
+    years of disciplined training. He has survived countless battles to earn this
+
+    position and will defend the Jeddak with his life. His eyes constantly scan
+
+    for threats, and his hand never strays far from his weapon.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 24
+    thac0: -3
+    ac: -3
+    hp_dice: 7d10+450
+    damage_dice: 4d8+6
+    gold: 30000
+    experience: 105000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3605
+  namelist: zodangan soldier warrior guard
+  short_desc: a Zodangan soldier
+  long_desc: A Zodangan soldier in dark purple stands guard here.
+  detailed_desc: 'This red Martian warrior wears the standard dark purple harness
+    of Zodangan
+
+    military forces. He is well-trained and disciplined, carrying both longsword
+
+    and radium pistol. His face shows the hardness that comes from constant military
+
+    training and the expectation of warfare. Zodangan soldiers are feared across
+
+    Barsoom for their discipline and ruthlessness in battle.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+250
+    damage_dice: 3d8+4
+    gold: 15000
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3606
+  namelist: officer military commander zodangan
+  short_desc: a Zodangan officer
+  long_desc: A military officer in decorated purple armor commands here.
+  detailed_desc: 'This experienced red Martian has risen through the ranks to command
+    position.
+
+    His purple harness is decorated with marks of rank and service medals. His
+
+    bearing is one of authority and tactical awareness. He has led troops in
+
+    numerous campaigns and knows both strategy and the brutal realities of warfare.
+
+    He expects instant obedience from his subordinates.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 850
+  type: simple
+  simple:
+    level: 22
+    thac0: -2
+    ac: -2
+    hp_dice: 5d10+350
+    damage_dice: 3d8+5
+    gold: 22000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3607
+  namelist: weaponsmith armorer crafter zodangan
+  short_desc: a Zodangan weaponsmith
+  long_desc: A skilled weaponsmith works at his forge here.
+  detailed_desc: 'This red Martian craftsman has spent decades perfecting his trade.
+    His arms
+
+    are powerful from years of hammering metal, and his hands show the scars of
+
+    his work. He takes pride in equipping Zodanga''s military with superior weapons
+
+    and sells his work to anyone with sufficient gold. His face shows concentration
+
+    as he works, and he has little patience for those who don''t respect quality
+
+    craftsmanship.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 18
+    thac0: 2
+    ac: 2
+    hp_dice: 3d10+200
+    damage_dice: 2d8+3
+    gold: 8000
+    experience: 35000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3608
+  namelist: merchant trader zodangan shrewd
+  short_desc: a Zodangan merchant
+  long_desc: A shrewd Zodangan merchant eyes potential customers here.
+  detailed_desc: 'This red Martian trader has a calculating expression and watches
+    for any
+
+    opportunity to profit. He wears a functional but quality harness and carries
+
+    himself with the confidence of someone who has made his fortune through sharp
+
+    dealing. His knowledge of prices and markets across Barsoom is encyclopedic,
+
+    and he drives hard bargains. Ethics are flexible when profit is concerned.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 15
+    thac0: 3
+    ac: 3
+    hp_dice: 2d10+150
+    damage_dice: 2d8+2
+    gold: 5000
+    experience: 20000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3609
+  namelist: spy agent infiltrator zodangan
+  short_desc: a Zodangan spy
+  long_desc: A nondescript figure who might be a spy watches carefully here.
+  detailed_desc: 'This red Martian has cultivated the ability to blend in anywhere.
+    Neither tall
+
+    nor short, neither handsome nor ugly, with no distinguishing features to speak
+
+    of. The harness worn could be from any city. This unremarkable appearance is
+
+    the spy''s greatest asset. Trained in infiltration, disguise, and information
+
+    gathering, this agent serves Zodangan intelligence in various cities. Combat
+
+    skills are secondary to stealth and observation.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 750
+  type: simple
+  simple:
+    level: 19
+    thac0: -1
+    ac: -1
+    hp_dice: 4d10+220
+    damage_dice: 3d8+3
+    gold: 12000
+    experience: 55000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3610
+  namelist: assassin killer zodangan deadly
+  short_desc: a Zodangan assassin
+  long_desc: A deadly-looking figure in dark clothing watches from the shadows.
+  detailed_desc: 'This red Martian specializes in silent killing. Dressed in dark,
+    functional
+
+    clothing that allows free movement, the assassin carries concealed weapons
+
+    and moves with the grace of a predator. Years of training in the espionage
+
+    quarter have honed skills in infiltration, poison, and close combat. The
+
+    assassin''s face shows no emotion - killing is simply a job to be done with
+
+    professional efficiency.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 850
+  type: simple
+  simple:
+    level: 21
+    thac0: -2
+    ac: -2
+    hp_dice: 5d10+300
+    damage_dice: 3d8+5
+    gold: 18000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3611
+  namelist: instructor trainer drill sergeant zodangan
+  short_desc: a military instructor
+  long_desc: A stern military instructor drills recruits here.
+  detailed_desc: 'This veteran red Martian warrior has seen decades of combat and
+    now trains
+
+    the next generation of Zodangan soldiers. His voice can be heard across the
+
+    training grounds as he shouts orders and criticism. His expectations are
+
+    impossibly high, and he shows no mercy to those who fail to meet standards.
+
+    Scars cover his body, each one a lesson learned in battle. He produces the
+
+    disciplined soldiers that make Zodanga''s military feared across Barsoom.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 22
+    thac0: -1
+    ac: -1
+    hp_dice: 5d10+320
+    damage_dice: 3d8+4
+    gold: 20000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3612
+  namelist: priest war temple zodangan
+  short_desc: a priest of war
+  long_desc: A priest in dark robes tends to the temple here.
+  detailed_desc: 'This red Martian serves as priest in Zodanga''s Temple of War. Unlike
+    the
+
+    more spiritual priests of other cities, he preaches the virtues of military
+
+    conquest and power. His sermons glorify Zodangan victories and call for
+
+    domination of other cities. He blesses weapons and warriors before campaigns
+
+    and performs rites for fallen soldiers. His faith is in strength and power
+
+    rather than mercy or peace.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 19
+    thac0: 1
+    ac: 1
+    hp_dice: 4d10+240
+    damage_dice: 3d8+3
+    gold: 10000
+    experience: 45000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3613
+  namelist: jailer guard torturer zodangan
+  short_desc: a prison guard
+  long_desc: A harsh-faced guard watches the prisoners with cold eyes.
+  detailed_desc: 'This red Martian has been hardened by years of prison duty. His
+    face shows
+
+    no compassion, only suspicion and cruelty. He wears heavy armor and carries
+
+    both weapons and restraints. His job is to break the spirits of prisoners
+
+    and extract information through any means necessary. He takes grim satisfaction
+
+    in his work and shows no mercy to those in his custody.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 750
+  type: simple
+  simple:
+    level: 20
+    thac0: -1
+    ac: -1
+    hp_dice: 4d10+280
+    damage_dice: 3d8+4
+    gold: 14000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3614
+  namelist: gladiator arena fighter zodangan
+  short_desc: an arena gladiator
+  long_desc: A scarred gladiator awaits the next match here.
+  detailed_desc: 'This red Martian has survived countless battles in Zodanga''s arena.
+    His body
+
+    is covered with scars, testament to his skill and luck. He wears minimal armor,
+
+    relying on speed and skill rather than protection. His eyes hold the hardness
+
+    of someone who has killed many times and expects to die in combat eventually.
+
+    He fights for the entertainment of the crowds and his own survival.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 21
+    thac0: -2
+    ac: -2
+    hp_dice: 5d10+300
+    damage_dice: 3d8+4
+    gold: 16000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3615
+  namelist: noble courtier zodangan
+  short_desc: a Zodangan noble
+  long_desc: A well-dressed noble conducts business here.
+  detailed_desc: 'This red Martian belongs to Zodanga''s aristocracy. Wearing expensive
+    purple
+
+    and black garments, decorated with jewelry and rare ornaments, the noble
+
+    projects wealth and status. Political maneuvering is second nature, and every
+
+    interaction is calculated for advantage. Combat skills are adequate but not
+
+    exceptional - this noble relies on influence and hired warriors rather than
+
+    personal prowess.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 17
+    thac0: 2
+    ac: 2
+    hp_dice: 3d10+180
+    damage_dice: 2d8+3
+    gold: 7000
+    experience: 30000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3616
+  namelist: citizen zodangan commoner
+  short_desc: a Zodangan citizen
+  long_desc: A Zodangan citizen goes about their business here.
+  detailed_desc: 'This red Martian represents the common people of Zodanga. Wearing
+    a simple
+
+    functional harness, the citizen works to survive in a harsh, militaristic
+
+    city. Life in Zodanga means constant awareness of political currents and
+
+    military campaigns. Citizens know to keep their heads down and avoid attracting
+
+    attention from the powerful. Combat skills are basic at best.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 400
+  type: simple
+  simple:
+    level: 12
+    thac0: 5
+    ac: 5
+    hp_dice: 2d10+100
+    damage_dice: 2d8+1
+    gold: 2000
+    experience: 8000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3617
+  namelist: thief pickpocket zodangan criminal
+  short_desc: a Zodangan thief
+  long_desc: A shifty-eyed thief looks for opportunities here.
+  detailed_desc: 'This red Martian has turned to crime to survive in Zodanga''s harsh
+    environment.
+
+    Quick fingers and quicker feet keep this thief ahead of the guards - usually.
+
+    The thief wears nondescript clothing that allows blending into crowds and
+
+    carries concealed weapons for emergencies. Combat is avoided when possible,
+
+    as stealth and speed are better survival tools than fighting.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 14
+    thac0: 4
+    ac: 4
+    hp_dice: 2d10+120
+    damage_dice: 2d8+2
+    gold: 3000
+    experience: 12000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3618
+  namelist: tavern keeper bartender zodangan
+  short_desc: a tavern keeper
+  long_desc: A tavern keeper serves drinks and gossip here.
+  detailed_desc: 'This red Martian runs one of Zodanga''s rougher drinking establishments.
+    Years
+
+    behind the bar have taught skills in reading people, breaking up fights, and
+
+    knowing when to keep secrets. The tavern keeper hears everything that happens
+
+    in this part of the city and sells information to those who pay. Combat skills
+
+    are practical rather than trained - enough to handle drunk customers.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 15
+    thac0: 3
+    ac: 3
+    hp_dice: 2d10+140
+    damage_dice: 2d8+2
+    gold: 4000
+    experience: 15000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3619
+  namelist: messenger courier zodangan
+  short_desc: a messenger
+  long_desc: A swift messenger rushes past on urgent business.
+  detailed_desc: 'This young red Martian carries messages throughout the city and
+    sometimes to
+
+    distant locations. Speed and discretion are essential qualities. The messenger
+
+    wears light harness for maximum mobility and knows every street and alley in
+
+    Zodanga. Combat skills are minimal - the job requires running, not fighting.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 400
+  type: simple
+  simple:
+    level: 10
+    thac0: 6
+    ac: 6
+    hp_dice: 1d10+80
+    damage_dice: 1d8+1
+    gold: 1000
+    experience: 5000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3620
+  namelist: engineer mechanic technician zodangan
+  short_desc: a Zodangan engineer
+  long_desc: An engineer works on mechanical systems here.
+  detailed_desc: 'This red Martian possesses technical knowledge needed to maintain
+    Zodanga''s
+
+    infrastructure and military equipment. Whether repairing radium engines,
+
+    maintaining weapons systems, or working on airships, the engineer applies
+
+    practical knowledge gained through years of training. Combat skills are
+
+    secondary to technical expertise, though all Zodangans receive basic military
+
+    training.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 550
+  type: simple
+  simple:
+    level: 16
+    thac0: 3
+    ac: 3
+    hp_dice: 2d10+160
+    damage_dice: 2d8+2
+    gold: 5500
+    experience: 22000
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 3600
+  namelist: longsword zodangan purple
+  short_desc: a Zodangan longsword
+  long_desc: A longsword with a dark purple hilt lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 8
+  value3: 3
+  weight: 18
+  cost: 900
+  rent: 300
+  extra_descriptions:
+  - keywords: sword longsword
+    description: 'This well-crafted longsword bears the distinctive dark purple coloring
+      of
+
+      Zodangan military equipment. The blade is forged from high-quality Martian
+
+      steel and shows signs of regular maintenance. The hilt is wrapped in dark
+
+      leather, and the pommel bears the symbol of Zodanga. It''s a functional weapon
+
+      designed for both combat effectiveness and intimidation.'
+  affects: []
+- vnum: 3601
+  namelist: radium pistol zodangan purple
+  short_desc: a Zodangan radium pistol
+  long_desc: A radium pistol with purple accents lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 12
+  value1: 4
+  value2: 0
+  value3: 0
+  weight: 22
+  cost: 1100
+  rent: 400
+  extra_descriptions:
+  - keywords: pistol radium
+    description: 'This radium pistol is of Zodangan manufacture, distinguished by
+      dark purple
+
+      accents on the grip and barrel. It fires explosive radium projectiles with
+
+      deadly accuracy. Zodangan weaponsmiths produce excellent firearms, and this
+
+      pistol represents quality craftsmanship. The weapon is regularly maintained
+
+      to ensure reliability in combat.'
+  affects: []
+- vnum: 3602
+  namelist: harness leather zodangan purple
+  short_desc: a Zodangan leather harness
+  long_desc: A dark purple leather harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 7
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 500
+  rent: 175
+  extra_descriptions:
+  - keywords: harness leather
+    description: 'This leather harness is dyed in the distinctive dark purple of Zodangan
+
+      military forces. Made from quality materials, it provides basic protection
+
+      while allowing freedom of movement. Various straps and attachments allow
+
+      for carrying weapons and equipment. The purple color marks the wearer as
+
+      Zodangan, for better or worse.'
+  affects: []
+- vnum: 3603
+  namelist: harness metal zodangan ornate
+  short_desc: an ornate Zodangan harness
+  long_desc: An elaborate purple and black harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 9
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 25
+  cost: 1200
+  rent: 450
+  extra_descriptions:
+  - keywords: harness metal ornate
+    description: 'This elaborate harness combines dark purple leather with black metal
+      plates
+
+      and is decorated with captured gems and rare metals. It''s clearly designed
+
+      for someone of high rank - the quality of materials and craftsmanship are
+
+      exceptional. The metal plates provide superior protection while maintaining
+
+      the imposing aesthetic that Zodangan nobles favor.'
+  affects: []
+- vnum: 3604
+  namelist: dagger zodangan fighting
+  short_desc: a Zodangan fighting dagger
+  long_desc: A wickedly sharp dagger lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 8
+  cost: 300
+  rent: 100
+  extra_descriptions:
+  - keywords: dagger fighting
+    description: 'This fighting dagger is a standard backup weapon for Zodangan warriors.
+      The
+
+      blade is about ten inches long, double-edged, and razor sharp. The hilt is
+
+      wrapped in dark leather for a secure grip. While simple in design, it''s
+
+      expertly crafted and deadly in skilled hands. Many Zodangans carry at least
+
+      one such dagger concealed on their person.'
+  affects: []
+- vnum: 3605
+  namelist: spear zodangan military
+  short_desc: a Zodangan spear
+  long_desc: A long spear with a purple shaft lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 11
+  weight: 14
+  cost: 650
+  rent: 200
+  extra_descriptions:
+  - keywords: spear
+    description: 'This military spear features a purple-dyed shaft and a leaf-shaped
+      metal head.
+
+      It''s designed for both throwing and close combat. Zodangan soldiers train
+
+      extensively with the spear, and it remains a favored weapon despite the
+
+      availability of firearms. The balance is excellent, allowing for accurate
+
+      throws at considerable distance.'
+  affects: []
+- vnum: 3606
+  namelist: shield zodangan metal
+  short_desc: a Zodangan metal shield
+  long_desc: A dark metal shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 16
+  cost: 700
+  rent: 250
+  extra_descriptions:
+  - keywords: shield metal
+    description: 'This round shield is made from dark metal alloy and bears the emblem
+      of
+
+      Zodanga. It provides excellent protection and is light enough to maneuver
+
+      effectively in combat. The interior has leather straps for securing it to
+
+      the arm. Zodangan warriors use these shields in formation fighting and
+
+      individual combat.'
+  affects: []
+- vnum: 3607
+  namelist: armor plate zodangan
+  short_desc: Zodangan plate armor
+  long_desc: Heavy plate armor decorated in purple lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 11
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 35
+  cost: 1800
+  rent: 650
+  extra_descriptions:
+  - keywords: armor plate
+    description: 'This heavy plate armor is designed for elite Zodangan warriors.
+      Black metal
+
+      plates are trimmed with purple and provide superior protection at the cost
+
+      of some mobility. The craftsmanship is exceptional, with interlocking plates
+
+      that allow reasonable movement while defending vital areas. Only the strongest
+
+      warriors can fight effectively in such armor.'
+  affects: []
+- vnum: 3608
+  namelist: poison vial deadly
+  short_desc: a vial of poison
+  long_desc: A small vial containing deadly poison lies here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 400
+  rent: 150
+  extra_descriptions:
+  - keywords: vial poison
+    description: 'This small glass vial contains a deadly poison used by Zodangan
+      assassins.
+
+      A single drop on a blade or in a drink can kill within minutes. The poison
+
+      is derived from rare plants found in the Martian wilderness and is illegal
+
+      in most cities. Zodangan intelligence services maintain supplies for covert
+
+      operations.'
+  affects: []
+- vnum: 3609
+  namelist: lockpicks tools thief
+  short_desc: a set of lockpicks
+  long_desc: A set of fine lockpicks lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 200
+  rent: 75
+  extra_descriptions:
+  - keywords: lockpicks tools
+    description: 'This set of lockpicks is used by thieves and spies to bypass locked
+      doors
+
+      and containers. The tools are made from thin, strong metal and require skill
+
+      to use effectively. Zodangan spies are trained in their use as part of
+
+      infiltration techniques. Possession of such tools is technically illegal,
+
+      but enforcement is selective.'
+  affects: []
+- vnum: 3610
+  namelist: coded message document
+  short_desc: a coded message
+  long_desc: A document with coded writing lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: message document coded
+    description: 'This document contains a message written in Zodangan military cipher.
+      Without
+
+      knowledge of the current code key, the message is incomprehensible. Such
+
+      documents are used for secure communication between agents and military units.
+
+      The cipher changes regularly to maintain security.'
+  affects: []
+- vnum: 3611
+  namelist: map zodanga intelligence
+  short_desc: a Zodangan intelligence map
+  long_desc: A detailed map with numerous annotations lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 350
+  rent: 125
+  extra_descriptions:
+  - keywords: map intelligence
+    description: 'This map shows various regions of Barsoom with detailed annotations
+      about
+
+      military forces, political situations, and strategic resources. It represents
+
+      intelligence gathered by Zodangan agents across the planet. Red marks indicate
+
+      Helium territories, while other cities are color-coded by their relationships
+
+      with Zodanga. Such maps are classified and closely guarded.'
+  affects: []
+- vnum: 3612
+  namelist: jeweled ornament expensive
+  short_desc: a jeweled ornament
+  long_desc: An expensive jeweled ornament lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 800
+  rent: 300
+  extra_descriptions:
+  - keywords: ornament jeweled
+    description: 'This ornament is designed to attach to a harness for decoration.
+      It''s crafted
+
+      from rare metals and set with precious gems, representing considerable wealth.
+
+      Zodangan nobles wear such ornaments as displays of status and power. The
+
+      craftsmanship is excellent, though perhaps more ostentatious than tasteful.'
+  affects: []
+- vnum: 3613
+  namelist: rations military food
+  short_desc: military rations
+  long_desc: A package of military rations lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 20
+  rent: 5
+  extra_descriptions:
+  - keywords: rations food
+    description: 'These military rations are standard issue for Zodangan soldiers
+      on campaign.
+
+      The food is preserved for long storage and provides adequate nutrition, though
+
+      taste is not a priority. The package includes dried meat, hard bread, and
+
+      concentrated nutrients. It''s designed for practicality rather than pleasure.'
+  affects: []
+- vnum: 3614
+  namelist: waterskin canteen supply
+  short_desc: a waterskin
+  long_desc: A leather waterskin lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: waterskin canteen
+    description: 'This leather waterskin is used to carry water during travel across
+      the Martian
+
+      wilderness. It''s treated to prevent leaking and can hold enough water for
+
+      several days of travel. Every sensible traveler carries one when venturing
+
+      onto the dead sea bottom.'
+  affects: []
+- vnum: 3615
+  namelist: torch light fire
+  short_desc: a torch
+  long_desc: An unlit torch lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 4
+  value1: 4
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 3
+  extra_descriptions:
+  - keywords: torch
+    description: 'This simple torch consists of oil-soaked fabric wrapped around a
+      wooden handle.
+
+      When lit, it provides illumination for several hours. Zodangan underground
+
+      areas and prisons use these for lighting, though radium lanterns are preferred
+
+      where available.'
+  affects: []
+- vnum: 3616
+  namelist: key iron zodangan
+  short_desc: an iron key
+  long_desc: A heavy iron key lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 25
+  rent: 5
+  extra_descriptions:
+  - keywords: key iron
+    description: 'This heavy iron key is used to lock and unlock doors in Zodangan
+      buildings.
+
+      The bow is decorated with the city''s emblem. Multiple copies of important
+
+      keys exist to prevent being locked out, but they are carefully controlled
+
+      and tracked. This key might open any number of doors in the city.'
+  affects: []
+- vnum: 3617
+  namelist: banner zodangan purple
+  short_desc: a Zodangan banner
+  long_desc: A dark purple banner bearing Zodanga's emblem lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 150
+  rent: 50
+  extra_descriptions:
+  - keywords: banner
+    description: 'This banner is dark purple with Zodanga''s emblem - a stylized sword
+      and
+
+      crown - emblazoned in black. Such banners fly from towers, adorn halls, and
+
+      are carried into battle by Zodangan forces. The fabric is durable and the
+
+      dyes permanent, designed to withstand Martian weather and warfare.'
+  affects: []
+- vnum: 3618
+  namelist: scroll orders military
+  short_desc: military orders
+  long_desc: A scroll containing military orders lies here.
+  action_desc: ''
+  type_flag: 2
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: scroll orders
+    description: 'This scroll contains written orders for Zodangan military units.
+      It specifies
+
+      troop movements, tactical objectives, and command structure. Such orders are
+
+      carried by officers and messengers. The orders bear official seals to verify
+
+      authenticity and prevent forgery.'
+  affects: []
+- vnum: 3619
+  namelist: disguise kit spy
+  short_desc: a disguise kit
+  long_desc: A case containing disguise materials lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 300
+  rent: 100
+  extra_descriptions:
+  - keywords: kit disguise
+    description: 'This compact case contains materials used to create disguises -
+      makeup, false
+
+      hair pieces, colored contact lenses, and small props. Zodangan spies use
+
+      these kits to impersonate people from other cities or different social classes.
+
+      Skill is required to use the materials effectively, but in trained hands, the
+
+      results can be quite convincing.'
+  affects: []
+- vnum: 3620
+  namelist: chain shackles restraints
+  short_desc: heavy shackles
+  long_desc: Heavy iron shackles lie here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 100
+  rent: 30
+  extra_descriptions:
+  - keywords: shackles chain restraints
+    description: 'These heavy iron shackles are used to restrain prisoners in Zodanga''s
+      prison.
+
+      They consist of manacles for wrists or ankles connected by thick chain. The
+
+      locks are sturdy and difficult to pick. Prisoners bound in these shackles
+
+      have little hope of escape without assistance or the key.'
+  affects: []
+- vnum: 3621
+  namelist: wine bottle zodangan expensive
+  short_desc: a bottle of Zodangan wine
+  long_desc: A bottle of expensive wine lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 120
+  rent: 40
+  extra_descriptions:
+  - keywords: wine bottle
+    description: 'This bottle contains wine produced in the vineyards near Zodanga.
+      The wine
+
+      is known for being robust and slightly bitter - much like the city itself.
+
+      This particular vintage is expensive and typically consumed by nobles and
+
+      wealthy merchants. The bottle is sealed with wax bearing Zodanga''s emblem.'
+  affects: []
+- vnum: 3622
+  namelist: rope coil utility
+  short_desc: a coil of rope
+  long_desc: A coil of sturdy rope lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 40
+  rent: 15
+  extra_descriptions:
+  - keywords: rope coil
+    description: 'This coil of rope is made from plant fibers and is surprisingly
+      strong. It
+
+      has numerous uses - climbing, securing prisoners, tying down cargo, or
+
+      fashioning improvised equipment. Zodangan soldiers, spies, and travelers
+
+      all find uses for good rope.'
+  affects: []
+- vnum: 3623
+  namelist: medal honor zodangan
+  short_desc: a Zodangan medal
+  long_desc: A military medal on a purple ribbon lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 200
+  rent: 75
+  extra_descriptions:
+  - keywords: medal honor
+    description: 'This medal is awarded to Zodangan warriors for distinguished service
+      in
+
+      combat. It consists of a metal disc bearing Zodanga''s emblem, suspended from
+
+      a purple ribbon. Recipients wear these medals on their harnesses as marks of
+
+      honor and courage. The medal signifies the wearer has proven themselves in
+
+      battle and earned the respect of their commanders.'
+  affects: []
+- vnum: 3624
+  namelist: book strategy military
+  short_desc: a military strategy manual
+  long_desc: A bound book on military tactics lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 50
+  extra_descriptions:
+  - keywords: book strategy manual
+    description: 'This book contains detailed analysis of military tactics, strategy,
+      and
+
+      logistics. It covers formation fighting, siege warfare, mobile combat, and
+
+      the use of airships in battle. Zodangan officers study such manuals to improve
+
+      their tactical knowledge. The book is written with the assumption that power
+
+      and conquest are the highest values.'
+  affects: []
+- vnum: 3625
+  namelist: spyglass telescope observation
+  short_desc: a spyglass
+  long_desc: A collapsible spyglass lies here.
+  action_desc: ''
+  type_flag: 23
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 250
+  rent: 90
+  extra_descriptions:
+  - keywords: spyglass telescope
+    description: 'This collapsible spyglass allows for observation at considerable
+      distance.
+
+      It''s used by scouts, guards on towers, and ship captains to spot approaching
+
+      forces or terrain features. The lenses are of good quality, providing clear
+
+      images. Zodangan guards use these to watch the approaches to the city.'
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3600
+  arg2: 1
+  arg3: 3604
+- command: G
+  if_flag: 1
+  arg1: 3601
+  arg2: 1
+- command: E
+  if_flag: 1
+  arg1: 3603
+  arg2: 1
+  arg3: 4
+- command: M
+  if_flag: 0
+  arg1: 3601
+  arg2: 1
+  arg3: 3609
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 1
+- command: E
+  if_flag: 1
+  arg1: 3603
+  arg2: 1
+  arg3: 4
+- command: M
+  if_flag: 0
+  arg1: 3602
+  arg2: 1
+  arg3: 3606
+- command: G
+  if_flag: 1
+  arg1: 3601
+  arg2: 1
+- command: E
+  if_flag: 1
+  arg1: 3603
+  arg2: 1
+  arg3: 4
+- command: M
+  if_flag: 0
+  arg1: 3603
+  arg2: 1
+  arg3: 3608
+- command: G
+  if_flag: 1
+  arg1: 3610
+  arg2: 5
+- command: G
+  if_flag: 1
+  arg1: 3611
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3604
+  arg2: 2
+  arg3: 3602
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3606
+  arg2: 1
+  arg3: 5
+- command: M
+  if_flag: 0
+  arg1: 3604
+  arg2: 2
+  arg3: 3603
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3606
+  arg2: 1
+  arg3: 5
+- command: M
+  if_flag: 0
+  arg1: 3604
+  arg2: 2
+  arg3: 3604
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 4
+  arg3: 3610
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3602
+  arg2: 1
+  arg3: 4
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 3
+  arg3: 3611
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 2
+  arg3: 3614
+- command: M
+  if_flag: 0
+  arg1: 3606
+  arg2: 2
+  arg3: 3613
+- command: G
+  if_flag: 1
+  arg1: 3601
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3603
+  arg2: 1
+  arg3: 4
+- command: G
+  if_flag: 1
+  arg1: 3618
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3606
+  arg2: 1
+  arg3: 3616
+- command: G
+  if_flag: 1
+  arg1: 3611
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3611
+  arg2: 1
+  arg3: 3614
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3611
+  arg2: 1
+  arg3: 3617
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3607
+  arg2: 1
+  arg3: 3624
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3601
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3604
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3605
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 3608
+  arg2: 2
+  arg3: 3621
+- command: G
+  if_flag: 1
+  arg1: 3612
+  arg2: 10
+- command: G
+  if_flag: 1
+  arg1: 3621
+  arg2: 10
+- command: M
+  if_flag: 0
+  arg1: 3608
+  arg2: 1
+  arg3: 3623
+- command: G
+  if_flag: 1
+  arg1: 3613
+  arg2: 20
+- command: G
+  if_flag: 1
+  arg1: 3614
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 3609
+  arg2: 2
+  arg3: 3630
+- command: G
+  if_flag: 1
+  arg1: 3610
+  arg2: 5
+- command: G
+  if_flag: 1
+  arg1: 3619
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3609
+  arg2: 1
+  arg3: 3631
+- command: M
+  if_flag: 0
+  arg1: 3609
+  arg2: 1
+  arg3: 3633
+- command: G
+  if_flag: 1
+  arg1: 3611
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3610
+  arg2: 1
+  arg3: 3637
+- command: G
+  if_flag: 1
+  arg1: 3604
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3608
+  arg2: 3
+- command: M
+  if_flag: 0
+  arg1: 3610
+  arg2: 1
+  arg3: 3638
+- command: M
+  if_flag: 0
+  arg1: 3612
+  arg2: 1
+  arg3: 3645
+- command: G
+  if_flag: 1
+  arg1: 3617
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3613
+  arg2: 2
+  arg3: 3646
+- command: G
+  if_flag: 1
+  arg1: 3616
+  arg2: 3
+- command: G
+  if_flag: 1
+  arg1: 3620
+  arg2: 5
+- command: M
+  if_flag: 0
+  arg1: 3613
+  arg2: 2
+  arg3: 3647
+- command: G
+  if_flag: 1
+  arg1: 3616
+  arg2: 3
+- command: M
+  if_flag: 0
+  arg1: 3613
+  arg2: 1
+  arg3: 3648
+- command: M
+  if_flag: 0
+  arg1: 3614
+  arg2: 2
+  arg3: 3644
+- command: G
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+- command: E
+  if_flag: 1
+  arg1: 3602
+  arg2: 1
+  arg3: 4
+- command: M
+  if_flag: 0
+  arg1: 3615
+  arg2: 2
+  arg3: 3600
+- command: E
+  if_flag: 1
+  arg1: 3603
+  arg2: 1
+  arg3: 4
+- command: G
+  if_flag: 1
+  arg1: 3612
+  arg2: 5
+- command: M
+  if_flag: 0
+  arg1: 3615
+  arg2: 1
+  arg3: 3605
+- command: M
+  if_flag: 0
+  arg1: 3616
+  arg2: 5
+  arg3: 3620
+- command: M
+  if_flag: 0
+  arg1: 3616
+  arg2: 3
+  arg3: 3621
+- command: M
+  if_flag: 0
+  arg1: 3616
+  arg2: 2
+  arg3: 3600
+- command: M
+  if_flag: 0
+  arg1: 3617
+  arg2: 2
+  arg3: 3621
+- command: G
+  if_flag: 1
+  arg1: 3609
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3617
+  arg2: 1
+  arg3: 3632
+- command: M
+  if_flag: 0
+  arg1: 3618
+  arg2: 1
+  arg3: 3628
+- command: G
+  if_flag: 1
+  arg1: 3621
+  arg2: 10
+- command: M
+  if_flag: 0
+  arg1: 3619
+  arg2: 2
+  arg3: 3600
+- command: M
+  if_flag: 0
+  arg1: 3619
+  arg2: 1
+  arg3: 3616
+- command: M
+  if_flag: 0
+  arg1: 3620
+  arg2: 1
+  arg3: 3615
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 1
+- command: M
+  if_flag: 0
+  arg1: 3620
+  arg2: 1
+  arg3: 3618
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 2
+  arg3: 3640
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 2
+  arg3: 3641
+- command: M
+  if_flag: 0
+  arg1: 3605
+  arg2: 2
+  arg3: 3642
+- command: O
+  if_flag: 0
+  arg1: 3617
+  arg2: 1
+  arg3: 3604
+- command: O
+  if_flag: 0
+  arg1: 3623
+  arg2: 3
+  arg3: 3604
+- command: O
+  if_flag: 0
+  arg1: 3624
+  arg2: 1
+  arg3: 3606
+- command: O
+  if_flag: 0
+  arg1: 3611
+  arg2: 2
+  arg3: 3607
+- command: O
+  if_flag: 0
+  arg1: 3610
+  arg2: 5
+  arg3: 3608
+- command: O
+  if_flag: 0
+  arg1: 3600
+  arg2: 10
+  arg3: 3612
+- command: O
+  if_flag: 0
+  arg1: 3601
+  arg2: 8
+  arg3: 3612
+- command: O
+  if_flag: 0
+  arg1: 3605
+  arg2: 15
+  arg3: 3612
+- command: O
+  if_flag: 0
+  arg1: 3606
+  arg2: 10
+  arg3: 3612
+- command: O
+  if_flag: 0
+  arg1: 3607
+  arg2: 5
+  arg3: 3612
+- command: O
+  if_flag: 0
+  arg1: 3613
+  arg2: 20
+  arg3: 3611
+- command: O
+  if_flag: 0
+  arg1: 3622
+  arg2: 10
+  arg3: 3614
+- command: O
+  if_flag: 0
+  arg1: 3625
+  arg2: 2
+  arg3: 3619
+- command: O
+  if_flag: 0
+  arg1: 3612
+  arg2: 5
+  arg3: 3621
+- command: O
+  if_flag: 0
+  arg1: 3621
+  arg2: 10
+  arg3: 3628
+- command: O
+  if_flag: 0
+  arg1: 3613
+  arg2: 30
+  arg3: 3622
+- command: O
+  if_flag: 0
+  arg1: 3614
+  arg2: 20
+  arg3: 3622
+- command: O
+  if_flag: 0
+  arg1: 3608
+  arg2: 5
+  arg3: 3633
+- command: O
+  if_flag: 0
+  arg1: 3609
+  arg2: 3
+  arg3: 3631
+- command: O
+  if_flag: 0
+  arg1: 3619
+  arg2: 2
+  arg3: 3636
+- command: O
+  if_flag: 0
+  arg1: 3610
+  arg2: 10
+  arg3: 3633
+- command: O
+  if_flag: 0
+  arg1: 3620
+  arg2: 10
+  arg3: 3646
+- command: O
+  if_flag: 0
+  arg1: 3616
+  arg2: 5
+  arg3: 3647
+- command: O
+  if_flag: 0
+  arg1: 3615
+  arg2: 5
+  arg3: 3646
+- command: O
+  if_flag: 0
+  arg1: 3612
+  arg2: 20
+  arg3: 3649
+- command: O
+  if_flag: 0
+  arg1: 3616
+  arg2: 3
+  arg3: 3602
+- command: O
+  if_flag: 0
+  arg1: 3618
+  arg2: 5
+  arg3: 3616
+- command: O
+  if_flag: 0
+  arg1: 3617
+  arg2: 2
+  arg3: 3600
+- command: O
+  if_flag: 0
+  arg1: 3617
+  arg2: 1
+  arg3: 3610
+shops: []

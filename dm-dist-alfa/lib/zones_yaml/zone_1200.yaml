@@ -1,0 +1,56 @@
+zone:
+  number: 0
+  name: zone_1200
+  top_room: 0
+  lifespan: 0
+  reset_mode: 0
+rooms:
+- vnum: 1200
+  name: The Chat Room
+  description: '   You are lounging in a quiet cosy parlour, warmed by a gentle magical
+    fire
+
+    which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
+
+    the owner of this room needs none.'
+  zone: 0
+  room_flags: 520
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 1201
+  name: Moses' Hangout
+  description: '   You see here a cozy little room with a fireplace.  You can tell
+    it is Moses''
+
+    room by the two stone tablets and a bible on a small ledge near the fireplace.
+
+    This room was designed for total relaxation.  You can watch television, listen
+
+    to the stereo, even soak in a hot tub.
+
+    There is a bell here for the butler.'
+  zone: 0
+  room_flags: 520
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 1202
+  name: The centre of the universe.
+  description: '  You are at the centre of the universe, everything is filled with
+    bright
+
+    light in all colors. You feel time and space no longer exist here.
+
+    Exits fill the room in all 42 dimensions, leading everywhere.
+
+    The only exit in your dimension unfortunatly leads right back here.'
+  zone: 0
+  room_flags: 520
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+mobiles: []
+objects: []
+resets: []
+shops: []

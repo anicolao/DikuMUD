@@ -1,0 +1,2259 @@
+zone:
+  number: 33
+  name: Dead Sea Wilderness
+  top_room: 3899
+  lifespan: 30
+  reset_mode: 2
+rooms:
+- vnum: 3750
+  name: Western Road from Greater Helium
+  description: '   You stand on the elevated roadway that connects Greater Helium
+    to Lesser
+
+    Helium.  The road is paved with ancient stone and supported by massive pillars.
+
+    Far below you can see the dead sea bottom stretching endlessly.  The western
+
+    gate of Greater Helium is behind you to the east.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: Greater Helium's western gate is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3949
+  - direction: 3
+    description: The elevated road continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3751
+  - direction: 5
+    description: You can see a way down to the sea bottom far below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3760
+  extra_descriptions: []
+- vnum: 3751
+  name: On the Elevated Road
+  description: '   You travel along the ancient elevated roadway.  The construction
+    is
+
+    remarkable, having withstood countless centuries.  The thin Martian air makes
+
+    the journey challenging.  The dead sea bottom lies far below.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The road leads back toward Greater Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3750
+  - direction: 3
+    description: The road continues westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3752
+  extra_descriptions: []
+- vnum: 3752
+  name: Midpoint of the Elevated Road
+  description: '   You have reached roughly the midpoint between the Twin Cities.  From
+    here you
+
+    can see both Greater Helium to the east and the distant towers of Lesser Helium
+
+    to the west.  The enormity of the ancient dried sea is apparent from this
+
+    vantage point.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The road leads east toward Greater Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3751
+  - direction: 3
+    description: The road continues west toward Lesser Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3753
+  - direction: 5
+    description: You see a descent point to the sea bottom below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3765
+  extra_descriptions: []
+- vnum: 3753
+  name: On the Elevated Road
+  description: '   The elevated roadway continues its span across the ancient sea.  Lesser
+
+    Helium''s towers are becoming clearer to the west.  Traffic between the cities
+
+    passes this way regularly.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The road leads back east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3752
+  - direction: 3
+    description: The road continues toward Lesser Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3754
+  extra_descriptions: []
+- vnum: 3754
+  name: Approaching Lesser Helium
+  description: '   You are nearing the western end of the elevated road.  Lesser Helium''s
+    walls
+
+    and towers are now clearly visible ahead.  The eastern gate of Lesser Helium
+
+    awaits to the west.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The road leads back toward Greater Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3753
+  - direction: 3
+    description: Lesser Helium's eastern gate is ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3053
+  - direction: 5
+    description: You can descend to the sea bottom here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3770
+  extra_descriptions: []
+- vnum: 3760
+  name: Dead Sea Bottom - Eastern Section
+  description: '   You stand on the ancient floor of a long-dead Martian sea.  Ochre
+    moss
+
+    carpets the ground, and the air is thin even by Martian standards.  The elevated
+
+    road towers far above you.  Greater Helium''s walls are visible to the east.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The dead sea bottom extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3761
+  - direction: 2
+    description: The dead sea bottom stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3762
+  - direction: 3
+    description: The sea bottom extends westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3763
+  - direction: 4
+    description: You see the elevated road far above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3750
+  extra_descriptions: []
+- vnum: 3761
+  name: Northern Dead Sea Bottom
+  description: '   The ancient sea floor extends endlessly in all directions.  Strange
+    rock
+
+    formations jut from the moss-covered ground.  In the distance you might glimpse
+
+    the territory of the green Martian hordes.  This is dangerous wilderness.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: You see Greater Helium's walls in the distance.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  - direction: 2
+    description: The sea bottom stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3760
+  - direction: 3
+    description: The wilderness continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3764
+  extra_descriptions: []
+- vnum: 3762
+  name: Southern Dead Sea Bottom
+  description: '   The dead sea bottom continues its desolate expanse.  Scattered
+    bones of
+
+    ancient creatures lie half-buried in the ochre moss.  The thin atmosphere and
+
+    harsh sun make this a forbidding landscape.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The sea bottom extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3760
+  - direction: 2
+    description: The wilderness stretches endlessly south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  - direction: 3
+    description: The sea bottom continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3766
+  extra_descriptions: []
+- vnum: 3763
+  name: Central Dead Sea Bottom
+  description: '   You are in the middle of the ancient sea bottom between the Twin
+    Cities.
+
+    Ochre moss provides some vegetation, but this is a harsh and dangerous
+
+    environment.  Predators hunt here in the wilderness.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The sea bottom extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3764
+  - direction: 1
+    description: The eastern section lies that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3760
+  - direction: 2
+    description: The sea bottom stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3766
+  - direction: 3
+    description: The sea bottom continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3767
+  - direction: 4
+    description: You can see the elevated road far above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3752
+  extra_descriptions: []
+- vnum: 3764
+  name: Northwestern Dead Sea Bottom
+  description: '   The wilderness is particularly desolate here.  Ancient stone markers
+    suggest
+
+    this was once a populated area, now long abandoned.  The green Martian
+
+    territories lie somewhere to the northwest.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The northern sea bottom is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3761
+  - direction: 2
+    description: The central area is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3763
+  - direction: 3
+    description: Thark territory lies far to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4047
+  extra_descriptions: []
+- vnum: 3765
+  name: Dead Sea Bottom - Mid-Section
+  description: '   You stand beneath the midpoint of the elevated road.  The massive
+    pillars
+
+    supporting the ancient structure are impressive feats of engineering.  The
+
+    wilderness spreads in all directions around you.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The sea bottom extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3763
+  - direction: 2
+    description: The sea bottom stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3768
+  - direction: 3
+    description: The western section lies ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3767
+  - direction: 4
+    description: The elevated road is far above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3752
+  extra_descriptions: []
+- vnum: 3766
+  name: Southwestern Dead Sea Bottom
+  description: '   The desolate expanse continues here.  You spot the tracks of various
+
+    creatures in the moss - some quite large and dangerous.  The atmosphere factory
+
+    territories lie far to the south.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The central area is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3763
+  - direction: 1
+    description: The southern section is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3762
+  - direction: 2
+    description: Distant atmosphere factories lie far south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  extra_descriptions: []
+- vnum: 3767
+  name: Western Dead Sea Bottom
+  description: '   You are approaching the western end of the dead sea passage between
+    the Twin
+
+    Cities.  Lesser Helium''s walls are visible to the west.  The wilderness here
+
+    shows more signs of traffic from the city.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The northwestern section is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3764
+  - direction: 1
+    description: The central area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3765
+  - direction: 2
+    description: The southwestern section is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3768
+  - direction: 3
+    description: You see the walls of Lesser Helium ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3770
+  extra_descriptions: []
+- vnum: 3768
+  name: Southern Wilderness
+  description: '   The southern reaches of the dead sea bottom are particularly barren.  Ancient
+
+    ruins barely visible in the distance hint at civilizations long fallen.  Few
+
+    venture this far south without good reason.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The mid-section is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3765
+  - direction: 1
+    description: The southwestern area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3766
+  extra_descriptions: []
+- vnum: 3770
+  name: Dead Sea Bottom - Western Section
+  description: '   You stand near the western edge of this section of dead sea bottom.  Lesser
+
+    Helium''s eastern wall towers above you to the west.  The city''s eastern gate
+    is
+
+    visible high above.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The western dead sea bottom extends east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3767
+  - direction: 3
+    description: You see Lesser Helium's channel passage.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3205
+  - direction: 4
+    description: The elevated road is high above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3754
+  extra_descriptions: []
+- vnum: 3775
+  name: Ancient Ruins
+  description: '   You have stumbled upon the ruins of an ancient structure, long
+    abandoned.
+
+    Broken walls and collapsed pillars are covered in ochre moss.  This place feels
+
+    haunted by the ghosts of Mars'' distant past.'
+  zone: 33
+  room_flags: 8
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: The wilderness lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3763
+  extra_descriptions: []
+- vnum: 3776
+  name: Predator's Den
+  description: '   This sheltered area among rocks shows signs of being used as a
+    den by large
+
+    predators.  Bones are scattered about, and the smell of death lingers.  You
+
+    should be cautious here.'
+  zone: 33
+  room_flags: 8
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The wilderness is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3761
+  extra_descriptions: []
+- vnum: 3777
+  name: Rock Formation
+  description: '   A striking rock formation rises from the dead sea floor here.  The
+    ancient
+
+    stone has been carved by wind and time into strange shapes.  It provides some
+
+    shelter from the elements.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The sea bottom stretches east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3762
+  extra_descriptions: []
+- vnum: 3778
+  name: Oasis of Moss
+  description: '   Here the ochre moss grows especially thick, creating a relative
+    oasis of
+
+    vegetation on the barren sea floor.  Small creatures might hide in the dense
+
+    growth.  It''s a notable landmark in this desolate wilderness.'
+  zone: 33
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The wilderness is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3764
+  extra_descriptions: []
+- vnum: 3779
+  name: Skeleton Field
+  description: '   This grim area is littered with the skeletal remains of various
+    creatures -
+
+    some recognizable, others alien and strange.  The bones tell stories of the
+
+    harsh realities of Martian wilderness.'
+  zone: 33
+  room_flags: 8
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: The southwestern section is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3766
+  extra_descriptions: []
+mobiles:
+- vnum: 3750
+  namelist: thoat wild eight-legged
+  short_desc: a wild thoat
+  long_desc: A wild eight-legged thoat grazes here, watchful and dangerous.
+  detailed_desc: 'This massive creature has eight powerful legs supporting a body
+    the size of an
+
+    elephant. Its broad, flat tail helps with balance. The leathery hide is slate
+
+    gray in color. Large jaws filled with sharp teeth can crush bone. While thoats
+
+    are used as mounts when trained, this wild specimen is aggressive and dangerous.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+15000
+    damage_dice: 2d8+10
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3751
+  namelist: banth lion ten-legged predator
+  short_desc: a hunting banth
+  long_desc: A ten-legged banth stalks here, its predatory eyes fixed on potential
+    prey.
+  detailed_desc: 'This fearsome predator is built like a lion but with ten powerful
+    legs. Its
+
+    tawny fur is mottled with ochre patterns. The feline head has large fangs and
+
+    fierce, intelligent eyes. It moves with deadly grace despite its size. Banths
+
+    are apex predators of the Martian wilderness and extremely dangerous.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+18000
+    damage_dice: 2d10+12
+    gold: 8000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3752
+  namelist: apt white blind creature
+  short_desc: a massive white apt
+  long_desc: A massive white apt lumbers here, its eyeless face turning toward sounds.
+  detailed_desc: 'This enormous creature is elephant-sized or larger with pure white
+    fur covering
+
+    its body. It has no eyes, having adapted to underground life. Six or more
+
+    powerful legs support its massive bulk. Its huge jaws can swallow prey whole.
+
+    The apt hunts by sound and smell, making it incredibly dangerous even in
+
+    darkness. It is nearly impossible to kill.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+25000
+    damage_dice: 3d10+15
+    gold: 15000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3753
+  namelist: calot wild ten-legged
+  short_desc: a wild calot
+  long_desc: A wild ten-legged calot watches alertly, ready to attack intruders.
+  detailed_desc: 'This creature is sized like a large pony with ten powerful legs.
+    Its hairless,
+
+    leathery hide is mottled gray and brown. The frog-like head houses a mouth full
+
+    of sharp teeth. Unlike tame calots, this wild one is aggressive and territorial.
+
+    It can move with incredible speed when attacking.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+10000
+    damage_dice: 2d6+6
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3754
+  namelist: ulsio rat giant
+  short_desc: a giant ulsio
+  long_desc: A giant ulsio rat scurries here, its beady eyes searching for food.
+  detailed_desc: 'This massive rat-like creature is the size of a large dog. Its dirty
+    gray fur
+
+    is matted and foul-smelling. Sharp teeth and claws make it dangerous despite
+
+    not being a true apex predator. Ulsios are scavengers but will attack if
+
+    cornered or hungry. They carry disease and filth.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+8000
+    damage_dice: 1d8+4
+    gold: 1000
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3755
+  namelist: green warrior martian thark
+  short_desc: a Green Martian Warrior
+  long_desc: A massive green Martian warrior stands here, weapons ready.
+  detailed_desc: 'This green Martian stands 15 feet tall with four powerful arms -
+    two from the
+
+    shoulders and two from mid-torso. The olive-green skin is tough and scarred.
+
+    Tusks protrude from the mouth, and large eyes are set far apart on the massive
+
+    head. This warrior is armed and extremely dangerous, trained from birth in
+
+    combat. The green hordes are the terror of the dead sea bottoms.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+20000
+    damage_dice: 2d10+14
+    gold: 10000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3756
+  namelist: green scout martian thark
+  short_desc: a Green Martian Scout
+  long_desc: A green Martian scout surveys the area, alert for threats or prey.
+  detailed_desc: 'This green Martian scout is slightly smaller than the warriors but
+    still stands
+
+    over 12 feet tall with four arms. The olive-green skin allows blending with the
+
+    Martian terrain. Large eyes miss nothing. Scouts range ahead of the main hordes,
+
+    gathering intelligence and hunting for food or plunder.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+15000
+    damage_dice: 2d8+10
+    gold: 6000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3757
+  namelist: sorak bird prey martian
+  short_desc: a sorak
+  long_desc: A sorak, a vicious Martian bird of prey, circles overhead.
+  detailed_desc: 'This large predatory bird has a wingspan of ten feet or more. Its
+    feathers are
+
+    mottled brown and ochre. Sharp talons and a hooked beak make it a dangerous
+
+    hunter. Soraks hunt in the thin Martian atmosphere, diving on prey from above.
+
+    They are aggressive and will attack anything that appears vulnerable.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 11
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+6000
+    damage_dice: 1d8+4
+    gold: 1500
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3758
+  namelist: zitidar beast burden huge
+  short_desc: a wild zitidar
+  long_desc: A massive zitidar, a beast of burden, stands here.
+  detailed_desc: 'This enormous creature dwarfs even the thoats. It stands nearly
+    20 feet high
+
+    with a body to match. While typically used as beasts of burden by the green
+
+    Martians, this wild specimen is extremely dangerous when provoked. Its massive
+
+    size and strength can crush anything in its path.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+30000
+    damage_dice: 3d10+18
+    gold: 20000
+    experience: 110000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3759
+  namelist: darseen antelope martian
+  short_desc: a darseen
+  long_desc: A darseen, a Martian antelope, grazes nervously here.
+  detailed_desc: 'This graceful creature resembles a Martian antelope with long legs
+    built for
+
+    speed. Its hide is tan and ochre, helping it blend with the terrain. Large eyes
+
+    watch constantly for predators. While not aggressive, a darseen will flee at
+
+    the slightest threat. They are hunted by many predators.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+3000
+    damage_dice: 1d4+2
+    gold: 500
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3760
+  namelist: plant man carnivorous
+  short_desc: a plant man
+  long_desc: A grotesque plant man stands here on its single foot, tentacles writhing.
+  detailed_desc: 'This hideous creature stands 9-10 feet tall on a single thick foot.
+    Multiple
+
+    writhing tentacles extend from its limbless body. Moss-like, plant-based skin
+
+    covers it. Leafy fronds surround the head area where a single white eye stares.
+
+    The mouth is filled with poison fangs. Viscous, plant-like blood oozes from
+
+    wounds. Plant men are vicious carnivores that hunt in packs.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+12000
+    damage_dice: 2d8+8
+    gold: 4000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3761
+  namelist: sith wasp giant martian
+  short_desc: a giant sith
+  long_desc: A giant sith, a Martian wasp, hovers here menacingly.
+  detailed_desc: 'This enormous wasp-like creature is several feet long with transparent
+    wings
+
+    that beat rapidly. Its body is segmented and armored. The most dangerous feature
+
+    is the large stinger capable of injecting deadly venom. Siths are aggressive and
+
+    territorial, attacking anything that enters their hunting grounds.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 11
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+8000
+    damage_dice: 1d10+6
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3762
+  namelist: orluk serpent water martian
+  short_desc: an orluk
+  long_desc: A massive orluk serpent coils here, ready to strike.
+  detailed_desc: 'This enormous serpent-like creature is adapted for the ancient waterways
+    of
+
+    Mars. Though most seas are now dry, orluk still inhabit certain areas. This
+
+    specimen is 20 feet or more in length with powerful coils that can crush prey.
+
+    Venomous fangs deliver a deadly bite. The scales are mottled green and brown.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+14000
+    damage_dice: 2d10+10
+    gold: 5000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3763
+  namelist: white ape great four-armed
+  short_desc: a great white ape
+  long_desc: A massive great white ape stands here, all four arms ready for combat.
+  detailed_desc: 'This enormous creature stands 15-18 feet tall with shaggy white
+    fur. Four
+
+    powerful arms like the green Martians give it tremendous combat ability. Massive
+
+    fangs and claws complete its arsenal. Great white apes are semi-intelligent and
+
+    incredibly strong. They are ferocious and territorial, attacking intruders
+
+    without hesitation. Their presence usually means death.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+22000
+    damage_dice: 3d8+14
+    gold: 12000
+    experience: 95000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3764
+  namelist: traveler red martian merchant
+  short_desc: a Red Martian Traveler
+  long_desc: A red Martian traveler rests here, recovering from the journey between
+    cities.
+  detailed_desc: 'This red Martian has copper-red skin covered in dust from travel.
+    Their harness
+
+    is practical rather than ornate, designed for the rigors of the journey. They
+
+    carry supplies and trade goods. While not a warrior, they are armed for
+
+    protection against the dangers of the wilderness.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 2000
+    experience: 70000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3765
+  namelist: guard caravan red martian warrior
+  short_desc: a Caravan Guard
+  long_desc: A red Martian caravan guard stands watch, alert for danger.
+  detailed_desc: 'This warrior has copper-red skin and the bearing of an experienced
+    fighter.
+
+    Their battle harness is functional and well-maintained. They are hired to
+
+    protect travelers and merchants making the dangerous journey between the Twin
+
+    Cities. Their eyes constantly scan for threats.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+28000
+    damage_dice: 1d10+12
+    gold: 6000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3766
+  namelist: pilot airship red martian
+  short_desc: an Airship Pilot
+  long_desc: An airship pilot has landed here for repairs or reconnaissance.
+  detailed_desc: 'This red Martian has the weathered look of one who spends much time
+    in the thin
+
+    upper atmosphere. Their harness includes navigation tools and safety equipment.
+
+    They pilot the airships that connect distant Martian cities, a dangerous but
+
+    essential job.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 2
+    ac: 2
+    hp_dice: 1d1+25000
+    damage_dice: 1d8+10
+    gold: 4000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3767
+  namelist: skeleton guardian ancient
+  short_desc: an ancient guardian skeleton
+  long_desc: The skeleton of an ancient guardian still stands watch over these ruins.
+  detailed_desc: 'This skeleton is held together by ancient Martian science or dark
+    powers. It
+
+    once guarded these ruins when they were inhabited. Now it continues its duty
+
+    even in death. The bones are yellowed with extreme age. Rusted weapons and
+
+    armor cling to the skeletal form. It attacks intruders mindlessly.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+10000
+    damage_dice: 2d6+8
+    gold: 3000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 3768
+  namelist: spirit ancient martian
+  short_desc: an ancient spirit
+  long_desc: The ghostly form of an ancient Martian hovers here, guarding forgotten
+    secrets.
+  detailed_desc: 'This translucent apparition appears as a red Martian from ages past.
+    It guards
+
+    these ancient ruins, attacking those who would disturb the dead. The spirit
+
+    seems to flicker in and out of visibility. Its touch is cold as the void between
+
+    worlds.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 900
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 1d1+12000
+    damage_dice: 2d8+8
+    gold: 4000
+    experience: 78000
+    position: 8
+    default_position: 8
+    sex: 3
+objects:
+- vnum: 3850
+  namelist: moss ochre clump
+  short_desc: a clump of ochre moss
+  long_desc: A clump of ochre moss grows here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3851
+  namelist: bone ancient creature
+  short_desc: an ancient creature bone
+  long_desc: An ancient bone from some long-dead creature lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3852
+  namelist: rock fragment
+  short_desc: a rock fragment
+  long_desc: A fragment of weathered rock lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 2
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3853
+  namelist: leather worn pouch
+  short_desc: a worn leather pouch
+  long_desc: A worn leather pouch has been dropped here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3854
+  namelist: water flask dented
+  short_desc: a dented water flask
+  long_desc: A dented water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 6
+  value1: 6
+  value2: 1
+  value3: 0
+  weight: 8
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3855
+  namelist: rations dried
+  short_desc: dried rations
+  long_desc: Some dried travel rations have been left here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3856
+  namelist: fang banth
+  short_desc: a banth fang
+  long_desc: A large fang from a banth lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3857
+  namelist: claw predator
+  short_desc: a predator's claw
+  long_desc: A sharp claw from a Martian predator lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3858
+  namelist: hide thoat
+  short_desc: thoat hide
+  long_desc: A section of tough thoat hide lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3859
+  namelist: fur white ape
+  short_desc: white ape fur
+  long_desc: A patch of white ape fur lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3860
+  namelist: skull green martian
+  short_desc: a green Martian skull
+  long_desc: The skull of a green Martian lies here, tusks intact.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3861
+  namelist: weapon broken
+  short_desc: a broken weapon
+  long_desc: A broken weapon lies discarded here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3862
+  namelist: harness tattered
+  short_desc: a tattered harness
+  long_desc: A tattered leather harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3863
+  namelist: coins scattered
+  short_desc: scattered coins
+  long_desc: A few coins are scattered here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3864
+  namelist: vial poison
+  short_desc: a vial of poison
+  long_desc: A small vial containing poison lies here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 2
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3865
+  namelist: antidote herbal
+  short_desc: herbal antidote
+  long_desc: A pouch of herbal antidote lies here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 2
+  value1: 1
+  value2: 2
+  value3: 2
+  weight: 2
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3866
+  namelist: map crude
+  short_desc: a crude map
+  long_desc: A crude map of the dead sea bottom lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3867
+  namelist: compass damaged
+  short_desc: a damaged compass
+  long_desc: A damaged navigation compass lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3868
+  namelist: torch makeshift
+  short_desc: a makeshift torch
+  long_desc: A makeshift torch lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 65537
+  value0: 0
+  value1: 0
+  value2: 12
+  value3: 0
+  weight: 1
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3869
+  namelist: rope frayed
+  short_desc: frayed rope
+  long_desc: A length of frayed rope lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3870
+  namelist: backpack damaged
+  short_desc: a damaged backpack
+  long_desc: A damaged backpack lies here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 30
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3871
+  namelist: dagger crude
+  short_desc: a crude dagger
+  long_desc: A crude but functional dagger lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 3
+  value3: 11
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3872
+  namelist: spear hunting
+  short_desc: a hunting spear
+  long_desc: A hunting spear lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 3
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+- vnum: 3873
+  namelist: sword chipped
+  short_desc: a chipped sword
+  long_desc: A chipped and battered sword lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 4
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3874
+  namelist: club heavy
+  short_desc: a heavy club
+  long_desc: A heavy club carved from Martian hardwood lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 7
+  weight: 3
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3875
+  namelist: shield wooden
+  short_desc: a wooden shield
+  long_desc: A crude wooden shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3876
+  namelist: bandages dirty
+  short_desc: dirty bandages
+  long_desc: Some dirty but usable bandages lie here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3877
+  namelist: herbs medicinal
+  short_desc: medicinal herbs
+  long_desc: Some medicinal herbs grow here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3878
+  namelist: artifact ancient
+  short_desc: an ancient artifact
+  long_desc: A small artifact from Mars' distant past lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 100
+  rent: 33
+  extra_descriptions: []
+  affects: []
+- vnum: 3879
+  namelist: tablet stone inscribed
+  short_desc: an inscribed stone tablet
+  long_desc: A stone tablet with ancient inscriptions lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3880
+  namelist: gem rough
+  short_desc: a rough gem
+  long_desc: A rough, uncut gem lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3881
+  namelist: metal scrap
+  short_desc: scrap metal
+  long_desc: A piece of scrap metal lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3882
+  namelist: tooth predator
+  short_desc: a predator's tooth
+  long_desc: A large tooth from a Martian predator lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 18
+  rent: 6
+  extra_descriptions: []
+  affects: []
+- vnum: 3883
+  namelist: feather sorak
+  short_desc: a sorak feather
+  long_desc: A large feather from a sorak lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 12
+  rent: 4
+  extra_descriptions: []
+  affects: []
+- vnum: 3884
+  namelist: scale orluk
+  short_desc: an orluk scale
+  long_desc: A large scale from an orluk serpent lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 22
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3885
+  namelist: egg unknown
+  short_desc: an unknown egg
+  long_desc: A large egg of unknown origin lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 30
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3886
+  namelist: meat dried preserved
+  short_desc: dried meat
+  long_desc: Some dried and preserved meat lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3887
+  namelist: water skin leather
+  short_desc: a leather water skin
+  long_desc: A leather water skin lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 12
+  value1: 12
+  value2: 1
+  value3: 0
+  weight: 10
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3888
+  namelist: cloak tattered
+  short_desc: a tattered cloak
+  long_desc: A tattered travel cloak lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3889
+  namelist: boots worn
+  short_desc: worn boots
+  long_desc: A pair of worn boots lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 12
+  rent: 4
+  extra_descriptions: []
+  affects: []
+- vnum: 3890
+  namelist: belt tool utility
+  short_desc: a utility tool belt
+  long_desc: A utility belt with various tools lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 18
+  rent: 6
+  extra_descriptions: []
+  affects: []
+- vnum: 3891
+  namelist: kit survival
+  short_desc: a survival kit
+  long_desc: A small survival kit lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3892
+  namelist: flint steel fire
+  short_desc: flint and steel
+  long_desc: A flint and steel for making fire lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3893
+  namelist: tinder dry
+  short_desc: dry tinder
+  long_desc: Some dry tinder for starting fires lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3894
+  namelist: blanket rough
+  short_desc: a rough blanket
+  long_desc: A rough blanket lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3895
+  namelist: tent small
+  short_desc: a small tent
+  long_desc: A collapsed small tent lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 50
+  rent: 17
+  extra_descriptions: []
+  affects: []
+- vnum: 3896
+  namelist: stake tent
+  short_desc: tent stakes
+  long_desc: Several tent stakes lie here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 8
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3897
+  namelist: pot cooking
+  short_desc: a cooking pot
+  long_desc: A small cooking pot lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3898
+  namelist: utensils eating
+  short_desc: eating utensils
+  long_desc: Some basic eating utensils lie here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 5
+  rent: 2
+  extra_descriptions: []
+  affects: []
+- vnum: 3899
+  namelist: canteen metal
+  short_desc: a metal canteen
+  long_desc: A metal canteen lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 15
+  value1: 15
+  value2: 1
+  value3: 0
+  weight: 12
+  cost: 25
+  rent: 8
+  extra_descriptions: []
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3750
+  arg2: 3
+  arg3: 3760
+- command: M
+  if_flag: 0
+  arg1: 3750
+  arg2: 3
+  arg3: 3762
+- command: M
+  if_flag: 0
+  arg1: 3750
+  arg2: 3
+  arg3: 3767
+- command: M
+  if_flag: 0
+  arg1: 3751
+  arg2: 2
+  arg3: 3761
+- command: M
+  if_flag: 0
+  arg1: 3751
+  arg2: 2
+  arg3: 3766
+- command: M
+  if_flag: 0
+  arg1: 3752
+  arg2: 1
+  arg3: 3776
+- command: M
+  if_flag: 0
+  arg1: 3753
+  arg2: 4
+  arg3: 3763
+- command: M
+  if_flag: 0
+  arg1: 3753
+  arg2: 4
+  arg3: 3764
+- command: M
+  if_flag: 0
+  arg1: 3754
+  arg2: 5
+  arg3: 3762
+- command: M
+  if_flag: 0
+  arg1: 3754
+  arg2: 5
+  arg3: 3766
+- command: M
+  if_flag: 0
+  arg1: 3754
+  arg2: 5
+  arg3: 3768
+- command: M
+  if_flag: 0
+  arg1: 3755
+  arg2: 2
+  arg3: 3761
+- command: E
+  if_flag: 1
+  arg1: 3873
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3755
+  arg2: 2
+  arg3: 3764
+- command: E
+  if_flag: 1
+  arg1: 3872
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3756
+  arg2: 3
+  arg3: 3763
+- command: E
+  if_flag: 1
+  arg1: 3872
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3756
+  arg2: 3
+  arg3: 3765
+- command: E
+  if_flag: 1
+  arg1: 3872
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3757
+  arg2: 4
+  arg3: 3761
+- command: M
+  if_flag: 0
+  arg1: 3757
+  arg2: 4
+  arg3: 3763
+- command: M
+  if_flag: 0
+  arg1: 3757
+  arg2: 4
+  arg3: 3767
+- command: M
+  if_flag: 0
+  arg1: 3758
+  arg2: 1
+  arg3: 3765
+- command: M
+  if_flag: 0
+  arg1: 3759
+  arg2: 6
+  arg3: 3760
+- command: M
+  if_flag: 0
+  arg1: 3759
+  arg2: 6
+  arg3: 3763
+- command: M
+  if_flag: 0
+  arg1: 3759
+  arg2: 6
+  arg3: 3767
+- command: M
+  if_flag: 0
+  arg1: 3760
+  arg2: 2
+  arg3: 3764
+- command: M
+  if_flag: 0
+  arg1: 3760
+  arg2: 2
+  arg3: 3768
+- command: M
+  if_flag: 0
+  arg1: 3761
+  arg2: 3
+  arg3: 3762
+- command: M
+  if_flag: 0
+  arg1: 3761
+  arg2: 3
+  arg3: 3766
+- command: M
+  if_flag: 0
+  arg1: 3762
+  arg2: 1
+  arg3: 3768
+- command: M
+  if_flag: 0
+  arg1: 3763
+  arg2: 1
+  arg3: 3775
+- command: M
+  if_flag: 0
+  arg1: 3764
+  arg2: 2
+  arg3: 3751
+- command: G
+  if_flag: 1
+  arg1: 3754
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3755
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3764
+  arg2: 2
+  arg3: 3753
+- command: G
+  if_flag: 1
+  arg1: 3754
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3755
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3765
+  arg2: 3
+  arg3: 3751
+- command: E
+  if_flag: 1
+  arg1: 3873
+  arg2: 100
+  arg3: 16
+- command: E
+  if_flag: 1
+  arg1: 3762
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3765
+  arg2: 3
+  arg3: 3753
+- command: E
+  if_flag: 1
+  arg1: 3873
+  arg2: 100
+  arg3: 16
+- command: E
+  if_flag: 1
+  arg1: 3762
+  arg2: 100
+  arg3: 9
+- command: M
+  if_flag: 0
+  arg1: 3766
+  arg2: 1
+  arg3: 3752
+- command: M
+  if_flag: 0
+  arg1: 3767
+  arg2: 2
+  arg3: 3775
+- command: E
+  if_flag: 1
+  arg1: 3871
+  arg2: 100
+  arg3: 16
+- command: E
+  if_flag: 1
+  arg1: 3875
+  arg2: 100
+  arg3: 5
+- command: M
+  if_flag: 0
+  arg1: 3768
+  arg2: 1
+  arg3: 3775
+- command: O
+  if_flag: 0
+  arg1: 3750
+  arg2: 10
+  arg3: 3760
+- command: O
+  if_flag: 0
+  arg1: 3750
+  arg2: 10
+  arg3: 3763
+- command: O
+  if_flag: 0
+  arg1: 3750
+  arg2: 10
+  arg3: 3767
+- command: O
+  if_flag: 0
+  arg1: 3751
+  arg2: 8
+  arg3: 3762
+- command: O
+  if_flag: 0
+  arg1: 3751
+  arg2: 8
+  arg3: 3766
+- command: O
+  if_flag: 0
+  arg1: 3751
+  arg2: 8
+  arg3: 3779
+- command: O
+  if_flag: 0
+  arg1: 3752
+  arg2: 15
+  arg3: 3761
+- command: O
+  if_flag: 0
+  arg1: 3752
+  arg2: 15
+  arg3: 3764
+- command: O
+  if_flag: 0
+  arg1: 3752
+  arg2: 15
+  arg3: 3765
+- command: O
+  if_flag: 0
+  arg1: 3878
+  arg2: 2
+  arg3: 3775
+- command: O
+  if_flag: 0
+  arg1: 3879
+  arg2: 2
+  arg3: 3775
+- command: O
+  if_flag: 0
+  arg1: 3766
+  arg2: 3
+  arg3: 3763
+shops: []
