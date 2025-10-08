@@ -41,28 +41,68 @@ Central gathering place featuring a statue commemorating the unification of Heli
 ### Gates and Connections
 
 #### West Gate (3040, 3052)
-**Leads toward:** Dead sea bottom, Thark Territory (Green Martian lands)
+**Connection:** Room 3052 → Dead Sea Wilderness (Zone 33, room 3767)  
+**Leads toward:** Dead sea bottom, Thark Territory (Green Martian lands)  
+**Status:** ✓ Fully connected
+
 - Primary route for overland expeditions
 - Trade caravans depart/arrive here
 - Guards monitor for Green Martian raiders
+- Vast ochre moss extends to the horizon
+- Green Martian territory (Thark) lies days of travel to the northwest
+- Hazards: Thark patrols, banths, apts, and other predators
+
+**Notable Destinations via West Gate:**
+- Thark Territory (Zone 40, rooms 4000-4049): Days of travel northwest through Dead Sea Wilderness (room 3764 → 4047)
+- Zodanga (Zone 36, rooms 3600-3649): 1000+ miles north-northeast (zone implemented but requires future wilderness zones for connection)
 
 #### East Gate (3041, 3053)  
-**Leads toward:** Greater Helium (75 miles east), Zodanga (1000+ miles northeast)
+**Connection:** Room 3053 → Dead Sea Wilderness (Zone 33, room 3754) → Greater Helium (Zone 35, room 3949)  
+**Leads toward:** Greater Helium (75 miles east)  
+**Status:** ✓ Fully connected
+
 - Main connection to Greater Helium via elevated roadway
 - Airship traffic overhead
 - Most secure gate
+- 75-mile elevated causeway spanning the ancient sea channel
+- Magnificent engineering feat with guard posts along route
+- Views of dead sea bottom far below
+
+**Notable Destinations via East Gate:**
+- Greater Helium (Zone 35, rooms 3900-3999): 75 miles east via elevated road through Dead Sea Wilderness
+- Zodanga (Zone 36, rooms 3600-3649): Can reach via Greater Helium and future northeastern wilderness zones
+- Gathol: Multiple days airship travel northeast (not yet implemented)
+- Ptarth: Multiple days airship travel north (not yet implemented)
 
 #### South Bridge (3047, 3051)
-**Leads toward:** Dead sea bottom (southern plains), atmosphere factories
+**Connection:** Room 3051 → Southern Approach (Zone 34, room 3100) → Atmosphere Factory (Zone 41, room 4100)  
+**Leads toward:** Atmosphere factories (several hundred miles south)  
+**Status:** ✓ Fully connected
+
 - Crosses ancient river channel
 - Secondary exit from city
 - Less trafficked than main gates
+- Several hundred miles to Atmosphere Factory
+- Critical Mars infrastructure route
+
+**Notable Destinations via South Bridge:**
+- Southern Approach (Zone 34, rooms 3100-3149): Guard post and supply depot for factory journeys
+- Atmosphere Factory - Main Levels (Zone 41, rooms 4100-4149): Upper factory complex
+- Atmosphere Factory - Lower Levels (Zone 42, rooms 4150-4199): Restricted research areas
+- Hastor: Distant, part of Helium empire (not yet implemented)
 
 #### Levee Access (3049)
-**Leads to:** Dead sea bottom floor via channel descent
+**Connection:** Room 3049 → Dead Sea Bottom Channel (Zone 32, rooms 3200-3205)  
+**Leads to:** Dead sea bottom floor via channel descent  
+**Status:** ✓ Connected
+
 - Access point to lower regions
 - Used by scouts and explorers
 - River channel (zone 32) extends from here
+- Ancient dried waterway beneath the city
+- Ochre moss covered floor
+- Steep banks, passes under city bridge
+- Eastern end blocked by iron grating (room 3205) - prevents entry from outside
 
 ## Dead Sea Bottom Channel (Zone 32)
 
@@ -176,15 +216,78 @@ Lesser Helium embodies classic Barsoomian aesthetics:
 Lesser Helium serves as the safe starting hub for adventures across Barsoom:
 - East: Greater Helium (Zone 35) - Connected via elevated road through Dead Sea Wilderness
 - West: Thark green Martian territory (Zone 40) - Connected via Dead Sea Wilderness (Zone 33)
-- North: Trade routes to other city-states
+- North: Trade routes to other city-states (future expansion)
 - South: Atmosphere factories and dead sea bottom plains
 - Vertical: Airship docks above, sewers below
 
 This zone provides the foundation for the entire Barsoom MUD experience.
 
+## Geography and Travel
+
+### Geographic Position
+Lesser Helium sits in a strategic location:
+- Elevated above the dead sea bottom
+- 75 miles from Greater Helium to the east
+- Ancient dried channel runs beneath and through the city
+- Surrounded by vast dead sea bottom plains covered in ochre moss
+- Thark territory lies days of travel to the west/northwest
+- Zodanga 1000+ miles to the north-northeast (distant enemy)
+- Atmosphere factories several hundred miles to the south
+
+### Travel Times (from Barsoom lore)
+- **Helium to Greater Helium:** Days by foot across dead sea bottom, hours by airship
+- **Dead Sea Bottom Crossings:** Days to weeks on thoat (eight-legged Martian mount)
+- **Airship Travel:** Days between major cities across the planet
+- **Channel to Surface:** Minutes to climb the steep banks
+- **Lesser Helium to Thark Territory:** Multiple days by thoat, faster by airship
+- **Lesser Helium to Atmosphere Factory:** Long journey of several hundred miles
+
+### Sector Types
+The world of Barsoom uses different terrain sectors:
+- **City (Sector 1):** Lesser Helium interior, Greater Helium, Thark ruins
+- **Field (Sector 2):** Dead sea bottom plains, ochre moss wilderness
+- **Inside (Sector 0):** Building interiors, atmosphere factory complex
+
+### Environmental Notes
+- **Thin Atmosphere:** Affects travel speed and endurance
+- **Lower Gravity:** Affects jumping distance and falling damage
+- **Ochre Moss:** Covers much of the dead sea bottom, provides some vegetation
+- **Ancient Ruins:** Scattered throughout the wilderness, remnants of lost civilizations
+
 ## Related Zones
 
-- **Dead Sea Bottom Channel** (Zone 32, rooms 3200-3205) - Ancient dried waterway beneath the city
-- **Dead Sea Wilderness** (Zone 33, rooms 3750-3779) - Dangerous wilderness between the Twin Cities
-- **Greater Helium** (Zone 35, rooms 3900-3999) - Twin city to the east
-- **Thark Territory** (Zone 40, rooms 4000-4049) - Allied green Martian city to the northwest
+### Directly Connected Zones
+
+- **Dead Sea Bottom Channel** (Zone 32, rooms 3200-3205)  
+  Ancient dried waterway beneath the city. Accessible via Levee Access (room 3049). Features ochre moss-covered floor, steep banks, and passage under city bridge. Eastern end has iron grating blocking entry from outside (connects to room 3770 in Dead Sea Wilderness).
+
+- **Dead Sea Wilderness** (Zone 33, rooms 3750-3779)  
+  Dangerous wilderness between the Twin Cities. Accessible via West Gate (room 3052 → 3767) and East Gate (room 3053 → 3754). Features elevated roadway between cities, wilderness plains on dead sea bottom, predators (banths, apts), and occasional green Martian encounters. Connects to Thark Territory to the northwest (room 3764 → 4047).
+
+- **Southern Approach** (Zone 34, rooms 3100-3149)  
+  Travel zone connecting Lesser Helium to the Atmosphere Factory. Accessible via South Bridge (room 3051 → 3100). Features southern concourse with guard post, vast dead sea bottom plains, the Halfway Point waystation, and factory approach. Several hundred miles of journey across desolate terrain with encounters including young banths, apt packs, and hostile remnants.
+
+- **Greater Helium** (Zone 35, rooms 3900-3999)  
+  Twin city to the east, 75 miles away. Accessible via elevated roadway through Dead Sea Wilderness (East Gate room 3053 → 3754 → 3949). Larger and more elaborate than Lesser Helium, with 100 rooms. Home of John Carter (Warlord of Mars), Dejah Thoris, and other legendary figures. Major quest hub with finest shops on Mars, palace district, and military headquarters.
+
+- **Thark Territory** (Zone 40, rooms 4000-4049)  
+  Allied green Martian city to the northwest. Accessible via West Gate through Dead Sea Wilderness (room 3052 → 3767 → 3764 → 4047). Ancient ruined city inhabited by Thark horde led by Jeddak Tars Tarkas. Features main plaza, council chambers, warrior compounds, sacred incubator, arena, thoat pens, and trading post. Days of travel by thoat from Lesser Helium.
+
+- **Atmosphere Factory - Main Levels** (Zone 41, rooms 4100-4149)  
+  Critical Mars infrastructure producing oxygen for entire planet. Accessible via Southern Approach (South Bridge room 3051 → 3100 → 3143 → 4100). Features entrance hall, engineering quarters, primary processing hall, oxygen distribution system, radium power core, and restricted access areas. Defended by factory guards. Contains passages to lower levels.
+
+- **Atmosphere Factory - Lower Levels** (Zone 42, rooms 4150-4199)  
+  Restricted research facility beneath main factory. Accessible via hidden passages from main factory levels (rooms 4145-4149). Features abandoned maintenance tunnels, research laboratories, power experiments, biological research, and deep core access. Home to renegade scientists conducting forbidden experiments, including Ras Thavas.
+
+- **Zodanga** (Zone 36, rooms 3600-3649)  
+  Enemy city-state 1000+ miles north-northeast. Currently not directly connected from Lesser Helium - requires journey through wilderness zones (future implementation). Ruled by Than Kosis and Prince Sab Than. Dark, militaristic city focused on political intrigue, espionage, and military power. Features palace district, military quarter, merchant district, and espionage quarter. 50-room zone with complex political gameplay. High-level content (18-26).
+
+### Future Planned Zones
+
+The following zones are referenced in lore but not yet implemented:
+
+- **Wilderness Zones** - Connection routes between major cities across the dead sea bottom. Would connect Zodanga, Helium, and other distant locations.
+- **Gathol** - City-state multiple days northeast by airship.
+- **Ptarth** - City-state multiple days north by airship.
+- **Hastor** - Distant city, part of Helium empire to the south.
+- **Warhoon Territory** - Hostile green Martian horde north of Thark Territory.

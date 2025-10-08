@@ -1120,6 +1120,11 @@ The city gate is to the east.
 ~
 gate~
 1 3133 3040
+D3
+The dead sea bottom wilderness extends to the west.
+~
+~
+0 -1 3767
 E
 bridge footbridge~
 The footbridge connects the two gate towers high above.  Guards patrol it to
