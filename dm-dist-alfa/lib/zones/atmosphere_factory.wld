@@ -1,0 +1,865 @@
+#4100
+The Grand Entrance Hall~
+   You stand within the enormous entrance hall of the Atmosphere Factory. The ceiling
+soars hundreds of feet overhead, supported by massive pillars of gleaming metal that
+seem to have no corrosion despite their obvious age. The constant thrum of machinery
+fills the air, a deep vibration you can feel in your bones. Ancient Martian glyphs
+cover the walls, and the scale of everything suggests this place was built by beings
+who thought in terms of eternity.
+~
+41 8 0
+D0
+The entrance doors lead back outside to the approach.
+~
+doors grand~
+1 -1 3143
+D2
+A wide corridor leads deeper into the factory complex.
+~
+~
+0 -1 4101
+E
+pillars columns~
+These enormous metal pillars support the ceiling with no visible joints or welds.
+The metal itself seems to glow faintly with an inner light, perhaps from the radium
+power that drives the factory.
+~
+E
+glyphs carvings writing~
+The ancient glyphs tell the story of the factory's construction. Though worn by ages,
+you can make out images of the ancient Martians who built this place, their desperation
+as their atmosphere leaked away into space, and their triumph in creating this solution.
+~
+S
+#4101
+Security Checkpoint~
+   This checkpoint controls entry to the working areas of the factory. Guard stations
+flank the corridor, and sophisticated detection equipment - some of it clearly ancient
+Martian technology beyond modern understanding - monitors all who pass through. Armed
+guards watch with alert eyes, ready to challenge anyone who doesn't belong.
+~
+41 8 0
+D0
+The entrance hall lies to the north.
+~
+~
+0 -1 4100
+D2
+The corridor continues south into the factory.
+~
+~
+0 -1 4102
+D3
+A door leads west to the guard station.
+~
+door~
+1 -1 4103
+S
+#4102
+Main Corridor - North~
+   This broad corridor runs through the factory, wide enough for six people to walk
+abreast. The walls are lined with pipes and conduits, all humming with power or
+flowing with mysterious liquids. Doors branch off to various sections, and signs
+in both ancient and modern Martian script direct traffic.
+~
+41 8 0
+D0
+The security checkpoint is to the north.
+~
+~
+0 -1 4101
+D1
+A door leads east to the engineering quarters.
+~
+door~
+1 -1 4105
+D2
+The corridor continues south.
+~
+~
+0 -1 4110
+D3
+Another door leads west to additional guard facilities.
+~
+door~
+1 -1 4104
+S
+#4103
+Guard Station~
+   This well-equipped guard station houses the factory's security forces. Weapon racks
+line the walls, holding both traditional swords and modern radium rifles. A duty roster
+and maps of the factory complex cover one wall, and several guards are present at all
+times, ready to respond to any threat.
+~
+41 8 0
+D1
+The door leads back to the checkpoint.
+~
+door~
+1 -1 4101
+S
+#4104
+Guard Armory~
+   This secure room stores additional weapons and armor for the factory guards. Heavy
+metal doors protect the contents, and an inventory system tracks every item. The
+equipment here is top quality - the factory must be defended at all costs.
+~
+41 8 0
+D1
+The door leads to the main corridor.
+~
+door~
+1 -1 4102
+S
+#4105
+Engineering Quarters - Entrance~
+   This is the entrance to the living quarters for the engineers who maintain the
+factory. The contrast between the industrial factory proper and these more comfortable
+spaces is stark. Comfortable furnishings, personal belongings, and the smell of cooking
+create a more homey atmosphere.
+~
+41 8 0
+D1
+More quarters lie to the east.
+~
+~
+0 -1 4106
+D2
+A door leads south to the mess hall.
+~
+door~
+1 -1 4107
+D3
+The corridor lies to the west.
+~
+door~
+1 -1 4102
+S
+#4106
+Engineers' Dormitory~
+   This large room houses bunks for the engineering staff. Each bunk area has personal
+storage and some decoration reflecting the personality of its occupant. Books on
+engineering and ancient Martian technology lie on small tables. Despite the austere
+accommodations, there's a sense of pride and purpose here.
+~
+41 8 0
+D3
+The entrance to the quarters is to the west.
+~
+~
+0 -1 4105
+S
+#4107
+Mess Hall~
+   The factory's mess hall provides meals for both engineers and guards. Long tables
+fill the room, and a kitchen area produces simple but adequate food. A large window
+looks out over one of the factory's massive processing chambers, a constant reminder
+of the important work done here.
+~
+41 8 0
+D0
+The door leads north to the quarters entrance.
+~
+door~
+1 -1 4105
+D2
+The recreation room lies to the south.
+~
+~
+0 -1 4108
+S
+#4108
+Recreation Room~
+   This room provides rare leisure space for the factory workers. A few games, some
+books, and comfortable chairs offer respite from the demanding work. A board on the
+wall displays the work rotation schedule and important notices.
+~
+41 8 0
+D0
+The mess hall is to the north.
+~
+~
+0 -1 4107
+D1
+A door leads to the library.
+~
+door~
+1 -1 4109
+S
+#4109
+Technical Library~
+   This invaluable collection contains manuals, diagrams, and notes about the factory's
+systems. Some volumes are ancient, written by the original builders. Others are modern
+additions, recording the discoveries and repairs of countless generations of engineers.
+The knowledge here is irreplaceable.
+~
+41 8 0
+D3
+The door leads to the recreation room.
+~
+door~
+1 -1 4108
+E
+manuals books volumes~
+The ancient manuals use a technical language that even modern scholars struggle to fully
+understand. But through careful study and trial and error, engineers have learned enough
+to keep the factory running. Each successful repair is meticulously documented for future
+generations.
+~
+S
+#4110
+Main Corridor - Central~
+   The main corridor continues its path through the factory complex. Here, the sound of
+machinery grows louder as you approach the primary processing areas. The temperature is
+noticeably warmer, and the air carries a sharp, clean scent - perhaps oxygen being
+processed nearby.
+~
+41 8 0
+D0
+The corridor extends north.
+~
+~
+0 -1 4102
+D1
+A massive metal door leads east to the processing halls.
+~
+door heavy~
+2 -1 4115
+D2
+The corridor continues south.
+~
+~
+0 -1 4120
+D3
+A door leads to the chief engineer's office.
+~
+door~
+1 -1 4111
+S
+#4111
+Chief Engineer's Office~
+   This office belongs to Vor Daj, the chief engineer of the factory. Technical diagrams
+cover every wall, and a large desk is buried under reports, calculations, and ancient
+texts. The office is cluttered but organized in its own way - everything has a purpose
+and a place. A window overlooks one of the main pump chambers.
+~
+41 8 0
+D1
+The door leads to the main corridor.
+~
+door~
+1 -1 4110
+D2
+A private door leads to the workshop.
+~
+door~
+1 -1 4112
+E
+diagrams plans schematics~
+These are the chief engineer's working diagrams of the factory systems. Some sections
+are well understood, with detailed annotations. Others are marked with questions and
+speculation - even after generations of study, not all of the ancient technology is
+fully comprehended.
+~
+S
+#4112
+Engineering Workshop~
+   This well-equipped workshop allows engineers to fabricate parts and repair equipment.
+Work benches are covered with tools both ancient and modern. Some of the tools are clearly
+of ancient Martian design, their functions only partially understood but invaluable for
+working with the factory's systems.
+~
+41 8 0
+D0
+The door leads to the chief engineer's office.
+~
+door~
+1 -1 4111
+D1
+Another door leads to equipment storage.
+~
+door~
+1 -1 4113
+S
+#4113
+Equipment Storage~
+   Spare parts, tools, and materials fill this storage room. Some items are modern
+fabrications, while others are irreplaceable components salvaged from broken systems
+or discovered in hidden storage caches within the factory. An inventory system attempts
+to track the contents.
+~
+41 8 0
+D3
+The door leads to the workshop.
+~
+door~
+1 -1 4112
+S
+#4115
+Primary Processing Hall - Entrance~
+   You enter the primary processing hall and are immediately overwhelmed by the scale.
+The chamber is vast enough to hold a small city, and it's filled with machinery of
+impossible complexity. Huge cylindrical tanks reach from floor to ceiling, connected
+by a maze of pipes and conduits. The machinery operates with a steady, powerful rhythm,
+and the air tingles with energy.
+~
+41 8 0
+D1
+The processing hall extends eastward.
+~
+~
+0 -1 4116
+D2
+Catwalks lead south through the machinery.
+~
+~
+0 -1 4117
+D3
+The heavy door leads back to the corridor.
+~
+door heavy~
+2 -1 4110
+E
+machinery equipment tanks~
+The machines are clearly ancient but operate with flawless precision. The metal they're
+constructed from never corrodes, and the moving parts show no signs of wear despite
+operating continuously for countless centuries. This is technology far beyond anything
+modern Mars can produce.
+~
+S
+#4116
+Processing Hall - East Section~
+   This section of the processing hall contains some of the chemical treatment systems.
+Huge tanks contain mysterious liquids that bubble and steam, their exact purpose known
+only to the senior engineers. The air here is sharp with chemical scents, though not
+unpleasant - more like the smell after a lightning storm.
+~
+41 8 0
+D2
+A catwalk leads south.
+~
+~
+0 -1 4118
+D3
+The processing hall extends west.
+~
+~
+0 -1 4115
+E
+tanks vats containers~
+These enormous tanks process atmospheric gases through stages of refinement. The exact
+chemistry is only partially understood, but the result is pure, breathable oxygen that
+sustains all life on Mars.
+~
+S
+#4117
+Catwalk Junction~
+   Metal catwalks crisscross through the machinery at this junction, allowing access
+to various systems for maintenance. Far below, you can see the factory floor with its
+maze of pipes and machinery. The sound of the machinery is deafening here, and the
+catwalk vibrates with the power of the systems.
+~
+41 8 0
+D0
+The catwalk leads to the entrance area.
+~
+~
+0 -1 4115
+D1
+The catwalk extends east.
+~
+~
+0 -1 4118
+D2
+Another catwalk leads south.
+~
+~
+0 -1 4119
+E
+below floor~
+The factory floor far below is a maze of machinery, pipes, and tanks. Steam vents
+periodically, and you can see engineers moving among the equipment like tiny figures
+in a mechanical landscape of giants.
+~
+S
+#4118
+East Catwalk~
+   This catwalk provides access to the eastern processing systems. Control panels are
+mounted at intervals, allowing engineers to monitor and adjust the machinery. Warning
+signs in ancient Martian caution about various dangers - high pressure, extreme heat,
+and radiation hazards.
+~
+41 8 0
+D2
+The catwalk continues south.
+~
+~
+0 -1 4119
+D3
+The catwalk leads to the junction.
+~
+~
+0 -1 4117
+E
+panels controls~
+These control panels use a mix of ancient technology and modern additions. Glowing
+crystals display information in ways that engineers have learned to interpret, while
+hand-written labels in modern Martian script identify various functions.
+~
+S
+#4119
+South Catwalk~
+   From this catwalk, you have a view of the massive pump systems that move processed
+gases through the factory. The pumps are enormous, their pistons moving with ponderous
+power. The rhythm of their operation is hypnotic, and you can feel each stroke vibrate
+through the catwalk.
+~
+41 8 0
+D0
+The catwalk extends north to the junction.
+~
+~
+0 -1 4117
+D1
+The catwalk continues east.
+~
+~
+0 -1 4118
+E
+pumps pistons machinery~
+These pumps move incomprehensible volumes of gas through the factory's systems. Each
+pump is the size of a building, and they operate with perfect synchronization. The
+power source that drives them is one of the factory's great mysteries.
+~
+S
+#4120
+Main Corridor - South~
+   The corridor continues its path southward. Here, directional signs point toward the
+oxygen distribution systems and the radium power core - the heart of the factory. The
+temperature is higher here, and the air feels charged with energy. Access to the most
+sensitive areas is restricted.
+~
+41 8 0
+D0
+The corridor extends north.
+~
+~
+0 -1 4110
+D1
+A door leads to the distribution manifold.
+~
+door~
+1 -1 4125
+D2
+The corridor continues toward the power core.
+~
+~
+0 -1 4130
+S
+#4125
+Distribution Manifold - Control Room~
+   This control room oversees the oxygen distribution systems. Complex instrumentation
+monitors the flow of processed oxygen to all of Mars. Map boards show the distribution
+network, though the mechanism by which oxygen reaches distant cities is not fully
+understood - ancient technology beyond modern comprehension.
+~
+41 8 0
+D1
+A door leads to the manifold chamber.
+~
+door heavy~
+2 -1 4126
+D2
+Another door leads to pressure monitoring.
+~
+door~
+1 -1 4127
+D3
+The door leads to the corridor.
+~
+door~
+1 -1 4120
+E
+maps boards displays~
+These boards show Mars as a whole, with lines indicating oxygen distribution. The lines
+don't follow any known transportation network - the oxygen seems to simply appear where
+it's needed, suggesting the ancient builders developed some form of teleportation or
+matter transmission technology.
+~
+S
+#4126
+Distribution Manifold Chamber~
+   This chamber contains the actual distribution manifold - a massive spherical structure
+of unknown metal, covered in glowing conduits and pulsing with energy. Processed oxygen
+enters the manifold and somehow is distributed across all of Mars. The technology involved
+is completely beyond modern understanding, but as long as oxygen enters the manifold, it
+continues to function.
+~
+41 8 0
+D3
+The heavy door leads back to the control room.
+~
+door heavy~
+2 -1 4125
+E
+manifold sphere~
+The manifold is perfectly spherical and appears seamless. It pulses with a soft blue light,
+and you can hear a high-pitched hum emanating from it. Instruments show enormous energy
+flows, but where that energy comes from or goes to remains a mystery.
+~
+S
+#4127
+Pressure Monitoring Station~
+   This station monitors the pressure of gases throughout the factory systems. Numerous
+gauges and readouts show pressures in different sections, and engineers constantly adjust
+valves to maintain optimal flow. A breach or failure in pressure could be catastrophic.
+~
+41 8 0
+D0
+The door leads back to the control room.
+~
+door~
+1 -1 4125
+D1
+A door leads to emergency systems.
+~
+door~
+1 -1 4128
+S
+#4128
+Emergency Valve Chamber~
+   This chamber houses massive emergency valves that can shut down different sections
+of the factory in case of failure or breach. The valves are enormous, requiring great
+strength or mechanical assistance to operate. Instructions carved in stone detail
+emergency procedures.
+~
+41 8 0
+D3
+The door leads to the monitoring station.
+~
+door~
+1 -1 4127
+E
+valves emergency~
+These enormous valves can isolate sections of the factory, preventing a local failure
+from becoming a global catastrophe. The valves are purely mechanical - no electronics
+or complex systems - ensuring they'll function even if all else fails.
+~
+S
+#4130
+Restricted Access Corridor~
+   This corridor leads to the most restricted areas of the factory - the radium power core
+and related systems. Security here is extremely tight, and only authorized personnel are
+permitted beyond this point. Warning signs caution about radiation hazards ahead.
+~
+41 8 0
+D0
+The corridor leads back north.
+~
+~
+0 -1 4120
+D2
+A heavily secured door leads to the power core entrance.
+~
+door secured~
+2 4200 4135
+E
+signs warnings~
+The warning signs use stark symbols and text: radiation hazard, extreme danger, authorized
+personnel only. The messages are repeated in multiple languages and scripts, including
+ancient Martian. Even someone who couldn't read would understand the danger.
+~
+S
+#4135
+Power Core - Outer Chamber~
+   You enter the outer chamber of the power core. The temperature is noticeably higher here,
+and the air has a metallic tang. Shielding materials line the walls - thick metal plates
+that absorb dangerous radiation. Through a viewing window, you can see the inner core chamber
+where the radium power source drives the entire factory.
+~
+41 8 0
+D0
+The secured door leads back to the corridor.
+~
+door secured~
+2 4200 4130
+D2
+A radiation-shielded door leads to the core chamber itself.
+~
+door shielded~
+2 4201 4136
+E
+window view~
+Through the thick viewing window, you can see the inner core - a chamber filled with a soft
+blue glow. The radium fuel elements are visible, safely contained but radiating enormous
+power. The core has been operating continuously for uncounted millennia.
+~
+S
+#4136
+Radium Power Core Chamber~
+   You are in the heart of the factory - the radium power core chamber. The walls are lined
+with thick shielding, but even so, you can feel the energy radiating from the central core.
+The radium fuel elements glow with their characteristic blue light, contained in a structure
+of impossible engineering. This is the power source that has sustained Mars for ages, and
+will continue to do so as long as the radium lasts - which might be forever.
+~
+41 8 0
+D0
+The shielded door leads to the outer chamber.
+~
+door shielded~
+2 4201 4135
+D2
+A door leads to the core monitoring station.
+~
+door~
+1 -1 4137
+E
+core radium fuel~
+The radium core is contained in a structure that uses principles modern science doesn't fully
+understand. The radium provides perpetual power, its radioactive decay generating energy that
+drives the entire factory. The containment is perfect - no leakage, no deterioration, eternal
+operation.
+~
+S
+#4137
+Core Monitoring Station~
+   This station monitors the power core's operation. Readouts show energy output, radiation
+levels, and system status. Engineers here ensure the core operates safely and optimally,
+though the ancient systems are so well-designed that intervention is rarely needed. Still,
+vigilance must be maintained.
+~
+41 8 0
+D0
+The door leads back to the core chamber.
+~
+door~
+1 -1 4136
+D2
+Another door leads to coolant systems.
+~
+door~
+1 -1 4138
+S
+#4138
+Coolant System Control~
+   This room controls the coolant systems that prevent the core from overheating. Pumps
+circulate coolant through heat exchangers, carrying away excess heat. The coolant itself
+is a substance unknown to modern chemistry - it never boils, never freezes, and never
+degrades. More lost technology from the ancient builders.
+~
+41 8 0
+D0
+The door leads to the monitoring station.
+~
+door~
+1 -1 4137
+E
+coolant liquid~
+The coolant is a silvery liquid that flows through transparent tubes. It glows faintly,
+absorbing heat from the core and transferring it to heat exchangers where it's safely
+dissipated. The coolant appears to be self-circulating, requiring no external power.
+~
+S
+#4140
+Administrative Section - Entrance~
+   This section houses the factory's administrative offices. Here, records are kept of
+production levels, maintenance schedules, personnel assignments, and the countless other
+details of operating this critical facility. The atmosphere is more bureaucratic and less
+industrial than other areas.
+~
+41 8 0
+D1
+A door leads to the records office.
+~
+door~
+1 -1 4141
+D2
+The corridor continues to more offices.
+~
+~
+0 -1 4142
+S
+#4141
+Records Office~
+   This office maintains the factory's operational records. Shelves hold countless volumes
+documenting production, maintenance, repairs, and incidents dating back centuries. More
+recent records are kept on modern data tablets, but the old paper records are irreplaceable
+historical documents.
+~
+41 8 0
+D3
+The door leads back to the entrance.
+~
+door~
+1 -1 4140
+E
+records books documents~
+These records tell the story of the factory's operation over many lifetimes. You can trace
+the gradual loss of understanding of the ancient systems, the desperate experiments to keep
+things running, and the hard-won knowledge that allowed Mars to survive.
+~
+S
+#4142
+Administrative Corridor~
+   This corridor connects various administrative offices. It's quieter here than in the
+industrial sections, though the omnipresent thrum of machinery still vibrates through the
+floor. Office doors line the corridor, each labeled with various administrative functions.
+~
+41 8 0
+D0
+The corridor leads to the administrative entrance.
+~
+~
+0 -1 4140
+D1
+A door leads to the personnel office.
+~
+door~
+1 -1 4143
+D2
+The corridor continues south.
+~
+~
+0 -1 4144
+S
+#4143
+Personnel Office~
+   This office manages the factory's personnel - assignments, rotations, evaluations, and
+the training of new engineers. Work at the factory is prestigious but demanding, and only
+the best engineers are selected for service here. The lives of all Mars depend on their
+skill and dedication.
+~
+41 8 0
+D3
+The door leads to the corridor.
+~
+door~
+1 -1 4142
+S
+#4144
+Security Administration~
+   This office manages the factory's security operations. Maps show the security perimeter,
+patrol routes, and defensive positions. Intelligence reports warn of potential threats -
+Zodangan spies, green Martian raiders, and other dangers. The security forces are always
+on alert.
+~
+41 8 0
+D0
+The corridor leads north.
+~
+~
+0 -1 4142
+D2
+A concealed door leads to restricted areas.
+~
+door concealed~
+2 4202 4145
+E
+maps intelligence reports~
+The security reports make sobering reading. Multiple attempts at sabotage have been foiled,
+and constant vigilance is required. Zodanga in particular would love to gain control of the
+factory, giving them leverage over all Mars.
+~
+S
+#4145
+Restricted Storage~
+   This secure storage area contains sensitive materials and equipment. Heavy security doors
+and guards protect the contents. Some of the items here are ancient artifacts found during
+factory maintenance, others are classified research materials. Access is strictly limited.
+~
+41 8 0
+D0
+The concealed door leads to security administration.
+~
+door concealed~
+2 4202 4144
+D5
+A hidden trapdoor in the floor leads down to maintenance tunnels.
+~
+trapdoor hidden~
+2 4203 4150
+E
+trapdoor~
+This heavy metal trapdoor is concealed in the floor, almost invisible unless you know where
+to look. It's marked with ancient warnings in several languages. The trapdoor leads down to
+the abandoned lower levels - areas that were sealed off long ago.
+~
+S
+#4146
+Emergency Escape Route~
+   This corridor serves as an emergency evacuation route from the restricted areas. It's
+normally unused but maintained in case of catastrophic emergency. Emergency lighting
+provides minimal illumination, and air filtration systems ensure it remains breathable.
+~
+41 8 0
+D1
+The escape route continues.
+~
+~
+0 -1 4147
+E
+signs evacuation~
+Emergency evacuation signs point the way to safety, with distance markers and warnings
+about hazards. The signs are in multiple languages, ensuring anyone fleeing could follow
+them to safety.
+~
+S
+#4147
+Escape Route Junction~
+   The escape route branches here. One path leads to surface exits, while another leads
+to secure bunkers where factory personnel could shelter during attacks. The routes are
+clearly marked, and emergency supply caches are visible.
+~
+41 8 0
+D1
+The route leads to the surface exit.
+~
+~
+0 -1 4148
+D2
+Another path leads to emergency shelters.
+~
+~
+0 -1 4149
+D3
+The route extends back west.
+~
+~
+0 -1 4146
+S
+#4148
+Surface Emergency Exit~
+   This exit leads to the surface, emerging at a point well away from the main factory
+complex. In an emergency, evacuating personnel would use this exit to escape danger. The
+door is heavily reinforced and secured from the inside, preventing unauthorized entry
+from outside.
+~
+41 8 0
+D3
+The escape route is to the west.
+~
+~
+0 -1 4147
+S
+#4149
+Emergency Shelter~
+   This underground shelter could house factory personnel for extended periods during a
+siege or other crisis. Supplies, water, and air filtration systems are stored here, along
+with communications equipment to call for rescue. The shelter represents a last resort for
+protecting the factory's essential personnel.
+~
+41 8 0
+D0
+The escape route leads back north.
+~
+~
+0 -1 4147
+E
+supplies equipment~
+The shelter is well-stocked with food, water, medical supplies, and equipment. Bunks line
+the walls, and a small armory provides weapons for defense. This shelter could sustain
+several dozen people for months if necessary.
+~
+S
+$~
