@@ -27,7 +27,7 @@ Central gathering place featuring a statue commemorating the unification of Heli
 - **Warriors Guild** (3021-3023) - Training for swordsmen and fighters
 - **Scientific Academy** (3017-3019) - For scholars and inventors
 - **Assassins Guild** (3027-3029) - Shadowy organization (secret)
-- **Calot Keepers** (3002-3004) - Beast handlers and healers
+- **Noble's Guild** (3002-3004) - Leadership and diplomacy training
 
 ### Commercial District
 - **Weapon Smiths** (3011) - Radium rifles, longswords, and traditional weapons
@@ -118,7 +118,7 @@ This represents a small portion of the vast dead sea bottoms that cover much of 
 - 3051: South Bridge → Dead sea bottom south
 
 **Guilds:**
-- 3002-3004: Calot Keepers (healing)
+- 3002-3004: Noble's Guild (leadership)
 - 3017-3019: Scientific Academy
 - 3021-3023: Warriors Guild
 - 3027-3029: Assassins Guild
@@ -150,7 +150,7 @@ This represents a small portion of the vast dead sea bottoms that cover much of 
    - Warriors → Warriors Guild (3021)
    - Scientists → Scientific Academy (3019)
    - Assassins → Dark Alley entrance (3027)
-   - Beast Handlers → Calot Keepers (3002)
+   - Nobles → Noble's Guild (3002)
 
 4. **Equipment**: Basic weapons and armor can be purchased at the smiths (3011, 3020)
 

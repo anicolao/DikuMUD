@@ -79,11 +79,11 @@ You see the temple square.
 0 -1 3005
 S
 #3002
-Calot Keeper's Inner Chamber~
-   This is the inner chamber where the calot keepers tend to injured beasts and
-warriors.  Ancient Barsoomian medical instruments hang on the walls, and healing
-salves are arranged on shelves.  A shaft in the middle of the floor leads down
-into the training pens below.  The sounds of calots echo from the depths.
+Noble's Inner Chamber~
+   This is the inner chamber of the Noble's Guild, where matters of state and
+diplomacy are discussed.  Rich tapestries depicting the history of Helium hang
+on the walls, and a council table of rare hardwood dominates the center.  A shaft
+in the middle of the floor leads down to the archives below.
 ~
 30 12 0
 D1
@@ -93,10 +93,11 @@ You see your favorite place, the common room.
 0 -1 3003
 S
 #3003
-Calot Keeper's Common Room~
-   This common room is one of the finest in the city, reserved for guild members.
-Fine Barsoomian furnishings of rare woods and precious metals are arranged around
-the room.  A small sign carved from jade hangs on the wall.
+Noble's Common Room~
+   This elegant common room is reserved for members of noble houses.  Fine
+Barsoomian furnishings of rare woods and precious metals are arranged around the
+room.  Portraits of great Jeddaks and Jeds line the walls.  A small sign carved
+from jade hangs on the wall.
 ~
 30 12 0
 D2
@@ -120,10 +121,10 @@ Free instructions provided by the waiter:
 ~
 S
 #3004
-Entrance to Calot Keepers Guild~
-   The entrance hall is a modest room decorated with beast training equipment and
-healing supplies.  The exit leads east to the temple plaza.  A small entrance to
-the common room is in the northern wall.
+Entrance to Noble's Guild~
+   The entrance hall is an elegant chamber with polished stone floors and banners
+of the great houses of Helium.  The exit leads east to the temple plaza.  A small
+entrance to the common room is in the northern wall.
 ~
 30 8 0
 D0
@@ -140,9 +141,9 @@ S
 #3005
 The Temple Plaza~
    You are standing on the temple plaza of Lesser Helium.  Huge marble steps lead
-up to the temple gate.  The entrance to the Calot Keepers Guild is to the west,
-and the Traveler's Rest Inn is to the east.  Just south of here you see the market
-plaza, the heart of Lesser Helium.
+up to the temple gate.  The entrance to the Noble's Guild is to the west, and the
+Traveler's Rest Inn is to the east.  Just south of here you see the market plaza,
+the heart of Lesser Helium.
 ~
 30 0 1
 D0
@@ -161,7 +162,7 @@ You see the Market Plaza.
 ~
 0 -1 3014
 D3
-You see the entrance to the Calot Keepers Guild.
+You see the entrance to the Noble's Guild.
 ~
 ~
 0 -1 3004
@@ -758,7 +759,7 @@ The sign reads:
 
   You can name your beast: "buy <beast> <name>"
 
- By order of the Calot Keepers Guild
+ By order of the Master Calot Keeper
 
 ~
 S
