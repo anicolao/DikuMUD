@@ -398,14 +398,14 @@ void spell_bless(byte level, struct char_data *ch,
          (GET_POS(ch) != POSITION_FIGHTING) &&
          !IS_OBJ_STAT(obj, ITEM_EVIL)) {
 	    SET_BIT(obj->obj_flags.extra_flags, ITEM_BLESS);
-			act("$p briefly glows.",FALSE,ch,obj,0,TO_CHAR);
+			act("$p glows as the performance optimizer enhances it.",FALSE,ch,obj,0,TO_CHAR);
 		}
 	} else {
 
 		if ((GET_POS(victim) != POSITION_FIGHTING) &&
 		    (!affected_by_spell(victim, SPELL_BLESS))) {
 
-			send_to_char("You feel righteous.\n\r", victim);
+			send_to_char("Your performance optimizer activates, enhancing your capabilities.\n\r", victim);
 			af.type      = SPELL_BLESS;
   	  af.duration  = 6;
     	af.modifier  = 1;
@@ -807,7 +807,7 @@ void spell_heal(byte level, struct char_data *ch,
 
   update_pos( victim );
 
-  send_to_char("A warm feeling fills your body.\n\r", victim);
+  send_to_char("The regeneration chamber rapidly repairs your injuries.\n\r", victim);
 }
 
 
@@ -1035,7 +1035,7 @@ void spell_strength(byte level, struct char_data *ch,
 
 	assert(victim);
 
-  act("You feel stronger.", FALSE, victim,0,0,TO_CHAR);
+  act("Your strength amplifier harness engages, augmenting your muscles.", FALSE, victim,0,0,TO_CHAR);
 
   af.type      = SPELL_STRENGTH;
   af.duration  = level;
@@ -1088,10 +1088,10 @@ void spell_word_of_recall(byte level, struct char_data *ch,
 
 	/* a location has been found. */
 
-  act("$n disappears.", TRUE, victim, 0, 0, TO_ROOM);
+  act("$n activates a home recall transmitter and vanishes.", TRUE, victim, 0, 0, TO_ROOM);
   char_from_room(victim);
   char_to_room(victim, location);
-  act("$n appears in the middle of the room.", TRUE, victim, 0, 0, TO_ROOM);
+  act("$n materializes as the recall transmission completes.", TRUE, victim, 0, 0, TO_ROOM);
   do_look(victim, "",15);
 
 }
