@@ -54,7 +54,7 @@ Central gathering place featuring a statue commemorating the unification of Heli
 
 **Notable Destinations via West Gate:**
 - Thark Territory (Zone 40, rooms 4000-4049): Days of travel northwest through Dead Sea Wilderness (room 3764 → 4047)
-- Zodanga: 1000+ miles north-northeast (not yet implemented)
+- Zodanga (Zone 36, rooms 3600-3649): 1000+ miles north-northeast (zone implemented but requires future wilderness zones for connection)
 
 #### East Gate (3041, 3053)  
 **Connection:** Room 3053 → Dead Sea Wilderness (Zone 33, room 3754) → Greater Helium (Zone 35, room 3949)  
@@ -70,6 +70,7 @@ Central gathering place featuring a statue commemorating the unification of Heli
 
 **Notable Destinations via East Gate:**
 - Greater Helium (Zone 35, rooms 3900-3999): 75 miles east via elevated road through Dead Sea Wilderness
+- Zodanga (Zone 36, rooms 3600-3649): Can reach via Greater Helium and future northeastern wilderness zones
 - Gathol: Multiple days airship travel northeast (not yet implemented)
 - Ptarth: Multiple days airship travel north (not yet implemented)
 
@@ -278,11 +279,14 @@ The world of Barsoom uses different terrain sectors:
 - **Atmosphere Factory - Lower Levels** (Zone 42, rooms 4150-4199)  
   Restricted research facility beneath main factory. Accessible via hidden passages from main factory levels (rooms 4145-4149). Features abandoned maintenance tunnels, research laboratories, power experiments, biological research, and deep core access. Home to renegade scientists conducting forbidden experiments, including Ras Thavas.
 
+- **Zodanga** (Zone 36, rooms 3600-3649)  
+  Enemy city-state 1000+ miles north-northeast. Currently not directly connected from Lesser Helium - requires journey through wilderness zones (future implementation). Ruled by Than Kosis and Prince Sab Than. Dark, militaristic city focused on political intrigue, espionage, and military power. Features palace district, military quarter, merchant district, and espionage quarter. 50-room zone with complex political gameplay. High-level content (18-26).
+
 ### Future Planned Zones
 
 The following zones are referenced in lore but not yet implemented:
 
-- **Zodanga** - Enemy city-state 1000+ miles north-northeast. Darker atmosphere, espionage and intrigue. Long journey from Helium.
+- **Wilderness Zones** - Connection routes between major cities across the dead sea bottom. Would connect Zodanga, Helium, and other distant locations.
 - **Gathol** - City-state multiple days northeast by airship.
 - **Ptarth** - City-state multiple days north by airship.
 - **Hastor** - Distant city, part of Helium empire to the south.

@@ -44,6 +44,13 @@ Each zone consists of five files:
 - The larger Twin City, home of John Carter
 - Major city zone with 100 rooms
 
+### zodanga (Zone 36)
+- Virtual numbers: 3600-3649
+- Enemy city-state to Helium
+- Ruled by Than Kosis and Prince Sab Than
+- Dark, militaristic atmosphere with espionage quarter
+- 50-room zone focusing on political intrigue
+
 ### thark_territory (Zone 40)
 - Virtual numbers: 4000-4099
 - Ancient ruined city occupied by the Thark horde
@@ -94,10 +101,11 @@ This concatenates the zone files in the correct order:
 5. southern_approach
 6. dead_sea_wilderness
 7. greater_helium
-8. thark_territory
-9. atmosphere_factory
-10. atmosphere_lower
-11. system
+8. zodanga
+9. thark_territory
+10. atmosphere_factory
+11. atmosphere_lower
+12. system
 
 ## Adding New Zones
 
