@@ -244,7 +244,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 
 	if (ohoh && IS_NPC(victim) && AWAKE(victim))
 		if (IS_SET(victim->specials.act, ACT_NICE_THIEF)) {
-			sprintf(buf, "%s is a bloody thief.", GET_NAME(ch));
+			sprintf(buf, "%s is a bloody assassin.", GET_NAME(ch));
 			do_shout(victim, buf, 0);
 			slog(buf);
 			send_to_char("Don't you ever do that again!\n\r", ch);

@@ -17,5 +17,5 @@ KILL WIELD FLEE                 | ! BUG IDEA TYPO QUIT SAVE BRIEF COMPACT
 Further information available by HELP <keyword>, keyword being a command or 
 (for example) one of the following:
 
-SOCIAL SHOPS INNS CLERIC WARRIOR THIEF MAGIC
+SOCIAL SHOPS INNS WARRIOR SCIENTIST NOBLE ASSASSIN
 -------------------------------------------------------------------------------
