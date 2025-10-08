@@ -374,7 +374,7 @@ BUG TYPO IDEA
 For making useful suggestions to the maintainers of the game. Examples:
 
 bug the entire game crashes when I type 'put bag in bag'
-idea make a restaurant in Midgaard
+idea make a restaurant in Lesser Helium
 typo 'sence' should be spelled 'sense'
 #
 QUIT
@@ -908,7 +908,7 @@ Accumulative: -
 Duration    : Instantaneous
 
 The caster will be transferred back to his sancturay (presently
-the Temple of Midgaard).
+the Temple of Lesser Helium).
 
 See Also: -
 #
@@ -1206,7 +1206,7 @@ Player Houses in DikuMUD
 ------------------------
 
 In DikuMUD it is possible for players on all experience levels to purchase a
-house in the residential area in the southern part of Midgaard.  As some
+house in the residential area in the southern part of Lesser Helium.  As some
 areas are more sought after than others, the prices tend to vary quite a bit.
 These are the prices for a house with two rooms and an ordinary lock.
 
