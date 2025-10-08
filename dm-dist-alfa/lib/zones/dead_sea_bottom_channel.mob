@@ -1,4 +1,4 @@
-#3300
+#3250
 calot companion pet beast~
 Papi's favorite calot~
 Papi's favorite calot rests here, its ten legs tucked beneath it.
@@ -12,7 +12,7 @@ Its frog-like head nuzzles those it trusts. Best not to anger it, though.
 30 0 -10 1d1+500 20d20+100
 0 0
 5 5 0
-#3600
+#3251
 gardener red martian henry~
 Henry the Gardener~
 Henry the Red Martian gardener sits here, looking drunk.
@@ -26,7 +26,7 @@ when Mars was green and lush, before the great dying.
 4 15 8 1d12+48 1d6+1
 50 800
 6 6 1
-#3601
+#3252
 corpse zombie undead red martian~
 the reanimated corpse~
 A reanimated red Martian corpse staggers toward you.
@@ -40,7 +40,7 @@ state. Maggots crawl over its decaying body as it lurches forward.
 4 16 5 2d6+60 1d8+2
 0 1200
 8 8 0
-#3602
+#3253
 ghoul undead red martian~
 the ghastly ghoul~
 A ghastly undead creature lurks here.

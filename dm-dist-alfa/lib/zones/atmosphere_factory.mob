@@ -39,7 +39,8 @@ machinery and chemicals. He knows the factory systems intimately, though even he
 there are aspects of the ancient technology beyond full understanding. He's dedicated to
 keeping Mars alive and takes great pride in his work.
 ~
-23 2 2 6d10+300 1d8+5
+23 2 2 S
+6 0 0 6d10+300 1d8+5
 1500 10000
 8 8 1
 #4103
@@ -53,7 +54,8 @@ when working on unfamiliar equipment. He's eager but cautious, knowing that a mi
 could have catastrophic consequences. Under the guidance of senior engineers, he's gaining
 the knowledge needed to help sustain Mars.
 ~
-23 2 2 6d10+180 1d8+3
+23 2 2 S
+6 0 0 6d10+180 1d8+3
 800 6000
 8 8 2
 #4104
@@ -68,7 +70,8 @@ understanding of the ancient technology borders on the mystical. He wears a deco
 engineer's harness and carries tools that have been passed down through generations of
 chief engineers. Despite his age, his mind is sharp and his dedication absolute.
 ~
-23 2 2 8d10+400 1d8+8
+23 2 2 S
+6 0 0 8d10+400 1d8+8
 2500 16000
 8 8 1
 #4105
@@ -83,7 +86,8 @@ She's pragmatic and no-nonsense, with little patience for bureaucracy or politic
 loyalty is to the factory and its mission, not to individuals. She's suspicious of outsiders
 but will grudgingly respect competence when she sees it.
 ~
-23 2 2 7d10+350 1d8+6
+23 2 2 S
+6 0 0 7d10+350 1d8+6
 2000 13000
 8 8 2
 #4106
@@ -114,7 +118,8 @@ have forgotten. He's too old for heavy work now, but the younger engineers seek 
 and he gladly shares his vast experience. He tells stories of the factory's history and the
 ancient Martians who built it, keeping alive knowledge that might otherwise be lost.
 ~
-23 2 2 6d10+200 1d8+4
+23 2 2 S
+6 0 0 6d10+200 1d8+4
 1200 9000
 8 8 1
 #4108
@@ -188,7 +193,8 @@ extreme care. He's less physically capable than the field engineers but possesse
 of specific systems that makes him invaluable. He's completely focused on his work and
 can be startled by unexpected interruptions.
 ~
-23 2 2 6d10+220 1d8+4
+23 2 2 S
+6 0 0 6d10+220 1d8+4
 1000 8000
 8 8 2
 #4113
@@ -202,7 +208,8 @@ factory's status. He's trained to recognize abnormal patterns and knows the emer
 procedures for various failures. While not as physically active as field engineers, his
 monitoring prevents small problems from becoming catastrophes.
 ~
-23 2 2 6d10+190 1d8+3
+23 2 2 S
+6 0 0 6d10+190 1d8+3
 900 7500
 8 8 1
 #4114
@@ -216,7 +223,8 @@ handles countless other tasks that keep the ancient systems running smoothly. Wh
 as skilled as the engineers, his work is important, and he takes pride in keeping his
 sections in perfect condition.
 ~
-23 2 2 6d10+160 1d8+2
+23 2 2 S
+6 0 0 6d10+160 1d8+2
 600 5500
 8 8 1
 #4115
@@ -230,7 +238,8 @@ that document the factory's operation. He's not a warrior or engineer, but his o
 skills keep the factory running efficiently. He knows where every document is filed and can
 retrieve information instantly when needed.
 ~
-23 2 2 6d10+180 1d8+3
+23 2 2 S
+6 0 0 6d10+180 1d8+3
 500 5000
 8 8 1
 #4116
@@ -244,7 +253,8 @@ produced meets exacting standards. His work requires meticulous attention to det
 deep knowledge of atmospheric chemistry. Any deviation from standards must be reported
 immediately and corrected.
 ~
-23 2 2 7d10+280 1d8+5
+23 2 2 S
+6 0 0 7d10+280 1d8+5
 1400 10000
 8 8 2
 #4117
@@ -258,7 +268,8 @@ principles behind the technology. His research has led to insights that improved
 procedures and prevented failures. He wears scholar's robes over an engineer's harness,
 symbolizing his dual role. His discoveries are carefully documented for future generations.
 ~
-23 2 2 7d10+320 1d8+6
+23 2 2 S
+6 0 0 7d10+320 1d8+6
 1600 11000
 8 8 2
 #4118
@@ -272,7 +283,8 @@ despite safety precautions. He maintains a small infirmary and knows how to trea
 unique injuries that can result from working with ancient technology. His knowledge has
 saved countless lives over his years of service.
 ~
-23 2 2 6d10+240 1d8+4
+23 2 2 S
+6 0 0 6d10+240 1d8+4
 1100 8500
 8 8 2
 #4119
@@ -286,7 +298,8 @@ surprisingly good meals from basic ingredients. He knows everyone who works at t
 and hears all the gossip, making him an excellent source of information. He takes pride
 in keeping workers well-fed and maintaining morale.
 ~
-23 2 2 6d10+150 1d8+2
+23 2 2 S
+6 0 0 6d10+150 1d8+2
 400 4500
 8 8 1
 #4120

@@ -49,7 +49,8 @@ dangerous in his own way, possessing knowledge of Martian physiology that allows
 exploit weaknesses others don't know exist. He can be reasoned with but will defend his
 research if threatened.
 ~
-23 2 2 12d10+500 2d8+10
+23 2 2 S
+6 0 0 12d10+500 2d8+10
 5000 25000
 8 8 1
 #4203
@@ -230,7 +231,8 @@ a way to interface with his crystalline prison. His existence raises profound qu
 about the nature of consciousness, the value of ancient knowledge, and whether some secrets
 should remain buried with their creators.
 ~
-23 2 2 11d10+450 2d8+8
+23 2 2 S
+6 0 0 11d10+450 2d8+8
 0 30000
 8 8 1
 #4213
@@ -266,7 +268,8 @@ inherently hostile but will defend his work and the laboratory if threatened. Hi
 knowledge of energy systems makes him capable of weaponizing radium in combat, though
 doing so risks everyone nearby including himself.
 ~
-23 2 2 8d10+300 1d8+6
+23 2 2 S
+6 0 0 8d10+300 1d8+6
 2200 15000
 8 8 2
 #4215
@@ -284,6 +287,7 @@ Martian biology to target weaknesses in enemies if forced to defend herself. Her
 existence represents the moral complexity of scientific advancement - good intentions
 leading to questionable actions.
 ~
-23 2 2 9d10+340 1d8+7
+23 2 2 S
+6 0 0 9d10+340 1d8+7
 2800 18000
 8 8 2

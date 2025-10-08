@@ -1,4 +1,4 @@
-#3400
+#3145
 guard southern checkpoint sentry~
 a southern checkpoint guard~
 A guard stands watch here, protecting the southern approach.
@@ -12,7 +12,7 @@ knowing that the route to the Atmosphere Factory must be kept safe.
 5 0 0 3d10+120 2d6+2
 1000 8000
 8 8 1
-#3401
+#3146
 captain guard commander~
 the guard captain~
 The guard captain stands here, overseeing the checkpoint operations.
@@ -26,7 +26,7 @@ and organizes the patrols and escorts that keep the Factory route safe.
 6 0 0 4d10+150 2d6+3
 1500 12000
 8 8 1
-#3402
+#3147
 clerk supply administrator~
 a supply clerk~
 A supply clerk tallies inventory here, managing stores.
@@ -36,10 +36,11 @@ and equipment needed by travelers and guards. He's not a warrior but performs an
 essential service, ensuring no one ventures into the dead sea bottom ill-prepared.
 He wears a simple brown harness with many pouches for records and writing implements.
 ~
-23 2 2 1d1+30000 1d8+1
+23 2 2 S
+6 0 0 1d1+30000 1d8+1
 0 2000
 8 8 1
-#3403
+#3148
 merchant trader caravan~
 a caravan merchant~
 A merchant rests here, preparing for the journey.
@@ -49,10 +50,11 @@ supplies and equipment. His brown and copper harness is well-worn from travel, a
 has the alert, cautious manner of one who has survived many dangerous journeys. He's
 always willing to share information about the route ahead - for a price.
 ~
-23 2 2 6d10+200 1d8+4
+23 2 2 S
+6 0 0 6d10+200 1d8+4
 500 5000
 8 8 1
-#3404
+#3149
 banth young martian lion~
 a young banth~
 A young banth prowls here, its ten legs moving with predatory grace.
@@ -66,7 +68,7 @@ Green eyes regard you with predatory calculation.
 4 0 0 3d8+100 2d5+2
 800 7000
 8 8 1
-#3405
+#3150
 banth adult martian lion~
 an adult banth~
 A massive adult banth stalks here, its presence radiating menace.
@@ -81,7 +83,7 @@ it all the more dangerous. This is the apex predator of the dead sea bottom.
 6 0 0 4d10+180 3d6+3
 1500 13000
 8 8 1
-#3406
+#3151
 apt creature insectoid~
 an apt~
 A large insectoid apt creature scuttles here on multiple legs.
@@ -95,7 +97,7 @@ makes it a dangerous foe. Apts hunt in packs and are attracted to the scent of b
 3 0 0 2d10+70 2d4+1
 500 4000
 8 8 1
-#3407
+#3152
 apt pack warrior~
 an apt warrior~
 A particularly large apt warrior stands here, mandibles clicking.
@@ -109,7 +111,7 @@ disturbing speed and coordination.
 4 0 0 3d10+100 2d5+2
 700 6000
 8 8 1
-#3408
+#3153
 mantalia desert creature~
 a desert mantalia~
 A strange mantalia glides here, its multiple tendrils waving hypnotically.
@@ -123,7 +125,7 @@ and speed. Mantalias are carnivorous and surprisingly intelligent for their alie
 5 0 0 3d10+140 2d6+2
 1000 9000
 8 8 1
-#3409
+#3154
 scout green martian thark~
 a green Martian scout~
 A green Martian scout watches from atop his thoat mount.
@@ -138,7 +140,7 @@ if threatened.
 5 0 0 3d10+130 2d6+2
 1200 10000
 8 8 1
-#3410
+#3155
 warrior rogue deserter~
 a rogue warrior~
 A rogue red Martian warrior lurks here, watching for prey.
@@ -152,7 +154,7 @@ nothing left to lose.
 4 0 0 3d10+110 2d5+2
 600 6500
 8 8 1
-#3411
+#3156
 mercenary hired sword~
 a mercenary~
 A mercenary warrior stands here, weapons at ready.
@@ -166,7 +168,7 @@ he might be working for those who want the Factory disrupted.
 5 0 0 3d10+130 2d6+3
 1000 9000
 8 8 1
-#3412
+#3157
 engineer factory junior~
 a junior engineer~
 A young engineer walks here, carrying tools and documentation.
@@ -176,10 +178,11 @@ under the guidance of more experienced staff. He wears the distinctive engineer'
 with its many tool pouches, and his hands show the stains of working with machinery and
 chemicals. He's eager but still learning, and treats the Factory with appropriate reverence.
 ~
-23 2 2 6d10+200 1d8+3
+23 2 2 S
+6 0 0 6d10+200 1d8+3
 400 5000
 8 8 2
-#3413
+#3158
 patrol guard factory security~
 a factory patrol guard~
 A factory security guard patrols here, alert for threats.
@@ -193,7 +196,7 @@ His loyalty is absolute.
 6 0 0 4d10+160 2d6+3
 1400 12000
 8 8 1
-#3414
+#3159
 waystation keeper old man~
 the waystation keeper~
 An old red Martian tends to this waystation, offering shelter to travelers.
@@ -204,10 +207,11 @@ knows the dead sea bottom better than anyone, and his advice has saved many live
 only small payment for the shelter and information he provides, seeing his role as a service
 to Mars itself.
 ~
-23 2 2 6d10+150 1d8+2
+23 2 2 S
+6 0 0 6d10+150 1d8+2
 200 3000
 8 8 1
-#3415
+#3160
 traveler lost explorer~
 a lost traveler~
 A bedraggled traveler stumbles here, clearly in distress.
@@ -217,10 +221,11 @@ dead sea bottom. Their harness is torn, their supplies depleted, and fear shows 
 eyes. They desperately need help finding their way to either the Factory or back to Helium.
 Helping them could earn gratitude and reward.
 ~
-23 2 2 1d1+30000 1d8+1
+23 2 2 S
+6 0 0 1d1+30000 1d8+1
 0 1000
 8 8 1
-#3416
+#3161
 archaeologist scholar researcher~
 an archaeologist~
 A scholar examines the ancient ruins here, taking notes.
@@ -230,10 +235,11 @@ He wears a scholar's harness with writing implements and measuring tools, and hi
 is more excited than cautious - perhaps dangerously so. He's fascinated by the remnants of
 the ancient civilization that built the Factory and other wonders of old Mars.
 ~
-23 2 2 6d10+180 1d8+3
+23 2 2 S
+6 0 0 6d10+180 1d8+3
 300 4000
 8 8 2
-#3417
+#3162
 sentry tower guard checkpoint~
 a checkpoint sentry~
 A vigilant sentry stands watch from his post.
@@ -247,7 +253,7 @@ to use it.
 6 0 0 4d10+150 2d6+3
 1300 11000
 8 8 1
-#3418
+#3163
 commander security officer~
 the security commander~
 The security commander oversees operations here with stern efficiency.
