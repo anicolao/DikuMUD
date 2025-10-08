@@ -12,19 +12,19 @@ HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
 ZONE_ORDER = limbo zone_1200 lesser_helium southern_approach dead_sea_bottom_channel zodanga dead_sea_wilderness greater_helium thark_territory atmosphere_factory atmosphere_lower system
 
 # Build world data files from zone files
-lib/tinyworld.wld: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).wld)
+lib/tinyworld.wld: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).wld) lib/zones/eof.wld
 	cat $^ > $@
 
-lib/tinyworld.mob: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).mob)
+lib/tinyworld.mob: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).mob) lib/zones/eof.mob
 	cat $^ > $@
 
-lib/tinyworld.obj: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).obj)
+lib/tinyworld.obj: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).obj) lib/zones/eof.obj
 	cat $^ > $@
 
-lib/tinyworld.zon: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).zon)
+lib/tinyworld.zon: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).zon) lib/zones/eof.zon
 	cat $^ > $@
 
-lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp)
+lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp) lib/zones/eof.shp
 	cat $^ > $@
 
 # Main build targets
