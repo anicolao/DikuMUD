@@ -765,7 +765,7 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
 				if (ch->equipment[WIELD]) {
 					send_to_char("You are already wielding something.\n\r", ch);
 				} else {
-					/* Cleric execption has been removed, and is temporarily placed */
+					/* Noble exception has been removed, and is temporarily placed */
 					/* at the end of this file                                      */
 
 					if (GET_OBJ_WEIGHT(obj_object) >
@@ -788,7 +788,7 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
 				if (ch->equipment[HOLD]) {
 					send_to_char("You are already holding something.\n\r", ch);
 				} else {
-					/* Cleric execption has been removed, and is temporarily placed */
+					/* Noble exception has been removed, and is temporarily placed */
 					/* at the end of this file                                      */
 
 					send_to_char("OK.\n\r", ch);
