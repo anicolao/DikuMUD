@@ -352,7 +352,7 @@ void spell_armor(byte level, struct char_data *ch,
 	  af.bitvector = 0;
 
 	  affect_to_char(victim, &af);
-		send_to_char("You feel someone protecting you.\n\r", victim);
+		send_to_char("Your personal shield device activates, creating a protective field.\n\r", victim);
 	}
 }
 
@@ -370,10 +370,10 @@ void spell_teleport(byte level, struct char_data *ch,
 		to_room = number(0, top_of_world);
 	} while (IS_SET(world[to_room].room_flags, PRIVATE));
 
-  act("$n slowly fade out of existence.", FALSE, ch,0,0,TO_ROOM);
+  act("$n shimmers and vanishes as matter transmission occurs.", FALSE, ch,0,0,TO_ROOM);
 	char_from_room(ch);
 	char_to_room(ch, to_room);
-  act("$n slowly fade in to existence.", FALSE, ch,0,0,TO_ROOM);
+  act("$n materializes as the transmission completes.", FALSE, ch,0,0,TO_ROOM);
 
 	do_look(ch, "", 0);
 
@@ -491,9 +491,9 @@ void spell_create_food(byte level, struct char_data *ch,
   CREATE(tmp_obj, struct obj_data, 1);
   clear_object(tmp_obj);
 
-  tmp_obj->name = strdup("mushroom");
-  tmp_obj->short_description = strdup("A Magic Mushroom");
-  tmp_obj->description = strdup("A really delicious looking magic mushroom lies here.");
+  tmp_obj->name = strdup("food pellet");
+  tmp_obj->short_description = strdup("A synthesized food pellet");
+  tmp_obj->description = strdup("A nutritious food pellet lies here.");
 
   tmp_obj->obj_flags.type_flag = ITEM_FOOD;
   tmp_obj->obj_flags.wear_flags = ITEM_TAKE | ITEM_HOLD;
@@ -509,8 +509,8 @@ void spell_create_food(byte level, struct char_data *ch,
 
   tmp_obj->item_number = -1;
 
-	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_ROOM);
-	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_CHAR);
+	act("$p is synthesized by the device.",TRUE,ch,tmp_obj,0,TO_ROOM);
+	act("$p is synthesized by your device.",TRUE,ch,tmp_obj,0,TO_CHAR);
 }
 
 
@@ -698,7 +698,7 @@ void spell_detect_invisibility(byte level, struct char_data *ch,
 
   affect_to_char(victim, &af);
 
-  send_to_char("Your eyes tingle.\n\r", victim);
+  send_to_char("Your optical enhancement device activates.\n\r", victim);
 }
 
 
@@ -820,15 +820,15 @@ void spell_invisibility(byte level, struct char_data *ch,
 
   if (obj) {
     if ( !IS_SET(obj->obj_flags.extra_flags, ITEM_INVISIBLE) ) {
-			act("$p turns invisible.",FALSE,ch,obj,0,TO_CHAR);
-			act("$p turns invisible.",TRUE,ch,obj,0,TO_ROOM);
+			act("$p fades from view as the cloak activates.",FALSE,ch,obj,0,TO_CHAR);
+			act("$p fades from view as the cloak activates.",TRUE,ch,obj,0,TO_ROOM);
       SET_BIT(obj->obj_flags.extra_flags, ITEM_INVISIBLE);
 		}
   } else {              /* Then it is a PC | NPC */
 		if (!affected_by_spell(victim, SPELL_INVISIBLE)) {
 
-		  act("$n slowly fade out of existence.", TRUE, victim,0,0,TO_ROOM);
-  	  send_to_char("You vanish.\n\r", victim);
+		  act("$n fades from view as the invisibility cloak activates.", TRUE, victim,0,0,TO_ROOM);
+  	  send_to_char("You vanish as your invisibility cloak bends light around you.\n\r", victim);
 
 	    af.type      = SPELL_INVISIBLE;
     	af.duration  = 24;
