@@ -199,6 +199,7 @@ Greater Helium serves as a major quest hub:
 - **Lesser Helium** (Zone 30, rooms 3000-3099) - Twin city to the west
 - **Dead Sea Wilderness** (Zone 33, rooms 3750-3779) - Connecting wilderness
 - **Dead Sea Bottom Channel** (Zone 32, rooms 3200-3205) - Water channel area
+- **Thark Territory** (Zone 40, rooms 4000-4049) - Allied green Martian city to the northwest
 
 ## Future Expansion
 

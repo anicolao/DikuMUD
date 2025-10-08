@@ -174,10 +174,17 @@ Lesser Helium embodies classic Barsoomian aesthetics:
 ## Connection to Broader World
 
 Lesser Helium serves as the safe starting hub for adventures across Barsoom:
-- East: Greater Helium (eventual zone)
-- West: Thark green Martian territory (eventual zone)  
+- East: Greater Helium (Zone 35) - Connected via elevated road through Dead Sea Wilderness
+- West: Thark green Martian territory (Zone 40) - Connected via Dead Sea Wilderness (Zone 33)
 - North: Trade routes to other city-states
 - South: Atmosphere factories and dead sea bottom plains
 - Vertical: Airship docks above, sewers below
 
 This zone provides the foundation for the entire Barsoom MUD experience.
+
+## Related Zones
+
+- **Dead Sea Bottom Channel** (Zone 32, rooms 3200-3205) - Ancient dried waterway beneath the city
+- **Dead Sea Wilderness** (Zone 33, rooms 3750-3779) - Dangerous wilderness between the Twin Cities
+- **Greater Helium** (Zone 35, rooms 3900-3999) - Twin city to the east
+- **Thark Territory** (Zone 40, rooms 4000-4049) - Allied green Martian city to the northwest

@@ -100,6 +100,49 @@ This document tracks the planned connections from Lesser Helium (zone 30) to fut
 **Planned Connection:** Dead sea bottom toward Greater Helium
 **Notes:** Bars prevent entry from outside; could have secret passages or require keys
 
+## Thark Territory (Zone 40)
+
+### Current Implementation
+**Rooms:** 4000-4049 (50 rooms)
+**Zone Number:** 40
+**Terrain:** Ancient ruined city (sector type 1) with dead sea bottom surroundings
+**Features:**
+- Main Plaza and Council Chambers
+- Warrior compounds and training areas
+- Sacred Incubator building
+- Arena for combat
+- Thoat pens and beast handlers
+- Ancient ruins to explore
+- Guard towers and city gates
+- Trading post for green Martian goods
+
+### Connections
+
+#### Southern Gate (Room 4047)
+**Direction:** South toward Helium
+**Current Connection:** Dead Sea Wilderness room 3764 (northwestern section)
+**Description:** Main route between Thark Territory and Helium
+**Travel Time:** Multiple days by thoat, faster by airship
+**Notes:** This is the primary access point from Lesser Helium via Dead Sea Wilderness
+
+#### Northern Gate (Room 4049)
+**Direction:** North toward Warhoon Territory
+**Planned Connection:** Northern wilderness zones (future)
+**Description:** Route toward hostile Warhoon horde territory
+**Notes:** Dangerous, patrolled by Thark scouts
+
+### Key NPCs
+- **Tars Tarkas** (Jeddak of Tharks) - Located in Council Chambers
+- **Sola** (Tars Tarkas's daughter) - Ally and guide
+- **Sarkoja** (Matriarch) - Guards the Incubator
+- Various Thark warriors, traders, and beast handlers
+
+### Services
+- **Trading Post** - Green Martian weapons, armor, and equipment
+- **Thoat Sales** - Purchase eight-legged riding beasts
+- **Arena** - Test combat skills against Thark warriors
+- **Training** - Learn green Martian fighting techniques
+
 ## Recommended Zone Priorities
 
 1. **Greater Helium (High Priority)**
@@ -115,12 +158,13 @@ This document tracks the planned connections from Lesser Helium (zone 30) to fut
    - Hunting and survival gameplay
    - Random encounters with thoats, banths, apts
 
-3. **Thark Territory (Medium Priority)**
-   - Connected via dead sea bottom to west/northwest
-   - Green Martian culture
+3. **Thark Territory (Medium Priority) - IMPLEMENTED**
+   - Zone 40, rooms 4000-4049
+   - Connected via Dead Sea Wilderness room 3764 to Thark room 4047
+   - Green Martian culture and allied territory
    - Ancient ruined cities
-   - Arena combat
-   - Complex faction system
+   - Arena combat, thoat mounts, unique goods
+   - 50-room zone with Tars Tarkas and Thark horde
 
 4. **Atmosphere Factory (Medium Priority)**
    - Connected via south bridge (3051 → 3100+)

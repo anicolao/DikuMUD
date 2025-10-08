@@ -1,0 +1,181 @@
+#40
+Thark Territory~
+4099 40 2
+*
+* Tars Tarkas in throne room
+M 0 4050 1 4003
+*
+* Sola near council chambers
+M 0 4051 1 4002
+*
+* Sarkoja in Incubator
+M 0 4052 1 4005
+*
+* Incubator guards
+M 0 4066 2 4004
+M 0 4066 2 4004
+*
+* Chieftains in council hall
+M 0 4053 1 4002
+M 0 4054 1 4002
+M 0 4055 1 4002
+*
+* Warrior Guildmaster
+M 0 4056 1 4013
+G 1 4100 100
+G 1 4101 100
+*
+* Noble Guildmaster
+M 0 4057 1 4017
+G 1 4110 100
+*
+* Arena guards and warriors
+M 0 4067 2 4007
+M 0 4067 2 4007
+M 0 4060 2 4008
+G 1 4100 100
+G 1 4104 100
+M 0 4060 2 4008
+G 1 4100 100
+G 1 4104 100
+*
+* Instructor and young warriors in training areas
+M 0 4071 1 4013
+M 0 4070 3 4021
+M 0 4070 3 4021
+M 0 4070 3 4021
+*
+* School teacher and students
+M 0 4072 1 4024
+M 0 4086 1 4024
+M 0 4087 2 4024
+M 0 4087 2 4024
+M 0 4088 2 4023
+M 0 4088 2 4023
+M 0 4089 1 4023
+*
+* Warriors in compounds
+M 0 4060 3 4010
+M 0 4060 3 4011
+M 0 4060 3 4012
+M 0 4061 2 4014
+M 0 4063 2 4016
+M 0 4064 2 4018
+M 0 4065 1 4019
+*
+* Hunters and scouts
+M 0 4062 3 4041
+M 0 4062 3 4042
+M 0 4062 3 4043
+M 0 4063 2 4044
+*
+* Tower scouts
+M 0 4068 1 4041
+M 0 4068 1 4042
+M 0 4068 1 4043
+M 0 4068 1 4044
+M 0 4068 1 4045
+*
+* Gate guards
+M 0 4069 2 4046
+M 0 4069 2 4046
+M 0 4069 2 4048
+M 0 4069 2 4048
+*
+* Thoats in pens
+M 0 4077 3 4026
+M 0 4077 3 4026
+M 0 4077 3 4026
+M 0 4078 2 4028
+M 0 4078 2 4028
+M 0 4079 2 4027
+M 0 4079 2 4027
+*
+* Calots
+M 0 4080 3 4010
+M 0 4080 3 4015
+M 0 4080 3 4020
+M 0 4081 2 4027
+*
+* Beast handler
+M 0 4093 1 4029
+G 1 4120 100
+G 1 4121 100
+G 1 4122 100
+*
+* Trader in trading post
+M 0 4090 1 4040
+G 1 4100 50
+G 1 4101 50
+G 1 4102 50
+G 1 4103 50
+G 1 4104 50
+G 1 4105 50
+G 1 4110 50
+G 1 4111 50
+G 1 4112 50
+G 1 4113 50
+G 1 4114 50
+G 1 4115 50
+G 1 4120 50
+G 1 4121 50
+G 1 4130 50
+G 1 4131 50
+*
+* Weaponsmith
+M 0 4091 1 4012
+G 1 4100 100
+G 1 4101 100
+G 1 4102 100
+G 1 4103 100
+G 1 4104 100
+G 1 4105 100
+*
+* Harness-maker
+M 0 4092 1 4019
+G 1 4110 100
+G 1 4111 100
+G 1 4112 100
+G 1 4113 100
+G 1 4114 100
+G 1 4115 100
+*
+* Dangerous beasts in ruins
+M 0 4082 1 4032
+M 0 4083 1 4035
+M 0 4084 1 4039
+M 0 4085 1 4034
+*
+* Objects in plaza
+O 0 4145 1 4000
+*
+* Objects in council chambers
+O 0 4146 1 4045
+*
+* Objects in incubator
+O 0 4138 3 4005
+O 0 4139 2 4005
+O 0 4139 2 4006
+*
+* Objects in warrior areas
+O 0 4147 5 4011
+O 0 4147 3 4016
+O 0 4147 3 4021
+O 0 4136 10 4014
+*
+* Objects in thoat pens
+O 0 4134 5 4026
+O 0 4135 10 4026
+O 0 4137 1 4029
+*
+* Objects in ruins
+O 0 4142 3 4030
+O 0 4142 2 4036
+O 0 4143 1 4037
+O 0 4141 1 4034
+*
+* Practice weapons in school
+O 0 4136 5 4024
+O 0 4136 3 4023
+*
+S

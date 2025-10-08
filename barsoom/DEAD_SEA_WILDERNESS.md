@@ -39,7 +39,7 @@ The thin Martian atmosphere and harsh conditions make this a challenging environ
 - **3761** - Northern dead sea bottom (dangerous)
 - **3762** - Southern dead sea bottom
 - **3763** - Central dead sea bottom
-- **3764** - Northwestern section (near Thark territory)
+- **3764** - Northwestern section (connects north to Thark Territory room 4047)
 - **3765** - Mid-section beneath the road
 - **3766** - Southwestern section
 - **3767** - Western dead sea bottom (near Lesser Helium)
@@ -297,10 +297,14 @@ Descending to the dead sea bottom offers shortcuts but extreme danger:
 - **Room 3750** connects east to Greater Helium West Gate Exterior (3949)
 - **Rooms 3760, 3765, 3770** connect up to the elevated road
 
+### To Thark Territory
+- **Room 3764** (northwestern section) connects north to Thark Territory Southern Gate (4047)
+- Multiple days journey from Lesser Helium
+- Route through dangerous wilderness but leads to allied green Martian city
+
 ### Future Connections
-- North to Thark Territory (from 3761, 3764)
 - South to Atmosphere Factories (from 3762, 3766, 3768)
-- Additional wilderness expansion
+- Additional wilderness expansion to west and north
 
 ## Tips for Players
 
@@ -360,3 +364,4 @@ The Dead Sea Wilderness captures the harsh beauty and danger of Mars:
 - **Lesser Helium** (Zone 30) - Western terminus
 - **Greater Helium** (Zone 35) - Eastern terminus
 - **Dead Sea Bottom Channel** (Zone 32) - Connected waterway area
+- **Thark Territory** (Zone 40) - Northern connection to green Martian allied city
