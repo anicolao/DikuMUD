@@ -51,6 +51,29 @@ Each zone consists of five files:
 - Includes: Council Chambers, Warrior Guild, Noble Guild, School, Arena, Thoat Pens, Ancient Ruins
 - Features Tars Tarkas, Sola, and other key NPCs
 
+### southern_approach (Zone 34)
+- Virtual numbers: 3100-3149
+- Connector zone from Lesser Helium to the Atmosphere Factory
+- Several hundred miles of dead sea bottom journey
+- Encounters with predators and travelers
+- Target levels: 3-6
+
+### atmosphere_factory (Zone 41)
+- Virtual numbers: 4100-4149
+- Main levels of the Atmosphere Factory
+- Critical Mars infrastructure producing oxygen for the entire planet
+- Engineering quarters, processing halls, power core
+- Features Chief Engineer Vor Daj, Master Mechanic Tavia, Security Commander Jat Or
+- Target levels: 4-8
+
+### atmosphere_lower (Zone 42)
+- Virtual numbers: 4150-4199
+- Secret lower levels with forbidden research
+- Renegade scientists led by Ras Thavas
+- Biological, cybernetic, and power experiments
+- Ancient archives and the First Engineer
+- Target levels: 8-12
+
 ### system (Zone 90)
 - Zone file terminator
 - Contains end-of-file marker `$~`
@@ -68,10 +91,13 @@ This concatenates the zone files in the correct order:
 2. zone_1200
 3. lesser_helium
 4. dead_sea_bottom_channel
-5. dead_sea_wilderness
-6. greater_helium
-7. thark_territory
-8. system
+5. southern_approach
+6. dead_sea_wilderness
+7. greater_helium
+8. thark_territory
+9. atmosphere_factory
+10. atmosphere_lower
+11. system
 
 ## Adding New Zones
 

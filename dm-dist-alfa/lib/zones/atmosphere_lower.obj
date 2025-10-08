@@ -1,0 +1,369 @@
+#4250
+key laboratory research~
+a research laboratory key~
+A key to the research laboratories lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key grants access to the secret research laboratories in the lower levels. It's
+marked with Ras Thavas's personal seal.
+~
+#4251
+key containment radium~
+a radium containment key~
+A key to the radium containment chambers lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key opens the heavily shielded radium containment chambers. Radiation warning
+symbols cover it. Only authorized personnel should possess this.
+~
+#4252
+key core unstable~
+an emergency core key~
+A key marked with extreme danger warnings lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key opens the unstable core chamber. The warnings suggest opening that chamber
+is a last resort or a death wish.
+~
+#4253
+key hybrid containment~
+a containment chamber key~
+A key to the hybrid containment cells lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key opens the containment cells holding dangerous hybrid experiments. The key
+is marked with warning symbols suggesting what's inside should stay inside.
+~
+#4254
+key quarantine sealed~
+a quarantine seal key~
+A key that breaks quarantine seals lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key can break the seals on quarantine chambers. Medical emergency protocols and
+warnings cover it. Using it means accepting dangerous exposure risks.
+~
+#4255
+key master thavas~
+Ras Thavas's master key~
+An ornate master key lies here, bearing Ras Thavas's seal.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key seal~
+This master key opens Ras Thavas's personal chambers and most secure areas. It's
+clearly the key of someone with absolute authority in the lower levels.
+~
+#4256
+sword enhanced modified weapon~
+an enhanced longsword~
+A sword enhanced by experimental techniques lies here.~
+slash~
+5 0 8193
+0 2 10 3
+25 1400 350
+E
+sword enhanced~
+This sword has been enhanced using Ras Thavas's techniques - the metal has been
+treated with processes that make it stronger and sharper than normal weapons. It's
+a demonstration of how scientific knowledge can improve even traditional weapons.
+~
+#4257
+rifle radium experimental prototype~
+an experimental radium rifle~
+A prototype radium weapon of advanced design lies here.~
+~
+18 0 8193
+18 8 0 0
+35 2000 500
+E
+rifle weapon prototype~
+This experimental rifle is far more powerful than standard military radium weapons.
+It fires concentrated radium beams with devastating effect. The weapon is still
+somewhat unstable, but in skilled hands it's incredibly deadly.
+~
+#4258
+armor synthetic enhanced harness~
+enhanced synthetic armor~
+Armor enhanced with synthetic materials lies here.~
+~
+3 0 0
+10 0 0 0
+18 1000 250
+E
+armor harness synthetic~
+This armor incorporates synthetic tissues that provide superior protection while
+remaining flexible. It's lighter and stronger than normal armor, a demonstration
+of how biological engineering can enhance protective equipment.
+~
+#4259
+serum enhancement physical~
+a physical enhancement serum~
+A vial of enhancement serum lies here.~
+potion~
+10 0 0
+50 0 0 0
+5 1500 375
+E
+serum vial~
+This alchemical/biological serum temporarily enhances physical capabilities - strength,
+speed, and resilience all improve. It's one of Ras Thavas's creations, combining
+chemistry with biological knowledge. The effects are powerful but temporary, and
+repeated use might have unknown consequences.
+~
+#4260
+medicine healing advanced~
+advanced healing medicine~
+A vial of advanced healing formula lies here.~
+potion~
+10 0 0
+75 0 0 0
+8 2000 500
+E
+medicine vial formula~
+This medicine uses Ras Thavas's advanced biological knowledge to heal injuries far
+more effectively than normal medicine. It can heal wounds that would normally require
+days to recover from. The medicine represents the beneficial potential of the research
+being conducted here.
+~
+#4261
+implant cybernetic device~
+a cybernetic implant~
+A small cybernetic enhancement device lies here.~
+~
+1 0 0
+0 0 0 0
+3 2500 625
+E
+implant device cybernetic~
+This device can be surgically implanted to enhance capabilities. It represents the
+merging of biological and mechanical systems. The implant could improve reflexes,
+strength, or sensory capabilities depending on its design. Having it implies access
+to extremely advanced medical procedures.
+~
+#4262
+notes research thavas~
+Ras Thavas's research notes~
+A journal of research notes lies here.~
+~
+1 0 0
+0 0 0 0
+4 3000 750
+E
+notes journal research~
+These are Ras Thavas's personal research notes, documenting procedures, discoveries,
+and theories. The knowledge contained here is invaluable to medical science and
+engineering, but also disturbing in its implications. Scholars would pay fortunes
+for these notes, though their contents might be declared forbidden knowledge.
+~
+#4263
+crystal data ancient~
+an ancient data crystal~
+A glowing data crystal from the ancient archives lies here.~
+~
+1 0 0
+0 0 0 0
+2 4000 1000
+E
+crystal data~
+This data crystal contains information from the original factory builders. Reading
+it requires specialized equipment, but the knowledge it contains might revolutionize
+understanding of ancient Martian technology. Scholars and engineers would consider
+this priceless.
+~
+#4264
+specimen preserved biological~
+a preserved biological specimen~
+A preserved specimen in a sealed container lies here.~
+~
+1 0 0
+0 0 0 0
+3 800 200
+E
+specimen container~
+This preserved specimen demonstrates some aspect of Ras Thavas's research. It might
+be a successfully enhanced organ, a hybrid tissue sample, or something more disturbing.
+Researchers would find it fascinating and valuable.
+~
+#4265
+tool surgical advanced~
+advanced surgical tools~
+A set of advanced surgical instruments lies here.~
+~
+1 0 0
+0 0 0 0
+6 1200 300
+E
+tools instruments surgical~
+These surgical tools are far more advanced than standard medical equipment. They
+include instruments for procedures that most surgeons wouldn't dare attempt. Some
+tools combine ancient Martian technology with modern innovations.
+~
+#4266
+scanner biological diagnostic~
+a biological diagnostic scanner~
+An advanced biological scanner lies here.~
+~
+1 0 0
+0 0 0 0
+5 1500 375
+E
+scanner diagnostic~
+This scanner can analyze biological systems in extraordinary detail, detecting
+problems at the cellular level. It's essential equipment for the advanced biological
+research conducted here.
+~
+#4267
+device energy radium portable~
+a portable radium device~
+A portable radium energy device lies here.~
+~
+1 0 0
+12 15 15 0
+8 1800 450
+E
+device radium energy~
+This device harnesses radium energy for various purposes - it could provide power,
+project energy beams, or serve as an analytical tool. It's sophisticated equipment
+that most people wouldn't know how to use safely.
+~
+#4268
+suit hazard full protection~
+a full hazard protection suit~
+A complete hazard protection suit lies here.~
+~
+12 0 0
+5 0 0 0
+15 1500 375
+E
+suit protection hazard~
+This suit provides protection against radiation, chemicals, biological hazards, and
+extreme temperatures. It's essential equipment for working in the most dangerous areas
+of the lower levels. The suit includes its own air supply and communication systems.
+~
+#4269
+container sample biological~
+biological sample containers~
+A set of sealed sample containers lies here.~
+~
+1 0 0
+0 0 0 0
+4 400 100
+E
+containers samples~
+These sealed containers are designed to safely store biological samples. They prevent
+contamination and preserve the samples in stasis. Researchers use these to collect
+and transport specimens.
+~
+#4270
+blueprint ancient schematic lost~
+an ancient technical blueprint~
+A blueprint of ancient Martian design lies here.~
+~
+1 0 0
+0 0 0 0
+3 3500 875
+E
+blueprint schematic ancient~
+This blueprint shows designs from the original factory builders. It uses ancient
+technical notation and principles that modern engineers struggle to understand.
+The knowledge it contains could improve factory operations or reveal new technologies.
+It's incredibly valuable to scholars and engineers.
+~
+#4271
+core radium fragment~
+a radium core fragment~
+A fragment of radium core material lies here, glowing faintly.~
+~
+1 0 0
+12 8 8 0
+2 2500 625
+E
+fragment core radium~
+This fragment of concentrated radium provides immense power in a small package. It
+could be used to power devices, enhance weapons, or serve as fuel. However, it's
+also radioactive and dangerous to carry without proper shielding. The fragment
+represents both great power and significant risk.
+~
+#4272
+graft synthetic tissue~
+a synthetic tissue graft~
+A container of synthetic tissue for grafting lies here.~
+potion~
+10 0 0
+60 0 0 0
+6 1800 450
+E
+graft tissue synthetic~
+This synthetic tissue can be grafted onto damaged areas to repair injuries or enhance
+capabilities. It represents the beneficial applications of Ras Thavas's biological
+research. The tissue integrates with natural body systems, providing healing or
+enhancement depending on application.
+~
+#4273
+manual procedure medical~
+a medical procedure manual~
+A manual documenting advanced procedures lies here.~
+~
+1 0 0
+0 0 0 0
+4 1000 250
+E
+manual procedures~
+This manual documents procedures that most doctors don't know exist - brain transplants,
+organ replacements, enhancement surgeries, and more. The knowledge is both valuable
+and disturbing, representing techniques that push ethical boundaries.
+~
+#4274
+weapon energy integrated~
+an integrated energy weapon~
+An experimental weapon integrated with cybernetics lies here.~
+~
+18 0 8193
+16 7 0 0
+30 2200 550
+E
+weapon energy integrated~
+This weapon is designed to integrate directly with cybernetic enhancements, providing
+superior power and accuracy. It's a demonstration of how biological enhancement and
+weapon technology can be merged. The weapon is devastating in combat but requires
+enhancements to use effectively.
+~
+#4275
+artifact first engineer gift~
+the First Engineer's gift~
+A unique artifact from the ancient builders lies here.~
+~
+1 0 0
+0 0 0 0
+1 10000 2500
+E
+artifact gift ancient~
+This artifact is a gift from the First Engineer, provided to those he judges worthy.
+Its exact nature and capabilities are unique and extraordinary - perhaps a tool of
+immense power, or knowledge in physical form, or something beyond current understanding.
+Receiving this marks you as someone the ancient builders would have respected.
+~
+$~
