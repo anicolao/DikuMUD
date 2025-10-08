@@ -1,0 +1,260 @@
+#!/usr/bin/env python3
+"""
+DikuMUD World Validator
+
+This tool validates YAML world data for consistency and correctness.
+"""
+
+import sys
+import yaml
+import re
+from typing import List, Set, Dict, Any
+from pathlib import Path
+
+
+class WorldValidator:
+    """Validates DikuMUD world data."""
+    
+    def __init__(self):
+        self.errors = []
+        self.warnings = []
+        self.all_rooms = set()
+        self.all_mobs = set()
+        self.all_objects = set()
+        self.zones = {}
+    
+    def error(self, msg: str):
+        """Add an error message."""
+        self.errors.append(f"ERROR: {msg}")
+    
+    def warning(self, msg: str):
+        """Add a warning message."""
+        self.warnings.append(f"WARNING: {msg}")
+    
+    def validate_yaml_file(self, filename: str):
+        """Validate a single YAML zone file."""
+        try:
+            with open(filename, 'r') as f:
+                data = yaml.safe_load(f)
+        except Exception as e:
+            self.error(f"Failed to parse {filename}: {e}")
+            return
+        
+        zone_name = Path(filename).stem
+        
+        # Validate zone metadata
+        if 'zone' not in data:
+            self.error(f"{zone_name}: Missing zone metadata")
+            return
+        
+        zone = data['zone']
+        zone_num = zone.get('number')
+        if zone_num is None:
+            self.error(f"{zone_name}: Zone number missing")
+        else:
+            if zone_num in self.zones:
+                self.error(f"{zone_name}: Duplicate zone number {zone_num}")
+            self.zones[zone_num] = zone
+        
+        # Validate rooms
+        rooms = data.get('rooms', [])
+        room_vnums = set()
+        for room in rooms:
+            vnum = room.get('vnum')
+            if vnum is None:
+                self.error(f"{zone_name}: Room missing vnum")
+                continue
+            
+            if vnum in room_vnums:
+                self.error(f"{zone_name}: Duplicate room vnum {vnum}")
+            if vnum in self.all_rooms:
+                self.error(f"{zone_name}: Room {vnum} already defined in another zone")
+            
+            room_vnums.add(vnum)
+            self.all_rooms.add(vnum)
+            
+            # Validate room fields
+            if not room.get('name'):
+                self.error(f"{zone_name}: Room {vnum} missing name")
+            if 'description' not in room:
+                self.error(f"{zone_name}: Room {vnum} missing description")
+            if 'zone' not in room:
+                self.error(f"{zone_name}: Room {vnum} missing zone field")
+            
+            # Validate exits
+            for exit_data in room.get('exits', []):
+                to_room = exit_data.get('to_room')
+                if to_room and to_room != -1:
+                    # We'll validate cross-references after loading all files
+                    pass
+        
+        # Validate mobiles
+        mobiles = data.get('mobiles', [])
+        mob_vnums = set()
+        for mob in mobiles:
+            vnum = mob.get('vnum')
+            if vnum is None:
+                self.error(f"{zone_name}: Mobile missing vnum")
+                continue
+            
+            if vnum in mob_vnums:
+                self.error(f"{zone_name}: Duplicate mobile vnum {vnum}")
+            if vnum in self.all_mobs:
+                self.error(f"{zone_name}: Mobile {vnum} already defined in another zone")
+            
+            mob_vnums.add(vnum)
+            self.all_mobs.add(vnum)
+            
+            # Validate mobile fields
+            if not mob.get('namelist'):
+                self.error(f"{zone_name}: Mobile {vnum} missing namelist")
+            if mob.get('type') == 'simple' and 'simple' in mob:
+                simple = mob['simple']
+                # Validate dice notation
+                for field in ['hp_dice', 'damage_dice']:
+                    dice = simple.get(field, '')
+                    if not re.match(r'^\d+d\d+[+-]\d+$', dice):
+                        self.error(f"{zone_name}: Mobile {vnum} invalid {field}: {dice}")
+        
+        # Validate objects
+        objects = data.get('objects', [])
+        obj_vnums = set()
+        for obj in objects:
+            vnum = obj.get('vnum')
+            if vnum is None:
+                self.error(f"{zone_name}: Object missing vnum")
+                continue
+            
+            if vnum in obj_vnums:
+                self.error(f"{zone_name}: Duplicate object vnum {vnum}")
+            if vnum in self.all_objects:
+                self.error(f"{zone_name}: Object {vnum} already defined in another zone")
+            
+            obj_vnums.add(vnum)
+            self.all_objects.add(vnum)
+            
+            # Validate object fields
+            if not obj.get('namelist'):
+                self.error(f"{zone_name}: Object {vnum} missing namelist")
+            
+            # Check affects
+            affects = obj.get('affects', [])
+            if len(affects) > 2:
+                self.error(f"{zone_name}: Object {vnum} has more than 2 affects")
+        
+        # Validate resets
+        resets = data.get('resets', [])
+        for i, reset in enumerate(resets):
+            cmd = reset.get('command')
+            if not cmd:
+                self.error(f"{zone_name}: Reset {i} missing command")
+                continue
+            
+            # We'll validate cross-references after loading all files
+    
+    def validate_cross_references(self, yaml_files: List[str]):
+        """Validate cross-references between entities."""
+        # Load all files again to check cross-references
+        for filename in yaml_files:
+            try:
+                with open(filename, 'r') as f:
+                    data = yaml.safe_load(f)
+            except:
+                continue
+            
+            zone_name = Path(filename).stem
+            
+            # Check room exits
+            for room in data.get('rooms', []):
+                for exit_data in room.get('exits', []):
+                    to_room = exit_data.get('to_room')
+                    if to_room and to_room != -1 and to_room not in self.all_rooms:
+                        self.warning(f"{zone_name}: Room {room['vnum']} exit to non-existent room {to_room}")
+            
+            # Check reset commands
+            for reset in data.get('resets', []):
+                cmd = reset.get('command')
+                if cmd == 'M':
+                    # Mobile reset
+                    mob_vnum = reset.get('arg1')
+                    room_vnum = reset.get('arg3')
+                    if mob_vnum and mob_vnum not in self.all_mobs:
+                        self.error(f"{zone_name}: Reset references non-existent mobile {mob_vnum}")
+                    if room_vnum and room_vnum not in self.all_rooms:
+                        self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
+                elif cmd == 'O':
+                    # Object to room
+                    obj_vnum = reset.get('arg1')
+                    room_vnum = reset.get('arg3')
+                    if obj_vnum and obj_vnum not in self.all_objects:
+                        self.error(f"{zone_name}: Reset references non-existent object {obj_vnum}")
+                    if room_vnum and room_vnum not in self.all_rooms:
+                        self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
+                elif cmd in ['G', 'E']:
+                    # Give/Equip object to mobile
+                    obj_vnum = reset.get('arg1')
+                    if obj_vnum and obj_vnum not in self.all_objects:
+                        self.error(f"{zone_name}: Reset references non-existent object {obj_vnum}")
+                elif cmd == 'P':
+                    # Put object in object
+                    obj1 = reset.get('arg1')
+                    obj2 = reset.get('arg3')
+                    if obj1 and obj1 not in self.all_objects:
+                        self.error(f"{zone_name}: Reset references non-existent object {obj1}")
+                    if obj2 and obj2 not in self.all_objects:
+                        self.error(f"{zone_name}: Reset references non-existent object {obj2}")
+                elif cmd == 'D':
+                    # Door state
+                    room_vnum = reset.get('arg1')
+                    if room_vnum and room_vnum not in self.all_rooms:
+                        self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
+    
+    def validate_all(self, yaml_files: List[str]):
+        """Validate all YAML zone files."""
+        print(f"Validating {len(yaml_files)} zone files...")
+        
+        # First pass: load all data and check basic validity
+        for filename in yaml_files:
+            self.validate_yaml_file(filename)
+        
+        # Second pass: check cross-references
+        self.validate_cross_references(yaml_files)
+        
+        # Print results
+        print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects")
+        print(f"Found {len(self.zones)} zones")
+        
+        if self.errors:
+            print(f"\n{len(self.errors)} ERRORS:")
+            for error in self.errors:
+                print(f"  {error}")
+        
+        if self.warnings:
+            print(f"\n{len(self.warnings)} WARNINGS:")
+            for warning in self.warnings:
+                print(f"  {warning}")
+        
+        if not self.errors and not self.warnings:
+            print("\n✓ Validation passed! No errors or warnings found.")
+            return 0
+        elif self.errors:
+            print(f"\n✗ Validation failed with {len(self.errors)} errors.")
+            return 1
+        else:
+            print(f"\n⚠ Validation passed with {len(self.warnings)} warnings.")
+            return 0
+
+
+def main():
+    """Main entry point."""
+    if len(sys.argv) < 2:
+        print("Usage: validate_world.py <yaml_file1> [yaml_file2 ...]")
+        sys.exit(1)
+    
+    yaml_files = sys.argv[1:]
+    validator = WorldValidator()
+    return validator.validate_all(yaml_files)
+
+
+if __name__ == '__main__':
+    sys.exit(main())
