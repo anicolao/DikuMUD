@@ -1,0 +1,365 @@
+#4200
+key security red~
+a red security key~
+A red-colored security key lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This security key grants access to high-security areas of the factory. It's marked with
+a red color code and the factory insignia. Only senior personnel are issued these keys.
+~
+#4201
+key core blue~
+a blue core access key~
+A blue-colored key to the power core lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key grants access to the radium power core chambers. It's marked with radiation
+hazard symbols and is issued only to authorized personnel who must access the core for
+maintenance or monitoring.
+~
+#4202
+key administration green~
+a green administrative key~
+A green administrative key lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key opens administrative and restricted storage areas. It's marked with green
+color coding and administrative symbols.
+~
+#4203
+key trapdoor silver~
+a silver maintenance key~
+A silver key for maintenance access lies here.~
+~
+18 0 0
+0 0 0 0
+1 0 0
+E
+key~
+This key opens maintenance access points including the hidden trapdoors to the lower
+levels. It's an old key, suggesting these passages have been sealed for a long time.
+~
+#4204
+sword factory guard elite~
+an elite guard's longsword~
+A high-quality longsword with the factory insignia lies here.~
+slash~
+5 0 8193
+0 2 8 3
+20 900 225
+E
+sword longsword~
+This superior longsword is issued to factory guards. The blade is engraved with the
+factory's insignia - Mars surrounded by atmosphere. It's perfectly balanced and
+maintained to exacting standards.
+~
+#4205
+rifle radium enhanced factory~
+an enhanced factory radium rifle~
+A high-powered radium rifle lies here.~
+~
+18 0 8193
+14 6 0 0
+28 1400 350
+E
+rifle weapon~
+This enhanced radium rifle is superior to standard military issue. Factory guards need
+the best equipment, and this weapon reflects that. It's more accurate and powerful than
+common rifles, with improved energy cells.
+~
+#4206
+armor harness reinforced factory~
+reinforced factory guard armor~
+Enhanced armor bearing the factory insignia lies here.~
+~
+3 0 0
+8 0 0 0
+15 700 175
+E
+armor harness~
+This reinforced harness provides excellent protection while maintaining mobility. It's
+marked with the factory's insignia and includes additional plating at vital points.
+Factory guards wear the best armor available.
+~
+#4207
+helmet guard factory~
+a factory guard helmet~
+A well-made helmet with the factory insignia lies here.~
+~
+4 0 0
+5 0 0 0
+10 400 100
+E
+helmet~
+This helmet provides good head protection and includes a face guard that can be lowered.
+The factory insignia is prominently displayed, marking the wearer as a factory defender.
+~
+#4208
+tools engineering set~
+an engineering tool set~
+A comprehensive set of engineering tools lies here.~
+~
+1 0 0
+0 0 0 0
+8 600 150
+E
+tools set~
+This set contains the tools needed for factory maintenance work - wrenches, drivers,
+probes, and specialized implements for working with ancient Martian technology. Some of
+the tools themselves are of ancient design, irreplaceable if lost.
+~
+#4209
+manual technical ancient~
+an ancient technical manual~
+An ancient technical manual lies here, its pages yellowed with age.~
+~
+1 0 0
+0 0 0 0
+3 1500 375
+E
+manual book~
+This is one of the original technical manuals created by the ancient Martians who built
+the factory. While much of the language is archaic and difficult to understand, it contains
+invaluable information about the factory's systems. Scholars and engineers study these
+texts constantly, and each one is precious beyond price.
+~
+#4210
+manual modern reference~
+a modern reference manual~
+A modern reference manual with handwritten notes lies here.~
+~
+1 0 0
+0 0 0 0
+2 300 75
+E
+manual notes~
+This modern manual compiles the knowledge gained by generations of factory engineers.
+It's filled with handwritten notes, diagrams, and troubleshooting procedures. While not
+as authoritative as the ancient texts, it's more practical for day-to-day operations.
+~
+#4211
+badge factory identification~
+a factory identification badge~
+An official factory ID badge lies here.~
+~
+1 0 0
+0 0 0 0
+1 200 50
+E
+badge id~
+This badge identifies the wearer as authorized factory personnel. It includes a
+photograph, name, and security clearance level. Guards check these badges frequently,
+and being caught without one in restricted areas is cause for immediate detention.
+~
+#4212
+sample oxygen bottle~
+a bottle of oxygen sample~
+A sealed bottle containing an oxygen sample lies here.~
+potion~
+10 0 0
+40 0 0 0
+2 150 40
+E
+bottle sample~
+This sealed bottle contains a sample of the factory's oxygen output for testing. The
+gas is pure and breathable, though concentrated beyond normal atmospheric levels.
+~
+#4213
+device scanning diagnostic~
+a diagnostic scanner~
+A complex diagnostic device lies here.~
+~
+1 0 0
+0 0 0 0
+5 800 200
+E
+scanner device~
+This device can scan factory equipment and provide diagnostic information about its
+condition and operation. It combines ancient Martian sensor technology with modern
+readout displays. Engineers use these scanners to detect problems before they become
+critical failures.
+~
+#4214
+suit radiation protective~
+a radiation protective suit~
+A protective suit for radiation work lies here.~
+~
+12 0 0
+3 0 0 0
+12 900 225
+E
+suit protective~
+This suit provides protection against the radiation in the power core areas. It's made
+from materials that block most radiation while remaining flexible enough for work. The
+suit includes a helmet with filtered air supply. Even with the suit, exposure time in
+the core is strictly limited.
+~
+#4215
+pistol radium compact~
+a compact radium pistol~
+A compact but powerful radium pistol lies here.~
+~
+18 0 8193
+10 5 0 0
+15 700 175
+E
+pistol weapon~
+This compact radium pistol is designed for close quarters combat in the factory's
+corridors and chambers. It's less powerful than a rifle but easier to maneuver in
+tight spaces. Officers and special personnel often carry these as sidearms.
+~
+#4216
+dagger combat factory~
+a factory combat dagger~
+A well-balanced combat dagger lies here.~
+pierce~
+5 0 8193
+0 1 7 11
+10 400 100
+E
+dagger blade~
+This dagger is standard issue for factory security personnel. It's designed for both
+combat and utility work, with a strong blade that can serve as a tool when needed.
+~
+#4217
+medicine antidote radiation~
+radiation antidote medicine~
+A vial of radiation antidote lies here.~
+potion~
+10 0 0
+35 0 0 0
+3 500 125
+E
+vial medicine antidote~
+This alchemical preparation can counteract some effects of radiation poisoning. It's
+kept in stock for core workers who may receive dangerous doses. The medicine is expensive
+and difficult to produce, but essential for protecting core maintenance personnel.
+~
+#4218
+gloves insulated working~
+insulated work gloves~
+A pair of insulated work gloves lies here.~
+~
+6 0 0
+2 0 0 0
+4 150 40
+E
+gloves~
+These heavy gloves protect hands from heat, cold, electricity, and chemicals. They're
+essential equipment for engineers working with the factory's various systems. The
+insulation is remarkable, allowing work in extreme conditions.
+~
+#4219
+goggles protective safety~
+protective safety goggles~
+A pair of safety goggles lies here.~
+~
+1 0 0
+0 0 0 0
+2 100 25
+E
+goggles~
+These goggles protect eyes from chemical splashes, flying debris, and harmful radiation.
+They're required equipment in many factory areas. The lenses are made from a material
+that doesn't scratch or fog, another bit of ancient technology.
+~
+#4220
+lamp portable radium~
+a radium-powered lamp~
+A small portable lamp glowing with radium light lies here.~
+~
+1 0 0
+12 10 10 0
+3 250 65
+E
+lamp light~
+This lamp uses a tiny radium element to provide steady, reliable light. Unlike oil or
+electric lamps, it never needs fuel or recharging - it will glow steadily for centuries.
+The light is slightly blue-tinged but more than adequate for working in dark areas.
+~
+#4221
+artifact ancient component~
+an ancient artifact~
+A mysterious ancient component lies here.~
+~
+1 0 0
+0 0 0 0
+2 2000 500
+E
+artifact component~
+This is a component from the factory's ancient systems - purpose unknown but clearly
+important. It's made from materials unknown to modern science and displays properties
+that seem impossible. Scholars would pay highly for such artifacts to study.
+~
+#4222
+crystal power focusing~
+a focusing crystal~
+A glowing crystal that focuses energy lies here.~
+~
+1 0 0
+0 0 0 0
+1 1200 300
+E
+crystal~
+This crystal is used in some of the factory's energy systems. It glows with an inner
+light and feels warm to the touch. The crystal can focus and direct energy flows in
+ways that modern technology cannot duplicate. These crystals are found in various
+factory systems and are carefully preserved when encountered.
+~
+#4223
+schematic blueprint ancient~
+an ancient schematic~
+A blueprint showing factory system designs lies here.~
+~
+1 0 0
+0 0 0 0
+2 1000 250
+E
+schematic blueprint~
+This is an original blueprint created by the ancient Martians, showing the design of
+some factory system. Even experts struggle to fully understand these schematics, as
+they assume knowledge of principles modern science doesn't possess. Still, they're
+invaluable for maintenance and repair work.
+~
+#4224
+communicator radio factory~
+a factory radio communicator~
+A radio communication device lies here.~
+~
+1 0 0
+0 0 0 0
+3 400 100
+E
+communicator radio~
+This radio allows communication throughout the factory complex. It's essential for
+coordinating operations and responding to emergencies. The radios use technology that
+works despite the interference from the factory's powerful systems.
+~
+#4225
+rations factory preserved~
+factory rations~
+A package of preserved factory rations lies here.~
+food~
+11 0 0
+0 36 0 0
+6 80 20
+E
+rations package~
+These rations are designed to provide complete nutrition for factory workers who can't
+leave their posts for regular meals. They're not particularly tasty but are filling
+and nutritious. Workers joke that the rations are as indestructible as the factory
+itself.
+~
+$~

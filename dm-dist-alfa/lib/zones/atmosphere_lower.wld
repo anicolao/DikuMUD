@@ -1,0 +1,1026 @@
+#4150
+Abandoned Maintenance Tunnel~
+   You drop down through the hidden trapdoor into an abandoned maintenance tunnel. The
+air here is stale and cold, untouched by the ventilation systems that serve the upper
+factory. Emergency lights provide dim illumination, casting long shadows. This section
+was sealed off long ago, but the passage of feet through dust suggests someone has been
+using these tunnels recently.
+~
+42 9 0
+D1
+The tunnel extends east into darkness.
+~
+~
+0 -1 4151
+D5
+Looking up, you can see the trapdoor far above. Too high to reach without help.
+~
+~
+0 -1 -1
+E
+trapdoor above~
+The trapdoor is far overhead, beyond reach. You'll need to find another way out of these
+lower levels.
+~
+E
+dust footprints~
+The dust shows recent footprints - multiple sets, suggesting regular traffic through here.
+Someone is using these supposedly abandoned tunnels for purposes unknown.
+~
+S
+#4151
+Dark Maintenance Corridor~
+   This corridor runs through the factory's forgotten underbelly. Pipes and conduits
+line the walls, some still carrying mysterious fluids or energy, others long dead. The
+mechanical hum of the factory is muted here, replaced by strange echoes and distant
+sounds that might be machinery - or might be something else.
+~
+42 9 0
+D1
+The corridor continues into deeper darkness.
+~
+~
+0 -1 4152
+D2
+A side passage branches south.
+~
+~
+0 -1 4153
+D3
+The tunnel extends back west.
+~
+~
+0 -1 4150
+S
+#4152
+Collapsed Section~
+   Part of the tunnel has collapsed here, blocking further progress to the east. The
+rubble looks old but stable. A narrow gap at the top might be passable with effort,
+but there are clear signs that others have been clearing a path through. Tools and
+equipment lie scattered nearby.
+~
+42 9 0
+D2
+You can head south around the collapse.
+~
+~
+0 -1 4154
+D3
+The corridor extends back west.
+~
+~
+0 -1 4151
+E
+rubble debris~
+The collapsed section appears to have been caused by a deliberate explosion, perhaps
+to seal off this area. But someone has been working to reopen it, clearing rubble and
+shoring up the passage.
+~
+E
+tools equipment~
+The tools here are modern and well-maintained, not ancient relics. Someone is actively
+working in these supposedly abandoned tunnels.
+~
+S
+#4153
+Side Passage~
+   This narrow passage branches off the main tunnel. The walls here show modifications -
+new doors have been installed, and lighting has been restored. This doesn't look
+abandoned at all. It looks like someone is using this area for secret purposes.
+~
+42 8 0
+D0
+The main corridor lies to the north.
+~
+~
+0 -1 4151
+D2
+A new door blocks further progress.
+~
+door metal~
+1 4250 4160
+S
+#4154
+Lower Tunnel Junction~
+   Multiple tunnels converge at this junction. Signs in ancient Martian script point
+to various factory systems, though most are now inaccessible due to sealed doors or
+collapsed passages. One tunnel, however, shows signs of recent use - the lighting works,
+and the air is fresher. Someone has restored this route for their own purposes.
+~
+42 8 0
+D0
+The tunnel leads to the collapsed section.
+~
+~
+0 -1 4152
+D1
+An active tunnel leads east, showing signs of recent use.
+~
+~
+0 -1 4155
+D2
+Another passage extends south.
+~
+~
+0 -1 4156
+S
+#4155
+Restored Passage~
+   This passage has been completely restored. New lighting illuminates clean walls,
+ventilation provides fresh air, and the floor is free of debris. This is clearly part
+of the secret operation taking place in these lower levels. Voices and sounds of activity
+can be heard ahead.
+~
+42 8 0
+D1
+The passage leads to what sounds like a laboratory.
+~
+~
+0 -1 4160
+D3
+The junction lies to the west.
+~
+~
+0 -1 4154
+S
+#4156
+Ancient Storage Chamber~
+   This chamber once stored maintenance supplies for the lower factory levels. Broken
+crates and rusted equipment still litter the floor, but there's also evidence of recent
+activity. Some crates have been opened and their contents removed. What were they looking
+for?
+~
+42 8 0
+D0
+The junction is to the north.
+~
+~
+0 -1 4154
+D2
+A dark passage extends south.
+~
+~
+0 -1 4157
+S
+#4157
+Creature Den~
+   Something has made its den in this chamber. Bones - some ancient, some disturbingly
+fresh - litter the floor. Scratching sounds echo from the darkness. This might be a nest
+of the rat-like creatures that infest the abandoned lower levels, or it could be something
+worse - perhaps one of the escaped experimental subjects.
+~
+42 9 0
+D0
+The storage chamber lies to the north.
+~
+~
+0 -1 4156
+E
+bones remains~
+The bones are from various creatures - thoats, apts, and other Martian animals. But there
+are also bones that look disturbingly like they came from failed experiments, mutated
+and unnatural.
+~
+S
+#4160
+Research Laboratory - Entrance~
+   You enter what can only be a secret research laboratory. Modern equipment fills the
+room - examination tables, chemical apparatus, mysterious devices of both Martian and
+unknown origin. The air smells of chemicals and something organic and unpleasant. This
+is clearly where the forbidden research is being conducted.
+~
+42 8 0
+D1
+The laboratory continues east.
+~
+~
+0 -1 4161
+D2
+A door leads to what looks like operating chambers.
+~
+door~
+1 -1 4165
+D3
+The restored passage leads back west.
+~
+~
+0 -1 4155
+E
+equipment apparatus devices~
+This equipment is sophisticated and clearly expensive. Whoever is funding this operation
+has significant resources. Some devices you recognize as medical equipment, but others
+are beyond your understanding - perhaps ancient Martian technology adapted for new purposes.
+~
+S
+#4161
+Research Laboratory - Main Chamber~
+   The main laboratory chamber is filled with ongoing experiments. Glass containers hold
+specimens - some you recognize, others that look like nothing that should exist. Research
+notes are scattered across work benches, documenting procedures and results. The notes are
+in modern Martian script, suggesting recent work.
+~
+42 8 0
+D1
+The laboratory extends further east.
+~
+~
+0 -1 4162
+D2
+A door leads to specimen storage.
+~
+door~
+1 -1 4166
+D3
+The entrance lies to the west.
+~
+~
+0 -1 4160
+E
+notes research documents~
+The research notes document experiments in life extension, tissue regeneration, and body
+modification. Some results are promising, others are catastrophic failures. The notes
+are signed by someone named Ras Thavas - a name that makes you uneasy for reasons you
+can't quite place.
+~
+E
+specimens containers~
+The specimens in the containers are disturbing. Some are obviously alive but changed in
+unnatural ways. Others are failed experiments, preserved for study. The range suggests
+extensive experimentation on living subjects.
+~
+S
+#4162
+Research Laboratory - East Wing~
+   This wing of the laboratory specializes in mechanical and cybernetic research. Half-
+finished constructs lie on work benches - combinations of organic tissue and mechanical
+components that shouldn't be possible. The work here pushes the boundaries of both
+medicine and engineering into territories most would consider forbidden.
+~
+42 8 0
+D2
+A door leads to the surgical suite.
+~
+door~
+1 -1 4167
+D3
+The main chamber lies to the west.
+~
+~
+0 -1 4161
+E
+constructs devices~
+These devices combine living tissue with mechanical components in ways that defy nature.
+Some appear to be prosthetics, others seem designed to enhance capabilities beyond normal
+limits. The skill required to create such things is remarkable, but so is the disregard
+for natural law.
+~
+S
+#4165
+Dissection Chamber~
+   This chamber is clearly designed for anatomical study - dissection tables, surgical
+tools, and preservation apparatus fill the space. Diagrams cover the walls showing
+Martian anatomy in exacting detail. The precision and knowledge displayed here is
+impressive, but the application is deeply disturbing.
+~
+42 8 0
+D0
+The door leads back to the laboratory entrance.
+~
+door~
+1 -1 4160
+D2
+Another door leads to medical bays.
+~
+door~
+1 -1 4168
+E
+diagrams anatomy charts~
+These anatomical diagrams show not just normal Martian physiology but modifications and
+enhancements. They document procedures for extending life, enhancing strength, even
+transplanting brains between bodies. The knowledge is incredible but the ethics are
+questionable at best.
+~
+S
+#4166
+Specimen Storage~
+   This chamber stores the results of the research - both successes and failures. Rows
+of containers hold preserved specimens, each labeled with dates and procedure notes. Some
+specimens were once people, now transformed by the experiments. Others never were truly
+alive, grown in tanks for specific purposes. It's a gallery of horrors and wonders.
+~
+42 8 0
+D0
+The door leads to the main laboratory chamber.
+~
+door~
+1 -1 4161
+E
+specimens preserved subjects~
+Each specimen tells a story of ambition and experimentation. Some show successful life
+extension or enhancement. Others show catastrophic failures. All demonstrate that someone
+here possesses knowledge and skill far beyond normal science, but applies it without
+apparent ethical constraints.
+~
+S
+#4167
+Surgical Suite~
+   This is a fully equipped surgical facility, capable of the most complex procedures.
+The equipment is immaculate and advanced, combining ancient Martian technology with modern
+innovations. Operations performed here could save lives - or create abominations. The
+skill required is undeniable, but so is the moral ambiguity.
+~
+42 8 0
+D0
+The door leads to the east wing.
+~
+door~
+1 -1 4162
+D2
+A door leads to recovery chambers.
+~
+door~
+1 -1 4169
+E
+equipment surgical instruments~
+These surgical instruments are of the highest quality, some clearly of ancient Martian
+design. The operating tables include restraints and monitoring equipment. This facility
+could perform procedures most surgeons wouldn't dream possible.
+~
+S
+#4168
+Medical Bay~
+   This medical bay contains beds for patients - or subjects. Several beds are occupied
+by figures under sheets, their conditions unknown. Medical equipment monitors their vital
+signs. Are these patients being healed, or subjects being experimented upon? Perhaps both.
+~
+42 8 0
+D0
+The door leads to the dissection chamber.
+~
+door~
+1 -1 4165
+D1
+Another door leads to a recovery area.
+~
+door~
+1 -1 4169
+E
+patients subjects figures~
+The figures in the beds are alive but sedated. Their conditions vary - some appear to be
+recovering from surgery, others are connected to strange apparatus that might be life
+support or might be experimental equipment. Without waking them, you can't know if they're
+willing subjects or prisoners.
+~
+S
+#4169
+Recovery Chamber~
+   This chamber houses those recovering from procedures. Unlike the medical bay, the
+occupants here are conscious and mobile, though many show signs of recent surgery or
+modification. Some look relieved and grateful, others appear traumatized. The moral
+complexity of what's happening here is evident in their varied reactions.
+~
+42 8 0
+D0
+The door leads to the surgical suite.
+~
+door~
+1 -1 4167
+D1
+A corridor leads to the power experiments section.
+~
+~
+0 -1 4170
+D3
+The door leads to the medical bay.
+~
+door~
+1 -1 4168
+E
+occupants patients~
+The people here show various modifications - enhanced limbs, improved organs, extended
+lifespans. Some are clearly pleased with their enhancements, others seem to regret their
+choices. Their stories would be complex and contradictory.
+~
+S
+#4170
+Power Research Corridor~
+   This corridor leads to another section of the lower level facility - one focused on
+power and energy research. The air crackles with static electricity, and faint blue light
+emanates from doorways. The experiments here involve the factory's radium power systems,
+perhaps attempting to enhance or modify them.
+~
+42 8 0
+D1
+The corridor continues east to energy labs.
+~
+~
+0 -1 4171
+D3
+The recovery chamber lies to the west.
+~
+~
+0 -1 4169
+E
+light glow energy~
+The blue glow is characteristic of radium energy, but it's more intense here than in the
+factory's normal power systems. Someone is experimenting with concentrated or modified
+radium reactions - extremely dangerous research that could lead to breakthrough or
+catastrophe.
+~
+S
+#4171
+Energy Research Laboratory~
+   This laboratory studies radium and other energy sources. Containment vessels hold
+glowing materials, their light illuminating complex apparatus designed to measure and
+manipulate energy. The work here is at the cutting edge of Martian science, attempting
+to understand and improve the ancient power systems.
+~
+42 8 0
+D1
+The laboratory continues east.
+~
+~
+0 -1 4172
+D2
+A shielded door leads to containment chambers.
+~
+door shielded~
+2 4251 4175
+D3
+The corridor lies to the west.
+~
+~
+0 -1 4170
+E
+vessels apparatus equipment~
+This equipment manipulates energy at levels that would be dangerous in less skilled hands.
+The researchers here understand radium technology better than most, perhaps even rivaling
+the ancient Martian builders. But that knowledge makes their experiments all the more
+dangerous.
+~
+S
+#4172
+Weapons Research~
+   This laboratory develops weapons using enhanced radium technology. Prototypes of rifles,
+pistols, and other devices line the walls, each more powerful than standard military issue.
+Some designs are successful, others show evidence of catastrophic failure. This is where
+forbidden military technology is being developed.
+~
+42 8 0
+D2
+A door leads to the testing range.
+~
+door~
+1 -1 4176
+D3
+The energy laboratory lies to the west.
+~
+~
+0 -1 4171
+E
+weapons prototypes designs~
+These weapons could change the balance of power on Mars. Some fire concentrated radium
+beams, others use principles that shouldn't be possible. If Zodanga or another hostile
+power obtained these designs, the results could be catastrophic. But so could their use
+by anyone, even Helium.
+~
+S
+#4175
+Radium Containment Chamber~
+   This heavily shielded chamber contains concentrated radium fuel and experimental
+power cores. The radiation levels here are dangerous even with shielding. Warning signs
+cover the walls in multiple languages. The work being done here pushes the boundaries
+of power generation, attempting to surpass even the ancient builders.
+~
+42 8 0
+D0
+The shielded door leads back to the laboratory.
+~
+door shielded~
+2 4251 4171
+D2
+A door leads to the unstable core area - DANGER.
+~
+door warning~
+2 4252 4177
+E
+fuel cores radium~
+The radium here is far more concentrated than the factory's normal power systems. The
+containment is sophisticated but still barely adequate. Any breach would be catastrophic,
+spreading lethal radiation through the lower levels and possibly reaching the upper factory.
+~
+E
+warnings signs~
+The warnings are stark and multilingual: EXTREME RADIATION HAZARD, LETHAL EXPOSURE, 
+AUTHORIZED PERSONNEL ONLY. Even the researchers seem nervous about this chamber.
+~
+S
+#4176
+Weapons Testing Range~
+   This chamber serves as a testing range for experimental weapons. The far wall shows
+extensive damage from multiple tests - burn marks, melted metal, and deep gouges. Targets
+are set up at various distances, and measurement equipment records the results of each
+test. The power of the weapons tested here is frightening.
+~
+42 8 0
+D0
+The door leads back to weapons research.
+~
+door~
+1 -1 4172
+E
+wall damage marks~
+The damage to the wall tells the story of multiple weapon tests. Some burns suggest
+energy weapons of immense power. Other marks show projectile impacts that punched through
+thick metal. Whatever weapons are being developed here far exceed normal military equipment.
+~
+S
+#4177
+Unstable Power Core~
+   This chamber contains an experimental power core that's clearly unstable. The radium
+fuel is not properly contained, and energy fluctuates wildly. The researchers may have
+exceeded their understanding here, creating something they can't fully control. The core
+pulses with dangerous energy, and the temperature is extremely high.
+~
+42 8 0
+D0
+The door leads back to containment - if you can make it.
+~
+door warning~
+2 4252 4175
+E
+core unstable radium~
+The experimental core is clearly failing. The containment field fluctuates, energy spikes
+randomly, and the structure shows stress fractures. This could explode at any moment,
+with devastating consequences. The researchers may have finally gone too far.
+~
+S
+#4180
+Biological Research Wing~
+   This wing of the lower facility focuses on biological research - life extension,
+enhancement, and modification. The air here smells organic and slightly wrong. Tanks
+line the walls, growing various tissues and organisms. The work here seeks to push
+Martian biology beyond its natural limits.
+~
+42 8 0
+D1
+The corridor continues deeper into biological research.
+~
+~
+0 -1 4181
+D2
+A door leads to incubation chambers.
+~
+door~
+1 -1 4185
+E
+tanks vats growth~
+The tanks contain growing tissues and organs, some recognizable, others alien and wrong.
+The biological knowledge required for this work is remarkable, but the application raises
+questions about the nature and limits of life itself.
+~
+S
+#4181
+Tissue Engineering Laboratory~
+   This laboratory creates synthetic biological materials. Organs, muscles, even neural
+tissue are grown in controlled conditions. The work could revolutionize medicine, allowing
+organ replacement and repair. But the same techniques could create biological weapons or
+unnatural hybrids. The ethical implications are enormous.
+~
+42 8 0
+D1
+The laboratory continues east.
+~
+~
+0 -1 4182
+D2
+A door leads to experimental holding.
+~
+door~
+1 -1 4186
+D3
+The corridor lies to the west.
+~
+~
+0 -1 4180
+E
+organs tissue samples~
+The organs being grown here are perfect and healthy, far superior to natural organs affected
+by age or disease. This technology could extend lives and cure ailments. But it could also
+create living weapons or modify people in fundamental ways. Knowledge without wisdom.
+~
+S
+#4182
+Hybrid Creation Chamber~
+   This chamber is where different species are combined into hybrid forms. Tanks contain
+creatures that mix various Martian life forms - banth with apt, thoat with mantalia, and
+more disturbing combinations. Some hybrids are viable, others are tragic failures. The
+work here violates natural law and raises questions about what should be possible versus
+what should be done.
+~
+42 8 0
+D2
+A door leads to containment cells.
+~
+door reinforced~
+2 4253 4187
+D3
+The tissue engineering lab lies to the west.
+~
+~
+0 -1 4181
+E
+tanks hybrids creatures~
+The hybrid creatures are disturbing to behold. Some combine features logically, creating
+creatures that might be superior to their parent species. Others are chimeras that shouldn't
+exist, suffering despite being alive. The moral cost of this knowledge is evident in their
+existence.
+~
+S
+#4185
+Incubation Chambers~
+   This room contains incubation tanks for growing experimental organisms from inception.
+Some tanks hold recognizable Martian life forms in early stages, others contain things
+that never existed in nature. The control over life demonstrated here is both impressive
+and unsettling.
+~
+42 8 0
+D0
+The door leads to the biological research wing.
+~
+door~
+1 -1 4180
+D1
+A corridor leads to quarantine areas.
+~
+~
+0 -1 4186
+E
+tanks incubation organisms~
+The tanks show life at various stages - from single cells to fully formed organisms. The
+precision and control required to guide this growth is remarkable. But creating life
+artificially raises profound questions about the nature and sanctity of existence.
+~
+S
+#4186
+Experimental Subject Holding~
+   This area holds living experimental subjects - creatures that have been modified or
+enhanced. Cages contain various animals showing unnatural features - extra limbs, modified
+senses, enhanced abilities. Some subjects appear healthy, others show signs of distress.
+The suffering evident here raises questions about whether any knowledge justifies such means.
+~
+42 8 0
+D0
+The door leads to tissue engineering.
+~
+door~
+1 -1 4181
+D1
+A corridor leads to quarantine.
+~
+~
+0 -1 4188
+D3
+The incubation chambers lie to the west.
+~
+~
+0 -1 4185
+E
+subjects creatures animals~
+The experimental subjects show varying conditions. Some appear healthy and might even be
+improved by their modifications. Others are clearly suffering, their bodies changed in ways
+that cause pain or disability. The moral complexity of the research is evident in their
+varied fates.
+~
+S
+#4187
+Dangerous Hybrids Containment~
+   This heavily reinforced chamber contains the most dangerous experimental creatures -
+hybrids that combine deadly predators or creatures that have become uncontrollable. The
+cages are strong, but some show damage from the creatures within. Keeping these things
+contained is increasingly difficult.
+~
+42 8 0
+D0
+The reinforced door leads back to hybrid creation.
+~
+door reinforced~
+2 4253 4182
+E
+creatures hybrids dangerous~
+The creatures here are terrifying - combining the deadliest features of multiple predators
+into single organisms. Some have escaped their containment before and been recaptured. Others
+are clearly too dangerous to ever be released. Why create such things? For weapons? For
+knowledge? The purpose doesn't justify the danger.
+~
+S
+#4188
+Quarantine Zone~
+   This area serves as quarantine for subjects that have developed unexpected complications
+or infections. The atmosphere here is tense - something has gone wrong with recent experiments,
+and the results are being isolated here. Sealed chambers contain unknown dangers that even
+the researchers fear.
+~
+42 8 0
+D1
+A sealed door leads to the infection chamber - sealed for good reason.
+~
+door sealed~
+2 4254 4189
+D3
+The corridor leads back to experimental holding.
+~
+~
+0 -1 4186
+E
+chambers sealed quarantine~
+The sealed chambers contain subjects that have developed aggressive or infectious conditions.
+The seals are strong, but troubling sounds emanate from within. Whatever is inside should
+probably stay there forever.
+~
+S
+#4189
+Infection Outbreak Chamber~
+   Behind the sealed door lies a chamber that has been overtaken by some experimental
+organism. The walls are covered with organic growth, and things that might have been
+subjects are now unrecognizable masses of mutated tissue. This is what happens when
+biological experiments go catastrophically wrong.
+~
+42 8 0
+D3
+The sealed door leads back to quarantine - get out while you can.
+~
+door sealed~
+2 4254 4188
+E
+growth organism infection~
+The organic growth covers everything, pulsing with unnatural life. It seems almost aware,
+responding to your presence. This is knowledge taken too far, creating something that
+cannot be controlled or understood. The entire chamber should be destroyed before it
+spreads.
+~
+S
+#4190
+Deep Core Access~
+   You have reached the deepest levels of the facility, far below the working factory
+above. Ancient machinery surrounds you, more primitive than the systems above but still
+functioning after countless ages. This is the foundation upon which the factory was built,
+and perhaps the source of knowledge the researchers seek.
+~
+42 8 0
+D1
+A corridor leads to the ancient archives.
+~
+~
+0 -1 4191
+D2
+Stairs descend even further into darkness.
+~
+~
+0 -1 4195
+E
+machinery ancient primitive~
+This machinery predates even the factory above. It's the work of the oldest Martian
+civilization, the true builders of the atmosphere system. Their technology was different -
+less elegant but perhaps more powerful. Understanding it could unlock secrets lost for
+millennia.
+~
+S
+#4191
+Ancient Archives~
+   This chamber contains data storage from the original builders - crystal matrices and
+metal plates covered with inscriptions. Much is damaged or unreadable, but some remains
+intact. The knowledge here could revolutionize Martian understanding of the factory and
+ancient technology. It might also explain why these lower levels were sealed.
+~
+42 8 0
+D1
+The archives continue east.
+~
+~
+0 -1 4192
+D3
+The deep core access lies to the west.
+~
+~
+0 -1 4190
+E
+archives data crystals~
+The data storage uses technology even more advanced than the factory above. Crystal
+matrices hold information encoded at the molecular level, far beyond anything modern Mars
+can create. Reading it requires both ancient devices and the ability to understand the
+lost languages of old Mars.
+~
+S
+#4192
+Archive Chamber - East~
+   This section of the archives is more intact than the western portion. Several complete
+data crystals remain, their contents protected by ancient preservation systems. A work
+station allows access to the data, though understanding it requires extensive knowledge
+of ancient Martian culture and language.
+~
+42 8 0
+D2
+A door leads to what might be living quarters.
+~
+door ancient~
+1 -1 4193
+D3
+The archives continue west.
+~
+~
+0 -1 4191
+E
+crystals data information~
+The intact crystals glow faintly, indicating their preservation systems still function.
+The data they contain might include technical specifications for the factory, historical
+records of ancient Mars, or warnings about dangers that led to these levels being sealed.
+~
+S
+#4193
+Ancient Engineer's Chamber~
+   This chamber appears to have been living quarters for whoever maintained these deep
+systems. Ancient furnishings remain, preserved by the controlled environment. More
+startlingly, a crystalline container in the center of the room holds what appears to be
+a preserved consciousness - the First Engineer, maintained in stasis for untold ages.
+~
+42 8 0
+D0
+The door leads to the archives.
+~
+door ancient~
+1 -1 4192
+D2
+A corridor leads to a chamber with active systems.
+~
+~
+0 -1 4194
+E
+container crystalline preservation~
+The container is a marvel of ancient technology, preserving not just a body but a living
+mind in a form of stasis beyond modern understanding. The figure within appears to be an
+ancient Martian, different from modern red Martians in subtle ways. If awakened, this being
+might possess knowledge lost to time - or might be dangerous beyond measure.
+~
+S
+#4194
+Ancient Control Chamber~
+   This chamber controls the deep core systems that form the foundation of the factory
+above. The controls are ancient but still functional, covered in dust but waiting for
+someone with the knowledge to use them. Activating these systems could enhance the factory's
+output - or destroy everything if misused.
+~
+42 8 0
+D0
+The corridor leads to the engineer's chamber.
+~
+~
+0 -1 4193
+D2
+A passage leads to the main laboratory.
+~
+~
+0 -1 4197
+E
+controls systems ancient~
+The control panels use a mix of crystal displays and mechanical interfaces. Without knowing
+the ancient language and understanding the underlying principles, using these controls would
+be incredibly dangerous. But to someone with the right knowledge, they might allow direct
+manipulation of the factory's core functions.
+~
+S
+#4195
+Descent into Darkness~
+   Stairs descend into near-total darkness. Emergency lights are few and dim here. The
+stairs are ancient and worn, leading down to the absolute deepest levels of the facility.
+The air is stale and cold, and there's a feeling of immense age and weight pressing down
+from above.
+~
+42 9 0
+D0
+The stairs ascend back to the deep core access.
+~
+~
+0 -1 4190
+D5
+The stairs continue down into darkness.
+~
+~
+0 -1 4196
+E
+darkness stairs depth~
+Looking down, the darkness seems absolute. The stairs continue far beyond the range of
+any light. What lies at the very bottom of the facility remains unknown, perhaps best
+left undiscovered.
+~
+S
+#4196
+Foundation Level~
+   You have reached the foundation level - the absolute bottom of the facility. Massive
+blocks of ancient metal and stone form the base upon which everything above is built.
+The scale is staggering, suggesting the factory extends far deeper into the planet than
+anyone knows. Strange symbols cover the foundation blocks, perhaps warnings or instructions
+from the original builders.
+~
+42 8 0
+D2
+A passage leads to the research nexus.
+~
+~
+0 -1 4197
+D4
+The stairs climb back up toward the deep core.
+~
+~
+0 -1 4195
+E
+foundation blocks ancient~
+These foundation blocks are made from material that doesn't exist anywhere else on Mars.
+They're incredibly dense and strong, able to support the weight of the entire factory
+above. The symbols carved into them might be structural notations or might be something
+more significant - prayers, warnings, or the names of the ancient builders.
+~
+S
+#4197
+Research Nexus - Ras Thavas's Laboratory~
+   This chamber serves as the center of the lower level research operation. It's clearly
+the personal laboratory of the master behind all the experiments above - Ras Thavas himself.
+The equipment here surpasses everything in the other labs, combining ancient Martian
+technology with modern innovations and the researcher's own genius. This is where the most
+advanced and dangerous work is performed.
+~
+42 8 0
+D0
+A passage leads to the ancient control chamber.
+~
+~
+0 -1 4194
+D1
+A door leads to the observation chamber.
+~
+door~
+1 -1 4198
+D3
+A passage leads back to the foundation level.
+~
+~
+0 -1 4196
+E
+equipment laboratory advanced~
+The equipment in this laboratory is beyond anything you've seen elsewhere. Some devices
+combine multiple technologies - biological, mechanical, and energy-based - into unified
+systems. The work being done here represents the cutting edge of multiple scientific
+disciplines, pushed to their absolute limits and beyond.
+~
+S
+#4198
+Observation and Planning Chamber~
+   This chamber contains Ras Thavas's research notes, plans, and observations. Maps of
+the factory cover one wall, marked with notations about systems and opportunities. Another
+wall displays biological diagrams showing proposed modifications to Martian physiology.
+A third shows energy diagrams for proposed factory enhancements. The scope of the research
+is breathtaking - nothing less than remaking Mars itself.
+~
+42 8 0
+D1
+A door leads to the confrontation chamber.
+~
+door heavy~
+2 4255 4199
+D3
+The door leads back to the research nexus.
+~
+door~
+1 -1 4197
+E
+notes plans research~
+Reading through the notes reveals Ras Thavas's grand vision: extending Martian lifespans
+indefinitely, enhancing physical capabilities, and improving the factory's output to support
+a larger population. The goals are noble - ensuring Mars's survival. But the methods are
+questionable at best, and some experiments cross lines that should never be crossed. The
+moral complexity is overwhelming.
+~
+S
+#4199
+The Master's Chamber~
+   This is the personal chamber of Ras Thavas, the Master Mind behind the lower level
+research. The room combines laboratory, living space, and fortress. Advanced equipment
+monitors multiple experiments, while defensive systems protect against intruders. Ras
+Thavas himself is here, surrounded by his research, prepared to defend his work or explain
+his vision - depending on your approach.
+~
+42 8 0
+D3
+The heavy door leads back to observation.
+~
+door heavy~
+2 4255 4198
+E
+chamber laboratory fortress~
+This chamber is simultaneously a place of brilliant research and dangerous obsession. Ras
+Thavas has spent years here, possibly decades, pursuing knowledge that could save Mars or
+damn it. The intensity of his dedication is evident in every detail, as is the single-
+minded focus that has allowed him to cross ethical boundaries others wouldn't dare approach.
+~
+S
+$~

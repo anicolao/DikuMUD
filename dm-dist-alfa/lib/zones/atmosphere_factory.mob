@@ -1,0 +1,308 @@
+#4100
+guard factory security elite~
+an elite factory guard~
+An elite factory guard stands vigilant here, protecting the facility.
+~
+This red Martian warrior wears enhanced armor bearing the factory's insignia - a stylized
+representation of Mars surrounded by atmosphere. His equipment is top quality, including
+both a longsword and radium rifle. His eyes are alert and professional, constantly scanning
+for threats. He's been trained to recognize saboteurs, spies, and any danger to the factory.
+The guards here are the best - they have to be, as all Mars depends on them.
+~
+2 0 800 S
+7 0 0 5d10+200 3d6+3
+2000 15000
+8 8 1
+#4101
+commander security captain elite~
+the security commander~
+The security commander oversees factory defenses with stern efficiency.
+~
+This veteran warrior commands the factory's security forces. His scarlet and gold harness
+is decorated with service medals and the factory insignia. Years of defending this critical
+facility have made him both skilled and perpetually vigilant. He trusts no one completely
+and maintains constant security protocols. His authority is absolute in security matters,
+and he takes his responsibility to protect Mars very seriously.
+~
+2 0 800 S
+8 0 0 6d10+250 3d6+4
+3000 18000
+8 8 1
+#4102
+engineer factory senior experienced~
+a senior engineer~
+A senior engineer works here, maintaining the ancient systems.
+~
+This experienced red Martian engineer has served at the factory for decades. His harness
+is covered with tool pouches, and his hands show the stains and scars of working with
+machinery and chemicals. He knows the factory systems intimately, though even he admits
+there are aspects of the ancient technology beyond full understanding. He's dedicated to
+keeping Mars alive and takes great pride in his work.
+~
+23 2 2 6d10+300 1d8+5
+1500 10000
+8 8 1
+#4103
+engineer junior apprentice~
+a junior engineer~
+A junior engineer studies the systems here, learning from experience.
+~
+This younger engineer is still learning the complexities of the factory systems. He wears
+a standard engineer's harness and carries reference manuals, frequently consulting them
+when working on unfamiliar equipment. He's eager but cautious, knowing that a mistake
+could have catastrophic consequences. Under the guidance of senior engineers, he's gaining
+the knowledge needed to help sustain Mars.
+~
+23 2 2 6d10+180 1d8+3
+800 6000
+8 8 2
+#4104
+daj vor chief engineer master~
+Vor Daj the Chief Engineer~
+Vor Daj, Chief Engineer of the factory, stands here surrounded by technical documents.
+~
+This elderly red Martian is perhaps the most knowledgeable person on Mars regarding the
+factory's systems. His deeply lined face shows the burden of responsibility he carries -
+all Mars depends on his expertise. He's been chief engineer for over a century, and his
+understanding of the ancient technology borders on the mystical. He wears a decorated
+engineer's harness and carries tools that have been passed down through generations of
+chief engineers. Despite his age, his mind is sharp and his dedication absolute.
+~
+23 2 2 8d10+400 1d8+8
+2500 16000
+8 8 1
+#4105
+tavia mechanic master female~
+Master Mechanic Tavia~
+Tavia, a skilled master mechanic, works on equipment here.
+~
+This capable female red Martian engineer is renowned for her mechanical skills. She can
+diagnose problems by sound alone and repairs equipment that others have given up on. Her
+harness is well-worn from constant use, and she always has the right tool for any job.
+She's pragmatic and no-nonsense, with little patience for bureaucracy or politics. Her
+loyalty is to the factory and its mission, not to individuals. She's suspicious of outsiders
+but will grudgingly respect competence when she sees it.
+~
+23 2 2 7d10+350 1d8+6
+2000 13000
+8 8 2
+#4106
+or jat security commander officer~
+Security Commander Jat Or~
+Commander Jat Or oversees security operations with military precision.
+~
+This military officer transferred to factory security after distinguished service in Helium's
+forces. He's paranoid about sabotage and maintains constant vigilance against all threats.
+His scarlet and gold harness bears both military honors and the factory security insignia.
+He drills his guards constantly and personally investigates anything suspicious. His methods
+are sometimes harsh, but he's proven effective at stopping several sabotage attempts. He
+will test newcomers' loyalty before trusting them.
+~
+2 0 800 S
+8 0 0 6d10+240 3d6+4
+2800 17000
+8 8 1
+#4107
+kantos old ancient engineer~
+Old Man Kantos~
+Ancient Kantos, an engineer of incredible age, rests here with stories to tell.
+~
+This incredibly ancient red Martian has served at the factory for nearly a thousand years.
+His weathered face is lined with age, but his eyes still hold intelligence and memory. He's
+seen countless engineers come and go, and he remembers techniques and knowledge that others
+have forgotten. He's too old for heavy work now, but the younger engineers seek his counsel,
+and he gladly shares his vast experience. He tells stories of the factory's history and the
+ancient Martians who built it, keeping alive knowledge that might otherwise be lost.
+~
+23 2 2 6d10+200 1d8+4
+1200 9000
+8 8 1
+#4108
+spy zodangan infiltrator agent~
+a Zodangan spy~
+A figure trying to look like a factory worker lurks here suspiciously.
+~
+This red Martian is actually a Zodangan agent sent to infiltrate and sabotage the factory.
+His disguise as a factory worker is good but not perfect - something about his manner is
+wrong to those who know what to look for. He carries tools that look legitimate but are
+actually designed for sabotage. If discovered, he'll fight desperately to escape or complete
+his mission. Zodanga would love to control the factory and gain leverage over all Mars.
+~
+2 128 800 S
+6 0 0 4d10+180 3d6+3
+1800 12000
+8 8 1
+#4109
+warrior rogue mercenary saboteur~
+a rogue warrior~
+A dangerous-looking mercenary warrior lurks here with hostile intent.
+~
+This mercenary has been hired by enemies of Helium to disrupt the factory. He's a skilled
+fighter who cares only about his payment, not the catastrophic consequences of his actions.
+His harness is dark-colored to avoid detection, and he carries weapons designed for both
+combat and sabotage. He'll attack anyone who threatens to expose him, and he's dangerous
+enough to be a serious threat.
+~
+2 32 800 S
+5 0 0 4d10+150 2d6+3
+1500 11000
+8 8 1
+#4110
+assassin professional killer agent~
+a professional assassin~
+A deadly assassin moves through the shadows here.
+~
+This highly skilled assassin has been sent to kill key factory personnel or plant destructive
+devices. His combat abilities are exceptional, and he uses stealth and surprise to maximum
+advantage. His dark harness blends with shadows, and his weapons are designed for silent
+kills. He represents one of the most serious threats the factory faces - a professional
+killer determined to complete his mission regardless of the cost.
+~
+2 160 800 S
+7 0 0 5d10+210 3d6+4
+2200 15000
+8 8 1
+#4111
+guard patrol factory security~
+a factory patrol guard~
+A factory guard patrols here, maintaining security.
+~
+This guard patrols the factory corridors and chambers, watching for intruders, fires, or
+equipment malfunctions. He wears reinforced armor and carries both sword and rifle. He's
+been trained to respond to various emergencies and knows the factory layout intimately.
+While not as elite as the command guards, he's still a competent and dedicated defender
+of Mars' most critical facility.
+~
+2 0 800 S
+5 0 0 4d10+140 2d6+2
+1200 9500
+8 8 1
+#4112
+technician factory specialist~
+a factory technician~
+A specialized technician works on delicate equipment here.
+~
+This red Martian technician specializes in the most delicate and complex factory systems.
+He wears precision tools and magnification lenses, working on components that require
+extreme care. He's less physically capable than the field engineers but possesses knowledge
+of specific systems that makes him invaluable. He's completely focused on his work and
+can be startled by unexpected interruptions.
+~
+23 2 2 6d10+220 1d8+4
+1000 8000
+8 8 2
+#4113
+operator control systems~
+a systems operator~
+A control systems operator monitors displays here.
+~
+This engineer's role is to monitor the factory's control systems and alert others to
+problems. He sits at control stations, watching readouts and gauges that display the
+factory's status. He's trained to recognize abnormal patterns and knows the emergency
+procedures for various failures. While not as physically active as field engineers, his
+monitoring prevents small problems from becoming catastrophes.
+~
+23 2 2 6d10+190 1d8+3
+900 7500
+8 8 1
+#4114
+maintenance worker factory crew~
+a maintenance worker~
+A maintenance worker performs routine upkeep here.
+~
+This red Martian performs the essential but unglamorous work of keeping the factory clean
+and maintained. He repairs minor damage, lubricates moving parts, cleans filters, and
+handles countless other tasks that keep the ancient systems running smoothly. While not
+as skilled as the engineers, his work is important, and he takes pride in keeping his
+sections in perfect condition.
+~
+23 2 2 6d10+160 1d8+2
+600 5500
+8 8 1
+#4115
+clerk administrator records~
+a factory clerk~
+An administrative clerk manages records and paperwork here.
+~
+This civilian administrator handles the endless paperwork required to operate the factory.
+He tracks production, manages schedules, files reports, and maintains the historical records
+that document the factory's operation. He's not a warrior or engineer, but his organizational
+skills keep the factory running efficiently. He knows where every document is filed and can
+retrieve information instantly when needed.
+~
+23 2 2 6d10+180 1d8+3
+500 5000
+8 8 1
+#4116
+inspector quality control~
+a quality control inspector~
+A quality inspector examines output here carefully.
+~
+This engineer's responsibility is to monitor the quality of the factory's oxygen output.
+He uses sophisticated instruments to analyze gas samples, ensuring the atmosphere being
+produced meets exacting standards. His work requires meticulous attention to detail and
+deep knowledge of atmospheric chemistry. Any deviation from standards must be reported
+immediately and corrected.
+~
+23 2 2 7d10+280 1d8+5
+1400 10000
+8 8 2
+#4117
+scientist researcher analyst~
+a factory scientist~
+A research scientist studies the ancient technology here.
+~
+This brilliant red Martian dedicates his life to understanding the factory's ancient systems.
+Unlike the practical engineers who keep things running, he seeks to truly comprehend the
+principles behind the technology. His research has led to insights that improved maintenance
+procedures and prevented failures. He wears scholar's robes over an engineer's harness,
+symbolizing his dual role. His discoveries are carefully documented for future generations.
+~
+23 2 2 7d10+320 1d8+6
+1600 11000
+8 8 2
+#4118
+medic factory doctor physician~
+a factory medic~
+A medical professional tends to injured workers here.
+~
+This trained physician provides medical care for factory personnel. The work here is
+dangerous - burns, radiation exposure, crushing injuries, and chemical exposure all occur
+despite safety precautions. He maintains a small infirmary and knows how to treat the
+unique injuries that can result from working with ancient technology. His knowledge has
+saved countless lives over his years of service.
+~
+23 2 2 6d10+240 1d8+4
+1100 8500
+8 8 2
+#4119
+cook factory kitchen staff~
+a factory cook~
+A cook prepares meals for the factory workers.
+~
+This red Martian manages the factory's kitchen, preparing meals for the workers who cannot
+leave their posts for long. He's adapted to working with limited resources and creates
+surprisingly good meals from basic ingredients. He knows everyone who works at the factory
+and hears all the gossip, making him an excellent source of information. He takes pride
+in keeping workers well-fed and maintaining morale.
+~
+23 2 2 6d10+150 1d8+2
+400 4500
+8 8 1
+#4120
+guardian mechanical automated~
+an automated guardian~
+A mechanical guardian stands motionless here, protecting this area.
+~
+This is one of the factory's automated defensive systems, built by the ancient Martians.
+The guardian appears to be a mechanical construct, vaguely humanoid but clearly not alive.
+It stands motionless until unauthorized persons enter restricted areas, then activates with
+frightening speed. Its metal body is incredibly strong, and it's armed with both physical
+weapons and energy beams. The guardians are nearly indestructible and follow their ancient
+programming without mercy or hesitation.
+~
+2 8 0 S
+8 0 0 6d10+300 4d6+4
+3500 20000
+8 8 1
+$~

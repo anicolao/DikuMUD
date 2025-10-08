@@ -1088,10 +1088,10 @@ You see the road.
 ~
 0 -1 3047
 D2
-The path south from the bridge is blocked.
+The path south leads into the dead sea bottom toward the Atmosphere Factory.
 ~
 ~
-0 -1 -1
+0 -1 3100
 E
 bridge~
 The bridge is constructed from ancient stone, matching the city wall in both

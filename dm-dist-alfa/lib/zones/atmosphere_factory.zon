@@ -1,0 +1,229 @@
+#41
+Atmosphere Factory - Main Levels~
+4149 40 2
+*
+* Elite Factory Guards - Entrance and Security
+M 0 4100 2 4100
+G 1 4204 100
+G 1 4206 100
+G 1 4207 100
+M 0 4100 2 4101
+G 1 4204 100
+G 1 4205 100
+G 1 4206 100
+M 0 4100 2 4103
+G 1 4204 100
+G 1 4206 100
+*
+* Guard Station Guards
+M 0 4111 2 4103
+G 1 4204 100
+G 1 4216 100
+M 0 4111 1 4104
+G 1 4205 100
+G 1 4206 100
+*
+* Security Commander Jat Or
+M 0 4106 1 4103
+G 1 4204 100
+G 1 4215 100
+G 1 4206 100
+G 1 4200 100
+*
+* Senior Engineers in various locations
+M 0 4102 1 4105
+G 1 4208 100
+G 1 4218 100
+G 1 4219 100
+M 0 4102 1 4115
+G 1 4208 100
+G 1 4213 100
+M 0 4102 1 4125
+G 1 4210 100
+G 1 4224 100
+*
+* Junior Engineers
+M 0 4103 2 4106
+G 1 4208 100
+G 1 4210 100
+M 0 4103 1 4107
+M 0 4103 1 4117
+G 1 4210 100
+*
+* Chief Engineer Vor Daj in his office
+M 0 4104 1 4111
+G 1 4209 100
+G 1 4213 100
+G 1 4200 100
+G 1 4224 100
+*
+* Master Mechanic Tavia in workshop
+M 0 4105 1 4112
+G 1 4208 100
+G 1 4213 100
+G 1 4221 50
+*
+* Old Man Kantos in library
+M 0 4107 1 4109
+G 1 4209 50
+G 1 4210 100
+*
+* Technicians at work
+M 0 4112 2 4116
+G 1 4208 100
+G 1 4219 100
+M 0 4112 1 4118
+G 1 4213 100
+*
+* Systems Operators
+M 0 4113 1 4125
+G 1 4224 100
+G 1 4212 100
+M 0 4113 1 4137
+G 1 4213 100
+G 1 4224 100
+*
+* Maintenance Workers
+M 0 4114 2 4115
+G 1 4208 100
+M 0 4114 1 4117
+M 0 4114 1 4119
+*
+* Clerks in administrative areas
+M 0 4115 1 4140
+G 1 4211 100
+M 0 4115 1 4141
+G 1 4210 100
+*
+* Quality Inspector
+M 0 4116 1 4126
+G 1 4213 100
+G 1 4212 100
+*
+* Factory Scientist
+M 0 4117 1 4109
+G 1 4209 30
+G 1 4223 20
+*
+* Factory Medic
+M 0 4118 1 4108
+G 1 4217 50
+*
+* Factory Cook
+M 0 4119 1 4107
+G 1 4225 100
+*
+* Patrol Guards - various locations
+M 0 4111 2 4102
+G 1 4204 100
+G 1 4216 100
+M 0 4111 2 4110
+G 1 4204 100
+G 1 4215 100
+M 0 4111 1 4120
+G 1 4205 100
+G 1 4206 100
+M 0 4111 2 4130
+G 1 4204 100
+G 1 4206 100
+M 0 4111 2 4135
+G 1 4205 100
+G 1 4206 100
+G 1 4214 100
+*
+* Core Area Guards - heavily armed
+M 0 4100 2 4136
+G 1 4205 100
+G 1 4206 100
+G 1 4214 100
+G 1 4201 100
+M 0 4100 1 4137
+G 1 4205 100
+G 1 4206 100
+G 1 4214 100
+*
+* Automated Guardian at core
+M 0 4120 1 4136
+*
+* Automated Guardian at restricted storage
+M 0 4120 1 4145
+*
+* Zodangan Spy (hidden in factory)
+M 0 4108 1 4116
+G 1 4215 100
+G 1 4216 100
+*
+* Rogue Warriors (intruders)
+M 0 4109 1 4115
+G 1 4204 50
+G 1 4216 100
+M 0 4109 1 4117
+G 1 4204 50
+*
+* Professional Assassin (rare, dangerous)
+M 0 4110 1 4119
+G 1 4215 100
+G 1 4216 100
+G 1 4221 20
+*
+* Ground spawns - tools and equipment in workshop
+O 0 4208 3 4112
+O 0 4218 2 4112
+O 0 4219 2 4112
+*
+* Ground spawns - manuals in library
+O 0 4209 2 4109
+O 0 4210 5 4109
+O 0 4223 1 4109
+*
+* Ground spawns - equipment in guard armory
+O 0 4204 5 4104
+O 0 4205 5 4104
+O 0 4206 5 4104
+O 0 4207 5 4104
+O 0 4215 3 4104
+O 0 4216 5 4104
+*
+* Ground spawns - protective gear near core
+O 0 4214 3 4135
+O 0 4217 2 4135
+O 0 4220 2 4135
+*
+* Ground spawns - diagnostic equipment
+O 0 4213 2 4125
+O 0 4213 1 4137
+*
+* Ground spawns - rations in mess hall
+O 0 4225 10 4107
+*
+* Ground spawns - communications
+O 0 4224 3 4101
+O 0 4224 2 4125
+*
+* Ground spawns - samples and research materials
+O 0 4212 3 4126
+O 0 4221 1 4145
+O 0 4222 2 4136
+*
+* Ground spawns - keys in secure locations
+O 0 4200 1 4103
+O 0 4201 1 4137
+O 0 4203 1 4145
+*
+* Ground spawns - emergency supplies in shelter
+O 0 4225 15 4149
+O 0 4217 5 4149
+O 0 4204 8 4149
+O 0 4205 8 4149
+O 0 4206 8 4149
+*
+* Put keys on key NPCs
+M 0 4101 1 4144
+G 1 4200 100
+G 1 4202 100
+G 1 4204 100
+G 1 4206 100
+G 1 4224 100
+*
+S
+$~
