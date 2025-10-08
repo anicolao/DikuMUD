@@ -1,0 +1,11 @@
+zone:
+  number: 0
+  name: system
+  top_room: 0
+  lifespan: 0
+  reset_mode: 0
+rooms: []
+mobiles: []
+objects: []
+resets: []
+shops: []

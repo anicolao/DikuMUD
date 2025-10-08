@@ -1,0 +1,4326 @@
+zone:
+  number: 40
+  name: Thark Territory
+  top_room: 4099
+  lifespan: 40
+  reset_mode: 2
+rooms:
+- vnum: 4000
+  name: The Main Plaza
+  description: '   You stand in the vast main plaza of the ancient Thark city. Towering
+    ruins
+
+    of massive stone structures surround you on all sides, their once-smooth walls
+
+    now cracked and weathered by countless Martian sandstorms. In the center of
+
+    the plaza stands a colossal statue of an ancient Thark chieftain, his four
+
+    arms raised in a gesture of defiance. Green Martian warriors mill about,
+
+    their fifteen-foot frames casting long shadows in the reddish sunlight.'
+  zone: 40
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: You see the Council Chambers where Jeddak Tars Tarkas holds court.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4001
+  - direction: 1
+    description: The warrior compounds lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4010
+  - direction: 2
+    description: The arena entrance is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4007
+  - direction: 3
+    description: You see the ancient ruins stretching westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4030
+  extra_descriptions: []
+- vnum: 4001
+  name: Antechamber of the Council
+  description: '   This broad chamber serves as the entrance to the Council Chambers
+    of the
+
+    Thark horde. The walls are lined with battle trophies - skulls of defeated
+
+    enemies, captured weapons, and torn standards. Several Thark guards stand
+
+    watch, their massive forms blocking most of the light from the plaza.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Council Hall lies ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4002
+  - direction: 2
+    description: The plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  extra_descriptions: []
+- vnum: 4002
+  name: The Council Hall
+  description: '   This enormous hall once served as the throne room for the ancient
+
+    civilization that built this city. Now it houses the council of Thark
+
+    chieftains. Crude stone benches line the walls, and a raised dais at
+
+    the northern end holds Tars Tarkas''s seat of power. The ceiling soars
+
+    high overhead, supported by crumbling pillars.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: You see the Jeddak's throne room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4003
+  - direction: 2
+    description: The antechamber is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4001
+  extra_descriptions: []
+- vnum: 4003
+  name: Throne Room of the Jeddak
+  description: '   This is the private chamber of Tars Tarkas, Jeddak of the Tharks.
+    The
+
+    room is surprisingly austere - a single massive stone throne dominates the
+
+    space, its surface worn smooth by centuries of use. Maps of Thark territory
+
+    cover one wall, marked with the positions of rival hordes and red Martian
+
+    cities. Tars Tarkas himself stands here, a towering figure of green muscle
+
+    and battle scars.'
+  zone: 40
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The Council Hall lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4002
+  extra_descriptions: []
+- vnum: 4004
+  name: Entrance to the Incubator
+  description: '   You stand before the sacred Incubator building. Two massive Thark
+    guards
+
+    block the doorway, their faces set in stern expressions. The entrance is
+
+    carved from a single piece of ancient stone, covered in worn glyphs that
+
+    predate even the Tharks'' occupation of this city. This is one of the most
+
+    sacred places in Thark society - where the eggs of the horde incubate for
+
+    five long years before hatching.'
+  zone: 40
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The Incubator chamber lies beyond the guards.
+    keywords: door heavy
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4005
+  - direction: 2
+    description: The plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  extra_descriptions: []
+- vnum: 4005
+  name: The Incubator Chamber
+  description: '   The temperature here is carefully controlled, warmer than the rest
+    of the
+
+    city. Rows of large, leathery eggs rest in shallow depressions carved into
+
+    the floor, each the size of a man''s torso. Soft moss cushions them, and a
+
+    faint glow emanates from specially placed radium heaters. The chamber is
+
+    eerily quiet save for the occasional creak of a shifting egg. Sarkoja, the
+
+    stern matriarch, watches over them with fierce devotion.'
+  zone: 40
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The inner sanctum lies ahead.
+    keywords: door heavy
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4006
+  - direction: 2
+    description: The entrance is to the south.
+    keywords: door heavy
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4004
+  extra_descriptions: []
+- vnum: 4006
+  name: Inner Sanctum of the Incubator
+  description: '   This small chamber holds the most recently laid eggs, those less
+    than a
+
+    year into their incubation period. The walls are covered in ancient carvings
+
+    depicting the birth and growth cycles of green Martians. Only Sarkoja and
+
+    the most trusted matriarchs are normally permitted here. The sanctity of
+
+    this place is palpable.'
+  zone: 40
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The main incubator chamber is to the south.
+    keywords: door heavy
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4005
+  extra_descriptions: []
+- vnum: 4007
+  name: Arena Entrance
+  description: '   You stand at the entrance to the Thark arena, where warriors prove
+    their
+
+    prowess and settle disputes through combat. The arena is carved from the
+
+    natural depression in the ancient city''s floor, with crumbling stone seats
+
+    rising in tiers around the combat floor. Bloodstains darken the ochre sand
+
+    beneath your feet - some fresh, others ancient.'
+  zone: 40
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  - direction: 1
+    description: The combat floor lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4008
+  extra_descriptions: []
+- vnum: 4008
+  name: The Arena Floor
+  description: '   You stand on the combat floor of the arena. The ground is packed
+    ochre
+
+    sand, stained dark in places with the blood of countless combats. Towering
+
+    walls rise around you on all sides, carved with scenes of ancient battles.
+
+    The tiers of seating above can hold hundreds of green Martians, all watching
+
+    as warriors clash below. This is where Tharks prove their worth.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The arena entrance is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4007
+  - direction: 2
+    description: The warrior preparation area is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4009
+  extra_descriptions: []
+- vnum: 4009
+  name: Warrior Preparation Chamber
+  description: '   This chamber beneath the arena floor is where warriors prepare
+    for combat.
+
+    Weapon racks line the walls, holding swords, spears, and ancient maces. A
+
+    crude table holds bandages and medical supplies - more for show than actual
+
+    use, as Tharks believe wounds are badges of honor. The air smells of sweat,
+
+    leather, and blood.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The arena floor is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4008
+  extra_descriptions: []
+- vnum: 4010
+  name: First Warrior Compound Entrance
+  description: '   This is the entrance to the first warrior compound, housing some
+    of the
+
+    most elite Thark warriors. The compound occupies several connected chambers
+
+    of the ancient ruins. Weapons and armor are stacked near the entrance, and
+
+    you can hear the sounds of warriors within - sharpening blades, repairing
+
+    harnesses, and speaking in their guttural language.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The warrior barracks lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4011
+  - direction: 3
+    description: The main plaza is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  - direction: 2
+    description: More compounds lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4015
+  extra_descriptions: []
+- vnum: 4011
+  name: First Warrior Barracks
+  description: '   This large chamber serves as the sleeping quarters for a dozen
+    Thark
+
+    warriors. Simple sleeping platforms line the walls, each piled with rough
+
+    furs and leather. Weapons hang above each platform, ready to hand. The air
+
+    is thick with the smell of warriors - sweat, leather oil, and the faint
+
+    metallic tang of blood.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: A weapons storage area is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4012
+  - direction: 2
+    description: The compound entrance is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4010
+  extra_descriptions: []
+- vnum: 4012
+  name: Weapons Storage
+  description: '   This chamber is filled with weapons of all types - massive longswords
+
+    that would be two-handed weapons for a red Martian, heavy radium rifles,
+
+    spears with wicked barbed points, and ancient maces carved from meteorite
+
+    iron. Everything is sized for the fifteen-foot frames of green Martians.
+
+    The walls are scarred with practice strikes.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The Warrior Guild training area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4013
+  - direction: 2
+    description: The barracks are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4011
+  extra_descriptions: []
+- vnum: 4013
+  name: Warrior Guild Training Hall
+  description: '   This vast chamber has been cleared of debris to create a training
+    space
+
+    for Thark warriors. The floor is marked with combat circles, and practice
+
+    weapons hang on the walls. The Thark Warrior Guildmaster stands here, a
+
+    massive specimen even by green Martian standards. His four arms move through
+
+    combat forms with deadly precision as he instructs younger warriors.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A common area lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4014
+  - direction: 3
+    description: The weapons storage is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4012
+  extra_descriptions: []
+- vnum: 4014
+  name: Common Area
+  description: '   This chamber serves as a gathering space for the warrior compound.
+    Crude
+
+    stone benches are arranged in a circle, and a fire pit in the center provides
+
+    warmth during the cold Martian nights. Warriors gather here to share stories
+
+    of battle, plan raids, and maintain their equipment. Trophy skulls line one
+
+    wall - mostly from banths and white apes, with a few from enemy green Martians.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The training hall is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4013
+  - direction: 2
+    description: You see the second warrior compound to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4015
+  extra_descriptions: []
+- vnum: 4015
+  name: Second Warrior Compound Entrance
+  description: '   This entrance leads to the second warrior compound, housing chieftains
+    and
+
+    more experienced warriors. The doorway is carved with crude but powerful
+
+    symbols of Thark authority. Inside, you can see the forms of massive green
+
+    Martians moving about their business.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The first compound is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4010
+  - direction: 1
+    description: The living quarters are to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4016
+  - direction: 2
+    description: The third compound is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4020
+  extra_descriptions: []
+- vnum: 4016
+  name: Chieftain Quarters
+  description: '   This chamber houses several Thark chieftains, each with their own
+    sleeping
+
+    platform and weapon racks. The furs here are slightly better quality than in
+
+    the common warrior barracks, and the walls are decorated with more elaborate
+
+    battle trophies. These warriors have earned their place through countless
+
+    battles and displays of leadership.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The Noble Guild hall is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4017
+  - direction: 3
+    description: The compound entrance is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4015
+  extra_descriptions: []
+- vnum: 4017
+  name: Noble Guild Hall
+  description: '   This chamber serves as the Noble Guild of the Tharks, though "noble"
+    means
+
+    something different for green Martians than for red Martians. Here, chieftains
+
+    and potential leaders learn the arts of command, strategy, and the complex
+
+    tribal customs that govern Thark society. The Thark Noble Guildmaster stands
+
+    here, scarred but wise, teaching younger chieftains the ways of leadership.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A meeting chamber lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4018
+  - direction: 3
+    description: The chieftain quarters are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4016
+  extra_descriptions: []
+- vnum: 4018
+  name: Meeting Chamber
+  description: '   This smaller chamber is used for private councils and discussions
+    among
+
+    chieftains. Maps of Thark territory and neighboring regions are scratched
+
+    into stone tablets propped against the walls. A crude table in the center
+
+    holds captured items - red Martian weapons, Warhoon standards, and other
+
+    curiosities.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A storage area lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4019
+  - direction: 3
+    description: The Noble Guild hall is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4017
+  extra_descriptions: []
+- vnum: 4019
+  name: Equipment Storage
+  description: '   This chamber holds harnesses, spare weapons, and other equipment
+    reserved
+
+    for chieftains. The quality is noticeably better than standard warrior gear,
+
+    with more elaborate metalwork and stronger leather. Everything is still sized
+
+    for the massive green Martian frame.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The meeting chamber is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4018
+  extra_descriptions: []
+- vnum: 4020
+  name: Third Warrior Compound Entrance
+  description: '   This compound houses younger warriors and those still proving themselves
+
+    to the horde. The entrance is less decorated than the others, and you can
+
+    hear the sounds of training - the clash of practice weapons and guttural
+
+    shouts of instruction.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The second compound is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4015
+  - direction: 1
+    description: The training area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4021
+  - direction: 2
+    description: The thoat pens are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4025
+  extra_descriptions: []
+- vnum: 4021
+  name: Junior Warriors Training Area
+  description: '   This chamber is dedicated to training young Thark warriors. The
+    floor is
+
+    scarred with countless practice strikes, and simpler weapons line the walls.
+
+    Several young Tharks practice combat forms under the watchful eye of an
+
+    older warrior instructor. They are already ten feet tall or more, but still
+
+    have the awkwardness of youth.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A practice range lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4022
+  - direction: 3
+    description: The compound entrance is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4020
+  extra_descriptions: []
+- vnum: 4022
+  name: Radium Rifle Practice Range
+  description: '   This long chamber has targets set up at the far end - crude representations
+
+    of red Martians, white apes, and enemy green Martians. Young warriors practice
+
+    with radium rifles here, the deadly weapons requiring careful handling. Scorch
+
+    marks on the walls show where shots have gone astray.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The school entrance is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4023
+  - direction: 3
+    description: The training area is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4021
+  extra_descriptions: []
+- vnum: 4023
+  name: Thark School Entrance
+  description: '   This chamber serves as a school for the youngest Tharks - those
+    recently
+
+    hatched or still growing into their full size. Unlike red Martian schools
+
+    with books and gentle instruction, this place teaches survival, combat, and
+
+    the harsh realities of life on dying Mars. Young Tharks, five to ten feet
+
+    tall, learn the skills they''ll need to survive.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The main schoolroom is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4024
+  - direction: 3
+    description: The practice range is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4022
+  extra_descriptions: []
+- vnum: 4024
+  name: Thark Schoolroom
+  description: '   This chamber echoes with the guttural sounds of young green Martians
+
+    learning their language and customs. An older Thark warrior teaches them
+
+    about weapons, hunting, the territories of various hordes, and basic survival.
+
+    The students range from small (by Thark standards) five-foot hatchlings to
+
+    gangly ten-foot youths beginning to show the massive build they''ll eventually
+
+    achieve. Practice weapons scaled to their size lean against the walls.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The school entrance is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4023
+  extra_descriptions: []
+- vnum: 4025
+  name: Thoat Pen Entrance
+  description: '   You stand at the entrance to the thoat pens, where the eight-legged
+    riding
+
+    beasts of the Tharks are kept. The smell is overwhelming - a mixture of beast,
+
+    dung, and the dried ochre moss that serves as their food. You can hear the
+
+    bellowing of thoats from within, along with the harsh commands of their handlers.'
+  zone: 40
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The third warrior compound is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4020
+  - direction: 1
+    description: The main pens are to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4026
+  - direction: 2
+    description: More pens lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4027
+  extra_descriptions: []
+- vnum: 4026
+  name: Main Thoat Pens
+  description: '   This large corral holds several domesticated thoats, the massive
+    eight-legged
+
+    beasts that serve as mounts for the Tharks. Each beast stands eight to ten feet
+
+    tall at the shoulder, with slate-gray hide and powerful legs. They are restless,
+
+    shifting and bellowing, their eyes rolling at the approach of strangers. Only
+
+    the presence of Thark handlers keeps them from stampeding.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: You see wild thoats in that pen.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4028
+  - direction: 3
+    description: The entrance is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4025
+  extra_descriptions: []
+- vnum: 4027
+  name: Southern Thoat Pens
+  description: '   These pens hold younger thoats and those being broken to the saddle.
+    The
+
+    beasts here are smaller but no less aggressive, fighting against their restraints
+
+    and snapping at anyone who comes close. Several Thark beast handlers work with
+
+    them, using a combination of force and patience to turn wild beasts into mounts.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The main pens are to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4025
+  - direction: 1
+    description: The tack room is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4029
+  extra_descriptions: []
+- vnum: 4028
+  name: Wild Thoat Holding Pen
+  description: '   This heavily reinforced pen holds wild thoats fresh from the dead
+    sea bottom.
+
+    The beasts are furious, charging the walls and bellowing their rage. Their eyes
+
+    are wild with fear and anger. These are the most dangerous - some will be broken
+
+    to service, others will prove untamable and be released or slaughtered for meat.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The main pens are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4026
+  extra_descriptions: []
+- vnum: 4029
+  name: Thoat Tack and Saddle Room
+  description: '   This chamber stores all the equipment needed for thoats - massive
+    saddles
+
+    designed for their eight-legged gait, strong leather reins, and the various
+
+    harnesses and bags used for travel. Everything is sized for creatures the size
+
+    of elephants and built to withstand harsh treatment. A Thark beast handler
+
+    works here, maintaining and repairing the equipment.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The southern pens are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4027
+  extra_descriptions: []
+- vnum: 4030
+  name: Eastern Ancient Ruins
+  description: '   You stand among the crumbling ruins of the ancient civilization
+    that once
+
+    inhabited this city. Massive stone blocks lie tumbled about, some carved with
+
+    worn hieroglyphs in a language lost even to the Tharks. Portions of walls
+
+    still stand, reaching toward the rust-red sky. These ruins are dangerous -
+
+    structures could collapse at any moment, and who knows what lurks in the
+
+    shadows?'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The main plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  - direction: 0
+    description: More ruins lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4031
+  - direction: 2
+    description: You see a collapsed temple to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4032
+  extra_descriptions: []
+- vnum: 4031
+  name: Collapsed Colonnade
+  description: '   This was once a grand colonnade, but the roof has long since collapsed,
+
+    leaving only stumps of massive pillars and heaps of rubble. Some of the
+
+    debris has been cleared by the Tharks for use elsewhere, but most remains
+
+    as it fell centuries or millennia ago. Small desert creatures have made
+
+    homes in the crevices.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The northern ruins lie ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4033
+  - direction: 2
+    description: More eastern ruins are to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4030
+  extra_descriptions: []
+- vnum: 4032
+  name: Collapsed Temple Structure
+  description: '   This was clearly a temple of some kind - the remains of an altar
+    can still
+
+    be seen beneath fallen stones, and faded murals peek through the dust on
+
+    standing sections of wall. The Tharks show no interest in this place, viewing
+
+    it as mere rubble. Perhaps they are right, or perhaps secrets remain buried here.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern ruins are to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4030
+  extra_descriptions: []
+- vnum: 4033
+  name: Northern Ruins - Old Marketplace
+  description: '   The layout of this area suggests it was once a marketplace - you
+    can see
+
+    the remains of stone counters and stalls arranged in orderly rows. Now it is
+
+    simply more ruins, picked over by generations of green Martians for anything
+
+    useful. The wind whistles through the broken structures, creating an eerie
+
+    moan.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: A ruined plaza lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4034
+  - direction: 2
+    description: The collapsed colonnade is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4031
+  extra_descriptions: []
+- vnum: 4034
+  name: Ruined Plaza
+  description: '   This circular plaza was clearly important to the original city
+    - it is
+
+    perfectly circular and paved with fitted stones that have withstood the
+
+    ages remarkably well. A few broken pillars rise around its circumference.
+
+    The Tharks avoid this place, claiming it is haunted, though whether they
+
+    mean spirits or more physical dangers is unclear.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: More northern ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4035
+  - direction: 3
+    description: The old marketplace is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4033
+  extra_descriptions: []
+- vnum: 4035
+  name: Crumbling Dwelling Complex
+  description: '   These appear to be the remains of ancient residences - multiple
+    chambers
+
+    connected by narrow passages, now mostly collapsed. You can see the remnants
+
+    of hearths, sleeping platforms, and storage niches. The original inhabitants
+
+    were clearly not as large as green Martians, closer to red Martian size.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: A ruined plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4034
+  - direction: 1
+    description: The western ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4036
+  extra_descriptions: []
+- vnum: 4036
+  name: Western Ruins - Old Residential District
+  description: '   This section of ruins was clearly a residential area. Crumbling
+    walls
+
+    outline what were once homes - some small, some large and elaborate. The
+
+    Tharks have stripped away anything useful long ago, leaving only stone
+
+    shells. Strange echoes bounce through the ruins, making it feel like the
+
+    ghosts of the ancient residents still linger here.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: More western ruins lie ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4035
+  - direction: 2
+    description: A collapsed mansion lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4037
+  extra_descriptions: []
+- vnum: 4037
+  name: Collapsed Mansion
+  description: '   This was clearly the home of someone important in the ancient city.
+    The
+
+    scale is larger than surrounding buildings, and you can see traces of fine
+
+    carving on the remaining walls. A grand staircase leads nowhere, its upper
+
+    floors long since fallen. The basement levels might still be intact, but
+
+    entering would be extremely dangerous.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The residential district is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4036
+  - direction: 1
+    description: More ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4038
+  extra_descriptions: []
+- vnum: 4038
+  name: Ancient Workshop Area
+  description: '   The layout and remains here suggest this was a workshop district.
+    You can
+
+    see the remnants of forges, stone anvils, and work benches. Whatever crafts
+
+    were practiced here are lost to time, though the Tharks occasionally find
+
+    ancient metal tools in the rubble that are superior to anything they can make.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 3
+    description: The collapsed mansion is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4037
+  - direction: 2
+    description: The edge of the ruins is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4039
+  extra_descriptions: []
+- vnum: 4039
+  name: Edge of the Ancient City
+  description: '   You stand at the western edge of the ancient city ruins. Beyond
+    this point,
+
+    the structures give way entirely to the dead sea bottom - the endless ochre
+
+    plains of Mars stretching to the horizon. This is the boundary of Thark
+
+    territory, where their guards watch for intruders and where hunting parties
+
+    depart.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: More workshop ruins lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4038
+  extra_descriptions: []
+- vnum: 4040
+  name: Thark Trading Post
+  description: '   This chamber has been converted into a trading post where the Tharks
+
+    conduct business with outsiders. It is one of the few places in the city
+
+    that has been deliberately improved rather than just occupied - walls have
+
+    been repaired, a proper roof installed, and crude furniture arranged. A
+
+    pragmatic Thark trader runs the establishment, unusual among his kind for
+
+    his understanding of red Martian customs and willingness to barter.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The southern guard tower is visible to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4041
+  - direction: 0
+    description: You can see the main plaza to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  extra_descriptions: []
+- vnum: 4041
+  name: Southern Guard Tower
+  description: '   This tower overlooks the southern approaches to the Thark city,
+    providing
+
+    early warning of anyone approaching from the direction of Lesser Helium and
+
+    the dead sea bottom wilderness. The tower itself is ancient but has been
+
+    reinforced by the Tharks. From this height, you can see for miles across
+
+    the ochre plains. A Thark scout maintains watch here at all times.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The eastern tower is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4042
+  - direction: 3
+    description: The trading post is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4040
+  extra_descriptions: []
+- vnum: 4042
+  name: Eastern Guard Tower
+  description: '   This tower watches the eastern approaches, where the dead sea bottom
+
+    stretches endlessly toward the horizon. From here, scouts watch for white
+
+    apes, banths, and rival green Martian hordes. The tower offers a commanding
+
+    view of the surrounding territory, making it nearly impossible for anyone
+
+    to approach unseen.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The northern tower is ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4043
+  - direction: 2
+    description: The southern tower is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4041
+  extra_descriptions: []
+- vnum: 4043
+  name: Northern Guard Tower
+  description: '   This tower faces north toward Warhoon territory, the lands of the
+    Tharks''
+
+    traditional enemies. The scout stationed here is particularly vigilant, as
+
+    Warhoon raids could come at any time. The tower is scarred with old battle
+
+    damage - proof that it has been tested in the past. From here, you can see
+
+    the endless expanse of Mars stretching northward.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The western tower is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4044
+  - direction: 2
+    description: The eastern tower is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4042
+  extra_descriptions: []
+- vnum: 4044
+  name: Western Guard Tower
+  description: '   This tower overlooks the western ruins and the wilderness beyond.
+    It serves
+
+    as a lookout for hunting parties returning to the city and watches for any
+
+    threats approaching from the deep desert. The western wastelands are largely
+
+    empty, but banths and other predators sometimes wander this close to the city.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The northern tower is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4043
+  - direction: 2
+    description: The central watchtower is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4045
+  extra_descriptions: []
+- vnum: 4045
+  name: Central Watchtower
+  description: '   This is the tallest structure still standing in the ancient city,
+    rising
+
+    high above even the plaza. From its top, all of Thark territory is visible
+
+    in every direction. The tower serves as the command post for the city''s
+
+    defense, and Thark signal fires can be lit here to summon warriors from the
+
+    hunting grounds. The view is breathtaking - the entire dead sea bottom laid
+
+    out like a map.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The western tower is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4044
+  extra_descriptions: []
+- vnum: 4046
+  name: Southern Gate - Interior
+  description: '   You stand inside the southern gate of the Thark city, the main
+    entrance
+
+    for anyone approaching from the direction of Lesser Helium. The gate itself
+
+    is ancient, carved from massive stones, though the Tharks have reinforced it
+
+    with heavy wooden beams and metal bars. Guards are always present here,
+
+    checking anyone who enters or leaves.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The main plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  - direction: 2
+    description: The gate leads outside the city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4047
+  extra_descriptions: []
+- vnum: 4047
+  name: Southern Gate - Exterior
+  description: '   You stand just outside the southern gate of the Thark city. From
+    here, the
+
+    dead sea bottom stretches away to the south, its ochre moss swaying in the
+
+    thin Martian breeze. The journey to Lesser Helium lies days of travel in that
+
+    direction, across dangerous wilderness filled with predators and other threats.
+
+    The massive walls of the ancient city loom behind you, and Thark guards watch
+
+    from above.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The gate leads into the Thark city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4046
+  - direction: 2
+    description: The dead sea bottom wilderness lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3764
+  extra_descriptions: []
+- vnum: 4048
+  name: Northern Gate - Interior
+  description: '   This gate faces north toward Warhoon territory and other hostile
+    regions.
+
+    It sees less peaceful traffic than the southern gate and more preparation for
+
+    war. Weapon racks line the walls, and Thark warriors are always ready to sortie
+
+    through this gate at a moment''s notice. The air here feels tense, watchful.'
+  zone: 40
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The gate leads north into dangerous territory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4049
+  - direction: 2
+    description: The main plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
+  extra_descriptions: []
+- vnum: 4049
+  name: Northern Gate - Exterior
+  description: '   You stand outside the northern gate of the Thark city. The dead
+    sea bottom
+
+    stretches away to the north, but this direction leads toward Warhoon territory
+
+    and other hostile green Martian hordes. The Tharks maintain constant patrols in
+
+    this direction, and the ochre plains are marked with signs of recent skirmishes.
+
+    This is not a safe direction to travel without a good reason.'
+  zone: 40
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: The gate leads back into the Thark city.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4048
+  extra_descriptions: []
+mobiles:
+- vnum: 4050
+  namelist: tars tarkas jeddak thark leader
+  short_desc: Tars Tarkas, Jeddak of the Tharks
+  long_desc: Tars Tarkas, the mighty Jeddak of the Tharks, stands here radiating power
+    and authority.
+  detailed_desc: 'This towering green Martian stands nearly fifteen feet tall, his
+    four muscular arms
+
+    ending in powerful hands. His green skin is crisscrossed with countless battle
+    scars,
+
+    each one a testament to his years of warfare. His face, while alien with its tusks
+    and
+
+    massive jaw, shows intelligence and wisdom uncommon among green Martians. His
+    eyes meet
+
+    yours with a directness that speaks of his friendship with John Carter and his
+    unusual
+
+    respect for smaller races. He is Jeddak - supreme chieftain - of one of Mars''
+    most
+
+    powerful hordes, and his presence commands instant obedience from all Tharks.'
+  action_flags: 2
+  affection_flags: 128
+  alignment: 1000
+  type: simple
+  simple:
+    level: 25
+    thac0: 0
+    ac: 0
+    hp_dice: 8d10+600
+    damage_dice: 4d8+8
+    gold: 50000
+    experience: 150000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4051
+  namelist: sola daughter tars tarkas
+  short_desc: Sola
+  long_desc: Sola, daughter of Tars Tarkas, stands here with kind eyes.
+  detailed_desc: 'Sola is unusual among green Martians - she stands fourteen feet
+    tall with the typical
+
+    green skin and four arms of her race, but her eyes hold a compassion rarely seen
+    among
+
+    the harsh Tharks. Her lighter green skin tone and more delicate build mark her
+    as female.
+
+    She was the one who befriended John Carter when he first came to Mars, teaching
+    him the
+
+    Thark language and customs. Her kindness nearly cost her life more than once,
+    but under
+
+    her father''s protection, she thrives. She wears a simple leather harness decorated
+    with
+
+    small ornaments.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+300
+    damage_dice: 3d8+4
+    gold: 20000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 4052
+  namelist: sarkoja matriarch guard incubator
+  short_desc: Sarkoja
+  long_desc: Sarkoja, the stern matriarch, guards this place with fierce devotion.
+  detailed_desc: 'This ancient green Martian female stands twelve feet tall, her body
+    bent slightly with
+
+    age but still powerfully built. Her green skin is darker and more weathered than
+    younger
+
+    Tharks, and her four arms are corded with muscle despite her advanced years. Her
+    face is
+
+    set in a permanent scowl, and her eyes are hard and merciless. She represents
+    the old
+
+    ways of the Tharks - harsh, unforgiving, and utterly devoted to the survival of
+    the horde.
+
+    She has guarded the Incubator for decades and will not hesitate to kill anyone
+    who
+
+    threatens the eggs in her care.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 24
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+400
+    damage_dice: 3d8+5
+    gold: 25000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 4053
+  namelist: chieftain warrior thark leader
+  short_desc: a Thark Chieftain
+  long_desc: A Thark chieftain stands here, reviewing battle plans.
+  detailed_desc: 'This massive green Martian stands fourteen feet tall with the four
+    arms and tusks typical
+
+    of his race. His green skin bears the scars of numerous battles, and his harness
+    is
+
+    decorated with trophies from defeated enemies. He holds a position of authority
+    within
+
+    the horde, commanding several hundred warriors. His eyes are alert and intelligent,
+
+    constantly assessing threats and opportunities. He carries both a longsword and
+    radium
+
+    rifle.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 23
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+280
+    damage_dice: 3d8+3
+    gold: 18000
+    experience: 85000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4054
+  namelist: chieftain warrior thark council
+  short_desc: a Thark Council Member
+  long_desc: A member of the Thark council stands here in discussion.
+  detailed_desc: 'This green Martian warrior has earned his place on the council through
+    decades of service
+
+    to the horde. Standing thirteen feet tall with four powerful arms, he wears an
+    elaborate
+
+    harness that marks his status. His green skin shows the pale scars of countless
+    battles,
+
+    and his tusks are longer than most. He speaks with authority on matters of war,
+    hunting,
+
+    and tribal custom.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 22
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+260
+    damage_dice: 3d8+3
+    gold: 16000
+    experience: 80000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4055
+  namelist: chieftain warrior thark veteran
+  short_desc: a Veteran Thark Warrior
+  long_desc: A veteran Thark warrior stands ready for battle.
+  detailed_desc: 'This experienced green Martian has survived countless battles and
+    raids. Standing thirteen
+
+    feet tall with green skin marked by numerous scars, his four arms are heavily
+    muscled from
+
+    years of combat. He wears a simple but well-maintained harness and carries weapons
+    that
+
+    have tasted blood many times. His eyes hold the cold calculation of a seasoned
+    fighter.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 21
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+240
+    damage_dice: 3d6+3
+    gold: 14000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4056
+  namelist: guildmaster warrior thark master
+  short_desc: the Thark War Master
+  long_desc: The Thark War Master stands here, teaching combat techniques.
+  detailed_desc: 'This massive green Martian is one of the greatest warriors of the
+    Thark horde. Standing
+
+    fifteen feet tall with four arms of pure muscle, his green skin is a tapestry
+    of battle
+
+    scars. Each of his four hands can wield a weapon with deadly precision, and he
+    has
+
+    mastered the art of four-armed combat that makes green Martians so fearsome. His
+    tusks
+
+    are decorated with metal rings denoting rank, and his harness holds numerous weapons.
+
+    He trains the finest Thark warriors, teaching them techniques passed down through
+
+    generations of warfare. His presence commands respect even from the most savage
+    warriors.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 24
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+440
+    damage_dice: 3d8+4
+    gold: 8794
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4057
+  namelist: guildmaster noble thark chieftain leader
+  short_desc: the Thark Chieftain Master
+  long_desc: The Thark Chieftain Master stands here, radiating leadership.
+  detailed_desc: 'This ancient green Martian has survived more battles than you can
+    count. Standing fourteen
+
+    feet tall with four powerful arms, his green skin is pale with age and covered
+    in scars
+
+    from decades of warfare. But his eyes hold keen intelligence and wisdom - he has
+    led
+
+    warriors, made treaties, and guided the horde through times of plenty and famine.
+    He
+
+    teaches young chieftains the arts of leadership, strategy, and the complex web
+    of tribal
+
+    customs that govern green Martian society. His harness is decorated with tokens
+    from
+
+    numerous victories, and his presence commands instant respect. Under his guidance,
+    the
+
+    future leaders of the Thark horde learn to think as well as fight.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 24
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+440
+    damage_dice: 3d8+4
+    gold: 8794
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4060
+  namelist: warrior thark male fighter
+  short_desc: a Thark Warrior
+  long_desc: A Thark warrior stands here, weapons ready.
+  detailed_desc: 'This green Martian warrior stands twelve to thirteen feet tall,
+    his four arms heavily
+
+    muscled and scarred from combat. His green skin is marked with tribal tattoos
+    and battle
+
+    wounds. He wears a simple leather harness and carries a longsword and radium rifle.
+    His
+
+    tusks jut from his jaw, and his eyes hold the fierce pride of a Thark warrior.
+    Like all
+
+    his kind, he lives for battle and views courage and strength as the highest virtues.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+200
+    damage_dice: 2d8+6
+    gold: 10000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4061
+  namelist: warrior thark male guard
+  short_desc: a Thark Guard
+  long_desc: A Thark guard watches this area with alert eyes.
+  detailed_desc: 'This green Martian warrior has been assigned guard duty, watching
+    for threats and
+
+    intruders. Standing thirteen feet tall with four powerful arms, his green skin
+    is scarred
+
+    from previous battles. He is fully armed and armored, ready to sound the alarm
+    at the
+
+    first sign of danger. His eyes constantly scan the area, missing nothing.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 21
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+220
+    damage_dice: 2d8+7
+    gold: 11000
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4062
+  namelist: warrior thark male patrol
+  short_desc: a Thark Scout
+  long_desc: A Thark scout patrols this area.
+  detailed_desc: 'This green Martian is smaller than most Tharks at twelve feet, but
+    faster and more agile.
+
+    His four arms are lean but strong, and his green skin is marked with camouflage
+    patterns
+
+    of darker green. He carries lighter weapons than standard warriors and moves with
+    quiet
+
+    efficiency. His role is to patrol the territory, hunt for food, and watch for
+    enemies.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 19
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+180
+    damage_dice: 2d6+5
+    gold: 9000
+    experience: 55000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4063
+  namelist: warrior thark male hunter
+  short_desc: a Thark Hunter
+  long_desc: A Thark hunter prepares for the hunt.
+  detailed_desc: 'This green Martian specializes in hunting the dangerous beasts of
+    the dead sea bottom.
+
+    Standing twelve feet tall with four strong arms, his green skin is marked with
+    the scars
+
+    of battles against banths and white apes. He carries weapons designed for bringing
+    down
+
+    large prey and wears a harness with loops for carrying meat back to the city.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+160
+    damage_dice: 2d6+4
+    gold: 8000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4064
+  namelist: female thark warrior woman
+  short_desc: a Thark Female Warrior
+  long_desc: A Thark female warrior stands ready for combat.
+  detailed_desc: 'This green Martian female stands twelve feet tall, slightly smaller
+    and more lightly
+
+    built than the males, but no less dangerous. Her four arms are lean and strong,
+    and her
+
+    green skin is marked with battle scars. Female Tharks are warriors in their own
+    right,
+
+    and this one has proven herself in numerous battles. Her eyes hold the same fierce
+    pride
+
+    as any male warrior.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 19
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+180
+    damage_dice: 2d6+5
+    gold: 9000
+    experience: 55000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 4065
+  namelist: female thark guard matriarch
+  short_desc: a Thark Matriarch
+  long_desc: A Thark matriarch watches over this place.
+  detailed_desc: 'This ancient green Martian female stands eleven feet tall, her body
+    showing the signs of
+
+    age but still powerful. Her four arms are scarred from decades of fighting, and
+    her green
+
+    skin is weathered and tough. She holds a position of respect within the horde,
+    responsible
+
+    for raising young Tharks and maintaining tribal customs. Despite her age, she
+    remains a
+
+    formidable fighter.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+200
+    damage_dice: 2d8+6
+    gold: 10000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 4066
+  namelist: thark incubator guard
+  short_desc: an Incubator Guard
+  long_desc: A Thark warrior guards the Incubator entrance.
+  detailed_desc: 'This massive green Martian has been assigned the sacred duty of
+    guarding the Incubator.
+
+    Standing fourteen feet tall with four powerful arms, he is one of the largest
+    and most
+
+    trusted warriors in the horde. His green skin is covered in scars, and his eyes
+    never
+
+    leave the entrance. He will die before allowing any threat to reach the precious
+    eggs
+
+    inside. His orders are absolute: no one passes without Sarkoja''s permission.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 22
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+250
+    damage_dice: 3d8+3
+    gold: 15000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4067
+  namelist: thark arena guard warrior
+  short_desc: an Arena Guard
+  long_desc: A Thark guard watches the arena entrance.
+  detailed_desc: 'This green Martian warrior stands thirteen feet tall with four powerful
+    arms. He guards
+
+    the arena, ensuring that only authorized combats take place and that spectators
+    remain
+
+    orderly. His weapons are always at hand, and his scarred green skin shows he has
+    seen
+
+    plenty of combat both in and out of the arena.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+200
+    damage_dice: 2d8+6
+    gold: 10000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4068
+  namelist: thark tower scout watchman
+  short_desc: a Tower Scout
+  long_desc: A Thark scout maintains watch from this tower.
+  detailed_desc: 'This green Martian warrior has the keen eyes and quick reflexes
+    needed for tower duty.
+
+    Standing twelve feet tall with four arms, his green skin is marked with tribal
+    symbols.
+
+    He watches the approaches to the city constantly, ready to sound the alarm at
+    the first
+
+    sign of danger. He carries signal devices to alert other towers and knows every
+    inch of
+
+    the surrounding territory.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+160
+    damage_dice: 2d6+4
+    gold: 8000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4069
+  namelist: thark gate guard warrior
+  short_desc: a Gate Guard
+  long_desc: A Thark warrior guards the gate.
+  detailed_desc: 'This massive green Martian stands at the gate, checking all who
+    enter and leave the city.
+
+    Standing fourteen feet tall with four powerful arms, his green skin is heavily
+    scarred.
+
+    He is fully armed and armored, and his stance makes clear that no one passes without
+    his
+
+    approval. His eyes assess every traveler, looking for threats or valuable information.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 21
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+220
+    damage_dice: 2d8+7
+    gold: 11000
+    experience: 65000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4070
+  namelist: thark young warrior trainee
+  short_desc: a Young Thark Warrior
+  long_desc: A young Thark warrior practices combat forms.
+  detailed_desc: 'This green Martian is young by Thark standards, only ten to eleven
+    feet tall and still
+
+    growing into his full size. His four arms are developing muscle, and his green
+    skin is
+
+    relatively unmarked by scars. He trains constantly, eager to prove himself in
+    battle and
+
+    earn a place among the full warriors. His tusks are still short, and his movements
+    have
+
+    the awkwardness of youth, but he is already formidable by most standards.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 700
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+140
+    damage_dice: 2d6+3
+    gold: 6000
+    experience: 40000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4071
+  namelist: thark instructor trainer warrior
+  short_desc: a Thark Instructor
+  long_desc: A Thark warrior instructor trains young fighters here.
+  detailed_desc: 'This experienced green Martian stands thirteen feet tall with four
+    scarred arms. His role
+
+    is to train the next generation of Thark warriors, drilling them in combat forms,
+    weapon
+
+    handling, and survival skills. His green skin shows the marks of countless battles,
+    and
+
+    his eyes miss nothing. He is harsh but fair, pushing his students to their limits
+    but
+
+    never asking more than he himself could give. His voice booms across the training
+    area
+
+    as he shouts corrections and encouragement.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 22
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+250
+    damage_dice: 3d8+3
+    gold: 15000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4072
+  namelist: thark teacher school
+  short_desc: a Thark School Teacher
+  long_desc: A Thark warrior teaches the young here.
+  detailed_desc: 'This older green Martian stands twelve feet tall, his four arms
+    showing the scars and
+
+    weathering of age. He has seen more battles than the young Tharks can imagine,
+    and now
+
+    he passes his knowledge to the next generation. He teaches them language, hunting,
+
+    survival, and the harsh realities of life on Mars. His methods are brutal by red
+    Martian
+
+    standards - weakness is not tolerated - but effective. He prepares these young
+    Tharks
+
+    for a life of constant struggle.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+200
+    damage_dice: 2d8+6
+    gold: 10000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4077
+  namelist: thoat mount beast domesticated
+  short_desc: a Domesticated Thoat
+  long_desc: A massive eight-legged thoat stands here.
+  detailed_desc: 'This enormous beast stands eight feet tall at the shoulder and nearly
+    fifteen feet long.
+
+    Its slate-gray hide is thick and tough, marked with scars from life in the harsh
+    Martian
+
+    wilderness. Eight powerful legs support its massive frame, and its wide mouth
+    is filled
+
+    with grinding teeth for chewing ochre moss. While domesticated, it still has a
+    wild look
+
+    in its eyes and could be dangerous if provoked. It has been trained to carry a
+    Thark
+
+    rider and their equipment.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+160
+    damage_dice: 2d10+8
+    gold: 8000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4078
+  namelist: thoat wild beast aggressive
+  short_desc: a Wild Thoat
+  long_desc: A wild thoat bellows and stamps its eight legs.
+  detailed_desc: 'This massive beast has recently been captured from the dead sea
+    bottom and is far from
+
+    tame. Standing nine feet tall at the shoulder with slate-gray hide scarred from
+    fights
+
+    with predators, it is a terrifying sight. Its eight legs stamp the ground as it
+    bellows
+
+    its rage, and its eyes roll with fear and anger. It would take a skilled handler
+    to break
+
+    this beast to the saddle, and even then it might never be truly tame. It is extremely
+
+    dangerous and will attack if given the chance.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 20
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+200
+    damage_dice: 3d10+10
+    gold: 10000
+    experience: 60000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4079
+  namelist: thoat young calf beast
+  short_desc: a Young Thoat
+  long_desc: A young thoat stands here on unsteady legs.
+  detailed_desc: 'This young thoat is only six feet tall, still growing into the massive
+    size it will
+
+    eventually reach. Its slate-gray hide is smooth and unmarked, and its eight legs
+    are
+
+    still developing proper coordination. It is more tractable than adult thoats and
+    could
+
+    potentially be trained more easily, though it still requires an expert handler.
+    Its eyes
+
+    hold more curiosity than aggression, at least for now.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 12
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+80
+    damage_dice: 2d6+4
+    gold: 3000
+    experience: 25000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4080
+  namelist: calot watchbeast guard
+  short_desc: a Watchcalot
+  long_desc: A ten-legged calot watches this area alertly.
+  detailed_desc: 'This Martian watchbeast stands three feet tall at the shoulder,
+    with ten legs supporting
+
+    its muscular, hairless body. Its hide is dark and tough, and its wide mouth is
+    filled
+
+    with sharp teeth designed for rending flesh. Like a more aggressive, alien version
+    of a
+
+    guard dog, it has been trained to watch for intruders and alert its Thark masters.
+    Its
+
+    eyes follow your every movement, and a low growl rumbles in its throat.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 14
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+100
+    damage_dice: 2d6+6
+    gold: 4000
+    experience: 30000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4081
+  namelist: calot young pup beast
+  short_desc: a Young Calot
+  long_desc: A young calot gambols here on too many legs.
+  detailed_desc: 'This young calot is still a pup, standing only two feet tall with
+    ten stubby legs that
+
+    seem to get tangled with each other. Its hairless hide is smooth and unmarked,
+    and its
+
+    teeth are still small and not fully developed. Despite its youth, it already shows
+    the
+
+    aggressive nature of its species, snapping playfully at anything that moves. With
+    proper
+
+    training, it will grow into a loyal and fierce watchbeast.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 400
+  type: simple
+  simple:
+    level: 8
+    thac0: 0
+    ac: 0
+    hp_dice: 1d8+40
+    damage_dice: 1d6+3
+    gold: 1000
+    experience: 15000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4082
+  namelist: banth predator beast dangerous
+  short_desc: a Banth
+  long_desc: A massive ten-legged banth prowls here, its eyes gleaming with hunger.
+  detailed_desc: 'This apex predator of the Martian wilds stands six feet tall at
+    the shoulder and nearly
+
+    twelve feet long. Its ten powerful legs end in razor-sharp claws, and its mouth
+    is filled
+
+    with fangs designed for crushing bone. Its tawny hide is marked with darker ochre
+    stripes
+
+    that help it blend into the dead sea bottom. This particular banth has wandered
+    close to
+
+    the Thark city, possibly drawn by the smell of thoats. It is extremely dangerous
+    and will
+
+    attack on sight. Even Thark warriors respect the deadly power of a full-grown
+    banth.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 400
+  type: simple
+  simple:
+    level: 22
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+250
+    damage_dice: 3d10+12
+    gold: 15000
+    experience: 75000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4083
+  namelist: apt white ape beast monster
+  short_desc: a White Ape
+  long_desc: A massive white ape towers here, its four arms ending in claws.
+  detailed_desc: 'This terrifying creature stands fifteen feet tall with four powerful
+    arms ending in
+
+    vicious claws. Its white fur is matted and dirty, and its red eyes hold nothing
+    but
+
+    savage hunger. While roughly the size of a green Martian, it has no intelligence
+    beyond
+
+    animal cunning and serves no purpose but to kill and eat. It is one of the most
+    dangerous
+
+    predators on Mars, feared even by the Tharks. What one is doing this close to
+    the city
+
+    is unclear, but it represents a serious threat.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 300
+  type: simple
+  simple:
+    level: 24
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+350
+    damage_dice: 4d10+14
+    gold: 25000
+    experience: 100000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4084
+  namelist: zitidar beast enormous burden
+  short_desc: a Zitidar
+  long_desc: An enormous zitidar stands here like a living mountain.
+  detailed_desc: 'This massive beast of burden stands nearly twenty feet high at the
+    shoulder. Its gray hide
+
+    is thick as armor, and its eight legs are as thick as tree trunks. Unlike the
+    aggressive
+
+    thoats, zitidars are relatively docile and used by green Martians to haul the
+    heaviest
+
+    loads - siege equipment, building materials, and massive amounts of supplies.
+    This one
+
+    appears to have wandered away from its handlers. While not aggressive by nature,
+    its sheer
+
+    size makes it dangerous - one misstep from those enormous legs could crush a man
+    flat.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 500
+  type: simple
+  simple:
+    level: 23
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+300
+    damage_dice: 4d10+18
+    gold: 20000
+    experience: 90000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4085
+  namelist: sith beast flying predator
+  short_desc: a Sith
+  long_desc: A flying sith circles overhead, its shadow passing across you.
+  detailed_desc: 'This flying predator has a wingspan of nearly fifteen feet, with
+    leathery wings like a
+
+    bat and a body covered in dark feathers. Its beak is filled with sharp teeth,
+    and its
+
+    taloned feet can grasp and carry off prey. It normally feeds on smaller animals
+    of the
+
+    dead sea bottom, but it''s not above attacking lone travelers. It circles overhead,
+
+    watching for any sign of weakness or opportunity.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 400
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+140
+    damage_dice: 2d8+8
+    gold: 6000
+    experience: 40000
+    position: 8
+    default_position: 8
+    sex: 3
+- vnum: 4086
+  namelist: thark child young hatchling
+  short_desc: a Thark Hatchling
+  long_desc: A young Thark hatchling stands here, barely five feet tall.
+  detailed_desc: 'This young green Martian has only recently emerged from its egg.
+    Standing just five feet
+
+    tall with four thin arms, it already has the tusks and green skin of its race,
+    but its
+
+    proportions are different from adults - larger head, longer limbs relative to
+    body. Its
+
+    skin is unmarked by scars, and its eyes hold more curiosity than the cold calculation
+    of
+
+    older Tharks. It is learning the basics of language and survival, and despite
+    its small
+
+    size by Thark standards, it is already stronger than most adult red Martians.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 1d10+30
+    damage_dice: 1d6+2
+    gold: 500
+    experience: 8000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4087
+  namelist: thark child young student
+  short_desc: a Young Thark Student
+  long_desc: A young Thark, about seven feet tall, practices with a training weapon.
+  detailed_desc: 'This young green Martian stands seven feet tall and is still growing.
+    Its four arms are
+
+    developing muscle from constant training, and its green skin shows a few minor
+    scars from
+
+    practice battles. It wears a simple harness and carries weapons scaled to its
+    size. The
+
+    awkwardness of childhood is beginning to fade, replaced by the deadly grace that
+    will
+
+    mark it as a full warrior. It studies the ways of combat and survival with intense
+    focus.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 12
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+60
+    damage_dice: 1d8+3
+    gold: 1000
+    experience: 12000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4088
+  namelist: thark youth warrior young
+  short_desc: a Thark Youth
+  long_desc: A Thark youth, nearly nine feet tall, trains here.
+  detailed_desc: 'This young green Martian stands nine feet tall with four arms that
+    are beginning to show
+
+    real muscle development. Its green skin bears a few scars from training and minor
+    hunts.
+
+    It is on the cusp of adulthood by Thark standards, still under instruction but
+    beginning
+
+    to take on real responsibilities. Its movements show increasing coordination,
+    and its eyes
+
+    hold the fierce pride of an emerging warrior. Within a few more years, it will
+    be a full
+
+    member of the warrior caste.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 600
+  type: simple
+  simple:
+    level: 14
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+100
+    damage_dice: 2d6+4
+    gold: 2000
+    experience: 20000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4089
+  namelist: thark adolescent warrior training
+  short_desc: a Thark Adolescent
+  long_desc: A Thark adolescent, ten feet tall, stands ready for combat.
+  detailed_desc: 'This green Martian adolescent stands ten feet tall and is nearly
+    ready to be considered
+
+    a full adult. Its four arms are strong and coordinated, and its green skin is
+    marked with
+
+    scars from increasingly serious training and hunting. It has participated in several
+    real
+
+    battles and hunts, proving its worth to the horde. Its tusks are well-developed,
+    and its
+
+    movements show the deadly efficiency that marks a Thark warrior. Soon it will
+    stand
+
+    among the full warriors as an equal.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 700
+  type: simple
+  simple:
+    level: 16
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+130
+    damage_dice: 2d8+5
+    gold: 4000
+    experience: 30000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4090
+  namelist: trader merchant thark shopkeeper
+  short_desc: a Thark Trader
+  long_desc: A Thark trader stands here, assessing goods with calculating eyes.
+  detailed_desc: 'This green Martian is unusual among his kind - he understands trade,
+    negotiation, and
+
+    the value of maintaining relationships with outsiders. Standing twelve feet tall
+    with
+
+    four arms, his green skin is less scarred than most warriors, suggesting he fights
+    only
+
+    when necessary. His harness is decorated with tokens from numerous trading partners
+    -
+
+    red Martian coins, colored stones, and curious trinkets. He speaks passable trade
+    tongue
+
+    and treats visitors fairly, knowing that good trade relationships benefit the
+    entire horde.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+160
+    damage_dice: 2d6+4
+    gold: 8000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4091
+  namelist: weaponsmith thark craftsman armorer
+  short_desc: a Thark Weaponsmith
+  long_desc: A Thark weaponsmith works at a forge, shaping weapons.
+  detailed_desc: 'This green Martian warrior has turned his skills to crafting weapons
+    rather than just
+
+    wielding them. Standing thirteen feet tall with four powerful arms, he can work
+    metal
+
+    with two hands while operating bellows with the others. His green skin is marked
+    with
+
+    burns and scars from years of forge work. He specializes in creating the massive
+    weapons
+
+    used by green Martians - swords that would be two-handed for a red Martian, enormous
+
+    spears, and heavy maces. He also repairs and modifies weapons brought to him.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 19
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+180
+    damage_dice: 2d6+5
+    gold: 9000
+    experience: 55000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4092
+  namelist: armorsmith thark harness-maker craftsman
+  short_desc: a Thark Harness-Maker
+  long_desc: A Thark harness-maker works on a massive leather harness.
+  detailed_desc: 'This green Martian specializes in creating the leather harnesses
+    worn by Tharks and their
+
+    beasts. Standing twelve feet tall with four skilled arms, he can stitch leather
+    with two
+
+    hands while cutting with the others, working with remarkable speed. His green
+    skin is
+
+    marked with small scars from working with sharp tools. He makes everything from
+    simple
+
+    warrior harnesses to elaborate chieftain regalia, as well as the tack and saddles
+    needed
+
+    for thoats. He has even adapted some of his skills to create smaller harnesses
+    for red
+
+    Martian visitors.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 17
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+150
+    damage_dice: 2d6+4
+    gold: 7000
+    experience: 45000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4093
+  namelist: beast handler thark trainer
+  short_desc: a Thark Beast Handler
+  long_desc: A Thark beast handler works with the animals here.
+  detailed_desc: 'This green Martian has a rare talent for working with the dangerous
+    beasts of Mars.
+
+    Standing twelve feet tall with four patient arms, his green skin is heavily scarred
+    -
+
+    not from battle, but from the claws and teeth of the creatures he trains. He understands
+
+    thoats, calots, and even more exotic beasts, knowing how to break them to service
+    through
+
+    a combination of force, patience, and understanding. He carries scars from numerous
+
+    failures but has trained some of the finest mounts in the Thark horde.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 18
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+160
+    damage_dice: 2d6+4
+    gold: 8000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 4100
+  namelist: great longsword thark huge
+  short_desc: a Thark great longsword
+  long_desc: A massive longsword designed for green Martians lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 10
+  value3: 3
+  weight: 20
+  cost: 1200
+  rent: 400
+  extra_descriptions:
+  - keywords: sword huge
+    description: 'This enormous sword is over six feet long and designed to be wielded
+      one-handed by a
+
+      fifteen-foot green Martian. For a red Martian or human, it would be an unwieldy
+      two-
+
+      handed weapon requiring great strength. The blade is forged from Martian steel
+      and
+
+      shows signs of heavy use. Four-armed warriors can wield two of these simultaneously.'
+  affects: []
+- vnum: 4101
+  namelist: radium rifle thark weapon
+  short_desc: a Thark radium rifle
+  long_desc: A massive radium rifle sized for green Martians is here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 15
+  value1: 5
+  value2: 0
+  value3: 0
+  weight: 25
+  cost: 1500
+  rent: 500
+  extra_descriptions:
+  - keywords: rifle radium
+    description: 'This radium rifle is enormous, designed to be fired by the powerful
+      four-armed green
+
+      Martians. The stock is reinforced to handle the recoil, and the barrel is longer
+      than
+
+      standard models. It fires explosive radium projectiles that can tear through
+      armor and
+
+      flesh. A red Martian could use it, but the weight and recoil would make it difficult.'
+  affects: []
+- vnum: 4102
+  namelist: spear thark barbed huge
+  short_desc: a barbed Thark spear
+  long_desc: A long spear with a wickedly barbed head lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 8
+  value3: 11
+  weight: 15
+  cost: 800
+  rent: 250
+  extra_descriptions:
+  - keywords: spear barbed
+    description: 'This spear is nearly eight feet long with a barbed metal head designed
+      to hook into
+
+      flesh and make removal agonizing. Green Martians use these for both hunting
+      and war,
+
+      throwing them with deadly accuracy or using them as close combat weapons. The
+      shaft
+
+      is reinforced to withstand the tremendous force a Thark can generate.'
+  affects: []
+- vnum: 4103
+  namelist: mace meteorite thark heavy
+  short_desc: a meteorite mace
+  long_desc: A heavy mace forged from meteorite iron lies here.
+  action_desc: pound
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 6
+  value3: 7
+  weight: 18
+  cost: 1000
+  rent: 350
+  extra_descriptions:
+  - keywords: mace meteorite
+    description: 'This brutal weapon is forged from iron taken from a fallen meteorite,
+      giving it
+
+      exceptional hardness. The head is studded with metal spikes, and the entire
+      thing
+
+      weighs nearly forty pounds. Only the powerful four-armed green Martians can
+      wield
+
+      such a weapon effectively. It is designed to crush armor and bone with equal
+      ease.'
+  affects: []
+- vnum: 4104
+  namelist: dagger thark fighting
+  short_desc: a Thark fighting dagger
+  long_desc: A large fighting dagger lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 11
+  weight: 10
+  cost: 400
+  rent: 150
+  extra_descriptions:
+  - keywords: dagger thark
+    description: 'While called a dagger, this blade is nearly eighteen inches long
+      and designed for the
+
+      powerful grip of a green Martian. It serves as a backup weapon and tool. The
+      blade is
+
+      slightly curved and sharp on both edges. Four-armed warriors often carry multiple
+
+      daggers, able to throw them or use them in close combat.'
+  affects: []
+- vnum: 4105
+  namelist: sword short thark weapon
+  short_desc: a Thark short sword
+  long_desc: A short sword sized for green Martians is here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 8
+  value3: 11
+  weight: 12
+  cost: 600
+  rent: 200
+  extra_descriptions:
+  - keywords: sword short
+    description: 'This "short" sword is still over four feet long, but for a fifteen-foot
+      green Martian,
+
+      it''s a reasonable one-handed weapon. The blade is thick and heavy, designed
+      to deliver
+
+      powerful cuts. A red Martian could wield this as a two-handed sword with difficulty.'
+  affects: []
+- vnum: 4110
+  namelist: harness leather thark
+  short_desc: a Thark leather harness
+  long_desc: A massive leather harness sized for green Martians lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 600
+  rent: 200
+  extra_descriptions:
+  - keywords: harness leather
+    description: 'This harness is designed for the fifteen-foot frame of a green Martian.
+      It consists of
+
+      heavy leather straps that cross the chest and back, with metal rings for attaching
+
+      weapons, tools, and ornaments. The leather is thick and tough, providing some
+      protection.
+
+      While functional, Thark harnesses are rarely as elaborate as those worn by red
+      Martians.'
+  affects: []
+- vnum: 4111
+  namelist: harness metal thark ornate
+  short_desc: an ornate Thark harness
+  long_desc: An elaborate harness with metal decorations lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 25
+  cost: 1200
+  rent: 400
+  extra_descriptions:
+  - keywords: harness ornate
+    description: 'This harness is worn by Thark chieftains and successful warriors.
+      The leather is of
+
+      higher quality, and metal ornaments are worked into the design - rings, studs,
+      and
+
+      captured enemy insignia. It provides better protection than a standard harness
+      while
+
+      marking the wearer''s status within the horde.'
+  affects: []
+- vnum: 4112
+  namelist: bracers metal thark
+  short_desc: Thark metal bracers
+  long_desc: A pair of heavy metal bracers lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 300
+  rent: 100
+  extra_descriptions:
+  - keywords: bracers metal
+    description: 'These metal bracers are designed to protect the forearms of green
+      Martian warriors. They
+
+      are sized for the massive arms of fifteen-foot beings and would be far too large
+      for
+
+      red Martians. The metal is thick and scored with marks from deflecting weapons.'
+  affects: []
+- vnum: 4113
+  namelist: boots leather thark
+  short_desc: Thark leather boots
+  long_desc: A pair of enormous leather boots lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 250
+  rent: 80
+  extra_descriptions:
+  - keywords: boots leather
+    description: 'These boots are enormous, sized for the feet of green Martians.
+      They are made from thick
+
+      leather and reinforced with metal studs on the soles. They provide protection
+      from the
+
+      rough terrain of the dead sea bottom and the scorching Martian days and freezing
+      nights.'
+  affects: []
+- vnum: 4114
+  namelist: helmet metal thark
+  short_desc: a Thark metal helmet
+  long_desc: A massive metal helmet designed for tusked heads lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 400
+  rent: 150
+  extra_descriptions:
+  - keywords: helmet metal
+    description: 'This helmet is specifically designed to fit the large, tusked heads
+      of green Martians.
+
+      It has openings for the tusks and is sized for a head nearly twice as large
+      as a red
+
+      Martian''s. The metal is thick and scored from battles. It provides good protection
+      but
+
+      is far too large for smaller races to use.'
+  affects: []
+- vnum: 4115
+  namelist: shield metal thark
+  short_desc: a Thark metal shield
+  long_desc: A large metal shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 500
+  rent: 180
+  extra_descriptions:
+  - keywords: shield metal
+    description: 'This shield is designed for green Martian warriors, sized appropriately
+      for their
+
+      fifteen-foot frames. It''s made from heavy metal plates riveted together and
+      reinforced
+
+      with a central boss. While a red Martian could theoretically use it, the weight
+      and
+
+      size would make it extremely unwieldy.'
+  affects: []
+- vnum: 4120
+  namelist: saddle thoat eight-legged
+  short_desc: a thoat saddle
+  long_desc: A massive saddle designed for eight-legged mounts lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 12
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 20
+  cost: 800
+  rent: 250
+  extra_descriptions:
+  - keywords: saddle thoat
+    description: 'This saddle is specifically engineered for the eight-legged gait
+      of a thoat. It''s
+
+      enormous, designed to accommodate a fifteen-foot green Martian rider plus equipment.
+
+      The leather is thick and reinforced, with multiple attachment points for weapons,
+
+      supplies, and trophies. The saddle distributes the rider''s weight across the
+      thoat''s
+
+      broad back, and special stirrups accommodate the mounted warrior''s fighting
+      style.'
+  affects: []
+- vnum: 4121
+  namelist: bridle reins thoat
+  short_desc: thoat bridle and reins
+  long_desc: A set of bridle and reins for a thoat lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 200
+  rent: 65
+  extra_descriptions:
+  - keywords: bridle reins
+    description: 'This bridle is designed to control a thoat''s massive head. The
+      straps are made from
+
+      extra-thick leather reinforced with metal studs. The bit is heavy metal designed
+      to
+
+      withstand the strength of an eight-foot-tall beast. The reins are long and thick,
+
+      allowing a green Martian rider to guide the mount even from its fifteen-foot
+      height.'
+  affects: []
+- vnum: 4122
+  namelist: harness thoat carrying
+  short_desc: a thoat carrying harness
+  long_desc: A harness for carrying loads on a thoat is here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 400
+  rent: 120
+  extra_descriptions:
+  - keywords: harness carrying
+    description: 'This harness allows a thoat to carry loads besides a rider. It consists
+      of a network
+
+      of leather straps and metal rings that distribute weight across the beast''s
+      powerful
+
+      frame. Bags, bundles, weapons, and supplies can all be attached. A fully loaded
+      thoat
+
+      can carry several times what a red Martian could manage.'
+  affects: []
+- vnum: 4123
+  namelist: bag supply thoat
+  short_desc: a thoat supply bag
+  long_desc: A large leather bag for thoat travel lies here.
+  action_desc: ''
+  type_flag: 2
+  extra_flags: 0
+  wear_flags: 1
+  value0: 150
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 50
+  extra_descriptions:
+  - keywords: bag supply
+    description: 'This large leather bag is designed to hang from a thoat''s saddle
+      or carrying harness.
+
+      It''s made from thick hide and reinforced at the seams. It can carry food, water,
+      spare
+
+      weapons, or any other supplies needed for long journeys across the dead sea
+      bottom.'
+  affects: []
+- vnum: 4124
+  namelist: waterskin large thoat
+  short_desc: a large waterskin
+  long_desc: A large waterskin suitable for long journeys lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 150
+  value1: 150
+  value2: 1
+  value3: 0
+  weight: 8
+  cost: 200
+  rent: 60
+  extra_descriptions:
+  - keywords: waterskin large
+    description: 'This massive waterskin is sized for green Martian warriors and long
+      journeys. It holds
+
+      enough water for several days of travel across the harsh Martian landscape.
+      The skin is
+
+      thick and treated to prevent leakage, with a heavy stopper to seal it. It''s
+      designed to
+
+      hang from a harness or saddle.'
+  affects: []
+- vnum: 4125
+  namelist: rope leather strong
+  short_desc: strong leather rope
+  long_desc: A coil of strong leather rope lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 120
+  rent: 40
+  extra_descriptions:
+  - keywords: rope leather
+    description: 'This rope is braided from tough leather strips, making it stronger
+      than plant fiber rope
+
+      and more resistant to the harsh Martian environment. It''s thick enough to support
+      the
+
+      weight of a green Martian warrior or secure a thrashing thoat. Green Martians
+      use such
+
+      rope for climbing, securing loads, and various other purposes.'
+  affects: []
+- vnum: 4130
+  namelist: totem tribal thark
+  short_desc: a Thark tribal totem
+  long_desc: A small carved totem lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 50
+  rent: 15
+  extra_descriptions:
+  - keywords: totem tribal
+    description: 'This small totem is carved from bone or stone and decorated with
+      tribal markings. Each
+
+      Thark warrior carries such a totem as identification and proof of membership
+      in the
+
+      horde. The specific markings indicate clan affiliation and sometimes individual
+
+      achievements. To outsiders, it''s merely a crude carving, but to Tharks it carries
+
+      significant meaning.'
+  affects: []
+- vnum: 4131
+  namelist: trophy skull
+  short_desc: a trophy skull
+  long_desc: A skull from a defeated enemy lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: skull trophy
+    description: 'This skull comes from an enemy defeated in battle - possibly a rival
+      green Martian, a
+
+      red Martian warrior, or a dangerous beast. Thark warriors collect such trophies
+      to
+
+      demonstrate their prowess. The skull has been cleaned and sometimes decorated
+      with
+
+      paint or carvings. It might be hung in a warrior''s quarters or worn attached
+      to a
+
+      harness.'
+  affects: []
+- vnum: 4132
+  namelist: trophy belt
+  short_desc: a trophy belt
+  long_desc: A belt decorated with battle trophies lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 200
+  rent: 65
+  extra_descriptions:
+  - keywords: belt trophy
+    description: 'This leather belt is designed to be worn over a harness, decorated
+      with small trophies
+
+      from battles and hunts. It might include teeth from banths, claws from white
+      apes, or
+
+      metal decorations taken from defeated red Martian warriors. Each trophy tells
+      a story
+
+      of combat and survival. Such belts mark successful warriors.'
+  affects: []
+- vnum: 4133
+  namelist: medicine pouch herbs
+  short_desc: a medicine pouch
+  long_desc: A leather pouch containing dried herbs and medicines lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 100
+  rent: 30
+  extra_descriptions:
+  - keywords: pouch medicine
+    description: 'This small leather pouch contains various dried herbs, mosses, and
+      other materials used
+
+      for treating wounds. While Thark medicine is crude by red Martian standards,
+      they have
+
+      developed effective treatments for common injuries - salves to prevent infection,
+
+      materials for binding wounds, and pain-dulling substances. Most are derived
+      from the
+
+      unique plants of Mars.'
+  affects: []
+- vnum: 4134
+  namelist: rations dried meat
+  short_desc: dried beast meat
+  long_desc: Several strips of dried meat lie here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 20
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 40
+  rent: 12
+  extra_descriptions:
+  - keywords: meat dried
+    description: 'These strips of dried meat come from hunting on the dead sea bottom
+      - possibly thoat,
+
+      banth, or white ape. The meat has been cut thin and dried in the Martian sun
+      until it''s
+
+      hard as leather. It''s not appetizing by most standards, but it provides sustenance
+      and
+
+      keeps for long periods, making it ideal for warriors on the march.'
+  affects: []
+- vnum: 4135
+  namelist: moss cakes food
+  short_desc: pressed ochre moss cakes
+  long_desc: Several cakes of pressed ochre moss lie here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 20
+  rent: 6
+  extra_descriptions:
+  - keywords: cakes moss
+    description: 'These cakes are made from the ochre moss that covers the dead sea
+      bottoms. While primarily
+
+      food for thoats and other herbivores, green Martians will eat it when necessary.
+      The moss
+
+      is pressed and dried into cakes that keep indefinitely. It''s bland and tasteless
+      but
+
+      provides basic nutrition. Some red Martians find it edible in emergencies.'
+  affects: []
+- vnum: 4136
+  namelist: training weapon practice
+  short_desc: a practice weapon
+  long_desc: A training weapon lies here, blunted for safety.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 0
+  value2: 4
+  value3: 11
+  weight: 5
+  cost: 100
+  rent: 30
+  extra_descriptions:
+  - keywords: weapon practice
+    description: 'This weapon is sized for young Tharks learning combat. While blunted
+      to prevent serious
+
+      injury, it''s still heavy enough to build strength and teach proper form. It
+      resembles a
+
+      longsword but with a thick, rounded edge instead of a sharp blade. Thark youth
+      use such
+
+      weapons to practice the forms and techniques they''ll need as adult warriors.'
+  affects: []
+- vnum: 4137
+  namelist: water barrel large
+  short_desc: a large water barrel
+  long_desc: A sealed water barrel stands here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 200
+  value1: 200
+  value2: 1
+  value3: 0
+  weight: 15
+  cost: 400
+  rent: 120
+  extra_descriptions:
+  - keywords: barrel water
+    description: 'This large wooden barrel holds precious water for the Thark city.
+      Water is scarce on
+
+      dying Mars, and every drop must be carefully conserved. This barrel might hold
+      water
+
+      collected from rare rains, condensed from the thin atmosphere, or brought from
+      distant
+
+      sources. It''s sealed tightly to prevent evaporation.'
+  affects: []
+- vnum: 4138
+  namelist: incubator moss bedding
+  short_desc: soft incubator moss
+  long_desc: A pile of soft moss used for cushioning eggs lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 3
+  extra_descriptions:
+  - keywords: moss bedding
+    description: 'This specially selected moss is used to cushion the precious eggs
+      in the Incubator. It''s
+
+      softer than the typical ochre moss of the sea bottom and has been carefully
+      cleaned. The
+
+      moss helps maintain proper temperature and moisture for the five-year incubation
+      period.
+
+      Only the matriarchs are permitted to gather and tend this moss.'
+  affects: []
+- vnum: 4139
+  namelist: radium heater
+  short_desc: a radium heater
+  long_desc: A small radium-powered heating device sits here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 300
+  rent: 90
+  extra_descriptions:
+  - keywords: heater radium
+    description: 'This device uses small amounts of radium to generate gentle heat.
+      It''s one of the few
+
+      pieces of technology the Tharks maintain from the ancient civilization that
+      built this
+
+      city. Several of these heaters are used in the Incubator to maintain the precise
+
+      temperature needed for egg development. The radium will last for centuries.'
+  affects: []
+- vnum: 4140
+  namelist: red martian coin gold
+  short_desc: a red Martian gold coin
+  long_desc: A gold coin from a red Martian city lies here.
+  action_desc: ''
+  type_flag: 2
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 50
+  extra_descriptions:
+  - keywords: coin gold
+    description: 'This gold coin was minted in a red Martian city - possibly Helium,
+      Zodanga, or another
+
+      city-state. It features the face of a Jeddak on one side and symbols of the
+      city on the
+
+      other. Green Martians have little use for money, but they collect such coins
+      as curios
+
+      and for trading with red Martian merchants who visit.'
+  affects: []
+- vnum: 4141
+  namelist: gemstone rough martian
+  short_desc: a rough Martian gemstone
+  long_desc: A rough gemstone lies here, glinting in the light.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 100
+  rent: 80
+  extra_descriptions:
+  - keywords: gemstone rough
+    description: 'This uncut gemstone was probably found in the ancient ruins or the
+      surrounding wilderness.
+
+      Mars produces unique gems unknown on Earth, with colors and properties that
+      vary wildly.
+
+      This one might be valuable to red Martian jewelers, but to the Tharks it''s
+      just a pretty
+
+      rock, sometimes used to decorate harnesses or traded away.'
+  affects: []
+- vnum: 4142
+  namelist: metal scrap salvage
+  short_desc: scrap metal
+  long_desc: A piece of scrap metal lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: metal scrap
+    description: 'This piece of metal was salvaged from the ancient city ruins. It
+      might be part of a
+
+      broken weapon, a building decoration, or machinery from long ago. The metal
+      is often
+
+      superior to what the Tharks can produce, and their smiths eagerly collect such
+      scraps
+
+      for reforging into weapons and tools.'
+  affects: []
+- vnum: 4143
+  namelist: ancient artifact relic
+  short_desc: an ancient artifact
+  long_desc: A mysterious artifact from the lost civilization lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 1
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 200
+  rent: 150
+  extra_descriptions:
+  - keywords: artifact ancient
+    description: 'This is a relic from the ancient civilization that built this city
+      long before the Tharks
+
+      arrived. Its original purpose is unclear - it might be a tool, a decoration,
+      or part of
+
+      some device. The craftsmanship is far superior to anything the green Martians
+      produce.
+
+      Red Martian scientists would be very interested in studying such artifacts to
+      learn more
+
+      about Mars'' forgotten history.'
+  affects: []
+- vnum: 4144
+  namelist: torch burning
+  short_desc: a burning torch
+  long_desc: A torch burns here, providing light.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 2
+  value2: 2
+  value3: 2
+  weight: 2
+  cost: 20
+  rent: 5
+  extra_descriptions:
+  - keywords: torch burning
+    description: 'This simple torch is made from dried moss and wood soaked in animal
+      fat. It provides
+
+      light and some warmth in the cold Martian nights. While the Tharks have some
+      radium-
+
+      powered lights from the ancient city, torches are more readily available and
+      easily
+
+      replaced.'
+  affects: []
+- vnum: 4145
+  namelist: banner thark tribal
+  short_desc: a Thark battle banner
+  long_desc: A crude banner marked with tribal symbols lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 150
+  rent: 45
+  extra_descriptions:
+  - keywords: banner tribal
+    description: 'This banner is carried into battle to mark the position of Thark
+      warriors. It consists
+
+      of a long pole with fabric or hide attached, marked with the symbols of the
+      horde. The
+
+      symbols are painted in ochre, red, and black - colors easily made from Martian
+      materials.
+
+      While crude, such banners serve an important tactical purpose in battle.'
+  affects: []
+- vnum: 4146
+  namelist: drum signal communication
+  short_desc: a signal drum
+  long_desc: A large drum used for signaling lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 200
+  rent: 60
+  extra_descriptions:
+  - keywords: drum signal
+    description: 'This drum is used to send signals across the city and to warriors
+      in the field. Different
+
+      rhythms communicate different messages - warnings of attack, summons to gather,
+      victory
+
+      celebrations. The drum is made from stretched hide over a wooden frame and can
+      be heard
+
+      for miles across the dead sea bottom. It''s one of the primary methods of long-distance
+
+      communication used by the Tharks.'
+  affects: []
+- vnum: 4147
+  namelist: sleeping furs bed
+  short_desc: sleeping furs
+  long_desc: A pile of furs used for sleeping lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 80
+  rent: 25
+  extra_descriptions:
+  - keywords: furs sleeping
+    description: 'These furs come from various Martian beasts - banths, white apes,
+      and others. They''ve
+
+      been cleaned and cured to serve as bedding. While crude by red Martian standards,
+      they
+
+      provide warmth during the freezing Martian nights. Most Thark warriors sleep
+      on simple
+
+      platforms piled with such furs.'
+  affects: []
+- vnum: 4148
+  namelist: leather hide raw
+  short_desc: raw beast hide
+  long_desc: A raw hide from a beast lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 8
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 100
+  rent: 30
+  extra_descriptions:
+  - keywords: hide raw
+    description: 'This is the uncured hide of a Martian beast - possibly a banth,
+      thoat, or apt. It still
+
+      needs to be cleaned, stretched, and cured before it can be used for making harnesses,
+
+      straps, or other leather goods. The Tharks are skilled at processing hides,
+      wasting
+
+      nothing from their hunts.'
+  affects: []
+- vnum: 4149
+  namelist: bone tools
+  short_desc: bone tools
+  long_desc: Several tools made from bone lie here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 40
+  rent: 12
+  extra_descriptions:
+  - keywords: tools bone
+    description: 'These simple tools are made from the bones of large beasts. They
+      include awls for
+
+      punching holes in leather, needles for stitching, scrapers for cleaning hides,
+      and
+
+      other basic implements. While the Tharks have some metal tools, bone tools are
+      more
+
+      readily available and work well for many purposes.'
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 4050
+  arg2: 1
+  arg3: 4003
+- command: M
+  if_flag: 0
+  arg1: 4051
+  arg2: 1
+  arg3: 4002
+- command: M
+  if_flag: 0
+  arg1: 4052
+  arg2: 1
+  arg3: 4005
+- command: M
+  if_flag: 0
+  arg1: 4066
+  arg2: 2
+  arg3: 4004
+- command: M
+  if_flag: 0
+  arg1: 4066
+  arg2: 2
+  arg3: 4004
+- command: M
+  if_flag: 0
+  arg1: 4053
+  arg2: 1
+  arg3: 4002
+- command: M
+  if_flag: 0
+  arg1: 4054
+  arg2: 1
+  arg3: 4002
+- command: M
+  if_flag: 0
+  arg1: 4055
+  arg2: 1
+  arg3: 4002
+- command: M
+  if_flag: 0
+  arg1: 4056
+  arg2: 1
+  arg3: 4013
+- command: G
+  if_flag: 1
+  arg1: 4100
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4101
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4057
+  arg2: 1
+  arg3: 4017
+- command: G
+  if_flag: 1
+  arg1: 4110
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4067
+  arg2: 2
+  arg3: 4007
+- command: M
+  if_flag: 0
+  arg1: 4067
+  arg2: 2
+  arg3: 4007
+- command: M
+  if_flag: 0
+  arg1: 4060
+  arg2: 2
+  arg3: 4008
+- command: G
+  if_flag: 1
+  arg1: 4100
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4104
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4060
+  arg2: 2
+  arg3: 4008
+- command: G
+  if_flag: 1
+  arg1: 4100
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4104
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4071
+  arg2: 1
+  arg3: 4013
+- command: M
+  if_flag: 0
+  arg1: 4070
+  arg2: 3
+  arg3: 4021
+- command: M
+  if_flag: 0
+  arg1: 4070
+  arg2: 3
+  arg3: 4021
+- command: M
+  if_flag: 0
+  arg1: 4070
+  arg2: 3
+  arg3: 4021
+- command: M
+  if_flag: 0
+  arg1: 4072
+  arg2: 1
+  arg3: 4024
+- command: M
+  if_flag: 0
+  arg1: 4086
+  arg2: 1
+  arg3: 4024
+- command: M
+  if_flag: 0
+  arg1: 4087
+  arg2: 2
+  arg3: 4024
+- command: M
+  if_flag: 0
+  arg1: 4087
+  arg2: 2
+  arg3: 4024
+- command: M
+  if_flag: 0
+  arg1: 4088
+  arg2: 2
+  arg3: 4023
+- command: M
+  if_flag: 0
+  arg1: 4088
+  arg2: 2
+  arg3: 4023
+- command: M
+  if_flag: 0
+  arg1: 4089
+  arg2: 1
+  arg3: 4023
+- command: M
+  if_flag: 0
+  arg1: 4060
+  arg2: 3
+  arg3: 4010
+- command: M
+  if_flag: 0
+  arg1: 4060
+  arg2: 3
+  arg3: 4011
+- command: M
+  if_flag: 0
+  arg1: 4060
+  arg2: 3
+  arg3: 4012
+- command: M
+  if_flag: 0
+  arg1: 4061
+  arg2: 2
+  arg3: 4014
+- command: M
+  if_flag: 0
+  arg1: 4063
+  arg2: 2
+  arg3: 4016
+- command: M
+  if_flag: 0
+  arg1: 4064
+  arg2: 2
+  arg3: 4018
+- command: M
+  if_flag: 0
+  arg1: 4065
+  arg2: 1
+  arg3: 4019
+- command: M
+  if_flag: 0
+  arg1: 4062
+  arg2: 3
+  arg3: 4041
+- command: M
+  if_flag: 0
+  arg1: 4062
+  arg2: 3
+  arg3: 4042
+- command: M
+  if_flag: 0
+  arg1: 4062
+  arg2: 3
+  arg3: 4043
+- command: M
+  if_flag: 0
+  arg1: 4063
+  arg2: 2
+  arg3: 4044
+- command: M
+  if_flag: 0
+  arg1: 4068
+  arg2: 1
+  arg3: 4041
+- command: M
+  if_flag: 0
+  arg1: 4068
+  arg2: 1
+  arg3: 4042
+- command: M
+  if_flag: 0
+  arg1: 4068
+  arg2: 1
+  arg3: 4043
+- command: M
+  if_flag: 0
+  arg1: 4068
+  arg2: 1
+  arg3: 4044
+- command: M
+  if_flag: 0
+  arg1: 4068
+  arg2: 1
+  arg3: 4045
+- command: M
+  if_flag: 0
+  arg1: 4069
+  arg2: 2
+  arg3: 4046
+- command: M
+  if_flag: 0
+  arg1: 4069
+  arg2: 2
+  arg3: 4046
+- command: M
+  if_flag: 0
+  arg1: 4069
+  arg2: 2
+  arg3: 4048
+- command: M
+  if_flag: 0
+  arg1: 4069
+  arg2: 2
+  arg3: 4048
+- command: M
+  if_flag: 0
+  arg1: 4077
+  arg2: 3
+  arg3: 4026
+- command: M
+  if_flag: 0
+  arg1: 4077
+  arg2: 3
+  arg3: 4026
+- command: M
+  if_flag: 0
+  arg1: 4077
+  arg2: 3
+  arg3: 4026
+- command: M
+  if_flag: 0
+  arg1: 4078
+  arg2: 2
+  arg3: 4028
+- command: M
+  if_flag: 0
+  arg1: 4078
+  arg2: 2
+  arg3: 4028
+- command: M
+  if_flag: 0
+  arg1: 4079
+  arg2: 2
+  arg3: 4027
+- command: M
+  if_flag: 0
+  arg1: 4079
+  arg2: 2
+  arg3: 4027
+- command: M
+  if_flag: 0
+  arg1: 4080
+  arg2: 3
+  arg3: 4010
+- command: M
+  if_flag: 0
+  arg1: 4080
+  arg2: 3
+  arg3: 4015
+- command: M
+  if_flag: 0
+  arg1: 4080
+  arg2: 3
+  arg3: 4020
+- command: M
+  if_flag: 0
+  arg1: 4081
+  arg2: 2
+  arg3: 4027
+- command: M
+  if_flag: 0
+  arg1: 4093
+  arg2: 1
+  arg3: 4029
+- command: G
+  if_flag: 1
+  arg1: 4120
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4121
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4122
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4090
+  arg2: 1
+  arg3: 4040
+- command: G
+  if_flag: 1
+  arg1: 4100
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4101
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4102
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4103
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4104
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4105
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4110
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4111
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4112
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4113
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4114
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4115
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4120
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4121
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4130
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4131
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 4091
+  arg2: 1
+  arg3: 4012
+- command: G
+  if_flag: 1
+  arg1: 4100
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4101
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4102
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4103
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4104
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4105
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4092
+  arg2: 1
+  arg3: 4019
+- command: G
+  if_flag: 1
+  arg1: 4110
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4111
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4112
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4113
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4114
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4115
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4082
+  arg2: 1
+  arg3: 4032
+- command: M
+  if_flag: 0
+  arg1: 4083
+  arg2: 1
+  arg3: 4035
+- command: M
+  if_flag: 0
+  arg1: 4084
+  arg2: 1
+  arg3: 4039
+- command: M
+  if_flag: 0
+  arg1: 4085
+  arg2: 1
+  arg3: 4034
+- command: O
+  if_flag: 0
+  arg1: 4145
+  arg2: 1
+  arg3: 4000
+- command: O
+  if_flag: 0
+  arg1: 4146
+  arg2: 1
+  arg3: 4045
+- command: O
+  if_flag: 0
+  arg1: 4138
+  arg2: 3
+  arg3: 4005
+- command: O
+  if_flag: 0
+  arg1: 4139
+  arg2: 2
+  arg3: 4005
+- command: O
+  if_flag: 0
+  arg1: 4139
+  arg2: 2
+  arg3: 4006
+- command: O
+  if_flag: 0
+  arg1: 4147
+  arg2: 5
+  arg3: 4011
+- command: O
+  if_flag: 0
+  arg1: 4147
+  arg2: 3
+  arg3: 4016
+- command: O
+  if_flag: 0
+  arg1: 4147
+  arg2: 3
+  arg3: 4021
+- command: O
+  if_flag: 0
+  arg1: 4136
+  arg2: 10
+  arg3: 4014
+- command: O
+  if_flag: 0
+  arg1: 4134
+  arg2: 5
+  arg3: 4026
+- command: O
+  if_flag: 0
+  arg1: 4135
+  arg2: 10
+  arg3: 4026
+- command: O
+  if_flag: 0
+  arg1: 4137
+  arg2: 1
+  arg3: 4029
+- command: O
+  if_flag: 0
+  arg1: 4142
+  arg2: 3
+  arg3: 4030
+- command: O
+  if_flag: 0
+  arg1: 4142
+  arg2: 2
+  arg3: 4036
+- command: O
+  if_flag: 0
+  arg1: 4143
+  arg2: 1
+  arg3: 4037
+- command: O
+  if_flag: 0
+  arg1: 4141
+  arg2: 1
+  arg3: 4034
+- command: O
+  if_flag: 0
+  arg1: 4136
+  arg2: 5
+  arg3: 4024
+- command: O
+  if_flag: 0
+  arg1: 4136
+  arg2: 3
+  arg3: 4023
+shops: []

@@ -1,0 +1,3331 @@
+zone:
+  number: 42
+  name: Atmosphere Factory - Lower Levels
+  top_room: 4199
+  lifespan: 40
+  reset_mode: 2
+rooms:
+- vnum: 4150
+  name: Abandoned Maintenance Tunnel
+  description: '   You drop down through the hidden trapdoor into an abandoned maintenance
+    tunnel. The
+
+    air here is stale and cold, untouched by the ventilation systems that serve the
+    upper
+
+    factory. Emergency lights provide dim illumination, casting long shadows. This
+    section
+
+    was sealed off long ago, but the passage of feet through dust suggests someone
+    has been
+
+    using these tunnels recently.'
+  zone: 42
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The tunnel extends east into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4151
+  - direction: 5
+    description: Looking up, you can see the trapdoor far above. Too high to reach
+      without help.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: -1
+  extra_descriptions:
+  - keywords: trapdoor above
+    description: 'The trapdoor is far overhead, beyond reach. You''ll need to find
+      another way out of these
+
+      lower levels.'
+  - keywords: dust footprints
+    description: 'The dust shows recent footprints - multiple sets, suggesting regular
+      traffic through here.
+
+      Someone is using these supposedly abandoned tunnels for purposes unknown.'
+- vnum: 4151
+  name: Dark Maintenance Corridor
+  description: '   This corridor runs through the factory''s forgotten underbelly.
+    Pipes and conduits
+
+    line the walls, some still carrying mysterious fluids or energy, others long dead.
+    The
+
+    mechanical hum of the factory is muted here, replaced by strange echoes and distant
+
+    sounds that might be machinery - or might be something else.'
+  zone: 42
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The corridor continues into deeper darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4152
+  - direction: 2
+    description: A side passage branches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4153
+  - direction: 3
+    description: The tunnel extends back west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4150
+  extra_descriptions: []
+- vnum: 4152
+  name: Collapsed Section
+  description: '   Part of the tunnel has collapsed here, blocking further progress
+    to the east. The
+
+    rubble looks old but stable. A narrow gap at the top might be passable with effort,
+
+    but there are clear signs that others have been clearing a path through. Tools
+    and
+
+    equipment lie scattered nearby.'
+  zone: 42
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: You can head south around the collapse.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4154
+  - direction: 3
+    description: The corridor extends back west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4151
+  extra_descriptions:
+  - keywords: rubble debris
+    description: 'The collapsed section appears to have been caused by a deliberate
+      explosion, perhaps
+
+      to seal off this area. But someone has been working to reopen it, clearing rubble
+      and
+
+      shoring up the passage.'
+  - keywords: tools equipment
+    description: 'The tools here are modern and well-maintained, not ancient relics.
+      Someone is actively
+
+      working in these supposedly abandoned tunnels.'
+- vnum: 4153
+  name: Side Passage
+  description: '   This narrow passage branches off the main tunnel. The walls here
+    show modifications -
+
+    new doors have been installed, and lighting has been restored. This doesn''t look
+
+    abandoned at all. It looks like someone is using this area for secret purposes.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The main corridor lies to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4151
+  - direction: 2
+    description: A new door blocks further progress.
+    keywords: door metal
+    door_flag: 1
+    key_vnum: 4250
+    to_room: 4160
+  extra_descriptions: []
+- vnum: 4154
+  name: Lower Tunnel Junction
+  description: '   Multiple tunnels converge at this junction. Signs in ancient Martian
+    script point
+
+    to various factory systems, though most are now inaccessible due to sealed doors
+    or
+
+    collapsed passages. One tunnel, however, shows signs of recent use - the lighting
+    works,
+
+    and the air is fresher. Someone has restored this route for their own purposes.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads to the collapsed section.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4152
+  - direction: 1
+    description: An active tunnel leads east, showing signs of recent use.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4155
+  - direction: 2
+    description: Another passage extends south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4156
+  extra_descriptions: []
+- vnum: 4155
+  name: Restored Passage
+  description: '   This passage has been completely restored. New lighting illuminates
+    clean walls,
+
+    ventilation provides fresh air, and the floor is free of debris. This is clearly
+    part
+
+    of the secret operation taking place in these lower levels. Voices and sounds
+    of activity
+
+    can be heard ahead.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The passage leads to what sounds like a laboratory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4160
+  - direction: 3
+    description: The junction lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4154
+  extra_descriptions: []
+- vnum: 4156
+  name: Ancient Storage Chamber
+  description: '   This chamber once stored maintenance supplies for the lower factory
+    levels. Broken
+
+    crates and rusted equipment still litter the floor, but there''s also evidence
+    of recent
+
+    activity. Some crates have been opened and their contents removed. What were they
+    looking
+
+    for?'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The junction is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4154
+  - direction: 2
+    description: A dark passage extends south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4157
+  extra_descriptions: []
+- vnum: 4157
+  name: Creature Den
+  description: '   Something has made its den in this chamber. Bones - some ancient,
+    some disturbingly
+
+    fresh - litter the floor. Scratching sounds echo from the darkness. This might
+    be a nest
+
+    of the rat-like creatures that infest the abandoned lower levels, or it could
+    be something
+
+    worse - perhaps one of the escaped experimental subjects.'
+  zone: 42
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The storage chamber lies to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4156
+  extra_descriptions:
+  - keywords: bones remains
+    description: 'The bones are from various creatures - thoats, apts, and other Martian
+      animals. But there
+
+      are also bones that look disturbingly like they came from failed experiments,
+      mutated
+
+      and unnatural.'
+- vnum: 4160
+  name: Research Laboratory - Entrance
+  description: '   You enter what can only be a secret research laboratory. Modern
+    equipment fills the
+
+    room - examination tables, chemical apparatus, mysterious devices of both Martian
+    and
+
+    unknown origin. The air smells of chemicals and something organic and unpleasant.
+    This
+
+    is clearly where the forbidden research is being conducted.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The laboratory continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4161
+  - direction: 2
+    description: A door leads to what looks like operating chambers.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4165
+  - direction: 3
+    description: The restored passage leads back west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4155
+  extra_descriptions:
+  - keywords: equipment apparatus devices
+    description: 'This equipment is sophisticated and clearly expensive. Whoever is
+      funding this operation
+
+      has significant resources. Some devices you recognize as medical equipment,
+      but others
+
+      are beyond your understanding - perhaps ancient Martian technology adapted for
+      new purposes.'
+- vnum: 4161
+  name: Research Laboratory - Main Chamber
+  description: '   The main laboratory chamber is filled with ongoing experiments.
+    Glass containers hold
+
+    specimens - some you recognize, others that look like nothing that should exist.
+    Research
+
+    notes are scattered across work benches, documenting procedures and results. The
+    notes are
+
+    in modern Martian script, suggesting recent work.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The laboratory extends further east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4162
+  - direction: 2
+    description: A door leads to specimen storage.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4166
+  - direction: 3
+    description: The entrance lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4160
+  extra_descriptions:
+  - keywords: notes research documents
+    description: 'The research notes document experiments in life extension, tissue
+      regeneration, and body
+
+      modification. Some results are promising, others are catastrophic failures.
+      The notes
+
+      are signed by someone named Ras Thavas - a name that makes you uneasy for reasons
+      you
+
+      can''t quite place.'
+  - keywords: specimens containers
+    description: 'The specimens in the containers are disturbing. Some are obviously
+      alive but changed in
+
+      unnatural ways. Others are failed experiments, preserved for study. The range
+      suggests
+
+      extensive experimentation on living subjects.'
+- vnum: 4162
+  name: Research Laboratory - East Wing
+  description: '   This wing of the laboratory specializes in mechanical and cybernetic
+    research. Half-
+
+    finished constructs lie on work benches - combinations of organic tissue and mechanical
+
+    components that shouldn''t be possible. The work here pushes the boundaries of
+    both
+
+    medicine and engineering into territories most would consider forbidden.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A door leads to the surgical suite.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4167
+  - direction: 3
+    description: The main chamber lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4161
+  extra_descriptions:
+  - keywords: constructs devices
+    description: 'These devices combine living tissue with mechanical components in
+      ways that defy nature.
+
+      Some appear to be prosthetics, others seem designed to enhance capabilities
+      beyond normal
+
+      limits. The skill required to create such things is remarkable, but so is the
+      disregard
+
+      for natural law.'
+- vnum: 4165
+  name: Dissection Chamber
+  description: '   This chamber is clearly designed for anatomical study - dissection
+    tables, surgical
+
+    tools, and preservation apparatus fill the space. Diagrams cover the walls showing
+
+    Martian anatomy in exacting detail. The precision and knowledge displayed here
+    is
+
+    impressive, but the application is deeply disturbing.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads back to the laboratory entrance.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4160
+  - direction: 2
+    description: Another door leads to medical bays.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4168
+  extra_descriptions:
+  - keywords: diagrams anatomy charts
+    description: 'These anatomical diagrams show not just normal Martian physiology
+      but modifications and
+
+      enhancements. They document procedures for extending life, enhancing strength,
+      even
+
+      transplanting brains between bodies. The knowledge is incredible but the ethics
+      are
+
+      questionable at best.'
+- vnum: 4166
+  name: Specimen Storage
+  description: '   This chamber stores the results of the research - both successes
+    and failures. Rows
+
+    of containers hold preserved specimens, each labeled with dates and procedure
+    notes. Some
+
+    specimens were once people, now transformed by the experiments. Others never were
+    truly
+
+    alive, grown in tanks for specific purposes. It''s a gallery of horrors and wonders.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the main laboratory chamber.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4161
+  extra_descriptions:
+  - keywords: specimens preserved subjects
+    description: 'Each specimen tells a story of ambition and experimentation. Some
+      show successful life
+
+      extension or enhancement. Others show catastrophic failures. All demonstrate
+      that someone
+
+      here possesses knowledge and skill far beyond normal science, but applies it
+      without
+
+      apparent ethical constraints.'
+- vnum: 4167
+  name: Surgical Suite
+  description: '   This is a fully equipped surgical facility, capable of the most
+    complex procedures.
+
+    The equipment is immaculate and advanced, combining ancient Martian technology
+    with modern
+
+    innovations. Operations performed here could save lives - or create abominations.
+    The
+
+    skill required is undeniable, but so is the moral ambiguity.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the east wing.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4162
+  - direction: 2
+    description: A door leads to recovery chambers.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4169
+  extra_descriptions:
+  - keywords: equipment surgical instruments
+    description: 'These surgical instruments are of the highest quality, some clearly
+      of ancient Martian
+
+      design. The operating tables include restraints and monitoring equipment. This
+      facility
+
+      could perform procedures most surgeons wouldn''t dream possible.'
+- vnum: 4168
+  name: Medical Bay
+  description: '   This medical bay contains beds for patients - or subjects. Several
+    beds are occupied
+
+    by figures under sheets, their conditions unknown. Medical equipment monitors
+    their vital
+
+    signs. Are these patients being healed, or subjects being experimented upon? Perhaps
+    both.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the dissection chamber.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4165
+  - direction: 1
+    description: Another door leads to a recovery area.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4169
+  extra_descriptions:
+  - keywords: patients subjects figures
+    description: 'The figures in the beds are alive but sedated. Their conditions
+      vary - some appear to be
+
+      recovering from surgery, others are connected to strange apparatus that might
+      be life
+
+      support or might be experimental equipment. Without waking them, you can''t
+      know if they''re
+
+      willing subjects or prisoners.'
+- vnum: 4169
+  name: Recovery Chamber
+  description: '   This chamber houses those recovering from procedures. Unlike the
+    medical bay, the
+
+    occupants here are conscious and mobile, though many show signs of recent surgery
+    or
+
+    modification. Some look relieved and grateful, others appear traumatized. The
+    moral
+
+    complexity of what''s happening here is evident in their varied reactions.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the surgical suite.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4167
+  - direction: 1
+    description: A corridor leads to the power experiments section.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4170
+  - direction: 3
+    description: The door leads to the medical bay.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4168
+  extra_descriptions:
+  - keywords: occupants patients
+    description: 'The people here show various modifications - enhanced limbs, improved
+      organs, extended
+
+      lifespans. Some are clearly pleased with their enhancements, others seem to
+      regret their
+
+      choices. Their stories would be complex and contradictory.'
+- vnum: 4170
+  name: Power Research Corridor
+  description: '   This corridor leads to another section of the lower level facility
+    - one focused on
+
+    power and energy research. The air crackles with static electricity, and faint
+    blue light
+
+    emanates from doorways. The experiments here involve the factory''s radium power
+    systems,
+
+    perhaps attempting to enhance or modify them.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The corridor continues east to energy labs.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4171
+  - direction: 3
+    description: The recovery chamber lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4169
+  extra_descriptions:
+  - keywords: light glow energy
+    description: 'The blue glow is characteristic of radium energy, but it''s more
+      intense here than in the
+
+      factory''s normal power systems. Someone is experimenting with concentrated
+      or modified
+
+      radium reactions - extremely dangerous research that could lead to breakthrough
+      or
+
+      catastrophe.'
+- vnum: 4171
+  name: Energy Research Laboratory
+  description: '   This laboratory studies radium and other energy sources. Containment
+    vessels hold
+
+    glowing materials, their light illuminating complex apparatus designed to measure
+    and
+
+    manipulate energy. The work here is at the cutting edge of Martian science, attempting
+
+    to understand and improve the ancient power systems.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The laboratory continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4172
+  - direction: 2
+    description: A shielded door leads to containment chambers.
+    keywords: door shielded
+    door_flag: 2
+    key_vnum: 4251
+    to_room: 4175
+  - direction: 3
+    description: The corridor lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4170
+  extra_descriptions:
+  - keywords: vessels apparatus equipment
+    description: 'This equipment manipulates energy at levels that would be dangerous
+      in less skilled hands.
+
+      The researchers here understand radium technology better than most, perhaps
+      even rivaling
+
+      the ancient Martian builders. But that knowledge makes their experiments all
+      the more
+
+      dangerous.'
+- vnum: 4172
+  name: Weapons Research
+  description: '   This laboratory develops weapons using enhanced radium technology.
+    Prototypes of rifles,
+
+    pistols, and other devices line the walls, each more powerful than standard military
+    issue.
+
+    Some designs are successful, others show evidence of catastrophic failure. This
+    is where
+
+    forbidden military technology is being developed.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A door leads to the testing range.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4176
+  - direction: 3
+    description: The energy laboratory lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4171
+  extra_descriptions:
+  - keywords: weapons prototypes designs
+    description: 'These weapons could change the balance of power on Mars. Some fire
+      concentrated radium
+
+      beams, others use principles that shouldn''t be possible. If Zodanga or another
+      hostile
+
+      power obtained these designs, the results could be catastrophic. But so could
+      their use
+
+      by anyone, even Helium.'
+- vnum: 4175
+  name: Radium Containment Chamber
+  description: '   This heavily shielded chamber contains concentrated radium fuel
+    and experimental
+
+    power cores. The radiation levels here are dangerous even with shielding. Warning
+    signs
+
+    cover the walls in multiple languages. The work being done here pushes the boundaries
+
+    of power generation, attempting to surpass even the ancient builders.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The shielded door leads back to the laboratory.
+    keywords: door shielded
+    door_flag: 2
+    key_vnum: 4251
+    to_room: 4171
+  - direction: 2
+    description: A door leads to the unstable core area - DANGER.
+    keywords: door warning
+    door_flag: 2
+    key_vnum: 4252
+    to_room: 4177
+  extra_descriptions:
+  - keywords: fuel cores radium
+    description: 'The radium here is far more concentrated than the factory''s normal
+      power systems. The
+
+      containment is sophisticated but still barely adequate. Any breach would be
+      catastrophic,
+
+      spreading lethal radiation through the lower levels and possibly reaching the
+      upper factory.'
+  - keywords: warnings signs
+    description: "The warnings are stark and multilingual: EXTREME RADIATION HAZARD,\
+      \ LETHAL EXPOSURE, \nAUTHORIZED PERSONNEL ONLY. Even the researchers seem nervous\
+      \ about this chamber."
+- vnum: 4176
+  name: Weapons Testing Range
+  description: '   This chamber serves as a testing range for experimental weapons.
+    The far wall shows
+
+    extensive damage from multiple tests - burn marks, melted metal, and deep gouges.
+    Targets
+
+    are set up at various distances, and measurement equipment records the results
+    of each
+
+    test. The power of the weapons tested here is frightening.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads back to weapons research.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4172
+  extra_descriptions:
+  - keywords: wall damage marks
+    description: 'The damage to the wall tells the story of multiple weapon tests.
+      Some burns suggest
+
+      energy weapons of immense power. Other marks show projectile impacts that punched
+      through
+
+      thick metal. Whatever weapons are being developed here far exceed normal military
+      equipment.'
+- vnum: 4177
+  name: Unstable Power Core
+  description: '   This chamber contains an experimental power core that''s clearly
+    unstable. The radium
+
+    fuel is not properly contained, and energy fluctuates wildly. The researchers
+    may have
+
+    exceeded their understanding here, creating something they can''t fully control.
+    The core
+
+    pulses with dangerous energy, and the temperature is extremely high.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads back to containment - if you can make it.
+    keywords: door warning
+    door_flag: 2
+    key_vnum: 4252
+    to_room: 4175
+  extra_descriptions:
+  - keywords: core unstable radium
+    description: 'The experimental core is clearly failing. The containment field
+      fluctuates, energy spikes
+
+      randomly, and the structure shows stress fractures. This could explode at any
+      moment,
+
+      with devastating consequences. The researchers may have finally gone too far.'
+- vnum: 4180
+  name: Biological Research Wing
+  description: '   This wing of the lower facility focuses on biological research
+    - life extension,
+
+    enhancement, and modification. The air here smells organic and slightly wrong.
+    Tanks
+
+    line the walls, growing various tissues and organisms. The work here seeks to
+    push
+
+    Martian biology beyond its natural limits.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The corridor continues deeper into biological research.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4181
+  - direction: 2
+    description: A door leads to incubation chambers.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4185
+  extra_descriptions:
+  - keywords: tanks vats growth
+    description: 'The tanks contain growing tissues and organs, some recognizable,
+      others alien and wrong.
+
+      The biological knowledge required for this work is remarkable, but the application
+      raises
+
+      questions about the nature and limits of life itself.'
+- vnum: 4181
+  name: Tissue Engineering Laboratory
+  description: '   This laboratory creates synthetic biological materials. Organs,
+    muscles, even neural
+
+    tissue are grown in controlled conditions. The work could revolutionize medicine,
+    allowing
+
+    organ replacement and repair. But the same techniques could create biological
+    weapons or
+
+    unnatural hybrids. The ethical implications are enormous.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The laboratory continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4182
+  - direction: 2
+    description: A door leads to experimental holding.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4186
+  - direction: 3
+    description: The corridor lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4180
+  extra_descriptions:
+  - keywords: organs tissue samples
+    description: 'The organs being grown here are perfect and healthy, far superior
+      to natural organs affected
+
+      by age or disease. This technology could extend lives and cure ailments. But
+      it could also
+
+      create living weapons or modify people in fundamental ways. Knowledge without
+      wisdom.'
+- vnum: 4182
+  name: Hybrid Creation Chamber
+  description: '   This chamber is where different species are combined into hybrid
+    forms. Tanks contain
+
+    creatures that mix various Martian life forms - banth with apt, thoat with mantalia,
+    and
+
+    more disturbing combinations. Some hybrids are viable, others are tragic failures.
+    The
+
+    work here violates natural law and raises questions about what should be possible
+    versus
+
+    what should be done.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A door leads to containment cells.
+    keywords: door reinforced
+    door_flag: 2
+    key_vnum: 4253
+    to_room: 4187
+  - direction: 3
+    description: The tissue engineering lab lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4181
+  extra_descriptions:
+  - keywords: tanks hybrids creatures
+    description: 'The hybrid creatures are disturbing to behold. Some combine features
+      logically, creating
+
+      creatures that might be superior to their parent species. Others are chimeras
+      that shouldn''t
+
+      exist, suffering despite being alive. The moral cost of this knowledge is evident
+      in their
+
+      existence.'
+- vnum: 4185
+  name: Incubation Chambers
+  description: '   This room contains incubation tanks for growing experimental organisms
+    from inception.
+
+    Some tanks hold recognizable Martian life forms in early stages, others contain
+    things
+
+    that never existed in nature. The control over life demonstrated here is both
+    impressive
+
+    and unsettling.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the biological research wing.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4180
+  - direction: 1
+    description: A corridor leads to quarantine areas.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4186
+  extra_descriptions:
+  - keywords: tanks incubation organisms
+    description: 'The tanks show life at various stages - from single cells to fully
+      formed organisms. The
+
+      precision and control required to guide this growth is remarkable. But creating
+      life
+
+      artificially raises profound questions about the nature and sanctity of existence.'
+- vnum: 4186
+  name: Experimental Subject Holding
+  description: '   This area holds living experimental subjects - creatures that have
+    been modified or
+
+    enhanced. Cages contain various animals showing unnatural features - extra limbs,
+    modified
+
+    senses, enhanced abilities. Some subjects appear healthy, others show signs of
+    distress.
+
+    The suffering evident here raises questions about whether any knowledge justifies
+    such means.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to tissue engineering.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4181
+  - direction: 1
+    description: A corridor leads to quarantine.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4188
+  - direction: 3
+    description: The incubation chambers lie to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4185
+  extra_descriptions:
+  - keywords: subjects creatures animals
+    description: 'The experimental subjects show varying conditions. Some appear healthy
+      and might even be
+
+      improved by their modifications. Others are clearly suffering, their bodies
+      changed in ways
+
+      that cause pain or disability. The moral complexity of the research is evident
+      in their
+
+      varied fates.'
+- vnum: 4187
+  name: Dangerous Hybrids Containment
+  description: '   This heavily reinforced chamber contains the most dangerous experimental
+    creatures -
+
+    hybrids that combine deadly predators or creatures that have become uncontrollable.
+    The
+
+    cages are strong, but some show damage from the creatures within. Keeping these
+    things
+
+    contained is increasingly difficult.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The reinforced door leads back to hybrid creation.
+    keywords: door reinforced
+    door_flag: 2
+    key_vnum: 4253
+    to_room: 4182
+  extra_descriptions:
+  - keywords: creatures hybrids dangerous
+    description: 'The creatures here are terrifying - combining the deadliest features
+      of multiple predators
+
+      into single organisms. Some have escaped their containment before and been recaptured.
+      Others
+
+      are clearly too dangerous to ever be released. Why create such things? For weapons?
+      For
+
+      knowledge? The purpose doesn''t justify the danger.'
+- vnum: 4188
+  name: Quarantine Zone
+  description: '   This area serves as quarantine for subjects that have developed
+    unexpected complications
+
+    or infections. The atmosphere here is tense - something has gone wrong with recent
+    experiments,
+
+    and the results are being isolated here. Sealed chambers contain unknown dangers
+    that even
+
+    the researchers fear.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A sealed door leads to the infection chamber - sealed for good reason.
+    keywords: door sealed
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4189
+  - direction: 3
+    description: The corridor leads back to experimental holding.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4186
+  extra_descriptions:
+  - keywords: chambers sealed quarantine
+    description: 'The sealed chambers contain subjects that have developed aggressive
+      or infectious conditions.
+
+      The seals are strong, but troubling sounds emanate from within. Whatever is
+      inside should
+
+      probably stay there forever.'
+- vnum: 4189
+  name: Infection Outbreak Chamber
+  description: '   Behind the sealed door lies a chamber that has been overtaken by
+    some experimental
+
+    organism. The walls are covered with organic growth, and things that might have
+    been
+
+    subjects are now unrecognizable masses of mutated tissue. This is what happens
+    when
+
+    biological experiments go catastrophically wrong.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The sealed door leads back to quarantine - get out while you can.
+    keywords: door sealed
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4188
+  extra_descriptions:
+  - keywords: growth organism infection
+    description: 'The organic growth covers everything, pulsing with unnatural life.
+      It seems almost aware,
+
+      responding to your presence. This is knowledge taken too far, creating something
+      that
+
+      cannot be controlled or understood. The entire chamber should be destroyed before
+      it
+
+      spreads.'
+- vnum: 4190
+  name: Deep Core Access
+  description: '   You have reached the deepest levels of the facility, far below
+    the working factory
+
+    above. Ancient machinery surrounds you, more primitive than the systems above
+    but still
+
+    functioning after countless ages. This is the foundation upon which the factory
+    was built,
+
+    and perhaps the source of knowledge the researchers seek.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A corridor leads to the ancient archives.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4191
+  - direction: 2
+    description: Stairs descend even further into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4195
+  extra_descriptions:
+  - keywords: machinery ancient primitive
+    description: 'This machinery predates even the factory above. It''s the work of
+      the oldest Martian
+
+      civilization, the true builders of the atmosphere system. Their technology was
+      different -
+
+      less elegant but perhaps more powerful. Understanding it could unlock secrets
+      lost for
+
+      millennia.'
+- vnum: 4191
+  name: Ancient Archives
+  description: '   This chamber contains data storage from the original builders -
+    crystal matrices and
+
+    metal plates covered with inscriptions. Much is damaged or unreadable, but some
+    remains
+
+    intact. The knowledge here could revolutionize Martian understanding of the factory
+    and
+
+    ancient technology. It might also explain why these lower levels were sealed.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The archives continue east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4192
+  - direction: 3
+    description: The deep core access lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4190
+  extra_descriptions:
+  - keywords: archives data crystals
+    description: 'The data storage uses technology even more advanced than the factory
+      above. Crystal
+
+      matrices hold information encoded at the molecular level, far beyond anything
+      modern Mars
+
+      can create. Reading it requires both ancient devices and the ability to understand
+      the
+
+      lost languages of old Mars.'
+- vnum: 4192
+  name: Archive Chamber - East
+  description: '   This section of the archives is more intact than the western portion.
+    Several complete
+
+    data crystals remain, their contents protected by ancient preservation systems.
+    A work
+
+    station allows access to the data, though understanding it requires extensive
+    knowledge
+
+    of ancient Martian culture and language.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A door leads to what might be living quarters.
+    keywords: door ancient
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4193
+  - direction: 3
+    description: The archives continue west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4191
+  extra_descriptions:
+  - keywords: crystals data information
+    description: 'The intact crystals glow faintly, indicating their preservation
+      systems still function.
+
+      The data they contain might include technical specifications for the factory,
+      historical
+
+      records of ancient Mars, or warnings about dangers that led to these levels
+      being sealed.'
+- vnum: 4193
+  name: Ancient Engineer's Chamber
+  description: '   This chamber appears to have been living quarters for whoever maintained
+    these deep
+
+    systems. Ancient furnishings remain, preserved by the controlled environment.
+    More
+
+    startlingly, a crystalline container in the center of the room holds what appears
+    to be
+
+    a preserved consciousness - the First Engineer, maintained in stasis for untold
+    ages.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the archives.
+    keywords: door ancient
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4192
+  - direction: 2
+    description: A corridor leads to a chamber with active systems.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4194
+  extra_descriptions:
+  - keywords: container crystalline preservation
+    description: 'The container is a marvel of ancient technology, preserving not
+      just a body but a living
+
+      mind in a form of stasis beyond modern understanding. The figure within appears
+      to be an
+
+      ancient Martian, different from modern red Martians in subtle ways. If awakened,
+      this being
+
+      might possess knowledge lost to time - or might be dangerous beyond measure.'
+- vnum: 4194
+  name: Ancient Control Chamber
+  description: '   This chamber controls the deep core systems that form the foundation
+    of the factory
+
+    above. The controls are ancient but still functional, covered in dust but waiting
+    for
+
+    someone with the knowledge to use them. Activating these systems could enhance
+    the factory''s
+
+    output - or destroy everything if misused.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The corridor leads to the engineer's chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4193
+  - direction: 2
+    description: A passage leads to the main laboratory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4197
+  extra_descriptions:
+  - keywords: controls systems ancient
+    description: 'The control panels use a mix of crystal displays and mechanical
+      interfaces. Without knowing
+
+      the ancient language and understanding the underlying principles, using these
+      controls would
+
+      be incredibly dangerous. But to someone with the right knowledge, they might
+      allow direct
+
+      manipulation of the factory''s core functions.'
+- vnum: 4195
+  name: Descent into Darkness
+  description: '   Stairs descend into near-total darkness. Emergency lights are few
+    and dim here. The
+
+    stairs are ancient and worn, leading down to the absolute deepest levels of the
+    facility.
+
+    The air is stale and cold, and there''s a feeling of immense age and weight pressing
+    down
+
+    from above.'
+  zone: 42
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The stairs ascend back to the deep core access.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4190
+  - direction: 5
+    description: The stairs continue down into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4196
+  extra_descriptions:
+  - keywords: darkness stairs depth
+    description: 'Looking down, the darkness seems absolute. The stairs continue far
+      beyond the range of
+
+      any light. What lies at the very bottom of the facility remains unknown, perhaps
+      best
+
+      left undiscovered.'
+- vnum: 4196
+  name: Foundation Level
+  description: '   You have reached the foundation level - the absolute bottom of
+    the facility. Massive
+
+    blocks of ancient metal and stone form the base upon which everything above is
+    built.
+
+    The scale is staggering, suggesting the factory extends far deeper into the planet
+    than
+
+    anyone knows. Strange symbols cover the foundation blocks, perhaps warnings or
+    instructions
+
+    from the original builders.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: A passage leads to the research nexus.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4197
+  - direction: 4
+    description: The stairs climb back up toward the deep core.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4195
+  extra_descriptions:
+  - keywords: foundation blocks ancient
+    description: 'These foundation blocks are made from material that doesn''t exist
+      anywhere else on Mars.
+
+      They''re incredibly dense and strong, able to support the weight of the entire
+      factory
+
+      above. The symbols carved into them might be structural notations or might be
+      something
+
+      more significant - prayers, warnings, or the names of the ancient builders.'
+- vnum: 4197
+  name: Research Nexus - Ras Thavas's Laboratory
+  description: '   This chamber serves as the center of the lower level research operation.
+    It''s clearly
+
+    the personal laboratory of the master behind all the experiments above - Ras Thavas
+    himself.
+
+    The equipment here surpasses everything in the other labs, combining ancient Martian
+
+    technology with modern innovations and the researcher''s own genius. This is where
+    the most
+
+    advanced and dangerous work is performed.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: A passage leads to the ancient control chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4194
+  - direction: 1
+    description: A door leads to the observation chamber.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4198
+  - direction: 3
+    description: A passage leads back to the foundation level.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4196
+  extra_descriptions:
+  - keywords: equipment laboratory advanced
+    description: 'The equipment in this laboratory is beyond anything you''ve seen
+      elsewhere. Some devices
+
+      combine multiple technologies - biological, mechanical, and energy-based - into
+      unified
+
+      systems. The work being done here represents the cutting edge of multiple scientific
+
+      disciplines, pushed to their absolute limits and beyond.'
+- vnum: 4198
+  name: Observation and Planning Chamber
+  description: '   This chamber contains Ras Thavas''s research notes, plans, and
+    observations. Maps of
+
+    the factory cover one wall, marked with notations about systems and opportunities.
+    Another
+
+    wall displays biological diagrams showing proposed modifications to Martian physiology.
+
+    A third shows energy diagrams for proposed factory enhancements. The scope of
+    the research
+
+    is breathtaking - nothing less than remaking Mars itself.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: A door leads to the confrontation chamber.
+    keywords: door heavy
+    door_flag: 2
+    key_vnum: 4255
+    to_room: 4199
+  - direction: 3
+    description: The door leads back to the research nexus.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4197
+  extra_descriptions:
+  - keywords: notes plans research
+    description: 'Reading through the notes reveals Ras Thavas''s grand vision: extending
+      Martian lifespans
+
+      indefinitely, enhancing physical capabilities, and improving the factory''s
+      output to support
+
+      a larger population. The goals are noble - ensuring Mars''s survival. But the
+      methods are
+
+      questionable at best, and some experiments cross lines that should never be
+      crossed. The
+
+      moral complexity is overwhelming.'
+- vnum: 4199
+  name: The Master's Chamber
+  description: '   This is the personal chamber of Ras Thavas, the Master Mind behind
+    the lower level
+
+    research. The room combines laboratory, living space, and fortress. Advanced equipment
+
+    monitors multiple experiments, while defensive systems protect against intruders.
+    Ras
+
+    Thavas himself is here, surrounded by his research, prepared to defend his work
+    or explain
+
+    his vision - depending on your approach.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The heavy door leads back to observation.
+    keywords: door heavy
+    door_flag: 2
+    key_vnum: 4255
+    to_room: 4198
+  extra_descriptions:
+  - keywords: chamber laboratory fortress
+    description: 'This chamber is simultaneously a place of brilliant research and
+      dangerous obsession. Ras
+
+      Thavas has spent years here, possibly decades, pursuing knowledge that could
+      save Mars or
+
+      damn it. The intensity of his dedication is evident in every detail, as is the
+      single-
+
+      minded focus that has allowed him to cross ethical boundaries others wouldn''t
+      dare approach.'
+mobiles:
+- vnum: 4200
+  namelist: assistant research fanatical
+  short_desc: a fanatical research assistant
+  long_desc: A dedicated research assistant works here with zealous intensity.
+  detailed_desc: 'This red Martian assistant serves Ras Thavas with absolute devotion.
+    He wears a scientist''s
+
+    harness covered with chemical stains and carries various medical and technical
+    instruments.
+
+    His eyes show the fervor of a true believer - he''s convinced that Ras Thavas''s
+    research,
+
+    no matter how disturbing, is essential for Mars''s survival. He''ll defend the
+    laboratory and
+
+    its secrets with his life if necessary. His combat skills are limited, but his
+    determination
+
+    and knowledge of the facility make him dangerous.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 8
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+240
+    damage_dice: 3d6+3
+    gold: 2500
+    experience: 16000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4201
+  namelist: researcher senior scientist
+  short_desc: a senior researcher
+  long_desc: A senior researcher oversees experiments here with cold precision.
+  detailed_desc: 'This experienced scientist has worked with Ras Thavas for years,
+    learning techniques and
+
+    knowledge that few possess. His harness is well-worn and marked with the scars
+    of dangerous
+
+    research. He''s brilliant and dedicated, but his long exposure to forbidden research
+    has
+
+    hardened him to ethical concerns. He sees experimental subjects as data rather
+    than beings.
+
+    While not as fanatical as the assistants, he''s committed to the work and will
+    defend it.
+
+    His scientific knowledge is formidable, and he can be dangerous in combat despite
+    not being
+
+    a trained warrior.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 900
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+300
+    damage_dice: 3d6+4
+    gold: 3500
+    experience: 20000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4202
+  namelist: thavas ras master mind genius
+  short_desc: Ras Thavas, the Master Mind of Mars
+  long_desc: Ras Thavas stands here, radiating intelligence and obsessive dedication.
+  detailed_desc: 'This elderly red Martian is perhaps the greatest scientific mind
+    on Mars - and the most
+
+    morally ambiguous. His deeply lined face shows centuries of life and intense study.
+    His
+
+    eyes are sharp and analytical, seeing everything as a problem to be solved. He
+    wears a
+
+    scientist''s harness of exceptional quality, covered with tools and instruments.
+    Ras Thavas
+
+    is a master surgeon, biologist, and engineer who has pushed the boundaries of
+    science
+
+    farther than anyone. He''s performed brain transplants, extended lifespans indefinitely,
+
+    created hybrid life forms, and enhanced Martian capabilities. His work could save
+    Mars from
+
+    slow extinction - or destroy it through hubris. He''s not inherently evil, but
+    his single-
+
+    minded pursuit of knowledge has led him to cross ethical lines repeatedly. He''s
+    incredibly
+
+    dangerous in his own way, possessing knowledge of Martian physiology that allows
+    him to
+
+    exploit weaknesses others don''t know exist. He can be reasoned with but will
+    defend his
+
+    research if threatened.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 4203
+  namelist: varo vad earthman assistant captive
+  short_desc: Vad Varo
+  long_desc: Vad Varo, an Earthman like John Carter, stands here with conflicted expression.
+  detailed_desc: 'This is another Earthman who found himself transported to Mars,
+    but unlike John Carter,
+
+    Vad Varo was captured by Ras Thavas and forced into service. He''s learned surgical
+    and
+
+    research techniques from the Master Mind, becoming skilled despite his revulsion
+    at some
+
+    of the work. He''s torn between his unwilling oath to serve Ras Thavas and his
+    desire to
+
+    escape and perhaps stop the more extreme experiments. His earth origin gives him
+    physical
+
+    advantages similar to John Carter''s, though he''s focused more on medical skills
+    than combat.
+
+    He''s a potential ally if approached correctly, or he''ll fight reluctantly if
+    defending the
+
+    laboratory. His moral conflict makes him unpredictable.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+280
+    damage_dice: 3d6+4
+    gold: 3000
+    experience: 18000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4204
+  namelist: hybrid failed experiment creature
+  short_desc: a failed hybrid experiment
+  long_desc: A disturbing hybrid creature lurks here, a tragic failure of science.
+  detailed_desc: 'This creature is the result of a failed biological experiment -
+    an attempt to combine
+
+    different Martian species that went horribly wrong. Its form is unnatural and
+    wrong,
+
+    mixing features from multiple creatures in ways that cause obvious suffering.
+    It''s driven
+
+    by pain and confusion to attack anything that moves. The creature is dangerous
+    despite
+
+    its suffering, with multiple natural weapons from its various parent species.
+    Seeing it
+
+    raises questions about the price of scientific advancement. Killing it might be
+    a mercy.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 9
+    thac0: 0
+    ac: 0
+    hp_dice: 5d10+270
+    damage_dice: 3d8+4
+    gold: 2800
+    experience: 17000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4205
+  namelist: warrior synthetic enhanced
+  short_desc: a synthetic warrior
+  long_desc: An enhanced synthetic warrior stands guard here with mechanical precision.
+  detailed_desc: 'This is a terrifying creation - a warrior whose body has been enhanced
+    with synthetic
+
+    tissue and mechanical components. The enhancement makes him stronger, faster,
+    and more
+
+    resilient than natural Martians. His harness integrates directly with his enhanced
+    body,
+
+    and his weapons are more effective in his enhanced grip. He follows Ras Thavas''s
+    orders
+
+    with absolute obedience, lacking the free will to question or refuse. He''s a
+    demonstration
+
+    of what could be done to create super-soldiers, for better or worse. In combat,
+    he''s
+
+    formidable, combining enhanced physical capabilities with warrior training.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 800
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 7d10+320
+    damage_dice: 4d6+4
+    gold: 3800
+    experience: 21000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4206
+  namelist: mutant radium energy creature
+  short_desc: a radium mutant
+  long_desc: A creature mutated by radium energy lurks here, glowing faintly.
+  detailed_desc: 'This unfortunate being was exposed to concentrated radium radiation
+    during experiments
+
+    with the factory''s power systems. The radiation didn''t kill but instead transformed
+    it
+
+    into something no longer natural. Its body glows faintly blue from residual radiation,
+
+    and touching it burns with radioactive energy. The mutation gave it strange capabilities
+    -
+
+    it can project radium energy at enemies and is highly resistant to physical damage.
+    But
+
+    it''s clearly suffering, driven mad by the energy coursing through it. It''s dangerous
+    to
+
+    fight and even being near it exposes you to radiation. The creature is both a
+    warning
+
+    about the dangers of radium research and a demonstration of potential weaponization
+    of
+
+    radiation.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 11
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+350
+    damage_dice: 4d6+5
+    gold: 4000
+    experience: 22000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4207
+  namelist: horror prototype created abomination
+  short_desc: a prototype horror
+  long_desc: A nightmarish creation stands here, the ultimate result of forbidden
+    science.
+  detailed_desc: 'This creature is Ras Thavas''s ultimate biological creation - a
+    being designed to be the
+
+    perfect predator and guardian. It combines the deadliest features of multiple
+    Martian
+
+    predators - banth strength and claws, apt''s venomous bite, mantalia''s strange
+    adaptability,
+
+    and enhancements beyond nature. The horror is covered in natural armor, armed
+    with multiple
+
+    weapons, and possesses frightening intelligence. It''s the answer to the question:
+    what if
+
+    science created a perfect killer? The horror is kept in reserve to protect the
+    deepest
+
+    secrets of the lower levels, and encountering it means you''ve gone too far. Fighting
+    it
+
+    is a test of courage and skill, and defeating it proves you''re exceptional. The
+    horror''s
+
+    existence raises the question of whether some knowledge should remain undiscovered.'
+  action_flags: 2
+  affection_flags: 40
+  alignment: 0
+  type: simple
+  simple:
+    level: 12
+    thac0: 0
+    ac: 0
+    hp_dice: 8d10+400
+    damage_dice: 5d6+6
+    gold: 5000
+    experience: 28000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4208
+  namelist: guard laboratory security enhanced
+  short_desc: a laboratory guard
+  long_desc: An enhanced guard protects this laboratory with vigilant efficiency.
+  detailed_desc: 'This guard serves the lower level research facility, and unlike
+    normal guards, he''s been
+
+    enhanced by Ras Thavas''s techniques. He''s stronger, faster, and tougher than
+    natural
+
+    Martians, with improved reflexes and senses. His enhancement is less extensive
+    than the
+
+    synthetic warriors but still significant. He''s loyal to the research because
+    it saved his
+
+    life - he was dying when Ras Thavas''s treatments healed him. His gratitude overrides
+
+    concerns about ethics. In combat, he''s more capable than standard guards, and
+    his enhanced
+
+    capabilities make him a serious threat.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 9
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+280
+    damage_dice: 3d6+4
+    gold: 3000
+    experience: 19000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4209
+  namelist: guardian enhanced cybernetic
+  short_desc: an enhanced guardian
+  long_desc: A cybernetic guardian enforces security here with mechanical efficiency.
+  detailed_desc: 'This guardian is a step beyond the synthetic warriors - a being
+    whose body is now more
+
+    machine than organic. Cybernetic enhancements replace much of his original form,
+    granting
+
+    strength and durability far beyond natural limits. He''s equipped with integrated
+    weapons -
+
+    radium projectors built into his arms and reinforced limbs that can crush metal.
+    His mind
+
+    has been conditioned to absolute obedience, making him an unwavering defender
+    of the lower
+
+    levels. Fighting him is like fighting a machine that feels no pain and knows no
+    fear. Only
+
+    destruction will stop him, and he''s designed to be very hard to destroy.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 0
+  type: simple
+  simple:
+    level: 11
+    thac0: 0
+    ac: 0
+    hp_dice: 7d10+360
+    damage_dice: 4d6+5
+    gold: 4200
+    experience: 23000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4210
+  namelist: golem prototype constructed guardian
+  short_desc: a prototype golem
+  long_desc: A massive constructed golem stands guard here, an artificial being of
+    metal and magic.
+  detailed_desc: 'This golem is Ras Thavas''s attempt to recreate the automated guardians
+    of the ancient
+
+    Martians. It''s a constructed being, combining ancient technology with modern
+    engineering
+
+    and biological components in an unholy hybrid. The golem stands eight feet tall,
+    built
+
+    from metal and synthetic tissue, powered by a radium core, and animated by principles
+
+    that blend science and ancient Martian arts. It''s incredibly strong and resilient,
+    nearly
+
+    immune to normal weapons, and single-minded in defending its assigned area. The
+    golem
+
+    represents the apex of Ras Thavas''s engineering work, though even he admits he
+    doesn''t
+
+    fully understand how it achieves consciousness. Fighting it requires exceptional
+    skill
+
+    and power, and even defeating it provides knowledge about what can be created
+    when the
+
+    boundaries of science and ancient arts blur.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 0
+  type: simple
+  simple:
+    level: 10
+    thac0: 0
+    ac: 0
+    hp_dice: 7d10+340
+    damage_dice: 4d6+5
+    gold: 3900
+    experience: 21000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4211
+  namelist: creature rat mutated swarm
+  short_desc: a mutated rat creature
+  long_desc: A mutated rat-like creature skitters here, enlarged and aggressive.
+  detailed_desc: 'This creature was once a normal Martian rat-like scavenger that
+    has been transformed by
+
+    exposure to the chemicals and radiation in the lower levels. It''s now the size
+    of a small
+
+    dog, with enhanced aggression and unnatural resilience. While individually not
+    terribly
+
+    dangerous, these creatures often travel in swarms and can overwhelm unprepared
+    victims.
+
+    They''re a hazard of the lower levels, infesting the abandoned sections and feeding
+    on
+
+    waste from the research. They represent unintended consequences of the research
+    - accidental
+
+    creation of aggressive pests that make the lower levels more dangerous.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 8
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+220
+    damage_dice: 3d6+3
+    gold: 1800
+    experience: 14000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4212
+  namelist: consciousness first engineer ancient
+  short_desc: The First Engineer
+  long_desc: An ancient consciousness preserved in crystalline form regards you with
+    timeless wisdom.
+  detailed_desc: 'This is not a physical being but a preserved consciousness from
+    the original builders of
+
+    the factory. The First Engineer was one of the master creators who designed and
+    built the
+
+    atmosphere system countless ages ago. When the ancient civilization fell, he chose
+    to
+
+    preserve his mind in stasis, hoping to guide future generations. His knowledge
+    is immense -
+
+    he understands the factory''s systems better than anyone living, knows the history
+    of ancient
+
+    Mars, and possesses technological knowledge lost for millennia. However, awakening
+    him is
+
+    both opportunity and danger. He might share his knowledge generously, or he might
+    judge
+
+    modern Martians unworthy of it. He might be able to enhance the factory''s operation
+    or
+
+    shut it down if he determines it''s being misused. Communicating with him requires
+    finding
+
+    a way to interface with his crystalline prison. His existence raises profound
+    questions
+
+    about the nature of consciousness, the value of ancient knowledge, and whether
+    some secrets
+
+    should remain buried with their creators.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 4213
+  namelist: subject experimental modified prisoner
+  short_desc: an experimental subject
+  long_desc: A modified humanoid subject stands here, showing obvious enhancements.
+  detailed_desc: 'This red Martian has been significantly modified by Ras Thavas''s
+    experiments. Enhanced
+
+    muscles, improved organs, and other modifications make him stronger and tougher
+    than
+
+    natural Martians. However, his mind has been conditioned to serve, leaving him
+    with
+
+    limited free will. He was either a willing volunteer desperate for enhancement
+    or an
+
+    unwilling prisoner forced to undergo procedures. His feelings about his transformation
+
+    are complex - he might appreciate the physical improvements while resenting the
+    loss of
+
+    autonomy. In combat, his enhancements make him dangerous, though he''s not a trained
+
+    warrior. His existence raises questions about consent, bodily autonomy, and the
+    price
+
+    of enhancement.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 9
+    thac0: 0
+    ac: 0
+    hp_dice: 6d10+260
+    damage_dice: 3d6+3
+    gold: 2600
+    experience: 17000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4214
+  namelist: technician power energy specialist
+  short_desc: a power systems technician
+  long_desc: A specialized technician works on energy systems here.
+  detailed_desc: 'This technician specializes in the dangerous work with radium and
+    energy systems in the
+
+    lower levels. He''s been trained in handling highly radioactive materials and
+    experimental
+
+    power systems. His harness includes extensive protective features, and he carries
+
+    specialized tools for energy work. He''s dedicated to his research, convinced
+    that
+
+    understanding and improving radium technology is essential for Mars''s future.
+    He''s not
+
+    inherently hostile but will defend his work and the laboratory if threatened.
+    His
+
+    knowledge of energy systems makes him capable of weaponizing radium in combat,
+    though
+
+    doing so risks everyone nearby including himself.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 4215
+  namelist: scientist biological researcher
+  short_desc: a biological researcher
+  long_desc: A research scientist studies biological modifications here.
+  detailed_desc: 'This scientist focuses on biological research - tissue engineering,
+    enhancement, and
+
+    hybrid creation. She''s brilliant and dedicated, having made discoveries that
+    could
+
+    revolutionize Martian medicine. However, her research has required questionable
+    methods,
+
+    and she''s grown somewhat desensitized to the ethical implications of her work.
+    She sees
+
+    the potential benefits as justifying the means, though she has limits and would
+    never
+
+    torture subjects without purpose. She''s not a combatant but can use her knowledge
+    of
+
+    Martian biology to target weaknesses in enemies if forced to defend herself. Her
+
+    existence represents the moral complexity of scientific advancement - good intentions
+
+    leading to questionable actions.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+objects:
+- vnum: 4250
+  namelist: key laboratory research
+  short_desc: a research laboratory key
+  long_desc: A key to the research laboratories lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key
+    description: 'This key grants access to the secret research laboratories in the
+      lower levels. It''s
+
+      marked with Ras Thavas''s personal seal.'
+  affects: []
+- vnum: 4251
+  namelist: key containment radium
+  short_desc: a radium containment key
+  long_desc: A key to the radium containment chambers lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key
+    description: 'This key opens the heavily shielded radium containment chambers.
+      Radiation warning
+
+      symbols cover it. Only authorized personnel should possess this.'
+  affects: []
+- vnum: 4252
+  namelist: key core unstable
+  short_desc: an emergency core key
+  long_desc: A key marked with extreme danger warnings lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key
+    description: 'This key opens the unstable core chamber. The warnings suggest opening
+      that chamber
+
+      is a last resort or a death wish.'
+  affects: []
+- vnum: 4253
+  namelist: key hybrid containment
+  short_desc: a containment chamber key
+  long_desc: A key to the hybrid containment cells lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key
+    description: 'This key opens the containment cells holding dangerous hybrid experiments.
+      The key
+
+      is marked with warning symbols suggesting what''s inside should stay inside.'
+  affects: []
+- vnum: 4254
+  namelist: key quarantine sealed
+  short_desc: a quarantine seal key
+  long_desc: A key that breaks quarantine seals lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key
+    description: 'This key can break the seals on quarantine chambers. Medical emergency
+      protocols and
+
+      warnings cover it. Using it means accepting dangerous exposure risks.'
+  affects: []
+- vnum: 4255
+  namelist: key master thavas
+  short_desc: Ras Thavas's master key
+  long_desc: An ornate master key lies here, bearing Ras Thavas's seal.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 0
+  extra_descriptions:
+  - keywords: key seal
+    description: 'This master key opens Ras Thavas''s personal chambers and most secure
+      areas. It''s
+
+      clearly the key of someone with absolute authority in the lower levels.'
+  affects: []
+- vnum: 4256
+  namelist: sword enhanced modified weapon
+  short_desc: an enhanced longsword
+  long_desc: A sword enhanced by experimental techniques lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 10
+  value3: 3
+  weight: 25
+  cost: 1400
+  rent: 350
+  extra_descriptions:
+  - keywords: sword enhanced
+    description: 'This sword has been enhanced using Ras Thavas''s techniques - the
+      metal has been
+
+      treated with processes that make it stronger and sharper than normal weapons.
+      It''s
+
+      a demonstration of how scientific knowledge can improve even traditional weapons.'
+  affects: []
+- vnum: 4257
+  namelist: rifle radium experimental prototype
+  short_desc: an experimental radium rifle
+  long_desc: A prototype radium weapon of advanced design lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 18
+  value1: 8
+  value2: 0
+  value3: 0
+  weight: 35
+  cost: 2000
+  rent: 500
+  extra_descriptions:
+  - keywords: rifle weapon prototype
+    description: 'This experimental rifle is far more powerful than standard military
+      radium weapons.
+
+      It fires concentrated radium beams with devastating effect. The weapon is still
+
+      somewhat unstable, but in skilled hands it''s incredibly deadly.'
+  affects: []
+- vnum: 4258
+  namelist: armor synthetic enhanced harness
+  short_desc: enhanced synthetic armor
+  long_desc: Armor enhanced with synthetic materials lies here.
+  action_desc: ''
+  type_flag: 3
+  extra_flags: 0
+  wear_flags: 0
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 18
+  cost: 1000
+  rent: 250
+  extra_descriptions:
+  - keywords: armor harness synthetic
+    description: 'This armor incorporates synthetic tissues that provide superior
+      protection while
+
+      remaining flexible. It''s lighter and stronger than normal armor, a demonstration
+
+      of how biological engineering can enhance protective equipment.'
+  affects: []
+- vnum: 4259
+  namelist: serum enhancement physical
+  short_desc: a physical enhancement serum
+  long_desc: A vial of enhancement serum lies here.
+  action_desc: potion
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 50
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 1500
+  rent: 375
+  extra_descriptions:
+  - keywords: serum vial
+    description: 'This alchemical/biological serum temporarily enhances physical capabilities
+      - strength,
+
+      speed, and resilience all improve. It''s one of Ras Thavas''s creations, combining
+
+      chemistry with biological knowledge. The effects are powerful but temporary,
+      and
+
+      repeated use might have unknown consequences.'
+  affects: []
+- vnum: 4260
+  namelist: medicine healing advanced
+  short_desc: advanced healing medicine
+  long_desc: A vial of advanced healing formula lies here.
+  action_desc: potion
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 75
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 2000
+  rent: 500
+  extra_descriptions:
+  - keywords: medicine vial formula
+    description: 'This medicine uses Ras Thavas''s advanced biological knowledge to
+      heal injuries far
+
+      more effectively than normal medicine. It can heal wounds that would normally
+      require
+
+      days to recover from. The medicine represents the beneficial potential of the
+      research
+
+      being conducted here.'
+  affects: []
+- vnum: 4261
+  namelist: implant cybernetic device
+  short_desc: a cybernetic implant
+  long_desc: A small cybernetic enhancement device lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 2500
+  rent: 625
+  extra_descriptions:
+  - keywords: implant device cybernetic
+    description: 'This device can be surgically implanted to enhance capabilities.
+      It represents the
+
+      merging of biological and mechanical systems. The implant could improve reflexes,
+
+      strength, or sensory capabilities depending on its design. Having it implies
+      access
+
+      to extremely advanced medical procedures.'
+  affects: []
+- vnum: 4262
+  namelist: notes research thavas
+  short_desc: Ras Thavas's research notes
+  long_desc: A journal of research notes lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 3000
+  rent: 750
+  extra_descriptions:
+  - keywords: notes journal research
+    description: 'These are Ras Thavas''s personal research notes, documenting procedures,
+      discoveries,
+
+      and theories. The knowledge contained here is invaluable to medical science
+      and
+
+      engineering, but also disturbing in its implications. Scholars would pay fortunes
+
+      for these notes, though their contents might be declared forbidden knowledge.'
+  affects: []
+- vnum: 4263
+  namelist: crystal data ancient
+  short_desc: an ancient data crystal
+  long_desc: A glowing data crystal from the ancient archives lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 4000
+  rent: 1000
+  extra_descriptions:
+  - keywords: crystal data
+    description: 'This data crystal contains information from the original factory
+      builders. Reading
+
+      it requires specialized equipment, but the knowledge it contains might revolutionize
+
+      understanding of ancient Martian technology. Scholars and engineers would consider
+
+      this priceless.'
+  affects: []
+- vnum: 4264
+  namelist: specimen preserved biological
+  short_desc: a preserved biological specimen
+  long_desc: A preserved specimen in a sealed container lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 800
+  rent: 200
+  extra_descriptions:
+  - keywords: specimen container
+    description: 'This preserved specimen demonstrates some aspect of Ras Thavas''s
+      research. It might
+
+      be a successfully enhanced organ, a hybrid tissue sample, or something more
+      disturbing.
+
+      Researchers would find it fascinating and valuable.'
+  affects: []
+- vnum: 4265
+  namelist: tool surgical advanced
+  short_desc: advanced surgical tools
+  long_desc: A set of advanced surgical instruments lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 1200
+  rent: 300
+  extra_descriptions:
+  - keywords: tools instruments surgical
+    description: 'These surgical tools are far more advanced than standard medical
+      equipment. They
+
+      include instruments for procedures that most surgeons wouldn''t dare attempt.
+      Some
+
+      tools combine ancient Martian technology with modern innovations.'
+  affects: []
+- vnum: 4266
+  namelist: scanner biological diagnostic
+  short_desc: a biological diagnostic scanner
+  long_desc: An advanced biological scanner lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 1500
+  rent: 375
+  extra_descriptions:
+  - keywords: scanner diagnostic
+    description: 'This scanner can analyze biological systems in extraordinary detail,
+      detecting
+
+      problems at the cellular level. It''s essential equipment for the advanced biological
+
+      research conducted here.'
+  affects: []
+- vnum: 4267
+  namelist: device energy radium portable
+  short_desc: a portable radium device
+  long_desc: A portable radium energy device lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 12
+  value1: 15
+  value2: 15
+  value3: 0
+  weight: 8
+  cost: 1800
+  rent: 450
+  extra_descriptions:
+  - keywords: device radium energy
+    description: 'This device harnesses radium energy for various purposes - it could
+      provide power,
+
+      project energy beams, or serve as an analytical tool. It''s sophisticated equipment
+
+      that most people wouldn''t know how to use safely.'
+  affects: []
+- vnum: 4268
+  namelist: suit hazard full protection
+  short_desc: a full hazard protection suit
+  long_desc: A complete hazard protection suit lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 0
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 1500
+  rent: 375
+  extra_descriptions:
+  - keywords: suit protection hazard
+    description: 'This suit provides protection against radiation, chemicals, biological
+      hazards, and
+
+      extreme temperatures. It''s essential equipment for working in the most dangerous
+      areas
+
+      of the lower levels. The suit includes its own air supply and communication
+      systems.'
+  affects: []
+- vnum: 4269
+  namelist: container sample biological
+  short_desc: biological sample containers
+  long_desc: A set of sealed sample containers lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 400
+  rent: 100
+  extra_descriptions:
+  - keywords: containers samples
+    description: 'These sealed containers are designed to safely store biological
+      samples. They prevent
+
+      contamination and preserve the samples in stasis. Researchers use these to collect
+
+      and transport specimens.'
+  affects: []
+- vnum: 4270
+  namelist: blueprint ancient schematic lost
+  short_desc: an ancient technical blueprint
+  long_desc: A blueprint of ancient Martian design lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 3500
+  rent: 875
+  extra_descriptions:
+  - keywords: blueprint schematic ancient
+    description: 'This blueprint shows designs from the original factory builders.
+      It uses ancient
+
+      technical notation and principles that modern engineers struggle to understand.
+
+      The knowledge it contains could improve factory operations or reveal new technologies.
+
+      It''s incredibly valuable to scholars and engineers.'
+  affects: []
+- vnum: 4271
+  namelist: core radium fragment
+  short_desc: a radium core fragment
+  long_desc: A fragment of radium core material lies here, glowing faintly.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 12
+  value1: 8
+  value2: 8
+  value3: 0
+  weight: 2
+  cost: 2500
+  rent: 625
+  extra_descriptions:
+  - keywords: fragment core radium
+    description: 'This fragment of concentrated radium provides immense power in a
+      small package. It
+
+      could be used to power devices, enhance weapons, or serve as fuel. However,
+      it''s
+
+      also radioactive and dangerous to carry without proper shielding. The fragment
+
+      represents both great power and significant risk.'
+  affects: []
+- vnum: 4272
+  namelist: graft synthetic tissue
+  short_desc: a synthetic tissue graft
+  long_desc: A container of synthetic tissue for grafting lies here.
+  action_desc: potion
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 60
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 1800
+  rent: 450
+  extra_descriptions:
+  - keywords: graft tissue synthetic
+    description: 'This synthetic tissue can be grafted onto damaged areas to repair
+      injuries or enhance
+
+      capabilities. It represents the beneficial applications of Ras Thavas''s biological
+
+      research. The tissue integrates with natural body systems, providing healing
+      or
+
+      enhancement depending on application.'
+  affects: []
+- vnum: 4273
+  namelist: manual procedure medical
+  short_desc: a medical procedure manual
+  long_desc: A manual documenting advanced procedures lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 1000
+  rent: 250
+  extra_descriptions:
+  - keywords: manual procedures
+    description: 'This manual documents procedures that most doctors don''t know exist
+      - brain transplants,
+
+      organ replacements, enhancement surgeries, and more. The knowledge is both valuable
+
+      and disturbing, representing techniques that push ethical boundaries.'
+  affects: []
+- vnum: 4274
+  namelist: weapon energy integrated
+  short_desc: an integrated energy weapon
+  long_desc: An experimental weapon integrated with cybernetics lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 16
+  value1: 7
+  value2: 0
+  value3: 0
+  weight: 30
+  cost: 2200
+  rent: 550
+  extra_descriptions:
+  - keywords: weapon energy integrated
+    description: 'This weapon is designed to integrate directly with cybernetic enhancements,
+      providing
+
+      superior power and accuracy. It''s a demonstration of how biological enhancement
+      and
+
+      weapon technology can be merged. The weapon is devastating in combat but requires
+
+      enhancements to use effectively.'
+  affects: []
+- vnum: 4275
+  namelist: artifact first engineer gift
+  short_desc: the First Engineer's gift
+  long_desc: A unique artifact from the ancient builders lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10000
+  rent: 2500
+  extra_descriptions:
+  - keywords: artifact gift ancient
+    description: 'This artifact is a gift from the First Engineer, provided to those
+      he judges worthy.
+
+      Its exact nature and capabilities are unique and extraordinary - perhaps a tool
+      of
+
+      immense power, or knowledge in physical form, or something beyond current understanding.
+
+      Receiving this marks you as someone the ancient builders would have respected.'
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 4211
+  arg2: 3
+  arg3: 4150
+- command: M
+  if_flag: 0
+  arg1: 4211
+  arg2: 2
+  arg3: 4151
+- command: M
+  if_flag: 0
+  arg1: 4211
+  arg2: 2
+  arg3: 4152
+- command: M
+  if_flag: 0
+  arg1: 4211
+  arg2: 2
+  arg3: 4157
+- command: M
+  if_flag: 0
+  arg1: 4200
+  arg2: 2
+  arg3: 4160
+- command: G
+  if_flag: 1
+  arg1: 4265
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4269
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4200
+  arg2: 2
+  arg3: 4161
+- command: G
+  if_flag: 1
+  arg1: 4262
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4266
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4200
+  arg2: 1
+  arg3: 4162
+- command: G
+  if_flag: 1
+  arg1: 4265
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4201
+  arg2: 1
+  arg3: 4161
+- command: G
+  if_flag: 1
+  arg1: 4262
+  arg2: 30
+- command: G
+  if_flag: 1
+  arg1: 4266
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4250
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4201
+  arg2: 1
+  arg3: 4171
+- command: G
+  if_flag: 1
+  arg1: 4267
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4262
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 4201
+  arg2: 1
+  arg3: 4181
+- command: G
+  if_flag: 1
+  arg1: 4266
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4273
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4203
+  arg2: 1
+  arg3: 4167
+- command: G
+  if_flag: 1
+  arg1: 4265
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4259
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4262
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 4208
+  arg2: 2
+  arg3: 4153
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4258
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 4208
+  arg2: 2
+  arg3: 4160
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4258
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 4208
+  arg2: 1
+  arg3: 4170
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4209
+  arg2: 1
+  arg3: 4162
+- command: M
+  if_flag: 0
+  arg1: 4209
+  arg2: 1
+  arg3: 4171
+- command: M
+  if_flag: 0
+  arg1: 4209
+  arg2: 1
+  arg3: 4175
+- command: M
+  if_flag: 0
+  arg1: 4210
+  arg2: 1
+  arg3: 4177
+- command: M
+  if_flag: 0
+  arg1: 4204
+  arg2: 1
+  arg3: 4157
+- command: M
+  if_flag: 0
+  arg1: 4204
+  arg2: 1
+  arg3: 4166
+- command: G
+  if_flag: 1
+  arg1: 4264
+  arg2: 30
+- command: M
+  if_flag: 0
+  arg1: 4204
+  arg2: 1
+  arg3: 4187
+- command: M
+  if_flag: 0
+  arg1: 4205
+  arg2: 2
+  arg3: 4165
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4258
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4205
+  arg2: 1
+  arg3: 4175
+- command: G
+  if_flag: 1
+  arg1: 4256
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4258
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4268
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4206
+  arg2: 1
+  arg3: 4177
+- command: M
+  if_flag: 0
+  arg1: 4207
+  arg2: 1
+  arg3: 4187
+- command: M
+  if_flag: 0
+  arg1: 4214
+  arg2: 1
+  arg3: 4171
+- command: G
+  if_flag: 1
+  arg1: 4267
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4268
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4214
+  arg2: 1
+  arg3: 4175
+- command: G
+  if_flag: 1
+  arg1: 4267
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4268
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4251
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4215
+  arg2: 1
+  arg3: 4181
+- command: G
+  if_flag: 1
+  arg1: 4266
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4273
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 4215
+  arg2: 1
+  arg3: 4182
+- command: G
+  if_flag: 1
+  arg1: 4266
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4264
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 4213
+  arg2: 2
+  arg3: 4169
+- command: G
+  if_flag: 1
+  arg1: 4259
+  arg2: 30
+- command: M
+  if_flag: 0
+  arg1: 4213
+  arg2: 1
+  arg3: 4186
+- command: M
+  if_flag: 0
+  arg1: 4202
+  arg2: 1
+  arg3: 4199
+- command: G
+  if_flag: 1
+  arg1: 4262
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4265
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4267
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4255
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 4275
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 4212
+  arg2: 1
+  arg3: 4193
+- command: G
+  if_flag: 1
+  arg1: 4275
+  arg2: 100
+- command: O
+  if_flag: 0
+  arg1: 4250
+  arg2: 1
+  arg3: 4160
+- command: O
+  if_flag: 0
+  arg1: 4251
+  arg2: 1
+  arg3: 4175
+- command: O
+  if_flag: 0
+  arg1: 4252
+  arg2: 1
+  arg3: 4175
+- command: O
+  if_flag: 0
+  arg1: 4253
+  arg2: 1
+  arg3: 4182
+- command: O
+  if_flag: 0
+  arg1: 4254
+  arg2: 1
+  arg3: 4188
+- command: O
+  if_flag: 0
+  arg1: 4255
+  arg2: 1
+  arg3: 4198
+- command: O
+  if_flag: 0
+  arg1: 4265
+  arg2: 3
+  arg3: 4160
+- command: O
+  if_flag: 0
+  arg1: 4266
+  arg2: 2
+  arg3: 4161
+- command: O
+  if_flag: 0
+  arg1: 4267
+  arg2: 2
+  arg3: 4171
+- command: O
+  if_flag: 0
+  arg1: 4269
+  arg2: 5
+  arg3: 4161
+- command: O
+  if_flag: 0
+  arg1: 4265
+  arg2: 2
+  arg3: 4167
+- command: O
+  if_flag: 0
+  arg1: 4260
+  arg2: 3
+  arg3: 4168
+- command: O
+  if_flag: 0
+  arg1: 4272
+  arg2: 2
+  arg3: 4169
+- command: O
+  if_flag: 0
+  arg1: 4268
+  arg2: 2
+  arg3: 4171
+- command: O
+  if_flag: 0
+  arg1: 4268
+  arg2: 2
+  arg3: 4175
+- command: O
+  if_flag: 0
+  arg1: 4262
+  arg2: 2
+  arg3: 4198
+- command: O
+  if_flag: 0
+  arg1: 4263
+  arg2: 3
+  arg3: 4191
+- command: O
+  if_flag: 0
+  arg1: 4263
+  arg2: 2
+  arg3: 4192
+- command: O
+  if_flag: 0
+  arg1: 4270
+  arg2: 2
+  arg3: 4192
+- command: O
+  if_flag: 0
+  arg1: 4273
+  arg2: 1
+  arg3: 4198
+- command: O
+  if_flag: 0
+  arg1: 4264
+  arg2: 3
+  arg3: 4166
+- command: O
+  if_flag: 0
+  arg1: 4269
+  arg2: 5
+  arg3: 4166
+- command: O
+  if_flag: 0
+  arg1: 4256
+  arg2: 2
+  arg3: 4162
+- command: O
+  if_flag: 0
+  arg1: 4257
+  arg2: 2
+  arg3: 4172
+- command: O
+  if_flag: 0
+  arg1: 4258
+  arg2: 2
+  arg3: 4176
+- command: O
+  if_flag: 0
+  arg1: 4274
+  arg2: 1
+  arg3: 4172
+- command: O
+  if_flag: 0
+  arg1: 4271
+  arg2: 2
+  arg3: 4175
+- command: O
+  if_flag: 0
+  arg1: 4271
+  arg2: 1
+  arg3: 4177
+- command: O
+  if_flag: 0
+  arg1: 4267
+  arg2: 1
+  arg3: 4177
+- command: O
+  if_flag: 0
+  arg1: 4259
+  arg2: 3
+  arg3: 4169
+- command: O
+  if_flag: 0
+  arg1: 4260
+  arg2: 5
+  arg3: 4168
+- command: O
+  if_flag: 0
+  arg1: 4270
+  arg2: 1
+  arg3: 4194
+- command: O
+  if_flag: 0
+  arg1: 4263
+  arg2: 2
+  arg3: 4194
+- command: O
+  if_flag: 0
+  arg1: 4258
+  arg2: 3
+  arg3: 4165
+shops: []

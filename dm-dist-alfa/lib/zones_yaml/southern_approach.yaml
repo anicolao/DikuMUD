@@ -1,0 +1,3164 @@
+zone:
+  number: 34
+  name: Southern Approach to Atmosphere Factory
+  top_room: 3149
+  lifespan: 40
+  reset_mode: 2
+rooms:
+- vnum: 3100
+  name: Southern Concourse
+  description: '   You stand at the southern end of the bridge that extends from Lesser
+    Helium''s
+
+    wall. A small stone structure serves as a guard post and customs station for
+
+    travelers heading south. Beyond stretches the vast ochre-moss plains of the dead
+
+    sea bottom, extending to the horizon under the pale Martian sky. To the south,
+
+    barely visible in the distance, you can make out the massive silhouette of the
+
+    Atmosphere Factory.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The bridge leads back to Lesser Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3051
+  - direction: 2
+    description: A worn path leads south into the dead sea bottom.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3101
+  extra_descriptions: []
+- vnum: 3101
+  name: Guard Post
+  description: '   This small stone building serves as the southern gate checkpoint.
+    A desk and
+
+    a few chairs occupy the main room, and weapons racks line the walls. Maps of the
+
+    southern territories are pinned to one wall, showing the route to the Atmosphere
+
+    Factory and various hazards along the way.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads to the southern concourse.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3100
+  - direction: 2
+    description: Another door leads to the supply depot.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3102
+  extra_descriptions: []
+- vnum: 3102
+  name: Supply Depot
+  description: '   This warehouse stores provisions for travelers making the long
+    journey to the
+
+    Atmosphere Factory. Barrels of water, dried meat, and other supplies are stacked
+
+    neatly. A large doorway to the south opens onto the dead sea bottom plains.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The door leads back to the guard post.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3101
+  - direction: 2
+    description: The open plains stretch southward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3103
+  extra_descriptions: []
+- vnum: 3103
+  name: Northern Dead Sea Bottom
+  description: '   The ancient sea bottom extends in all directions, covered in rust-red
+    ochre moss
+
+    that crunches beneath your feet. The air is thin and cold, despite the sunlight.
+    Far
+
+    to the north, the towers of Lesser Helium rise above the channel banks. To the
+    south,
+
+    the journey continues across the desolate plain.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The supply depot is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3102
+  - direction: 2
+    description: The dead sea bottom continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3104
+  - direction: 3
+    description: The moss-covered plain extends westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3105
+  extra_descriptions: []
+- vnum: 3104
+  name: Ochre Moss Plains
+  description: '   You walk across the ancient sea floor, your feet stirring up small
+    clouds of
+
+    reddish dust from the dry moss. The horizon shimmers in the thin atmosphere, and
+
+    the silence is profound. Scattered rocks and the occasional ancient shell provide
+
+    the only landmarks in this vast expanse.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The plains extend northward toward the depot.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3103
+  - direction: 1
+    description: A rocky outcrop rises to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3106
+  - direction: 2
+    description: The journey south continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3107
+  extra_descriptions: []
+- vnum: 3105
+  name: Western Moss Plains
+  description: '   The dead sea bottom stretches endlessly westward here. In the far
+    distance, you
+
+    might catch glimpses of movement - perhaps green Martian hordes or wild thoats.
+    The
+
+    moss here is particularly thick and rust-red in color.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 1
+    description: The main path lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3103
+  - direction: 2
+    description: You can head south along the western edge.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3108
+  extra_descriptions: []
+- vnum: 3106
+  name: Rocky Outcrop
+  description: '   A cluster of ancient rocks juts from the sea bottom here, possibly
+    the remains
+
+    of an island that stood here millions of years ago. The rocks provide some shelter
+
+    from the wind and sun, and old campfire circles suggest travelers have used this
+
+    spot for rest.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: The plains continue south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3109
+  - direction: 3
+    description: The main path is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3104
+  extra_descriptions: []
+- vnum: 3107
+  name: Southern Path
+  description: '   The well-worn path continues south across the dead sea bottom.
+    The ochre moss
+
+    shows signs of regular travel - caravans to the Atmosphere Factory must pass this
+
+    way frequently. The northern guard post is now far behind you.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The path leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3104
+  - direction: 1
+    description: The rocky outcrop lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3109
+  - direction: 2
+    description: The path continues deeper into the plains.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3110
+  extra_descriptions: []
+- vnum: 3108
+  name: Isolated Western Plains
+  description: '   This remote section of the sea bottom sees little traffic. The
+    moss here is
+
+    undisturbed, and you feel very exposed. The thin atmosphere makes sounds carry
+
+    strangely - was that a banth''s roar in the distance?'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western plains extend north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3105
+  - direction: 1
+    description: The main path is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3107
+  - direction: 2
+    description: More desolate plains lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3111
+  extra_descriptions: []
+- vnum: 3109
+  name: Sheltered Camp Site
+  description: '   The rocks here form a natural windbreak, and the presence of old
+    fire pits
+
+    and scattered bones suggests this is a common resting spot for caravans. The
+
+    rocks also provide some defense against predators.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The rocky outcrop continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3106
+  - direction: 2
+    description: The path heads south from this shelter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3112
+  - direction: 3
+    description: The main path lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3107
+  extra_descriptions: []
+- vnum: 3110
+  name: Deep Plains - North
+  description: '   You are now far from Lesser Helium, deep in the dead sea bottom.
+    The path
+
+    south is clear but the journey is long. The massive silhouette of the Atmosphere
+
+    Factory is more visible now, a dark shape against the southern horizon.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The path leads back toward civilization.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3107
+  - direction: 1
+    description: The path branches east toward a camp site.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3112
+  - direction: 2
+    description: The journey continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3113
+  - direction: 3
+    description: Dangerous western plains lie that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3111
+  extra_descriptions: []
+- vnum: 3111
+  name: Dangerous Western Reaches
+  description: '   This area is rarely traveled and feels threatening. The moss is
+    torn up in
+
+    places, suggesting the passage of large creatures. Green Martian tracks crisscross
+
+    the ground, and you should be wary.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: Isolated plains lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3108
+  - direction: 1
+    description: The safer main path is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3110
+  - direction: 2
+    description: The western reaches continue south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3114
+  extra_descriptions: []
+- vnum: 3112
+  name: Eastern Branch
+  description: '   A lesser path branches east here, probably used by scouts or hunters.
+    The
+
+    main caravan route continues to the west, but this way might offer some
+
+    interesting discoveries.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The sheltered camp lies to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3109
+  - direction: 1
+    description: The eastern path continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3115
+  - direction: 2
+    description: You can head south along this route.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3116
+  - direction: 3
+    description: The main path lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3110
+  extra_descriptions: []
+- vnum: 3113
+  name: Mid-Journey Point
+  description: '   You are now roughly halfway between Lesser Helium and the Atmosphere
+    Factory.
+
+    The northern city is no longer visible, lost beyond the horizon. To the south,
+
+    the factory structure looms larger, its enormous scale becoming apparent.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The path leads back north toward Helium.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3110
+  - direction: 1
+    description: An eastern branch lies that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3116
+  - direction: 2
+    description: The path continues south toward the factory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3117
+  - direction: 3
+    description: Dangerous territory lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3114
+  extra_descriptions: []
+- vnum: 3114
+  name: Predator Territory
+  description: '   The evidence of dangerous creatures is everywhere here. Bones -
+    some ancient,
+
+    some fresh - lie scattered across the moss. Deep gouges in the earth show where
+
+    banths have marked their territory. This is not a safe place to linger.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western reaches extend north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3111
+  - direction: 1
+    description: The mid-journey point of the main path is east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3113
+  - direction: 2
+    description: More dangerous ground lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3118
+  extra_descriptions: []
+- vnum: 3115
+  name: Eastern Exploration
+  description: '   This area sees little traffic. The moss is thicker here, and strange
+    rock
+
+    formations rise from the sea bottom. Ancient ruins might lie buried nearby,
+
+    waiting to be discovered by the adventurous.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 2
+    description: The path continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3119
+  - direction: 3
+    description: The eastern branch continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3112
+  extra_descriptions: []
+- vnum: 3116
+  name: Eastern Route South
+  description: '   This parallel route to the main path is quieter but perhaps more
+    dangerous.
+
+    Without the safety of numbers that caravans provide, travelers here must rely
+    on
+
+    their own skills and weapons.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern branch extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3112
+  - direction: 1
+    description: More eastern territory lies that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3119
+  - direction: 2
+    description: The eastern route continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3120
+  - direction: 3
+    description: The mid-journey point is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3113
+  extra_descriptions: []
+- vnum: 3117
+  name: Southern Plains - Midpoint
+  description: '   The Atmosphere Factory dominates the southern horizon now, its
+    massive towers
+
+    and structures clearly visible. You can see the shimmer of heat from its processes,
+
+    and the steady hum of its machinery is just barely audible across the distance.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The path leads back toward the mid-journey point.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3113
+  - direction: 1
+    description: The eastern route parallels the main path.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3120
+  - direction: 2
+    description: The path leads toward the factory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3121
+  - direction: 3
+    description: Dangerous territory lies west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3118
+  extra_descriptions: []
+- vnum: 3118
+  name: Banth Hunting Grounds
+  description: '   This area is clearly favored by the great Martian lions. Fresh
+    kills lie
+
+    partially consumed, and the territorial scent markers are strong. A banth could
+
+    appear at any moment, defending its hunting grounds from intruders.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: Predator territory continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3114
+  - direction: 1
+    description: The main path lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3117
+  - direction: 2
+    description: The hunting grounds extend south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3122
+  extra_descriptions: []
+- vnum: 3119
+  name: Ancient Ruins
+  description: '   The remains of some ancient structure jut from the moss here -
+    perhaps a
+
+    building from when this was an actual sea, or a monument from the lost Martian
+
+    civilization. The weathered stones bear carvings too worn to read.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern exploration area lies north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3115
+  - direction: 2
+    description: More ruins lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3123
+  - direction: 3
+    description: The eastern route is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3116
+  extra_descriptions: []
+- vnum: 3120
+  name: Eastern Route - Midpoint
+  description: '   This eastern parallel route continues its quiet journey south.
+    The advantage
+
+    of this path is the opportunity to avoid crowded caravans; the disadvantage is
+
+    facing any dangers alone.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern route continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3116
+  - direction: 1
+    description: Ancient ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3123
+  - direction: 2
+    description: The route continues south toward the factory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3124
+  - direction: 3
+    description: The main path is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3117
+  extra_descriptions: []
+- vnum: 3121
+  name: Factory Approach - North
+  description: '   You are entering the final stretch of the journey. The Atmosphere
+    Factory
+
+    fills the southern sky, an enormous complex of towers, domes, and machinery. The
+
+    steady thrum of its operations is now clearly audible, a deep bass note that
+
+    seems to resonate in your bones.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The southern plains extend north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3117
+  - direction: 1
+    description: The eastern approach lies that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3124
+  - direction: 2
+    description: The path leads closer to the factory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3125
+  - direction: 3
+    description: The hunting grounds lie to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3122
+  extra_descriptions: []
+- vnum: 3122
+  name: Western Danger Zone
+  description: '   The proximity to the factory seems to have made predators bolder
+    here. This
+
+    area is particularly dangerous, with fresh signs of multiple banths and possibly
+
+    apts. The creatures seem to hunt the animals drawn to the factory''s water
+
+    condensers.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The hunting grounds extend north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3118
+  - direction: 1
+    description: The northern approach to the factory lies east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3121
+  - direction: 2
+    description: More dangerous territory lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3126
+  extra_descriptions: []
+- vnum: 3123
+  name: Ruined Monument
+  description: '   A large stone monument or statue rises here, though time and weather
+    have
+
+    eroded its features beyond recognition. The scale suggests it depicted one of
+    the
+
+    ancient Martian races - perhaps the original builders of the Atmosphere Factory
+
+    itself.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: More ruins lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3119
+  - direction: 2
+    description: The ruins continue south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3127
+  - direction: 3
+    description: The eastern route is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3120
+  extra_descriptions: []
+- vnum: 3124
+  name: Eastern Approach
+  description: '   The eastern route now converges with the main path as both near
+    the factory.
+
+    The massive structure ahead is awe-inspiring in its scale and obvious age. How
+
+    such a facility could have been built is beyond comprehension.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern route continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3120
+  - direction: 1
+    description: The ruined monument stands to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3127
+  - direction: 2
+    description: The paths merge toward the factory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3128
+  - direction: 3
+    description: The northern approach is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3121
+  extra_descriptions: []
+- vnum: 3125
+  name: Main Approach Path
+  description: '   The path is wider and more heavily traveled here, marked by deep
+    ruts from
+
+    caravan wheels. Guard posts are visible ahead, part of the factory''s security
+
+    perimeter. The machinery noise is loud now, accompanied by hisses of steam and
+
+    occasional clanking sounds.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The path extends back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3121
+  - direction: 1
+    description: The eastern approach converges here.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3128
+  - direction: 2
+    description: A security perimeter lies ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3129
+  - direction: 3
+    description: Dangerous territory lies west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3126
+  extra_descriptions: []
+- vnum: 3126
+  name: Western Perimeter
+  description: '   The factory''s western perimeter is less defended but more dangerous
+    due to
+
+    predator activity. The factory''s waste heat and condensation systems attract
+
+    animals, which in turn attract predators. Security teams patrol here, but not
+
+    as frequently as on the main approach.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western danger zone extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3122
+  - direction: 1
+    description: The main approach is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3125
+  - direction: 2
+    description: The western perimeter continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3130
+  extra_descriptions: []
+- vnum: 3127
+  name: Ancient Waymarker
+  description: '   This ruined structure seems to have been a waystation or marker
+    in ancient
+
+    times, possibly when this was a functioning sea. The stonework is incredibly
+
+    ancient, predating even the factory itself. Archaeologists would find this
+
+    fascinating.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The ruined monument stands to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3123
+  - direction: 2
+    description: More ruins lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3131
+  - direction: 3
+    description: The eastern approach is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3124
+  extra_descriptions: []
+- vnum: 3128
+  name: Convergence Point
+  description: '   The eastern and main paths fully merge here into a wide avenue
+    leading to
+
+    the factory entrance. Traffic increases - you see engineers, guards, supply
+
+    wagons, and various other travelers all heading toward the massive installation.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern approach lies north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3124
+  - direction: 1
+    description: Ancient ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3131
+  - direction: 2
+    description: The avenue leads to the security checkpoint.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3132
+  - direction: 3
+    description: The main approach path is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3125
+  extra_descriptions: []
+- vnum: 3129
+  name: Security Perimeter - North
+  description: '   You have entered the factory''s outer security zone. Guard towers
+    are visible,
+
+    and armed sentries patrol the perimeter. All travelers must pass through the
+
+    checkpoint ahead to gain entry to the factory complex itself.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The main approach continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3125
+  - direction: 1
+    description: The convergence point is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3132
+  - direction: 2
+    description: The checkpoint lies directly ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3133
+  - direction: 3
+    description: The western perimeter patrol route is that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3130
+  extra_descriptions: []
+- vnum: 3130
+  name: Western Perimeter Patrol
+  description: '   A guard patrol route circles the western side of the factory. The
+    guards here
+
+    are alert for both predators and potential saboteurs. The factory wall rises to
+
+    the east, an impressive barrier of ancient metal and stone.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western perimeter extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3126
+  - direction: 1
+    description: The northern security area is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3129
+  - direction: 2
+    description: The patrol route continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3134
+  extra_descriptions: []
+- vnum: 3131
+  name: Eastern Ruins - Last Stop
+  description: '   The final set of ancient ruins before the factory itself. From
+    here, the
+
+    factory complex is overwhelming in its scale. The ruins seem to watch over the
+
+    factory, silent witnesses to ages of Martian history.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The ancient waymarker lies north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3127
+  - direction: 2
+    description: You can head south along the ruins.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3135
+  - direction: 3
+    description: The convergence point is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3128
+  extra_descriptions: []
+- vnum: 3132
+  name: Security Avenue
+  description: '   The main avenue leading to the checkpoint is busy with traffic.
+    Engineers in
+
+    their distinctive harnesses hurry past, supply wagons creak under their loads,
+    and
+
+    guards maintain watchful eyes on everyone passing through.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The convergence point is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3128
+  - direction: 1
+    description: Ruins lie to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3135
+  - direction: 2
+    description: The checkpoint gate is directly ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3136
+  - direction: 3
+    description: The northern security zone is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3129
+  extra_descriptions: []
+- vnum: 3133
+  name: Outer Checkpoint
+  description: '   This fortified checkpoint controls access to the factory complex.
+    Guard towers
+
+    flank a heavy gate, and armed sentries inspect all who wish to pass. Identification
+
+    papers, proper authority, or useful skills will grant you entry.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The security perimeter extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3129
+  - direction: 2
+    description: The checkpoint gate can be opened to proceed.
+    keywords: gate
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3137
+  - direction: 3
+    description: The western patrol route is visible.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3134
+  extra_descriptions: []
+- vnum: 3134
+  name: Western Checkpoint Tower
+  description: '   One of the guard towers overlooks the western approach. From here,
+    sentries
+
+    can see for miles across the dead sea bottom, watching for approaching threats.
+
+    The factory wall continues south from this point.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western perimeter patrol continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3130
+  - direction: 1
+    description: The outer checkpoint is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3133
+  - direction: 2
+    description: The western wall extends south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3138
+  extra_descriptions: []
+- vnum: 3135
+  name: Eastern Monument Vista
+  description: '   From this elevated ruin, you have a panoramic view of both the
+    factory complex
+
+    to the west and the dead sea bottom stretching endlessly to the east. The contrast
+
+    is stark - ancient abandonment versus desperate ongoing functionality.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern ruins continue north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3131
+  - direction: 2
+    description: You can descend and head south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3139
+  - direction: 3
+    description: The security avenue lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3132
+  extra_descriptions: []
+- vnum: 3136
+  name: Pre-Gate Assembly
+  description: '   Travelers gather here before passing through the checkpoint. Some
+    are workers
+
+    reporting for duty, others are supply merchants, and a few are adventurers like
+
+    yourself seeking access to Mars'' most important facility.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The security avenue extends north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3132
+  - direction: 1
+    description: The eastern vista is accessible.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3139
+  - direction: 2
+    description: The checkpoint gate lies ahead.
+    keywords: gate
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3137
+  - direction: 3
+    description: The outer checkpoint guard post is that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3133
+  extra_descriptions: []
+- vnum: 3137
+  name: Inside the Checkpoint
+  description: '   You have passed through the outer checkpoint and are now within
+    the factory''s
+
+    security perimeter. The inner wall of the facility rises ahead, even more
+
+    impressive than the outer defenses. Guard barracks and equipment storage buildings
+
+    surround you.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The checkpoint gate leads back outside.
+    keywords: gate
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3133
+  - direction: 2
+    description: The inner approach continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3140
+  extra_descriptions: []
+- vnum: 3138
+  name: Western Wall Patrol
+  description: '   The western wall of the factory complex stretches high above you.
+    Guard patrols
+
+    walk the wall top, and you can see defensive positions built into the structure.
+
+    The factory must be protected at all costs.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The western checkpoint tower is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3134
+  - direction: 1
+    description: The checkpoint interior is visible to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3137
+  - direction: 2
+    description: The wall continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3141
+  extra_descriptions: []
+- vnum: 3139
+  name: Eastern Perimeter
+  description: '   The eastern side of the factory perimeter is quieter, with less
+    traffic and
+
+    fewer facilities. This area is used primarily for emergency evacuations and
+
+    equipment storage. The factory wall looms to the west.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The eastern vista lies above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3135
+  - direction: 2
+    description: The perimeter continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3142
+  - direction: 3
+    description: The assembly area is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3136
+  extra_descriptions: []
+- vnum: 3140
+  name: Inner Approach
+  description: '   The inner approach leads directly to the factory entrance itself.
+    The scale
+
+    of the building is truly staggering from this close distance. Pipes as wide as
+
+    houses extend in all directions, and the steady thrum of machinery is now a
+
+    physical force you can feel.'
+  zone: 34
+  room_flags: 0
+  sector_type: 2
+  exits:
+  - direction: 0
+    description: The checkpoint interior lies north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3137
+  - direction: 1
+    description: The eastern perimeter route is that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3142
+  - direction: 2
+    description: The main entrance is directly ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3143
+  - direction: 3
+    description: The western wall patrol route lies west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3141
+  extra_descriptions: []
+- vnum: 3141
+  name: Western Guard Post
+  description: '   A permanent guard post is built into the factory wall here. The
+    guards stationed
+
+    here watch both inward and outward, protecting against external threats and ensuring
+
+    no unauthorized persons approach the sensitive areas of the factory.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The western wall patrol continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3138
+  - direction: 1
+    description: The inner approach is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3140
+  - direction: 2
+    description: The guard post connects to the western facilities.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3144
+  extra_descriptions: []
+- vnum: 3142
+  name: Eastern Service Area
+  description: '   This area houses support facilities - maintenance workshops, storage
+    buildings,
+
+    and equipment yards. The less glamorous but essential work of keeping the factory
+
+    supplied happens here.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The eastern perimeter continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3139
+  - direction: 2
+    description: Service facilities extend south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3145
+  - direction: 3
+    description: The inner approach is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3140
+  extra_descriptions: []
+- vnum: 3143
+  name: The Grand Entrance
+  description: '   You stand before the main entrance to the Atmosphere Factory itself.
+    Massive
+
+    metal doors, engraved with ancient Martian glyphs, stand open during the day to
+
+    admit workers and supplies. The doors are large enough to admit a small airship.
+
+    Beyond lies the factory interior - the machine that keeps Mars alive.'
+  zone: 34
+  room_flags: 0
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The inner approach extends back outside.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3140
+  - direction: 1
+    description: Eastern service areas lie that way.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3145
+  - direction: 2
+    description: The factory interior lies through the grand doors.
+    keywords: door grand
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4100
+  - direction: 3
+    description: Western facilities are accessible.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3144
+  extra_descriptions:
+  - keywords: doors door
+    description: 'The massive doors are constructed from a metal that never corrodes
+      or tarnishes,
+
+      a secret lost to modern Martians. The glyphs carved into their surface depict
+      the
+
+      history of the factory''s construction by the ancient ones who built so much
+      of what
+
+      remains on Barsoom.'
+  - keywords: glyphs carvings
+    description: 'Though worn by ages, the glyphs tell a story of a dying world and
+      desperate measures
+
+      taken to preserve life. They show the ancient builders constructing this facility,
+
+      the first of its kind, to replace the atmosphere lost to solar winds over millions
+
+      of years.'
+- vnum: 3144
+  name: Western Service Building
+  description: '   This building houses weapons storage and guard facilities for the
+    western
+
+    sector. Equipment is well-maintained and organized, reflecting the military
+
+    discipline of the factory''s defense force.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The western guard post is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3141
+  - direction: 1
+    description: The grand entrance plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3143
+  - direction: 2
+    description: Additional western facilities lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3146
+  extra_descriptions: []
+- vnum: 3145
+  name: Eastern Warehouse
+  description: '   A large warehouse stores spare parts, tools, and materials needed
+    for factory
+
+    maintenance. The sheer quantity and variety of equipment stored here speaks to
+    the
+
+    complexity of the facility this building serves.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The eastern service area continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3142
+  - direction: 2
+    description: More warehouses lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3147
+  - direction: 3
+    description: The grand entrance is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3143
+  extra_descriptions: []
+- vnum: 3146
+  name: Western Barracks
+  description: '   Living quarters for the western sector guards are housed in this
+    utilitarian
+
+    building. Bunks line the walls, and personal equipment is stored in footlockers.
+
+    The guards here take their duty seriously - protecting the factory means protecting
+
+    all life on Mars.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The western service building is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3144
+  - direction: 1
+    description: You can cut across to the eastern side.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3147
+  - direction: 2
+    description: The final western facility is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3148
+  extra_descriptions: []
+- vnum: 3147
+  name: Eastern Supply Yard
+  description: '   An open yard stores larger equipment and materials. Crates, barrels,
+    and
+
+    mechanical parts are organized in neat rows, awaiting transport into the factory
+
+    when needed.'
+  zone: 34
+  room_flags: 0
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The eastern warehouse is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3145
+  - direction: 2
+    description: The eastern complex continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3149
+  - direction: 3
+    description: The western barracks are accessible.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3146
+  extra_descriptions: []
+- vnum: 3148
+  name: Western Security Office
+  description: '   The western sector security commander maintains an office here.
+    Maps showing
+
+    patrol routes, schedules, and threat assessments cover the walls. This is clearly
+
+    a seriously run military operation.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The western barracks are to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3146
+  - direction: 1
+    description: The eastern complex is accessible to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3149
+  extra_descriptions: []
+- vnum: 3149
+  name: Eastern Emergency Exit
+  description: '   This building houses an emergency exit from the factory complex.
+    In the event
+
+    of catastrophic failure, workers would evacuate through this route. The exit leads
+
+    east into the dead sea bottom, providing an escape route away from the main
+
+    entrance.'
+  zone: 34
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The eastern supply yard is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3147
+  - direction: 3
+    description: The western security office is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3148
+  extra_descriptions: []
+mobiles:
+- vnum: 3400
+  namelist: guard southern checkpoint sentry
+  short_desc: a southern checkpoint guard
+  long_desc: A guard stands watch here, protecting the southern approach.
+  detailed_desc: 'A red Martian warrior stands alert, wearing the distinctive scarlet
+    and yellow
+
+    harness of Helium''s forces. His hand rests on his longsword hilt, and his eyes
+
+    constantly scan for threats. The guards here have a reputation for vigilance,
+
+    knowing that the route to the Atmosphere Factory must be kept safe.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 5
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+120
+    damage_dice: 2d6+2
+    gold: 1000
+    experience: 8000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3401
+  namelist: captain guard commander
+  short_desc: the guard captain
+  long_desc: The guard captain stands here, overseeing the checkpoint operations.
+  detailed_desc: 'This veteran red Martian warrior has served at the southern checkpoint
+    for years.
+
+    His scarlet harness is decorated with service medals, and his bearing shows the
+
+    confidence of an experienced commander. He knows the dangers of the dead sea bottom
+
+    and organizes the patrols and escorts that keep the Factory route safe.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 6
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+150
+    damage_dice: 2d6+3
+    gold: 1500
+    experience: 12000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3402
+  namelist: clerk supply administrator
+  short_desc: a supply clerk
+  long_desc: A supply clerk tallies inventory here, managing stores.
+  detailed_desc: 'This middle-aged red Martian manages the supply depot, tracking
+    the food, water,
+
+    and equipment needed by travelers and guards. He''s not a warrior but performs
+    an
+
+    essential service, ensuring no one ventures into the dead sea bottom ill-prepared.
+
+    He wears a simple brown harness with many pouches for records and writing implements.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3403
+  namelist: merchant trader caravan
+  short_desc: a caravan merchant
+  long_desc: A merchant rests here, preparing for the journey.
+  detailed_desc: 'This red Martian trader makes regular runs between Helium and the
+    Factory, transporting
+
+    supplies and equipment. His brown and copper harness is well-worn from travel,
+    and he
+
+    has the alert, cautious manner of one who has survived many dangerous journeys.
+    He''s
+
+    always willing to share information about the route ahead - for a price.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3404
+  namelist: banth young martian lion
+  short_desc: a young banth
+  long_desc: A young banth prowls here, its ten legs moving with predatory grace.
+  detailed_desc: 'This young Martian lion is already the size of an Earth lion, though
+    it hasn''t reached
+
+    its full growth. Its sleek hide is a tawny color, and its ten powerful legs carry
+    it
+
+    with frightening speed. The great mouth full of fangs makes it deadly despite
+    its youth.
+
+    Green eyes regard you with predatory calculation.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 3d8+100
+    damage_dice: 2d5+2
+    gold: 800
+    experience: 7000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3405
+  namelist: banth adult martian lion
+  short_desc: an adult banth
+  long_desc: A massive adult banth stalks here, its presence radiating menace.
+  detailed_desc: 'This full-grown Martian lion is a terrifying predator, standing
+    as tall as a man at
+
+    the shoulder and stretching over fifteen feet in length. Its ten powerful legs
+    can
+
+    propel it at incredible speeds, and its jaws can crush metal. The tawny hide is
+    scarred
+
+    from battles with other predators, and its green eyes show an intelligence that
+    makes
+
+    it all the more dangerous. This is the apex predator of the dead sea bottom.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 6
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+180
+    damage_dice: 3d6+3
+    gold: 1500
+    experience: 13000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3406
+  namelist: apt creature insectoid
+  short_desc: an apt
+  long_desc: A large insectoid apt creature scuttles here on multiple legs.
+  detailed_desc: 'This nightmare creature combines the worst features of insect and
+    reptile. Standing
+
+    about four feet tall, the apt has a segmented body, multiple legs, and powerful
+    mandibles
+
+    dripping with venom. Its chitinous hide provides natural armor, and its alien
+    intelligence
+
+    makes it a dangerous foe. Apts hunt in packs and are attracted to the scent of
+    blood.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 3
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+70
+    damage_dice: 2d4+1
+    gold: 500
+    experience: 4000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3407
+  namelist: apt pack warrior
+  short_desc: an apt warrior
+  long_desc: A particularly large apt warrior stands here, mandibles clicking.
+  detailed_desc: 'This apt is notably larger and more aggressive than its kin, likely
+    a pack leader or
+
+    dominant warrior. Its chitin is darker and thicker, providing better protection,
+    and
+
+    its mandibles are large enough to shear through metal. The creature moves with
+
+    disturbing speed and coordination.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+100
+    damage_dice: 2d5+2
+    gold: 700
+    experience: 6000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3408
+  namelist: mantalia desert creature
+  short_desc: a desert mantalia
+  long_desc: A strange mantalia glides here, its multiple tendrils waving hypnotically.
+  detailed_desc: 'This bizarre Martian creature defies easy description. It appears
+    to be part plant, part
+
+    animal, gliding across the moss on a base of tentacle-like tendrils. A central
+    body mass
+
+    contains rudimentary sensory organs, and the tendrils can strike with surprising
+    force
+
+    and speed. Mantalias are carnivorous and surprisingly intelligent for their alien
+    nature.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 5
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+140
+    damage_dice: 2d6+2
+    gold: 1000
+    experience: 9000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3409
+  namelist: scout green martian thark
+  short_desc: a green Martian scout
+  long_desc: A green Martian scout watches from atop his thoat mount.
+  detailed_desc: 'This green Martian warrior stands twelve feet tall with the characteristic
+    four arms
+
+    and tusks of his race. His green skin is marked with scars, and he wears a simple
+    leather
+
+    harness decorated with metal ornaments. He carries a rifle and sword, and his
+    alert manner
+
+    suggests he''s scouting for his horde. He''s not immediately hostile but will
+    defend himself
+
+    if threatened.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 5
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+130
+    damage_dice: 2d6+2
+    gold: 1200
+    experience: 10000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3410
+  namelist: warrior rogue deserter
+  short_desc: a rogue warrior
+  long_desc: A rogue red Martian warrior lurks here, watching for prey.
+  detailed_desc: 'This red Martian has abandoned civilization for a life of banditry.
+    His once-fine harness
+
+    is now tattered and stained, and his weapons are poorly maintained. Desperation
+    and hunger
+
+    have driven him to attack travelers on the Factory route. He''s dangerous because
+    he has
+
+    nothing left to lose.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 800
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+110
+    damage_dice: 2d5+2
+    gold: 600
+    experience: 6500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3411
+  namelist: mercenary hired sword
+  short_desc: a mercenary
+  long_desc: A mercenary warrior stands here, weapons at ready.
+  detailed_desc: 'This professional soldier sells his sword to whoever pays. He wears
+    functional battle
+
+    harness and carries well-maintained weapons. His eyes are cold and calculating
+    - he''ll
+
+    honor a contract but has no loyalty beyond payment. He might be guarding a caravan,
+    or
+
+    he might be working for those who want the Factory disrupted.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 5
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+130
+    damage_dice: 2d6+3
+    gold: 1000
+    experience: 9000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3412
+  namelist: engineer factory junior
+  short_desc: a junior engineer
+  long_desc: A young engineer walks here, carrying tools and documentation.
+  detailed_desc: 'This junior engineer is assigned to the Atmosphere Factory, learning
+    the ancient systems
+
+    under the guidance of more experienced staff. He wears the distinctive engineer''s
+    harness
+
+    with its many tool pouches, and his hands show the stains of working with machinery
+    and
+
+    chemicals. He''s eager but still learning, and treats the Factory with appropriate
+    reverence.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3413
+  namelist: patrol guard factory security
+  short_desc: a factory patrol guard
+  long_desc: A factory security guard patrols here, alert for threats.
+  detailed_desc: 'This guard is part of the Factory''s dedicated security force. He
+    wears enhanced armor
+
+    and carries superior weapons, knowing that protecting the Factory means protecting
+    all
+
+    Mars. He''s been trained to watch for saboteurs, spies, and any threat to the
+    facility.
+
+    His loyalty is absolute.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 6
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+160
+    damage_dice: 2d6+3
+    gold: 1400
+    experience: 12000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3414
+  namelist: waystation keeper old man
+  short_desc: the waystation keeper
+  long_desc: An old red Martian tends to this waystation, offering shelter to travelers.
+  detailed_desc: 'This ancient red Martian has maintained this waystation for longer
+    than most can remember.
+
+    His weathered face shows hundreds of years of Martian sun and wind. He''s not
+    a warrior but
+
+    knows the dead sea bottom better than anyone, and his advice has saved many lives.
+    He asks
+
+    only small payment for the shelter and information he provides, seeing his role
+    as a service
+
+    to Mars itself.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3415
+  namelist: traveler lost explorer
+  short_desc: a lost traveler
+  long_desc: A bedraggled traveler stumbles here, clearly in distress.
+  detailed_desc: 'This red Martian traveler has become separated from their caravan
+    and is lost in the
+
+    dead sea bottom. Their harness is torn, their supplies depleted, and fear shows
+    in their
+
+    eyes. They desperately need help finding their way to either the Factory or back
+    to Helium.
+
+    Helping them could earn gratitude and reward.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3416
+  namelist: archaeologist scholar researcher
+  short_desc: an archaeologist
+  long_desc: A scholar examines the ancient ruins here, taking notes.
+  detailed_desc: 'This red Martian scholar is studying the ancient ruins scattered
+    across the dead sea bottom.
+
+    He wears a scholar''s harness with writing implements and measuring tools, and
+    his demeanor
+
+    is more excited than cautious - perhaps dangerously so. He''s fascinated by the
+    remnants of
+
+    the ancient civilization that built the Factory and other wonders of old Mars.'
+  action_flags: 23
+  affection_flags: 2
+  alignment: 2
+  type: detailed
+- vnum: 3417
+  namelist: sentry tower guard checkpoint
+  short_desc: a checkpoint sentry
+  long_desc: A vigilant sentry stands watch from his post.
+  detailed_desc: 'This factory checkpoint sentry has the sharp eyes and disciplined
+    bearing of elite security.
+
+    He''s positioned to watch the approaches for any sign of threat - bandits, predators,
+    or
+
+    more sinister dangers like Zodangan agents. His equipment is top quality, and
+    he knows how
+
+    to use it.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 6
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+150
+    damage_dice: 2d6+3
+    gold: 1300
+    experience: 11000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3418
+  namelist: commander security officer
+  short_desc: the security commander
+  long_desc: The security commander oversees operations here with stern efficiency.
+  detailed_desc: 'This veteran officer commands the Factory''s outer security perimeter.
+    Years of service have
+
+    made him both skilled and paranoid - he trusts no one completely and maintains
+    constant
+
+    vigilance. His scarlet and yellow harness bears the insignia of command, and his
+    battle
+
+    scars show he''s fought to protect the Factory before. He''s level-headed in crisis
+    but
+
+    ruthless with threats.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 6
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+170
+    damage_dice: 3d6+3
+    gold: 1600
+    experience: 13000
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 3400
+  namelist: travel rations dried food
+  short_desc: a package of travel rations
+  long_desc: A sealed package of dried food lies here.
+  action_desc: food
+  type_flag: 11
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 24
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 50
+  rent: 10
+  extra_descriptions: []
+  affects: []
+- vnum: 3401
+  namelist: water flask canteen
+  short_desc: a water flask
+  long_desc: A leather water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 40
+  rent: 8
+  extra_descriptions:
+  - keywords: flask canteen
+    description: 'This leather flask is designed to carry water for long desert journeys.
+      It''s been
+
+      treated to minimize evaporation in the thin Martian atmosphere.'
+  affects: []
+- vnum: 3402
+  namelist: longsword helium guard
+  short_desc: a Helium guard longsword
+  long_desc: A well-maintained longsword lies here, marked with Helium's insignia.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 6
+  value3: 3
+  weight: 15
+  cost: 600
+  rent: 150
+  extra_descriptions:
+  - keywords: sword longsword
+    description: 'This longsword bears the scarlet and yellow colors of Helium engraved
+      on its hilt.
+
+      It''s standard issue for guards but well-made and reliable.'
+  affects: []
+- vnum: 3403
+  namelist: dagger belt knife
+  short_desc: a belt dagger
+  long_desc: A serviceable dagger lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 8
+  cost: 300
+  rent: 75
+  extra_descriptions: []
+  affects: []
+- vnum: 3404
+  namelist: leather armor harness guard
+  short_desc: a guard's leather harness
+  long_desc: A leather harness designed for guards lies here.
+  action_desc: ''
+  type_flag: 3
+  extra_flags: 0
+  wear_flags: 0
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 400
+  rent: 100
+  extra_descriptions:
+  - keywords: harness armor
+    description: 'This leather harness provides basic protection while allowing freedom
+      of movement.
+
+      It''s marked with the Helium guard insignia.'
+  affects: []
+- vnum: 3405
+  namelist: radium rifle basic
+  short_desc: a basic radium rifle
+  long_desc: A standard radium rifle lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 10
+  value1: 4
+  value2: 0
+  value3: 0
+  weight: 20
+  cost: 800
+  rent: 200
+  extra_descriptions:
+  - keywords: rifle radium weapon
+    description: 'This radium rifle is a standard military weapon, firing explosive
+      projectiles powered
+
+      by radium charges. It''s effective but requires proper maintenance.'
+  affects: []
+- vnum: 3406
+  namelist: spear hunting javelin
+  short_desc: a hunting spear
+  long_desc: A simple hunting spear lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 11
+  weight: 12
+  cost: 400
+  rent: 100
+  extra_descriptions: []
+  affects: []
+- vnum: 3407
+  namelist: helmet guard metal
+  short_desc: a guard's helmet
+  long_desc: A metal helmet lies here, bearing Helium's colors.
+  action_desc: ''
+  type_flag: 4
+  extra_flags: 0
+  wear_flags: 0
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 300
+  rent: 75
+  extra_descriptions: []
+  affects: []
+- vnum: 3408
+  namelist: boots leather travel
+  short_desc: leather travel boots
+  long_desc: A pair of sturdy leather boots lies here.
+  action_desc: ''
+  type_flag: 2
+  extra_flags: 0
+  wear_flags: 0
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 200
+  rent: 50
+  extra_descriptions: []
+  affects: []
+- vnum: 3409
+  namelist: map factory route
+  short_desc: a route map
+  long_desc: A worn parchment map lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 100
+  rent: 25
+  extra_descriptions:
+  - keywords: map parchment
+    description: 'This map shows the route from Lesser Helium to the Atmosphere Factory,
+      marking
+
+      waypoints, water sources, and known danger areas. It''s invaluable for travelers.'
+  affects: []
+- vnum: 3410
+  namelist: medical supplies bandages
+  short_desc: medical supplies
+  long_desc: A satchel of medical supplies lies here.
+  action_desc: ''
+  type_flag: 20
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 5
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: supplies satchel
+    description: 'This satchel contains bandages, antiseptics, and basic medical tools
+      for treating
+
+      wounds sustained in the wilderness.'
+  affects: []
+- vnum: 3411
+  namelist: rope coiled hempen
+  short_desc: a coiled rope
+  long_desc: A length of coiled rope lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 80
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3412
+  namelist: torch metal brazier
+  short_desc: a metal torch
+  long_desc: An unlit metal torch lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 12
+  value1: 3
+  value2: 3
+  value3: 0
+  weight: 3
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: torch
+    description: 'This metal torch can be lit to provide illumination in dark places.
+      It burns a special
+
+      oil that works in the thin Martian atmosphere.'
+  affects: []
+- vnum: 3413
+  namelist: shield round metal
+  short_desc: a round shield
+  long_desc: A round metal shield lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 0
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 350
+  rent: 85
+  extra_descriptions: []
+  affects: []
+- vnum: 3414
+  namelist: shortsword steel
+  short_desc: a steel shortsword
+  long_desc: A steel shortsword lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 3
+  weight: 12
+  cost: 450
+  rent: 110
+  extra_descriptions: []
+  affects: []
+- vnum: 3415
+  namelist: leather pack supplies
+  short_desc: a supply pack
+  long_desc: A leather pack lies here, designed for carrying supplies.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 150
+  rent: 35
+  extra_descriptions:
+  - keywords: pack
+    description: 'This sturdy leather pack is designed for long journeys, with multiple
+      compartments
+
+      and comfortable straps.'
+  affects: []
+- vnum: 3416
+  namelist: binoculars spyglass
+  short_desc: a pair of binoculars
+  long_desc: Martian binoculars lie here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 120
+  rent: 30
+  extra_descriptions:
+  - keywords: binoculars spyglass
+    description: 'These binoculars use ancient Martian lens technology to provide
+      enhanced distance
+
+      viewing across the dead sea bottom plains.'
+  affects: []
+- vnum: 3417
+  namelist: cloak travel weatherproof
+  short_desc: a weatherproof travel cloak
+  long_desc: A durable travel cloak lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 180
+  rent: 45
+  extra_descriptions:
+  - keywords: cloak
+    description: 'This cloak provides some protection from the cold Martian nights
+      and the intense
+
+      daytime sun. It''s treated to resist wind and dust.'
+  affects: []
+- vnum: 3418
+  namelist: rations emergency preserved
+  short_desc: emergency rations
+  long_desc: A sealed container of emergency rations lies here.
+  action_desc: food
+  type_flag: 11
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 48
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 80
+  rent: 20
+  extra_descriptions:
+  - keywords: rations container
+    description: 'These long-lasting emergency rations are designed to sustain life
+      for days when
+
+      regular food isn''t available. They don''t taste good but they work.'
+  affects: []
+- vnum: 3419
+  namelist: antidote poison vial
+  short_desc: a vial of antidote
+  long_desc: A small vial of antidote lies here.
+  action_desc: potion
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 30
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: vial antidote
+    description: 'This alchemical mixture can counteract the venom of apts and other
+      poisonous
+
+      creatures of the dead sea bottom. It''s expensive but potentially life-saving.'
+  affects: []
+- vnum: 3420
+  namelist: sword officer fine
+  short_desc: a fine officer's sword
+  long_desc: An elegantly crafted officer's sword lies here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 7
+  value3: 3
+  weight: 18
+  cost: 850
+  rent: 210
+  extra_descriptions:
+  - keywords: sword
+    description: 'This superior sword is carried by officers and experienced warriors.
+      Its balance
+
+      and edge are exceptional, marking it as the work of a master craftsman.'
+  affects: []
+- vnum: 3421
+  namelist: armor reinforced harness
+  short_desc: reinforced battle harness
+  long_desc: A reinforced battle harness lies here.
+  action_desc: ''
+  type_flag: 3
+  extra_flags: 0
+  wear_flags: 0
+  value0: 7
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 550
+  rent: 140
+  extra_descriptions:
+  - keywords: harness armor
+    description: 'This enhanced harness provides better protection than standard issue,
+      with
+
+      reinforced leather and strategic metal plating at vital points.'
+  affects: []
+- vnum: 3422
+  namelist: rifle enhanced radium
+  short_desc: an enhanced radium rifle
+  long_desc: A superior radium rifle lies here.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 12
+  value1: 5
+  value2: 0
+  value3: 0
+  weight: 25
+  cost: 1100
+  rent: 275
+  extra_descriptions:
+  - keywords: rifle weapon
+    description: 'This enhanced radium rifle has been modified for improved accuracy
+      and power.
+
+      It''s a weapon worthy of elite guards or experienced hunters.'
+  affects: []
+- vnum: 3423
+  namelist: gemstone red ruby
+  short_desc: a red Martian ruby
+  long_desc: A glittering red ruby lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 500
+  rent: 125
+  extra_descriptions:
+  - keywords: ruby gemstone
+    description: 'This precious stone is unique to Mars, prized for its deep red color
+      that matches
+
+      the planet itself. It would fetch a good price from jewelers or collectors.'
+  affects: []
+- vnum: 3424
+  namelist: artifact ancient relic
+  short_desc: an ancient artifact
+  long_desc: A mysterious ancient artifact lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 800
+  rent: 200
+  extra_descriptions:
+  - keywords: artifact relic
+    description: 'This object is clearly of ancient Martian origin, possibly from
+      the same civilization
+
+      that built the Atmosphere Factory. Its purpose is unclear, but archaeologists
+      and
+
+      scholars would be very interested in it.'
+  affects: []
+- vnum: 3425
+  namelist: badge factory pass
+  short_desc: a factory access badge
+  long_desc: A metal badge granting factory access lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: badge pass
+    description: 'This official badge grants the bearer authorized access to the Atmosphere
+      Factory
+
+      complex. It bears security markings and an identification number.'
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3400
+  arg2: 2
+  arg3: 3101
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3404
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3400
+  arg2: 1
+  arg3: 3129
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3404
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3400
+  arg2: 1
+  arg3: 3133
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3404
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3401
+  arg2: 1
+  arg3: 3101
+- command: G
+  if_flag: 1
+  arg1: 3420
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3425
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3402
+  arg2: 1
+  arg3: 3102
+- command: M
+  if_flag: 0
+  arg1: 3403
+  arg2: 1
+  arg3: 3109
+- command: G
+  if_flag: 1
+  arg1: 3415
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3403
+  arg2: 1
+  arg3: 3132
+- command: G
+  if_flag: 1
+  arg1: 3415
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3404
+  arg2: 1
+  arg3: 3108
+- command: M
+  if_flag: 0
+  arg1: 3404
+  arg2: 1
+  arg3: 3114
+- command: M
+  if_flag: 0
+  arg1: 3404
+  arg2: 1
+  arg3: 3122
+- command: M
+  if_flag: 0
+  arg1: 3405
+  arg2: 1
+  arg3: 3118
+- command: G
+  if_flag: 1
+  arg1: 3423
+  arg2: 10
+- command: M
+  if_flag: 0
+  arg1: 3405
+  arg2: 1
+  arg3: 3122
+- command: M
+  if_flag: 0
+  arg1: 3406
+  arg2: 2
+  arg3: 3111
+- command: M
+  if_flag: 0
+  arg1: 3406
+  arg2: 2
+  arg3: 3111
+- command: M
+  if_flag: 0
+  arg1: 3407
+  arg2: 1
+  arg3: 3111
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 3406
+  arg2: 2
+  arg3: 3114
+- command: M
+  if_flag: 0
+  arg1: 3406
+  arg2: 2
+  arg3: 3114
+- command: M
+  if_flag: 0
+  arg1: 3408
+  arg2: 1
+  arg3: 3115
+- command: G
+  if_flag: 1
+  arg1: 3424
+  arg2: 15
+- command: M
+  if_flag: 0
+  arg1: 3408
+  arg2: 1
+  arg3: 3127
+- command: M
+  if_flag: 0
+  arg1: 3409
+  arg2: 1
+  arg3: 3105
+- command: G
+  if_flag: 1
+  arg1: 3406
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3414
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3410
+  arg2: 1
+  arg3: 3108
+- command: G
+  if_flag: 1
+  arg1: 3403
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3404
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3410
+  arg2: 1
+  arg3: 3126
+- command: G
+  if_flag: 1
+  arg1: 3403
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3411
+  arg2: 1
+  arg3: 3120
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3413
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 3412
+  arg2: 1
+  arg3: 3132
+- command: G
+  if_flag: 1
+  arg1: 3409
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3412
+  arg2: 1
+  arg3: 3143
+- command: G
+  if_flag: 1
+  arg1: 3425
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3413
+  arg2: 2
+  arg3: 3129
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3413
+  arg2: 2
+  arg3: 3133
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3413
+  arg2: 1
+  arg3: 3134
+- command: G
+  if_flag: 1
+  arg1: 3422
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3413
+  arg2: 1
+  arg3: 3141
+- command: G
+  if_flag: 1
+  arg1: 3422
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3414
+  arg2: 1
+  arg3: 3109
+- command: G
+  if_flag: 1
+  arg1: 3400
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3401
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3410
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3415
+  arg2: 1
+  arg3: 3116
+- command: M
+  if_flag: 0
+  arg1: 3416
+  arg2: 1
+  arg3: 3123
+- command: G
+  if_flag: 1
+  arg1: 3409
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3416
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3416
+  arg2: 1
+  arg3: 3131
+- command: G
+  if_flag: 1
+  arg1: 3424
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 3417
+  arg2: 2
+  arg3: 3134
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3417
+  arg2: 2
+  arg3: 3137
+- command: G
+  if_flag: 1
+  arg1: 3402
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3418
+  arg2: 1
+  arg3: 3148
+- command: G
+  if_flag: 1
+  arg1: 3420
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3422
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3421
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3425
+  arg2: 100
+- command: O
+  if_flag: 0
+  arg1: 3400
+  arg2: 5
+  arg3: 3109
+- command: O
+  if_flag: 0
+  arg1: 3401
+  arg2: 10
+  arg3: 3109
+- command: O
+  if_flag: 0
+  arg1: 3410
+  arg2: 3
+  arg3: 3109
+- command: O
+  if_flag: 0
+  arg1: 3402
+  arg2: 2
+  arg3: 3101
+- command: O
+  if_flag: 0
+  arg1: 3405
+  arg2: 2
+  arg3: 3101
+- command: O
+  if_flag: 0
+  arg1: 3407
+  arg2: 3
+  arg3: 3101
+- command: O
+  if_flag: 0
+  arg1: 3400
+  arg2: 10
+  arg3: 3102
+- command: O
+  if_flag: 0
+  arg1: 3401
+  arg2: 15
+  arg3: 3102
+- command: O
+  if_flag: 0
+  arg1: 3411
+  arg2: 5
+  arg3: 3102
+- command: O
+  if_flag: 0
+  arg1: 3412
+  arg2: 5
+  arg3: 3102
+- command: O
+  if_flag: 0
+  arg1: 3415
+  arg2: 8
+  arg3: 3102
+- command: O
+  if_flag: 0
+  arg1: 3413
+  arg2: 4
+  arg3: 3137
+- command: O
+  if_flag: 0
+  arg1: 3407
+  arg2: 4
+  arg3: 3137
+- command: O
+  if_flag: 0
+  arg1: 3409
+  arg2: 1
+  arg3: 3101
+- command: O
+  if_flag: 0
+  arg1: 3409
+  arg2: 1
+  arg3: 3109
+- command: O
+  if_flag: 0
+  arg1: 3409
+  arg2: 1
+  arg3: 3137
+- command: O
+  if_flag: 0
+  arg1: 3424
+  arg2: 1
+  arg3: 3123
+- command: O
+  if_flag: 0
+  arg1: 3402
+  arg2: 5
+  arg3: 3146
+- command: O
+  if_flag: 0
+  arg1: 3404
+  arg2: 5
+  arg3: 3146
+- command: O
+  if_flag: 0
+  arg1: 3407
+  arg2: 5
+  arg3: 3146
+- command: O
+  if_flag: 0
+  arg1: 3415
+  arg2: 10
+  arg3: 3145
+- command: O
+  if_flag: 0
+  arg1: 3400
+  arg2: 8
+  arg3: 3145
+- command: O
+  if_flag: 0
+  arg1: 3401
+  arg2: 12
+  arg3: 3145
+shops: []
