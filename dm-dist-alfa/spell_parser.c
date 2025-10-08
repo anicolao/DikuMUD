@@ -98,50 +98,50 @@ struct spell_info_type spell_info[MAX_SPL_LIST];
 
 char *spells[]=
 {
-   "armor",               /* 1 */
-   "teleport",
-   "bless",
-   "blindness",
-   "burning hands",
-   "call lightning",
-   "charm person",
-   "chill touch",
-   "clone",
-   "colour spray",
-   "control weather",     /* 11 */
-   "create food",
-   "create water",
-   "cure blind",
-   "cure critic",
-   "cure light",
-   "curse",
-   "detect evil",
-   "detect invisibility",
-   "detect magic",
-   "detect poison",       /* 21 */
-   "dispel evil",
-   "earthquake",
-   "enchant weapon",
-   "energy drain",
-   "fireball",
-   "harm",
-   "heal",
-   "invisibility",
-   "lightning bolt",
-   "locate object",      /* 31 */
-   "magic missile",
-   "poison",
-   "protection from evil",
-   "remove curse",
-   "sanctuary",
-   "shocking grasp",
-   "zzzzz",
-   "strength",
-   "summon",
-   "ventriloquate",      /* 41 */
-   "word of recall",
-   "remove poison",
-   "sense life",         /* 44 */
+   "personal shield",               /* 1 */
+   "matter transmitter",
+   "performance optimizer",
+   "optical disruptor",
+   "thermal projector",
+   "lightning rod",
+   "neural controller",
+   "frost ray",
+   "clone vat",
+   "prismatic disruptor",
+   "weather control",     /* 11 */
+   "food synthesizer",
+   "water extractor",
+   "optical restoration",
+   "critical trauma kit",
+   "first aid injector",
+   "neural inhibitor",
+   "alignment scanner",
+   "invisibility detector",
+   "technology scanner",
+   "toxin analyzer",       /* 21 */
+   "purge ray",
+   "seismic generator",
+   "weapon enhancer",
+   "vitality drain",
+   "thermal sphere",
+   "disruption ray",
+   "regeneration chamber",
+   "invisibility cloak",
+   "arc projector",
+   "object locator",      /* 31 */
+   "force projector",
+   "toxin injector",
+   "evil ward",
+   "neural harmonizer",
+   "sanctuary field",
+   "shock touch",
+   "soporific gas",
+   "strength amplifier",
+   "remote summoner",
+   "voice projector",      /* 41 */
+   "home recall",
+   "antitoxin injector",
+   "life detector",         /* 44 */
 
    /* RESERVED SKILLS */
    "SKILL_SNEAK",        /* 45 */
@@ -154,7 +154,7 @@ char *spells[]=
    "SKILL_RESCUE",
    /* NON-CASTABLE SPELLS (Scrolls/potions/wands/staffs) */
 
-   "identify",           /* 53 */
+   "item analyzer",           /* 53 */
    "\n"
 };
 
@@ -461,8 +461,8 @@ void say_spell( struct char_data *ch, int si )
 	}
 
 
-	sprintf(buf2,"$n utters the words, '%s'", buf);
-	sprintf(buf, "$n utters the words, '%s'", spells[si-1]);
+	sprintf(buf2,"$n activates a device, '%s'", buf);
+	sprintf(buf, "$n activates '%s'", spells[si-1]);
 
 	for(temp_char = world[ch->in_room].people;
 		temp_char;
@@ -534,29 +534,29 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 
 	/* If there is no chars in argument */
 	if (!(*argument)) {
-		send_to_char("Cast which what where?\n\r", ch);
+		send_to_char("Activate which technology?\n\r", ch);
 		return;
 	}
 
 	if (*argument != '\'') {
-		send_to_char("Magic must always be enclosed by the holy magic symbols : '\n\r",ch);
+		send_to_char("Technology name must be enclosed in quotes: '\n\r",ch);
 		return;
 	}
 
-	/* Locate the last quote && lowercase the magic words (if any) */
+	/* Locate the last quote && lowercase the technology name (if any) */
 
 	for (qend=1; *(argument+qend) && (*(argument+qend) != '\'') ; qend++)
 		*(argument+qend) = LOWER(*(argument+qend));
 
 	if (*(argument+qend) != '\'') {
-		send_to_char("Magic must always be enclosed by the holy magic symbols : '\n\r",ch);
+		send_to_char("Technology name must be enclosed in quotes: '\n\r",ch);
 		return;
 	}
 
 	spl = old_search_block(argument, 1, qend-1,spells, 0);
 
 	if (!spl) {
-		send_to_char("Your lips do not move, no magic appears.\n\r",ch);
+		send_to_char("You fumble with your harness, but nothing happens.\n\r",ch);
 		return;
 	}
 
@@ -564,16 +564,16 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 		if (GET_POS(ch) < spell_info[spl].minimum_position) {
 			switch(GET_POS(ch)) {
 				case POSITION_SLEEPING :
-					send_to_char("You dream about great magical powers.\n\r", ch);
+					send_to_char("You dream about advanced technology.\n\r", ch);
 					break;
 				case POSITION_RESTING :
-					send_to_char("You can't concentrate enough while resting.\n\r",ch);
+					send_to_char("You can't operate the device properly while resting.\n\r",ch);
 					break;
 				case POSITION_SITTING :
 					send_to_char("You can't do this sitting!\n\r", ch);
 					break;
 				case POSITION_FIGHTING :
-					send_to_char("Impossible! You can't concentrate enough!.\n\r", ch);
+					send_to_char("Impossible! You can't operate the device while fighting!.\n\r", ch);
 					break;
 				default:
 					send_to_char("It seems like you're in a pretty bad shape!\n\r",ch);
@@ -708,7 +708,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 
 			if (GET_LEVEL(ch) < 21) {
 				if (GET_MANA(ch) < USE_MANA(ch, spl)) {
-					send_to_char("You can't summon enough energy to cast the spell.\n\r", ch);
+					send_to_char("Your device has insufficient power charge.\n\r", ch);
 					return;
 				}
 			}
@@ -719,10 +719,10 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 			WAIT_STATE(ch, spell_info[spl].beats);
 
 			if ((spell_info[spl].spell_pointer == 0) && spl>0)
-				send_to_char("Sorry, this magic has not yet been implemented :(\n\r", ch);
+				send_to_char("Sorry, this technology has not yet been implemented :(\n\r", ch);
 			else {
 				if (number(1,101) > ch->skills[spl].learned) { /* 101% is failure */
-					send_to_char("You lost your concentration!\n\r", ch);
+					send_to_char("The device malfunctions!\n\r", ch);
 					GET_MANA(ch) -= (USE_MANA(ch, spl)>>1);
 					return;
 				}
@@ -737,11 +737,11 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	}
 
 	switch (number(1,5)){
-		case 1: send_to_char("Bylle Grylle Grop Gryf???\n\r", ch); break;
-		case 2: send_to_char("Olle Bolle Snop Snyf?\n\r",ch); break;
-		case 3: send_to_char("Olle Grylle Bolle Bylle?!?\n\r",ch); break;
-		case 4: send_to_char("Gryffe Olle Gnyffe Snop???\n\r",ch); break;
-	  default: send_to_char("Bolle Snylle Gryf Bylle?!!?\n\r",ch); break;
+		case 1: send_to_char("The device sputters and sparks...\n\r", ch); break;
+		case 2: send_to_char("Your harness device makes an odd humming sound.\n\r",ch); break;
+		case 3: send_to_char("The technology emits a strange radium glow, then fades.\n\r",ch); break;
+		case 4: send_to_char("Nothing happens - perhaps the power cell is depleted?\n\r",ch); break;
+	  default: send_to_char("The device clicks but fails to activate.\n\r",ch); break;
 	}
 }
 

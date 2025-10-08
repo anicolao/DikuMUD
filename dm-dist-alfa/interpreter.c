@@ -261,7 +261,7 @@ char *command[]=
   "typo",        /* 81 */
   "bug",
   "whisper",
-  "cast",
+  "activate",
   "at",
   "ask",
   "order",
