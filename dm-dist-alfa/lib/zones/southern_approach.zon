@@ -1,0 +1,164 @@
+#34
+Southern Approach to Atmosphere Factory~
+3149 40 2
+*
+* Southern Checkpoint Guards
+M 0 3400 2 3101
+G 1 3402 100
+G 1 3404 100
+M 0 3400 1 3129
+G 1 3402 100
+G 1 3404 100
+M 0 3400 1 3133
+G 1 3402 100
+G 1 3404 100
+*
+* Guard Captain
+M 0 3401 1 3101
+G 1 3420 100
+G 1 3421 100
+G 1 3425 100
+*
+* Supply Clerk
+M 0 3402 1 3102
+*
+* Caravan Merchants
+M 0 3403 1 3109
+G 1 3415 100
+M 0 3403 1 3132
+G 1 3415 100
+*
+* Young Banths - scattered across plains
+M 0 3404 1 3108
+M 0 3404 1 3114
+M 0 3404 1 3122
+*
+* Adult Banths - dangerous areas
+M 0 3405 1 3118
+G 1 3423 10
+M 0 3405 1 3122
+*
+* Apts - pack creatures
+M 0 3406 2 3111
+M 0 3406 2 3111
+M 0 3407 1 3111
+G 1 3402 20
+*
+* More Apts
+M 0 3406 2 3114
+M 0 3406 2 3114
+*
+* Mantalia
+M 0 3408 1 3115
+G 1 3424 15
+M 0 3408 1 3127
+*
+* Green Martian Scout
+M 0 3409 1 3105
+G 1 3406 100
+G 1 3414 100
+*
+* Rogue Warriors
+M 0 3410 1 3108
+G 1 3403 100
+G 1 3404 100
+M 0 3410 1 3126
+G 1 3403 100
+*
+* Mercenaries
+M 0 3411 1 3120
+G 1 3402 100
+G 1 3413 100
+G 1 3421 50
+*
+* Junior Engineers
+M 0 3412 1 3132
+G 1 3409 100
+M 0 3412 1 3143
+G 1 3425 100
+*
+* Factory Patrol Guards
+M 0 3413 2 3129
+G 1 3402 100
+G 1 3421 100
+M 0 3413 2 3133
+G 1 3402 100
+G 1 3421 100
+M 0 3413 1 3134
+G 1 3422 100
+G 1 3421 100
+M 0 3413 1 3141
+G 1 3422 100
+*
+* Waystation Keeper
+M 0 3414 1 3109
+G 1 3400 100
+G 1 3401 100
+G 1 3410 100
+*
+* Lost Traveler - quest giver
+M 0 3415 1 3116
+*
+* Archaeologist
+M 0 3416 1 3123
+G 1 3409 100
+G 1 3416 100
+M 0 3416 1 3131
+G 1 3424 20
+*
+* Checkpoint Sentries
+M 0 3417 2 3134
+G 1 3402 100
+G 1 3421 100
+M 0 3417 2 3137
+G 1 3402 100
+G 1 3421 100
+*
+* Security Commander
+M 0 3418 1 3148
+G 1 3420 100
+G 1 3422 100
+G 1 3421 100
+G 1 3425 100
+*
+* Ground spawns - supplies at waystation
+O 0 3400 5 3109
+O 0 3401 10 3109
+O 0 3410 3 3109
+*
+* Ground spawns - equipment at guard post
+O 0 3402 2 3101
+O 0 3405 2 3101
+O 0 3407 3 3101
+*
+* Ground spawns - supplies at depot
+O 0 3400 10 3102
+O 0 3401 15 3102
+O 0 3411 5 3102
+O 0 3412 5 3102
+O 0 3415 8 3102
+*
+* Ground spawns - equipment at checkpoint
+O 0 3413 4 3137
+O 0 3407 4 3137
+*
+* Ground spawns - maps and guides
+O 0 3409 1 3101
+O 0 3409 1 3109
+O 0 3409 1 3137
+*
+* Ground spawns - ancient artifacts at ruins
+O 0 3424 1 3123
+*
+* Equipment at western barracks
+O 0 3402 5 3146
+O 0 3404 5 3146
+O 0 3407 5 3146
+*
+* Supplies at eastern warehouse
+O 0 3415 10 3145
+O 0 3400 8 3145
+O 0 3401 12 3145
+*
+S
+$~
