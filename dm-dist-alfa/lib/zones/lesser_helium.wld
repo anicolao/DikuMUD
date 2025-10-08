@@ -1088,10 +1088,10 @@ You see the road.
 ~
 0 -1 3047
 D2
-You see the Concourse.
+The path south from the bridge is blocked.
 ~
 ~
-0 -1 3100
+0 -1 -1
 E
 bridge~
 The bridge is constructed from ancient stone, matching the city wall in both
@@ -1151,7 +1151,7 @@ Greater Helium, 75 miles distant.  A trail leads north along the outer wall.
 D1
 You see the elevated roadway leading toward Greater Helium.~
 ~
-0 -1 3503
+0 -1 3754
 D3
 You see the city gate.
 ~

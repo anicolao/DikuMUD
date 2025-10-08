@@ -1,0 +1,270 @@
+#3750
+thoat wild eight-legged~
+a wild thoat~
+A wild eight-legged thoat grazes here, watchful and dangerous.
+~
+This massive creature has eight powerful legs supporting a body the size of an
+elephant. Its broad, flat tail helps with balance. The leathery hide is slate
+gray in color. Large jaws filled with sharp teeth can crush bone. While thoats
+are used as mounts when trained, this wild specimen is aggressive and dangerous.
+~
+2 8 900 S
+16 0 0 1d1+15000 2d8+10
+5000 80000
+8 8 2
+#3751
+banth lion ten-legged predator~
+a hunting banth~
+A ten-legged banth stalks here, its predatory eyes fixed on potential prey.
+~
+This fearsome predator is built like a lion but with ten powerful legs. Its
+tawny fur is mottled with ochre patterns. The feline head has large fangs and
+fierce, intelligent eyes. It moves with deadly grace despite its size. Banths
+are apex predators of the Martian wilderness and extremely dangerous.
+~
+2 8 900 S
+16 0 0 1d1+18000 2d10+12
+8000 85000
+8 8 2
+#3752
+apt white blind creature~
+a massive white apt~
+A massive white apt lumbers here, its eyeless face turning toward sounds.
+~
+This enormous creature is elephant-sized or larger with pure white fur covering
+its body. It has no eyes, having adapted to underground life. Six or more
+powerful legs support its massive bulk. Its huge jaws can swallow prey whole.
+The apt hunts by sound and smell, making it incredibly dangerous even in
+darkness. It is nearly impossible to kill.
+~
+2 8 900 S
+16 0 0 1d1+25000 3d10+15
+15000 100000
+8 8 2
+#3753
+calot wild ten-legged~
+a wild calot~
+A wild ten-legged calot watches alertly, ready to attack intruders.
+~
+This creature is sized like a large pony with ten powerful legs. Its hairless,
+leathery hide is mottled gray and brown. The frog-like head houses a mouth full
+of sharp teeth. Unlike tame calots, this wild one is aggressive and territorial.
+It can move with incredible speed when attacking.
+~
+2 8 900 S
+16 0 0 1d1+10000 2d6+6
+2000 70000
+8 8 2
+#3754
+ulsio rat giant~
+a giant ulsio~
+A giant ulsio rat scurries here, its beady eyes searching for food.
+~
+This massive rat-like creature is the size of a large dog. Its dirty gray fur
+is matted and foul-smelling. Sharp teeth and claws make it dangerous despite
+not being a true apex predator. Ulsios are scavengers but will attack if
+cornered or hungry. They carry disease and filth.
+~
+2 8 900 S
+16 0 0 1d1+8000 1d8+4
+1000 65000
+8 8 2
+#3755
+green warrior martian thark~
+a Green Martian Warrior~
+A massive green Martian warrior stands here, weapons ready.
+~
+This green Martian stands 15 feet tall with four powerful arms - two from the
+shoulders and two from mid-torso. The olive-green skin is tough and scarred.
+Tusks protrude from the mouth, and large eyes are set far apart on the massive
+head. This warrior is armed and extremely dangerous, trained from birth in
+combat. The green hordes are the terror of the dead sea bottoms.
+~
+2 8 900 S
+20 0 0 1d1+20000 2d10+14
+10000 90000
+8 8 2
+#3756
+green scout martian thark~
+a Green Martian Scout~
+A green Martian scout surveys the area, alert for threats or prey.
+~
+This green Martian scout is slightly smaller than the warriors but still stands
+over 12 feet tall with four arms. The olive-green skin allows blending with the
+Martian terrain. Large eyes miss nothing. Scouts range ahead of the main hordes,
+gathering intelligence and hunting for food or plunder.
+~
+2 8 900 S
+20 0 0 1d1+15000 2d8+10
+6000 80000
+8 8 2
+#3757
+sorak bird prey martian~
+a sorak~
+A sorak, a vicious Martian bird of prey, circles overhead.
+~
+This large predatory bird has a wingspan of ten feet or more. Its feathers are
+mottled brown and ochre. Sharp talons and a hooked beak make it a dangerous
+hunter. Soraks hunt in the thin Martian atmosphere, diving on prey from above.
+They are aggressive and will attack anything that appears vulnerable.
+~
+2 8 900 S
+11 0 0 1d1+6000 1d8+4
+1500 65000
+8 8 2
+#3758
+zitidar beast burden huge~
+a wild zitidar~
+A massive zitidar, a beast of burden, stands here.
+~
+This enormous creature dwarfs even the thoats. It stands nearly 20 feet high
+with a body to match. While typically used as beasts of burden by the green
+Martians, this wild specimen is extremely dangerous when provoked. Its massive
+size and strength can crush anything in its path.
+~
+2 8 900 S
+16 0 0 1d1+30000 3d10+18
+20000 110000
+8 8 2
+#3759
+darseen antelope martian~
+a darseen~
+A darseen, a Martian antelope, grazes nervously here.
+~
+This graceful creature resembles a Martian antelope with long legs built for
+speed. Its hide is tan and ochre, helping it blend with the terrain. Large eyes
+watch constantly for predators. While not aggressive, a darseen will flee at
+the slightest threat. They are hunted by many predators.
+~
+2 0 900 S
+10 0 0 1d1+3000 1d4+2
+500 60000
+8 8 2
+#3760
+plant man carnivorous~
+a plant man~
+A grotesque plant man stands here on its single foot, tentacles writhing.
+~
+This hideous creature stands 9-10 feet tall on a single thick foot. Multiple
+writhing tentacles extend from its limbless body. Moss-like, plant-based skin
+covers it. Leafy fronds surround the head area where a single white eye stares.
+The mouth is filled with poison fangs. Viscous, plant-like blood oozes from
+wounds. Plant men are vicious carnivores that hunt in packs.
+~
+2 8 900 S
+16 0 0 1d1+12000 2d8+8
+4000 75000
+8 8 2
+#3761
+sith wasp giant martian~
+a giant sith~
+A giant sith, a Martian wasp, hovers here menacingly.
+~
+This enormous wasp-like creature is several feet long with transparent wings
+that beat rapidly. Its body is segmented and armored. The most dangerous feature
+is the large stinger capable of injecting deadly venom. Siths are aggressive and
+territorial, attacking anything that enters their hunting grounds.
+~
+2 8 900 S
+11 0 0 1d1+8000 1d10+6
+2000 70000
+8 8 2
+#3762
+orluk serpent water martian~
+an orluk~
+A massive orluk serpent coils here, ready to strike.
+~
+This enormous serpent-like creature is adapted for the ancient waterways of
+Mars. Though most seas are now dry, orluk still inhabit certain areas. This
+specimen is 20 feet or more in length with powerful coils that can crush prey.
+Venomous fangs deliver a deadly bite. The scales are mottled green and brown.
+~
+2 8 900 S
+16 0 0 1d1+14000 2d10+10
+5000 80000
+8 8 2
+#3763
+white ape great four-armed~
+a great white ape~
+A massive great white ape stands here, all four arms ready for combat.
+~
+This enormous creature stands 15-18 feet tall with shaggy white fur. Four
+powerful arms like the green Martians give it tremendous combat ability. Massive
+fangs and claws complete its arsenal. Great white apes are semi-intelligent and
+incredibly strong. They are ferocious and territorial, attacking intruders
+without hesitation. Their presence usually means death.
+~
+2 8 900 S
+16 0 0 1d1+22000 3d8+14
+12000 95000
+8 8 2
+#3764
+traveler red martian merchant~
+a Red Martian Traveler~
+A red Martian traveler rests here, recovering from the journey between cities.
+~
+This red Martian has copper-red skin covered in dust from travel. Their harness
+is practical rather than ornate, designed for the rigors of the journey. They
+carry supplies and trade goods. While not a warrior, they are armed for
+protection against the dangers of the wilderness.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3765
+guard caravan red martian warrior~
+a Caravan Guard~
+A red Martian caravan guard stands watch, alert for danger.
+~
+This warrior has copper-red skin and the bearing of an experienced fighter.
+Their battle harness is functional and well-maintained. They are hired to
+protect travelers and merchants making the dangerous journey between the Twin
+Cities. Their eyes constantly scan for threats.
+~
+2 8 900 S
+23 2 2 1d1+28000 1d10+12
+6000 80000
+8 8 1
+#3766
+pilot airship red martian~
+an Airship Pilot~
+An airship pilot has landed here for repairs or reconnaissance.
+~
+This red Martian has the weathered look of one who spends much time in the thin
+upper atmosphere. Their harness includes navigation tools and safety equipment.
+They pilot the airships that connect distant Martian cities, a dangerous but
+essential job.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+4000 75000
+8 8 1
+#3767
+skeleton guardian ancient~
+an ancient guardian skeleton~
+The skeleton of an ancient guardian still stands watch over these ruins.
+~
+This skeleton is held together by ancient Martian science or dark powers. It
+once guarded these ruins when they were inhabited. Now it continues its duty
+even in death. The bones are yellowed with extreme age. Rusted weapons and
+armor cling to the skeletal form. It attacks intruders mindlessly.
+~
+2 8 900 S
+18 0 0 1d1+10000 2d6+8
+3000 75000
+8 8 3
+#3768
+spirit ancient martian~
+an ancient spirit~
+The ghostly form of an ancient Martian hovers here, guarding forgotten secrets.
+~
+This translucent apparition appears as a red Martian from ages past. It guards
+these ancient ruins, attacking those who would disturb the dead. The spirit
+seems to flicker in and out of visibility. Its touch is cold as the void between
+worlds.
+~
+2 8 900 S
+18 0 0 1d1+12000 2d8+8
+4000 78000
+8 8 3

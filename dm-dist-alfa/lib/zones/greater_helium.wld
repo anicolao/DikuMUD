@@ -1,0 +1,1394 @@
+#3900
+The Grand Plaza of Greater Helium~
+   You stand in the magnificent Grand Plaza of Greater Helium, the elder of the
+Twin Cities.  This vast square is paved with polished crimson stone and surrounded
+by towering edifices of scarlet and gold.  Jeweled domes catch the reddish light
+of Mars, creating a spectacular display.  To the north rises the Palace of the
+Warlord, while the Market District extends to the south.
+~
+35 0 1
+D0
+You see the imposing gates of the Warlord's Palace.
+~
+~
+0 -1 3901
+D1
+The plaza extends eastward toward the Temple District.
+~
+~
+0 -1 3910
+D2
+The sounds and smells of the marketplace beckon to the south.
+~
+~
+0 -1 3920
+D3
+You see the grand thoroughfare heading west toward the city gates.
+~
+~
+0 -1 3940
+S
+#3901
+Before the Palace of the Warlord~
+   You stand before the magnificent Palace of the Warlord of Mars, residence of
+John Carter himself.  The palace is constructed of gleaming scarlet and gold
+materials, with towers reaching toward the thin Martian sky.  Elite guards in
+jeweled harnesses stand at attention.  The Grand Plaza lies to the south.
+~
+35 8 0
+D0
+The palace gates are guarded by elite warriors.
+~
+~
+0 -1 3902
+D2
+You see the Grand Plaza to the south.
+~
+~
+0 -1 3900
+S
+#3902
+Palace Entrance Hall~
+   The entrance hall of the Palace of the Warlord is breathtaking in its grandeur.
+Murals depicting the great victories of John Carter adorn the walls.  Precious
+metals and gems are worked into every surface.  To the north you can see the
+throne room, while passages lead east and west to other wings of the palace.
+~
+35 12 0
+D0
+You see the throne room, where the Warlord holds court.
+~
+~
+0 -1 3903
+D1
+The eastern wing contains the royal library and archives.
+~
+~
+0 -1 3904
+D2
+The palace gates and the plaza beyond are to the south.
+~
+~
+0 -1 3901
+D3
+The western wing houses the military command center.
+~
+~
+0 -1 3905
+S
+#3903
+The Throne Room of the Warlord~
+   This vast chamber is the throne room of John Carter, Warlord of Mars.  The
+throne itself is carved from a single enormous ruby, catching and refracting the
+light in spectacular fashion.  Banners of all the allied city-states hang from
+the high ceiling.  The authority of the greatest warrior Mars has ever known
+can be felt here.
+~
+35 12 0
+D2
+The entrance hall lies to the south.
+~
+~
+0 -1 3902
+S
+#3904
+The Royal Library~
+   This magnificent library contains the accumulated knowledge of Martian
+civilization.  Ancient tomes and scrolls line shelves reaching to the high
+ceiling.  Scientific instruments and maps cover several tables.  The collected
+wisdom of centuries is preserved here.
+~
+35 12 0
+D3
+The entrance hall is to the west.
+~
+~
+0 -1 3902
+S
+#3905
+Military Command Center~
+   This chamber serves as the command center for Helium's military forces.  Large
+maps of Mars cover the walls, showing troop positions and strategic locations.
+Communication devices connect to naval and airship fleets.  Military officers
+consult constantly on matters of defense.
+~
+35 12 0
+D1
+The entrance hall is to the east.
+~
+~
+0 -1 3902
+S
+#3910
+Temple Square~
+   You stand in the Temple Square of Greater Helium.  The Great Temple rises to
+the north, its scarlet walls and golden dome dominating the skyline.  Priests in
+ceremonial harnesses move about their duties.  Citizens come here to honor their
+ancestors and the glory of Helium.
+~
+35 0 1
+D0
+The entrance to the Great Temple is before you.
+~
+~
+0 -1 3911
+D2
+A broad avenue leads south toward the residential districts.
+~
+~
+0 -1 3912
+D3
+The Grand Plaza is to the west.
+~
+~
+0 -1 3900
+S
+#3911
+The Great Temple~
+   The interior of the Great Temple is awe-inspiring.  Massive pillars of scarlet
+marble support a vaulted ceiling decorated with golden stars.  An altar at the
+northern end is surrounded by offerings.  The temple honors the glory of Helium
+and the ancestors who built this great civilization.
+~
+35 12 0
+D2
+Temple Square is to the south.
+~
+~
+0 -1 3910
+S
+#3912
+Boulevard of Heroes~
+   This grand boulevard is lined with statues of Helium's greatest heroes.  You
+see monuments to Tardos Mors, Mors Kajak, and other legendary figures.  The
+street is paved with polished stone and bordered by magnificent buildings.
+~
+35 0 1
+D0
+Temple Square is to the north.
+~
+~
+0 -1 3910
+D1
+The boulevard continues eastward.
+~
+~
+0 -1 3913
+D2
+You see the entrance to the Noble Quarter.
+~
+~
+0 -1 3914
+S
+#3913
+Eastern Boulevard~
+   The boulevard continues here, lined with prosperous shops and elegant
+residences.  Red Martian citizens in jeweled harnesses go about their business.
+The eastern city wall is visible in the distance.
+~
+35 0 1
+D1
+You see the eastern gate in the distance.
+~
+~
+0 -1 3950
+D3
+The Boulevard of Heroes continues west.
+~
+~
+0 -1 3912
+S
+#3914
+Noble Quarter Entrance~
+   You enter the Noble Quarter, where the wealthiest citizens of Greater Helium
+reside.  The buildings here are especially ornate, with jeweled facades and
+elaborate architecture.  Guards patrol to ensure the security of the residents.
+~
+35 8 0
+D0
+The Boulevard of Heroes is to the north.
+~
+~
+0 -1 3912
+D1
+An elegant street leads into the heart of the Noble Quarter.
+~
+~
+0 -1 3915
+S
+#3915
+Street of Towers~
+   Magnificent towers rise on either side of this street, each more elaborate
+than the last.  Wealthy nobles maintain their residences here, competing to
+display the greatest splendor.  The Guild of Nobles has its headquarters nearby.
+~
+35 8 0
+D0
+You see the entrance to the Guild of Nobles.
+~
+~
+0 -1 3916
+D3
+The entrance to the Noble Quarter is to the west.
+~
+~
+0 -1 3914
+S
+#3916
+Guild of Nobles~
+   This is the headquarters of the Guild of Nobles, where matters of state and
+diplomacy are discussed.  Rich tapestries and rare furnishings fill the chamber.
+A council table of ancient hardwood dominates the center.  Noble houses send
+their representatives here to coordinate policy.
+~
+35 12 0
+D2
+The Street of Towers is to the south.
+~
+~
+0 -1 3915
+S
+#3920
+Market District Plaza~
+   You are in the bustling Market District of Greater Helium.  Merchants hawk
+their wares from colorful stalls.  The sounds of bargaining and the aromas of
+exotic goods fill the air.  This marketplace serves the entire eastern region
+of the Helium empire.
+~
+35 0 1
+D0
+The Grand Plaza is to the north.
+~
+~
+0 -1 3900
+D1
+The market continues eastward with more shops.
+~
+~
+0 -1 3921
+D2
+You see the armory and weaponsmith district.
+~
+~
+0 -1 3922
+D3
+Food and provisions vendors line the western side.
+~
+~
+0 -1 3923
+S
+#3921
+Eastern Market Row~
+   This section of the market specializes in luxury goods.  You see jewelers,
+cloth merchants, and dealers in rare Martian artifacts.  Wealthy customers
+examine the finest merchandise available on Mars.
+~
+35 0 1
+D1
+A jeweler's shop is to the east.
+~
+~
+0 -1 3924
+D2
+You see a leather worker's establishment.
+~
+~
+0 -1 3925
+D3
+The Market District Plaza is to the west.
+~
+~
+0 -1 3920
+S
+#3922
+Armory Row~
+   This street is devoted to weapons and armor.  The ring of hammers on metal
+fills the air as weaponsmiths and armorers ply their trade.  Warriors come here
+to purchase the finest weapons and harnesses available.
+~
+35 0 1
+D0
+The Market District Plaza is to the north.
+~
+~
+0 -1 3920
+D1
+A master weaponsmith has his shop here.
+~
+~
+0 -1 3926
+D2
+The armor shop is to the south.
+~
+~
+0 -1 3927
+S
+#3923
+Provisions Market~
+   This area of the market sells food and basic supplies.  Vendors offer dried
+fruits, preserved meats, water, and other necessities for life on Mars.  The
+smells of various foods mingle in the air.
+~
+35 0 1
+D0
+A provisions shop is here.
+~
+~
+0 -1 3928
+D1
+The Market District Plaza is to the east.
+~
+~
+0 -1 3920
+D2
+A general store is to the south.
+~
+~
+0 -1 3929
+S
+#3924
+Master Jeweler~
+   This elegant shop displays the finest jewelry on Mars.  Cases contain
+spectacular gems, precious metals, and intricate harness decorations.  The
+master jeweler serves only the wealthiest clientele.
+~
+35 12 0
+D3
+Eastern Market Row is to the west.
+~
+~
+0 -1 3921
+S
+#3925
+Leather Worker's Shop~
+   This shop specializes in leather goods and harnesses.  The leather worker
+creates custom harnesses, belts, and equipment from the finest materials.  The
+smell of cured leather fills the air.
+~
+35 12 0
+D0
+Eastern Market Row is to the north.
+~
+~
+0 -1 3921
+S
+#3926
+Master Weaponsmith~
+   The master weaponsmith of Greater Helium works here, creating the finest
+blades and radium weapons on Mars.  Weapons of exceptional quality line the
+walls.  Warriors from across the planet come here to commission custom weapons.
+~
+35 12 0
+D3
+Armory Row is to the west.
+~
+~
+0 -1 3922
+S
+#3927
+Armorer's Forge~
+   The armorer's forge is filled with the heat of the furnace and the ring of
+hammers.  Metal harnesses and armor pieces in various stages of completion are
+everywhere.  The armorer crafts protective gear for Helium's warriors.
+~
+35 12 0
+D0
+Armory Row is to the north.
+~
+~
+0 -1 3922
+S
+#3928
+Provisions Shop~
+   This shop sells food and water for daily living and for expeditions.  Sealed
+barrels and containers hold preserved foods.  Water flasks and survival gear are
+also available.
+~
+35 12 0
+D2
+The Provisions Market is to the south.
+~
+~
+0 -1 3923
+S
+#3929
+General Store~
+   This general store carries a wide variety of goods for everyday life.  You
+see tools, rope, containers, and various useful items.  The merchant is happy
+to serve any customer.
+~
+35 12 0
+D0
+The Provisions Market is to the north.
+~
+~
+0 -1 3923
+S
+#3930
+Scientific Academy Plaza~
+   You stand before the Scientific Academy of Greater Helium, the most advanced
+research institution on Mars.  Scientists and students hurry about with
+instruments and documents.  The Academy is renowned throughout the solar system
+for its discoveries.
+~
+35 0 1
+D0
+The entrance to the Academy is to the north.
+~
+~
+0 -1 3931
+D1
+The eastern research wing is accessible here.
+~
+~
+0 -1 3932
+D2
+A street leads south toward the Warrior's Guild.
+~
+~
+0 -1 3934
+S
+#3931
+Academy Main Hall~
+   The main hall of the Scientific Academy is filled with displays of Martian
+technology and scientific instruments.  Models of airships, weapons, and other
+devices are on exhibit.  Scholars discuss theories and experimental results.
+~
+35 12 0
+D2
+The Academy Plaza is to the south.
+~
+~
+0 -1 3930
+S
+#3932
+Research Laboratory~
+   This laboratory is equipped with the most advanced scientific equipment on
+Mars.  Experiments are in progress studying chemistry, physics, and Martian
+biology.  Chemical apparatus bubbles and glows with various compounds.
+~
+35 12 0
+D3
+The Academy Plaza is to the west.
+~
+~
+0 -1 3930
+S
+#3933
+Scientific Supplies Shop~
+   This shop provides chemicals, equipment, and rare scientific supplies to the
+Academy and independent researchers.  Vials, instruments, and unusual compounds
+are carefully organized on shelves.
+~
+35 12 0
+D2
+The Academy Plaza is to the south.
+~
+~
+0 -1 3930
+S
+#3934
+Warrior's Quarter~
+   This district houses the famous Warrior's Guild of Greater Helium.  Combat
+training echoes from the practice yards.  Warriors in battle harness come and go,
+honing their skills in the art of war.
+~
+35 8 0
+D0
+The Scientific Academy Plaza is to the north.
+~
+~
+0 -1 3930
+D1
+The entrance to the Warrior's Guild is here.
+~
+~
+0 -1 3935
+D2
+Training grounds extend to the south.
+~
+~
+0 -1 3936
+S
+#3935
+Warrior's Guild Hall~
+   The great hall of the Warrior's Guild displays weapons and trophies from
+countless battles.  The guild master trains the finest warriors in Helium.
+Combat techniques and strategies are taught here to maintain Helium's military
+supremacy.
+~
+35 12 0
+D3
+The Warrior's Quarter is to the west.
+~
+~
+0 -1 3934
+S
+#3936
+Practice Grounds~
+   These training grounds are where warriors practice their skills.  Training
+dummies stand ready for sword practice.  Targets are set up for radium pistol
+training.  The sounds of combat practice fill the air.
+~
+35 0 2
+D0
+The Warrior's Quarter is to the north.
+~
+~
+0 -1 3934
+S
+#3940
+Western Thoroughfare~
+   This broad avenue runs westward from the Grand Plaza toward the western gate.
+Traffic is heavy with citizens, merchants, and travelers.  The western gate and
+the road to Lesser Helium lie ahead.
+~
+35 0 1
+D1
+The Grand Plaza is to the east.
+~
+~
+0 -1 3900
+D2
+The Royal Inn is to the south.
+~
+~
+0 -1 3941
+D3
+You see the western gate ahead.
+~
+~
+0 -1 3948
+S
+#3941
+The Royal Helium Inn~
+   You enter the most prestigious inn in Greater Helium.  The furnishings are
+luxurious, with rare woods and precious metals adorning every surface.  This inn
+caters to visiting dignitaries, wealthy merchants, and important travelers.  The
+common room buzzes with conversation.
+~
+35 12 0
+D0
+The Western Thoroughfare is to the north.
+~
+~
+0 -1 3940
+D1
+A stairway leads up to the guest rooms.
+~
+~
+0 -1 3942
+D2
+The inn's private dining area is to the south.
+~
+~
+0 -1 3943
+S
+#3942
+Inn Upstairs~
+   The upper floor of the inn contains luxurious guest chambers.  Each room is
+appointed with the finest furnishings.  Travelers rest here in comfort and
+security.
+~
+35 12 0
+D3
+The stairs lead down to the common room.
+~
+~
+0 -1 3941
+S
+#3943
+Private Dining Hall~
+   This elegant dining area serves the inn's guests.  Tables are set with fine
+tableware.  Servers bring exotic foods and beverages.  Important business and
+diplomatic discussions often occur here over meals.
+~
+35 12 0
+D0
+The common room is to the north.
+~
+~
+0 -1 3941
+S
+#3944
+Residential District~
+   You are in a prosperous residential district.  Well-maintained buildings house
+the middle class of Greater Helium.  The streets are clean and orderly.  Citizens
+go about their daily business.
+~
+35 8 0
+D0
+The street continues north.
+~
+~
+0 -1 3945
+D1
+More residences are to the east.
+~
+~
+0 -1 3946
+S
+#3945
+Northern Residential Street~
+   This residential street is lined with comfortable homes.  Small gardens grow
+the hardy plants of Mars.  Children play while adults tend to their households.
+~
+35 8 0
+D2
+The residential district continues south.
+~
+~
+0 -1 3944
+S
+#3946
+Eastern Residential Street~
+   More modest but well-kept homes line this street.  The residents here are
+artisans, merchants, and skilled workers who form the backbone of Helium's
+economy.
+~
+35 8 0
+D3
+The residential district is to the west.
+~
+~
+0 -1 3944
+S
+#3947
+Calot Kennels~
+   These kennels house the fierce but loyal calots used as guard animals.  The
+ten-legged creatures pace in their pens, watchful and alert.  A handler trains
+and sells these valuable animals.
+~
+35 12 0
+D1
+You see the way out to the street.
+~
+~
+0 -1 3944
+S
+#3948
+Western Gate - Interior~
+   You stand at the western gate of Greater Helium.  Guards check travelers
+coming and going.  The gate opens onto the elevated roadway that connects to
+Lesser Helium, 75 miles to the west.  The massive city walls extend north and
+south from here.
+~
+35 8 0
+D1
+The Western Thoroughfare extends back into the city.
+~
+~
+0 -1 3940
+D3
+The western gate opens onto the wilderness road.
+~
+~
+0 -1 3949
+S
+#3949
+Western Gate - Exterior~
+   You stand just outside the western gate of Greater Helium.  The elevated
+roadway extends westward toward Lesser Helium.  The vast expanse of the dead
+sea bottom spreads out below.  This is the main route between the Twin Cities.
+~
+35 0 2
+D1
+The gate leads back into Greater Helium.
+~
+~
+0 -1 3948
+D3
+The wilderness road leads west toward Lesser Helium.
+~
+~
+0 -1 3750
+S
+#3950
+Eastern Gate - Interior~
+   You stand at the eastern gate of Greater Helium.  This gate faces the vast
+expanse of Mars to the east.  Guards maintain vigilance against potential
+threats.  Travelers heading to distant cities pass through here.
+~
+35 8 0
+D1
+The eastern gate opens to the wilderness beyond.
+~
+~
+0 -1 3951
+D3
+The eastern boulevard leads back into the city.
+~
+~
+0 -1 3913
+S
+#3951
+Eastern Gate - Exterior~
+   You stand outside the eastern gate of Greater Helium.  The Martian wilderness
+stretches endlessly to the east.  Ancient ruins and distant cities lie somewhere
+beyond the horizon.  This is the start of long and dangerous journeys.
+~
+35 0 2
+D3
+The gate leads back into Greater Helium.
+~
+~
+0 -1 3950
+S
+#3952
+South Plaza~
+   This plaza on the southern side of the city serves as a gathering place for
+citizens.  Smaller markets and local establishments surround the open space.
+~
+35 0 1
+D0
+A street leads north toward the main market.
+~
+~
+0 -1 3920
+D1
+The Assassin's Quarter lies in the shadows to the east.
+~
+~
+0 -1 3953
+D2
+The southern wall and gate are to the south.
+~
+~
+0 -1 3956
+S
+#3953
+Shadowed Alley~
+   This narrow alley is perpetually in shadow.  Few honest citizens venture here.
+Whispers speak of the Assassin's Guild operating somewhere in these dark passages.
+~
+35 8 0
+D1
+The alley continues deeper into the shadows.
+~
+~
+0 -1 3954
+D3
+South Plaza is to the west.
+~
+~
+0 -1 3952
+S
+#3954
+Assassin's Guild~
+   You have found the secret headquarters of the Assassin's Guild.  This place
+operates in the shadows, training those who deal in silent death.  The guild
+master trains skilled assassins in the deadly arts.
+~
+35 28 0
+D3
+The shadowed alley is to the west.
+~
+~
+0 -1 3953
+S
+#3955
+Training Room~
+   This hidden room is where assassins practice their deadly craft.  Training
+dummies and practice weapons are arranged for skill development.  The art of
+silent killing is perfected here.
+~
+35 28 0
+D1
+The guild hall is to the east.
+~
+~
+0 -1 3954
+S
+#3956
+Southern Gate - Interior~
+   The southern gate of Greater Helium provides access to the dead sea bottom
+plains to the south.  Guards monitor traffic in and out of the city.
+~
+35 8 0
+D0
+South Plaza is to the north.
+~
+~
+0 -1 3952
+D2
+The gate opens to the southern wilderness.
+~
+~
+0 -1 3957
+S
+#3957
+Southern Gate - Exterior~
+   You stand outside the southern gate of Greater Helium.  The dead sea bottom
+stretches southward, a vast expanse of ancient ocean floor now dry and desolate.
+~
+35 0 2
+D0
+The gate leads back into the city.
+~
+~
+0 -1 3956
+S
+#3958
+Common Square~
+   This is the common square where ordinary citizens gather.  Small vendors sell
+basic goods.  The atmosphere is less grand than the main plaza but more
+welcoming to common folk.
+~
+35 0 1
+D0
+The market district is to the north.
+~
+~
+0 -1 3923
+D1
+A modest inn is to the east.
+~
+~
+0 -1 3959
+D2
+The poor quarter begins to the south.
+~
+~
+0 -1 3960
+S
+#3959
+The Common Rest Inn~
+   This modest inn serves common citizens and travelers of limited means.  The
+furnishings are simple but clean.  The rates are affordable and the atmosphere
+is welcoming.
+~
+35 12 0
+D3
+The Common Square is to the west.
+~
+~
+0 -1 3958
+S
+#3960
+Poor Quarter~
+   This district houses the poorest citizens of Greater Helium.  The buildings
+are run-down and crowded.  Despite the poverty, the residents maintain their
+pride and honor as citizens of Helium.
+~
+35 8 0
+D0
+The Common Square is to the north.
+~
+~
+0 -1 3958
+D1
+The streets wind through the poor district.
+~
+~
+0 -1 3961
+S
+#3961
+Poor Quarter Street~
+   Narrow streets wind through the poor quarter.  The residents here struggle to
+survive but maintain hope for a better future.  Some find work in the markets or
+as laborers.
+~
+35 8 0
+D3
+The poor quarter continues west.
+~
+~
+0 -1 3960
+S
+#3962
+Warehouse District~
+   This area contains warehouses storing goods for the markets.  Large buildings
+hold supplies, trade goods, and equipment.  Workers load and unload cargo.
+~
+35 8 0
+D0
+You see the market districts to the north.
+~
+~
+0 -1 3921
+D2
+The old docks area is to the south.
+~
+~
+0 -1 3963
+S
+#3963
+Old Docks~
+   These ancient docks once served water vessels when Mars had seas.  Now they
+are used for storage and less reputable activities.  The area has a rough
+reputation.
+~
+35 8 0
+D0
+The warehouse district is to the north.
+~
+~
+0 -1 3962
+S
+#3964
+Airship Landing Platform~
+   This elevated platform serves as a landing pad for airships.  The thin
+Martian atmosphere makes air travel challenging but essential.  Ships come and
+go, connecting Greater Helium to distant cities.
+~
+35 0 1
+D2
+A ramp leads down to the ground level.
+~
+~
+0 -1 3900
+S
+#3965
+Military Barracks~
+   These barracks house the standing army of Greater Helium.  Warriors in
+training and veteran soldiers share quarters here.  Weapons and equipment are
+maintained in readiness.
+~
+35 12 0
+D1
+The parade ground is to the east.
+~
+~
+0 -1 3966
+S
+#3966
+Parade Ground~
+   This open space is used for military formations and ceremonies.  Troops drill
+and train here under the watchful eyes of officers.  The might of Helium is on
+display.
+~
+35 0 2
+D3
+The barracks are to the west.
+~
+~
+0 -1 3965
+S
+#3967
+Naval Command~
+   This headquarters coordinates Helium's powerful airship navy.  Maps show
+fleet positions and patrol routes.  Officers plan strategies and deployments.
+~
+35 12 0
+D2
+You see the shipyards to the south.
+~
+~
+0 -1 3968
+S
+#3968
+Airship Shipyards~
+   These shipyards construct and repair the airships of Helium's navy.  Massive
+vessels are in various stages of construction.  The technology of Martian flight
+is evident in every detail.
+~
+35 0 2
+D0
+Naval Command is to the north.
+~
+~
+0 -1 3967
+S
+#3969
+Northern Plaza~
+   This plaza on the northern side of the city provides access to the northern
+districts.  Citizens gather here to socialize and conduct business.
+~
+35 0 1
+D1
+The palace district is to the east.
+~
+~
+0 -1 3901
+D2
+The main plaza is to the south.
+~
+~
+0 -1 3900
+D3
+The northern residential areas are to the west.
+~
+~
+0 -1 3970
+S
+#3970
+Northern Residential Area~
+   Comfortable homes for middle-class citizens line these northern streets.  The
+area is quiet and well-maintained.  Gardens grow hardy Martian plants.
+~
+35 8 0
+D1
+The northern plaza is to the east.
+~
+~
+0 -1 3969
+S
+#3971
+Observatory Tower~
+   This tower houses astronomical instruments.  Martian scientists study the
+heavens from here, tracking Earth and other planets.  The thin atmosphere
+provides excellent viewing conditions.
+~
+35 12 0
+D5
+Stairs lead down to the ground level.
+~
+~
+0 -1 3930
+S
+#3972
+Archives Hall~
+   This hall contains the historical records of Greater Helium and the broader
+Helium empire.  Ancient documents detail the history of the red Martian race.
+Scholars research the past here.
+~
+35 12 0
+D2
+The library is to the south.
+~
+~
+0 -1 3904
+S
+#3973
+Hall of Heroes~
+   This magnificent hall displays portraits and statues of Helium's greatest
+heroes.  John Carter, Tardos Mors, Mors Kajak, Carthoris, and many others are
+honored here.  Their deeds inspire future generations.
+~
+35 12 0
+D2
+The throne room is to the south.
+~
+~
+0 -1 3903
+S
+#3974
+Guard Barracks~
+   These barracks house the elite palace guard.  Only the finest warriors serve
+here, protecting the Warlord and his family.  Training is constant and rigorous.
+~
+35 12 0
+D1
+The military command center is to the east.
+~
+~
+0 -1 3905
+S
+#3975
+Diplomatic Reception Hall~
+   This elegant hall is where the Warlord receives foreign dignitaries and
+ambassadors.  Meetings and negotiations that affect all of Mars occur here.
+~
+35 12 0
+D2
+The palace entrance hall is to the south.
+~
+~
+0 -1 3902
+S
+#3976
+Royal Gardens~
+   These magnificent gardens grow the rarest plants of Mars.  Carefully tended
+by expert gardeners, they provide beauty and tranquility.  The royal family
+walks here in contemplation.
+~
+35 0 1
+D3
+A gate leads back to the palace grounds.
+~
+~
+0 -1 3901
+S
+#3977
+Meditation Chamber~
+   This quiet chamber is used for meditation and reflection.  The Warlord
+sometimes retreats here to think and plan.  Silence and peace pervade the space.
+~
+35 12 0
+D4
+The throne room is above.
+~
+~
+0 -1 3903
+S
+#3978
+Treasure Vault~
+   This secure vault holds the treasures of Greater Helium.  Gems, precious
+metals, and rare artifacts are carefully guarded.  The wealth of the city-state
+is stored here.
+~
+35 28 0
+D4
+The military command center is above.
+~
+~
+0 -1 3905
+S
+#3979
+Central Tower~
+   This tower rises high above the city, providing views in all directions.
+Guards watch for approaching threats or arriving ships.  Signal systems
+coordinate city defenses.
+~
+35 8 0
+D5
+The ground level is far below.
+~
+~
+0 -1 3900
+S
+#3980
+Eastern Tower~
+   This tower on the eastern wall provides observation of the eastern approaches.
+Guards maintain constant vigilance.  Warning systems are ready to alert the city
+to any danger.
+~
+35 8 0
+D5
+The eastern gate is below.
+~
+~
+0 -1 3950
+S
+#3981
+Western Tower~
+   This tower guards the western approaches and the road to Lesser Helium.
+Guards watch the traffic on the elevated roadway and scan the dead sea bottom
+for threats.
+~
+35 8 0
+D5
+The western gate is below.
+~
+~
+0 -1 3948
+S
+#3982
+Southern Tower~
+   This tower provides a commanding view of the southern approaches.  The vast
+expanse of the dead sea bottom stretches endlessly to the south.
+~
+35 8 0
+D5
+The southern gate is below.
+~
+~
+0 -1 3956
+S
+#3983
+Temple Courtyard~
+   This courtyard outside the Great Temple is a place of peace.  Citizens come
+here to rest and reflect.  Gardens surround a central fountain.
+~
+35 0 1
+D1
+The Great Temple is to the east.
+~
+~
+0 -1 3911
+S
+#3984
+Priest's Quarters~
+   These chambers house the priests who serve the Great Temple.  Simple but
+comfortable rooms provide rest for those dedicated to religious service.
+~
+35 12 0
+D2
+The temple is to the south.
+~
+~
+0 -1 3911
+S
+#3985
+Smithy~
+   This smithy serves the city, producing tools and hardware for everyday use.
+The heat of the forge and the ring of hammers fill the space.  A skilled smith
+works here.
+~
+35 12 0
+D1
+The market area is to the east.
+~
+~
+0 -1 3923
+S
+#3986
+Tannery~
+   This tannery processes leather for various uses.  The smell is strong but the
+work is essential.  Skilled tanners create quality leather for the city's needs.
+~
+35 12 0
+D0
+The market area is to the north.
+~
+~
+0 -1 3925
+S
+#3987
+Healer's Hall~
+   This hall is where the injured and sick receive care.  Martian medical
+knowledge combines with traditional healing.  Healers tend to those in need.
+~
+35 12 0
+D2
+You see the street outside.
+~
+~
+0 -1 3944
+S
+#3988
+Training Hall~
+   This hall is where young warriors begin their training.  Basic combat skills
+and weapon use are taught here.  The next generation of Helium's defenders
+starts their education here.
+~
+35 12 0
+D0
+The warrior's guild is to the north.
+~
+~
+0 -1 3935
+S
+#3989
+Arena~
+   This arena hosts combat demonstrations and competitions.  Warriors test their
+skills against each other in non-lethal contests.  Spectators watch the displays
+of martial prowess.
+~
+35 0 2
+D3
+The exit leads back to the city streets.
+~
+~
+0 -1 3934
+S
+#3990
+Bath House~
+   This bath house provides cleansing and relaxation for citizens.  Martian
+customs of bathing and grooming are practiced here.  The atmosphere is peaceful.
+~
+35 12 0
+D1
+The street is to the east.
+~
+~
+0 -1 3944
+S
+#3991
+Merchant Guild Hall~
+   This hall serves as the headquarters for the merchant's guild.  Trade
+agreements are negotiated and disputes settled here.  The economic health of
+Greater Helium depends on successful commerce.
+~
+35 12 0
+D3
+The market plaza is to the west.
+~
+~
+0 -1 3920
+S
+#3992
+City Administration~
+   This building houses the administrative functions of Greater Helium.  Clerks
+maintain records, issue permits, and handle the bureaucratic needs of the city.
+~
+35 12 0
+D1
+The grand plaza is to the east.
+~
+~
+0 -1 3900
+S
+#3993
+Hall of Records~
+   This hall contains records of property, genealogy, and legal matters.  The
+meticulous records of Helium's citizens are maintained here.
+~
+35 12 0
+D2
+The city administration is to the south.
+~
+~
+0 -1 3992
+S
+#3994
+Prison~
+   This secure facility holds those who have violated the laws of Greater Helium.
+Guards maintain strict watch over the prisoners.  Justice in Helium is swift but
+fair.
+~
+35 28 0
+D0
+The guard headquarters is to the north.
+~
+~
+0 -1 3995
+S
+#3995
+Guard Headquarters~
+   This building serves as headquarters for the city guard.  Patrols are
+coordinated and reports filed here.  The guard maintains order and security
+throughout Greater Helium.
+~
+35 12 0
+D2
+The prison is to the south.
+~
+~
+0 -1 3994
+D3
+The plaza is to the west.
+~
+~
+0 -1 3900
+S
+#3996
+Scholars Quarter~
+   This district houses scholars, researchers, and intellectuals.  Libraries and
+study halls are found here.  The pursuit of knowledge is celebrated.
+~
+35 8 0
+D2
+The scientific academy is to the south.
+~
+~
+0 -1 3930
+S
+#3997
+Library Annex~
+   This annex to the royal library contains additional texts and research
+materials.  Scholars study ancient documents and contemporary works here.
+~
+35 12 0
+D1
+The main library is to the east.
+~
+~
+0 -1 3904
+S
+#3998
+Music Hall~
+   This hall is dedicated to Martian music and performance.  While Martians are
+not as musically inclined as Earth cultures, they appreciate artistic expression.
+Performances occur here occasionally.
+~
+35 12 0
+D2
+The street is to the south.
+~
+~
+0 -1 3912
+S
+#3999
+Hall of Antiquities~
+   This museum displays artifacts from Mars' ancient past.  Relics from lost
+civilizations and historical items are preserved here.  The long history of Mars
+is on display.
+~
+35 12 0
+D3
+The boulevard is to the west.
+~
+~
+0 -1 3912
+S
