@@ -193,7 +193,7 @@ useable when playing in groups.
 #
 STEAL
 
-Thief Only.
+Assassin Only.
 
 Use steal to steal gold or items from people. The chance of not getting
 caught depends on how well you have practiced steal, and if the person
@@ -214,7 +214,7 @@ Example:
 #
 BACKSTAB
 
-Thief only.
+Assassin only.
 
 Is a way to sneak up on a person, and attempt to place you dagger in his
 back, at exactly the point where it does most damage. A successful backstab
@@ -320,26 +320,30 @@ ability to use magic of any sort.
 
 See also: PRACTICE
 #
-THIEF
-Thiefs are known to have very special qualities, that no other class offers.
-Many of these qualities can come in handy in many situations, such as picking
-locks.
-   You can improve you skills by using the practice command.
+ASSASSIN "SHADOW BLADE"
+Assassins are masters of stealth, deception, and surgical violence. The 
+Assassins' Guild of Toonol is legendary across Barsoom. They strike from 
+shadows, use precision rather than brute force, and can infiltrate where 
+warriors cannot tread. They excel at backstabbing, picking locks, and 
+moving unseen. You can improve your skills by using the practice command.
 
 See also: PRACTICE
 #
-CLERIC
-Clerics have an ancient belief in not carrying sharp weapons. Hence, they can
-only wield bludgeoning weapons. This class gives you the wisdom of peace,
-blessing and healing, though it is possible to learn more violent spells.
-You can improve your spells by using the practice command.
+NOBLE JED JEDDAK PRINCESS
+Nobles of Barsoom command respect through leadership and social acumen. They 
+inspire followers, negotiate alliances, and rally troops in combat. Many 
+nobles are also skilled fighters, blending martial prowess with diplomatic 
+skill. They progress through ranks from Odwar through Jed to Jeddak. You can 
+improve your skills by using the practice command.
 
 See also: PRACTICE
 #
-"MAGIC USER" WIZARD MAGE
-This is the class of powerful and violent magic, but the magic user do not
-control the nature, and can therefore not bless and such. You can improve
-your spells by using the practice command.
+SCIENTIST SAVANT INVENTOR
+Scientists are the keepers of ancient knowledge and creators of wondrous 
+devices on the dying world of Mars. They can perform surgery, create 
+inventions, repair technology, and use scientific weapons. While not 
+primarily combatants, their knowledge makes them invaluable. You can improve 
+your skills by using the practice command.
 
 See also: PRACTICE
 #
@@ -951,10 +955,10 @@ See Also: HIDE
 Usage       : cast 'magic missile' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 1 magic user.
+Level       : Level 1 scientist.
 Save        : Versus spell for half damage.
 
-This is the least powerful offensive magic user spell.
+This is the least powerful offensive scientist spell.
 
 See Also: 
 #
@@ -962,7 +966,7 @@ See Also:
 Usage       : cast 'chill touch' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 3 magic user.
+Level       : Level 3 scientist.
 Save        : Versus spell for half damage.
 
 This spell is more powerful than the magic missile spell.
@@ -975,7 +979,7 @@ See Also: MAGIC MISSILE
 Usage       : cast 'burning hands' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 5 magic user.
+Level       : Level 5 scientist.
 Save        : Versus spell for half damage.
 
 This spell is more powerful than the chill touch spell.
@@ -986,7 +990,7 @@ See Also: CHILL TOUCH
 Usage       : cast 'shocking grasp' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 7 magic user.
+Level       : Level 7 scientist.
 Save        : Versus spell for half damage.
 
 This spell is more powerful than the burning hands spell.
@@ -997,7 +1001,7 @@ See Also: BURNING HANDS
 Usage       : cast 'lightning bolt' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 9 magic user.
+Level       : Level 9 scientist.
 Save        : Versus spell for half damage.
 
 This spell is more powerful than the shocking grasp spell.
@@ -1008,7 +1012,7 @@ See Also: SHOCKING GRASP
 Usage       : cast 'colour spray' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 11 magic user.
+Level       : Level 11 scientist.
 Save        : Versus spell for half damage.
 
 This spell is more powerful than the lightning bolt spell.
@@ -1019,7 +1023,7 @@ See Also: LIGHTNING BOLT
 Usage       : cast 'energy drain' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 13 magic user.
+Level       : Level 13 scientist.
 Save        : Versus spell for half damage.
 
 This spell does not give much damage, but victims failing their
@@ -1034,10 +1038,10 @@ FIREBALL
 Usage       : cast 'fireball' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 15 magic user.
+Level       : Level 15 scientist.
 Save        : Versus spell for half damage.
 
-This spell is the most powerful spell a magic user can cast.
+This spell is the most powerful spell a scientist can cast.
 
 See Also: COLOR SPRAY
 #
@@ -1045,7 +1049,7 @@ EARTHQUAKE
 Usage       : cast 'earthquake'
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 7 cleric.
+Level       : Level 7 noble.
 Save        : -
 
 This spell will damage everybody except the caster by
@@ -1057,7 +1061,7 @@ See Also: -
 Usage       : cast 'dispel evil' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 10 cleric.
+Level       : Level 10 noble.
 Save        : Special
 
 This spell will only affect evil creatures. An evil person of level
@@ -1072,7 +1076,7 @@ See Also: -
 Usage       : cast 'call lightning' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 12 cleric.
+Level       : Level 12 noble.
 Save        : Versus spell for half damage.
 
 This spell will use the "force of nature" to make a lightning
@@ -1088,7 +1092,7 @@ HARM
 Usage       : cast 'harm' <victim>
 Accumulative: -
 Duration    : Instantaneous
-Level       : Level 15 cleric.
+Level       : Level 15 noble.
 Save        : Versus spell for half damage.
 
 This spell removes all but 1d4 hitpoints from the victim. The
@@ -1115,12 +1119,12 @@ Example:
    will not match anything.
 
  > 'help mag'
-   will match 'magic user' or 'magic missile' depending on first
+   will match 'scientist' or 'magic missile' depending on first
    occurence in the help file.
 #
 SPELL SPELLS
 
-           Magic User               Cleric
+           Scientist                Noble
 
            (1) Magic Missile        (1) Armor
            (1) Ventriloquate        (1) Cure Light

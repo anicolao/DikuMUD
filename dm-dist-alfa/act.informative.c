@@ -1191,10 +1191,10 @@ void do_levels(struct char_data *ch, char *argument, int cmd)
 	one_argument(argument,arg);
 
 	if (*arg) {
-		if (!strcasecmp(arg,"magic")) class = 1;
-		else if (!strcasecmp(arg,"cleric")) class =  2;
-		else if (!strcasecmp(arg,"thief")) class =  3;
-		else if (!strcasecmp(arg,"fighter")) class = 4;
+		if (!strcasecmp(arg,"scientist")) class = 1;
+		else if (!strcasecmp(arg,"noble")) class =  2;
+		else if (!strcasecmp(arg,"assassin")) class =  3;
+		else if (!strcasecmp(arg,"warrior")) class = 4;
 	}
 
 	*buf = '\0';

@@ -1241,7 +1241,7 @@ void nanny(struct descriptor_data *d, char *arg)
 				break;
 			}
 
-			SEND_TO_Q("\n\rSelect a class:\n\rCleric\n\rThief\n\rWarrior\n\rMagic-user", d);
+			SEND_TO_Q("\n\rSelect a class:\n\rWarrior\n\rScientist\n\rNoble\n\rAssassin", d);
 			SEND_TO_Q("\n\rClass :", d);
 			STATE(d) = CON_QCLASS;
 		break;
@@ -1251,28 +1251,6 @@ void nanny(struct descriptor_data *d, char *arg)
 			for (; isspace(*arg); arg++);
 			switch (*arg)
 			{
-				case 'm':
-				case 'M': {
-					GET_CLASS(d->character) = CLASS_MAGIC_USER;
-					init_char(d->character);
-					/* create an entry in the file */
-					d->pos = create_entry(GET_NAME(d->character));
-					save_char(d->character, NOWHERE);
-					SEND_TO_Q(motd, d);
-					SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-					STATE(d) = CON_RMOTD;
-				} break;
-				case 'c':
-				case 'C': {
-					GET_CLASS(d->character) = CLASS_CLERIC;
-					init_char(d->character);
-					/* create an entry in the file */
-					d->pos = create_entry(GET_NAME(d->character));
-					save_char(d->character, NOWHERE);
-					SEND_TO_Q(motd, d);
-					SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
-					STATE(d) = CON_RMOTD;
-				} break;
 				case 'w':
 				case 'W': {
 					GET_CLASS(d->character) = CLASS_WARRIOR;
@@ -1284,8 +1262,30 @@ void nanny(struct descriptor_data *d, char *arg)
 					SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
 					STATE(d) = CON_RMOTD;
 				} break;
-				case 't':
-				case 'T': {
+				case 's':
+				case 'S': {
+					GET_CLASS(d->character) = CLASS_MAGIC_USER;
+					init_char(d->character);
+					/* create an entry in the file */
+					d->pos = create_entry(GET_NAME(d->character));
+					save_char(d->character, NOWHERE);
+					SEND_TO_Q(motd, d);
+					SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
+					STATE(d) = CON_RMOTD;
+				} break;
+				case 'n':
+				case 'N': {
+					GET_CLASS(d->character) = CLASS_CLERIC;
+					init_char(d->character);
+					/* create an entry in the file */
+					d->pos = create_entry(GET_NAME(d->character));
+					save_char(d->character, NOWHERE);
+					SEND_TO_Q(motd, d);
+					SEND_TO_Q("\n\r\n*** PRESS RETURN: ", d);
+					STATE(d) = CON_RMOTD;
+				} break;
+				case 'a':
+				case 'A': {
 					GET_CLASS(d->character) = CLASS_THIEF;
 					init_char(d->character);
 					/* create an entry in the file */
