@@ -61,11 +61,11 @@ Where Tharks prove their combat prowess and settle disputes:
 ### Warrior Compounds (Rooms 4010-4024)
 
 Living quarters for the green Martian warriors, arranged by clan and status:
-- **4010-4014** - First Warrior compound
-- **4015-4019** - Second Warrior compound  
-- **4020-4024** - Third Warrior compound
+- **4010-4014** - First Warrior compound (includes Warrior Guild 4013)
+- **4015-4019** - Second Warrior compound (includes Noble Guild 4017)
+- **4020-4024** - Third Warrior compound (includes School 4023-4024)
 
-Each compound includes sleeping quarters, weapon storage, and common areas.
+Each compound includes sleeping quarters, weapon storage, and common areas. The Warrior Guild and Noble Guild train members in Thark ways, while the school teaches young Tharks survival and combat.
 
 ### Thoat Pens (Rooms 4025-4029)
 
@@ -133,6 +133,16 @@ Entry and exit points from the city:
 - Various clan leaders and warriors
 - Found in Council Chambers and compounds
 
+**Thark Warrior Guildmaster** (4056)
+- Master of combat and warfare
+- Trains warriors in four-armed fighting
+- Located in Warrior Guild (4013)
+
+**Thark Noble Guildmaster** (4057)
+- Leader and diplomat
+- Teaches leadership and tribal customs
+- Located in Noble Guild (4017)
+
 ### General Population
 
 **Thark Warriors** (4060-4064)
@@ -186,43 +196,52 @@ Entry and exit points from the city:
 - Found in pens
 - Level 4-6
 
+### Young Tharks
+
+**Thark Children** (4086-4089)
+- Young green Martians of various ages
+- 5-10 feet tall depending on age
+- Found in school (4023-4024)
+- Levels 3-6
+- **Note**: Targeting children is culturally abhorrent and will make the entire city hostile
+
 ### Merchants
 
-**Thark Trader** (4086)
+**Thark Trader** (4090)
 - Runs the trading post (4040)
 - Pragmatic, understands red Martian customs
 - Sells green Martian goods and thoats
 
-**Thark Weaponsmith** (4087)
+**Thark Weaponsmith** (4091)
 - Creates and repairs weapons
 - Specializes in massive four-armed fighting styles
 
-**Thark Armorsmith** (4088)
+**Thark Armorsmith** (4092)
 - Crafts leather and metal harnesses
 - Green Martian sized but can adapt to smaller races
 
-**Thark Beast Handler** (4089)
+**Thark Beast Handler** (4093)
 - Sells thoats and calots
 - Expert trainer
 
 ## Items and Equipment
 
-### Green Martian Weapons (4090-4092)
+### Green Martian Weapons (4100-4105)
 - Great longswords (two-handed for humans, one-handed for Tharks)
 - Radium rifles (green Martian design)
 - Thoat lances
 
-### Green Martian Armor (4093-4095)
+### Green Martian Armor (4110-4115)
 - Leather harnesses (massive size)
 - Metal accouterments
 - Trophy belts
 
-### Thoat Equipment (4096-4098)
+### Thoat Equipment (4120-4125)
 - Thoat saddles (8-legged mount style)
 - Thoat bridles and reins
 - Riding harnesses
 
-### Cultural Items (4099)
+### Cultural Items (4130-4135)
 - Thark totems and tokens
 - Tribal identification markers
 
@@ -350,8 +369,7 @@ The zone is larger than the connecting Dead Sea Wilderness (30 rooms) but simila
 
 **Numbering:**
 - Zone number: 40 (using 4000s range as specified)
-- Rooms: 4000-4049
-- Mobiles: 4050-4089
-- Objects: 4090-4099
-
-This leaves room 4050-4099 range available for future expansion or overlap with objects if needed.
+- Rooms: 4000-4049 (50 rooms)
+- Mobiles: 4050-4099 (50 mobile types)
+- Objects: 4100-4149 (50 objects)
+- Shops: 1 trading post

@@ -9,7 +9,7 @@ LDLIBS=-lcrypt
 HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
 
 # Zone files - ordered by zone number
-ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel dead_sea_wilderness greater_helium system
+ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel dead_sea_wilderness greater_helium thark_territory system
 
 # Build world data files from zone files
 lib/tinyworld.wld: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).wld)

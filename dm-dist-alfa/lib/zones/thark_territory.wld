@@ -1,0 +1,977 @@
+#4000
+The Main Plaza~
+   You stand in the vast main plaza of the ancient Thark city. Towering ruins
+of massive stone structures surround you on all sides, their once-smooth walls
+now cracked and weathered by countless Martian sandstorms. In the center of
+the plaza stands a colossal statue of an ancient Thark chieftain, his four
+arms raised in a gesture of defiance. Green Martian warriors mill about,
+their fifteen-foot frames casting long shadows in the reddish sunlight.
+~
+40 0 1
+D0
+You see the Council Chambers where Jeddak Tars Tarkas holds court.
+~
+~
+0 -1 4001
+D1
+The warrior compounds lie to the east.
+~
+~
+0 -1 4010
+D2
+The arena entrance is to the south.
+~
+~
+0 -1 4007
+D3
+You see the ancient ruins stretching westward.
+~
+~
+0 -1 4030
+S
+#4001
+Antechamber of the Council~
+   This broad chamber serves as the entrance to the Council Chambers of the
+Thark horde. The walls are lined with battle trophies - skulls of defeated
+enemies, captured weapons, and torn standards. Several Thark guards stand
+watch, their massive forms blocking most of the light from the plaza.
+~
+40 8 0
+D0
+The Council Hall lies ahead.
+~
+~
+0 -1 4002
+D2
+The plaza is to the south.
+~
+~
+0 -1 4000
+S
+#4002
+The Council Hall~
+   This enormous hall once served as the throne room for the ancient
+civilization that built this city. Now it houses the council of Thark
+chieftains. Crude stone benches line the walls, and a raised dais at
+the northern end holds Tars Tarkas's seat of power. The ceiling soars
+high overhead, supported by crumbling pillars.
+~
+40 8 0
+D0
+You see the Jeddak's throne room.
+~
+~
+0 -1 4003
+D2
+The antechamber is to the south.
+~
+~
+0 -1 4001
+S
+#4003
+Throne Room of the Jeddak~
+   This is the private chamber of Tars Tarkas, Jeddak of the Tharks. The
+room is surprisingly austere - a single massive stone throne dominates the
+space, its surface worn smooth by centuries of use. Maps of Thark territory
+cover one wall, marked with the positions of rival hordes and red Martian
+cities. Tars Tarkas himself stands here, a towering figure of green muscle
+and battle scars.
+~
+40 12 0
+D2
+The Council Hall lies to the south.
+~
+~
+0 -1 4002
+S
+#4004
+Entrance to the Incubator~
+   You stand before the sacred Incubator building. Two massive Thark guards
+block the doorway, their faces set in stern expressions. The entrance is
+carved from a single piece of ancient stone, covered in worn glyphs that
+predate even the Tharks' occupation of this city. This is one of the most
+sacred places in Thark society - where the eggs of the horde incubate for
+five long years before hatching.
+~
+40 12 0
+D0
+The Incubator chamber lies beyond the guards.
+~
+door heavy~
+1 -1 4005
+D2
+The plaza is to the south.
+~
+~
+0 -1 4000
+S
+#4005
+The Incubator Chamber~
+   The temperature here is carefully controlled, warmer than the rest of the
+city. Rows of large, leathery eggs rest in shallow depressions carved into
+the floor, each the size of a man's torso. Soft moss cushions them, and a
+faint glow emanates from specially placed radium heaters. The chamber is
+eerily quiet save for the occasional creak of a shifting egg. Sarkoja, the
+stern matriarch, watches over them with fierce devotion.
+~
+40 12 0
+D0
+The inner sanctum lies ahead.
+~
+door heavy~
+1 -1 4006
+D2
+The entrance is to the south.
+~
+door heavy~
+1 -1 4004
+S
+#4006
+Inner Sanctum of the Incubator~
+   This small chamber holds the most recently laid eggs, those less than a
+year into their incubation period. The walls are covered in ancient carvings
+depicting the birth and growth cycles of green Martians. Only Sarkoja and
+the most trusted matriarchs are normally permitted here. The sanctity of
+this place is palpable.
+~
+40 12 0
+D2
+The main incubator chamber is to the south.
+~
+door heavy~
+1 -1 4005
+S
+#4007
+Arena Entrance~
+   You stand at the entrance to the Thark arena, where warriors prove their
+prowess and settle disputes through combat. The arena is carved from the
+natural depression in the ancient city's floor, with crumbling stone seats
+rising in tiers around the combat floor. Bloodstains darken the ochre sand
+beneath your feet - some fresh, others ancient.
+~
+40 0 1
+D0
+The plaza is to the north.
+~
+~
+0 -1 4000
+D1
+The combat floor lies to the east.
+~
+~
+0 -1 4008
+S
+#4008
+The Arena Floor~
+   You stand on the combat floor of the arena. The ground is packed ochre
+sand, stained dark in places with the blood of countless combats. Towering
+walls rise around you on all sides, carved with scenes of ancient battles.
+The tiers of seating above can hold hundreds of green Martians, all watching
+as warriors clash below. This is where Tharks prove their worth.
+~
+40 0 2
+D3
+The arena entrance is to the west.
+~
+~
+0 -1 4007
+D2
+The warrior preparation area is to the south.
+~
+~
+0 -1 4009
+S
+#4009
+Warrior Preparation Chamber~
+   This chamber beneath the arena floor is where warriors prepare for combat.
+Weapon racks line the walls, holding swords, spears, and ancient maces. A
+crude table holds bandages and medical supplies - more for show than actual
+use, as Tharks believe wounds are badges of honor. The air smells of sweat,
+leather, and blood.
+~
+40 8 0
+D0
+The arena floor is to the north.
+~
+~
+0 -1 4008
+S
+#4010
+First Warrior Compound Entrance~
+   This is the entrance to the first warrior compound, housing some of the
+most elite Thark warriors. The compound occupies several connected chambers
+of the ancient ruins. Weapons and armor are stacked near the entrance, and
+you can hear the sounds of warriors within - sharpening blades, repairing
+harnesses, and speaking in their guttural language.
+~
+40 8 0
+D0
+The warrior barracks lie to the north.
+~
+~
+0 -1 4011
+D3
+The main plaza is to the west.
+~
+~
+0 -1 4000
+D2
+More compounds lie to the south.
+~
+~
+0 -1 4015
+S
+#4011
+First Warrior Barracks~
+   This large chamber serves as the sleeping quarters for a dozen Thark
+warriors. Simple sleeping platforms line the walls, each piled with rough
+furs and leather. Weapons hang above each platform, ready to hand. The air
+is thick with the smell of warriors - sweat, leather oil, and the faint
+metallic tang of blood.
+~
+40 8 0
+D0
+A weapons storage area is to the north.
+~
+~
+0 -1 4012
+D2
+The compound entrance is to the south.
+~
+~
+0 -1 4010
+S
+#4012
+Weapons Storage~
+   This chamber is filled with weapons of all types - massive longswords
+that would be two-handed weapons for a red Martian, heavy radium rifles,
+spears with wicked barbed points, and ancient maces carved from meteorite
+iron. Everything is sized for the fifteen-foot frames of green Martians.
+The walls are scarred with practice strikes.
+~
+40 8 0
+D1
+The Warrior Guild training area is to the east.
+~
+~
+0 -1 4013
+D2
+The barracks are to the south.
+~
+~
+0 -1 4011
+S
+#4013
+Warrior Guild Training Hall~
+   This vast chamber has been cleared of debris to create a training space
+for Thark warriors. The floor is marked with combat circles, and practice
+weapons hang on the walls. The Thark Warrior Guildmaster stands here, a
+massive specimen even by green Martian standards. His four arms move through
+combat forms with deadly precision as he instructs younger warriors.
+~
+40 8 0
+D1
+A common area lies to the east.
+~
+~
+0 -1 4014
+D3
+The weapons storage is to the west.
+~
+~
+0 -1 4012
+S
+#4014
+Common Area~
+   This chamber serves as a gathering space for the warrior compound. Crude
+stone benches are arranged in a circle, and a fire pit in the center provides
+warmth during the cold Martian nights. Warriors gather here to share stories
+of battle, plan raids, and maintain their equipment. Trophy skulls line one
+wall - mostly from banths and white apes, with a few from enemy green Martians.
+~
+40 8 0
+D3
+The training hall is to the west.
+~
+~
+0 -1 4013
+D2
+You see the second warrior compound to the south.
+~
+~
+0 -1 4015
+S
+#4015
+Second Warrior Compound Entrance~
+   This entrance leads to the second warrior compound, housing chieftains and
+more experienced warriors. The doorway is carved with crude but powerful
+symbols of Thark authority. Inside, you can see the forms of massive green
+Martians moving about their business.
+~
+40 8 0
+D0
+The first compound is to the north.
+~
+~
+0 -1 4010
+D1
+The living quarters are to the east.
+~
+~
+0 -1 4016
+D2
+The third compound is to the south.
+~
+~
+0 -1 4020
+S
+#4016
+Chieftain Quarters~
+   This chamber houses several Thark chieftains, each with their own sleeping
+platform and weapon racks. The furs here are slightly better quality than in
+the common warrior barracks, and the walls are decorated with more elaborate
+battle trophies. These warriors have earned their place through countless
+battles and displays of leadership.
+~
+40 8 0
+D1
+The Noble Guild hall is to the east.
+~
+~
+0 -1 4017
+D3
+The compound entrance is to the west.
+~
+~
+0 -1 4015
+S
+#4017
+Noble Guild Hall~
+   This chamber serves as the Noble Guild of the Tharks, though "noble" means
+something different for green Martians than for red Martians. Here, chieftains
+and potential leaders learn the arts of command, strategy, and the complex
+tribal customs that govern Thark society. The Thark Noble Guildmaster stands
+here, scarred but wise, teaching younger chieftains the ways of leadership.
+~
+40 8 0
+D1
+A meeting chamber lies to the east.
+~
+~
+0 -1 4018
+D3
+The chieftain quarters are to the west.
+~
+~
+0 -1 4016
+S
+#4018
+Meeting Chamber~
+   This smaller chamber is used for private councils and discussions among
+chieftains. Maps of Thark territory and neighboring regions are scratched
+into stone tablets propped against the walls. A crude table in the center
+holds captured items - red Martian weapons, Warhoon standards, and other
+curiosities.
+~
+40 8 0
+D1
+A storage area lies to the east.
+~
+~
+0 -1 4019
+D3
+The Noble Guild hall is to the west.
+~
+~
+0 -1 4017
+S
+#4019
+Equipment Storage~
+   This chamber holds harnesses, spare weapons, and other equipment reserved
+for chieftains. The quality is noticeably better than standard warrior gear,
+with more elaborate metalwork and stronger leather. Everything is still sized
+for the massive green Martian frame.
+~
+40 8 0
+D3
+The meeting chamber is to the west.
+~
+~
+0 -1 4018
+S
+#4020
+Third Warrior Compound Entrance~
+   This compound houses younger warriors and those still proving themselves
+to the horde. The entrance is less decorated than the others, and you can
+hear the sounds of training - the clash of practice weapons and guttural
+shouts of instruction.
+~
+40 8 0
+D0
+The second compound is to the north.
+~
+~
+0 -1 4015
+D1
+The training area is to the east.
+~
+~
+0 -1 4021
+D2
+The thoat pens are to the south.
+~
+~
+0 -1 4025
+S
+#4021
+Junior Warriors Training Area~
+   This chamber is dedicated to training young Thark warriors. The floor is
+scarred with countless practice strikes, and simpler weapons line the walls.
+Several young Tharks practice combat forms under the watchful eye of an
+older warrior instructor. They are already ten feet tall or more, but still
+have the awkwardness of youth.
+~
+40 8 0
+D1
+A practice range lies to the east.
+~
+~
+0 -1 4022
+D3
+The compound entrance is to the west.
+~
+~
+0 -1 4020
+S
+#4022
+Radium Rifle Practice Range~
+   This long chamber has targets set up at the far end - crude representations
+of red Martians, white apes, and enemy green Martians. Young warriors practice
+with radium rifles here, the deadly weapons requiring careful handling. Scorch
+marks on the walls show where shots have gone astray.
+~
+40 8 0
+D1
+The school entrance is to the east.
+~
+~
+0 -1 4023
+D3
+The training area is to the west.
+~
+~
+0 -1 4021
+S
+#4023
+Thark School Entrance~
+   This chamber serves as a school for the youngest Tharks - those recently
+hatched or still growing into their full size. Unlike red Martian schools
+with books and gentle instruction, this place teaches survival, combat, and
+the harsh realities of life on dying Mars. Young Tharks, five to ten feet
+tall, learn the skills they'll need to survive.
+~
+40 8 0
+D0
+The main schoolroom is to the north.
+~
+~
+0 -1 4024
+D3
+The practice range is to the west.
+~
+~
+0 -1 4022
+S
+#4024
+Thark Schoolroom~
+   This chamber echoes with the guttural sounds of young green Martians
+learning their language and customs. An older Thark warrior teaches them
+about weapons, hunting, the territories of various hordes, and basic survival.
+The students range from small (by Thark standards) five-foot hatchlings to
+gangly ten-foot youths beginning to show the massive build they'll eventually
+achieve. Practice weapons scaled to their size lean against the walls.
+~
+40 8 0
+D2
+The school entrance is to the south.
+~
+~
+0 -1 4023
+S
+#4025
+Thoat Pen Entrance~
+   You stand at the entrance to the thoat pens, where the eight-legged riding
+beasts of the Tharks are kept. The smell is overwhelming - a mixture of beast,
+dung, and the dried ochre moss that serves as their food. You can hear the
+bellowing of thoats from within, along with the harsh commands of their handlers.
+~
+40 0 1
+D0
+The third warrior compound is to the north.
+~
+~
+0 -1 4020
+D1
+The main pens are to the east.
+~
+~
+0 -1 4026
+D2
+More pens lie to the south.
+~
+~
+0 -1 4027
+S
+#4026
+Main Thoat Pens~
+   This large corral holds several domesticated thoats, the massive eight-legged
+beasts that serve as mounts for the Tharks. Each beast stands eight to ten feet
+tall at the shoulder, with slate-gray hide and powerful legs. They are restless,
+shifting and bellowing, their eyes rolling at the approach of strangers. Only
+the presence of Thark handlers keeps them from stampeding.
+~
+40 0 2
+D1
+You see wild thoats in that pen.
+~
+~
+0 -1 4028
+D3
+The entrance is to the west.
+~
+~
+0 -1 4025
+S
+#4027
+Southern Thoat Pens~
+   These pens hold younger thoats and those being broken to the saddle. The
+beasts here are smaller but no less aggressive, fighting against their restraints
+and snapping at anyone who comes close. Several Thark beast handlers work with
+them, using a combination of force and patience to turn wild beasts into mounts.
+~
+40 0 2
+D0
+The main pens are to the north.
+~
+~
+0 -1 4025
+D1
+The tack room is to the east.
+~
+~
+0 -1 4029
+S
+#4028
+Wild Thoat Holding Pen~
+   This heavily reinforced pen holds wild thoats fresh from the dead sea bottom.
+The beasts are furious, charging the walls and bellowing their rage. Their eyes
+are wild with fear and anger. These are the most dangerous - some will be broken
+to service, others will prove untamable and be released or slaughtered for meat.
+~
+40 0 2
+D3
+The main pens are to the west.
+~
+~
+0 -1 4026
+S
+#4029
+Thoat Tack and Saddle Room~
+   This chamber stores all the equipment needed for thoats - massive saddles
+designed for their eight-legged gait, strong leather reins, and the various
+harnesses and bags used for travel. Everything is sized for creatures the size
+of elephants and built to withstand harsh treatment. A Thark beast handler
+works here, maintaining and repairing the equipment.
+~
+40 8 0
+D3
+The southern pens are to the west.
+~
+~
+0 -1 4027
+S
+#4030
+Eastern Ancient Ruins~
+   You stand among the crumbling ruins of the ancient civilization that once
+inhabited this city. Massive stone blocks lie tumbled about, some carved with
+worn hieroglyphs in a language lost even to the Tharks. Portions of walls
+still stand, reaching toward the rust-red sky. These ruins are dangerous -
+structures could collapse at any moment, and who knows what lurks in the
+shadows?
+~
+40 0 2
+D1
+The main plaza is to the east.
+~
+~
+0 -1 4000
+D0
+More ruins lie to the north.
+~
+~
+0 -1 4031
+D2
+You see a collapsed temple to the south.
+~
+~
+0 -1 4032
+S
+#4031
+Collapsed Colonnade~
+   This was once a grand colonnade, but the roof has long since collapsed,
+leaving only stumps of massive pillars and heaps of rubble. Some of the
+debris has been cleared by the Tharks for use elsewhere, but most remains
+as it fell centuries or millennia ago. Small desert creatures have made
+homes in the crevices.
+~
+40 0 2
+D0
+The northern ruins lie ahead.
+~
+~
+0 -1 4033
+D2
+More eastern ruins are to the south.
+~
+~
+0 -1 4030
+S
+#4032
+Collapsed Temple Structure~
+   This was clearly a temple of some kind - the remains of an altar can still
+be seen beneath fallen stones, and faded murals peek through the dust on
+standing sections of wall. The Tharks show no interest in this place, viewing
+it as mere rubble. Perhaps they are right, or perhaps secrets remain buried here.
+~
+40 0 2
+D0
+The eastern ruins are to the north.
+~
+~
+0 -1 4030
+S
+#4033
+Northern Ruins - Old Marketplace~
+   The layout of this area suggests it was once a marketplace - you can see
+the remains of stone counters and stalls arranged in orderly rows. Now it is
+simply more ruins, picked over by generations of green Martians for anything
+useful. The wind whistles through the broken structures, creating an eerie
+moan.
+~
+40 0 2
+D1
+A ruined plaza lies to the east.
+~
+~
+0 -1 4034
+D2
+The collapsed colonnade is to the south.
+~
+~
+0 -1 4031
+S
+#4034
+Ruined Plaza~
+   This circular plaza was clearly important to the original city - it is
+perfectly circular and paved with fitted stones that have withstood the
+ages remarkably well. A few broken pillars rise around its circumference.
+The Tharks avoid this place, claiming it is haunted, though whether they
+mean spirits or more physical dangers is unclear.
+~
+40 0 2
+D1
+More northern ruins lie to the east.
+~
+~
+0 -1 4035
+D3
+The old marketplace is to the west.
+~
+~
+0 -1 4033
+S
+#4035
+Crumbling Dwelling Complex~
+   These appear to be the remains of ancient residences - multiple chambers
+connected by narrow passages, now mostly collapsed. You can see the remnants
+of hearths, sleeping platforms, and storage niches. The original inhabitants
+were clearly not as large as green Martians, closer to red Martian size.
+~
+40 0 2
+D2
+A ruined plaza is to the south.
+~
+~
+0 -1 4034
+D1
+The western ruins lie to the east.
+~
+~
+0 -1 4036
+S
+#4036
+Western Ruins - Old Residential District~
+   This section of ruins was clearly a residential area. Crumbling walls
+outline what were once homes - some small, some large and elaborate. The
+Tharks have stripped away anything useful long ago, leaving only stone
+shells. Strange echoes bounce through the ruins, making it feel like the
+ghosts of the ancient residents still linger here.
+~
+40 0 2
+D3
+More western ruins lie ahead.
+~
+~
+0 -1 4035
+D2
+A collapsed mansion lies to the south.
+~
+~
+0 -1 4037
+S
+#4037
+Collapsed Mansion~
+   This was clearly the home of someone important in the ancient city. The
+scale is larger than surrounding buildings, and you can see traces of fine
+carving on the remaining walls. A grand staircase leads nowhere, its upper
+floors long since fallen. The basement levels might still be intact, but
+entering would be extremely dangerous.
+~
+40 0 2
+D0
+The residential district is to the north.
+~
+~
+0 -1 4036
+D1
+More ruins lie to the east.
+~
+~
+0 -1 4038
+S
+#4038
+Ancient Workshop Area~
+   The layout and remains here suggest this was a workshop district. You can
+see the remnants of forges, stone anvils, and work benches. Whatever crafts
+were practiced here are lost to time, though the Tharks occasionally find
+ancient metal tools in the rubble that are superior to anything they can make.
+~
+40 0 2
+D3
+The collapsed mansion is to the west.
+~
+~
+0 -1 4037
+D2
+The edge of the ruins is to the south.
+~
+~
+0 -1 4039
+S
+#4039
+Edge of the Ancient City~
+   You stand at the western edge of the ancient city ruins. Beyond this point,
+the structures give way entirely to the dead sea bottom - the endless ochre
+plains of Mars stretching to the horizon. This is the boundary of Thark
+territory, where their guards watch for intruders and where hunting parties
+depart.
+~
+40 0 2
+D0
+More workshop ruins lie to the north.
+~
+~
+0 -1 4038
+S
+#4040
+Thark Trading Post~
+   This chamber has been converted into a trading post where the Tharks
+conduct business with outsiders. It is one of the few places in the city
+that has been deliberately improved rather than just occupied - walls have
+been repaired, a proper roof installed, and crude furniture arranged. A
+pragmatic Thark trader runs the establishment, unusual among his kind for
+his understanding of red Martian customs and willingness to barter.
+~
+40 8 0
+D1
+The southern guard tower is visible to the east.
+~
+~
+0 -1 4041
+D0
+You can see the main plaza to the north.
+~
+~
+0 -1 4000
+S
+#4041
+Southern Guard Tower~
+   This tower overlooks the southern approaches to the Thark city, providing
+early warning of anyone approaching from the direction of Lesser Helium and
+the dead sea bottom wilderness. The tower itself is ancient but has been
+reinforced by the Tharks. From this height, you can see for miles across
+the ochre plains. A Thark scout maintains watch here at all times.
+~
+40 8 0
+D0
+The eastern tower is to the north.
+~
+~
+0 -1 4042
+D3
+The trading post is to the west.
+~
+~
+0 -1 4040
+S
+#4042
+Eastern Guard Tower~
+   This tower watches the eastern approaches, where the dead sea bottom
+stretches endlessly toward the horizon. From here, scouts watch for white
+apes, banths, and rival green Martian hordes. The tower offers a commanding
+view of the surrounding territory, making it nearly impossible for anyone
+to approach unseen.
+~
+40 8 0
+D0
+The northern tower is ahead.
+~
+~
+0 -1 4043
+D2
+The southern tower is to the south.
+~
+~
+0 -1 4041
+S
+#4043
+Northern Guard Tower~
+   This tower faces north toward Warhoon territory, the lands of the Tharks'
+traditional enemies. The scout stationed here is particularly vigilant, as
+Warhoon raids could come at any time. The tower is scarred with old battle
+damage - proof that it has been tested in the past. From here, you can see
+the endless expanse of Mars stretching northward.
+~
+40 8 0
+D3
+The western tower is to the west.
+~
+~
+0 -1 4044
+D2
+The eastern tower is to the south.
+~
+~
+0 -1 4042
+S
+#4044
+Western Guard Tower~
+   This tower overlooks the western ruins and the wilderness beyond. It serves
+as a lookout for hunting parties returning to the city and watches for any
+threats approaching from the deep desert. The western wastelands are largely
+empty, but banths and other predators sometimes wander this close to the city.
+~
+40 8 0
+D1
+The northern tower is to the east.
+~
+~
+0 -1 4043
+D2
+The central watchtower is to the south.
+~
+~
+0 -1 4045
+S
+#4045
+Central Watchtower~
+   This is the tallest structure still standing in the ancient city, rising
+high above even the plaza. From its top, all of Thark territory is visible
+in every direction. The tower serves as the command post for the city's
+defense, and Thark signal fires can be lit here to summon warriors from the
+hunting grounds. The view is breathtaking - the entire dead sea bottom laid
+out like a map.
+~
+40 8 0
+D0
+The western tower is to the north.
+~
+~
+0 -1 4044
+S
+#4046
+Southern Gate - Interior~
+   You stand inside the southern gate of the Thark city, the main entrance
+for anyone approaching from the direction of Lesser Helium. The gate itself
+is ancient, carved from massive stones, though the Tharks have reinforced it
+with heavy wooden beams and metal bars. Guards are always present here,
+checking anyone who enters or leaves.
+~
+40 8 0
+D0
+The main plaza is to the north.
+~
+~
+0 -1 4000
+D2
+The gate leads outside the city.
+~
+~
+0 -1 4047
+S
+#4047
+Southern Gate - Exterior~
+   You stand just outside the southern gate of the Thark city. From here, the
+dead sea bottom stretches away to the south, its ochre moss swaying in the
+thin Martian breeze. The journey to Lesser Helium lies days of travel in that
+direction, across dangerous wilderness filled with predators and other threats.
+The massive walls of the ancient city loom behind you, and Thark guards watch
+from above.
+~
+40 0 2
+D0
+The gate leads into the Thark city.
+~
+~
+0 -1 4046
+D2
+The dead sea bottom wilderness lies to the south.
+~
+~
+0 -1 3764
+S
+#4048
+Northern Gate - Interior~
+   This gate faces north toward Warhoon territory and other hostile regions.
+It sees less peaceful traffic than the southern gate and more preparation for
+war. Weapon racks line the walls, and Thark warriors are always ready to sortie
+through this gate at a moment's notice. The air here feels tense, watchful.
+~
+40 8 0
+D0
+The gate leads north into dangerous territory.
+~
+~
+0 -1 4049
+D2
+The main plaza is to the south.
+~
+~
+0 -1 4000
+S
+#4049
+Northern Gate - Exterior~
+   You stand outside the northern gate of the Thark city. The dead sea bottom
+stretches away to the north, but this direction leads toward Warhoon territory
+and other hostile green Martian hordes. The Tharks maintain constant patrols in
+this direction, and the ochre plains are marked with signs of recent skirmishes.
+This is not a safe direction to travel without a good reason.
+~
+40 0 2
+D2
+The gate leads back into the Thark city.
+~
+~
+0 -1 4048
+S
+$~

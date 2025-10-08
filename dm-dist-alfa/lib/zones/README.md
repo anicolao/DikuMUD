@@ -34,6 +34,23 @@ Each zone consists of five files:
 - Ancient dried waterway beneath Lesser Helium
 - Connection between surface and sea bottom
 
+### dead_sea_wilderness (Zone 33)
+- Virtual numbers: 3750-3899
+- Dangerous wilderness between the Twin Cities
+- Connecting zone with predators and encounters
+
+### greater_helium (Zone 35)
+- Virtual numbers: 3900-3999
+- The larger Twin City, home of John Carter
+- Major city zone with 100 rooms
+
+### thark_territory (Zone 40)
+- Virtual numbers: 4000-4099
+- Ancient ruined city occupied by the Thark horde
+- Allied green Martian territory
+- Includes: Council Chambers, Warrior Guild, Noble Guild, School, Arena, Thoat Pens, Ancient Ruins
+- Features Tars Tarkas, Sola, and other key NPCs
+
 ### system (Zone 90)
 - Zone file terminator
 - Contains end-of-file marker `$~`
@@ -51,7 +68,10 @@ This concatenates the zone files in the correct order:
 2. zone_1200
 3. lesser_helium
 4. dead_sea_bottom_channel
-5. system
+5. dead_sea_wilderness
+6. greater_helium
+7. thark_territory
+8. system
 
 ## Adding New Zones
 
