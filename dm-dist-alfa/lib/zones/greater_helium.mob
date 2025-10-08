@@ -1,0 +1,592 @@
+#3900
+scientist elder red martian~
+the Elder Red Martian Scientist~
+An elderly Red Martian scientist examines rare compounds and instruments.
+~
+This ancient scientist has copper-red skin weathered by centuries of life. His
+coal-black hair is streaked with silver. He wears an ornate harness decorated
+with rare gems and scientific emblems. His eyes gleam with profound knowledge.
+~
+2 0 900 S
+23 2 2 1d1+35000 1d8+14
+15000 90000
+8 8 1
+#3901
+baker master red martian~
+the Master Red Martian Baker~
+A master baker works here, preparing traditional Martian breads and pastries.
+~
+This baker has smooth copper-red skin and powerful arms from years of kneading
+dough. His simple but quality harness is dusted with flour from his trade. Scars
+on his arms show his warrior past before he chose the baker's life.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+3000 80000
+8 8 1
+#3902
+grocer provisions merchant red martian~
+the Red Martian Provisions Merchant~
+A prosperous provisions merchant manages his extensive inventory.
+~
+A tall red Martian with athletic build and copper-red skin. His jeweled harness
+marks him as a successful merchant. He moves with efficiency between shelves
+stocked with preserved foods and supplies.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+3000 80000
+8 8 1
+#3903
+weaponsmith master artisan red martian~
+the Master Weaponsmith~
+A renowned weaponsmith examines blades with a critical eye.
+~
+This master craftsman has copper-red skin marked with forge burns and scars from
+testing weapons. His harness displays weapons of his own creation. His
+reputation extends across all of Mars for producing the finest blades.
+~
+2 0 900 S
+23 2 2 1d1+35000 1d8+14
+5000 90000
+8 8 1
+#3904
+armorer master craftsman red martian~
+the Master Armorer~
+A master armorer inspects harnesses and armor with expert attention.
+~
+A powerful red Martian with copper-red skin and muscular build. His hands show
+the marks of his craft. He wears an example of his finest work - a jeweled
+battle harness of exceptional quality.
+~
+2 0 900 S
+23 2 2 1d1+35000 1d8+14
+5000 90000
+8 8 1
+#3905
+jeweler master artisan red martian~
+the Master Jeweler~
+A distinguished jeweler examines precious gems through a magnifying lens.
+~
+This elderly jeweler has copper-red skin and delicate hands perfect for
+intricate work. His harness is a masterwork of gems and precious metals,
+advertising his skill. His eyes are sharp despite his age.
+~
+2 0 900 S
+23 2 2 1d1+35000 1d8+13
+8000 85000
+8 8 1
+#3906
+leather worker master craftsman red martian~
+the Master Leather Worker~
+A skilled leather worker creates custom harnesses and equipment.
+~
+This craftsman has copper-red skin and strong, steady hands. He wears a simple
+but perfectly fitted leather harness of his own design. The smell of cured
+leather clings to him.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+3000 80000
+8 8 1
+#3907
+noble guildmaster red martian~
+the Noble Guildmaster~
+A distinguished guildmaster of the Noble's Guild stands here imperiously.
+~
+This noble has the bearing of ancient lineage. His copper-red skin is
+unblemished, his coal-black hair perfectly groomed. His harness is adorned with
+the finest gems and precious metals, marking his high station.
+~
+2 0 900 S
+23 2 2 1d1+40000 1d10+15
+20000 100000
+8 8 1
+#3908
+warrior guildmaster red martian~
+the Warrior Guildmaster~
+A legendary warrior stands here, his presence commanding respect.
+~
+This warrior guildmaster is a living legend. His copper-red skin bears countless
+battle scars earned in decades of combat. His eyes are hard and calculating. His
+battle harness is functional and deadly, decorated only with marks of rank.
+~
+2 8 900 S
+23 2 2 1d1+45000 2d8+16
+25000 120000
+8 8 1
+#3909
+scientist guildmaster red martian~
+the Scientific Guildmaster~
+The guildmaster of the Scientific Academy works at a complex apparatus.
+~
+This brilliant scientist has copper-red skin and intense, focused eyes. His
+harness is decorated with scientific instruments and rare materials. His mind is
+one of the greatest on Mars, advancing knowledge in multiple fields.
+~
+2 0 900 S
+23 2 2 1d1+40000 1d10+15
+20000 100000
+8 8 1
+#3910
+assassin guildmaster red martian~
+the Assassin Guildmaster~
+A figure cloaked in shadows watches you with cold, calculating eyes.
+~
+This master assassin moves with deadly grace. His copper-red skin is pale from
+working in shadows. His harness is black and minimal, designed for silence. His
+eyes miss nothing, and death follows his silent movements.
+~
+2 8 900 S
+23 2 2 1d1+40000 2d8+15
+20000 100000
+8 8 1
+#3911
+innkeeper royal red martian~
+the Royal Innkeeper~
+The distinguished innkeeper of the Royal Helium Inn greets guests warmly.
+~
+This innkeeper has copper-red skin and a welcoming demeanor. His fine harness
+shows his establishment's quality. He has served countless dignitaries and
+maintains the highest standards.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3912
+innkeeper common red martian~
+the Common Rest Innkeeper~
+A friendly innkeeper welcomes travelers of modest means.
+~
+This innkeeper has copper-red skin and a warm smile. His simple but clean
+harness reflects his honest trade. He treats all guests with respect regardless
+of their wealth.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+11
+2000 75000
+8 8 1
+#3913
+guard palace elite red martian~
+a Palace Guard~
+An elite palace guard stands at attention, alert and dangerous.
+~
+This elite warrior has copper-red skin and a hardened demeanor. His jeweled
+battle harness marks him as part of the palace guard. He is trained to defend
+the Warlord with his life. His hand rests casually on his longsword.
+~
+2 8 900 S
+23 2 2 1d1+35000 1d10+14
+10000 85000
+8 8 1
+#3914
+guard city red martian~
+a City Guard~
+A city guard patrols here, maintaining order.
+~
+This guard has copper-red skin and the alert bearing of a trained warrior. His
+battle harness is functional and well-maintained. He watches for trouble and
+enforces the laws of Greater Helium.
+~
+2 8 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3915
+guard gate red martian~
+a Gate Guard~
+A vigilant gate guard monitors all who pass through.
+~
+This guard has copper-red skin weathered from standing watch. His battle harness
+shows signs of long service. He questions travelers and watches for threats to
+the city.
+~
+2 8 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3916
+priest temple red martian~
+a Temple Priest~
+A priest in ceremonial harness performs his sacred duties.
+~
+This priest has copper-red skin and a serene expression. His ceremonial harness
+is adorned with religious symbols and precious metals. He serves the Great
+Temple and the spiritual needs of Helium's citizens.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3917
+scholar red martian~
+a Red Martian Scholar~
+A scholar pores over ancient texts and documents.
+~
+This scholar has copper-red skin and the distracted air of one lost in thought.
+His harness is modest but adorned with writing instruments and scrolls. He
+pursues knowledge above all else.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+3000 75000
+8 8 1
+#3918
+warrior student red martian~
+a Warrior Student~
+A young warrior practices combat forms with dedication.
+~
+This student has copper-red skin unmarked by battle scars. His simple battle
+harness shows he is still in training. Eagerness and determination shine in his
+eyes as he masters the warrior's art.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3919
+scientist student red martian~
+a Scientific Student~
+A student scientist works on an experiment with intense focus.
+~
+This student has copper-red skin and hands stained with various chemicals. His
+simple harness holds scientific instruments. He studies under the greatest minds
+on Mars.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3920
+merchant red martian~
+a Red Martian Merchant~
+A merchant conducts business with customers.
+~
+This merchant has copper-red skin and a shrewd expression. His harness is good
+quality, showing his success in trade. He deals fairly but drives a hard
+bargain.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+3000 75000
+8 8 1
+#3921
+citizen wealthy red martian~
+a Wealthy Citizen~
+A prosperous citizen goes about their business.
+~
+This citizen has copper-red skin and wears an expensive jeweled harness. They
+move with the confidence of wealth and status. Their life in Greater Helium is
+comfortable and secure.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+5000 75000
+8 8 1
+#3922
+citizen common red martian~
+a Common Citizen~
+An ordinary citizen of Greater Helium hurries past.
+~
+This citizen has copper-red skin and wears a simple but serviceable harness.
+They work hard to support themselves and their family. Pride in being a citizen
+of Helium shows in their bearing.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+1000 70000
+8 8 1
+#3923
+citizen poor red martian~
+a Poor Citizen~
+A struggling citizen tries to make their way.
+~
+This citizen has copper-red skin and wears a worn, patched harness. Life is hard
+in the poor quarter but they maintain their dignity. Hope for better times keeps
+them going.
+~
+2 0 900 S
+23 2 2 1d1+15000 1d6+6
+500 65000
+8 8 1
+#3924
+worker laborer red martian~
+a Red Martian Laborer~
+A muscular laborer carries goods and materials.
+~
+This worker has copper-red skin darkened by sun exposure and muscular arms from
+hard labor. His simple harness is practical and worn. He earns his living
+through strength and toil.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d8+8
+1000 70000
+8 8 1
+#3925
+officer military red martian~
+a Military Officer~
+A military officer reviews strategic documents.
+~
+This officer has copper-red skin marked with battle scars. His decorated battle
+harness shows his rank and service. He commands troops and plans military
+operations for Helium's forces.
+~
+2 8 900 S
+23 2 2 1d1+35000 1d10+13
+8000 85000
+8 8 1
+#3926
+pilot airship red martian~
+an Airship Pilot~
+An airship pilot checks navigation instruments.
+~
+This pilot has copper-red skin and the keen eyes of one who navigates the thin
+Martian air. His harness includes navigation tools and safety equipment. He
+pilots the airships that connect distant cities.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+11
+5000 80000
+8 8 1
+#3927
+healer physician red martian~
+a Red Martian Healer~
+A skilled healer tends to the sick and injured.
+~
+This healer has copper-red skin and gentle hands skilled in Martian medicine.
+His harness includes medical instruments and pouches of healing compounds. He
+dedicates his life to easing suffering.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+11
+5000 80000
+8 8 1
+#3928
+calot handler trainer red martian~
+a Calot Handler~
+A handler works with fierce but loyal calots.
+~
+This handler has copper-red skin scarred from working with dangerous animals. His
+heavy leather harness protects against calot claws and teeth. He trains and
+sells these valuable guard animals.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+3000 75000
+8 8 1
+#3929
+calot guard ten-legged~
+a Calot~
+A ten-legged calot watches alertly, ready to defend its territory.
+~
+This calot is sized like a large pony with ten powerful legs. Its hairless,
+leathery hide is mottled gray and brown. The frog-like head houses a mouth full
+of sharp teeth. Its eyes are intelligent and watchful. It can move with
+incredible speed when needed.
+~
+2 8 900 S
+16 0 0 1d1+12000 2d6+8
+3000 75000
+8 8 2
+#3930
+servant palace red martian~
+a Palace Servant~
+A palace servant performs their duties with quiet efficiency.
+~
+This servant has copper-red skin and wears a fine harness befitting palace
+staff. They serve the Warlord's household with dedication and discretion.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+1000 70000
+8 8 1
+#3931
+diplomat ambassador red martian~
+a Diplomatic Ambassador~
+An ambassador from another city-state conducts official business.
+~
+This ambassador has copper-red skin and the polished demeanor of a professional
+diplomat. Their elaborate harness displays the symbols of their home city. They
+negotiate treaties and alliances on behalf of their people.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+8000 80000
+8 8 1
+#3932
+artisan craftsman red martian~
+a Red Martian Artisan~
+A skilled artisan works on their craft.
+~
+This artisan has copper-red skin and the focused expression of someone absorbed
+in their work. Their harness is decorated with tools of their trade. They create
+the goods that make civilization possible.
+~
+2 0 900 S
+23 2 2 1d1+25000 1d8+10
+2000 75000
+8 8 1
+#3933
+child red martian~
+a Red Martian Child~
+A young Martian child plays here, full of energy.
+~
+This child has smooth copper-red skin unmarked by age or hardship. Their small
+harness is simple but well-made. They play with the innocent joy of youth,
+unaware of the dangers of Mars.
+~
+2 0 900 S
+23 2 2 1d1+5000 1d4+2
+100 50000
+8 8 1
+#3934
+guard tower watchman red martian~
+a Tower Watchman~
+A vigilant watchman scans the horizon for threats.
+~
+This watchman has copper-red skin weathered from exposure to sun and wind. His
+harness includes observation equipment. He maintains constant watch over the
+approaches to Greater Helium.
+~
+2 8 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3935
+clerk administrator red martian~
+a City Clerk~
+A clerk manages paperwork and administrative duties.
+~
+This clerk has copper-red skin and ink-stained hands. Their simple harness
+includes pouches for documents and writing instruments. They keep the records
+that allow the city to function.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3936
+prisoner criminal red martian~
+a Prisoner~
+A prisoner sits here, contemplating their crimes.
+~
+This prisoner has copper-red skin and wears a plain, unmarked harness. They are
+held for crimes against Helium. Guards watch them carefully.
+~
+2 0 900 S
+23 2 2 1d1+15000 1d6+6
+500 65000
+8 8 1
+#3937
+musician performer red martian~
+a Martian Musician~
+A musician practices their art.
+~
+This musician has copper-red skin and sensitive hands. Their harness is adorned
+with musical symbols. While music is not as central to Martian culture as to
+Earth's, they still create beauty through sound.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3938
+gardener red martian~
+a Royal Gardener~
+A skilled gardener tends to rare Martian plants.
+~
+This gardener has copper-red skin darkened by sun exposure and hands skilled in
+nurturing plant life. Their harness is practical for outdoor work. They coax
+beauty from the harsh Martian soil.
+~
+2 0 900 S
+23 2 2 1d1+20000 1d6+8
+2000 70000
+8 8 1
+#3939
+shipwright builder red martian~
+an Airship Shipwright~
+A master shipwright works on airship construction.
+~
+This shipwright has copper-red skin and powerful arms from working with heavy
+materials. Their harness shows the marks of their trade. They build the ships
+that rule Martian skies.
+~
+2 0 900 S
+23 2 2 1d1+30000 1d8+12
+5000 80000
+8 8 1
+#3940
+carter john warlord mars~
+John Carter, Warlord of Mars~
+John Carter, the legendary Warlord of Mars, stands here in regal bearing.
+~
+This is John Carter, the greatest warrior Mars has ever known. Though originally
+from Earth, he appears as a tall, powerful man in his prime. His skin has taken
+on a slight reddish tinge from decades on Mars. His jeweled battle harness is
+magnificent but functional. His eyes hold the wisdom of countless battles and
+the authority of one who rules an entire world. An aura of command surrounds him.
+~
+2 8 900 S
+25 0 0 1d1+100000 4d10+30
+100000 250000
+8 8 1
+#3941
+thoris dejah princess mars~
+Dejah Thoris, Princess of Helium~
+Dejah Thoris, the incomparable Princess of Helium, stands here in breathtaking beauty.
+~
+This is Dejah Thoris, Princess of Helium and wife of John Carter. She is the
+epitome of red Martian beauty with smooth copper-red skin, coal-black hair, and
+large, expressive eyes. Her jeweled harness is a masterwork of art and status.
+She combines grace and intelligence with the warrior spirit of her people. Her
+presence commands respect and admiration.
+~
+2 0 900 S
+23 2 2 1d1+50000 2d8+15
+50000 150000
+8 8 1
+#3942
+carthoris prince helium red martian~
+Carthoris, Prince of Helium~
+Carthoris, son of John Carter and heir to Helium's throne, stands ready for action.
+~
+This is Carthoris, son of John Carter and Dejah Thoris. He has copper-red skin
+like his mother and the powerful build of his father. His jeweled battle harness
+marks his royal status. He is a skilled warrior and master of the Heliumite
+fleet. His eyes show intelligence and courage inherited from both parents.
+~
+2 8 900 S
+23 2 2 1d1+60000 2d10+18
+40000 140000
+8 8 1
+#3943
+mors tardos jeddak helium red martian~
+Tardos Mors, Jeddak of Helium~
+Tardos Mors, the ancient Jeddak of Helium, stands here with centuries of wisdom.
+~
+This is Tardos Mors, grandfather of Dejah Thoris and Jeddak of Helium. He is
+very ancient, his copper-red skin marked by extreme age. His coal-black hair is
+silver with centuries. Despite his age, he maintains regal bearing. His jeweled
+harness displays his rank as ruler. His eyes still hold the fire of leadership.
+~
+2 0 900 S
+23 2 2 1d1+80000 2d10+20
+80000 180000
+8 8 1
+#3944
+kantos red martian warrior~
+Kantos Kan, Admiral of the Fleet~
+Kantos Kan, Admiral of Helium's airship fleet, stands here consulting charts.
+~
+This is Kantos Kan, loyal friend of John Carter and Admiral of Helium's fleet.
+His copper-red skin bears the scars of many battles in the air and on the
+ground. His naval harness is functional and decorated with marks of rank and
+achievement. His eyes hold the keen intelligence of a brilliant strategist.
+~
+2 8 900 S
+23 2 2 1d1+55000 2d10+17
+35000 130000
+8 8 1
+
