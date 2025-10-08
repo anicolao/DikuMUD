@@ -48,7 +48,6 @@ void assign_mobiles(void)
 	mob_index[real_mobile(3066)].func = fido;
 
 	mob_index[real_mobile(3005)].func = receptionist;
-	mob_index[real_mobile(5007)].func = receptionist;
 
 	mob_index[real_mobile(3020)].func = guild;
 	mob_index[real_mobile(3021)].func = guild;
@@ -61,36 +60,6 @@ void assign_mobiles(void)
 	mob_index[real_mobile(3027)].func = guild_guard;
 
 	mob_index[real_mobile(3143)].func = mayor;
-
-	/* MORIA */
-	mob_index[real_mobile(4000)].func = snake;
-	mob_index[real_mobile(4001)].func = snake;
-
-	mob_index[real_mobile(4053)].func = snake;
-
-	mob_index[real_mobile(4103)].func = thief;
-	mob_index[real_mobile(4100)].func = magic_user;
-	mob_index[real_mobile(4102)].func = snake;
-
-	mob_index[real_mobile(4150)].func = bat_blue;
-	mob_index[real_mobile(4151)].func = bat_red;
-	mob_index[real_mobile(4152)].func = bat_green;
-	mob_index[real_mobile(4153)].func = bat_white;
-	mob_index[real_mobile(4154)].func = bat_black;
-	mob_index[real_mobile(4155)].func = thief;
-	mob_index[real_mobile(4157)].func = magic_user;
-	mob_index[real_mobile(4158)].func = snake;
-
-
-	/* SEWERS */
-	mob_index[real_mobile(7006)].func = snake;
-	mob_index[real_mobile(7040)].func = bat_red;
-
-	/* FOREST */
-	mob_index[real_mobile(6113)].func = snake;
-	mob_index[real_mobile(6114)].func = snake;
-
-	mob_index[real_mobile(6910)].func = magic_user;
 
 	boot_the_shops();
 	assign_the_shopkeepers();
@@ -119,15 +88,8 @@ void assign_rooms(void)
 	int pray_for_items(struct char_data *ch, int cmd, char *arg);
 	int worm_ritual(struct char_data *ch, int cmd, char *arg);
 
-	world[real_room(5039)].funct = worm_ritual;
 	world[real_room(3030)].funct = dump;
 	world[real_room(3054)].funct = pray_for_items;
 
-/*
-	world[real_room(704)].funct = chalice;
-	world[real_room(2518)].funct = kings_hall;
-*/
-
 	world[real_room(3031)].funct = pet_shops;
-	world[real_room(8001)].funct = mar_gate;
 }
