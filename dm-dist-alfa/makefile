@@ -24,7 +24,7 @@ lib/tinyworld.obj: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).obj) lib/zones
 lib/tinyworld.zon: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).zon) lib/zones/eof.zon
 	cat $^ > $@
 
-lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp) lib/zones/eof.shp
+lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp)
 	cat $^ > $@
 
 # Main build targets
