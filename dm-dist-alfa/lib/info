@@ -4,7 +4,7 @@ HELP-command]
 Classes, skills, and guilds:
 
 When you enter the game the first time, you are asked to select a class; either
-THIEF, WARRIOR, CLERIC, or MAGIC user. Characters belonging to each of these
+WARRIOR, SCIENTIST, NOBLE, or ASSASSIN. Characters belonging to each of these
 classes have their own qualities, abilities, and handicaps.
    It is not unusual that people belonging to different classes, by joining
 their efforts and combining their skills, find their chances of survival and
@@ -33,7 +33,7 @@ that it's time to find something edible before too long. People don't starve
 to death in this world, so have no fear. However, when you are hungry, you do
 not build up lost energy, so eventually you'll be unable to do anything but sit
 around and feel sorry for yourself, until someone comes by. Then, you can only
-hope that it's a benevolent person, rather than a greedy thief or a warrior
+hope that it's a benevolent person, rather than a deadly assassin or a warrior
 lusting for blood.
 
 General hints:
@@ -41,4 +41,4 @@ General hints:
  See help on the group command.
  See help on the consider command.
  See help on resting.
- See help on your class (magic user, cleric, warrior or thief).
+ See help on your class (warrior, scientist, noble, or assassin).

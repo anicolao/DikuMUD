@@ -342,11 +342,11 @@ struct room_data
 #define APPLY_SAVING_SPELL     24
 
 
-/* 'class' for PC's */
-#define CLASS_MAGIC_USER  1
-#define CLASS_CLERIC      2
-#define CLASS_THIEF       3
-#define CLASS_WARRIOR     4
+/* 'class' for PC's - Barsoom mapping: Scientist, Noble, Assassin, Warrior */
+#define CLASS_MAGIC_USER  1  /* Scientist */
+#define CLASS_CLERIC      2  /* Noble */
+#define CLASS_THIEF       3  /* Assassin */
+#define CLASS_WARRIOR     4  /* Warrior */
 
 /* 'class' for NPC's */
 #define CLASS_OTHER       0 /* These are not yet used!   */
