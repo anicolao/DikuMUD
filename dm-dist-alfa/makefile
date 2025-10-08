@@ -7,7 +7,30 @@ CFLAG+=-fsanitize=address -fno-omit-frame-pointer
 
 LDLIBS=-lcrypt
 HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
-all: delplay dmserver
+
+# Zone files - ordered by zone number
+ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel system
+
+# Build world data files from zone files
+lib/tinyworld.wld: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).wld)
+	cat $^ > $@
+
+lib/tinyworld.mob: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).mob)
+	cat $^ > $@
+
+lib/tinyworld.obj: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).obj)
+	cat $^ > $@
+
+lib/tinyworld.zon: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).zon)
+	cat $^ > $@
+
+lib/tinyworld.shp: $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp)
+	cat $^ > $@
+
+# Main build targets
+all: delplay dmserver worldfiles
+
+worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp
 
 dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o
 dmserver : changes.o
@@ -71,4 +94,4 @@ changes.o : changes.c structs.h utils.h comm.h interpreter.h handler.h \
 delplay.o : delplay.c structs.h
 
 clean:
-	rm -f *.o dmserver delplay
+	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp

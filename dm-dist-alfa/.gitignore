@@ -6,3 +6,9 @@ lib/players
 lib/board.messages
 lib/pcobjs.obj
 syntax_check
+# Assembled world files (generated from lib/zones/*)
+lib/tinyworld.wld
+lib/tinyworld.mob
+lib/tinyworld.obj
+lib/tinyworld.zon
+lib/tinyworld.shp
