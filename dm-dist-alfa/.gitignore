@@ -5,3 +5,4 @@ dmserver
 lib/players
 lib/board.messages
 lib/pcobjs.obj
+syntax_check

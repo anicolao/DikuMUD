@@ -53,13 +53,13 @@ The only exit in your dimension unfortunatly leads right back here.
 0 520 0
 S
 #3001
-The Temple Of Midgaard~
-   You are in the southern end of the temple hall in the Temple of Midgaard.
-The temple has been constructed from giant marble blocks, eternal in
-appearance, and most of the walls are covered by ancient wall paintings
-picturing Gods, Giants and peasants.
-   Large steps lead down through the grand temple gate, descending the huge
-mound upon which the temple is built and ends on the temple square below.
+The Temple of the Jeddak~
+   You are in the southern end of the temple hall of Lesser Helium's great temple.
+The temple has been constructed from giant marble blocks, scarlet and yellow in
+color, and most of the walls are covered by ancient murals depicting the history
+of the red Martian race and the glory of Helium.
+   Large steps lead down through the grand temple gate, descending from the elevated
+platform upon which the temple is built to the temple plaza below.
 ~
 30 12 0
 D0
@@ -79,23 +79,25 @@ You see the temple square.
 0 -1 3005
 S
 #3002
-Cleric's Inner Sanctum~
-   This is the inner sanctum.  A picture of the mighty Thor, is hanging on
-the wall, just above the altar which is set against the western wall.  A well
-in the middle of the floor leads down into darkness.  Vile smells waft from
-the depths.
+Noble's Inner Chamber~
+   This is the inner chamber of the Noble's Guild, where matters of state and
+diplomacy are discussed.  Rich tapestries depicting the history of Helium hang
+on the walls, and a council table of rare hardwood dominates the center.  A shaft
+in the middle of the floor leads down to the archives below.
 ~
 30 12 0
 D1
-You see your favorite place, the bar of divination.
+You see your favorite place, the common room.
 ~
 ~
 0 -1 3003
 S
 #3003
-Cleric's Bar~
-   The bar is one of the finest in the land, lucky it is members only.  Fine
-furniture is set all around the room.  A small sign is hanging on the wall.
+Noble's Common Room~
+   This elegant common room is reserved for members of noble houses.  Fine
+Barsoomian furnishings of rare woods and precious metals are arranged around the
+room.  Portraits of great Jeddaks and Jeds line the walls.  A small sign carved
+from jade hangs on the wall.
 ~
 30 12 0
 D2
@@ -119,29 +121,29 @@ Free instructions provided by the waiter:
 ~
 S
 #3004
-Entrance to Cleric's Guild~
-   The entrance hall is a small modest room, reflecting the true nature of
-the Clerics.  The exit leads east to the temple square.  A small entrance to
-the bar is in the northern wall.
+Entrance to Noble's Guild~
+   The entrance hall is an elegant chamber with polished stone floors and banners
+of the great houses of Helium.  The exit leads east to the temple plaza.  A small
+entrance to the common room is in the northern wall.
 ~
 30 8 0
 D0
-You see the bar, richly decorated with really stylish furniture.
+You see the common room, richly decorated with Barsoomian furniture.
 ~
 ~
 0 -1 3003
 D1
-You see the Temple Square.
+You see the Temple Plaza.
 ~
 ~
 0 -1 3005
 S
 #3005
-The Temple Square~
-   You are standing on the temple square.  Huge marble steps lead up to the
-temple gate.  The entrance to the Clerics Guild is to the west, and the old
-Grunting Boar Inn, is to the east.  Just south of here you see the market
-square, the center of Midgaard.
+The Temple Plaza~
+   You are standing on the temple plaza of Lesser Helium.  Huge marble steps lead
+up to the temple gate.  The entrance to the Noble's Guild is to the west, and the
+Traveler's Rest Inn is to the east.  Just south of here you see the market plaza,
+the heart of Lesser Helium.
 ~
 30 0 1
 D0
@@ -150,35 +152,35 @@ You see the temple.
 ~
 0 -1 3001
 D1
-You see the good old Grunting Boar Inn.
+You see the Traveler's Rest Inn.
 ~
 ~
 0 -1 3006
 D2
-You see the Market Square.
+You see the Market Plaza.
 ~
 ~
 0 -1 3014
 D3
-You see the entrance to the Clerics Guild.
+You see the entrance to the Noble's Guild.
 ~
 ~
 0 -1 3004
 S
 #3006
-Entrance to the Grunting Boar Inn~
-   You are standing in the entrance hall of the Grunting Boar Inn.  The hall
-has been wisely decorated with simple but functional furniture.  A small
-staircase leads up to the reception and the bar is to the east.
+Entrance to the Traveler's Rest Inn~
+   You are standing in the entrance hall of the Traveler's Rest Inn.  The hall
+has been decorated with simple but elegant Martian furnishings.  A small
+staircase leads up to the reception and the common room is to the east.
 ~
 30 8 0
 D1
-Surprise! You see the bar.
+You see the common room.
 ~
 ~
 0 -1 3007
 D3
-You see the temple square.
+You see the temple plaza.
 ~
 ~
 0 -1 3005
@@ -189,12 +191,12 @@ You see the room reception.
 0 -1 3008
 S
 #3007
-The Grunting Boar~
-   You are standing in the bar.  The bar is set against the northern wall, old
-archaic writing, carvings and symbols cover its top.  A fireplace is built into
-the western wall, and through the southeastern windows you can see the temple
-square.  This place makes you feel like home.
-A small sign with big letters is fastened to the bar.
+The Traveler's Common Room~
+   You are in the inn's common room.  The serving counter is set against the northern
+wall, with ancient Barsoomian script carved into its surface.  A brazier burns in
+the western wall, and through the windows you can see the temple plaza.  This place
+makes you feel at home despite being millions of miles from Earth.
+A small sign with ornate lettering is mounted on the wall.
 ~
 30 8 0
 D3
@@ -205,22 +207,22 @@ You see the exit to the entrance hall.
 E
 sign~
 The sign reads:
-Free instructions provided by the Grunting Boar Inn.
+Services provided by the Traveler's Rest Inn.
 
-   Buy  - Buy something (drinkable) from the bartender.
-   List - The bartender will show you all the different drinks and
-          specialities, and tell the price of each.
+   Buy  - Buy refreshments from the innkeeper.
+   List - The innkeeper will show you all available food and drink,
+          with prices in tanpi (Martian currency).
 ~
 E
 writing carving carvings symbols symbol~
-Although it is very hard to understand, you think it looks a lot like beer,
-poems about beer, and small beer-mugs.
+The ancient script depicts scenes of Helium's founding and great battles against
+the green hordes.  The craftsmanship is exquisite.
 ~
 S
 #3008
-The Reception~
-   You are standing in the reception.  The staircase leads down to the
-entrance hall.  There is a small sign on the counter.
+The Inn Reception~
+   You are standing in the reception area.  The staircase leads down to the
+entrance hall.  A small sign made of precious metal sits on the counter.
 ~
 30 8 0
 D5
@@ -243,11 +245,11 @@ Rooms are expensive but good!  You may:
 ~
 S
 #3009
-The Bakery~
-   You are standing inside the small bakery.  A sweet scent of Danish and
-fine bread fills the room.  The bread and Danish are arranged in fine order
-on the shelves, and seem to be of the finest quality.
-A small sign is on the counter.
+The Provisions Merchant~
+   You are standing inside a provisions shop.  The pleasant aroma of Martian bread
+and preserved meats fills the room.  Food supplies are arranged in precise order
+on shelves made of rare hardwood.  Everything appears to be of excellent quality.
+A small sign carved from bone is on the counter.
 ~
 30 8 0
 D2
@@ -256,29 +258,25 @@ You see the main street.
 ~
 0 -1 3013
 E
-danish pastry~
-You see that this is truly delicious pastry.  Must be made by a Dane from
-Denmark (which surely is not the capital of Sweden!).  Former ruler of
-Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
-Iceland, Estonia etc. etc.
-   The sight of those large, wholesome chokoladeboller makes your mouth water
-and your soul sing.
+food bread meat~
+The Martian bread is dense and nutritious, made from grain grown in the hydroponic
+gardens of Helium.  The preserved meats come from thoats and other game animals of
+the dead sea bottoms.  Everything looks fresh and appetizing.
 
 ~
 E
 sign~
-Free instructions provided by the store:
+Services provided by this establishment:
 
-   Buy  - Will buy you some bread or pastry.
-   List - The baker will kindly tell you the price and sort of the bread in
-          his bakery.
+   Buy  - Purchase provisions for your journeys.
+   List - The merchant will show you available goods and their prices.
 ~
 S
 #3010
-The General Store~
-   You are inside the general store.  All sorts of items are stacked on shelves
-behind the counter, safely out of your reach.
-A small note hangs on the wall.
+The General Merchant~
+   You are inside a general merchant's shop.  All sorts of useful items are displayed
+on shelves behind the counter, carefully organized.
+A small notice carved in stone hangs on the wall.
 ~
 30 8 0
 D2
@@ -298,46 +296,46 @@ The note reads:
 ~
 S
 #3011
-The Weapon Shop~
-   You are inside the weapon shop.  There is a small note on the counter.
+The Weapon Smith~
+   You are inside a weapon smith's shop.  Swords, daggers, and radium pistols line
+the walls.  A small notice is carved on the counter.
 ~
 30 8 0
 D2
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3016
 E
-note~
-The note reads:
+note notice~
+The notice reads:
 
-  List  - Show which various items are in the store.
-  Buy   - Buy an item.
-  Value - The shopkeeper will (free of charge) tell how much he will
-          pay for your item.
-  Sell  - Sell an item.
+  List  - Display available weapons.
+  Buy   - Purchase a weapon.
+  Value - The smith will appraise your weapons.
+  Sell  - Sell weapons to the smith.
 ~
 S
 #3012
-Main Street~
-   You are at the end of the main street of Midgaard.  South of here is the
-entrance to the Guild of Magic Users.  The street continues east towards the
-market square.  The magic shop is to the north and to the west is the city
-gate.
+Main Concourse~
+   You are at the western end of Lesser Helium's main concourse.  South of here is
+the entrance to the Scientific Academy.  The concourse continues east towards the
+market plaza.  The scientific supply shop is to the north and to the west is the
+city's west gate.
 ~
 30 0 1
 D0
-You see the magic shop.
+You see the scientific supply shop.
 ~
 ~
 0 -1 3033
 D1
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3013
 D2
-You see the entrance to the Guild of Magic Users.
+You see the entrance to the Scientific Academy.
 ~
 ~
 0 -1 3017
@@ -348,300 +346,302 @@ You see the city gate.
 0 -1 3040
 S
 #3013
-Main Street~
-   You are on the main street passing through the City of Midgaard.  South of
-here is the entrance to the Armoury, and the bakery is to the north.  East of
-here is the market square.
+Main Concourse~
+   You are on the main concourse of Lesser Helium.  South of here is the entrance
+to the Armory, and the provisions merchant is to the north.  East of here is the
+market plaza.
 ~
 30 0 1
 D0
-You see the bakery.
+You see the provisions merchant.
 ~
 ~
 0 -1 3009
 D1
-You see the market square.
+You see the market plaza.
 ~
 ~
 0 -1 3014
 D2
-You see the armoury.
+You see the armory.
 ~
 ~
 0 -1 3020
 D3
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3012
 S
 #3014
-Market Square~
-   You are standing on the market square, the famous Square of Midgaard.
-A large, pecualiar looking statue is standing in the middle of the square.
-Roads lead in every direction, north to the temple square, south to the
-common square, east and westbound is the main street.
+Market Plaza~
+   You are standing on the market plaza, the heart of Lesser Helium.
+A magnificent statue commemorating the unification of the Twin Cities stands in the
+middle of the plaza.  Roads lead in every direction, north to the temple plaza, south
+to the common plaza, east and westbound is the main concourse.
 ~
 30 0 1
 D0
-You see the temple square.
+You see the temple plaza.
 ~
 ~
 0 -1 3005
 D1
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3015
 D2
-You see the common square.
+You see the common plaza.
 ~
 ~
 0 -1 3025
 D3
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3013
 
 E
 statue~
-What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
+The statue depicts John Carter and Dejah Thoris, representing the alliance between
+Earth and Helium that secured Mars' future.  It is carved from scarlet marble.
 ~
 S
 #3015
-The Main Street~
-   You are on Main Street crossing through town.  To the north is the general
-store, and the main street continues east.  To the west you see and hear the
-market place and to the south is the Jeweller's Shop.
+The Main Concourse~
+   You are on the main concourse.  To the north is the general merchant,
+and the concourse continues east.  To the west you see the market plaza and to
+the south is the jeweler's shop.
 ~
 30 0 1
 D0
-You see the general store.
+You see the general merchant.
 ~
 ~
 0 -1 3010
 D1
-You see Main Street.
+You see the main concourse.
 ~
 ~
 0 -1 3016
 D2
-You see the Jeweller's Shop.
+You see the jeweler's shop.
 ~
 ~
 0 -1 3034
 D3
-You see the market square.
+You see the market plaza.
 ~
 ~
 0 -1 3014
 S
 #3016
-The Main Street~
-   The main street, to the north is the weapon shop and to the south is the
-Guild of Swordsmen.  To the east you leave town and to the west the street
-leads to the market square.
+The Main Concourse~
+   The main concourse continues here, to the north is the weapon smith and to the
+south is the Warriors Guild.  To the east is the city's east gate and to the west
+the concourse leads to the market plaza.
 ~
 30 0 1
 D0
-You see the weapon shop.
+You see the weapon smith.
 ~
 ~
 0 -1 3011
 D1
-You see the city gate.
+You see the city's east gate.
 ~
 ~
 0 -1 3041
 D2
-You see the swordsmen's guild.
+You see the Warriors Guild.
 ~
 ~
 0 -1 3021
 D3
-You see the main street leading to the market square.
+You see the main concourse leading to the market plaza.
 ~
 ~
 0 -1 3015
 S
 #3017
-Entrance to Mage's Guild~
-   The entrance hall is a small, poor lighted room.
+Entrance to Scientific Academy~
+   The entrance hall is a small chamber lit by radium bulbs set into the ceiling.
 ~
 30 8 0
 D0
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3012
 D2
-You see your favourite place, the Mage's Bar.
+You see the academy common room.
 ~
 ~
 0 -1 3018
 S
 #3018
-Mage's Bar~
-   The bar is one of the wierdest in the land.  Mystical images float around
-the air.  Illusions of fine furniture appear all around the room.
+Scientific Academy Common Room~
+   The common room is one of the most fascinating in the city.  Holographic
+projections of Barsoomian fauna and planetary maps float in the air.  Elegant
+furniture crafted from rare materials is arranged around the room.
 ~
 30 12 0
 D0
-You see the lobby.
+You see the entrance hall.
 ~
 ~
 0 -1 3017
 D1
-You see the laboratory.
+You see the research laboratory.
 ~
 ~
 0 -1 3019
 S
 #3019
-Mage's Laboratory~
-   This is the Magical Experiments Laboratory.  Dark smoke-stained stones
-arch over numerous huge oaken tables, most of these cluttered with strange-
-looking pipes and flasks.  The floor is covered with half-erased pentagrams
-and even weirder symbols, and a blackboard in a dark corner has only been
-partially cleaned, some painful-looking letters faintly visible.  A well in
-the middle of the floor leads down into darkness.  Vile smells waft from the
-depths.
+Scientific Research Laboratory~
+   This is the research laboratory of the Scientific Academy.  Ancient stone
+arches over numerous work tables cluttered with chemical apparatus, radium
+generators, and scientific instruments.  The floor bears etched diagrams of
+Barsoomian biology and planetary mechanics.  A shaft in the middle of the floor
+leads down into the specimen vaults below.
 ~
 30 12 0
 D3
-You see the bar.
+You see the common room.
 ~
 ~
 0 -1 3018
 S
 #3020
-The Armoury~
-   The armoury with all kinds of armours on the walls and in the window.  You
-see helmets, shields and chain mails.  To the north is the main street.
-On the wall is a small note.
+The Armory~
+   The armory displays all kinds of armor on the walls and in cases.  You see
+leather harnesses, metal helmets, and protective gear typical of Martian warriors.
+To the north is the main concourse.  A notice is carved on the wall.
 ~
 30 8 0
 D0
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3013
 E
-note~
-  You can use these commands for trading:
+note notice~
+  Trading commands:
 
-  value <item>     To get the price of an item in your possession.
-  sell <item>      To sell something.
-  buy <item>       To buy something (provided that the shop has it in store).
-  list             Gives you a listing of the shop's inventory.
+  value <item>     Appraise an item you possess.
+  sell <item>      Sell an item.
+  buy <item>       Purchase an item from inventory.
+  list             Display available goods.
 
-        WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
-                             NO HAGGLING
+        PRICES ARE FIXED - NO CREDIT EXTENDED
 ~
 S
 #3021
-Entrance Hall to the Guild of Swordsmen~
-   The entrace hall to the Guild of Swordsmen.  A place where one has to be
-careful not to say something wrong (or right).  To the east is the bar and to
-the north is the main street.
+Entrance Hall to the Warriors Guild~
+   The entrance hall to the Warriors Guild.  Weapons and trophies from battles
+across Barsoom line the walls.  To the east is the common room and to the north
+is the main concourse.
 ~
 30 8 0
 D0
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3016
 D1
-You see the swordsmen's bar, many noises comes from there.
+You see the warriors' common room, sounds of combat practice echo from within.
 ~
 ~
 0 -1 3022
 S
 #3022
-The Bar of Swordsmen~
-   The bar of swordsmen, once upon a time beautifully furnished.  But now the
-furniture is all around you in small pieces.  To the south is the yard, and
-to the west is the entrance hall.
+The Warriors Common Room~
+   The warriors' common room is functional rather than elegant.  Training equipment
+and weapon racks line the walls.  To the south is the practice yard, and to the
+west is the entrance hall.
 ~
 30 12 0
 D2
-You see the practise yard.
+You see the practice yard.
 ~
 ~
 0 -1 3023
 D3
-You see the entrance hall to the thieves guild.
+You see the entrance hall.
 ~
 ~
 0 -1 3021
 S
 #3023
-The Tournament and Practise Yard~
-   The practise yard of the fighters.  To the north is the bar.  A well leads
-down into darkness.
+The Practice Yard~
+   The practice yard of the warriors.  Sand covers the ground where warriors spar
+with swords and practice combat.  To the north is the common room.  A shaft leads
+down to the training chambers below.
 ~
 30 12 0
 D0
-You see the bar.
+You see the common room.
 ~
 ~
 0 -1 3022
 S
 #3024
-Eastern End of Poor Alley~
-   You are at the poor alley.  South of here is the Grubby Inn and to the
-east you see common square.  The alley continues further west.
+Eastern End of Lower Quarter~
+   You are in the lower quarter of Lesser Helium.  South of here is a poor inn
+and to the east you see the common plaza.  The alley continues further west.
 ~
 30 0 1
 D1
-You see the common square.
+You see the common plaza.
 ~
 ~
 0 -1 3025
 D2
-You see the Inn.
+You see the poor inn.
 ~
 ~
 0 -1 3048
 D3
-You see the poor alley.
+You see the lower quarter.
 ~
 ~
 0 -1 3044
 S
 #3025
-The Common Square~
-   The common square, people pass you, talking to each other.  To the west is
-the poor alley and to the east is the dark alley.  To the north, this square
-is connected to the market square.  From the south you notice a nasty smell.
+The Common Plaza~
+   The common plaza where citizens gather and converse.  To the west is the lower
+quarter and to the east is a shadowy alley.  To the north, this plaza connects to
+the market plaza.  From the south you notice an unpleasant smell from the waste
+disposal area.
 ~
 30 0 1
 D0
-You see the market square.
+You see the market plaza.
 ~
 ~
 0 -1 3014
 D1
-You see the dark alley.
+You see the shadowy alley.
 ~
 ~
 0 -1 3026
 D2
-You see the city dump.
+You see the waste disposal.
 ~
 ~
 0 -1 3030
 D3
-You see the poor alley.
+You see the lower quarter.
 ~
 ~
 0 -1 3024
 S
 #3026
-The Dark Alley~
-   The dark alley, to the west is the common square and to the south is the
-Guild of Thieves.  The alley continues east.
+The Shadowy Alley~
+   A shadowy alley in the less reputable part of Lesser Helium.  To the west is
+the common plaza and to the south is the Assassins Guild (though few acknowledge
+its existence).  The alley continues east.
 ~
 30 0 1
 D1
@@ -650,91 +650,93 @@ The alley continues east.
 ~
 0 -1 3045
 D2
-You see the entrance to the thieves guild.
+You see a nondescript entrance.
 ~
 ~
 0 -1 3027
 D3
-You see the common square.
+You see the common plaza.
 ~
 ~
 0 -1 3025
 E
-guild~
-It is the thieves guild, don't enter if you care about your health or money.
+guild entrance~
+The entrance is deliberately unmarked.  Those who belong here know where to go.
+Those who don't... shouldn't be here.
 ~
 S
 #3027
-Entrance Hall to the Guild of Thieves~
-   The entrace hall to the thieves' and assassins' guild.  A place where you
-can lose both your life and your money, if you are not careful.  To the north
-is the dark alley and to the east is the thieves' bar.
+Entrance Hall to the Assassins Guild~
+   The entrance hall to the assassins' guild.  A place where secrets are currency
+and careless words can be fatal.  To the north is the shadowy alley and to the
+east is the guild's common room.
 ~
 30 8 0
 D0
-You see the alley.
+You see the shadowy alley.
 ~
 ~
 0 -1 3026
 D1
-You see the thieves bar, where everything disappears.
+You see the guild's common room, draped in shadows.
 ~
 ~
 0 -1 3028
 S
 #3028
-The Thieves Bar~
-   The bar of the thieves.  Once upon a time this place was beautifully
-furnished, but now it seems almost empty.  To the south is the yard, and to
+The Assassins Common Room~
+   The common room of the assassins.  The furnishings are sparse and functional,
+with weapons concealed in shadows.  To the south is the training yard, and to
 the west is the entrance hall.
-   (Maybe the furniture has been stolen?!)
 ~
 30 12 0
 D2
-You see the secret yard.
+You see the training yard.
 ~
 ~
 0 -1 3029
 D3
-You see the entrance hall to the thieves guild.
+You see the entrance hall.
 ~
 ~
 0 -1 3027
 E
-furniture~
-As you look at the furniture, the chair you sit on disappears.
+furniture weapons shadows~
+The furniture is designed for function, not comfort.  Hidden compartments and
+weapon caches are built into every piece.
 ~
 S
 #3029
-The Secret Yard~
-   The secret practise yard of thieves and assassins.  To the north is the
-bar.  A well leads down into darkness.
+The Training Yard~
+   The secret training yard where assassins practice their deadly arts.  To the
+north is the common room.  A shaft leads down to hidden chambers below.
 ~
 30 12 0
 D0
-You see the bar.
+You see the common room.
 ~
 ~
 0 -1 3028
 S
 #3030
-The Dump~
-   The dump, where the people from the city drop their garbage.  Through the
-garbage you can see a large junction of pipes, looks like the entrance to the
-sewer system.  South of here you see the river and to the north is the common
-square.
+The Waste Disposal~
+   The waste disposal area where refuse from the city is processed.  Through the
+accumulated waste you can see access points to the underground water reclamation
+system.  South of here the ground slopes toward the dried channel and to the north
+is the common plaza.
 ~
 30 4 2
 D0
-You see the common square.
+You see the common plaza.
 ~
 ~
 0 -1 3025
 S
 #3031
-The Pet Shop~
-   The Pet Shop is a small crowded store, full of cages and animals of
-various sorts and sizes.  There is a sign on the wall.
+The Calot Shop~
+   The calot shop is a small crowded store, full of pens containing calots,
+apts, and other Martian beasts available as companions.  A sign carved in stone
+hangs on the wall.
 ~
 30 8 0
 D2
@@ -746,96 +748,93 @@ E
 sign~
 The sign reads:
 
-  Use 'List' to see the available pets.
-  Use 'Buy <pet>' to buy yourself a pet.
+  Use 'List' to see available beasts.
+  Use 'Buy <beast>' to purchase a companion.
 
-  Instructions for having pets:
+  Instructions for beast companions:
 
-  You can use 'order <pet> <instructions>' to order your pets around.
-  If you abuse your pet, it will no longer regard you as its master.
-  If you have several pets you may use 'order followers <instructions>'
+  You can use 'order <beast> <instructions>' to command your beasts.
+  Mistreatment will cause your beast to abandon you.
+  Multiple beasts can be commanded with 'order followers <instructions>'
 
-  You can name the pet you buy as : "buy <pet> <name>"
+  You can name your beast: "buy <beast> <name>"
 
- Regards,
+ By order of the Master Calot Keeper
 
-   The Shopkeeper
 ~
 S
 #3032
-Pet Shop Store~
-   This is the small dark room in which the Pet Shop Boy keeps his pets.
-It is vital that this room's virtual number is exactly one larger than the
-Pet Shop number.
+Calot Holding Pens~
+   This is the holding area where the calot merchant keeps his beasts.
+Cages line the walls containing various creatures from across Barsoom.
 ~
 30 8 0
 S
 #3033
-The Magic Shop~
-   You are in a small room that smells of rare chemicals and spices.
-Dividing the room in two is a large desk, and on the wall behind it are
-numerous shelves crammed with jars, bottles, books and scrolls of all
-sorts and sizes.
+The Scientific Supply Shop~
+   You are in a small room that smells of rare chemicals and scientific reagents.
+A large counter divides the room, and on the shelves behind it are numerous containers,
+scientific instruments, ancient texts, and technical schematics of all sorts.
 ~
 30 8 0
 D2
-You see the main street.
+You see the main concourse.
 ~
 ~
 0 -1 3012
 E
-jars bottles~
-Some of them are transparent enabling you to see that some contain coloured
-powders while others contain body parts of various animals.
+jars bottles containers~
+Some are transparent, revealing colored chemical powders, biological specimens,
+and rare minerals from across Barsoom.
 ~
 E
-books~
-Most of them appear to be very old and dusty.
+books texts~
+Ancient Barsoomian scientific texts, some dating back to when Mars was young
+and the seas still flowed.
 ~
 E
-scrolls~
-Each scroll is stored in a leather tube that protects it from moist.
+scrolls schematics~
+Technical diagrams and formulae, carefully preserved in protective cases.
 ~
 S
 #3034
-The Jeweller's Shop~
-   You are in a small, beautifully furnished room.  The warm light emanating
-from the small oil lamps on the walls is reflected in the hard, polished
-surface of the big mahogany desk that stands in the centre of the room.
-A small sign with golden letters stands on the desk.
+The Jeweler's Shop~
+   You are in a small, elegantly furnished room.  Soft radium light from fixtures
+on the walls reflects off the polished surface of the display cases containing
+precious metals and gems from Barsoom's mines.  A sign inlaid with gold stands
+on the counter.
 ~
 30 8 0
 D0
-You see Main Street.
+You see the main concourse.
 ~
 ~
 0 -1 3015
 E
-oil lamps~
-They are made from polished gold and looks as if they are securely fastened
-to the smooth stone walls.
+lamps fixtures light~
+Radium bulbs set in precious metal fixtures provide steady, soft illumination
+that never dims.
 ~
 E
-desk~
-Your face is reflected in its surface.
+counter cases~
+Display cases of polished stone showcase the jeweler's finest work.
 ~
 E
 sign~
-The golden letters say :-
+The golden letters read:
 
-    Use 'list' to see what is in store,
-        'buy <item>' to buy an item,
+    Use 'list' to see available jewelry,
+        'buy <item>' to purchase an item,
         'sell <item>' to sell an item and
-        'value <item>' to make the jeweller evaluate an item.
+        'value <item>' to have the jeweler appraise an item.
 ~
 S
 #3035
-The Leather Shop~
-   An acrid smell fills this large room.  Along the walls are numerous
-shelves containing all sorts of animal hide and in the crackling fireplace
-hangs a big iron pot with boiling water.  In the middle of the room is a
-large oak table.
-A wooden sign is hanging above the fireplace.
+The Leather Worker's Shop~
+   The smell of curing leather fills this large room.  Along the walls are shelves
+containing hides from thoats, banths, and other Martian creatures.  A brazier in
+the corner heats tools and chemicals for leather treatment.  In the middle of the
+room is a large work table.  A sign carved in bone hangs above the brazier.
 ~
 30 8 0
 D2
@@ -844,44 +843,44 @@ You see the alley.
 ~
 0 -1 3044
 E
-fireplace~
-It is a rather large fireplace made from heavy granite rocks.
+brazier~
+A metal brazier containing hot coals for heating leather-working tools and
+treatment chemicals.
 ~
 E
 table~
-It is made from solid oak but appears to be very used.  Its surface is
-covered in marks and scratches.  A large burning candle stands directly on
-the table surface, tallow flowing down its sides.
+A sturdy work table made from rare hardwood, its surface scarred by years of
+leather crafting.  Tools are neatly arranged along one edge.
 ~
 E
-pot~
-Several large pieces of leather hide are boiling in the iron pot.
+hides leather~
+Thoat leather is tough and durable, banth hide is supple yet strong - the finest
+materials for Martian harnesses and gear.
 ~
 E
 sign~
-The wooden sign says :-
+The bone sign reads:
 
-    Use 'list' to see what is in store,
-        'buy <item>' to buy an item,
+    Use 'list' to see available goods,
+        'buy <item>' to purchase an item,
         'sell <item>' to sell an item and
-        'value <item>' to make the leather worker evaluate an item.
+        'value <item>' to have the leather worker appraise an item.
 ~
 S
 #3040
-Inside the West Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-east and Wall Road leads south from here.
+Inside the West Gate of Lesser Helium~
+   You are by two defensive towers built into the city wall and connected by a
+footbridge spanning the massive gate.  The main concourse leads east and Wall
+Road leads south from here.
 ~
 30 0 1
 D1
-You see Main Street.
+You see the main concourse.
 ~
 ~
 0 -1 3012
 D2
-You see the road running along the inner side of the city wall.  You notice
-that it is called Wall Road.
+You see Wall Road running along the inner side of the city wall.
 ~
 ~
 0 -1 3042
@@ -908,15 +907,14 @@ each other with some kind of mortar, just like the city wall.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3041
-Inside the East Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-west from here.
+Inside the East Gate of Lesser Helium~
+   You are by two defensive towers built into the city wall and connected by a
+footbridge spanning the massive gate.  The main concourse leads west from here.
 ~
 30 0 1
 D1
@@ -925,35 +923,35 @@ You see the city gate.
 gate~
 1 3133 3053
 D3
-You see Main Street.~
+You see the main concourse.
+~
 ~
 0 -1 3016
 E
 bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+The footbridge connects the two gate towers high above the gate mechanism.
+Guards can cross to coordinate defense of the city.
 ~
 E
 gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
+Massive gates made from rare hardwood and reinforced with metal bands.  The
+locking mechanism is intricate and secure.
 ~
 E
 tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+The defensive towers are built from the same ancient stone as the city walls,
+constructed using techniques from when Mars was young.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3042
 Wall Road~
-   You are walking next to the western city wall.  The road continues further
-south and the city gate is just north of here.
+   You are walking along Wall Road next to the western defensive wall.  The road
+continues south and the west gate is just north of here.
 ~
 30 0 1
 D0
@@ -968,15 +966,15 @@ The road continues further south.
 0 -1 3043
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3043
 Wall Road~
-   You are walking next to the western city wall.  Wall Road continues further
-north and south.  A small, poor alley leads east.
-Some letters have been written on the wall here.
+   You are walking along Wall Road next to the western defensive wall.  The road
+continues north and south.  A narrow alley leads east into the lower quarter.
+Ancient script is carved into the wall here.
 ~
 30 0 1
 D0
@@ -995,19 +993,20 @@ The road continues further south.
 ~
 0 -1 3047
 E
-letters~
-It says 'Who watches the watchmen?'
+letters script~
+Ancient Barsoomian script, barely legible with age.  It appears to be a warning
+or perhaps a philosophical question about duty and trust.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3044
-Poor Alley~
-   You are in narrow and dirty alley leading east and west.  The leather shop
-is to the north.
+Lower Quarter Alley~
+   You are in a narrow alley in the lower quarter, leading east and west.  The
+leather worker's shop is to the north.
 ~
 30 0 1
 D0
@@ -1027,9 +1026,9 @@ The alley leads west.
 0 -1 3043
 S
 #3045
-Alley at Levee~
-   You are standing in the alley which continues east and west.  South of
-here you see the levee.
+Alley at Channel Edge~
+   You are standing in an alley which continues east and west.  South of here
+you see the edge of the ancient dried channel.
 ~
 30 0 1
 D1
@@ -1038,7 +1037,7 @@ The alley leads east.
 ~
 0 -1 3046
 D2
-You see the levee.
+You see the channel edge.
 ~
 ~
 0 -1 3049
@@ -1049,10 +1048,9 @@ The alley leads west.
 0 -1 3026
 S
 #3046
-Eastern end of Alley~
-   You are standing at the eastern end of the alley, the city wall is just
-east, blocking any further movement.  An old three-storey warehouse is
-directly south of here.
+Eastern End of Alley~
+   You are standing at the eastern end of the alley.  The city wall blocks further
+progress to the east.  An old warehouse is directly south of here.
 ~
 30 0 1
 D2
@@ -1068,8 +1066,8 @@ You see the alley.
 S
 #3047
 Wall Road~
-   You are standing on the road next to the western city wall which
-continues north.  South of here is a bridge across the river.
+   You are standing on Wall Road next to the western city wall which continues
+north.  South of here is a bridge spanning the ancient dried channel.
 ~
 30 0 1
 D0
@@ -1084,14 +1082,14 @@ You see the bridge.
 0 -1 3051
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3048
-Grubby Inn~
-   You are inside the old Grubby Inn.  This place has not been cleaned for
-several decades, vile smells make you dizzy.
+Poor Inn~
+   You are inside a run-down inn in the lower quarter.  The establishment has
+seen better days, and maintenance has been... lacking.
 ~
 30 8 0
 D0
@@ -1101,9 +1099,10 @@ You see the alley.
 0 -1 3024
 S
 #3049
-Levee~
-  You are at the levee.  South of here you see the river gently flowing west.
-The river bank is very low making it possible to enter the river.
+Channel Edge~
+  You are at the edge of the ancient dried channel.  South of here the ground
+slopes down into the channel floor, which once carried water but now is covered
+in ochre moss.  The descent is manageable here.
 ~
 30 0 1
 D0
@@ -1112,16 +1111,16 @@ You see the Alley.
 ~
 0 -1 3045
 D2
-You see the river flowing west.
+You see the channel floor below, covered in ochre moss.
 ~
 ~
 0 -1 3203
 S
 #3050
 Abandoned Warehouse~
-   You are inside the only room in the old warehouse.  Only a sparse amount
-of light shines in through the boarded up windows above you.  The place is
-very dusty and appears to have been unused for many years.
+   You are inside an old abandoned warehouse.  Dim light filters through cracks
+in the boarded windows above.  Dust covers everything, and the place shows no
+signs of recent use.
 ~
 30 8 0
 D0
@@ -1132,9 +1131,9 @@ You see the alley.
 S
 #3051
 On the Bridge~
-   You are standing on the stone bridge crosses the river.  The bridge is
-built out from the western city wall and the river flows west through an
-opening in the wall ten feet below the bridge.
+   You are standing on a stone bridge spanning the ancient dried channel.  The
+bridge extends from the western city wall, and the channel floor lies ten feet
+below, disappearing into the distance to both east and west.
 ~
 30 0 1
 D0
@@ -1149,25 +1148,25 @@ You see the Concourse.
 0 -1 3100
 E
 bridge~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar, just like the wall.
+The bridge is constructed from ancient stone, matching the city wall in both
+material and construction technique.  It has stood for countless ages.
 ~
 E
-opening~
-You cannot really see it from here as it is somewhere beneath your feet.
+channel floor~
+The dried channel floor lies below, covered in ochre moss.  The ancient waterway
+stretches into the distance.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3052
-Outside the West Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the west you
-can see the edge of a big forest. A small dusty trail leads noth along the
-wall.
+Outside the West Gate of Lesser Helium~
+   You are outside the western gate of Lesser Helium, by two defensive towers
+connected by a footbridge.  To the west stretches the dead sea bottom, its ochre
+moss extending to the horizon.  A trail leads north along the outer wall.
 ~
 30 0 1
 D1
@@ -1177,36 +1176,34 @@ gate~
 1 3133 3040
 E
 bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+The footbridge connects the two gate towers high above.  Guards patrol it to
+watch both approaches to the city.
 ~
 E
 gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
+Massive gates of rare hardwood reinforced with metal bands.  The gates represent
+centuries of Helium's defensive tradition.
 ~
 E
 tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+The defensive towers are built from ancient stone, their construction techniques
+lost to time but their strength enduring.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3053
-Outside the East Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the east the
-plains stretch out in the distance. To the north a small dusty trail follow
-the city wall.
+Outside the East Gate of Lesser Helium~
+   You are outside the eastern gate of Lesser Helium, by two defensive towers
+connected by a footbridge.  To the east, the elevated roadway stretches toward
+Greater Helium, 75 miles distant.  A trail leads north along the outer wall.
 ~
 30 0 1
 D1
-You see the plains.~
+You see the elevated roadway leading toward Greater Helium.~
 ~
 0 -1 3503
 D3
@@ -1216,31 +1213,30 @@ gate~
 1 3133 3041
 E
 bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
+The footbridge connects the two gate towers high above.  Guards patrol it to
+watch the approaches from Greater Helium and beyond.
 ~
 E
 gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
+Massive gates of rare hardwood reinforced with metal bands.  The gates bear the
+seal of Helium - twin cities united.
 ~
 E
 tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
+The defensive towers are built from ancient stone, their construction techniques
+lost to time but their strength enduring.
 ~
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
+The city wall is built from massive blocks of stone, seamlessly joined by ancient
+Barsoomian construction techniques.  It rises far too high to climb.
 ~
 S
 #3054
 By the Temple Altar~
-   You are by the temple altar in the northern end of the Temple of Midgaard.
-A huge altar made from white polished marble is standing in front of you and
-behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
+   You are by the temple altar in the northern end of Lesser Helium's great temple.
+A huge altar carved from scarlet marble stands before you, and behind it is a
+magnificent statue depicting the Jeddak of Helium in full ceremonial regalia.
 ~
 30 8 0
 D2
@@ -1250,52 +1246,52 @@ You see the southern end of the temple.
 0 -1 3001
 E
 altar~
-Even though the altar is more than ten feet long it appears to be made from a
-single block of white virgin marble.
+The altar is more than ten feet long, carved from a single massive block of
+scarlet marble.  Ancient Barsoomian inscriptions cover its surface.
 ~
 E
-statue odin king god~
-The statue represents the one-eyed Odin sitting on a his throne.  He has
-long, grey hair and beard and a strict look on his face.  On top of the
-throne, just above his shoulders, his two ravens Hugin and Munin are sitting
-and at his feet are his wolves Gere and Freke.
+statue jeddak~
+The statue depicts the Jeddak of Helium seated in command, representing the
+authority and tradition of the Twin Cities.  The craftsmanship is magnificent,
+showing every detail of the ceremonial harness and regalia.
 ~
 S
 #3055
-Odin's Store~
-   This is the small dark room in which Odin keeps the player items that he
-takes care of.  It is vital that this room's virtual number is exactly one
-larger than the room by the temple altar.
+Temple Vault~
+   This is a secure vault where the temple priests safeguard belongings of
+travelers and warriors.  The room's virtual number must remain exactly one
+greater than the temple altar room.
 ~
 30 8 0
 S
 #3200
 Under the Bridge~
-   The arch under the bridge is covered by seaweed for one foot above the
-surface of the river.  The water gently flows through an opening in the lower
-part of the city wall.
+   You stand beneath the ancient bridge in the dried channel.  Ochre moss covers
+the channel floor and climbs partway up the bridge supports.  The channel passes
+through an opening in the city wall here.
 ~
-32 0 7
+32 0 2
 D1
 ~
 ~
 0 -1 3201
 D3
-You see the river flowing west into the Forest of Haon-Dor.~
+You see the dead sea bottom stretching westward.~
 ~
 0 -1 -1
 E
 wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  Looks pretty solid.
+The city wall is built from massive blocks of ancient stone, seamlessly joined.
+The construction has withstood countless ages.
 ~
 S
 #3201
-On the River~
-   North of here you see the miserable buildings of the poor alley.  The
-river flows west towards the bridge.  The riverbanks are too steep to climb.
+In the Dried Channel~
+   North of here you can see the lower quarter of Lesser Helium rising above.
+The ancient dried channel extends east and west here, its floor carpeted with
+ochre moss.  The channel banks are too steep to climb easily.
 ~
-32 0 7
+32 0 2
 D1
 ~
 ~
@@ -1306,11 +1302,12 @@ D3
 0 -1 3200
 S
 #3202
-On the River~
-   North of here you see the dump.  The river flows from east to west.  The
-riverbanks are too steep to climb.
+In the Dried Channel~
+   North of here you can see the waste disposal area of Lesser Helium above.
+The ancient channel extends from east to west, ochre moss covering its floor.
+The channel banks are too steep to climb easily.
 ~
-32 0 7
+32 0 2
 D1
 ~
 ~
@@ -1321,11 +1318,12 @@ D3
 0 -1 3201
 S
 #3203
-On the River~
-   The levee is directly north of here.  The river flows in an east west
-direction.
+In the Dried Channel~
+   The channel edge with its descent point is directly north of here.  The ancient
+waterway extends east and west, its floor covered in ochre moss and dotted with
+ancient stone markers.
 ~
-32 0 7
+32 0 2
 D0
 ~
 ~
@@ -1340,11 +1338,12 @@ D3
 0 -1 3202
 S
 #3204
-On the River~
-   You see the warehouse on the northern riverbank.  East of here you see the
-city wall.  The river flows west towards the levee.
+In the Dried Channel~
+   You see the old warehouse above on the northern bank.  East of here the city
+wall blocks the channel.  The dried waterway extends west, its ancient bed
+covered with ochre moss.
 ~
-32 0 7
+32 0 2
 D1
 ~
 ~
@@ -1355,14 +1354,15 @@ D3
 0 -1 3203
 S
 #3205
-On the River~
-   The river enters from a hole in the eastern city wall.  The hole has been
-blocked by several vertically positioned iron bars set into the wall.
+In the Dried Channel~
+   The ancient channel passes through an opening in the eastern city wall here.
+The opening is blocked by massive iron bars set deep into the stone, preventing
+entry to the city from outside.
 ~
-32 0 7
+32 0 2
 D1
-The iron bars make it impossible to pass through the hole in the wall.
-Beyond the bars you see the great plains.
+The iron bars make passage impossible.  Beyond them you see the dead sea bottom
+stretching toward Greater Helium in the distance.
 ~
 ~
 0 -1 -1
