@@ -1,0 +1,107 @@
+#3200
+Under the Bridge~
+   You stand beneath the ancient bridge in the dried channel.  Ochre moss covers
+the channel floor and climbs partway up the bridge supports.  The channel passes
+through an opening in the city wall here.
+~
+32 0 2
+D1
+~
+~
+0 -1 3201
+D3
+You see the dead sea bottom stretching westward.~
+~
+0 -1 -1
+E
+wall~
+The city wall is built from massive blocks of ancient stone, seamlessly joined.
+The construction has withstood countless ages.
+~
+S
+#3201
+In the Dried Channel~
+   North of here you can see the lower quarter of Lesser Helium rising above.
+The ancient dried channel extends east and west here, its floor carpeted with
+ochre moss.  The channel banks are too steep to climb easily.
+~
+32 0 2
+D1
+~
+~
+0 -1 3202
+D3
+~
+~
+0 -1 3200
+S
+#3202
+In the Dried Channel~
+   North of here you can see the waste disposal area of Lesser Helium above.
+The ancient channel extends from east to west, ochre moss covering its floor.
+The channel banks are too steep to climb easily.
+~
+32 0 2
+D1
+~
+~
+0 -1 3203
+D3
+~
+~
+0 -1 3201
+S
+#3203
+In the Dried Channel~
+   The channel edge with its descent point is directly north of here.  The ancient
+waterway extends east and west, its floor covered in ochre moss and dotted with
+ancient stone markers.
+~
+32 0 2
+D0
+~
+~
+0 -1 3049
+D1
+~
+~
+0 -1 3204
+D3
+~
+~
+0 -1 3202
+S
+#3204
+In the Dried Channel~
+   You see the old warehouse above on the northern bank.  East of here the city
+wall blocks the channel.  The dried waterway extends west, its ancient bed
+covered with ochre moss.
+~
+32 0 2
+D1
+~
+~
+0 -1 3205
+D3
+~
+~
+0 -1 3203
+S
+#3205
+In the Dried Channel~
+   The ancient channel passes through an opening in the eastern city wall here.
+The opening is blocked by massive iron bars set deep into the stone, preventing
+entry to the city from outside.
+~
+32 0 2
+D1
+The iron bars make passage impossible.  Beyond them you see the dead sea bottom
+stretching toward Greater Helium in the distance.
+~
+~
+0 -1 -1
+D3
+~
+~
+0 -1 3204
+S

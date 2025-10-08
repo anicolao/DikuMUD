@@ -1,0 +1,77 @@
+#1
+parchment rules~
+a parchment of rules~
+A formal parchment document has been placed here.~
+              Rules for Immortal Player Behaviour
+
+Upon becoming immortal, you are no longer considered a player in DikuMud,
+you simply cannot get killed. Therefore, there are certain rules you must
+follow. Knowingly breaking these rules will probably cost you your
+characters(s).
+
+ - An immortal must not support ANY mortal playing character in the game,
+   including his/her own caracter. Supporting includes grouping, items,
+   money, 'preparing' monsters for easy killing, etc.
+      You may occasionally help low-level players by giving them
+   small amounts of money or items. You may only give them what is
+   buyable in the shops, and never more than 500 gold coins worth.
+      Immortals are welcome to take part in the game, by creating
+   unexpected (but never unreasonably harmful) obstacles for the players,
+   or by providing divine assistance to a newcomer in distress. Usage
+   of the 'switch'-command to make the monsters more challenging or
+   entertaining is also acceptable - see the rules about harming players,
+   below.
+
+ - An immortal is allowed to play other characters, provided that he/she
+   does not support them - see above. Beware: It is very hard not to help
+   your mortal player, and we'll show virtually no mercy, should we find out.
+     Exception from this rule can be made ONLY for test purposes, and only
+   by immortals who are actually building or supervising areas of the
+   world. Other players should NEVER benefit or suffer from this.
+   Test characters should not be a nuisance to other players in any way.
+
+ - An immortal character is not allowed to harm mortal players
+   in any way, unless this player is extremly provocative and
+   annoying to others.
+
+   Any action taken against mortals should have a VERY good reason.
+
+ - Implementors of DikuMUD reserves right to change any of the
+   above rules.
+
+ - A frequently asked question is what to do after a game crash. In general,
+   you shouldn't do anything. However, if you feel up to it, and if you
+   feel very confident that you aren't being cheated (grabbed by the nose,
+   as they say in Denmark), you are allowed to make compensations for the
+   losses of the players. Still, the rule in this case is, 'better too
+   little than too much'.
+
+"Any excuse is a bad excuse" - Papi
+
+These are just suggestions:
+
+ - You could hang around talking to other players.
+
+ - You may apply for building a new area in the world of DikuMud.
+   Send a letter to the Central Commitee of DikuMud Building Junta
+   Association. This may be sent to either:
+     Tom Madsen (noop@freja.diku.dk)
+     Michael Seifert (seifert@freja.diku.dk)
+     Sebastian Hammer (quinn@freja.diku.dk)
+   We will then return a letter explaining the Building rules.
+
+ - You may apply for World Supervisor. A supervisor is
+   assigned an area(s) which other immortals are building. The idea
+   is that you test the area, give ideas for changes, inform the
+   creator of rare items which are too easy to obtain. Etc.
+   The Supervisor is "higher rank" than the creator, and can always send
+   a letter to the Central Commitee of DikuMud Building Junta Association
+   in cases of disagreement with the creator.
+   This is a highly trusted position, and you will have to prove worthy
+   somehow.
+   For more information send a letter asking for more rules.
+~
+16 0 16385
+0 0 0 0
+1 10 2
+

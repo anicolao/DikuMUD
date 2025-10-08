@@ -1,0 +1,483 @@
+#3300
+key metal~
+a metal key~
+A metal key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_papi~
+~
+E
+key metal~
+You notice 'My Cottage' has been inscribed on the key.
+~
+#3301
+key brass~
+a brass key~
+A brass key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_quifael~
+~
+E
+key brass~
+It looks as if it is very old.  There are some small marks on it as if
+somebody with tiny (but strong!) teeth has been biting a lot in it.
+~
+#3302
+key metal~
+a metal key~
+A metal key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_manxam~
+~
+E
+key metal~
+It is a small insignificant metal key on which the letter "M" has been
+inscribed.
+~
+#3303
+chest large~
+a large chest~
+A large wooden chest sits here.~
+~
+15 0 0
+100 1 -1 0
+100 0 1000000
+E
+chest~
+It looks too bulky to be moved and does not appear to be equipped with a
+lock.
+~
+#3304
+mace heavy ornate~
+an ornate heavy mace~
+An ornate heavy mace lies here.~
+pound~
+5 0 8193
+0 1 6 7
+6 0 1000000
+E
+mace~
+A beautifully crafted mace of mithril.  You can see the owners name on the
+adamantine handle.  The name, which is chiselled into the handle and then
+filled with diamond dust, is Manxam.
+~
+A
+19 2
+#3305
+harness brass chest~
+a brass chest harness~
+A brass chest harness lies here.~
+~
+9 0 9
+6 0 0 0
+80 0 1000000
+E
+brass breast plate~
+A good-looking breastplate made of brass.  It's engraved a lot, the largest
+engraving being the name of the owner, Manxam.
+~
+#3306
+harness brass legs~
+a brass leg harness~
+A brass leg harness lies here.~
+~
+9 0 33
+6 0 0 0
+8 0 1000000
+E
+leggings brass~
+A pair of brass leggings, well crafted, with the owners name engraved on
+them.  The name is, of course, Manxam.
+~
+#3307
+key mithril~
+a mithril key~
+A mithril key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_gimli~
+~
+E
+key mithril~
+The small mithril key is a sample of exquisite workmanship.  It has the
+letter "G" inscribed.
+~
+#3308
+dispenser water~
+a water dispenser~
+A water dispenser stands here.~
+~
+15 2 0
+3 0 -1 0
+100 3000 300
+E
+coke machine~
+It is a big old-fashioned thing that most of all resembles a cupboard with a
+slot large enough to hold three cans of Coke at once.  It doesn't appear to
+have any buttons or any other means of control.  Golden letters on its front
+tell that this is a Quifatronic K-1000 mk I.
+~
+#3309
+flask water metal~
+a metal water flask~
+A metal water flask lies here.~
+~
+17 0 1
+3 3 15 0
+1 6 3
+E
+can coke~
+It is a small red and white can that has 'Keep MudLand tidy' written on its
+side and the name Gimli printed on its bottom.
+~
+#3310
+key iron~
+an iron key~
+An iron key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_doz~
+~
+E
+key iron~
+The small iron key has the letter "D" inscribed on its surface.
+~
+#3311
+pit~
+a pit~
+A deep pit opens in the ground here.~
+~
+15 0 0
+1000 0 0 0
+0 0 0
+E
+pit~
+This is where you put money and items to help Doz expand this shrine and
+convert more people to the belief of Eru our creator.
+~
+#3312
+harness golden chest~
+a golden chest harness~
+A golden chest harness glitters here.~
+~
+9 0 9
+7 0 0 0
+100 0 1000000
+E
+golden breast plate~
+This breast plate is made of solid gold, yet it seems to be as hard as a
+normal steel plate. The name 'Doz' is engraved in silver letters on it.
+~
+#3313
+helm golden~
+a golden helm~
+A golden helm glitters here.~
+~
+9 0 17
+6 0 0 0
+8 0 1000000
+E
+golden helmet~
+This helmet is made of solid gold. On the inside of it you find the name
+'Doz' engraved in silver letters.
+~
+#3314
+sleeves golden~
+a pair of golden sleeves~
+A pair of golden sleeves glitters here.~
+~
+9 0 257
+6 0 0 0
+8 0 1000000
+E
+golden sleeves~
+These sleeves are made of gold and they have the name 'Doz' engraved in
+silver letters on them.
+~
+#3315
+cloak golden silk~
+a golden silk cloak~
+A golden silk cloak lies here.~
+~
+12 64 1025
+0 0 0 0
+20 0 1000000
+E
+golden cloak~
+This cloak is woven from the finest threads of gold, and it shimmers as you
+look at it. You find the name 'Doz' written on the inside of it.
+~
+A
+17 -10
+#3316
+shield golden~
+a golden shield~
+A golden shield glitters here.~
+~
+9 0 513
+5 0 0 0
+15 0 1000000
+E
+golden shield~
+This shield is made of gold and it's covered with strange silver runes
+which you guess must be of protection. The name 'Doz' is also to be found
+on the shield.
+~
+#3317
+gloves golden~
+a pair of golden gloves~
+A pair of golden gloves glitters here.~
+~
+9 0 129
+6 0 0 0
+8 0 1000000
+E
+golden gauntlets~
+These gauntlets are made of gold and they have the name 'Doz' engraved in
+silver letters on them.
+~
+#3318
+harness golden legs~
+a pair of golden leggings~
+A pair of golden leg harnesses glitters here.~
+~
+9 0 33
+6 0 0 0
+8 0 1000000
+E
+golden leggings~
+These leggings are made of solid gold, and the name 'Doz' is engraved in
+silver letters on them.
+~
+#3319
+dispenser water~
+a water dispenser~
+A water dispenser stands here.~
+~
+15 2 0
+3 0 -1 0
+100 3000 300
+E
+coke machine~
+It is a big old-fashioned thing that most of all resembles a cupboard with a
+slot large enough to hold three cans of Coke at once.  It doesn't appear to
+have any buttons or any other means of control.  Golden letters on its front
+tell that this is a Quifatronic K-1000 mk I.
+~
+#3320
+flask water metal~
+a metal water flask~
+A metal water flask lies here.~
+~
+17 0 1
+3 3 15 0
+1 6 3
+E
+can coke~
+It is a small red and white can that has 'Keep MudLand tidy' written on its
+side and the name Doz printed on its bottom.
+~
+#3321
+key iron~
+an iron key~
+An iron key lies here.~
+~
+18 0 16385
+0 0 0 0
+1 10 100
+E
+item_for_mapmaker~
+~
+E
+key iron~
+The small iron key has the letter "M" inscribed on its surface.
+~
+#3322
+dispenser water~
+a water dispenser~
+A water dispenser stands here.~
+~
+15 2 0
+3 0 -1 0
+100 3000 300
+E
+coke machine~
+It is a big old-fashioned thing that most of all resembles a cupboard with a
+slot large enough to hold three cans of Coke at once.  It doesn't appear to
+have any buttons or any other means of control.  Golden letters on its front
+tell that this is a Quifatronic K-1000 mk I.
+~
+#3323
+flask water metal~
+a metal water flask~
+A metal water flask lies here.~
+~
+17 0 1
+3 3 15 0
+1 6 3
+E
+can coke~
+It is a small red and white can that has 'Keep MudLand tidy' written on its
+side and the name Mapmaker printed on its bottom.
+~
+#3400
+lamp radium~
+a radium lamp~
+A radium lamp casts soft light here.~
+~
+1 0 16385
+0 0 24 0
+5 150 50
+E
+candlestick~
+It is a rather old-looking three-armed candlestick made from pewter.  Its
+candles are a yellowish white colour.
+~
+#3600
+lamp radium~
+a radium lamp~
+A radium lamp casts soft light here.~
+~
+1 0 16385
+0 0 24 0
+5 150 50
+E
+candlestick~
+It is a rather old-looking three-armed candlestick made from pewter.  Its
+candles are a yellowish white colour.
+~
+#3601
+wine bottle~
+a bottle of wine~
+A bottle of wine sits here.~
+~
+17 0 1
+10 10 5 0
+2 50 10
+E
+brandy bottle~
+The bottle is a special 'Dragon Blood' brandy bottle.  Its neck is shaped
+like a small dragon's head.  Bottles like these are often worth a small
+amount money, even when empty.
+~
+#3602
+wine bottle~
+a bottle of wine~
+A bottle of wine sits here.~
+~
+17 0 1
+10 0 5 0
+2 50 10
+E
+brandy bottle~
+The bottle is a special 'Dragon Blood' brandy bottle.  Its neck is shaped
+like a small dragon's head.  Bottles like these are often worth some money,
+even when empty.
+~
+#3603
+cart hand~
+a hand cart~
+A small hand cart sits here.~
+~
+22 0 1
+0 0 0 0
+100 100 100
+E
+wheelbarrow~
+It is a heavy wheelbarrow made from solid oaken planks that have been painted
+a dark, green colour.
+~
+#3604
+shovel~
+a shovel~
+A metal shovel lies here.~
+~
+5 0 8193
+0 1 5 7
+8 30 10
+E
+shovel~
+It is a large metal shovel with a solid wooden handle.
+~
+#3605
+rake~
+a rake~
+A metal rake lies here.~
+~
+5 0 8193
+0 1 4 7
+8 30 10
+E
+rake~
+It is a large metal rake with a solid wooden handle.
+~
+#3610
+skeleton ancient~
+an ancient skeleton~
+An ancient skeleton lies here.~
+~
+0 0 1
+0 0 0 0
+15 0 0
+E
+skeleton~
+The dusty bones are almost brown.  It must have been buried for very long
+time.
+~
+#3611
+gem amethyst~
+an amethyst gem~
+A purple amethyst gem glitters here.~
+~
+8 0 16385
+0 0 0 0
+1 200 40
+E
+amethyst~
+It has a very deep purple colour.
+~
+#3612
+pendant silver~
+a silver pendant~
+A silver pendant on a chain lies here.~
+~
+8 0 16389
+0 0 0 0
+1 400 80
+E
+pendant silver~
+It resembles Thor's hammer and appears to be made of solid silver.
+~
+#3613
+dagger silver~
+a silver dagger~
+A silver dagger lies here.~
+pierce~
+5 0 8193
+0 1 4 11
+1 100 20
+E
+dagger silver~
+It has a long, sharp blade that is made entirely from silver.  A small rune
+has been engraved on the blade next to the hilt.
+~
+A
+19 1
+$~
