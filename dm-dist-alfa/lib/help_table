@@ -26,7 +26,7 @@ HIDE
 
 Thieves Only.
 When you type hide there is a chance that you hide in the room. If hidden
-you can only be "sensed" by the "sense life" spell. Even if sensed your
+you can only be "sensed" by the "life detector" technology. Even if sensed your
 identity will remain hidden. Hide is broken by pressing return, regardless
 of wherther you typed a command or not.
 
@@ -224,15 +224,15 @@ The chance of successfully backstabbing a person depends on how well you
 have practiced backstab at your guild. You can always backstab sleeping
 persons.
 #
-CAST
-For "magical" people. If you want to throw a spell at someone or something.
-Example : cast 'burning hands' <player>
-   Note that the name of the spell must be enclosed by "'"s.
+ACTIVATE
+For scientists and nobles. If you want to use technology on someone or something.
+Example : activate 'thermal projector' <target>
+   Note that the name of the technology must be enclosed by "'"s.
 
-See also : help on each individual spell, for example:
-  > help cure ligh
-  > help ventri
-  > help energy drain
+See also : help on each individual technology, for example:
+  > help first aid
+  > help voice proj
+  > help vitality drain
 #
 DROP
 If you lose interest in a carried item, you can drop it on the ground.
@@ -348,11 +348,11 @@ your skills by using the practice command.
 See also: PRACTICE
 #
 PRACTICE PRACTISE
-Practice is the way you improve your spells and skills. You must go to
+Practice is the way you improve your technologies and skills. You must go to
 your guildmaster to let him/her help you improve.
-If you type practice, you will see which skills you can improve upon, and
-how good you already are at these.
-You can then use practice <skill>, to practice the appropriate skill.
+If you type practice, you will see which technologies you can improve upon, and
+how proficient you already are at using these.
+You can then use practice <technology>, to practice the appropriate technology.
 You can only practise a certain amount for each level you gain, and you
 do not have to save this, it can be accumulated.
 #
@@ -941,8 +941,8 @@ can order charmed person using the order command.
 
 See Also: FOLLOW ORDER
 #
-"SENSE LIFE"
-Usage       : cast 'sense life' [self]
+"LIFE DETECTOR"
+Usage       : activate 'life detector' [self]
 Accumulative: No
 Duration    : 5 hours per level
 
