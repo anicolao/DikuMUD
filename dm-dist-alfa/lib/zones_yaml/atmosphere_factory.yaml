@@ -680,7 +680,7 @@ rooms:
     key_vnum: -1
     to_room: 4130
   extra_descriptions: []
-- vnum: 4125
+- vnum: 4054
   name: Distribution Manifold - Control Room
   description: '   This control room oversees the oxygen distribution systems. Complex
     instrumentation
@@ -724,7 +724,7 @@ rooms:
       or
 
       matter transmission technology.'
-- vnum: 4126
+- vnum: 4055
   name: Distribution Manifold Chamber
   description: '   This chamber contains the actual distribution manifold - a massive
     spherical structure
@@ -758,7 +758,7 @@ rooms:
       energy
 
       flows, but where that energy comes from or goes to remains a mystery.'
-- vnum: 4127
+- vnum: 4056
   name: Pressure Monitoring Station
   description: '   This station monitors the pressure of gases throughout the factory
     systems. Numerous
@@ -784,7 +784,7 @@ rooms:
     key_vnum: -1
     to_room: 4128
   extra_descriptions: []
-- vnum: 4128
+- vnum: 4057
   name: Emergency Valve Chamber
   description: '   This chamber houses massive emergency valves that can shut down
     different sections
@@ -813,7 +813,7 @@ rooms:
       from becoming a global catastrophe. The valves are purely mechanical - no electronics
 
       or complex systems - ensuring they''ll function even if all else fails.'
-- vnum: 4130
+- vnum: 4059
   name: Restricted Access Corridor
   description: '   This corridor leads to the most restricted areas of the factory
     - the radium power core
@@ -836,7 +836,7 @@ rooms:
     description: A heavily secured door leads to the power core entrance.
     keywords: door secured
     door_flag: 2
-    key_vnum: 4200
+    key_vnum: 4050
     to_room: 4135
   extra_descriptions:
   - keywords: signs warnings
@@ -847,7 +847,7 @@ rooms:
       including
 
       ancient Martian. Even someone who couldn''t read would understand the danger.'
-- vnum: 4135
+- vnum: 4064
   name: Power Core - Outer Chamber
   description: '   You enter the outer chamber of the power core. The temperature
     is noticeably higher here,
@@ -867,13 +867,13 @@ rooms:
     description: The secured door leads back to the corridor.
     keywords: door secured
     door_flag: 2
-    key_vnum: 4200
+    key_vnum: 4050
     to_room: 4130
   - direction: 2
     description: A radiation-shielded door leads to the core chamber itself.
     keywords: door shielded
     door_flag: 2
-    key_vnum: 4201
+    key_vnum: 4051
     to_room: 4136
   extra_descriptions:
   - keywords: window view
@@ -884,7 +884,7 @@ rooms:
       enormous
 
       power. The core has been operating continuously for uncounted millennia.'
-- vnum: 4136
+- vnum: 4065
   name: Radium Power Core Chamber
   description: '   You are in the heart of the factory - the radium power core chamber.
     The walls are lined
@@ -907,7 +907,7 @@ rooms:
     description: The shielded door leads to the outer chamber.
     keywords: door shielded
     door_flag: 2
-    key_vnum: 4201
+    key_vnum: 4051
     to_room: 4135
   - direction: 2
     description: A door leads to the core monitoring station.
@@ -927,7 +927,7 @@ rooms:
       eternal
 
       operation.'
-- vnum: 4137
+- vnum: 4066
   name: Core Monitoring Station
   description: '   This station monitors the power core''s operation. Readouts show
     energy output, radiation
@@ -956,7 +956,7 @@ rooms:
     key_vnum: -1
     to_room: 4138
   extra_descriptions: []
-- vnum: 4138
+- vnum: 4067
   name: Coolant System Control
   description: '   This room controls the coolant systems that prevent the core from
     overheating. Pumps
@@ -988,7 +988,7 @@ rooms:
 
       dissipated. The coolant appears to be self-circulating, requiring no external
       power.'
-- vnum: 4140
+- vnum: 4069
   name: Administrative Section - Entrance
   description: '   This section houses the factory''s administrative offices. Here,
     records are kept of
@@ -1017,7 +1017,7 @@ rooms:
     key_vnum: -1
     to_room: 4142
   extra_descriptions: []
-- vnum: 4141
+- vnum: 4070
   name: Records Office
   description: '   This office maintains the factory''s operational records. Shelves
     hold countless volumes
@@ -1048,7 +1048,7 @@ rooms:
       to keep
 
       things running, and the hard-won knowledge that allowed Mars to survive.'
-- vnum: 4142
+- vnum: 4071
   name: Administrative Corridor
   description: '   This corridor connects various administrative offices. It''s quieter
     here than in the
@@ -1081,7 +1081,7 @@ rooms:
     key_vnum: -1
     to_room: 4144
   extra_descriptions: []
-- vnum: 4143
+- vnum: 4072
   name: Personnel Office
   description: '   This office manages the factory''s personnel - assignments, rotations,
     evaluations, and
@@ -1104,7 +1104,7 @@ rooms:
     key_vnum: -1
     to_room: 4142
   extra_descriptions: []
-- vnum: 4144
+- vnum: 4073
   name: Security Administration
   description: '   This office manages the factory''s security operations. Maps show
     the security perimeter,
@@ -1130,7 +1130,7 @@ rooms:
     description: A concealed door leads to restricted areas.
     keywords: door concealed
     door_flag: 2
-    key_vnum: 4202
+    key_vnum: 4052
     to_room: 4145
   extra_descriptions:
   - keywords: maps intelligence reports
@@ -1141,7 +1141,7 @@ rooms:
       control of the
 
       factory, giving them leverage over all Mars.'
-- vnum: 4145
+- vnum: 4074
   name: Restricted Storage
   description: '   This secure storage area contains sensitive materials and equipment.
     Heavy security doors
@@ -1159,13 +1159,13 @@ rooms:
     description: The concealed door leads to security administration.
     keywords: door concealed
     door_flag: 2
-    key_vnum: 4202
+    key_vnum: 4052
     to_room: 4144
   - direction: 5
     description: A hidden trapdoor in the floor leads down to maintenance tunnels.
     keywords: trapdoor hidden
     door_flag: 2
-    key_vnum: 4203
+    key_vnum: 4053
     to_room: 4150
   extra_descriptions:
   - keywords: trapdoor
@@ -1176,7 +1176,7 @@ rooms:
       leads down to
 
       the abandoned lower levels - areas that were sealed off long ago.'
-- vnum: 4146
+- vnum: 4075
   name: Emergency Escape Route
   description: '   This corridor serves as an emergency evacuation route from the
     restricted areas. It''s
@@ -1837,7 +1837,7 @@ mobiles:
     default_position: 8
     sex: 1
 objects:
-- vnum: 4200
+- vnum: 4050
   namelist: key security red
   short_desc: a red security key
   long_desc: A red-colored security key lies here.
@@ -1860,7 +1860,7 @@ objects:
       a red color code and the factory insignia. Only senior personnel are issued
       these keys.'
   affects: []
-- vnum: 4201
+- vnum: 4051
   namelist: key core blue
   short_desc: a blue core access key
   long_desc: A blue-colored key to the power core lies here.
@@ -1885,7 +1885,7 @@ objects:
 
       maintenance or monitoring.'
   affects: []
-- vnum: 4202
+- vnum: 4052
   namelist: key administration green
   short_desc: a green administrative key
   long_desc: A green administrative key lies here.
@@ -1907,7 +1907,7 @@ objects:
 
       color coding and administrative symbols.'
   affects: []
-- vnum: 4203
+- vnum: 4053
   namelist: key trapdoor silver
   short_desc: a silver maintenance key
   long_desc: A silver key for maintenance access lies here.
@@ -1930,7 +1930,7 @@ objects:
       levels. It''s an old key, suggesting these passages have been sealed for a long
       time.'
   affects: []
-- vnum: 4204
+- vnum: 4054
   namelist: sword factory guard elite
   short_desc: an elite guard's longsword
   long_desc: A high-quality longsword with the factory insignia lies here.
@@ -1955,7 +1955,7 @@ objects:
 
       maintained to exacting standards.'
   affects: []
-- vnum: 4205
+- vnum: 4055
   namelist: rifle radium enhanced factory
   short_desc: an enhanced factory radium rifle
   long_desc: A high-powered radium rifle lies here.
@@ -1980,7 +1980,7 @@ objects:
 
       common rifles, with improved energy cells.'
   affects: []
-- vnum: 4206
+- vnum: 4056
   namelist: armor harness reinforced factory
   short_desc: reinforced factory guard armor
   long_desc: Enhanced armor bearing the factory insignia lies here.
@@ -2005,7 +2005,7 @@ objects:
 
       Factory guards wear the best armor available.'
   affects: []
-- vnum: 4207
+- vnum: 4057
   namelist: helmet guard factory
   short_desc: a factory guard helmet
   long_desc: A well-made helmet with the factory insignia lies here.
@@ -2028,7 +2028,7 @@ objects:
       The factory insignia is prominently displayed, marking the wearer as a factory
       defender.'
   affects: []
-- vnum: 4208
+- vnum: 4058
   namelist: tools engineering set
   short_desc: an engineering tool set
   long_desc: A comprehensive set of engineering tools lies here.
@@ -2053,7 +2053,7 @@ objects:
 
       the tools themselves are of ancient design, irreplaceable if lost.'
   affects: []
-- vnum: 4209
+- vnum: 4059
   namelist: manual technical ancient
   short_desc: an ancient technical manual
   long_desc: An ancient technical manual lies here, its pages yellowed with age.
@@ -2081,7 +2081,7 @@ objects:
 
       texts constantly, and each one is precious beyond price.'
   affects: []
-- vnum: 4210
+- vnum: 4060
   namelist: manual modern reference
   short_desc: a modern reference manual
   long_desc: A modern reference manual with handwritten notes lies here.
@@ -2106,7 +2106,7 @@ objects:
 
       as authoritative as the ancient texts, it''s more practical for day-to-day operations.'
   affects: []
-- vnum: 4211
+- vnum: 4061
   namelist: badge factory identification
   short_desc: a factory identification badge
   long_desc: An official factory ID badge lies here.
@@ -2130,7 +2130,7 @@ objects:
 
       and being caught without one in restricted areas is cause for immediate detention.'
   affects: []
-- vnum: 4212
+- vnum: 4062
   namelist: sample oxygen bottle
   short_desc: a bottle of oxygen sample
   long_desc: A sealed bottle containing an oxygen sample lies here.
@@ -2152,7 +2152,7 @@ objects:
 
       gas is pure and breathable, though concentrated beyond normal atmospheric levels.'
   affects: []
-- vnum: 4213
+- vnum: 4063
   namelist: device scanning diagnostic
   short_desc: a diagnostic scanner
   long_desc: A complex diagnostic device lies here.
@@ -2180,7 +2180,7 @@ objects:
 
       critical failures.'
   affects: []
-- vnum: 4214
+- vnum: 4064
   namelist: suit radiation protective
   short_desc: a radiation protective suit
   long_desc: A protective suit for radiation work lies here.
@@ -2208,7 +2208,7 @@ objects:
 
       the core is strictly limited.'
   affects: []
-- vnum: 4215
+- vnum: 4065
   namelist: pistol radium compact
   short_desc: a compact radium pistol
   long_desc: A compact but powerful radium pistol lies here.
@@ -2233,7 +2233,7 @@ objects:
 
       tight spaces. Officers and special personnel often carry these as sidearms.'
   affects: []
-- vnum: 4216
+- vnum: 4066
   namelist: dagger combat factory
   short_desc: a factory combat dagger
   long_desc: A well-balanced combat dagger lies here.
@@ -2255,7 +2255,7 @@ objects:
 
       combat and utility work, with a strong blade that can serve as a tool when needed.'
   affects: []
-- vnum: 4217
+- vnum: 4067
   namelist: medicine antidote radiation
   short_desc: radiation antidote medicine
   long_desc: A vial of radiation antidote lies here.
@@ -2280,7 +2280,7 @@ objects:
 
       and difficult to produce, but essential for protecting core maintenance personnel.'
   affects: []
-- vnum: 4218
+- vnum: 4068
   namelist: gloves insulated working
   short_desc: insulated work gloves
   long_desc: A pair of insulated work gloves lies here.
@@ -2305,7 +2305,7 @@ objects:
 
       insulation is remarkable, allowing work in extreme conditions.'
   affects: []
-- vnum: 4219
+- vnum: 4069
   namelist: goggles protective safety
   short_desc: protective safety goggles
   long_desc: A pair of safety goggles lies here.
@@ -2330,7 +2330,7 @@ objects:
 
       that doesn''t scratch or fog, another bit of ancient technology.'
   affects: []
-- vnum: 4220
+- vnum: 4070
   namelist: lamp portable radium
   short_desc: a radium-powered lamp
   long_desc: A small portable lamp glowing with radium light lies here.
@@ -2356,7 +2356,7 @@ objects:
       The light is slightly blue-tinged but more than adequate for working in dark
       areas.'
   affects: []
-- vnum: 4221
+- vnum: 4071
   namelist: artifact ancient component
   short_desc: an ancient artifact
   long_desc: A mysterious ancient component lies here.
@@ -2381,7 +2381,7 @@ objects:
 
       that seem impossible. Scholars would pay highly for such artifacts to study.'
   affects: []
-- vnum: 4222
+- vnum: 4072
   namelist: crystal power focusing
   short_desc: a focusing crystal
   long_desc: A glowing crystal that focuses energy lies here.
@@ -2408,7 +2408,7 @@ objects:
 
       factory systems and are carefully preserved when encountered.'
   affects: []
-- vnum: 4223
+- vnum: 4073
   namelist: schematic blueprint ancient
   short_desc: an ancient schematic
   long_desc: A blueprint showing factory system designs lies here.
@@ -2436,7 +2436,7 @@ objects:
 
       invaluable for maintenance and repair work.'
   affects: []
-- vnum: 4224
+- vnum: 4074
   namelist: communicator radio factory
   short_desc: a factory radio communicator
   long_desc: A radio communication device lies here.
@@ -2461,7 +2461,7 @@ objects:
 
       works despite the interference from the factory''s powerful systems.'
   affects: []
-- vnum: 4225
+- vnum: 4075
   namelist: rations factory preserved
   short_desc: factory rations
   long_desc: A package of preserved factory rations lies here.
@@ -2496,15 +2496,15 @@ resets:
   arg3: 4100
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4207
+  arg1: 4057
   arg2: 100
 - command: M
   if_flag: 0
@@ -2513,15 +2513,15 @@ resets:
   arg3: 4101
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: M
   if_flag: 0
@@ -2530,11 +2530,11 @@ resets:
   arg3: 4103
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: M
   if_flag: 0
@@ -2543,11 +2543,11 @@ resets:
   arg3: 4103
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4216
+  arg1: 4066
   arg2: 100
 - command: M
   if_flag: 0
@@ -2556,11 +2556,11 @@ resets:
   arg3: 4104
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: M
   if_flag: 0
@@ -2569,19 +2569,19 @@ resets:
   arg3: 4103
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4215
+  arg1: 4065
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4200
+  arg1: 4050
   arg2: 100
 - command: M
   if_flag: 0
@@ -2590,15 +2590,15 @@ resets:
   arg3: 4105
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4218
+  arg1: 4068
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4219
+  arg1: 4069
   arg2: 100
 - command: M
   if_flag: 0
@@ -2607,24 +2607,24 @@ resets:
   arg3: 4115
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4102
   arg2: 1
-  arg3: 4125
+  arg3: 4054
 - command: G
   if_flag: 1
-  arg1: 4210
+  arg1: 4060
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4224
+  arg1: 4074
   arg2: 100
 - command: M
   if_flag: 0
@@ -2633,11 +2633,11 @@ resets:
   arg3: 4106
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4210
+  arg1: 4060
   arg2: 100
 - command: M
   if_flag: 0
@@ -2651,7 +2651,7 @@ resets:
   arg3: 4117
 - command: G
   if_flag: 1
-  arg1: 4210
+  arg1: 4060
   arg2: 100
 - command: M
   if_flag: 0
@@ -2660,19 +2660,19 @@ resets:
   arg3: 4111
 - command: G
   if_flag: 1
-  arg1: 4209
+  arg1: 4059
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4200
+  arg1: 4050
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4224
+  arg1: 4074
   arg2: 100
 - command: M
   if_flag: 0
@@ -2681,15 +2681,15 @@ resets:
   arg3: 4112
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4221
+  arg1: 4071
   arg2: 50
 - command: M
   if_flag: 0
@@ -2698,11 +2698,11 @@ resets:
   arg3: 4109
 - command: G
   if_flag: 1
-  arg1: 4209
+  arg1: 4059
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 4210
+  arg1: 4060
   arg2: 100
 - command: M
   if_flag: 0
@@ -2711,11 +2711,11 @@ resets:
   arg3: 4116
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4219
+  arg1: 4069
   arg2: 100
 - command: M
   if_flag: 0
@@ -2724,33 +2724,33 @@ resets:
   arg3: 4118
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4113
   arg2: 1
-  arg3: 4125
+  arg3: 4054
 - command: G
   if_flag: 1
-  arg1: 4224
+  arg1: 4074
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4212
+  arg1: 4062
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4113
   arg2: 1
-  arg3: 4137
+  arg3: 4066
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4224
+  arg1: 4074
   arg2: 100
 - command: M
   if_flag: 0
@@ -2759,7 +2759,7 @@ resets:
   arg3: 4115
 - command: G
   if_flag: 1
-  arg1: 4208
+  arg1: 4058
   arg2: 100
 - command: M
   if_flag: 0
@@ -2775,32 +2775,32 @@ resets:
   if_flag: 0
   arg1: 4115
   arg2: 1
-  arg3: 4140
+  arg3: 4069
 - command: G
   if_flag: 1
-  arg1: 4211
+  arg1: 4061
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4115
   arg2: 1
-  arg3: 4141
+  arg3: 4070
 - command: G
   if_flag: 1
-  arg1: 4210
+  arg1: 4060
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4116
   arg2: 1
-  arg3: 4126
+  arg3: 4055
 - command: G
   if_flag: 1
-  arg1: 4213
+  arg1: 4063
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4212
+  arg1: 4062
   arg2: 100
 - command: M
   if_flag: 0
@@ -2809,11 +2809,11 @@ resets:
   arg3: 4109
 - command: G
   if_flag: 1
-  arg1: 4209
+  arg1: 4059
   arg2: 30
 - command: G
   if_flag: 1
-  arg1: 4223
+  arg1: 4073
   arg2: 20
 - command: M
   if_flag: 0
@@ -2822,7 +2822,7 @@ resets:
   arg3: 4108
 - command: G
   if_flag: 1
-  arg1: 4217
+  arg1: 4067
   arg2: 50
 - command: M
   if_flag: 0
@@ -2831,7 +2831,7 @@ resets:
   arg3: 4107
 - command: G
   if_flag: 1
-  arg1: 4225
+  arg1: 4075
   arg2: 100
 - command: M
   if_flag: 0
@@ -2840,11 +2840,11 @@ resets:
   arg3: 4102
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4216
+  arg1: 4066
   arg2: 100
 - command: M
   if_flag: 0
@@ -2853,11 +2853,11 @@ resets:
   arg3: 4110
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4215
+  arg1: 4065
   arg2: 100
 - command: M
   if_flag: 0
@@ -2866,90 +2866,90 @@ resets:
   arg3: 4120
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4111
   arg2: 2
-  arg3: 4130
+  arg3: 4059
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4111
   arg2: 2
-  arg3: 4135
+  arg3: 4064
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4214
+  arg1: 4064
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4100
   arg2: 2
-  arg3: 4136
+  arg3: 4065
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4214
+  arg1: 4064
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4201
+  arg1: 4051
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4100
   arg2: 1
-  arg3: 4137
+  arg3: 4066
 - command: G
   if_flag: 1
-  arg1: 4205
+  arg1: 4055
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4214
+  arg1: 4064
   arg2: 100
 - command: M
   if_flag: 0
   arg1: 4120
   arg2: 1
-  arg3: 4136
+  arg3: 4065
 - command: M
   if_flag: 0
   arg1: 4120
   arg2: 1
-  arg3: 4145
+  arg3: 4074
 - command: M
   if_flag: 0
   arg1: 4108
@@ -2957,11 +2957,11 @@ resets:
   arg3: 4116
 - command: G
   if_flag: 1
-  arg1: 4215
+  arg1: 4065
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4216
+  arg1: 4066
   arg2: 100
 - command: M
   if_flag: 0
@@ -2970,11 +2970,11 @@ resets:
   arg3: 4115
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 4216
+  arg1: 4066
   arg2: 100
 - command: M
   if_flag: 0
@@ -2983,7 +2983,7 @@ resets:
   arg3: 4117
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 50
 - command: M
   if_flag: 0
@@ -2992,194 +2992,194 @@ resets:
   arg3: 4119
 - command: G
   if_flag: 1
-  arg1: 4215
+  arg1: 4065
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4216
+  arg1: 4066
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4221
+  arg1: 4071
   arg2: 20
 - command: O
   if_flag: 0
-  arg1: 4208
+  arg1: 4058
   arg2: 3
   arg3: 4112
 - command: O
   if_flag: 0
-  arg1: 4218
+  arg1: 4068
   arg2: 2
   arg3: 4112
 - command: O
   if_flag: 0
-  arg1: 4219
+  arg1: 4069
   arg2: 2
   arg3: 4112
 - command: O
   if_flag: 0
-  arg1: 4209
+  arg1: 4059
   arg2: 2
   arg3: 4109
 - command: O
   if_flag: 0
-  arg1: 4210
+  arg1: 4060
   arg2: 5
   arg3: 4109
 - command: O
   if_flag: 0
-  arg1: 4223
+  arg1: 4073
   arg2: 1
   arg3: 4109
 - command: O
   if_flag: 0
-  arg1: 4204
+  arg1: 4054
   arg2: 5
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4205
+  arg1: 4055
   arg2: 5
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4206
+  arg1: 4056
   arg2: 5
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4207
+  arg1: 4057
   arg2: 5
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4215
+  arg1: 4065
   arg2: 3
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4216
+  arg1: 4066
   arg2: 5
   arg3: 4104
 - command: O
   if_flag: 0
-  arg1: 4214
+  arg1: 4064
   arg2: 3
-  arg3: 4135
+  arg3: 4064
 - command: O
   if_flag: 0
-  arg1: 4217
+  arg1: 4067
   arg2: 2
-  arg3: 4135
+  arg3: 4064
 - command: O
   if_flag: 0
-  arg1: 4220
+  arg1: 4070
   arg2: 2
-  arg3: 4135
+  arg3: 4064
 - command: O
   if_flag: 0
-  arg1: 4213
+  arg1: 4063
   arg2: 2
-  arg3: 4125
+  arg3: 4054
 - command: O
   if_flag: 0
-  arg1: 4213
+  arg1: 4063
   arg2: 1
-  arg3: 4137
+  arg3: 4066
 - command: O
   if_flag: 0
-  arg1: 4225
+  arg1: 4075
   arg2: 10
   arg3: 4107
 - command: O
   if_flag: 0
-  arg1: 4224
+  arg1: 4074
   arg2: 3
   arg3: 4101
 - command: O
   if_flag: 0
-  arg1: 4224
+  arg1: 4074
   arg2: 2
-  arg3: 4125
+  arg3: 4054
 - command: O
   if_flag: 0
-  arg1: 4212
+  arg1: 4062
   arg2: 3
-  arg3: 4126
+  arg3: 4055
 - command: O
   if_flag: 0
-  arg1: 4221
+  arg1: 4071
   arg2: 1
-  arg3: 4145
+  arg3: 4074
 - command: O
   if_flag: 0
-  arg1: 4222
+  arg1: 4072
   arg2: 2
-  arg3: 4136
+  arg3: 4065
 - command: O
   if_flag: 0
-  arg1: 4200
+  arg1: 4050
   arg2: 1
   arg3: 4103
 - command: O
   if_flag: 0
-  arg1: 4201
+  arg1: 4051
   arg2: 1
-  arg3: 4137
+  arg3: 4066
 - command: O
   if_flag: 0
-  arg1: 4203
+  arg1: 4053
   arg2: 1
-  arg3: 4145
+  arg3: 4074
 - command: O
   if_flag: 0
-  arg1: 4225
+  arg1: 4075
   arg2: 15
   arg3: 4149
 - command: O
   if_flag: 0
-  arg1: 4217
+  arg1: 4067
   arg2: 5
   arg3: 4149
 - command: O
   if_flag: 0
-  arg1: 4204
+  arg1: 4054
   arg2: 8
   arg3: 4149
 - command: O
   if_flag: 0
-  arg1: 4205
+  arg1: 4055
   arg2: 8
   arg3: 4149
 - command: O
   if_flag: 0
-  arg1: 4206
+  arg1: 4056
   arg2: 8
   arg3: 4149
 - command: M
   if_flag: 0
   arg1: 4101
   arg2: 1
-  arg3: 4144
+  arg3: 4073
 - command: G
   if_flag: 1
-  arg1: 4200
+  arg1: 4050
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4202
+  arg1: 4052
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4204
+  arg1: 4054
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4206
+  arg1: 4056
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 4224
+  arg1: 4074
   arg2: 100
 shops: []
