@@ -4879,3 +4879,28 @@ shops:
   close1: 14
   open2: 15
   close2: 21
+- vnum: 12
+  producing:
+  - 3002
+  - 3003
+  - 3004
+  profit_buy: 1.0
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s It''s very noisy in here, what did you say you wanted to buy?'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s Are you drunk or what ?? - NO CREDIT!'
+    message_buy: '%s That''ll be - say %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3046
+  with_who: 0
+  in_room: 3048
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
