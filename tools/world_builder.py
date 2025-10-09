@@ -573,26 +573,22 @@ class WorldBuilder:
                 resets = data.get('resets', [])
                 all_records.append((zone['number'], self._build_zone(zone, resets)))
             elif file_type == 'shp':
-                # Shop files are not yet implemented in YAML
-                # For now, just skip them
-                pass
+                # Build shops from YAML
+                shops = data.get('shops', [])
+                all_records.extend([(s['vnum'], self._build_shop(s)) for s in shops])
         
         # Sort by vnum
         all_records.sort(key=lambda x: x[0])
         
         # Write output
         with open(output_file, 'w') as f:
-            if file_type == 'shp':
-                # For shop files, just write EOF marker for now
-                f.write("$~\n")
+            for _, record_text in all_records:
+                f.write(record_text)
+            # Add final EOF marker
+            if file_type == 'wld':
+                f.write("#9000\n$~\n")
             else:
-                for _, record_text in all_records:
-                    f.write(record_text)
-                # Add final EOF marker
-                if file_type == 'wld':
-                    f.write("#9000\n$~\n")
-                else:
-                    f.write("$~\n")
+                f.write("$~\n")
     
     def _build_room(self, room: dict) -> str:
         """Build DikuMUD format room record."""
@@ -665,6 +661,58 @@ class WorldBuilder:
             lines.append(f"{affect['location']} {affect['modifier']}")
         
         lines.append("")
+        return '\n'.join(lines) + '\n'
+    
+    def _build_shop(self, shop: dict) -> str:
+        """Build DikuMUD format shop record."""
+        lines = []
+        lines.append(f"#{shop['vnum']}~")
+        
+        # Producing items (up to 6, pad with -1)
+        producing = shop.get('producing', [])
+        for i in range(6):
+            if i < len(producing):
+                lines.append(str(producing[i]))
+            else:
+                lines.append("-1")
+        
+        # Profit margins
+        lines.append(str(shop.get('profit_buy', 1.0)))
+        lines.append(str(shop.get('profit_sell', 1.0)))
+        
+        # Buy types (up to 5, pad with 0)
+        buy_types = shop.get('buy_types', [])
+        for i in range(5):
+            if i < len(buy_types):
+                lines.append(str(buy_types[i]))
+            else:
+                lines.append("0")
+        
+        # Messages (7 of them)
+        messages = shop.get('messages', {})
+        lines.append(messages.get('no_such_item1', '') + '~')
+        lines.append(messages.get('no_such_item2', '') + '~')
+        lines.append(messages.get('do_not_buy', '') + '~')
+        lines.append(messages.get('missing_cash1', '') + '~')
+        lines.append(messages.get('missing_cash2', '') + '~')
+        lines.append(messages.get('message_buy', '') + '~')
+        lines.append(messages.get('message_sell', '') + '~')
+        
+        # Tempers
+        lines.append(str(shop.get('temper1', 0)))
+        lines.append(str(shop.get('temper2', 0)))
+        
+        # Keeper, with_who, room
+        lines.append(str(shop.get('keeper', 0)))
+        lines.append(str(shop.get('with_who', 0)))
+        lines.append(str(shop.get('in_room', 0)))
+        
+        # Hours
+        lines.append(str(shop.get('open1', 0)))
+        lines.append(str(shop.get('close1', 28)))
+        lines.append(str(shop.get('open2', 0)))
+        lines.append(str(shop.get('close2', 0)))
+        
         return '\n'.join(lines) + '\n'
     
     def _build_zone(self, zone: dict, resets: list) -> str:

@@ -4323,4 +4323,34 @@ resets:
   arg1: 4136
   arg2: 3
   arg3: 4023
-shops: []
+shops:
+- vnum: 1
+  producing:
+  - 4100
+  - 4101
+  - 4102
+  - 4103
+  - 4104
+  - 4105
+  profit_buy: 1.2
+  profit_sell: 0.8
+  buy_types:
+  - 5
+  - 20
+  messages:
+    no_such_item1: '%s That weapon is not for sale.'
+    no_such_item2: '%s You don''t have that weapon.'
+    do_not_buy: '%s I only trade weapons and equipment.'
+    missing_cash1: '%s That is too valuable for me.'
+    missing_cash2: '%s You cannot afford it.'
+    message_buy: '%s That costs %d gold pieces.'
+    message_sell: '%s I''ll give you %d gold pieces for that.'
+  temper1: 0
+  temper2: 0
+  keeper: 4090
+  with_who: 0
+  in_room: 4040
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0

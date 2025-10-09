@@ -14,9 +14,6 @@ ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel southern_appr
 # YAML source files
 YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
 
-# Zone shop files (legacy .shp format, not yet in YAML)
-ZONE_SHOPS = $(foreach zone,$(ZONE_ORDER),lib/zones/$(zone).shp)
-
 # Build world data files from YAML zone files
 lib/tinyworld.wld: $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build wld $@ $(YAML_ZONES)
@@ -30,9 +27,8 @@ lib/tinyworld.obj: $(YAML_ZONES) ../tools/world_builder.py
 lib/tinyworld.zon: $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build zon $@ $(YAML_ZONES)
 
-# Shop files are still in legacy .shp format, concatenate them
-lib/tinyworld.shp: $(ZONE_SHOPS)
-	cat $(ZONE_SHOPS) > $@
+lib/tinyworld.shp: $(YAML_ZONES) ../tools/world_builder.py
+	python3 ../tools/world_builder.py build shp $@ $(YAML_ZONES)
 
 # Main build targets
 all: delplay dmserver worldfiles

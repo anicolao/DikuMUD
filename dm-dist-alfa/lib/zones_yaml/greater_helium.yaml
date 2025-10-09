@@ -6359,4 +6359,190 @@ resets:
   arg1: 3982
   arg2: 1
   arg3: 3912
-shops: []
+shops:
+- vnum: 1
+  producing:
+  - 3500
+  - 3501
+  profit_buy: 1.1
+  profit_sell: 0.9
+  buy_types: []
+  messages:
+    no_such_item1: '%s It''s very noisy in here, what did you say you wanted to buy?'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s Are you drunk or what ?? - NO CREDIT!'
+    message_buy: '%s That''ll be - say %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3911
+  with_who: 0
+  in_room: 3941
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 3
+  producing:
+  - 3510
+  - 3511
+  - 3630
+  profit_buy: 1.2
+  profit_sell: 0.9
+  buy_types:
+  - 19
+  messages:
+    no_such_item1: '%s Haven''t got that kind of food - try list!'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I don''t buy food items.'
+    missing_cash1: '%s I can''t afford such provisions.'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3902
+  with_who: 0
+  in_room: 3928
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 5
+  producing:
+  - 3500
+  - 3501
+  profit_buy: 1.0
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s If you have no money, you''ll have to go!'
+    message_buy: '%s That''ll be %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3943
+  with_who: 0
+  in_room: 3916
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 7
+  producing:
+  - 3501
+  - 3500
+  - 3502
+  profit_buy: 1.5
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s If you have no money, you''ll have to go!'
+    message_buy: '%s That''ll be %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3944
+  with_who: 0
+  in_room: 3935
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 9
+  producing:
+  - 3540
+  - 3541
+  - 3542
+  - 3543
+  - 3544
+  profit_buy: 1.05
+  profit_sell: 0.15
+  buy_types:
+  - 2
+  - 3
+  - 4
+  - 10
+  messages:
+    no_such_item1: '%s Sorry, I haven''t got exactly that item.'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I don''t buy such items.'
+    missing_cash1: '%s That is too expensive for me!'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3900
+  with_who: 0
+  in_room: 3933
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 11
+  producing:
+  - 3500
+  - 3501
+  - 3502
+  - 3503
+  - 3504
+  profit_buy: 1.1
+  profit_sell: 0.9
+  buy_types: []
+  messages:
+    no_such_item1: '%s I got no such drink.'
+    no_such_item2: '%s I see no such thing.'
+    do_not_buy: '%s I do not buy, would you like a drink?'
+    missing_cash1: '%s BUG, Please report'
+    missing_cash2: '%s You can''t afford such a fine drink, try the Common Rest.'
+    message_buy: '%s Fine, that''ll be %d gold pieces.'
+    message_sell: '%s Bug, please report (%d).'
+  temper1: 0
+  temper2: 0
+  keeper: 3911
+  with_who: 0
+  in_room: 3941
+  open1: 6
+  close1: 23
+  open2: 23
+  close2: 24
+- vnum: 13
+  producing:
+  - 3620
+  - 3621
+  - 3622
+  - 3623
+  - 3700
+  - 3701
+  profit_buy: 1.1
+  profit_sell: 0.9
+  buy_types:
+  - 9
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I only buy leather goods..'
+    missing_cash1: '%s That is too expensive for me - Try a wizard!'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3906
+  with_who: 0
+  in_room: 3925
+  open1: 8
+  close1: 14
+  open2: 15
+  close2: 21
