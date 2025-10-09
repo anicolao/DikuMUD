@@ -112,11 +112,21 @@ void validate_shops()
 			
 			fscanf(shop_f,"%f \n",
 				&shop_index[number_of_shops].profit_buy);
-			printf("  Buy markup: %.2f\n", shop_index[number_of_shops].profit_buy);
+			printf("  Buy markup: %.2f", shop_index[number_of_shops].profit_buy);
+			if (shop_index[number_of_shops].profit_buy <= 0.0) {
+				printf(" WARNING: Buy markup should be positive!");
+				warnings++;
+			}
+			printf("\n");
 			
 			fscanf(shop_f,"%f \n",
 				&shop_index[number_of_shops].profit_sell);
-			printf("  Sell markup: %.2f\n", shop_index[number_of_shops].profit_sell);
+			printf("  Sell markup: %.2f", shop_index[number_of_shops].profit_sell);
+			if (shop_index[number_of_shops].profit_sell <= 0.0) {
+				printf(" WARNING: Sell markup should be positive!");
+				warnings++;
+			}
+			printf("\n");
 			
 			for(count=0;count<MAX_TRADE;count++)
 				{
@@ -184,11 +194,21 @@ void validate_shops()
 			fscanf(shop_f,"%d \n",
 				&shop_index[number_of_shops].close2);
 
-			printf("  Hours: %d-%d, %d-%d\n",
+			printf("  Hours: %d-%d, %d-%d", 
 				shop_index[number_of_shops].open1,
 				shop_index[number_of_shops].close1,
 				shop_index[number_of_shops].open2,
 				shop_index[number_of_shops].close2);
+			
+			/* Validate hours */
+			if (shop_index[number_of_shops].open1 < 0 || shop_index[number_of_shops].open1 > 23 ||
+			    shop_index[number_of_shops].close1 < 0 || shop_index[number_of_shops].close1 > 23 ||
+			    shop_index[number_of_shops].open2 < 0 || shop_index[number_of_shops].open2 > 23 ||
+			    shop_index[number_of_shops].close2 < 0 || shop_index[number_of_shops].close2 > 23) {
+				printf(" WARNING: Hours should be 0-23");
+				warnings++;
+			}
+			printf("\n");
 
 			/* Check if shop produces nothing */
 			int produces_something = 0;
@@ -221,7 +241,12 @@ void validate_shops()
 	printf("Warnings: %d\n", warnings);
 	
 	if (errors > 0) {
+		printf("\nValidation FAILED - please fix errors above.\n");
 		exit(1);
+	} else if (warnings > 0) {
+		printf("\nValidation completed with warnings.\n");
+	} else {
+		printf("\nAll shops validated successfully!\n");
 	}
 }
 
