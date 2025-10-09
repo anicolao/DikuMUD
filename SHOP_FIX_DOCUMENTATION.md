@@ -121,7 +121,12 @@ These should be addressed in a separate fix if desired.
 
 1. `dm-dist-alfa/lib/zones/lesser_helium.shp` - Added bread to shop #1
 2. `dm-dist-alfa/lib/zones/greater_helium.shp` - Fixed all keeper/room vnums (+400), reconfigured shop #3 for food
-3. `dm-dist-alfa/validate_shops.c` - Started C validation tool (incomplete)
-4. `tools/validate_shops.py` - Complete Python validation tool
-5. `dm-dist-alfa/test_shops.sh` - Test script for verifying fixes
-6. `SHOP_FIX_DOCUMENTATION.md` - This documentation
+3. `dm-dist-alfa/makefile` - Updated to concatenate zone .shp files instead of using world_builder.py (which doesn't support shops yet)
+4. `dm-dist-alfa/validate_shops.c` - Started C validation tool (incomplete)
+5. `tools/validate_shops.py` - Complete Python validation tool
+6. `dm-dist-alfa/test_shops.sh` - Test script for verifying fixes
+7. `SHOP_FIX_DOCUMENTATION.md` - This documentation
+
+## Important Note
+
+The `world_builder.py` script does not yet support building shop files from YAML. Until shop data is migrated to YAML format, the makefile concatenates the legacy `.shp` files from `lib/zones/` to create `lib/tinyworld.shp`.
