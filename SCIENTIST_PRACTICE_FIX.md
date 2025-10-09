@@ -3,10 +3,14 @@
 ## Issue
 The scientist practice command had two problems:
 1. Error messages said "spell" instead of "technology"
-2. The guildmaster lists "force projector" as available, but practice 'force projector' says "You do not know of this spell..."
+2. The guildmaster lists "force projector" as available, but practice 'force projector' says "You do not know of this technology..."
 
-## Root Cause
-The guild() function in spec_procs.c used outdated terminology from before the Barsoom reskinning. All references to "spells" needed to be changed to "technologies" for scientist and noble classes.
+## Root Causes
+The guild() function in spec_procs.c had two issues:
+
+1. **Terminology:** Used outdated "spell" terminology from before the Barsoom reskinning. All references to "spells" needed to be changed to "technologies" for scientist and noble classes.
+
+2. **Quote Handling:** The function didn't strip quotes from technology names. When users typed `practice 'force projector'` (with quotes, as used with the `activate` command), the function was searching for "'force projector'" (including the quotes) instead of "force projector", causing all technology practice attempts to fail.
 
 ## Changes Made
 Updated `dm-dist-alfa/spec_procs.c`:
@@ -14,10 +18,12 @@ Updated `dm-dist-alfa/spec_procs.c`:
 1. **Scientist (CLASS_MAGIC_USER) class:**
    - Line 138: Changed "spells" to "technologies" in list message
    - Lines 151, 155: Changed "spell" to "technology" in error messages
+   - **Added quote stripping logic** to handle technology names with quotes (e.g., `practice 'force projector'`)
 
 2. **Noble (CLASS_CLERIC) class:**
    - Line 223: Changed "spells" to "technologies" in list message
    - Lines 235, 239: Changed "spell" to "technology" in error messages
+   - **Added quote stripping logic** to handle technology names with quotes
 
 3. **Thief class (bonus fix):**
    - Line 194: Changed "spell" to "skill" in error message (was incorrect even before reskinning)
@@ -43,5 +49,22 @@ To verify the fix works in-game:
 - `dm-dist-alfa/spell_parser.c` - Technology/spell name definitions
 - `barsoom/RESKINNING_SUMMARY.md` - Overall reskinning documentation
 
+## Technical Details
+
+The quote stripping logic works as follows:
+```c
+if (*arg == '\'') {
+    int len;
+    arg++; /* Skip opening quote */
+    for(len=0; arg[len] && arg[len] != '\''; len++)
+        ;
+    if (arg[len] == '\'') {
+        arg[len] = '\0'; /* Null-terminate at closing quote */
+    }
+}
+```
+
+This matches the pattern used in the `activate` (cast) command in spell_parser.c, ensuring consistent behavior between activating and practicing technologies.
+
 ## Notes
-This fix completes the terminology consistency for the practice command, which was missed in the original Barsoom reskinning work. The underlying functionality was already correct - only the error messages needed updating.
+This fix addresses both the terminology inconsistency from the original Barsoom reskinning work and the critical functional bug where quote handling prevented technology practice from working at all.
