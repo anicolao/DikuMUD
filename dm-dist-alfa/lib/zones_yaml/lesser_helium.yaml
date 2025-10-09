@@ -2839,122 +2839,122 @@ mobiles:
     sex: 1
 objects:
 - vnum: 3000
-  namelist: item3000
-  short_desc: object 3000
-  long_desc: An object numbered 3000 lies here.
+  namelist: water barrel
+  short_desc: a water barrel
+  long_desc: A sealed water barrel stands here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 50
+  value1: 50
+  value2: 1
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 65
+  cost: 300
+  rent: 100
   extra_descriptions: []
   affects: []
 - vnum: 3001
-  namelist: item3001
-  short_desc: object 3001
-  long_desc: An object numbered 3001 lies here.
+  namelist: water flask
+  short_desc: a water flask
+  long_desc: A metal water flask has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 8
+  value1: 8
+  value2: 1
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 10
+  cost: 20
+  rent: 8
   extra_descriptions: []
   affects: []
 - vnum: 3002
-  namelist: item3002
-  short_desc: object 3002
-  long_desc: An object numbered 3002 lies here.
+  namelist: wine flask
+  short_desc: a flask of wine
+  long_desc: A flask of red wine has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 8
+  value1: 8
+  value2: 3
   value3: 0
-  weight: 1
+  weight: 10
   cost: 10
-  rent: 1
+  rent: 3
   extra_descriptions: []
   affects: []
 - vnum: 3003
-  namelist: item3003
-  short_desc: object 3003
-  long_desc: An object numbered 3003 lies here.
+  namelist: whiskey flask strong
+  short_desc: a strong whiskey
+  long_desc: A flask of strong Heliumetic whiskey has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 8
+  value1: 8
+  value2: 7
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 10
+  cost: 50
+  rent: 17
   extra_descriptions: []
   affects: []
 - vnum: 3004
-  namelist: item3004
-  short_desc: object 3004
-  long_desc: An object numbered 3004 lies here.
+  namelist: local wine flask
+  short_desc: a flask of local wine
+  long_desc: A flask of local wine has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 8
+  value1: 8
+  value2: 8
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 10
+  cost: 20
+  rent: 7
   extra_descriptions: []
   affects: []
 - vnum: 3010
-  namelist: item3010
-  short_desc: object 3010
-  long_desc: An object numbered 3010 lies here.
+  namelist: bread loaf
+  short_desc: a loaf of bread
+  long_desc: A loaf of Martian bread has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 19
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 1
+  value0: 12
   value1: 0
   value2: 0
   value3: 0
   weight: 1
   cost: 10
-  rent: 1
+  rent: 10
   extra_descriptions: []
   affects: []
 - vnum: 3011
-  namelist: item3011
-  short_desc: object 3011
-  long_desc: An object numbered 3011 lies here.
+  namelist: pastry dried fruit
+  short_desc: dried fruit pastry
+  long_desc: A pastry made with dried Martian fruits has been placed here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 19
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 1
+  value0: 5
   value1: 0
   value2: 0
   value3: 0
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 5
+  rent: 5
   extra_descriptions: []
   affects: []
 - vnum: 3020
@@ -3043,62 +3043,79 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3030
-  namelist: item3030
-  short_desc: object 3030
-  long_desc: An object numbered 3030 lies here.
+  namelist: torch
+  short_desc: a torch
+  long_desc: A torch lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 65537
   value0: 0
   value1: 0
-  value2: 0
+  value2: 24
   value3: 0
   weight: 1
   cost: 10
-  rent: 1
+  rent: 3
   extra_descriptions: []
   affects: []
 - vnum: 3031
-  namelist: item3031
-  short_desc: object 3031
-  long_desc: An object numbered 3031 lies here.
+  namelist: radium lamp
+  short_desc: a radium lamp
+  long_desc: A radium lamp casts a soft glow here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 65537
   value0: 0
   value1: 0
-  value2: 0
+  value2: 96
   value3: 0
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 50
+  rent: 17
   extra_descriptions: []
   affects: []
 - vnum: 3032
-  namelist: item3032
-  short_desc: object 3032
-  long_desc: An object numbered 3032 lies here.
+  namelist: leather bag
+  short_desc: a leather bag
+  long_desc: A leather bag lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 15
   extra_flags: 0
   wear_flags: 16385
-  value0: 0
+  value0: 50
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 2
+  cost: 20
+  rent: 7
+  extra_descriptions: []
+  affects: []
+- vnum: 3033
+  namelist: metal box
+  short_desc: a metal box
+  long_desc: A metal storage box sits here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 50
+  rent: 7
   extra_descriptions: []
   affects: []
 - vnum: 3034
-  namelist: item3034
-  short_desc: object 3034
-  long_desc: An object numbered 3034 lies here.
+  namelist: parchment note
+  short_desc: a parchment note
+  long_desc: A parchment note has been dropped here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 16
   extra_flags: 0
   wear_flags: 16385
   value0: 0
@@ -3107,15 +3124,15 @@ objects:
   value3: 0
   weight: 1
   cost: 10
-  rent: 1
+  rent: 2
   extra_descriptions: []
   affects: []
 - vnum: 3035
-  namelist: item3035
-  short_desc: object 3035
-  long_desc: An object numbered 3035 lies here.
+  namelist: stylus writing
+  short_desc: a writing stylus
+  long_desc: A metal writing stylus lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 21
   extra_flags: 0
   wear_flags: 16385
   value0: 0
@@ -3123,93 +3140,93 @@ objects:
   value2: 0
   value3: 0
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 20
+  rent: 4
   extra_descriptions: []
   affects: []
 - vnum: 3040
-  namelist: item3040
-  short_desc: object 3040
-  long_desc: An object numbered 3040 lies here.
+  namelist: scroll map
+  short_desc: a map scroll
+  long_desc: A rolled map scroll lies here.
   action_desc: ''
-  type_flag: 1
-  extra_flags: 0
+  type_flag: 2
+  extra_flags: 64
   wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
+  value0: 12
+  value1: 53
+  value2: -1
+  value3: -1
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 2000
+  rent: 50
   extra_descriptions: []
   affects: []
 - vnum: 3041
-  namelist: item3041
-  short_desc: object 3041
-  long_desc: An object numbered 3041 lies here.
+  namelist: potion sight
+  short_desc: a sight enhancement potion
+  long_desc: A small vial of clear liquid is here.
   action_desc: ''
-  type_flag: 1
-  extra_flags: 0
+  type_flag: 10
+  extra_flags: 64
   wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
+  value0: 12
+  value1: 19
+  value2: -1
+  value3: -1
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 400
+  rent: 50
   extra_descriptions: []
   affects: []
 - vnum: 3042
-  namelist: item3042
-  short_desc: object 3042
-  long_desc: An object numbered 3042 lies here.
+  namelist: scroll recall
+  short_desc: a recall scroll
+  long_desc: A scroll inscribed with mystical symbols lies here.
   action_desc: ''
-  type_flag: 1
-  extra_flags: 0
+  type_flag: 2
+  extra_flags: 64
   wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  value0: 12
+  value1: 42
+  value2: -1
+  value3: -1
+  weight: 4
+  cost: 2000
+  rent: 100
   extra_descriptions: []
   affects: []
 - vnum: 3043
-  namelist: item3043
-  short_desc: object 3043
-  long_desc: An object numbered 3043 lies here.
+  namelist: device invisibility
+  short_desc: an invisibility device
+  long_desc: A small technological device lies here.
   action_desc: ''
-  type_flag: 1
-  extra_flags: 0
+  type_flag: 3
+  extra_flags: 64
   wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  value0: 12
+  value1: 2
+  value2: 2
+  value3: 29
+  weight: 2
+  cost: 4000
+  rent: 100
   extra_descriptions: []
   affects: []
 - vnum: 3044
-  namelist: item3044
-  short_desc: object 3044
-  long_desc: An object numbered 3044 lies here.
+  namelist: staff sleep
+  short_desc: a sleeping staff
+  long_desc: A long staff with strange properties lies here.
   action_desc: ''
-  type_flag: 1
-  extra_flags: 0
+  type_flag: 4
+  extra_flags: 64
   wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  value0: 12
+  value1: 1
+  value2: 1
+  value3: 38
+  weight: 7
+  cost: 5000
+  rent: 100
   extra_descriptions: []
   affects: []
 - vnum: 3050
@@ -3349,105 +3366,105 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3066
-  namelist: item3066
-  short_desc: object 3066
-  long_desc: An object numbered 3066 lies here.
+  namelist: harness studded chest
+  short_desc: a studded chest harness
+  long_desc: A studded leather chest harness lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 9
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 10
+  cost: 200
+  rent: 40
   extra_descriptions: []
   affects: []
 - vnum: 3067
-  namelist: item3067
-  short_desc: object 3067
-  long_desc: An object numbered 3067 lies here.
+  namelist: helm studded
+  short_desc: a studded helm
+  long_desc: A studded leather helm lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 17
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 2
+  cost: 100
+  rent: 20
   extra_descriptions: []
   affects: []
 - vnum: 3068
-  namelist: item3068
-  short_desc: object 3068
-  long_desc: An object numbered 3068 lies here.
+  namelist: harness studded legs
+  short_desc: a studded leg harness
+  long_desc: A studded leather leg harness lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 33
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 8
+  cost: 100
+  rent: 20
   extra_descriptions: []
   affects: []
 - vnum: 3069
-  namelist: item3069
-  short_desc: object 3069
-  long_desc: An object numbered 3069 lies here.
+  namelist: boots studded
+  short_desc: a pair of studded boots
+  long_desc: A pair of studded leather boots lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 65
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 4
+  cost: 100
+  rent: 20
   extra_descriptions: []
   affects: []
 - vnum: 3070
-  namelist: item3070
-  short_desc: object 3070
-  long_desc: An object numbered 3070 lies here.
+  namelist: gloves studded
+  short_desc: a pair of studded gloves
+  long_desc: A pair of studded leather gloves lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 129
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 100
+  rent: 20
   extra_descriptions: []
   affects: []
 - vnum: 3071
-  namelist: item3071
-  short_desc: object 3071
-  long_desc: An object numbered 3071 lies here.
+  namelist: sleeves studded
+  short_desc: a pair of studded sleeves
+  long_desc: A pair of studded leather sleeves lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 257
+  value0: 3
   value1: 0
   value2: 0
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 4
+  cost: 100
+  rent: 20
   extra_descriptions: []
   affects: []
 - vnum: 3072
@@ -3923,6 +3940,57 @@ objects:
   value3: 0
   weight: 1
   cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3100
+  namelist: cup water metal
+  short_desc: a metal cup
+  long_desc: A metal cup lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 2
+  value2: 11
+  value3: 0
+  weight: 3
+  cost: 5
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3101
+  namelist: cup wine metal
+  short_desc: a metal cup
+  long_desc: A metal cup lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 2
+  value2: 12
+  value3: 0
+  weight: 3
+  cost: 7
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3102
+  namelist: cup water metal
+  short_desc: a metal cup
+  long_desc: A metal cup lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 2
+  value1: 2
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 2
   rent: 1
   extra_descriptions: []
   affects: []
@@ -4611,4 +4679,197 @@ resets:
   arg1: 3099
   arg2: 1
   arg3: 3001
-shops: []
+shops:
+- vnum: 1
+  producing:
+  - 3010
+  - 3011
+  - 3000
+  - 3001
+  profit_buy: 1.1
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s It''s very noisy in here, what did you say you wanted to buy?'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s Are you drunk or what ?? - NO CREDIT!'
+    message_buy: '%s That''ll be - say %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3001
+  with_who: 0
+  in_room: 3009
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 3
+  producing:
+  - 3030
+  - 3031
+  - 3032
+  - 3033
+  - 3034
+  - 3035
+  profit_buy: 1.5
+  profit_sell: 0.4
+  buy_types:
+  - 1
+  - 15
+  - 19
+  - 13
+  - 8
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I don''t buy THAT,... Try another shop.'
+    missing_cash1: '%s I can''t afford such a treasure.'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3002
+  with_who: 0
+  in_room: 3010
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 5
+  producing:
+  - 3002
+  - 3003
+  profit_buy: 1.0
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s If you have no money, you''ll have to go!'
+    message_buy: '%s That''ll be %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3042
+  with_who: 0
+  in_room: 3018
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 7
+  producing:
+  - 3004
+  - 3003
+  - 3002
+  profit_buy: 1.5
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s I don''t buy!'
+    do_not_buy: '%s I don''t buy!'
+    missing_cash1: '%s I don''t buy!'
+    missing_cash2: '%s If you have no money, you''ll have to go!'
+    message_buy: '%s That''ll be %d coins.'
+    message_sell: '%s Oups - %d a minor bug - please report!'
+  temper1: 0
+  temper2: 0
+  keeper: 3045
+  with_who: 0
+  in_room: 3022
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 9
+  producing:
+  - 3040
+  - 3041
+  - 3042
+  - 3043
+  - 3044
+  profit_buy: 1.05
+  profit_sell: 0.15
+  buy_types:
+  - 2
+  - 3
+  - 4
+  - 10
+  messages:
+    no_such_item1: '%s Sorry, I haven''t got exactly that item.'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I don''t buy such items.'
+    missing_cash1: '%s That is too expensive for me!'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3000
+  with_who: 0
+  in_room: 3033
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 11
+  producing:
+  - 3100
+  - 3101
+  - 3102
+  profit_buy: 1.1
+  profit_sell: 0.9
+  buy_types: []
+  messages:
+    no_such_item1: '%s I got no such drink.'
+    no_such_item2: '%s I see no such thing.'
+    do_not_buy: '%s I do not buy, would you like a drink?'
+    missing_cash1: '%s BUG, Please report'
+    missing_cash2: '%s You can''t afford such a fine drink, try the Grubby Inn.'
+    message_buy: '%s Fine, that''ll be %d gold pieces.'
+    message_sell: '%s Bug, please report (%d).'
+  temper1: 0
+  temper2: 0
+  keeper: 3100
+  with_who: 0
+  in_room: 3106
+  open1: 6
+  close1: 23
+  open2: 23
+  close2: 24
+- vnum: 14
+  producing:
+  - 3066
+  - 3067
+  - 3068
+  - 3069
+  - 3070
+  - 3071
+  profit_buy: 1.1
+  profit_sell: 0.9
+  buy_types:
+  - 9
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I only buy armours..'
+    missing_cash1: '%s That is too expensive for me - Try a wizard!'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3010
+  with_who: 0
+  in_room: 3035
+  open1: 8
+  close1: 14
+  open2: 15
+  close2: 21
