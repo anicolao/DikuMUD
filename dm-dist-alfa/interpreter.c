@@ -36,6 +36,8 @@ extern int top_of_p_table;
 extern struct index_data *mob_index;
 extern struct index_data *obj_index;
 extern struct room_data *world;
+extern struct zone_data *zone_table;
+extern int top_of_zone_table;
 struct command_info cmd_info[MAX_CMD_LIST];
 
 
@@ -1015,9 +1017,30 @@ int _parse_name(char *arg, char *name)
 
 	return(0);
 }
-			
 
 
+/* Generate a summary of the Barsoom world state */
+void send_barsoom_state(struct descriptor_data *d)
+{
+	char buf[MAX_STRING_LENGTH];
+	int i, zone_count;
+	
+	/* Count actual zones (excluding limbo and system zones) */
+	zone_count = 0;
+	for (i = 0; i <= top_of_zone_table; i++) {
+		if (zone_table[i].top > 0) {  /* Exclude terminator zones */
+			zone_count++;
+		}
+	}
+	
+	snprintf(buf, sizeof(buf), 
+		"\n\rThe state of Barsoom:\n\r"
+		"  %d zones are currently active across the dying world.\n\r"
+		"  The great cities await exploration by bold adventurers.\n\r\n\r",
+		zone_count - 1);  /* Subtract 1 to exclude limbo */
+	
+	SEND_TO_Q(buf, d);
+}
 
 
 /* deal with newcomers and other non-playing sockets */
@@ -1310,6 +1333,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		} break;
 
 		case CON_RMOTD:		/* read CR after printing motd	*/
+			send_barsoom_state(d);
 			SEND_TO_Q(MENU, d);
 			STATE(d) = CON_SLCT;
 		break;
