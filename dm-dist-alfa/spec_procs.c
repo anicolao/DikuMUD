@@ -135,7 +135,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 			if (!*arg) {
 				sprintf(buf,"You have got %d practice sessions left.\n\r", ch->specials.spells_to_learn);
 				send_to_char(buf, ch);
-				send_to_char("You can practise any of these spells:\n\r", ch);
+				send_to_char("You can practise any of these technologies:\n\r", ch);
 				for(i=0; *spells[i] != '\n'; i++)
 					if (spell_info[i+1].spell_pointer &&
 					    (spell_info[i+1].min_level_magic <= GET_LEVEL(ch))) {
@@ -148,11 +148,11 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 
 			number = old_search_block(arg,0,strlen(arg),spells,FALSE);
 			if(number == -1) {
-				send_to_char("You do not know of this spell...\n\r", ch);
+				send_to_char("You do not know of this technology...\n\r", ch);
 				return(TRUE);
 			}
 			if (GET_LEVEL(ch) < spell_info[number].min_level_magic) {
-				send_to_char("You do not know of this spell...\n\r", ch);
+				send_to_char("You do not know of this technology...\n\r", ch);
 				return(TRUE);
 			}
 			if (ch->specials.spells_to_learn <= 0) {
@@ -191,7 +191,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 			}
 			number = search_block(arg,t_skills,FALSE);
 			if(number == -1) {
-				send_to_char("You do not know of this spell...\n\r", ch);
+				send_to_char("You do not know of this skill...\n\r", ch);
 				return(TRUE);
 			}
 			if (ch->specials.spells_to_learn <= 0) {
@@ -220,7 +220,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 			if (!*arg) {
 				sprintf(buf,"You have got %d practice sessions left.\n\r", ch->specials.spells_to_learn);
 				send_to_char(buf, ch);
-				send_to_char("You can practise any of these spells:\n\r", ch);
+				send_to_char("You can practise any of these technologies:\n\r", ch);
 				for(i=0; *spells[i] != '\n'; i++)
 					if (spell_info[i+1].spell_pointer &&
 					   (spell_info[i+1].min_level_cleric <= GET_LEVEL(ch))) {
@@ -232,11 +232,11 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 			}
 			number = old_search_block(arg,0,strlen(arg),spells,FALSE);
 			if(number == -1) {
-				send_to_char("You do not know of this spell...\n\r", ch);
+				send_to_char("You do not know of this technology...\n\r", ch);
 				return(TRUE);
 			}
 			if (GET_LEVEL(ch) < spell_info[number].min_level_cleric) {
-				send_to_char("You do not know of this spell...\n\r", ch);
+				send_to_char("You do not know of this technology...\n\r", ch);
 				return(TRUE);
 			}
 			if (ch->specials.spells_to_learn <= 0) {
