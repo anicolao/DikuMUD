@@ -38,6 +38,11 @@ extern struct index_data *obj_index;
 extern struct room_data *world;
 extern struct zone_data *zone_table;
 extern int top_of_zone_table;
+extern int top_of_mobt;
+extern int top_of_objt;
+extern int top_of_world;
+extern struct quest_data *quest_index;
+extern int top_of_quest_table;
 struct command_info cmd_info[MAX_CMD_LIST];
 
 
@@ -1023,7 +1028,9 @@ int _parse_name(char *arg, char *name)
 void send_barsoom_state(struct descriptor_data *d)
 {
 	char buf[MAX_STRING_LENGTH];
-	int i, zone_count;
+	int i, j, zone_count, artifact_count, mob_count, room_count;
+	struct char_data *ch;
+	struct reset_com *cmd;
 	
 	/* Count actual zones (excluding limbo and system zones) */
 	zone_count = 0;
@@ -1032,14 +1039,59 @@ void send_barsoom_state(struct descriptor_data *d)
 			zone_count++;
 		}
 	}
+	zone_count -= 1;  /* Subtract 1 to exclude limbo */
 	
-	snprintf(buf, sizeof(buf), 
-		"\n\rThe state of Barsoom:\n\r"
-		"  %d zones are currently active across the dying world.\n\r"
-		"  The great cities await exploration by bold adventurers.\n\r\n\r",
-		zone_count - 1);  /* Subtract 1 to exclude limbo */
+	/* Count limited/artifact objects (objects with max_existing == 1 in zone resets) */
+	artifact_count = 0;
+	for (i = 0; i <= top_of_zone_table; i++) {
+		for (j = 0; zone_table[i].cmd[j].command != 'S'; j++) {
+			cmd = &zone_table[i].cmd[j];
+			if (cmd->command == 'O' && cmd->arg2 == 1) {
+				/* This is a limited object (only 1 can exist) */
+				if (obj_index[cmd->arg1].number > 0) {
+					artifact_count++;
+				}
+			}
+		}
+	}
 	
+	/* Count active mobs */
+	mob_count = 0;
+	for (ch = character_list; ch; ch = ch->next) {
+		if (IS_NPC(ch)) {
+			mob_count++;
+		}
+	}
+	
+	/* Count rooms */
+	room_count = top_of_world + 1;
+	
+	/* Build the status message */
+	snprintf(buf, sizeof(buf), "\n\rThe state of Barsoom:\n\r");
 	SEND_TO_Q(buf, d);
+	
+	snprintf(buf, sizeof(buf), "  %d zones are currently active across the dying world.\n\r", zone_count);
+	SEND_TO_Q(buf, d);
+	
+	if (artifact_count > 0) {
+		snprintf(buf, sizeof(buf), "  There are %d artifacts currently findable in the world!\n\r", artifact_count);
+		SEND_TO_Q(buf, d);
+	}
+	
+	if (top_of_quest_table > 0) {
+		snprintf(buf, sizeof(buf), "  There are %d quests to pursue!\n\r", top_of_quest_table);
+		SEND_TO_Q(buf, d);
+	}
+	
+	if (mob_count > 0) {
+		snprintf(buf, sizeof(buf), "  There are %d active mobs alive on Barsoom.\n\r", mob_count);
+		SEND_TO_Q(buf, d);
+	}
+	
+	snprintf(buf, sizeof(buf), "  There are %d rooms to explore.\n\r", room_count);
+	SEND_TO_Q(buf, d);
+	
+	SEND_TO_Q("  The great cities await exploration by bold adventurers.\n\r\n\r", d);
 }
 
 
