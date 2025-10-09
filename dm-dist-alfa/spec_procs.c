@@ -146,6 +146,17 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 				return(TRUE);
 			}
 
+			/* Strip quotes if present (technology names use quotes like activate command) */
+			if (*arg == '\'') {
+				int len;
+				arg++; /* Skip opening quote */
+				for(len=0; arg[len] && arg[len] != '\''; len++)
+					;
+				if (arg[len] == '\'') {
+					arg[len] = '\0'; /* Null-terminate at closing quote */
+				}
+			}
+
 			number = old_search_block(arg,0,strlen(arg),spells,FALSE);
 			if(number == -1) {
 				send_to_char("You do not know of this technology...\n\r", ch);
@@ -230,6 +241,18 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 				}
 				return(TRUE);
 			}
+
+			/* Strip quotes if present (technology names use quotes like activate command) */
+			if (*arg == '\'') {
+				int len;
+				arg++; /* Skip opening quote */
+				for(len=0; arg[len] && arg[len] != '\''; len++)
+					;
+				if (arg[len] == '\'') {
+					arg[len] = '\0'; /* Null-terminate at closing quote */
+				}
+			}
+
 			number = old_search_block(arg,0,strlen(arg),spells,FALSE);
 			if(number == -1) {
 				send_to_char("You do not know of this technology...\n\r", ch);
