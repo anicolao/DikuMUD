@@ -458,7 +458,10 @@ rooms:
 
     that seeps through the ceiling.  A faint breeze suggests this passage connects
 
-    to the surface somewhere far away.'
+    to the surface somewhere far away.  You notice the floor stones are oddly fitted
+    in
+
+    one section, as if concealing something beneath.'
   zone: 31
   room_flags: 9
   sector_type: 0
@@ -724,7 +727,11 @@ rooms:
     of a primitive kitchen area.  The people who lived here were clearly dedicated
     to
 
-    their work, living underground to tend to the city''s infrastructure.'
+    their work, living underground to tend to the city''s infrastructure.  You idly
+
+    wonder what valuables the ancient workers might have hidden beneath their sleeping
+
+    bunks.'
   zone: 31
   room_flags: 9
   sector_type: 0
@@ -737,7 +744,7 @@ rooms:
     to_room: 3170
   - direction: 2
     description: A concealed passage lies behind a loose stone.
-    keywords: secret stone concealed loose
+    keywords: secret stone concealed loose bed bunk
     door_flag: 1
     key_vnum: -1
     to_room: 3177
@@ -919,7 +926,7 @@ rooms:
 
     hidden mechanisms, most now degraded but still potentially dangerous.  Strange
 
-    creatures have made nests in the corners, drawn by the lingering magic that
+    creatures have made nests in the corners, drawn by the lingering energy that
 
     permeates this place.'
   zone: 31
@@ -1784,9 +1791,9 @@ objects:
       in the sewers.'
   affects: []
 - vnum: 3608
-  namelist: torch light fire
-  short_desc: a lit torch
-  long_desc: A torch burns here, casting flickering shadows.
+  namelist: radium lamp light
+  short_desc: a radium lamp
+  long_desc: A radium lamp casts a soft glow here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -1799,11 +1806,10 @@ objects:
   cost: 50
   rent: 10
   extra_descriptions:
-  - keywords: torch light
-    description: 'This torch provides much-needed light in the dark sewer tunnels.
-      It appears to
+  - keywords: lamp radium light
+    description: 'This radium lamp provides much-needed light in the dark sewer tunnels.
 
-      have several hours of burn time remaining.'
+      Its soft glow comes from radium-infused elements that will last for years.'
   affects: []
 - vnum: 3609
   namelist: dried meat ration food
@@ -2018,10 +2024,10 @@ objects:
   rent: 50
   extra_descriptions:
   - keywords: lantern light
-    description: 'This oil lantern provides more reliable light than a torch. It appears
-      to have
+    description: 'This oil lantern provides more reliable light than a radium lamp.
+      It appears
 
-      plenty of oil remaining.'
+      to have plenty of oil remaining.'
   affects: []
 - vnum: 3620
   namelist: steel dagger blade fine

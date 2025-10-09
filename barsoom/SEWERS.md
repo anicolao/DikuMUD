@@ -88,7 +88,7 @@ The sewers are divided into three distinct sections of increasing difficulty:
 - Basic leather armor (jerkins, caps, boots, gloves)
 - Dried meat, moldy bread, water flasks
 - Bronze and silver coins (small amounts)
-- Basic torches and lanterns
+- Basic radium lamps and lanterns
 
 **Mid-Level Sewers:**
 - Fine steel daggers
@@ -127,7 +127,7 @@ The sewers are divided into three distinct sections of increasing difficulty:
 
 ### For Level 1-2 Players:
 1. Start in the upper sewers only
-2. Bring light sources (torches/lanterns)
+2. Bring light sources (radium lamps/lanterns)
 3. Fight ulsio and carrion birds first
 4. Collect basic weapons and armor
 5. Learn to retreat when overwhelmed
