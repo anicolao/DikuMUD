@@ -15,6 +15,7 @@
 #include "comm.h"
 #include "handler.h"
 #include "limits.h"
+#include "quest.h"
 
 #define NEW_ZONE_SYSTEM
 
@@ -177,6 +178,9 @@ void boot_db(void)
 	assign_command_pointers();
 	slog("   Spells.");
 	assign_spell_pointers();
+
+	slog("Loading quests.");
+	boot_quests();
 
 	slog("Updating characters with saved items:");
 	update_obj_file();

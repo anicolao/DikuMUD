@@ -576,6 +576,10 @@ class WorldBuilder:
                 # Build shops from YAML
                 shops = data.get('shops', [])
                 all_records.extend([(s['vnum'], self._build_shop(s)) for s in shops])
+            elif file_type == 'qst':
+                # Build quests from YAML
+                quests = data.get('quests', [])
+                all_records.extend([(q['qnum'], self._build_quest(q)) for q in quests])
         
         # Sort by vnum
         all_records.sort(key=lambda x: x[0])
@@ -732,6 +736,19 @@ class WorldBuilder:
             if 'comment' in reset and reset['comment']:
                 lines.append(f"* {reset['comment']}")
         
+        lines.append("S")
+        return '\n'.join(lines) + '\n'
+    
+    def _build_quest(self, quest: dict) -> str:
+        """Build DikuMUD format quest record."""
+        lines = []
+        lines.append(f"#{quest['qnum']}")
+        lines.append(f"{quest['giver']} {quest['type']} {quest['duration']}")
+        lines.append(f"{quest['target']} {quest['item']} {quest['flags']}")
+        lines.append(f"{quest['reward_exp']} {quest['reward_gold']} {quest['reward_item']}")
+        lines.append(f"{quest['quest_text']}~")
+        lines.append(f"{quest['complete_text']}~")
+        lines.append(f"{quest['fail_text']}~")
         lines.append("S")
         return '\n'.join(lines) + '\n'
 

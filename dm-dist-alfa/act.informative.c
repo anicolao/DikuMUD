@@ -17,6 +17,7 @@
 #include "db.h"
 #include "spells.h"
 #include "limits.h"
+#include "quest.h"
 
 /* extern variables */
 
@@ -791,6 +792,44 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 			send_to_char("You are standing.\n\r",ch); break;
 		default :
 			send_to_char("You are floating.\n\r",ch); break;
+	}
+
+	/* Display active quests */
+	{
+		struct affected_type *af;
+		int has_quest = 0;
+		
+		for (af = ch->affected; af; af = af->next) {
+			if (af->type >= QUEST_DELIVERY && af->type <= QUEST_COLLECT) {
+				if (!has_quest) {
+					send_to_char("\n\rActive Quests:\n\r", ch);
+					has_quest = 1;
+				}
+				
+				sprintf(buf, "  Quest: ");
+				
+				switch(af->type) {
+					case QUEST_DELIVERY:
+						sprintf(buf + strlen(buf), "Deliver item");
+						break;
+					case QUEST_RETRIEVAL:
+						sprintf(buf + strlen(buf), "Retrieve item");
+						break;
+					case QUEST_KILL:
+						sprintf(buf + strlen(buf), "Defeat enemy");
+						break;
+					case QUEST_EXPLORE:
+						sprintf(buf + strlen(buf), "Explore location");
+						break;
+					case QUEST_COLLECT:
+						sprintf(buf + strlen(buf), "Collect items");
+						break;
+				}
+				
+				sprintf(buf + strlen(buf), " (Time: %d hours)\n\r", af->duration);
+				send_to_char(buf, ch);
+			}
+		}
 	}
 
 }

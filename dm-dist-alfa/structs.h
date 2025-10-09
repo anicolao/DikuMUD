@@ -311,6 +311,12 @@ struct room_data
 #define AFF_FEAR              2097152
 #define AFF_CHARM             4194304
 #define AFF_FOLLOW            8388608
+#define AFF_QUEST             16777216  /* Character is on a quest */
+
+/* Quest visibility flags (stored in upper bits of bitvector) */
+#define QUEST_SHOW_TARGET     16777216  /* Show target NPC name (1 << 24) */
+#define QUEST_SHOW_ITEM       33554432  /* Show item name (1 << 25) */
+#define QUEST_SHOW_LOCATION   67108864  /* Show room/location (1 << 26) */
 
 /* modifiers to char's abilities */
 
@@ -776,4 +782,22 @@ struct con_app_type
 {
 	sh_int hitp;
 	sh_int shock;
+};
+
+/* Quest data structure */
+struct quest_data
+{
+	int qnum;             /* Quest number (virtual) */
+	int giver_vnum;       /* Mob that gives quest */
+	int quest_type;       /* QUEST_* constant */
+	int duration;         /* Time limit in MUD hours */
+	int target_vnum;      /* Target mob/room vnum */
+	int item_vnum;        /* Item to deliver/retrieve */
+	int quest_flags;      /* Visibility flags */
+	int reward_exp;       /* Experience reward */
+	int reward_gold;      /* Gold reward */
+	int reward_item;      /* Item vnum reward */
+	char *quest_text;     /* Assignment message */
+	char *complete_text;  /* Completion message */
+	char *fail_text;      /* Failure message */
 };
