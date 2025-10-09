@@ -1,0 +1,410 @@
+zone:
+  number: 38
+  name: Zodanga Wilderness
+  top_room: 3749
+  lifespan: 20
+  reset_mode: 2
+rooms:
+- vnum: 3650
+  name: Western Approach to Zodanga
+  description: "   You stand on the dead sea bottom plains west of Zodanga. The enemy\n    city looms in the distance to the east, its dark towers visible against the\n    reddish Martian sky. The terrain is relatively open here, covered with ochre\n    moss. This is dangerous territory - Zodangan patrols watch for intruders, and\n    predators hunt across these plains."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 1
+    description: Zodanga's western gate lies east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3641
+  - direction: 3
+    description: The wilderness continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3651
+  extra_descriptions: []
+- vnum: 3651
+  name: Dead Sea Bottom Plains
+  description: "   The ochre moss-covered plains stretch in all directions. Ancient ruins\n    dot the landscape in the distance. The thin Martian air carries sounds far,\n    making it difficult to move undetected. You are far from any friendly\n    territory here."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 1
+    description: Toward Zodanga to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3650
+  - direction: 3
+    description: The plains continue west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3700
+  extra_descriptions: []
+- vnum: 3700
+  name: Wilderness Crossroads
+  description: "   Old trade routes converge here in the wilderness. Ancient markers,\n    weathered by time, indicate directions to various destinations. The routes are\n    still occasionally used by brave traders and scouts, though the journey is\n    perilous."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The northern route extends ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3701
+  - direction: 1
+    description: Toward Zodanga to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3651
+  - direction: 2
+    description: The southern route leads away.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3710
+  - direction: 3
+    description: The western route continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3720
+  extra_descriptions: []
+- vnum: 3701
+  name: Northern Dead Sea Plains
+  description: "   The plains extend northward, becoming slightly more rugged. Rocky\n    outcrops appear more frequently here. This route eventually leads toward other\n    territories, though the journey would take many days."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Further north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3749
+  - direction: 2
+    description: The crossroads lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3700
+  extra_descriptions: []
+- vnum: 3710
+  name: Southern Wilderness
+  description: "   The dead sea bottom extends southward here. In the far distance, you\n    might catch glimpses of territories controlled by Helium and its allies, but\n    they are many days' journey away. The wilderness holds many dangers."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The crossroads lie north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3700
+  - direction: 3
+    description: The route curves west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3711
+  extra_descriptions: []
+- vnum: 3711
+  name: Banth Territory
+  description: "   Signs of predators are everywhere - bones scattered across the moss,\n    tracks in the dust, and a faint smell of carnivore. Banths hunt these plains,\n    and travelers must be wary. The Martian lions are deadly, especially in prides."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 1
+    description: The safer route lies east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3710
+  - direction: 3
+    description: Continue west carefully.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3712
+  extra_descriptions: []
+- vnum: 3712
+  name: Ancient Ruins
+  description: "   Crumbling walls and fallen towers mark an ancient city, long dead.\n    These ruins dot the dead sea bottoms across Mars, remnants of civilizations\n    that flourished when water still filled the seas. Now they shelter predators\n    and provide occasional refuge for travelers."
+  zone: 38
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: Back to the wilderness east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3711
+  - direction: 3
+    description: Through the ruins westward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3720
+  extra_descriptions: []
+- vnum: 3720
+  name: Western Wilderness Plains
+  description: "   The dead sea bottom continues westward. The ochre moss is thicker here,\n    and occasional hardy plants struggle to survive. In the distance, you can make\n    out elevated ground - perhaps the approaches to one of the western city-states."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Northwest toward safer territory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3721
+  - direction: 1
+    description: The crossroads lie east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3700
+  - direction: 2
+    description: Through ruins to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3712
+  extra_descriptions: []
+- vnum: 3721
+  name: Traveler's Rest
+  description: "   This relatively sheltered spot has been used by travelers for\n    generations. A rocky outcrop provides some protection from predators and\n    weather. Old fire rings show where previous wanderers camped. It's one of the\n    few places in this wilderness that feels moderately safe."
+  zone: 38
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: Continue northwest.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3728
+  - direction: 2
+    description: Back to the plains south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3720
+  extra_descriptions: []
+- vnum: 3728
+  name: Gathol Trade Route
+  description: "   You've reached a more established route that leads to Gathol. While\n    still dangerous, this path sees occasional merchant caravans and military\n    patrols from the allied city. Signs of recent travel are visible - wheel ruts,\n    thoat tracks, and discarded supplies."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Toward Gathol to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3729
+  - direction: 2
+    description: Back toward the crossroads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3721
+  extra_descriptions: []
+- vnum: 3729
+  name: Gathol Outer Approach
+  description: "   You can see Gathol rising in the distance - its jeweled towers\n    catching the light, a stark contrast to the harsh wilderness. Guards patrol\n    this outer approach, watching for threats from the wilderness and ensuring\n    legitimate travelers can enter safely."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 2
+    description: The trade route extends south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3728
+  - direction: 3
+    description: Gathol's northern gate lies west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4299
+  extra_descriptions: []
+- vnum: 3749
+  name: Northern Frontier
+  description: "   This remote area marks the northern edge of the currently explored\n    territory. Further north lie other city-states and territories, but reaching\n    them would require extensive preparation and many days of dangerous travel.\n    For now, this represents the frontier."
+  zone: 38
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 2
+    description: Back south to explored territory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3701
+  extra_descriptions: []
+mobiles:
+- vnum: 3800
+  namelist: banth lion predator
+  short_desc: a banth
+  long_desc: A ferocious banth prowls here, searching for prey.
+  detailed_desc: "This ten-legged Martian lion is one of the most dangerous predators on\n    Barsoom. Its sleek body is powerfully muscled, and its fangs can tear through\n    harness and flesh with ease. The banth's multiple legs give it incredible speed\n    and agility. Its eyes show intelligence and hunger. These creatures hunt alone\n    or in prides, and they fear nothing."
+  action_flags: 6
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 16
+    thac0: 2
+    ac: 2
+    hp_dice: 3d10+180
+    damage_dice: 3d8+4
+    gold: 0
+    experience: 35000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3801
+  namelist: zodangan scout soldier
+  short_desc: a Zodangan scout
+  long_desc: A Zodangan scout in dark purple watches the approaches.
+  detailed_desc: "This red Martian soldier serves in Zodanga's reconnaissance forces. Clad\n    in dark purple harness, the scout patrols the wilderness watching for threats\n    to the city or opportunities to ambush enemies. Well-trained and alert, the\n    scout is dangerous and loyal to Zodanga."
+  action_flags: 6
+  affection_flags: 0
+  alignment: 800
+  type: simple
+  simple:
+    level: 14
+    thac0: 4
+    ac: 4
+    hp_dice: 2d10+120
+    damage_dice: 2d8+3
+    gold: 5000
+    experience: 15000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3802
+  namelist: gathol guard scout
+  short_desc: a Gathol scout
+  long_desc: A Gathol scout in silver and blue patrols here.
+  detailed_desc: "This red Martian warrior serves in Gathol's border patrol. The silver and\n    blue harness identifies them as from Gahan's city. They watch the wilderness\n    for threats and assist legitimate travelers. While professional warriors, they\n    maintain the courtesy expected of Gathol's forces."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -1000
+  type: simple
+  simple:
+    level: 14
+    thac0: 4
+    ac: 4
+    hp_dice: 2d10+120
+    damage_dice: 2d8+3
+    gold: 5000
+    experience: 15000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3803
+  namelist: merchant trader traveler
+  short_desc: a traveling merchant
+  long_desc: A merchant rests here, eyeing the wilderness warily.
+  detailed_desc: "This red Martian trader braves the dangerous wilderness to conduct business\n    between cities. Wearing practical traveling gear and carrying valuable goods,\n    the merchant relies on speed, hired guards, and luck to survive the journey.\n    They are happy to share information with friendly travelers."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -500
+  type: simple
+  simple:
+    level: 8
+    thac0: 10
+    ac: 6
+    hp_dice: 1d10+60
+    damage_dice: 1d8+1
+    gold: 2000
+    experience: 1000
+    position: 8
+    default_position: 8
+    sex: 2
+objects:
+- vnum: 3800
+  namelist: supplies travel rations
+  short_desc: travel supplies
+  long_desc: A bundle of travel supplies lies here.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: supplies rations
+    description: "Dried meat, water containers, and other necessities for wilderness\n      travel. These basic supplies are essential for surviving the journey between\n      cities on the dead sea bottom."
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3800
+  arg2: 3
+  arg3: 3711
+  comment: Load banths in banth territory
+- command: M
+  if_flag: 0
+  arg1: 3800
+  arg2: 2
+  arg3: 3712
+  comment: Load banths in ruins
+- command: M
+  if_flag: 0
+  arg1: 3801
+  arg2: 2
+  arg3: 3650
+  comment: Load Zodangan scouts near Zodanga
+- command: M
+  if_flag: 0
+  arg1: 3801
+  arg2: 1
+  arg3: 3651
+  comment: Load Zodangan scout on plains
+- command: M
+  if_flag: 0
+  arg1: 3802
+  arg2: 2
+  arg3: 3729
+  comment: Load Gathol scouts near Gathol
+- command: M
+  if_flag: 0
+  arg1: 3802
+  arg2: 1
+  arg3: 3728
+  comment: Load Gathol scout on trade route
+- command: M
+  if_flag: 0
+  arg1: 3803
+  arg2: 1
+  arg3: 3721
+  comment: Load merchant at traveler's rest
+- command: O
+  if_flag: 0
+  arg1: 3800
+  arg2: 1
+  arg3: 3721
+  comment: Load supplies at traveler's rest
+shops: []

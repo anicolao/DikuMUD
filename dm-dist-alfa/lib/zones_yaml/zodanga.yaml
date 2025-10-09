@@ -7,8 +7,7 @@ zone:
 rooms:
 - vnum: 3600
   name: The Main Plaza of Zodanga
-  description: '   You stand in the central plaza of Zodanga, the great rival city
-    of Helium.
+  description: '   You stand in the central plaza of Zodanga, the great rival city of Helium.
 
     The architecture here is imposing and militaristic, with dark metal and harsh
 
@@ -50,8 +49,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3601
   name: Palace Approach
-  description: '   You walk along a wide avenue leading to the palace of Than Kosis,
-    Jeddak
+  description: '   You walk along a wide avenue leading to the palace of Than Kosis, Jeddak
 
     of Zodanga. Guards in dark purple harnesses stand at attention, their hands
 
@@ -79,8 +77,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3602
   name: Palace Gates
-  description: '   You stand before the imposing gates of the Zodangan palace. Two
-    massive
+  description: '   You stand before the imposing gates of the Zodangan palace. Two massive
 
     towers flank the entrance, and elite guards in ornate purple harnesses watch
 
@@ -108,8 +105,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3603
   name: Palace Outer Courtyard
-  description: '   This courtyard serves as a buffer between the city and the inner
-    palace.
+  description: '   This courtyard serves as a buffer between the city and the inner palace.
 
     Military officers gather here to receive orders, and messengers constantly
 
@@ -137,8 +133,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3604
   name: Throne Room of Than Kosis
-  description: '   You enter the magnificent throne room of the Jeddak of Zodanga.
-    The chamber
+  description: '   You enter the magnificent throne room of the Jeddak of Zodanga. The chamber
 
     is vast and imposing, with high ceilings supported by columns of dark metal.
 
@@ -168,8 +163,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3605
   name: Palace Private Chambers
-  description: '   This corridor leads to the private quarters of the royal family
-    and their
+  description: '   This corridor leads to the private quarters of the royal family and their
 
     closest advisors. Guards stand at every doorway, and the walls are decorated
 
@@ -195,8 +189,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3606
   name: War Council Chamber
-  description: '   This chamber serves as the nerve center of Zodangan military planning.
-    A
+  description: '   This chamber serves as the nerve center of Zodangan military planning. A
 
     large table dominates the room, covered with maps of Barsoom showing troop
 
@@ -224,8 +217,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3607
   name: Map Room
-  description: '   This secure chamber contains detailed maps of all known regions
-    of Barsoom,
+  description: '   This secure chamber contains detailed maps of all known regions of Barsoom,
 
     including Helium, other city-states, green Martian territories, and wilderness
 
@@ -251,8 +243,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3608
   name: Spy Master's Office
-  description: '   This private office belongs to the head of Zodangan intelligence
-    operations.
+  description: '   This private office belongs to the head of Zodangan intelligence operations.
 
     The walls are lined with encoded messages, reports from agents in other cities,
 
@@ -278,8 +269,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3609
   name: Prince's Chambers
-  description: '   These luxurious quarters belong to Sab Than, Prince of Zodanga.
-    The room
+  description: '   These luxurious quarters belong to Sab Than, Prince of Zodanga. The room
 
     is decorated with expensive furniture, weapons, and trophies from hunts and
 
@@ -299,8 +289,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3610
   name: Military Quarter - Parade Ground
-  description: '   This vast parade ground serves as the training and assembly area
-    for
+  description: '   This vast parade ground serves as the training and assembly area for
 
     Zodangan forces. Soldiers drill constantly under the watchful eyes of their
 
@@ -338,8 +327,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3611
   name: Military Barracks
-  description: '   These barracks house hundreds of Zodangan soldiers. Rows of bunks
-    line
+  description: '   These barracks house hundreds of Zodangan soldiers. Rows of bunks line
 
     the walls, and footlockers hold each warrior''s personal gear. The atmosphere
 
@@ -391,8 +379,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3613
   name: Officers' Quarters
-  description: '   These quarters house the officers who command Zodangan forces.
-    The rooms
+  description: '   These quarters house the officers who command Zodangan forces. The rooms
 
     are more spacious than the common barracks, with private spaces for planning
 
@@ -418,8 +405,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3614
   name: Training Facilities
-  description: '   Warriors train here in various forms of combat. Practice weapons
-    are used
+  description: '   Warriors train here in various forms of combat. Practice weapons are used
 
     for sparring, and instructors drill soldiers in swordsmanship, marksmanship,
 
@@ -445,8 +431,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3615
   name: Armorer's Workshop
-  description: '   Master weaponsmiths and armorers work here, forging and repairing
-    equipment
+  description: '   Master weaponsmiths and armorers work here, forging and repairing equipment
 
     for the Zodangan military. The heat from forges fills the air, and the ring
 
@@ -466,8 +451,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3616
   name: Military Command Post
-  description: '   This fortified structure serves as the command center for military
-    operations.
+  description: '   This fortified structure serves as the command center for military operations.
 
     Officers receive orders from the palace and coordinate troop movements. Maps
 
@@ -493,8 +477,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3617
   name: Advanced Combat Training
-  description: '   Elite warriors train here in advanced combat techniques. This area
-    is reserved
+  description: '   Elite warriors train here in advanced combat techniques. This area is reserved
 
     for the most skilled soldiers and those being groomed for special missions.
 
@@ -514,8 +497,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3618
   name: Communications Center
-  description: '   This room houses the equipment and personnel needed to maintain
-    communication
+  description: '   This room houses the equipment and personnel needed to maintain communication
 
     with Zodangan forces across Barsoom. Heliograph signals, message riders, and
 
@@ -561,8 +543,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3620
   name: Merchant District
-  description: '   The merchant quarter of Zodanga is busy with commerce, though the
-    atmosphere
+  description: '   The merchant quarter of Zodanga is busy with commerce, though the atmosphere
 
     is more guarded than in Helium. Merchants sell goods from across Barsoom, but
 
@@ -600,8 +581,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3621
   name: Market Square
-  description: '   This open square serves as the main marketplace for Zodanga. Merchants
-    hawk
+  description: '   This open square serves as the main marketplace for Zodanga. Merchants hawk
 
     their wares, and buyers bargain aggressively. Everything from food to weapons
 
@@ -633,8 +613,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3622
   name: Warehouse District
-  description: '   Massive warehouses store goods waiting to be shipped or sold. This
-    area
+  description: '   Massive warehouses store goods waiting to be shipped or sold. This area
 
     is heavily guarded, as valuable merchandise attracts thieves. Workers load
 
@@ -660,8 +639,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3623
   name: Trading Post
-  description: '   This establishment deals in goods from across Barsoom. Exotic items
-    from
+  description: '   This establishment deals in goods from across Barsoom. Exotic items from
 
     other cities, captured enemy equipment, and rare materials can be found here.
 
@@ -679,8 +657,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3624
   name: Weaponsmith Shop
-  description: '   This shop produces and sells weapons for Zodangan warriors and
-    anyone else
+  description: '   This shop produces and sells weapons for Zodangan warriors and anyone else
 
     with the gold to pay. The quality is excellent, though the prices reflect that.
 
@@ -698,8 +675,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3625
   name: Armorer's Shop
-  description: '   This shop creates the leather and metal harnesses worn by Zodangan
-    warriors.
+  description: '   This shop creates the leather and metal harnesses worn by Zodangan warriors.
 
     The dark purple color of Zodangan military harnesses is distinctive across
 
@@ -723,8 +699,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3626
   name: Warehouse Storage
-  description: '   This warehouse contains various goods - food supplies, raw materials,
-    and
+  description: '   This warehouse contains various goods - food supplies, raw materials, and
 
     manufactured items. Inventory records track everything, and guards ensure
 
@@ -744,8 +719,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3627
   name: Jeweler's Shop
-  description: '   This shop deals in precious metals and gems. The jeweler crafts
-    ornaments
+  description: '   This shop deals in precious metals and gems. The jeweler crafts ornaments
 
     for harnesses and other decorative items. While not as renowned as Helium''s
 
@@ -765,8 +739,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3628
   name: The Dark Tavern
-  description: '   This tavern caters to soldiers, merchants, and the rougher elements
-    of
+  description: '   This tavern caters to soldiers, merchants, and the rougher elements of
 
     Zodangan society. The atmosphere is tense, with potential violence always
 
@@ -792,8 +765,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3629
   name: Tavern Back Room
-  description: '   This room serves as storage for the tavern, but also as a meeting
-    place for
+  description: '   This room serves as storage for the tavern, but also as a meeting place for
 
     those seeking privacy. Deals both legal and illegal are negotiated here, away
 
@@ -811,8 +783,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3630
   name: Espionage Quarter
-  description: '   This district is where Zodanga''s spy networks operate. Seemingly
-    innocent
+  description: '   This district is where Zodanga''s spy networks operate. Seemingly innocent
 
     shops and residences conceal safehouses, dead drops, and meeting places for
 
@@ -844,8 +815,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3631
   name: Safehouse
-  description: '   This building appears to be a simple residence, but it serves as
-    a safehouse
+  description: '   This building appears to be a simple residence, but it serves as a safehouse
 
     for Zodangan agents. Hidden rooms conceal documents, weapons, and supplies.
 
@@ -869,8 +839,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3632
   name: Narrow Alley
-  description: '   This shadowy alley provides concealment for clandestine meetings
-    and quick
+  description: '   This shadowy alley provides concealment for clandestine meetings and quick
 
     escapes. Dead drops are hidden in the walls, and lookouts watch for any sign
 
@@ -894,8 +863,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3633
   name: Hidden Basement
-  description: '   This secret basement beneath the safehouse contains intelligence
-    documents,
+  description: '   This secret basement beneath the safehouse contains intelligence documents,
 
     coded messages, and equipment for covert operations. Only trusted agents know
 
@@ -915,8 +883,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3634
   name: Dead Drop Location
-  description: '   This secluded spot in the alley serves as a dead drop for secret
-    messages.
+  description: '   This secluded spot in the alley serves as a dead drop for secret messages.
 
     A loose brick conceals a small cavity where agents leave coded communications
 
@@ -936,8 +903,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3635
   name: Secret Tunnel
-  description: '   This concealed passage connects the palace spy master''s office
-    with the
+  description: '   This concealed passage connects the palace spy master''s office with the
 
     espionage quarter. It allows for discreet movement and emergency escapes.
 
@@ -961,8 +927,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3636
   name: Training Academy
-  description: '   This facility trains new recruits in espionage techniques. Students
-    learn
+  description: '   This facility trains new recruits in espionage techniques. Students learn
 
     codes, disguise, infiltration, assassination, and information gathering. The
 
@@ -988,8 +953,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3637
   name: Assassination Practice
-  description: '   This secure facility trains agents in the art of silent killing.
-    Targets
+  description: '   This secure facility trains agents in the art of silent killing. Targets
 
     and practice weapons allow students to hone their skills. The instructors
 
@@ -1027,8 +991,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3639
   name: Code Breaking Room
-  description: '   Cryptographers work here to break enemy codes and create new cipher
-    systems
+  description: '   Cryptographers work here to break enemy codes and create new cipher systems
 
     for Zodangan communications. Complex mathematical puzzles and linguistic
 
@@ -1048,8 +1011,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3640
   name: Eastern Gate
-  description: '   This heavily fortified gate provides access to the eastern approaches
-    of
+  description: '   This heavily fortified gate provides access to the eastern approaches of
 
     Zodanga. Guards in dark purple harnesses challenge everyone who enters or
 
@@ -1075,8 +1037,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3641
   name: Western Gate
-  description: '   This gate faces toward the distant Helium territories. It is the
-    most heavily
+  description: '   This gate faces toward the distant Helium territories. It is the most heavily
 
     guarded gate in Zodanga, as threats from Helium are always expected. Multiple
 
@@ -1092,16 +1053,15 @@ rooms:
     key_vnum: -1
     to_room: 3600
   - direction: 3
-    description: The wilderness extends to the west.
+    description: The wilderness extends westward.
     keywords: gate
     door_flag: 1
     key_vnum: 3651
-    to_room: -1
+    to_room: 3650
   extra_descriptions: []
 - vnum: 3642
   name: Northern Gate
-  description: '   This gate leads to the northern territories and other city-states.
-    Trade
+  description: '   This gate leads to the northern territories and other city-states. Trade
 
     caravans and military expeditions depart through this gate. Guards inspect
 
@@ -1125,8 +1085,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3643
   name: Airship Landing Platform
-  description: '   This platform high above the city serves as Zodanga''s primary
-    airship dock.
+  description: '   This platform high above the city serves as Zodanga''s primary airship dock.
 
     Military fliers and commercial vessels land here to load passengers and cargo.
 
@@ -1144,8 +1103,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3644
   name: Arena
-  description: '   This arena hosts combat demonstrations and gladiatorial games.
-    Zodangans
+  description: '   This arena hosts combat demonstrations and gladiatorial games. Zodangans
 
     enjoy watching warriors battle, whether in training exhibitions or fights
 
@@ -1165,8 +1123,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3645
   name: Temple of War
-  description: '   This temple is dedicated to the Zodangan ideal of military conquest
-    and
+  description: '   This temple is dedicated to the Zodangan ideal of military conquest and
 
     power. Red Martians come here to pray for victory in battle and to honor
 
@@ -1186,8 +1143,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3646
   name: Prison
-  description: '   This fortified structure houses prisoners of war, captured spies,
-    and
+  description: '   This fortified structure houses prisoners of war, captured spies, and
 
     criminals. Conditions are harsh, and interrogations are conducted here.
 
@@ -1205,8 +1161,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3647
   name: Prison Guard Post
-  description: '   Guards stationed here maintain security for the prison and monitor
-    the
+  description: '   Guards stationed here maintain security for the prison and monitor the
 
     prisoners. Interrogation rooms branch off from this central post, and records
 
@@ -1224,8 +1179,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3648
   name: Torture Chamber
-  description: '   This grim room is where prisoners are interrogated using brutal
-    methods.
+  description: '   This grim room is where prisoners are interrogated using brutal methods.
 
     Zodangan interrogators are skilled at extracting information through pain
 
@@ -1245,8 +1199,7 @@ rooms:
   extra_descriptions: []
 - vnum: 3649
   name: Jeddak's Treasury
-  description: '   This heavily guarded vault contains the wealth of Zodanga - gold,
-    precious
+  description: '   This heavily guarded vault contains the wealth of Zodanga - gold, precious
 
     gems, rare materials, and tribute from conquered territories. Only the most
 
@@ -1269,8 +1222,7 @@ mobiles:
   namelist: than kosis jeddak zodanga ruler king
   short_desc: Than Kosis, Jeddak of Zodanga
   long_desc: Than Kosis, the mighty Jeddak of Zodanga, stands here in regal authority.
-  detailed_desc: 'This imposing red Martian stands tall and proud, his bearing that
-    of absolute
+  detailed_desc: 'This imposing red Martian stands tall and proud, his bearing that of absolute
 
     authority. He wears an elaborate harness in the dark purple of Zodangan royalty,
 
@@ -1304,8 +1256,7 @@ mobiles:
   namelist: sab than prince zodanga
   short_desc: Sab Than, Prince of Zodanga
   long_desc: Sab Than, arrogant Prince of Zodanga, stands here with evident self-importance.
-  detailed_desc: 'This young red Martian prince carries himself with the confidence
-    of privilege
+  detailed_desc: 'This young red Martian prince carries himself with the confidence of privilege
 
     and power. He is undeniably handsome and skilled with weapons, but his arrogance
 
@@ -1338,10 +1289,8 @@ mobiles:
 - vnum: 3602
   namelist: zat arrras jed zodanga schemer
   short_desc: Zat Arrras, Jed of Zodanga
-  long_desc: Zat Arrras, a scheming Jed of Zodanga, watches everything with calculating
-    eyes.
-  detailed_desc: 'This red Martian nobleman embodies political ambition and treachery.
-    His face
+  long_desc: Zat Arrras, a scheming Jed of Zodanga, watches everything with calculating eyes.
+  detailed_desc: 'This red Martian nobleman embodies political ambition and treachery. His face
 
     is pleasant enough, but his eyes constantly calculate advantage and opportunity.
 
@@ -1375,8 +1324,7 @@ mobiles:
   namelist: spy master intelligence chief zodanga
   short_desc: the Spy Master
   long_desc: The head of Zodangan intelligence stands here, his eyes missing nothing.
-  detailed_desc: 'This middle-aged red Martian has the unremarkable appearance of
-    someone you
+  detailed_desc: 'This middle-aged red Martian has the unremarkable appearance of someone you
 
     would pass on the street without noticing - which is precisely the point. His
 
@@ -1410,8 +1358,7 @@ mobiles:
   namelist: palace guard elite royal zodangan
   short_desc: an elite palace guard
   long_desc: An elite guard in ornate purple armor stands at attention here.
-  detailed_desc: 'This red Martian warrior represents the best of Zodangan military
-    prowess.
+  detailed_desc: 'This red Martian warrior represents the best of Zodangan military prowess.
 
     Standing tall and alert, he wears elaborate purple armor that marks him as
 
@@ -1441,8 +1388,7 @@ mobiles:
   namelist: zodangan soldier warrior guard
   short_desc: a Zodangan soldier
   long_desc: A Zodangan soldier in dark purple stands guard here.
-  detailed_desc: 'This red Martian warrior wears the standard dark purple harness
-    of Zodangan
+  detailed_desc: 'This red Martian warrior wears the standard dark purple harness of Zodangan
 
     military forces. He is well-trained and disciplined, carrying both longsword
 
@@ -1470,8 +1416,7 @@ mobiles:
   namelist: officer military commander zodangan
   short_desc: a Zodangan officer
   long_desc: A military officer in decorated purple armor commands here.
-  detailed_desc: 'This experienced red Martian has risen through the ranks to command
-    position.
+  detailed_desc: 'This experienced red Martian has risen through the ranks to command position.
 
     His purple harness is decorated with marks of rank and service medals. His
 
@@ -1499,8 +1444,7 @@ mobiles:
   namelist: weaponsmith armorer crafter zodangan
   short_desc: a Zodangan weaponsmith
   long_desc: A skilled weaponsmith works at his forge here.
-  detailed_desc: 'This red Martian craftsman has spent decades perfecting his trade.
-    His arms
+  detailed_desc: 'This red Martian craftsman has spent decades perfecting his trade. His arms
 
     are powerful from years of hammering metal, and his hands show the scars of
 
@@ -1530,8 +1474,7 @@ mobiles:
   namelist: merchant trader zodangan shrewd
   short_desc: a Zodangan merchant
   long_desc: A shrewd Zodangan merchant eyes potential customers here.
-  detailed_desc: 'This red Martian trader has a calculating expression and watches
-    for any
+  detailed_desc: 'This red Martian trader has a calculating expression and watches for any
 
     opportunity to profit. He wears a functional but quality harness and carries
 
@@ -1559,8 +1502,7 @@ mobiles:
   namelist: spy agent infiltrator zodangan
   short_desc: a Zodangan spy
   long_desc: A nondescript figure who might be a spy watches carefully here.
-  detailed_desc: 'This red Martian has cultivated the ability to blend in anywhere.
-    Neither tall
+  detailed_desc: 'This red Martian has cultivated the ability to blend in anywhere. Neither tall
 
     nor short, neither handsome nor ugly, with no distinguishing features to speak
 
@@ -1590,8 +1532,7 @@ mobiles:
   namelist: assassin killer zodangan deadly
   short_desc: a Zodangan assassin
   long_desc: A deadly-looking figure in dark clothing watches from the shadows.
-  detailed_desc: 'This red Martian specializes in silent killing. Dressed in dark,
-    functional
+  detailed_desc: 'This red Martian specializes in silent killing. Dressed in dark, functional
 
     clothing that allows free movement, the assassin carries concealed weapons
 
@@ -1621,8 +1562,7 @@ mobiles:
   namelist: instructor trainer drill sergeant zodangan
   short_desc: a military instructor
   long_desc: A stern military instructor drills recruits here.
-  detailed_desc: 'This veteran red Martian warrior has seen decades of combat and
-    now trains
+  detailed_desc: 'This veteran red Martian warrior has seen decades of combat and now trains
 
     the next generation of Zodangan soldiers. His voice can be heard across the
 
@@ -1652,8 +1592,7 @@ mobiles:
   namelist: priest war temple zodangan
   short_desc: a priest of war
   long_desc: A priest in dark robes tends to the temple here.
-  detailed_desc: 'This red Martian serves as priest in Zodanga''s Temple of War. Unlike
-    the
+  detailed_desc: 'This red Martian serves as priest in Zodanga''s Temple of War. Unlike the
 
     more spiritual priests of other cities, he preaches the virtues of military
 
@@ -1683,8 +1622,7 @@ mobiles:
   namelist: jailer guard torturer zodangan
   short_desc: a prison guard
   long_desc: A harsh-faced guard watches the prisoners with cold eyes.
-  detailed_desc: 'This red Martian has been hardened by years of prison duty. His
-    face shows
+  detailed_desc: 'This red Martian has been hardened by years of prison duty. His face shows
 
     no compassion, only suspicion and cruelty. He wears heavy armor and carries
 
@@ -1712,8 +1650,7 @@ mobiles:
   namelist: gladiator arena fighter zodangan
   short_desc: an arena gladiator
   long_desc: A scarred gladiator awaits the next match here.
-  detailed_desc: 'This red Martian has survived countless battles in Zodanga''s arena.
-    His body
+  detailed_desc: 'This red Martian has survived countless battles in Zodanga''s arena. His body
 
     is covered with scars, testament to his skill and luck. He wears minimal armor,
 
@@ -1741,8 +1678,7 @@ mobiles:
   namelist: noble courtier zodangan
   short_desc: a Zodangan noble
   long_desc: A well-dressed noble conducts business here.
-  detailed_desc: 'This red Martian belongs to Zodanga''s aristocracy. Wearing expensive
-    purple
+  detailed_desc: 'This red Martian belongs to Zodanga''s aristocracy. Wearing expensive purple
 
     and black garments, decorated with jewelry and rare ornaments, the noble
 
@@ -1772,8 +1708,7 @@ mobiles:
   namelist: citizen zodangan commoner
   short_desc: a Zodangan citizen
   long_desc: A Zodangan citizen goes about their business here.
-  detailed_desc: 'This red Martian represents the common people of Zodanga. Wearing
-    a simple
+  detailed_desc: 'This red Martian represents the common people of Zodanga. Wearing a simple
 
     functional harness, the citizen works to survive in a harsh, militaristic
 
@@ -1801,8 +1736,7 @@ mobiles:
   namelist: thief pickpocket zodangan criminal
   short_desc: a Zodangan thief
   long_desc: A shifty-eyed thief looks for opportunities here.
-  detailed_desc: 'This red Martian has turned to crime to survive in Zodanga''s harsh
-    environment.
+  detailed_desc: 'This red Martian has turned to crime to survive in Zodanga''s harsh environment.
 
     Quick fingers and quicker feet keep this thief ahead of the guards - usually.
 
@@ -1830,8 +1764,7 @@ mobiles:
   namelist: tavern keeper bartender zodangan
   short_desc: a tavern keeper
   long_desc: A tavern keeper serves drinks and gossip here.
-  detailed_desc: 'This red Martian runs one of Zodanga''s rougher drinking establishments.
-    Years
+  detailed_desc: 'This red Martian runs one of Zodanga''s rougher drinking establishments. Years
 
     behind the bar have taught skills in reading people, breaking up fights, and
 
@@ -1859,8 +1792,7 @@ mobiles:
   namelist: messenger courier zodangan
   short_desc: a messenger
   long_desc: A swift messenger rushes past on urgent business.
-  detailed_desc: 'This young red Martian carries messages throughout the city and
-    sometimes to
+  detailed_desc: 'This young red Martian carries messages throughout the city and sometimes to
 
     distant locations. Speed and discretion are essential qualities. The messenger
 
@@ -1886,8 +1818,7 @@ mobiles:
   namelist: engineer mechanic technician zodangan
   short_desc: a Zodangan engineer
   long_desc: An engineer works on mechanical systems here.
-  detailed_desc: 'This red Martian possesses technical knowledge needed to maintain
-    Zodanga''s
+  detailed_desc: 'This red Martian possesses technical knowledge needed to maintain Zodanga''s
 
     infrastructure and military equipment. Whether repairing radium engines,
 
@@ -1931,8 +1862,7 @@ objects:
   rent: 300
   extra_descriptions:
   - keywords: sword longsword
-    description: 'This well-crafted longsword bears the distinctive dark purple coloring
-      of
+    description: 'This well-crafted longsword bears the distinctive dark purple coloring of
 
       Zodangan military equipment. The blade is forged from high-quality Martian
 
@@ -1959,8 +1889,7 @@ objects:
   rent: 400
   extra_descriptions:
   - keywords: pistol radium
-    description: 'This radium pistol is of Zodangan manufacture, distinguished by
-      dark purple
+    description: 'This radium pistol is of Zodangan manufacture, distinguished by dark purple
 
       accents on the grip and barrel. It fires explosive radium projectiles with
 
@@ -2014,8 +1943,7 @@ objects:
   rent: 450
   extra_descriptions:
   - keywords: harness metal ornate
-    description: 'This elaborate harness combines dark purple leather with black metal
-      plates
+    description: 'This elaborate harness combines dark purple leather with black metal plates
 
       and is decorated with captured gems and rare metals. It''s clearly designed
 
@@ -2042,8 +1970,7 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: dagger fighting
-    description: 'This fighting dagger is a standard backup weapon for Zodangan warriors.
-      The
+    description: 'This fighting dagger is a standard backup weapon for Zodangan warriors. The
 
       blade is about ten inches long, double-edged, and razor sharp. The hilt is
 
@@ -2070,8 +1997,7 @@ objects:
   rent: 200
   extra_descriptions:
   - keywords: spear
-    description: 'This military spear features a purple-dyed shaft and a leaf-shaped
-      metal head.
+    description: 'This military spear features a purple-dyed shaft and a leaf-shaped metal head.
 
       It''s designed for both throwing and close combat. Zodangan soldiers train
 
@@ -2098,8 +2024,7 @@ objects:
   rent: 250
   extra_descriptions:
   - keywords: shield metal
-    description: 'This round shield is made from dark metal alloy and bears the emblem
-      of
+    description: 'This round shield is made from dark metal alloy and bears the emblem of
 
       Zodanga. It provides excellent protection and is light enough to maneuver
 
@@ -2126,8 +2051,7 @@ objects:
   rent: 650
   extra_descriptions:
   - keywords: armor plate
-    description: 'This heavy plate armor is designed for elite Zodangan warriors.
-      Black metal
+    description: 'This heavy plate armor is designed for elite Zodangan warriors. Black metal
 
       plates are trimmed with purple and provide superior protection at the cost
 
@@ -2154,8 +2078,7 @@ objects:
   rent: 150
   extra_descriptions:
   - keywords: vial poison
-    description: 'This small glass vial contains a deadly poison used by Zodangan
-      assassins.
+    description: 'This small glass vial contains a deadly poison used by Zodangan assassins.
 
       A single drop on a blade or in a drink can kill within minutes. The poison
 
@@ -2182,8 +2105,7 @@ objects:
   rent: 75
   extra_descriptions:
   - keywords: lockpicks tools
-    description: 'This set of lockpicks is used by thieves and spies to bypass locked
-      doors
+    description: 'This set of lockpicks is used by thieves and spies to bypass locked doors
 
       and containers. The tools are made from thin, strong metal and require skill
 
@@ -2210,8 +2132,7 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: message document coded
-    description: 'This document contains a message written in Zodangan military cipher.
-      Without
+    description: 'This document contains a message written in Zodangan military cipher. Without
 
       knowledge of the current code key, the message is incomprehensible. Such
 
@@ -2236,8 +2157,7 @@ objects:
   rent: 125
   extra_descriptions:
   - keywords: map intelligence
-    description: 'This map shows various regions of Barsoom with detailed annotations
-      about
+    description: 'This map shows various regions of Barsoom with detailed annotations about
 
       military forces, political situations, and strategic resources. It represents
 
@@ -2264,8 +2184,7 @@ objects:
   rent: 300
   extra_descriptions:
   - keywords: ornament jeweled
-    description: 'This ornament is designed to attach to a harness for decoration.
-      It''s crafted
+    description: 'This ornament is designed to attach to a harness for decoration. It''s crafted
 
       from rare metals and set with precious gems, representing considerable wealth.
 
@@ -2290,8 +2209,7 @@ objects:
   rent: 5
   extra_descriptions:
   - keywords: rations food
-    description: 'These military rations are standard issue for Zodangan soldiers
-      on campaign.
+    description: 'These military rations are standard issue for Zodangan soldiers on campaign.
 
       The food is preserved for long storage and provides adequate nutrition, though
 
@@ -2316,8 +2234,7 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: waterskin canteen
-    description: 'This leather waterskin is used to carry water during travel across
-      the Martian
+    description: 'This leather waterskin is used to carry water during travel across the Martian
 
       wilderness. It''s treated to prevent leaking and can hold enough water for
 
@@ -2342,8 +2259,7 @@ objects:
   rent: 3
   extra_descriptions:
   - keywords: torch
-    description: 'This simple torch consists of oil-soaked fabric wrapped around a
-      wooden handle.
+    description: 'This simple torch consists of oil-soaked fabric wrapped around a wooden handle.
 
       When lit, it provides illumination for several hours. Zodangan underground
 
@@ -2368,8 +2284,7 @@ objects:
   rent: 5
   extra_descriptions:
   - keywords: key iron
-    description: 'This heavy iron key is used to lock and unlock doors in Zodangan
-      buildings.
+    description: 'This heavy iron key is used to lock and unlock doors in Zodangan buildings.
 
       The bow is decorated with the city''s emblem. Multiple copies of important
 
@@ -2394,8 +2309,7 @@ objects:
   rent: 50
   extra_descriptions:
   - keywords: banner
-    description: 'This banner is dark purple with Zodanga''s emblem - a stylized sword
-      and
+    description: 'This banner is dark purple with Zodanga''s emblem - a stylized sword and
 
       crown - emblazoned in black. Such banners fly from towers, adorn halls, and
 
@@ -2420,8 +2334,7 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: scroll orders
-    description: 'This scroll contains written orders for Zodangan military units.
-      It specifies
+    description: 'This scroll contains written orders for Zodangan military units. It specifies
 
       troop movements, tactical objectives, and command structure. Such orders are
 
@@ -2446,8 +2359,7 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: kit disguise
-    description: 'This compact case contains materials used to create disguises -
-      makeup, false
+    description: 'This compact case contains materials used to create disguises - makeup, false
 
       hair pieces, colored contact lenses, and small props. Zodangan spies use
 
@@ -2474,8 +2386,7 @@ objects:
   rent: 30
   extra_descriptions:
   - keywords: shackles chain restraints
-    description: 'These heavy iron shackles are used to restrain prisoners in Zodanga''s
-      prison.
+    description: 'These heavy iron shackles are used to restrain prisoners in Zodanga''s prison.
 
       They consist of manacles for wrists or ankles connected by thick chain. The
 
@@ -2500,8 +2411,7 @@ objects:
   rent: 40
   extra_descriptions:
   - keywords: wine bottle
-    description: 'This bottle contains wine produced in the vineyards near Zodanga.
-      The wine
+    description: 'This bottle contains wine produced in the vineyards near Zodanga. The wine
 
       is known for being robust and slightly bitter - much like the city itself.
 
@@ -2526,8 +2436,7 @@ objects:
   rent: 15
   extra_descriptions:
   - keywords: rope coil
-    description: 'This coil of rope is made from plant fibers and is surprisingly
-      strong. It
+    description: 'This coil of rope is made from plant fibers and is surprisingly strong. It
 
       has numerous uses - climbing, securing prisoners, tying down cargo, or
 
@@ -2552,8 +2461,7 @@ objects:
   rent: 75
   extra_descriptions:
   - keywords: medal honor
-    description: 'This medal is awarded to Zodangan warriors for distinguished service
-      in
+    description: 'This medal is awarded to Zodangan warriors for distinguished service in
 
       combat. It consists of a metal disc bearing Zodanga''s emblem, suspended from
 
@@ -2580,8 +2488,7 @@ objects:
   rent: 50
   extra_descriptions:
   - keywords: book strategy manual
-    description: 'This book contains detailed analysis of military tactics, strategy,
-      and
+    description: 'This book contains detailed analysis of military tactics, strategy, and
 
       logistics. It covers formation fighting, siege warfare, mobile combat, and
 
@@ -2608,8 +2515,7 @@ objects:
   rent: 90
   extra_descriptions:
   - keywords: spyglass telescope
-    description: 'This collapsible spyglass allows for observation at considerable
-      distance.
+    description: 'This collapsible spyglass allows for observation at considerable distance.
 
       It''s used by scouts, guards on towers, and ship captains to spot approaching
 

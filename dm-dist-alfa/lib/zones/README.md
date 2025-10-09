@@ -51,6 +51,24 @@ Each zone consists of five files:
 - Dark, militaristic atmosphere with espionage quarter
 - 50-room zone focusing on political intrigue
 
+### zodanga_wilderness (Zone 38)
+- Virtual numbers: 3650-3749
+- Wilderness connector between Zodanga and Gathol
+- Dangerous dead sea bottom plains with predators
+- Zodangan scouts patrol eastern areas
+- Gathol scouts patrol western areas
+- Ancient ruins and traveler rest stops
+- Target levels: 14-22
+
+### gathol (Zone 37)
+- Virtual numbers: 4200-4299
+- Allied city-state ruled by Gahan of Gathol
+- Sophisticated culture emphasizing beauty and honor
+- Famous for jetan (Martian chess) tradition
+- Features Gahan, palace, and cultural districts
+- Safe haven for players allied with Helium
+- Target levels: 12-20
+
 ### thark_territory (Zone 40)
 - Virtual numbers: 4000-4099
 - Ancient ruined city occupied by the Thark horde
@@ -102,10 +120,12 @@ This concatenates the zone files in the correct order:
 6. dead_sea_wilderness
 7. greater_helium
 8. zodanga
-9. thark_territory
-10. atmosphere_factory
-11. atmosphere_lower
-12. system
+9. zodanga_wilderness
+10. gathol
+11. thark_territory
+12. atmosphere_factory
+13. atmosphere_lower
+14. system
 
 ## Adding New Zones
 
