@@ -111,7 +111,7 @@ int move_limit(struct char_data *ch)
 
 
 
-/* manapoint gain pr. game hour */
+/* flux point gain pr. game hour */
 int mana_gain(struct char_data *ch)
 {
 	int gain;

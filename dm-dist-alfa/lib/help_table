@@ -251,7 +251,7 @@ Usage:
 #
 STAT
 If you're interested in a person and want to find out about his/her/its
-skills, strength, mana, hitpoints etc.
+skills, strength, flux, hitpoints etc.
    In addition, 'stat room' will give you useful information about the room
 you're in.
 #
@@ -1185,7 +1185,7 @@ Can be used with the name of a player, to prevent him/her from hearing shouts,
 as well as from shouting. Can only be used by certain more powerful beings.
 #
 RESTORE
-If used on a mortal, this command will reset that players mana and hit points.
+If used on a mortal, this command will reset that players flux and hit points.
 If used on an Immortal various values will be reset to their proper values.
 #
 LINK

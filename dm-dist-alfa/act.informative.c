@@ -743,7 +743,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 		send_to_char("You are hungry.\n\r", ch);
 
 	sprintf(buf, 
-		"You have %d(%d) hit, %d(%d) mana and %d(%d) movement points.\n\r",
+		"You have %d(%d) hit, %d(%d) flux and %d(%d) movement points.\n\r",
 		GET_HIT(ch),GET_MAX_HIT(ch),
 		GET_MANA(ch),GET_MAX_MANA(ch),
 		GET_MOVE(ch),GET_MAX_MOVE(ch));

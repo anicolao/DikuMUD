@@ -284,8 +284,9 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 	}
 
 	/* Build the full prompt */
-	snprintf(prompt_buf, buf_size, "%dH %dV %dC Exits:%s> ",
+	snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s> ",
 		GET_HIT(ch),
+		GET_MANA(ch),
 		GET_MOVE(ch),
 		GET_GOLD(ch),
 		exit_pos > 0 ? exits_buf : "None");

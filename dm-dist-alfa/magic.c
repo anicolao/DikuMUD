@@ -167,7 +167,7 @@ void spell_colour_spray(byte level, struct char_data *ch,
 }
 
 
-/* Drain XP, MANA, HP - caster gains HP and MANA */
+/* Drain XP, FLUX, HP - caster gains HP and FLUX */
 void spell_energy_drain(byte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj)
 {
