@@ -7,17 +7,17 @@ zone:
 rooms:
 - vnum: 4300
   name: The Plaza of Alliance
-  description: "   You stand in the grand Plaza of Alliance, the heart of Ptarth's diplomatic\n    district. The plaza is paved with polished red stone and decorated with\n    monuments celebrating Ptarth's alliances with Helium, Gathol, Kaol, and other\n    friendly city-states. Fountains splash musically in the center. The architecture\n    reflects traditional red Martian design - strong but elegant, military but not\n    aggressive. To the north stands the royal palace, while the merchant quarter\n    lies to the east and the military district to the west."
+  description: "   You stand in the grand Plaza of Alliance, the heart of Ptarth's diplomatic\n    district. The plaza is paved with polished red stone and decorated with\n    monuments celebrating Ptarth's alliances with Helium, Gathol, Kaol, and other\n    friendly city-states. Fountains splash musically in the center. The architecture\n    reflects traditional red Martian design - strong but elegant, military but not\n    aggressive. The royal palace stands north, while gates lead to various city\n    districts and the wilderness beyond."
   zone: 39
   room_flags: 0
   sector_type: 1
   exits:
   - direction: 0
-    description: The royal palace gates lie north.
+    description: The northern gate leads to the route toward Kaol.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4301
+    to_room: 4398
   - direction: 1
     description: The merchant quarter is to the east.
     keywords: ''
@@ -25,7 +25,7 @@ rooms:
     key_vnum: -1
     to_room: 4310
   - direction: 2
-    description: The southern gate leads toward wilderness.
+    description: The southern gate leads toward Gathol.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -36,6 +36,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4330
+  - direction: 5
+    description: The royal palace gates.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4301
   extra_descriptions: []
 - vnum: 4301
   name: Palace Gates of Ptarth
@@ -156,6 +162,26 @@ rooms:
   exits:
   - direction: 2
     description: The plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4300
+  extra_descriptions: []
+- vnum: 4398
+  name: Northern Gate of Ptarth
+  description: "   You stand at the northern gate of Ptarth, the entrance for travelers heading\n    to or arriving from Kaol and other northern territories. The gate is well-\n    fortified, reflecting Ptarth's military strength, yet welcoming to allies. Guards\n    maintain security while assisting friendly travelers. Beyond the gate stretches\n    the long wilderness route to Kaol - a journey of hundreds of miles across dead\n    sea bottoms requiring strength and endurance. The Plaza of Alliance lies to the\n    south within the city."
+  zone: 39
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The wilderness route toward Kaol.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4600
+  - direction: 2
+    description: The plaza lies south within the city.
     keywords: ''
     door_flag: 0
     key_vnum: -1

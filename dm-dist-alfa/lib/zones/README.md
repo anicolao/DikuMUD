@@ -86,6 +86,24 @@ Each zone consists of five files:
 - Some banths influenced by Thuvia's mental powers
 - Target levels: 15-23
 
+### kaol (Zone 44)
+- Virtual numbers: 4500-4599
+- Allied city-state ruled by Jeddak Kulan Tith
+- Known for honor, military excellence, and ethical conduct
+- Features Court of Honor, royal palace, training grounds
+- Home of Kulan Tith who nobly released Thuvia from betrothal
+- Safe haven for players allied with Helium
+- Target levels: 18-26
+
+### ptarth_kaol_wilderness (Zone 45)
+- Virtual numbers: 4600-4699
+- Wilderness connector between Ptarth and Kaol
+- Allied territory with cooperative patrols from both cities
+- Features joint waystation, ancient ruins, dangerous predator zones
+- Great banths, white apes, and calots as major threats
+- Demonstrates practical alliance benefits through security cooperation
+- Target levels: 18-26
+
 ### thark_territory (Zone 40)
 - Virtual numbers: 4000-4099
 - Ancient ruined city occupied by the Thark horde

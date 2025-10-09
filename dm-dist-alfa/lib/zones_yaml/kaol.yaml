@@ -1,0 +1,387 @@
+zone:
+  number: 44
+  name: Kaol - Allied City
+  top_room: 4599
+  lifespan: 30
+  reset_mode: 2
+rooms:
+- vnum: 4500
+  name: The Court of Honor
+  description: "   You stand in the magnificent Court of Honor, the central plaza of Kaol.\n    This open square is paved with polished stone and surrounded by impressive\n    buildings reflecting the honorable tradition of this proud city-state. Statues\n    of great Kaolian warriors and leaders line the perimeter, each commemorating\n    acts of valor and nobility. The architecture is distinctly Kaolian - strong,\n    elegant, and emphasizing martial virtue. To the north rises the royal palace\n    where Kulan Tith rules with wisdom and honor. The military quarter lies to the\n    west, while the eastern district houses the city's merchants and guilds."
+  zone: 44
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The royal palace entrance.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4501
+  - direction: 1
+    description: The merchant district.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4510
+  - direction: 2
+    description: The southern gate leads to wilderness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4599
+  - direction: 3
+    description: The military quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4520
+  extra_descriptions: []
+- vnum: 4501
+  name: Palace Entrance
+  description: "   The entrance to Kulan Tith's palace stands before you, an impressive\n    structure that embodies the Kaolian values of strength and honor. The gates are\n    ornate yet functional, decorated with symbols representing the great deeds of\n    Kaol's history. Guards in traditional Kaolian harness stand watch - alert but\n    not hostile, their bearing speaks of discipline and martial pride. The palace\n    beyond combines military readiness with regal dignity, a fitting home for one of\n    Mars' most honorable rulers."
+  zone: 44
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The palace hall.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4502
+  - direction: 2
+    description: The court lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4500
+  extra_descriptions: []
+- vnum: 4502
+  name: Palace Great Hall
+  description: "   The great hall of Kaol's palace is both impressive and welcoming. High\n    vaulted ceilings are decorated with murals depicting the greatest moments in\n    Kaolian history - battles won through honor rather than treachery, peace forged\n    through wisdom rather than force. The hall serves multiple functions: audience\n    chamber for petitioners, gathering place for celebrations, and corridor to the\n    palace's inner chambers. The throne room lies to the north, while passages lead\n    to the war room westward and diplomatic chambers eastward."
+  zone: 44
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The throne room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4503
+  - direction: 1
+    description: The diplomatic chambers.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4505
+  - direction: 2
+    description: The palace entrance.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4501
+  - direction: 3
+    description: The war room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4504
+  extra_descriptions: []
+- vnum: 4503
+  name: Throne Room of Kaol
+  description: "   You stand in the throne room of Kulan Tith, Jeddak of Kaol. The chamber is\n    elegant without being ostentatious, reflecting the character of its ruler. The\n    throne itself is carved from rare Martian wood, decorated with precious metals\n    but designed for function rather than mere display. Here Kulan Tith holds court,\n    dispensing justice with wisdom and mercy, hearing petitions, and making the\n    decisions that guide Kaol's destiny. The atmosphere is one of quiet strength and\n    noble purpose."
+  zone: 44
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 2
+    description: The great hall lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4502
+  extra_descriptions: []
+- vnum: 4504
+  name: War Room
+  description: "   The war room serves as the strategic center for Kaol's military operations.\n    Large maps of Mars cover the walls, showing allied and enemy territories,\n    trade routes, and potential threats. This room has seen countless strategy\n    sessions as Kaol's leaders plan both defense and support for their allies. The\n    furnishings are spartan but functional - war tables, weapon racks, and\n    communications equipment. Military officers come and go, coordinating with\n    forces throughout Mars."
+  zone: 44
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The great hall.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4502
+  extra_descriptions: []
+- vnum: 4505
+  name: Diplomatic Chambers
+  description: "   These chambers serve as the center for Kaol's diplomatic activities. The\n    room is comfortably furnished with seating arrangements conducive to\n    conversation and negotiation. Maps and documents detail treaties, trade\n    agreements, and alliance obligations. Kaol's diplomats work here to maintain\n    the network of alliances that keeps Mars stable, coordinating particularly\n    closely with Ptarth and Helium. The atmosphere encourages reasoned discussion\n    and mutual understanding."
+  zone: 44
+  room_flags: 12
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The great hall.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4502
+  extra_descriptions: []
+- vnum: 4510
+  name: Merchant District
+  description: "   The merchant district of Kaol bustles with honorable commerce. Unlike the\n    markets of more cynical cities, Kaolian merchants pride themselves on fair\n    dealing and quality goods. Shops offer weapons, armor, and supplies crafted with\n    Kaolian attention to excellence. The streets are clean and well-maintained,\n    patrolled by guards who ensure honest trade. Citizens and visitors mingle freely,\n    discussing business and news from across Mars."
+  zone: 44
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 3
+    description: The court lies west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4500
+  extra_descriptions: []
+- vnum: 4520
+  name: Military Quarter
+  description: "   The military quarter reflects Kaol's martial tradition and readiness. Barracks\n    house well-trained warriors, while training grounds echo with the clash of\n    practice weapons. Armories hold equipment maintained to the highest standards.\n    Officers oversee constant drills, ensuring Kaol's forces remain sharp. The\n    atmosphere is professional and disciplined, with none of the brutality seen in\n    enemy cities. These warriors train not for conquest but for defense of Kaol\n    and support of allied cities."
+  zone: 44
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 1
+    description: The court lies east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4500
+  extra_descriptions: []
+- vnum: 4530
+  name: Training Grounds
+  description: "   The training grounds are where Kaol's warriors hone their skills. Warriors\n    practice with sword, pistol, and hand-to-hand combat under the watchful eyes of\n    veteran instructors. The emphasis is on honorable combat - skill and courage\n    rather than treachery. Young warriors learn not just fighting techniques but\n    the code of honor that defines Kaolian military tradition. The sounds of combat\n    practice fill the air: the ring of steel, shouts of instruction, and the thud\n    of bodies hitting the ground."
+  zone: 44
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 2
+    description: The military quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4520
+  extra_descriptions: []
+- vnum: 4599
+  name: Southern Gate of Kaol
+  description: "   You stand at Kaol's southern gate, the primary entrance for travelers coming\n    from Ptarth and the southern territories. The gate is well-fortified but\n    welcoming to allies. Guards check travelers efficiently but courteously. Beyond\n    the gate stretches the wilderness route leading south toward Ptarth. The gate\n    towers provide excellent visibility across the surrounding terrain, allowing\n    early warning of approaching forces. Kaolian scouts regularly patrol the routes\n    from this position."
+  zone: 44
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The Court of Honor.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4500
+  - direction: 2
+    description: The wilderness route to Ptarth.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4698
+  extra_descriptions: []
+mobiles:
+- vnum: 4500
+  namelist: kulan tith jeddak ruler
+  short_desc: Kulan Tith, Jeddak of Kaol
+  long_desc: Kulan Tith, the noble Jeddak of Kaol, stands here with regal bearing.
+  detailed_desc: "   Kulan Tith is a striking figure - tall, strong, and bearing himself with\nthe quiet confidence of a true leader. His features are handsome but marked by\nwisdom and experience. He wears the harness of a Kaolian Jeddak with natural\ndignity. What sets him apart is the nobility in his eyes - he is a man who\nvalues honor above personal gain, capable of great sacrifice for what is right.\nHis presence commands respect without demanding it, and even in disappointment,\nhe maintains his integrity."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -900
+  type: simple
+  simple:
+    level: 24
+    thac0: -2
+    ac: 0
+    hp_dice: 5d10+400
+    damage_dice: 3d8+8
+    gold: 5000
+    experience: 12000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4501
+  namelist: palace guard kaolian warrior
+  short_desc: a palace guard
+  long_desc: A palace guard stands watch with disciplined alertness.
+  detailed_desc: "   This guard wears the distinctive harness of Kaol's palace guard - quality\nleather and metal in the traditional style, well-maintained and functional. The\nguard stands at attention with professional bearing, alert but not threatening.\nThese warriors protect the royal palace and the Jeddak, trained to the highest\nstandards of Kaolian military tradition."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -800
+  type: simple
+  simple:
+    level: 19
+    thac0: 3
+    ac: 5
+    hp_dice: 4d8+200
+    damage_dice: 2d8+5
+    gold: 200
+    experience: 5000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4502
+  namelist: kaolian warrior soldier
+  short_desc: a Kaolian warrior
+  long_desc: A Kaolian warrior patrols the area with alert confidence.
+  detailed_desc: "   This warrior exemplifies Kaolian military tradition - well-trained,\ndisciplined, and dedicated to honorable service. The harness is well-maintained,\nweapons sharp and ready. The warrior moves with the confidence of one who has\ntrained extensively and knows their duty. Unlike soldiers of enemy cities, this\nwarrior serves with pride in honorable cause rather than fear of punishment."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -800
+  type: simple
+  simple:
+    level: 18
+    thac0: 4
+    ac: 6
+    hp_dice: 3d8+150
+    damage_dice: 2d8+4
+    gold: 150
+    experience: 4000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4503
+  namelist: torkar bar captain officer
+  short_desc: Torkar Bar, loyal Kaolian officer
+  long_desc: Torkar Bar, a distinguished officer of Kaol, stands ready for duty.
+  detailed_desc: "   Torkar Bar is a veteran warrior who has served Kulan Tith faithfully for\nmany years. His bearing shows both military competence and personal loyalty to\nhis Jeddak. He has accompanied Kulan Tith on various missions and diplomatic\njourneys, serving as both bodyguard and trusted advisor. His harness shows signs\nof many campaigns, yet is maintained with meticulous care."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -900
+  type: simple
+  simple:
+    level: 20
+    thac0: 2
+    ac: 4
+    hp_dice: 4d8+250
+    damage_dice: 2d8+6
+    gold: 400
+    experience: 6000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4504
+  namelist: kaolian citizen civilian
+  short_desc: a citizen of Kaol
+  long_desc: A citizen of Kaol goes about their business.
+  detailed_desc: "   This citizen of Kaol carries themselves with the quiet pride characteristic\nof this honorable city. They are well-dressed in typical red Martian fashion,\ntheir harness showing quality craftsmanship. The citizen appears content and\nsecure, living under the just rule of Kulan Tith in a city known throughout\nMars for its honor and integrity."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -500
+  type: simple
+  simple:
+    level: 7
+    thac0: 18
+    ac: 8
+    hp_dice: 1d8+40
+    damage_dice: 1d4+1
+    gold: 50
+    experience: 200
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 4500
+  namelist: kaolian harness armor leather
+  short_desc: a Kaolian military harness
+  long_desc: A well-crafted Kaolian military harness lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 5
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 10
+  cost: 1000
+  rent: 100
+  extra_descriptions: []
+  affects:
+  - location: 9
+    modifier: -5
+- vnum: 4501
+  namelist: ceremonial blade sword kaolian
+  short_desc: a Kaolian ceremonial blade
+  long_desc: An elegant ceremonial blade rests here.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 1
+  wear_flags: 8193
+  value0: 3
+  value1: 5
+  value2: 4
+  value3: 3
+  weight: 8
+  cost: 2500
+  rent: 250
+  extra_descriptions: []
+  affects:
+  - location: 18
+    modifier: 2
+  - location: 19
+    modifier: 2
+resets:
+- command: M
+  if_flag: 0
+  arg1: 4500
+  arg2: 1
+  arg3: 4503
+  comment: Load Kulan Tith in throne room
+- command: M
+  if_flag: 0
+  arg1: 4501
+  arg2: 2
+  arg3: 4501
+  comment: Load palace guards at entrance
+- command: M
+  if_flag: 0
+  arg1: 4501
+  arg2: 2
+  arg3: 4503
+  comment: Load palace guards in throne room
+- command: M
+  if_flag: 0
+  arg1: 4502
+  arg2: 3
+  arg3: 4520
+  comment: Load warriors in military quarter
+- command: M
+  if_flag: 0
+  arg1: 4502
+  arg2: 2
+  arg3: 4530
+  comment: Load warriors on training grounds
+- command: M
+  if_flag: 0
+  arg1: 4503
+  arg2: 1
+  arg3: 4504
+  comment: Load Torkar Bar in war room
+- command: M
+  if_flag: 0
+  arg1: 4504
+  arg2: 3
+  arg3: 4510
+  comment: Load citizens in merchant district
+- command: M
+  if_flag: 0
+  arg1: 4504
+  arg2: 2
+  arg3: 4500
+  comment: Load citizens in Court of Honor
+shops: []

@@ -1,0 +1,448 @@
+zone:
+  number: 45
+  name: Ptarth-Kaol Wilderness
+  top_room: 4699
+  lifespan: 25
+  reset_mode: 2
+rooms:
+- vnum: 4600
+  name: Northern Approaches to Ptarth
+  description: "   You stand at the northern edge of Ptarth's territory, where the city's\n    protective influence fades into the vast wilderness. The route northward\n    stretches across hundreds of miles of dead sea bottom toward distant Kaol.\n    Ptarthian scouts patrol these approaches regularly, but beyond lies dangerous\n    frontier requiring strength and skill to traverse. The comforts of civilization\n    lie behind; ahead waits the challenge of Mars' unforgiving wilderness."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The wilderness continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4610
+  - direction: 2
+    description: Ptarth's northern gate lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4399
+  extra_descriptions: []
+- vnum: 4610
+  name: Dead Sea Bottom Plains
+  description: "   The ancient sea bed stretches endlessly in all directions, covered with the\n    reddish ochre moss that sustains much of Mars' remaining life. The terrain is\n    relatively flat but treacherous - ancient rock formations, dried channels, and\n    sudden depressions can slow or endanger the unwary traveler. The thin atmosphere\n    and harsh sun create a harsh environment that tests endurance and resolve."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: A patrol post visible to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4620
+  - direction: 2
+    description: Ptarth's approaches lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4600
+  extra_descriptions: []
+- vnum: 4620
+  name: Ptarthian Patrol Post
+  description: "   A fortified position marks Ptarth's northern frontier post. Warriors from\n    the city maintain this outpost, providing security for travelers and monitoring\n    the route to Kaol. The guards are professional and helpful to allies, offering\n    information about conditions ahead and warnings about recent dangers. This\n    represents the last reliable safe haven before entering the more dangerous\n    central wilderness."
+  zone: 45
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The wilderness continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4630
+  - direction: 2
+    description: The plains stretch south toward Ptarth.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4610
+  extra_descriptions: []
+- vnum: 4630
+  name: Ochre Moss Plains
+  description: "   The moss grows particularly thick here, creating a carpet of rusty red-brown\n    vegetation across the sea bottom. Small creatures burrow in the moss, while\n    larger predators stalk through the area hunting for prey. The route northward\n    is less clearly marked here - travelers must navigate carefully using landmarks\n    and the twin moons to maintain course toward Kaol."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Rocky terrain ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4640
+  - direction: 2
+    description: The patrol post lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4620
+  extra_descriptions: []
+- vnum: 4640
+  name: Rocky Outcroppings
+  description: "   Ancient rock formations rise from the sea bed, creating a maze of stone\n    obstacles and hiding places. These rocks were once islands in the Martian seas,\n    now standing as silent monuments to a wetter age. The area provides shelter for\n    predators and ambush opportunities for hostile forces. Navigating through\n    requires care and constant vigilance."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Ancient ruins visible to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4645
+  - direction: 2
+    description: The moss plains lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4630
+  extra_descriptions: []
+- vnum: 4645
+  name: Ancient Ruins
+  description: "   The crumbling remains of some ancient structure stand here - perhaps a\n    fortress or watchtower from ages past when Mars was more populous. The ruins\n    provide some shelter from the elements and predators, though they also attract\n    dangerous creatures seeking lair space. Inscriptions in the stone hint at a\n    civilization that flourished and fell millennia ago."
+  zone: 45
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The route continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4650
+  - direction: 2
+    description: Rocky outcroppings lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4640
+  extra_descriptions: []
+- vnum: 4650
+  name: Waystation Between Cities
+  description: "   A maintained waystation provides respite for travelers between Ptarth and\n    Kaol. This structure is kept supplied by both cities as a gesture of their\n    alliance and mutual support. The waystation offers shelter, water storage, and\n    defensive positions. Guards from both cities sometimes rest here during their\n    patrol rotations, and travelers can find aid and information."
+  zone: 45
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The northern route continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4660
+  - direction: 2
+    description: Ancient ruins lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4645
+  extra_descriptions: []
+- vnum: 4660
+  name: Banth Hunting Grounds
+  description: "   This region is known as prime hunting territory for banths, the great\n    eight-legged lions of Mars. Tracks and signs of recent kills are evident. The\n    area provides good cover and prey, making it a dangerous zone for unwary\n    travelers. Some banths here seem strangely calm at times - rumors suggest\n    Thuvia's influence occasionally extends this far from Ptarth."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The wilderness continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4670
+  - direction: 2
+    description: The waystation lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4650
+  extra_descriptions: []
+- vnum: 4670
+  name: Desolate Plains
+  description: "   The landscape becomes increasingly barren here - even the hardy ochre moss\n    grows thin in patches. This desolation reflects Mars' dying condition, where\n    life struggles to maintain its grip. The journey tests resolve and endurance as\n    the distances seem endless and the harsh environment takes its toll. Only the\n    promise of Kaol ahead provides motivation to continue."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: A patrol area ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4680
+  - direction: 2
+    description: Hunting grounds lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4660
+  extra_descriptions: []
+- vnum: 4680
+  name: Kaolian Patrol Zone
+  description: "   Signs of Kaolian patrols become evident here - tracks of warriors and thoats,\n    abandoned camp sites, and markers indicating the city's sphere of influence.\n    Kaolian scouts range through this area regularly, protecting the approaches to\n    their city and monitoring for threats. The security provided by these patrols\n    makes this region safer than the wilderness behind."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: A guard post visible ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4690
+  - direction: 2
+    description: The desolate plains.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4670
+  extra_descriptions: []
+- vnum: 4690
+  name: Northern Guard Post
+  description: "   A fortified Kaolian outpost marks the northern frontier of the wilderness\n    route. Warriors maintain constant watch from here, protecting their city's\n    southern approaches and assisting allied travelers. The post is well-supplied\n    and professionally maintained, reflecting Kaolian military standards. Guards\n    provide information and can escort tired travelers the remaining distance to\n    Kaol's gates."
+  zone: 45
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: Kaol's approaches lie north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4698
+  - direction: 2
+    description: The patrol zone stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4680
+  extra_descriptions: []
+- vnum: 4698
+  name: Southern Approaches to Kaol
+  description: "   You stand at the southern edge of Kaol's territory, where the wilderness\n    gives way to the security of civilization. The city towers are visible in the\n    distance, rising proudly from the Martian plains. The route here is well-\n    traveled and patrolled, safe for those allied with Kaol. The long journey from\n    Ptarth ends here, with the promise of rest, resupply, and the legendary\n    hospitality of Kulan Tith's court."
+  zone: 45
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Kaol's southern gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4599
+  - direction: 2
+    description: The guard post lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4690
+  extra_descriptions: []
+mobiles:
+- vnum: 4600
+  namelist: ptarthian scout guard warrior
+  short_desc: a Ptarthian scout
+  long_desc: A Ptarthian scout patrols the route watchfully.
+  detailed_desc: "   This scout wears the harness of Ptarth and carries the equipment needed\nfor long-range patrol duty. Alert and professional, the scout monitors the\nwilderness route for threats and assists travelers allied with Ptarth. These\nwarriors maintain the security of the supply and communication lines between\nPtarth and Kaol."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -800
+  type: simple
+  simple:
+    level: 19
+    thac0: 3
+    ac: 6
+    hp_dice: 3d8+180
+    damage_dice: 2d8+5
+    gold: 150
+    experience: 4500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4601
+  namelist: kaolian scout guard warrior
+  short_desc: a Kaolian scout
+  long_desc: A Kaolian scout stands ready, watching the wilderness.
+  detailed_desc: "   This warrior exemplifies Kaolian military excellence - well-equipped,\nalert, and dedicated to duty. The scout patrols the wilderness approaches to\nKaol, providing early warning of threats and assistance to allied travelers.\nThe Kaolian harness is maintained to perfection despite the harsh environment."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -800
+  type: simple
+  simple:
+    level: 20
+    thac0: 2
+    ac: 5
+    hp_dice: 4d8+200
+    damage_dice: 2d8+6
+    gold: 180
+    experience: 5000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4602
+  namelist: banth lion predator
+  short_desc: a great banth
+  long_desc: A massive eight-legged banth prowls here, searching for prey.
+  detailed_desc: "   The banth is a terrifying predator - a lion-like creature with eight\npowerful legs, wicked claws, and jaws capable of crushing bone. This specimen\nis a prime example of the species, muscular and deadly. Its movements show both\npower and grace as it hunts across the wilderness. At times it seems strangely\ncalm, as if responding to some distant mental influence."
+  action_flags: 0
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 21
+    thac0: 1
+    ac: 4
+    hp_dice: 4d10+250
+    damage_dice: 3d8+6
+    gold: 0
+    experience: 6500
+    position: 8
+    default_position: 8
+    sex: 0
+- vnum: 4603
+  namelist: apt white ape predator
+  short_desc: a white ape
+  long_desc: A massive white ape blocks the path, its four arms ready for violence.
+  detailed_desc: "   The white ape is one of Mars' most dangerous predators - standing twelve\nfeet tall with four powerful arms, each capable of terrible destruction. Its\nwhite fur is matted and scarred from countless battles. The ape's tusked face\nshows primitive cunning and relentless ferocity. These creatures are nearly\nfearless and will attack almost anything."
+  action_flags: 0
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 22
+    thac0: 0
+    ac: 3
+    hp_dice: 5d10+300
+    damage_dice: 3d8+7
+    gold: 0
+    experience: 7000
+    position: 8
+    default_position: 8
+    sex: 0
+- vnum: 4604
+  namelist: calot hound dog beast
+  short_desc: a fierce calot
+  long_desc: A ten-legged calot sniffs the ground, searching for prey.
+  detailed_desc: "   The calot is a Martian hound - large, aggressive, and tireless. With ten\nlegs providing incredible speed and endurance, massive jaws lined with sharp\nteeth, and a hide thick enough to turn aside glancing blows, calots are\nformidable hunters. This one appears wild and dangerous, though some Martians\ncan train them as war dogs."
+  action_flags: 0
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 18
+    thac0: 4
+    ac: 7
+    hp_dice: 3d8+150
+    damage_dice: 2d8+4
+    gold: 0
+    experience: 4000
+    position: 8
+    default_position: 8
+    sex: 0
+- vnum: 4605
+  namelist: waystation keeper guard
+  short_desc: a waystation keeper
+  long_desc: The waystation keeper maintains this outpost between cities.
+  detailed_desc: "   This individual serves as keeper of the waystation, maintained jointly by\nPtarth and Kaol. Neither a soldier nor a merchant, the keeper ensures supplies\nare available, repairs are made, and travelers have shelter. The role requires\nself-sufficiency and dedication, as the keeper must remain at this isolated\npost for extended periods."
+  action_flags: 0
+  affection_flags: 0
+  alignment: -600
+  type: simple
+  simple:
+    level: 15
+    thac0: 7
+    ac: 8
+    hp_dice: 2d8+100
+    damage_dice: 2d6+3
+    gold: 100
+    experience: 2500
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 4600
+  namelist: trail rations food supplies
+  short_desc: trail rations
+  long_desc: Some trail rations lie here, wrapped for preservation.
+  action_desc: ''
+  type_flag: 19
+  extra_flags: 0
+  wear_flags: 1
+  value0: 24
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 50
+  rent: 5
+  extra_descriptions: []
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 4600
+  arg2: 2
+  arg3: 4620
+  comment: Load Ptarthian scouts at patrol post
+- command: M
+  if_flag: 0
+  arg1: 4600
+  arg2: 1
+  arg3: 4630
+  comment: Load Ptarthian scout in wilderness
+- command: M
+  if_flag: 0
+  arg1: 4601
+  arg2: 2
+  arg3: 4690
+  comment: Load Kaolian scouts at guard post
+- command: M
+  if_flag: 0
+  arg1: 4601
+  arg2: 1
+  arg3: 4680
+  comment: Load Kaolian scout in patrol zone
+- command: M
+  if_flag: 0
+  arg1: 4602
+  arg2: 2
+  arg3: 4660
+  comment: Load banths in hunting grounds
+- command: M
+  if_flag: 0
+  arg1: 4603
+  arg2: 1
+  arg3: 4640
+  comment: Load white ape in rocky area
+- command: M
+  if_flag: 0
+  arg1: 4604
+  arg2: 2
+  arg3: 4630
+  comment: Load calots in moss plains
+- command: M
+  if_flag: 0
+  arg1: 4604
+  arg2: 1
+  arg3: 4670
+  comment: Load calot in desolate plains
+- command: M
+  if_flag: 0
+  arg1: 4605
+  arg2: 1
+  arg3: 4650
+  comment: Load waystation keeper
+- command: O
+  if_flag: 0
+  arg1: 4600
+  arg2: 0
+  arg3: 4650
+  comment: Load trail rations at waystation
+shops: []

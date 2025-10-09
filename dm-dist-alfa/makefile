@@ -9,7 +9,7 @@ LDLIBS=-lcrypt
 HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
 
 # Zone files - ordered by zone number
-ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel southern_approach dead_sea_wilderness greater_helium zodanga zodanga_wilderness gathol ptarth gathol_ptarth_wilderness thark_territory atmosphere_factory atmosphere_lower system
+ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel southern_approach dead_sea_wilderness greater_helium zodanga zodanga_wilderness gathol ptarth gathol_ptarth_wilderness kaol ptarth_kaol_wilderness thark_territory atmosphere_factory atmosphere_lower system
 
 # YAML source files
 YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
