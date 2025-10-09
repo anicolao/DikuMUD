@@ -139,8 +139,19 @@ int main(int argc, char **argv)
 				no_specials = 1;
 				slog("Suppressing assignment of special routines.");
 			break;
+			case 'p':
+				if (*(argv[pos] + 2))
+					port = atoi(argv[pos] + 2);
+				else if (++pos < argc)
+					port = atoi(argv[pos]);
+				else
+				{
+					slog("Port number expected after option -p.");
+					exit(0);
+				}
+			break;
 			default:
-				sprintf(buf, "Unknown option -% in argument string.",
+				sprintf(buf, "Unknown option -%c in argument string.",
 					*(argv[pos] + 1));
 				slog(buf);
 			break;
@@ -151,7 +162,7 @@ int main(int argc, char **argv)
 	if (pos < argc)
 		if (!isdigit(*argv[pos]))
 		{
-			fprintf(stderr, "Usage: %s [-l] [-s] [-d pathname] [ port # ]\n", 
+			fprintf(stderr, "Usage: %s [-l] [-s] [-d pathname] [-p port] [ port # ]\n", 
 				argv[0]);
 			exit(0);
 		}

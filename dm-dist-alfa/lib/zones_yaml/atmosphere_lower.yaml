@@ -1661,7 +1661,7 @@ mobiles:
     defend his
 
     research if threatened.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2067,7 +2067,7 @@ mobiles:
     some secrets
 
     should remain buried with their creators.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2138,7 +2138,7 @@ mobiles:
     though
 
     doing so risks everyone nearby including himself.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2169,7 +2169,7 @@ mobiles:
     existence represents the moral complexity of scientific advancement - good intentions
 
     leading to questionable actions.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed

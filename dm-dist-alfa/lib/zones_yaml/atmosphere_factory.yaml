@@ -1371,7 +1371,7 @@ mobiles:
     to
 
     keeping Mars alive and takes great pride in his work.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1392,7 +1392,7 @@ mobiles:
     he''s gaining
 
     the knowledge needed to help sustain Mars.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1416,7 +1416,7 @@ mobiles:
     of
 
     chief engineers. Despite his age, his mind is sharp and his dedication absolute.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1440,7 +1440,7 @@ mobiles:
     of outsiders
 
     but will grudgingly respect competence when she sees it.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1501,7 +1501,7 @@ mobiles:
 
     ancient Martians who built it, keeping alive knowledge that might otherwise be
     lost.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1649,7 +1649,7 @@ mobiles:
     work and
 
     can be startled by unexpected interruptions.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1670,7 +1670,7 @@ mobiles:
     his
 
     monitoring prevents small problems from becoming catastrophes.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1691,7 +1691,7 @@ mobiles:
     his
 
     sections in perfect condition.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1712,7 +1712,7 @@ mobiles:
     filed and can
 
     retrieve information instantly when needed.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1733,7 +1733,7 @@ mobiles:
     reported
 
     immediately and corrected.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1755,7 +1755,7 @@ mobiles:
 
     symbolizing his dual role. His discoveries are carefully documented for future
     generations.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1776,7 +1776,7 @@ mobiles:
     has
 
     saved countless lives over his years of service.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1797,7 +1797,7 @@ mobiles:
     pride
 
     in keeping workers well-fed and maintaining morale.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
