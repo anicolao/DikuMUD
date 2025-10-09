@@ -21,9 +21,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3911
+3511
 0
-3941
+3541
 0
 28
 0
@@ -50,38 +50,38 @@
 %s Here you have %d coins for that.~
 0
 0
-3903
+3503
 0
-3926
+3526
 0
 28
 0
 0#3~
-3510
-3511
-3630
--1
--1
--1
-1.2
-0.9
+3530
+3531
+3532
+3533
+3534
+3535
+1.5
+0.4
+1
+15
 19
-0
-0
-0
-0
-%s Haven't got that kind of food - try list!~
+13
+8
+%s Haven't got that on storage - try list!~
 %s You don't seem to have that.~
-%s I don't buy food items.~
-%s I can't afford such provisions.~
+%s I don't buy THAT,... Try another shop.~
+%s I can't afford such a treasure.~
 %s You can't afford it!~
 %s That'll be %d coins, please.~
 %s You'll get %d coins for it!~
 0
 0
-3902
+3502
 0
-3928
+3529
 0
 28
 0
@@ -108,9 +108,9 @@
 %s You'll get %d coins for it!~
 0
 0
-3904
+3504
 0
-3927
+3527
 0
 28
 0
@@ -137,9 +137,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3943
+3543
 0
-3916
+3516
 0
 28
 0
@@ -166,9 +166,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3942
+3542
 0
-3931
+3531
 0
 28
 0
@@ -195,9 +195,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3944
+3544
 0
-3935
+3535
 0
 28
 0
@@ -224,9 +224,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3945
+3545
 0
-3954
+3554
 0
 28
 0
@@ -253,9 +253,9 @@
 %s You'll get %d coins for it!~
 0
 0
-3900
+3500
 0
-3933
+3533
 0
 28
 0
@@ -282,9 +282,9 @@
 %s What a fine deal, you get %d gold coins.~
 0
 0
-3928
+3528
 0
-3947
+3547
 6
 22
 6
@@ -311,9 +311,9 @@
 %s Bug, please report (%d).~
 0
 0
-3911
+3511
 0
-3941
+3541
 6
 23
 23
@@ -340,9 +340,9 @@
 %s Oups - %d a minor bug - please report!~
 0
 0
-3912
+3512
 0
-3959
+3559
 0
 28
 0
@@ -369,9 +369,9 @@
 %s You'll get %d coins for it!~
 0
 0
-3906
+3506
 0
-3925
+3525
 8
 14
 15
