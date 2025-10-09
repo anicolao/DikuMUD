@@ -1156,9 +1156,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3754
-  namelist: item3754
-  short_desc: object 3754
-  long_desc: An object numbered 3754 lies here.
+  namelist: radium lamp small
+  short_desc: a small radium lamp
+  long_desc: A small radium lamp glows softly here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -1173,9 +1173,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3755
-  namelist: item3755
-  short_desc: object 3755
-  long_desc: An object numbered 3755 lies here.
+  namelist: radium lamp large
+  short_desc: a large radium lamp
+  long_desc: A large radium lamp provides steady illumination.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -1207,9 +1207,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3766
-  namelist: item3766
-  short_desc: object 3766
-  long_desc: An object numbered 3766 lies here.
+  namelist: radium torch
+  short_desc: a radium torch
+  long_desc: A radium torch glows with pale light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0

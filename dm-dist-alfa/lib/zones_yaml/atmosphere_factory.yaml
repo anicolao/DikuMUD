@@ -1203,6 +1203,198 @@ rooms:
       could follow
 
       them to safety.'
+- vnum: 4125
+  name: Unfinished Chamber 4125
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4126
+  name: Unfinished Chamber 4126
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4127
+  name: Unfinished Chamber 4127
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4128
+  name: Unfinished Chamber 4128
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4130
+  name: Unfinished Chamber 4130
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4135
+  name: Unfinished Chamber 4135
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4136
+  name: Unfinished Chamber 4136
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4137
+  name: Unfinished Chamber 4137
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4138
+  name: Unfinished Chamber 4138
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4140
+  name: Unfinished Chamber 4140
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4141
+  name: Unfinished Chamber 4141
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4142
+  name: Unfinished Chamber 4142
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4143
+  name: Unfinished Chamber 4143
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4144
+  name: Unfinished Chamber 4144
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4145
+  name: Unfinished Chamber 4145
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
+- vnum: 4146
+  name: Unfinished Chamber 4146
+  description: '   This chamber is still under construction. The walls are bare stone,
+
+    and equipment lies scattered about in various states of assembly. The air
+
+    smells of fresh metal and ozone from nearby machinery.'
+  zone: 41
+  room_flags: 8
+  sector_type: 0
+  exits: []
+  extra_descriptions: []
 - vnum: 4147
   name: Escape Route Junction
   description: '   The escape route branches here. One path leads to surface exits,

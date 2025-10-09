@@ -2958,9 +2958,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3020
-  namelist: item3020
-  short_desc: object 3020
-  long_desc: An object numbered 3020 lies here.
+  namelist: radium lamp small
+  short_desc: a small radium lamp
+  long_desc: A small radium lamp glows softly here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -2975,9 +2975,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3021
-  namelist: item3021
-  short_desc: object 3021
-  long_desc: An object numbered 3021 lies here.
+  namelist: radium lamp large
+  short_desc: a large radium lamp
+  long_desc: A large radium lamp provides steady illumination.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -2992,9 +2992,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3022
-  namelist: item3022
-  short_desc: object 3022
-  long_desc: An object numbered 3022 lies here.
+  namelist: radium torch
+  short_desc: a radium torch
+  long_desc: A radium torch glows with pale light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3009,9 +3009,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3023
-  namelist: item3023
-  short_desc: object 3023
-  long_desc: An object numbered 3023 lies here.
+  namelist: radium lantern
+  short_desc: a radium lantern
+  long_desc: A radium lantern emits a steady glow.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3026,9 +3026,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3024
-  namelist: item3024
-  short_desc: object 3024
-  long_desc: An object numbered 3024 lies here.
+  namelist: radium orb
+  short_desc: a glowing radium orb
+  long_desc: A glowing radium orb pulses with soft light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3230,9 +3230,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3050
-  namelist: item3050
-  short_desc: object 3050
-  long_desc: An object numbered 3050 lies here.
+  namelist: radium crystal
+  short_desc: a radium crystal
+  long_desc: A luminous radium crystal lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3247,9 +3247,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3051
-  namelist: item3051
-  short_desc: object 3051
-  long_desc: An object numbered 3051 lies here.
+  namelist: radium sphere
+  short_desc: a radium sphere
+  long_desc: A radium sphere glows with inner light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3264,9 +3264,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3060
-  namelist: item3060
-  short_desc: object 3060
-  long_desc: An object numbered 3060 lies here.
+  namelist: radium rod
+  short_desc: a radium rod
+  long_desc: A radium rod emits a soft glow.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3281,9 +3281,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3061
-  namelist: item3061
-  short_desc: object 3061
-  long_desc: An object numbered 3061 lies here.
+  namelist: lamp brass
+  short_desc: a brass lamp
+  long_desc: A brass lamp shines brightly here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3298,9 +3298,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3062
-  namelist: item3062
-  short_desc: object 3062
-  long_desc: An object numbered 3062 lies here.
+  namelist: lamp copper
+  short_desc: a copper lamp
+  long_desc: A tarnished copper lamp lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3315,9 +3315,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3063
-  namelist: item3063
-  short_desc: object 3063
-  long_desc: An object numbered 3063 lies here.
+  namelist: lamp silver
+  short_desc: a silver lamp
+  long_desc: A polished silver lamp gleams here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3332,9 +3332,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3064
-  namelist: item3064
-  short_desc: object 3064
-  long_desc: An object numbered 3064 lies here.
+  namelist: lamp gold
+  short_desc: a golden lamp
+  long_desc: A golden lamp radiates warm light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3349,9 +3349,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3065
-  namelist: item3065
-  short_desc: object 3065
-  long_desc: An object numbered 3065 lies here.
+  namelist: lamp ornate
+  short_desc: an ornate lamp
+  long_desc: An ornately decorated lamp rests here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3468,9 +3468,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3072
-  namelist: item3072
-  short_desc: object 3072
-  long_desc: An object numbered 3072 lies here.
+  namelist: lamp carved
+  short_desc: a carved lamp
+  long_desc: A lamp carved from red stone lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3485,9 +3485,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3073
-  namelist: item3073
-  short_desc: object 3073
-  long_desc: An object numbered 3073 lies here.
+  namelist: lamp ancient
+  short_desc: an ancient lamp
+  long_desc: An ancient lamp of mysterious origin lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3502,9 +3502,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3074
-  namelist: item3074
-  short_desc: object 3074
-  long_desc: An object numbered 3074 lies here.
+  namelist: phosphor lamp
+  short_desc: a phosphorescent lamp
+  long_desc: A phosphorescent lamp gives off a greenish glow.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3519,9 +3519,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3075
-  namelist: item3075
-  short_desc: object 3075
-  long_desc: An object numbered 3075 lies here.
+  namelist: phosphor orb
+  short_desc: a phosphorescent orb
+  long_desc: A phosphorescent orb glows dimly.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3536,9 +3536,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3076
-  namelist: item3076
-  short_desc: object 3076
-  long_desc: An object numbered 3076 lies here.
+  namelist: phosphor stone
+  short_desc: a phosphorescent stone
+  long_desc: A stone that glows with phosphorescent light lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3553,9 +3553,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3077
-  namelist: item3077
-  short_desc: object 3077
-  long_desc: An object numbered 3077 lies here.
+  namelist: crystal lamp clear
+  short_desc: a clear crystal lamp
+  long_desc: A lamp of clear crystal lies here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3570,9 +3570,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3078
-  namelist: item3078
-  short_desc: object 3078
-  long_desc: An object numbered 3078 lies here.
+  namelist: crystal lamp blue
+  short_desc: a blue crystal lamp
+  long_desc: A lamp made of blue crystal glows here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3587,9 +3587,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3079
-  namelist: item3079
-  short_desc: object 3079
-  long_desc: An object numbered 3079 lies here.
+  namelist: crystal lamp red
+  short_desc: a red crystal lamp
+  long_desc: A lamp of red crystal provides illumination.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3604,9 +3604,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3080
-  namelist: item3080
-  short_desc: object 3080
-  long_desc: An object numbered 3080 lies here.
+  namelist: crystal lamp green
+  short_desc: a green crystal lamp
+  long_desc: A green crystal lamp shines here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3621,9 +3621,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3081
-  namelist: item3081
-  short_desc: object 3081
-  long_desc: An object numbered 3081 lies here.
+  namelist: dome light
+  short_desc: a dome light
+  long_desc: A small dome light illuminates the area.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3638,9 +3638,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3082
-  namelist: item3082
-  short_desc: object 3082
-  long_desc: An object numbered 3082 lies here.
+  namelist: wall lamp
+  short_desc: a wall lamp
+  long_desc: A wall-mounted lamp provides light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3655,9 +3655,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3083
-  namelist: item3083
-  short_desc: object 3083
-  long_desc: An object numbered 3083 lies here.
+  namelist: moss lamp
+  short_desc: a moss-covered lamp
+  long_desc: A lamp covered in glowing moss rests here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3672,9 +3672,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3084
-  namelist: item3084
-  short_desc: object 3084
-  long_desc: An object numbered 3084 lies here.
+  namelist: gem lamp
+  short_desc: a jeweled lamp
+  long_desc: A lamp encrusted with gems sparkles here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3689,9 +3689,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3085
-  namelist: item3085
-  short_desc: object 3085
-  long_desc: An object numbered 3085 lies here.
+  namelist: torch burning
+  short_desc: a burning torch
+  long_desc: A burning torch flickers here.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3706,9 +3706,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3086
-  namelist: item3086
-  short_desc: object 3086
-  long_desc: An object numbered 3086 lies here.
+  namelist: lantern metal
+  short_desc: a metal lantern
+  long_desc: A metal lantern hangs ready.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3723,9 +3723,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3087
-  namelist: item3087
-  short_desc: object 3087
-  long_desc: An object numbered 3087 lies here.
+  namelist: candle white
+  short_desc: a white candle
+  long_desc: A white candle burns steadily.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3740,9 +3740,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3088
-  namelist: item3088
-  short_desc: object 3088
-  long_desc: An object numbered 3088 lies here.
+  namelist: candle red
+  short_desc: a red candle
+  long_desc: A red candle flickers gently.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3757,9 +3757,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3089
-  namelist: item3089
-  short_desc: object 3089
-  long_desc: An object numbered 3089 lies here.
+  namelist: oil lamp
+  short_desc: an oil lamp
+  long_desc: An oil lamp burns with a steady flame.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3774,9 +3774,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3090
-  namelist: item3090
-  short_desc: object 3090
-  long_desc: An object numbered 3090 lies here.
+  namelist: radium lamp small bright
+  short_desc: a small radium lamp (bright)
+  long_desc: A small radium lamp glows softly here (bright).
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3791,9 +3791,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3091
-  namelist: item3091
-  short_desc: object 3091
-  long_desc: An object numbered 3091 lies here.
+  namelist: radium lamp large bright
+  short_desc: a large radium lamp (bright)
+  long_desc: A large radium lamp provides steady illumination.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3808,9 +3808,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3092
-  namelist: item3092
-  short_desc: object 3092
-  long_desc: An object numbered 3092 lies here.
+  namelist: radium torch bright
+  short_desc: a radium torch (bright)
+  long_desc: A radium torch glows with pale light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3825,9 +3825,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3093
-  namelist: item3093
-  short_desc: object 3093
-  long_desc: An object numbered 3093 lies here.
+  namelist: radium lantern bright
+  short_desc: a radium lantern (bright)
+  long_desc: A radium lantern emits a steady glow.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3842,9 +3842,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3094
-  namelist: item3094
-  short_desc: object 3094
-  long_desc: An object numbered 3094 lies here.
+  namelist: radium orb bright
+  short_desc: a glowing radium orb (bright)
+  long_desc: A glowing radium orb pulses with soft light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3859,9 +3859,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3095
-  namelist: item3095
-  short_desc: object 3095
-  long_desc: An object numbered 3095 lies here.
+  namelist: radium crystal bright
+  short_desc: a radium crystal (bright)
+  long_desc: A luminous radium crystal lies here, looking bright.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3876,9 +3876,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3096
-  namelist: item3096
-  short_desc: object 3096
-  long_desc: An object numbered 3096 lies here.
+  namelist: radium sphere bright
+  short_desc: a radium sphere (bright)
+  long_desc: A radium sphere glows with inner light.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3893,9 +3893,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3097
-  namelist: item3097
-  short_desc: object 3097
-  long_desc: An object numbered 3097 lies here.
+  namelist: radium rod bright
+  short_desc: a radium rod (bright)
+  long_desc: A radium rod emits a soft glow.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3910,9 +3910,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3098
-  namelist: item3098
-  short_desc: object 3098
-  long_desc: An object numbered 3098 lies here.
+  namelist: lamp brass bright
+  short_desc: a brass lamp (bright)
+  long_desc: A brass lamp shines brightly here (bright).
   action_desc: ''
   type_flag: 1
   extra_flags: 0
@@ -3927,9 +3927,9 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3099
-  namelist: item3099
-  short_desc: object 3099
-  long_desc: An object numbered 3099 lies here.
+  namelist: lamp copper bright
+  short_desc: a copper lamp (bright)
+  long_desc: A tarnished copper lamp lies here, looking bright.
   action_desc: ''
   type_flag: 1
   extra_flags: 0
