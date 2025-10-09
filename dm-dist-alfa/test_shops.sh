@@ -32,12 +32,22 @@ echo ""
 echo "3. Running comprehensive shop validation..."
 python3 ../tools/validate_shops.py lib/tinyworld.shp lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.wld > /tmp/shop_validation.txt 2>&1
 
-# Check if bread items appear as valid in shops (with checkmark)
-if grep -q "3010 ✓" /tmp/shop_validation.txt && grep -q "3510 ✓" /tmp/shop_validation.txt; then
-    echo "   ✓ Both bread items are validated and available in shops"
+# Check for errors in validation (not warnings)
+error_count=$(grep "^Errors:" /tmp/shop_validation.txt | awk '{print $2}')
+
+if [ "$error_count" = "0" ]; then
+    # Check if bread items appear as valid in shops (with checkmark)
+    if grep -q "3010 (a loaf of bread) ✓" /tmp/shop_validation.txt && grep -q "3510 (a fine loaf of bread) ✓" /tmp/shop_validation.txt; then
+        echo "   ✓ Both bread items are validated and available in shops"
+        echo "   ✓ No validation errors found"
+    else
+        echo "   ✗ Bread items validation failed - items not found with correct names"
+        grep -E "3010|3510" /tmp/shop_validation.txt | head -10
+        exit 1
+    fi
 else
-    echo "   ✗ Bread items validation failed"
-    grep -E "(3010|3510)" /tmp/shop_validation.txt | head -10
+    echo "   ✗ Validation found $error_count errors"
+    grep "ERROR:" /tmp/shop_validation.txt | head -10
     exit 1
 fi
 
