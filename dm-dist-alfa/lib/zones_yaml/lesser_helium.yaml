@@ -866,7 +866,7 @@ rooms:
 
     system.  South of here the ground slopes toward the dried channel and to the north
 
-    is the common plaza.'
+    is the common plaza.  A dark opening in the floor leads down to the old sewer tunnels.'
   zone: 30
   room_flags: 4
   sector_type: 2
@@ -877,6 +877,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3025
+  - direction: 5
+    description: A narrow opening descends into darkness and the smell of decay.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3150
   extra_descriptions: []
 - vnum: 3031
   name: The Calot Shop

@@ -29,6 +29,17 @@ Each zone consists of five files:
 - Twin city of Helium on Barsoom (Mars)
 - Includes: Temple District, Market Plaza, Guild Quarter, shops, inns
 
+### sewers (Zone 31)
+- Virtual numbers: 3150-3189
+- Ancient sewer system beneath Lesser Helium
+- Accessible from the Waste Disposal area (room 3030)
+- Target levels: 1-4
+- Features: 40 rooms of tunnels and dens
+- Creatures: Ulsio (rats), carrion birds, spiders, slimes, centipedes
+- Two secret passages lead to deeper, more dangerous areas
+- Rewards: Basic weapons, food, coins, and better loot in deep sections
+- Corresponds to the "Sewers" of original Midgaard design
+
 ### dead_sea_bottom_channel (Zone 32)
 - Virtual numbers: 3200-3299
 - Ancient dried waterway beneath Lesser Helium
@@ -150,19 +161,22 @@ This concatenates the zone files in the correct order:
 1. limbo
 2. zone_1200
 3. lesser_helium
-4. dead_sea_bottom_channel
-5. southern_approach
-6. dead_sea_wilderness
-7. greater_helium
-8. zodanga
-9. zodanga_wilderness
-10. gathol
-11. ptarth
-12. gathol_ptarth_wilderness
-13. thark_territory
-14. atmosphere_factory
-15. atmosphere_lower
-16. system
+4. sewers
+5. dead_sea_bottom_channel
+6. southern_approach
+7. dead_sea_wilderness
+8. greater_helium
+9. zodanga
+10. zodanga_wilderness
+11. gathol
+12. ptarth
+13. gathol_ptarth_wilderness
+14. kaol
+15. ptarth_kaol_wilderness
+16. thark_territory
+17. atmosphere_factory
+18. atmosphere_lower
+19. system
 
 ## Adding New Zones
 

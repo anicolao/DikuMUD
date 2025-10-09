@@ -1,0 +1,2858 @@
+zone:
+  number: 31
+  name: Lesser Helium Sewers
+  top_room: 3189
+  lifespan: 30
+  reset_mode: 2
+rooms:
+- vnum: 3150
+  name: Lower Sewer Access
+  description: '   You descend through a narrow opening in the waste disposal area
+    into the ancient
+
+    sewer tunnels beneath Lesser Helium.  The air is thick and dank, filled with the
+
+    smell of decay and stagnant water.  The walls are constructed from massive stone
+
+    blocks, covered in centuries of slime and moss.  A faint squeaking sound echoes
+
+    from deeper in the tunnels, and you can hear the rustle of unseen creatures in
+
+    the darkness.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The opening leads back up to the waste disposal area.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3030
+  - direction: 2
+    description: A dark tunnel extends deeper into the sewers.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3151
+  extra_descriptions: []
+- vnum: 3151
+  name: Main Sewer Tunnel
+  description: '   This wide tunnel was once part of Lesser Helium''s water reclamation
+    system.
+
+    Water channels run along both sides, now mostly dry except for fetid pools of
+
+    stagnant liquid.  The stone walls are slick with moisture and algae.  Small bones
+
+    are scattered across the floor, and you hear the scurrying of many tiny feet in
+
+    the shadows.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads back to the entrance.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3150
+  - direction: 1
+    description: A side passage branches off to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3152
+  - direction: 2
+    description: The main tunnel continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3153
+  extra_descriptions: []
+- vnum: 3152
+  name: Eastern Side Passage
+  description: '   This narrow passage splits off from the main tunnel.  The ceiling
+    is lower here,
+
+    forcing you to crouch slightly.  Strange fungi grow on the walls, giving off a
+
+    faint phosphorescent glow.  The floor is littered with debris and the remains
+    of
+
+    small creatures that met their end here.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The passage leads back to the main tunnel.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3151
+  - direction: 2
+    description: The passage continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3154
+  extra_descriptions: []
+- vnum: 3153
+  name: Main Tunnel Junction
+  description: '   The main sewer tunnel widens here into a junction chamber.  Multiple
+    passages
+
+    branch off in different directions.  Water drips constantly from the ceiling,
+
+    creating small pools on the uneven floor.  The walls show signs of ancient repair
+
+    work, and you can see where newer stones have been added to replace damaged
+
+    sections.  A large nest of bones and refuse has been built in one corner.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The main tunnel leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3151
+  - direction: 1
+    description: A narrow passage leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3154
+  - direction: 2
+    description: A wide tunnel continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3155
+  - direction: 3
+    description: A dark corridor extends west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3156
+  extra_descriptions: []
+- vnum: 3154
+  name: Narrow Eastern Tunnel
+  description: '   This tight passage connects the eastern side passages.  The walls
+    are rough
+
+    and unfinished, suggesting this was a secondary tunnel.  Small creatures have
+
+    made homes in crevices in the walls, and their droppings cover the floor.  The
+
+    air is particularly stale here, with little circulation.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3152
+  - direction: 3
+    description: The passage opens into a junction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3153
+  extra_descriptions: []
+- vnum: 3155
+  name: Southern Main Tunnel
+  description: '   The main sewer tunnel continues here, gradually descending deeper
+    underground.
+
+    The construction becomes older and more primitive as you go deeper, with rougher
+
+    stonework and cruder drainage channels.  Something large has been dragging prey
+
+    through here recently - you can see drag marks in the accumulated filth on the
+
+    floor and blood spatters on the walls.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel slopes back up to the junction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3153
+  - direction: 2
+    description: The tunnel continues south into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3157
+  extra_descriptions: []
+- vnum: 3156
+  name: Western Dark Corridor
+  description: '   This corridor is particularly dark and oppressive.  No light from
+    the upper
+
+    tunnels reaches here, and the walls seem to absorb what little illumination you
+
+    bring.  The floor is uneven and treacherous, covered in slippery slime and debris.
+
+    You hear strange clicking sounds echoing from the walls.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The corridor leads back to the junction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3153
+  - direction: 2
+    description: The corridor continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3158
+  extra_descriptions: []
+- vnum: 3157
+  name: Deep Sewer Chamber
+  description: '   The tunnel opens into a larger chamber where multiple drainage
+    pipes empty
+
+    their contents.  The smell is overwhelming here, and the floor is covered in a
+
+    thick layer of muck and refuse.  Bones of various sizes protrude from the filth,
+
+    evidence of the many creatures that have died here.  Several tunnels branch off
+
+    from this chamber.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3155
+  - direction: 1
+    description: A smaller tunnel leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3159
+  - direction: 2
+    description: A wide passage continues deeper south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3160
+  extra_descriptions: []
+- vnum: 3158
+  name: Western Sewer Tunnel
+  description: '   This western branch of the sewer system shows more signs of collapse.  Several
+
+    sections of the ceiling have fallen in, creating piles of rubble that must be
+
+    climbed over.  Water seeps through cracks in the walls, and the floor is muddy
+
+    and unstable.  Fresh claw marks on the walls suggest something large patrols
+
+    this area regularly.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The corridor leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3156
+  - direction: 2
+    description: The tunnel continues through the rubble.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3161
+  extra_descriptions: []
+- vnum: 3159
+  name: Small Side Den
+  description: '   This small chamber has been turned into a den by some creature.  The
+    floor is
+
+    lined with torn fabric, bones, and other debris gathered to make a crude nest.
+
+    The walls are covered in scratch marks, and the smell of animal musk is strong.
+
+    Fresh kills lie in one corner, still dripping blood.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The tunnel leads back west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3157
+  extra_descriptions: []
+- vnum: 3160
+  name: Deeper Sewer Passage
+  description: '   You are now quite deep beneath the city.  The air is thin and difficult
+    to
+
+    breathe, heavy with methane and other noxious gases.  The walls here are ancient,
+
+    predating Lesser Helium itself, part of some earlier civilization''s infrastructure.
+
+    Strange symbols are carved into some of the stones, worn almost smooth by ages
+
+    of moisture and decay.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage slopes back up to the chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3157
+  - direction: 2
+    description: The passage continues into the depths.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3162
+  - direction: 3
+    description: A side tunnel branches west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3163
+  extra_descriptions: []
+- vnum: 3161
+  name: Collapsed Western Section
+  description: '   This section has suffered severe collapse.  Large stones block
+    much of the
+
+    passage, creating a maze of narrow gaps and unstable rubble piles.  The ceiling
+
+    creaks ominously overhead, and small stones occasionally fall.  Despite the
+
+    danger, something has made a lair in this treacherous area.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads back through the rubble.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3158
+  - direction: 2
+    description: A narrow gap between fallen stones leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3164
+  extra_descriptions: []
+- vnum: 3162
+  name: Ancient Sewer Junction
+  description: '   This junction shows the architecture of an older civilization.  The
+    stonework
+
+    is more sophisticated here, with precision-cut blocks fitted together perfectly.
+
+    Strange glyphs decorate archways leading to different passages.  The floor is
+
+    mostly dry here, suggesting better drainage design than the newer tunnels above.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back to newer construction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3160
+  - direction: 1
+    description: An eastern passage leads into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3165
+  - direction: 2
+    description: A southern corridor extends ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3166
+  extra_descriptions: []
+- vnum: 3163
+  name: Western Storage Chamber
+  description: '   This chamber appears to have been used for storage in ancient times.  Broken
+
+    pottery and corroded metal containers are scattered about.  Most are empty, but
+
+    some still contain unidentifiable desiccated substances.  The walls have niches
+
+    carved into them, many still holding ancient artifacts now fused with rust and
+
+    decay.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The tunnel leads back east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3160
+  extra_descriptions: []
+- vnum: 3164
+  name: Hidden Western Lair
+  description: '   Beyond the collapsed section lies a more secure area.  This large
+    chamber has
+
+    been claimed as a lair by larger predators.  Fresh kills are piled in corners,
+
+    and the floor is stained with old blood.  The walls show deep claw marks, and
+
+    bones are scattered everywhere.  This is clearly the domain of something powerful
+
+    and dangerous.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: A narrow gap leads back through the rubble.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3161
+  extra_descriptions: []
+- vnum: 3165
+  name: Ancient Eastern Passage
+  description: '   This eastern passage maintains the sophisticated architecture of
+    the ancient
+
+    builders.  The walls are lined with carved panels depicting scenes from a lost
+
+    civilization.  The drainage channels still function here, carrying away any water
+
+    that seeps through the ceiling.  A faint breeze suggests this passage connects
+
+    to the surface somewhere far away.  You notice the floor stones are oddly fitted
+    in
+
+    one section, as if concealing something beneath.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The passage leads back to the junction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3162
+  - direction: 2
+    description: The passage continues south, partially blocked by debris.
+    keywords: secret hatch concealed floor
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3167
+  extra_descriptions: []
+- vnum: 3166
+  name: Ancient Southern Corridor
+  description: '   The ancient corridor continues south from the junction.  The superior
+
+    construction is evident in the smooth walls and level floor.  However, time has
+
+    taken its toll - cracks snake across the ceiling, and some sections of wall have
+
+    crumbled.  The silence here is profound, broken only by the occasional drip of
+
+    water and the skitter of small claws.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The corridor leads back to the junction.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3162
+  - direction: 2
+    description: The corridor continues deeper.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3168
+  extra_descriptions: []
+- vnum: 3167
+  name: Secret Lower Level Access
+  description: '   You have discovered a concealed hatch that leads down to an even
+    deeper level
+
+    of the ancient sewer system.  The stonework here is remarkably preserved, with
+
+    intricate carvings still visible on the walls.  The air is dry and dusty, quite
+
+    different from the damp upper tunnels.  This area was clearly sealed deliberately,
+
+    perhaps to contain something dangerous.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The concealed hatch leads back up.
+    keywords: secret hatch concealed floor
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3165
+  - direction: 2
+    description: A well-preserved tunnel leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3169
+  extra_descriptions: []
+- vnum: 3168
+  name: Deep Ancient Chamber
+  description: '   This large chamber was clearly important in the ancient system.  The
+    ceiling
+
+    is high and supported by carved pillars.  Ancient pipes and channels run along
+
+    the walls, still functional after countless centuries.  The floor is decorated
+
+    with an intricate mosaic, now partially obscured by dirt and debris.  Multiple
+
+    passages lead from this chamber.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The corridor leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3166
+  - direction: 1
+    description: A passage leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3170
+  - direction: 2
+    description: A grand archway leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3171
+  - direction: 3
+    description: A western passage extends into darkness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3172
+  extra_descriptions: []
+- vnum: 3169
+  name: Sealed Ancient Tunnel
+  description: '   This tunnel was sealed for good reason.  The walls are covered
+    in warning
+
+    symbols, and the floor shows signs of ancient combat - scorched stones, impact
+
+    craters, and suspicious stains that might once have been blood.  Something
+
+    valuable or dangerous was kept down here.  Several alcoves branch off the main
+
+    tunnel, each sealed with heavy stone doors.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads back to the access hatch.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3167
+  - direction: 2
+    description: The tunnel continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3173
+  extra_descriptions: []
+- vnum: 3170
+  name: Eastern Ancient Passage
+  description: '   This passage shows signs of habitation by intelligent creatures
+    in ancient
+
+    times.  Faded murals on the walls depict daily life in the lost civilization.
+
+    Stone benches are carved into the walls, and niches hold the remains of ancient
+
+    lamps.  The floor is worn smooth by countless footsteps over the ages.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The passage leads back to the chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3168
+  - direction: 2
+    description: The passage continues south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3174
+  extra_descriptions: []
+- vnum: 3171
+  name: Grand Archive Chamber
+  description: '   This magnificent chamber was clearly used as an archive or repository.  The
+
+    walls are lined with stone shelves and cabinets, most now empty or containing
+
+    only dust and fragments.  A large stone table dominates the center of the room,
+
+    its surface covered in ancient diagrams and writing.  Despite the decay, this
+
+    place still radiates a sense of former importance and grandeur.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The grand archway leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3168
+  - direction: 2
+    description: A doorway leads to a smaller chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3175
+  extra_descriptions: []
+- vnum: 3172
+  name: Western Ritual Chamber
+  description: '   This chamber has an unsettling atmosphere.  The walls are carved
+    with disturbing
+
+    images of creatures and rituals.  A circular platform dominates the center of
+    the
+
+    room, its surface stained dark with substances best left unidentified.  Channels
+
+    carved in the floor lead to drains in the corners.  This was clearly a place where
+
+    dark practices were conducted in the ancient past.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 1
+    description: The passage leads back to the main chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3168
+  extra_descriptions: []
+- vnum: 3173
+  name: Sealed Prison Corridor
+  description: '   This corridor is lined with heavy doors, each sealed with ancient
+    mechanisms.
+
+    Most have been forced open from the inside, their locking bars bent or broken.
+
+    The walls show deep gouges and scratch marks, as if something powerful fought
+    to
+
+    escape.  Whatever was imprisoned here is long gone, but the sense of menace
+
+    remains.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The tunnel leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3169
+  - direction: 2
+    description: The corridor ends at a large door.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3176
+  extra_descriptions: []
+- vnum: 3174
+  name: Ancient Living Quarters
+  description: '   This area was clearly residential quarters for those who maintained
+    the ancient
+
+    sewer system.  Stone bunks are carved into the walls, and storage alcoves still
+
+    contain the remnants of personal belongings.  A small alcove contains the remains
+
+    of a primitive kitchen area.  The people who lived here were clearly dedicated
+    to
+
+    their work, living underground to tend to the city''s infrastructure.  You idly
+
+    wonder what valuables the ancient workers might have hidden beneath their sleeping
+
+    bunks.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3170
+  - direction: 2
+    description: A concealed passage lies behind a loose stone.
+    keywords: secret stone concealed loose bed bunk
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3177
+  extra_descriptions: []
+- vnum: 3175
+  name: Archive Vault
+  description: '   This secure vault was used to store the most valuable or sensitive
+    materials.
+
+    The walls are lined with sealed compartments, though most have been opened and
+
+    emptied over the centuries.  A few still contain fragments of ancient texts,
+
+    maps, and artifacts.  This would have been one of the most secure locations in
+
+    the entire ancient complex.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The doorway leads back to the main archive.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3171
+  extra_descriptions: []
+- vnum: 3176
+  name: Maximum Security Chamber
+  description: '   Beyond the heavy door lies what was clearly the maximum security
+    area of the
+
+    ancient prison.  The walls are reinforced with thick metal bands, now corroded
+
+    but still imposing.  Heavy chains and manacles are bolted to the walls and floor.
+
+    The door itself shows massive damage from inside - whatever was held here was
+
+    incredibly powerful.  Blood stains and claw marks cover every surface.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The heavy door leads back to the corridor.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3173
+  extra_descriptions: []
+- vnum: 3177
+  name: Secret Treasure Vault Access
+  description: '   Behind a loose stone in the living quarters, you have discovered
+    a hidden
+
+    passage leading to what appears to be a secret vault.  The walls here are plain
+
+    and undecorated, designed to avoid attention.  The passage slopes downward,
+
+    taking you even deeper beneath the city.  The air is completely still and dry,
+
+    preserved by the perfect seal.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The concealed passage leads back to the living quarters.
+    keywords: secret stone concealed loose
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3174
+  - direction: 2
+    description: The passage leads down to the vault level.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3178
+  extra_descriptions: []
+- vnum: 3178
+  name: Vault Antechamber
+  description: '   This antechamber served as a final security checkpoint before the
+    main vault.
+
+    Heavy stone doors once sealed this area, but they have been forced open.  Guard
+
+    posts are carved into the walls, and weapon racks still hold the corroded remains
+
+    of ancient arms.  The floor is littered with bones - both of guards and intruders
+
+    who died fighting over whatever treasure lies beyond.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back up to the hidden access.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3177
+  - direction: 2
+    description: The main vault door stands open.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3179
+  - direction: 1
+    description: A side passage leads to a guard chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3180
+  extra_descriptions: []
+- vnum: 3179
+  name: Main Treasure Vault
+  description: '   The legendary treasure vault of the ancient civilization.  This
+    massive chamber
+
+    is lined with shelves and chests, though most have been emptied long ago.  The
+
+    ceiling is carved with astronomical charts and mathematical formulas.  The walls
+
+    contain hidden compartments, some still sealed and potentially containing valuable
+
+    artifacts.  Despite countless looters over the ages, this place still holds
+
+    secrets and treasures for those brave enough to face the guardians that have
+
+    made it their lair.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The vault door leads back to the antechamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3178
+  - direction: 2
+    description: A passage leads to a deeper vault section.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3181
+  extra_descriptions: []
+- vnum: 3180
+  name: Ancient Guard Chamber
+  description: '   This chamber housed the elite guards who protected the vault.  It
+    is well-
+
+    appointed for an underground facility, with carved stone furniture and decorated
+
+    walls.  Weapon racks line one wall, and a large table in the center was likely
+
+    used for planning security.  Personal effects of the guards are scattered about,
+
+    giving a glimpse into their lives.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The passage leads back to the antechamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3178
+  extra_descriptions: []
+- vnum: 3181
+  name: Deep Vault Section
+  description: '   The deepest section of the vault, where the most valuable and dangerous
+    items
+
+    were stored.  Heavy reinforced compartments line the walls, many still sealed
+
+    with complex locking mechanisms.  The floor is trapped with pressure plates and
+
+    hidden mechanisms, most now degraded but still potentially dangerous.  Strange
+
+    creatures have made nests in the corners, drawn by the lingering energy that
+
+    permeates this place.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back to the main vault.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3179
+  - direction: 1
+    description: A narrow passage leads to a security post.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3182
+  - direction: 2
+    description: The deepest passage extends further.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3183
+  extra_descriptions: []
+- vnum: 3182
+  name: Secondary Guard Post
+  description: '   This secondary guard station monitored the deep vault section.  It
+    is smaller
+
+    but more heavily fortified than the main guard chamber.  Arrow slits in the walls
+
+    allowed guards to monitor the vault without entering.  A small armory contains
+
+    the remains of ancient weapons specifically designed for the security of this
+
+    area.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The passage leads back to the deep vault.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3181
+  extra_descriptions: []
+- vnum: 3183
+  name: Ancient Power Chamber
+  description: '   This chamber housed some kind of ancient power source for the vault''s
+    defensive
+
+    systems.  Strange crystalline formations grow from the floor and ceiling, pulsing
+
+    with a faint inner light.  Ancient machinery, incomprehensible to modern
+
+    understanding, is built into the walls.  The energy here attracts and mutates
+
+    creatures that venture too close, creating powerful and dangerous guardians.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back to the deep vault.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3181
+  - direction: 1
+    description: A side chamber contains ancient equipment.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3184
+  - direction: 2
+    description: The power conduit leads deeper still.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3185
+  extra_descriptions: []
+- vnum: 3184
+  name: Ancient Equipment Room
+  description: '   This room housed the maintenance equipment for the power systems.  Ancient
+
+    tools and devices are scattered about, their purposes now obscure.  Some of the
+
+    equipment still functions, creating an eerie atmosphere of flickering lights and
+
+    strange sounds.  Creatures corrupted by the ancient energy lair here, more
+
+    powerful and dangerous than their surface-dwelling cousins.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The chamber leads back to the power chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3183
+  extra_descriptions: []
+- vnum: 3185
+  name: Deep Power Conduit
+  description: '   A narrow passage follows the ancient power conduits deeper underground.  The
+
+    crystalline formations are more prevalent here, and the air crackles with residual
+
+    energy.  This is an extremely dangerous area - the ancient power source has
+
+    attracted and transformed the deadliest predators, creating apex hunters unlike
+
+    anything found in the upper sewers.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The conduit leads back to the power chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3183
+  - direction: 2
+    description: The conduit continues to the core chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3186
+  extra_descriptions: []
+- vnum: 3186
+  name: Power Core Chamber
+  description: '   The heart of the ancient power system.  A massive crystalline structure
+
+    dominates the center of this chamber, pulsing with energy that has sustained
+
+    itself for countless millennia.  The walls are covered in energy discharge marks,
+
+    and the air is thick with power.  The most powerful creatures in the entire sewer
+
+    system have claimed this chamber, drawn by the energy and mutated by its effects.
+
+    This is the ultimate challenge for those who have ventured this deep.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The conduit leads back up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3185
+  - direction: 1
+    description: A chamber lies beyond the power source.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3187
+  extra_descriptions: []
+- vnum: 3187
+  name: Ancient Control Center
+  description: '   Behind the power core lies what appears to be a control center.  Ancient
+
+    consoles and control panels line the walls, covered in dust but remarkably
+
+    preserved.  The technology is far beyond anything in Lesser Helium today.
+
+    Diagrams and schematics cover the walls, showing the layout of an extensive
+
+    underground complex, of which these sewers are only a small part.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 3
+    description: The chamber leads back to the power core.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3186
+  - direction: 2
+    description: A sealed doorway leads to the final chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3188
+  extra_descriptions: []
+- vnum: 3188
+  name: Sealed Repository
+  description: '   Beyond the control center lies a perfectly sealed chamber.  The
+    walls are lined
+
+    with stasis fields, still functioning after all these ages.  Within some of the
+
+    fields, you can see preserved specimens and artifacts from the ancient civilization.
+
+    This was clearly their most precious repository, sealed and protected with all
+
+    their considerable knowledge.  Opening any of these stasis fields would be
+
+    extremely dangerous but potentially extremely rewarding.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The sealed doorway leads back to the control center.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3187
+  - direction: 2
+    description: A final passage leads to the deepest chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3189
+  extra_descriptions: []
+- vnum: 3189
+  name: The Deepest Chamber
+  description: '   You have reached the absolute deepest point of the ancient complex.  This
+
+    chamber appears to be a sanctuary or shrine of some kind.  A large altar stands
+
+    in the center, covered in ancient offerings now turned to dust.  The walls are
+
+    carved with prayers or warnings in the ancient language.  The most powerful
+
+    guardian creatures of the deep have made this sacred space their final lair,
+
+    protecting it from all intruders.  Whatever treasures or secrets lie here will
+
+    not be given up easily.'
+  zone: 31
+  room_flags: 9
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The passage leads back to the repository.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3188
+  extra_descriptions: []
+mobiles:
+- vnum: 3500
+  namelist: ulsio rat sewer
+  short_desc: an ulsio
+  long_desc: A small ulsio scurries through the filth here.
+  detailed_desc: 'This small rat-like creature is one of the most common inhabitants
+    of the Martian
+
+    sewers. Its beady red eyes gleam in the darkness, and its sharp teeth can deliver
+
+    a nasty bite. Though individually weak, ulsio often attack in packs.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 1
+    thac0: 0
+    ac: 0
+    hp_dice: 1d8+15
+    damage_dice: 1d4+0
+    gold: 50
+    experience: 50
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3501
+  namelist: ulsio pack rat sewer large
+  short_desc: a large ulsio
+  long_desc: A large ulsio prowls here, searching for prey.
+  detailed_desc: 'This ulsio is larger than most, probably an alpha of its pack. Its
+    fur is matted
+
+    with filth, and old scars crisscross its body, evidence of many battles for
+
+    dominance. It moves with confidence, unafraid of intruders in its territory.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 2
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+30
+    damage_dice: 1d5+1
+    gold: 150
+    experience: 200
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3502
+  namelist: carrion bird scavenger sewer
+  short_desc: a carrion bird
+  long_desc: A carrion bird picks at refuse here.
+  detailed_desc: 'This repulsive bird has adapted to life in the sewers, feeding on
+    the dead and
+
+    dying. Its feathers are matted and diseased-looking, and it gives off a foul
+
+    odor. Despite its scavenger nature, it will attack living prey if hungry enough
+
+    or if cornered.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 2
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+35
+    damage_dice: 1d5+1
+    gold: 180
+    experience: 250
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3503
+  namelist: spider sewer large web
+  short_desc: a large sewer spider
+  long_desc: A large spider lurks here, waiting in its web.
+  detailed_desc: 'This massive spider has made the sewers its hunting ground. Its
+    web spans across
+
+    passages, catching unwary creatures. Its bite is venomous, though not usually
+
+    fatal to healthy adults. The spider''s multiple eyes reflect any light with an
+
+    eerie green glow.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 2
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+40
+    damage_dice: 1d6+1
+    gold: 220
+    experience: 350
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3504
+  namelist: slime mold fungus creature
+  short_desc: a slime mold
+  long_desc: A pulsating mass of slime mold oozes here.
+  detailed_desc: 'This strange organism is somewhere between plant and animal. It
+    feeds on organic
+
+    matter in the sewers, slowly dissolving and absorbing anything it touches. Its
+
+    surface is covered in a toxic slime that burns exposed skin. It moves slowly but
+
+    is persistent in pursuit of food.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 2
+    thac0: 0
+    ac: 0
+    hp_dice: 2d10+50
+    damage_dice: 1d5+2
+    gold: 250
+    experience: 400
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3505
+  namelist: centipede giant sewer insect
+  short_desc: a giant centipede
+  long_desc: A giant centipede undulates through the muck here.
+  detailed_desc: 'This enormous centipede is over four feet long, with hundreds of
+    legs carrying it
+
+    with surprising speed. Its mandibles drip with paralytic venom, and its armored
+
+    segments provide good protection. It is an aggressive predator that attacks
+
+    anything smaller than itself.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 3
+    thac0: 0
+    ac: 0
+    hp_dice: 3d8+60
+    damage_dice: 2d4+1
+    gold: 350
+    experience: 600
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3506
+  namelist: ulsio swarm pack rats
+  short_desc: a swarm of ulsio
+  long_desc: A writhing swarm of ulsio covers the floor here.
+  detailed_desc: 'Dozens of ulsio have gathered into a massive swarm, moving as one
+    entity. Their
+
+    collective behavior makes them far more dangerous than individual rats. The swarm
+
+    flows over obstacles, and the sheer number of biting mouths makes them a serious
+
+    threat even to experienced fighters.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 3
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+70
+    damage_dice: 2d5+2
+    gold: 450
+    experience: 800
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3507
+  namelist: bat colony sewer flying
+  short_desc: a colony of bats
+  long_desc: A colony of bats swirls through the air here.
+  detailed_desc: 'These small flying creatures nest in the upper reaches of the sewer
+    tunnels. While
+
+    individually harmless, they attack in great numbers when disturbed, using their
+
+    sharp teeth and claws. Their droppings make the floor slippery and their constant
+
+    screeching is disorienting.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 2
+    thac0: 0
+    ac: 0
+    hp_dice: 2d8+40
+    damage_dice: 1d5+1
+    gold: 200
+    experience: 300
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3508
+  namelist: carrion stalker bird alpha
+  short_desc: a carrion stalker
+  long_desc: A large carrion stalker bird watches you with malevolent eyes.
+  detailed_desc: 'This is a much larger and more aggressive specimen of carrion bird.
+    It has grown
+
+    fat on the plentiful food in the sewers and has developed a taste for fresh prey.
+
+    Its beak is powerful enough to crack bones, and its talons can cause serious
+
+    wounds. It is territorial and will attack any creature that enters its domain.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 3
+    thac0: 0
+    ac: 0
+    hp_dice: 3d8+80
+    damage_dice: 2d5+2
+    gold: 500
+    experience: 1000
+    position: 8
+    default_position: 8
+    sex: 2
+- vnum: 3509
+  namelist: fungus walker infected creature
+  short_desc: a fungus walker
+  long_desc: A shambling fungus-infected creature staggers here.
+  detailed_desc: 'This pitiful creature was once a normal sewer inhabitant, but it
+    has been infected
+
+    by aggressive fungal spores. Mushrooms and fungi sprout from its flesh, and it
+
+    moves with jerky, uncoordinated motions. It is driven by the fungus to spread
+
+    spores to new hosts, making it a dangerous vector of infection.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 3
+    thac0: 0
+    ac: 0
+    hp_dice: 3d10+90
+    damage_dice: 2d6+2
+    gold: 600
+    experience: 1200
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3510
+  namelist: ulsio king alpha rat
+  short_desc: the ulsio king
+  long_desc: The ulsio king, a massive rat, commands here.
+  detailed_desc: 'This enormous ulsio is the undisputed ruler of the rat population
+    in this section
+
+    of the sewers. It is nearly the size of a small dog, with scarred hide and eyes
+
+    that gleam with unusual intelligence. It has fought countless battles to maintain
+
+    its position and is a formidable opponent. Several smaller ulsio typically attend
+
+    it, ready to defend their leader.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 4d8+100
+    damage_dice: 2d6+3
+    gold: 800
+    experience: 1500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3511
+  namelist: spider mother queen broodmother
+  short_desc: the spider mother
+  long_desc: A massive spider, the mother of the brood, lurks here.
+  detailed_desc: 'This is the queen of the sewer spiders, much larger than any of
+    her offspring.
+
+    Her web is a masterwork of engineering, spanning entire chambers. Her venom is
+
+    more potent than that of normal spiders, and she is highly intelligent, capable
+
+    of tactical thinking. She guards her egg sacs fiercely and will fight to the
+
+    death to protect them.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+120
+    damage_dice: 2d8+3
+    gold: 1000
+    experience: 2000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3512
+  namelist: ancient guardian construct sewer
+  short_desc: an ancient guardian
+  long_desc: An ancient guardian construct stands here, still fulfilling its duty.
+  detailed_desc: 'This mechanical guardian was created by the ancient civilization
+    to protect their
+
+    vaults. Though millennia old, it still functions, powered by the crystalline
+
+    energy from the deep chambers. Its metal body is corroded but still formidable,
+
+    and its ancient weapons remain deadly. It attacks any unauthorized intruders with
+
+    single-minded determination.'
+  action_flags: 2
+  affection_flags: 8
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: -2
+    hp_dice: 4d10+140
+    damage_dice: 2d8+4
+    gold: 1200
+    experience: 2500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3513
+  namelist: mutant predator creature enhanced
+  short_desc: a mutant predator
+  long_desc: A hideously mutated creature prowls here.
+  detailed_desc: 'This creature has been warped by exposure to the ancient power source
+    in the deep
+
+    chambers. It might have once been an ulsio, spider, or bird, but it is now
+
+    something far more dangerous. Its body is twisted and enhanced, with extra limbs,
+
+    oversized fangs, and armored plates. The energy radiation has made it both more
+
+    powerful and more aggressive.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: 0
+    hp_dice: 4d10+150
+    damage_dice: 3d6+4
+    gold: 1500
+    experience: 3000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3514
+  namelist: energy wraith spirit ancient
+  short_desc: an energy wraith
+  long_desc: A ghostly figure formed of crackling energy drifts here.
+  detailed_desc: 'This strange entity appears to be the remnant of one of the ancient
+    builders,
+
+    transformed by death into a creature of pure energy. It floats through the air,
+
+    its form constantly shifting and crackling with power. It attacks by draining
+    the
+
+    life force of intruders, and physical weapons have little effect on its
+
+    incorporeal body.'
+  action_flags: 2
+  affection_flags: 32
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: -3
+    hp_dice: 4d12+160
+    damage_dice: 2d10+5
+    gold: 1800
+    experience: 3500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 3515
+  namelist: corrupted guardian elite construct
+  short_desc: a corrupted guardian
+  long_desc: A corrupted guardian construct guards this chamber.
+  detailed_desc: 'This guardian was one of the elite protectors of the deepest vaults.
+    Unlike its
+
+    lesser counterparts, it has been corrupted by dark energies, making it even more
+
+    dangerous. Its weapons have been enhanced by the corruption, and it fights with
+
+    greater intelligence and ferocity. It will pursue intruders relentlessly.'
+  action_flags: 2
+  affection_flags: 40
+  alignment: 0
+  type: simple
+  simple:
+    level: 4
+    thac0: 0
+    ac: -2
+    hp_dice: 5d10+180
+    damage_dice: 3d8+5
+    gold: 2000
+    experience: 4000
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 3600
+  namelist: rusty dagger blade knife
+  short_desc: a rusty dagger
+  long_desc: A rusty dagger lies here, abandoned.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 4
+  value3: 11
+  weight: 6
+  cost: 150
+  rent: 40
+  extra_descriptions:
+  - keywords: dagger blade knife
+    description: 'This dagger is old and rusty, but the blade is still sharp enough
+      to be useful.
+
+      Someone must have dropped it while fleeing through the sewers.'
+  affects: []
+- vnum: 3601
+  namelist: short sword blade weapon
+  short_desc: a short sword
+  long_desc: A short sword lies here, partially covered in filth.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 5
+  value3: 3
+  weight: 10
+  cost: 400
+  rent: 100
+  extra_descriptions:
+  - keywords: sword blade weapon
+    description: 'This short sword is battered but functional. Its hilt shows signs
+      of many repairs,
+
+      suggesting it has seen considerable use. A decent weapon for a beginning warrior.'
+  affects: []
+- vnum: 3602
+  namelist: wooden club cudgel
+  short_desc: a wooden club
+  long_desc: A sturdy wooden club lies here.
+  action_desc: pound
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 2
+  value2: 4
+  value3: 7
+  weight: 8
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: club cudgel weapon
+    description: 'This crude club has been fashioned from a sturdy piece of wood.
+      Simple but
+
+      effective, it would serve well as a basic weapon.'
+  affects: []
+- vnum: 3603
+  namelist: spear javelin
+  short_desc: a crude spear
+  long_desc: A crude spear leans against the wall.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 10
+  cost: 300
+  rent: 75
+  extra_descriptions:
+  - keywords: spear javelin
+    description: 'This spear has been fashioned from scavenged materials. The shaft
+      is straight
+
+      and the point is sharp, making it suitable for hunting in the sewers.'
+  affects: []
+- vnum: 3604
+  namelist: leather jerkin armor chest
+  short_desc: a leather jerkin
+  long_desc: A worn leather jerkin lies here.
+  action_desc: ''
+  type_flag: 3
+  extra_flags: 0
+  wear_flags: 0
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 250
+  rent: 60
+  extra_descriptions:
+  - keywords: jerkin leather armor
+    description: 'This leather jerkin is worn and stained, but it still provides basic
+      protection.
+
+      It would be better than nothing for someone venturing into dangerous areas.'
+  affects: []
+- vnum: 3605
+  namelist: leather cap helmet hat
+  short_desc: a leather cap
+  long_desc: A simple leather cap lies here.
+  action_desc: ''
+  type_flag: 4
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 100
+  rent: 25
+  extra_descriptions:
+  - keywords: cap hat helmet
+    description: This leather cap provides minimal head protection. It's simple but
+      serviceable.
+  affects: []
+- vnum: 3606
+  namelist: leather boots footwear
+  short_desc: leather boots
+  long_desc: A pair of leather boots lies here.
+  action_desc: ''
+  type_flag: 2
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 120
+  rent: 30
+  extra_descriptions:
+  - keywords: boots footwear
+    description: 'These boots are muddy and worn but still waterproof. Essential for
+      navigating
+
+      the wet, filthy sewer tunnels.'
+  affects: []
+- vnum: 3607
+  namelist: leather gloves gauntlets
+  short_desc: leather gloves
+  long_desc: A pair of leather gloves lies here.
+  action_desc: ''
+  type_flag: 7
+  extra_flags: 0
+  wear_flags: 0
+  value0: 2
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 80
+  rent: 20
+  extra_descriptions:
+  - keywords: gloves gauntlets
+    description: 'These leather gloves would protect hands from the filth and sharp
+      edges common
+
+      in the sewers.'
+  affects: []
+- vnum: 3608
+  namelist: radium lamp light
+  short_desc: a radium lamp
+  long_desc: A radium lamp casts a soft glow here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 4
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: lamp radium light
+    description: 'This radium lamp provides much-needed light in the dark sewer tunnels.
+
+      Its soft glow comes from radium-infused elements that will last for years.'
+  affects: []
+- vnum: 3609
+  namelist: dried meat ration food
+  short_desc: dried meat
+  long_desc: Some dried meat lies here.
+  action_desc: food
+  type_flag: 11
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 6
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 30
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3610
+  namelist: moldy bread food loaf
+  short_desc: moldy bread
+  long_desc: A loaf of moldy bread lies here.
+  action_desc: food
+  type_flag: 11
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 4
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 20
+  rent: 3
+  extra_descriptions: []
+  affects: []
+- vnum: 3611
+  namelist: water flask canteen drink
+  short_desc: a water flask
+  long_desc: A leather water flask lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 0
+  value0: 3
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 40
+  rent: 8
+  extra_descriptions:
+  - keywords: flask canteen water
+    description: This flask contains relatively clean water, a precious commodity
+      in the sewers.
+  affects: []
+- vnum: 3612
+  namelist: small pouch coins money
+  short_desc: a small pouch
+  long_desc: A small pouch lies here, slightly heavy.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: pouch coins
+    description: This small leather pouch jingles when moved. It appears to contain
+      a few coins.
+  affects: []
+- vnum: 3613
+  namelist: silver coins money
+  short_desc: silver coins
+  long_desc: A few silver coins glint here in the muck.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 300
+  rent: 75
+  extra_descriptions: []
+  affects: []
+- vnum: 3614
+  namelist: bronze coins money copper
+  short_desc: bronze coins
+  long_desc: Some bronze coins lie scattered here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 150
+  rent: 40
+  extra_descriptions: []
+  affects: []
+- vnum: 3615
+  namelist: iron key old rusty
+  short_desc: an iron key
+  long_desc: An old iron key lies here, corroded but intact.
+  action_desc: ''
+  type_flag: 18
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: key iron
+    description: 'This old iron key is rusty but appears functional. It might open
+      one of the
+
+      ancient doors or chests in the deeper sections of the sewers.'
+  affects: []
+- vnum: 3616
+  namelist: backpack bag pack container
+  short_desc: a worn backpack
+  long_desc: A worn backpack lies here.
+  action_desc: ''
+  type_flag: 9
+  extra_flags: 0
+  wear_flags: 1
+  value0: 15
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: backpack pack bag
+    description: 'This backpack has seen better days but is still functional. It would
+      be useful
+
+      for carrying supplies while exploring.'
+  affects: []
+- vnum: 3617
+  namelist: healing salve ointment medicine
+  short_desc: healing salve
+  long_desc: A small jar of healing salve sits here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 150
+  rent: 35
+  extra_descriptions:
+  - keywords: salve ointment medicine
+    description: 'This crude healing salve was likely prepared by someone who lived
+      in the sewers.
+
+      It smells terrible but might help heal wounds.'
+  affects: []
+- vnum: 3618
+  namelist: rope coil hemp
+  short_desc: a coil of rope
+  long_desc: A coil of rope lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 8
+  cost: 100
+  rent: 25
+  extra_descriptions:
+  - keywords: rope coil
+    description: 'This hemp rope is damp but still strong. It could be useful for
+      climbing or
+
+      securing items.'
+  affects: []
+- vnum: 3619
+  namelist: lantern light oil
+  short_desc: an oil lantern
+  long_desc: An oil lantern sits here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 6
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 200
+  rent: 50
+  extra_descriptions:
+  - keywords: lantern light
+    description: 'This oil lantern provides more reliable light than a radium lamp.
+      It appears
+
+      to have plenty of oil remaining.'
+  affects: []
+- vnum: 3620
+  namelist: steel dagger blade fine
+  short_desc: a fine steel dagger
+  long_desc: A well-crafted steel dagger lies here.
+  action_desc: pierce
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 5
+  value3: 11
+  weight: 10
+  cost: 500
+  rent: 125
+  extra_descriptions:
+  - keywords: dagger steel blade
+    description: 'This dagger is of much better quality than the rusty weapons usually
+      found in
+
+      the sewers. Its blade is clean and sharp, and the hilt is well-balanced. Someone
+
+      of skill must have lost this.'
+  affects: []
+- vnum: 3621
+  namelist: longsword blade fine steel
+  short_desc: a fine longsword
+  long_desc: A fine longsword lies here, gleaming despite the filth.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 3
+  value2: 6
+  value3: 3
+  weight: 18
+  cost: 800
+  rent: 200
+  extra_descriptions:
+  - keywords: longsword sword blade
+    description: 'This longsword is a weapon of quality, far superior to the crude
+      arms typically
+
+      found in the sewers. Its blade bears ancient maker''s marks, suggesting it came
+
+      from the deeper vaults. A lucky find for any warrior.'
+  affects: []
+- vnum: 3622
+  namelist: leather armor hardened reinforced
+  short_desc: hardened leather armor
+  long_desc: A suit of hardened leather armor lies here.
+  action_desc: ''
+  type_flag: 3
+  extra_flags: 0
+  wear_flags: 0
+  value0: 6
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 12
+  cost: 500
+  rent: 125
+  extra_descriptions:
+  - keywords: armor leather hardened
+    description: 'This leather armor has been hardened and reinforced, providing better
+      protection
+
+      than normal leather. It appears to be of ancient make, preserved by the dry
+      air
+
+      of the deeper vaults.'
+  affects: []
+- vnum: 3623
+  namelist: steel helmet helm
+  short_desc: a steel helmet
+  long_desc: A steel helmet lies here.
+  action_desc: ''
+  type_flag: 4
+  extra_flags: 0
+  wear_flags: 0
+  value0: 4
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 6
+  cost: 350
+  rent: 85
+  extra_descriptions:
+  - keywords: helmet helm steel
+    description: 'This steel helmet would provide good protection for the head. Its
+      design is
+
+      ancient but the metal is still sound.'
+  affects: []
+- vnum: 3624
+  namelist: ancient artifact crystal
+  short_desc: an ancient crystal
+  long_desc: A glowing crystal lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 1000
+  rent: 250
+  extra_descriptions:
+  - keywords: crystal artifact ancient
+    description: 'This crystal glows with an inner light, pulsing with ancient energy.
+      It appears
+
+      to be some kind of power source or focusing device from the lost civilization.
+
+      Such artifacts are highly valuable to scholars and scientists.'
+  affects: []
+- vnum: 3625
+  namelist: gold coins money
+  short_desc: gold coins
+  long_desc: Several gold coins gleam here.
+  action_desc: ''
+  type_flag: 10
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 800
+  rent: 200
+  extra_descriptions: []
+  affects: []
+- vnum: 3626
+  namelist: ancient weapon blade artifact
+  short_desc: an ancient weapon
+  long_desc: An ancient weapon lies here, humming with power.
+  action_desc: slash
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 3
+  value2: 7
+  value3: 3
+  weight: 20
+  cost: 1200
+  rent: 300
+  extra_descriptions:
+  - keywords: weapon blade ancient artifact
+    description: 'This weapon is a masterwork of the ancient civilization. Its blade
+      never dulls,
+
+      and it hums with residual energy from the power cores. Such weapons are extremely
+
+      rare and valuable.'
+  affects: []
+- vnum: 3627
+  namelist: food package rations preserved
+  short_desc: preserved rations
+  long_desc: A package of preserved rations lies here.
+  action_desc: food
+  type_flag: 11
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 12
+  value2: 0
+  value3: 0
+  weight: 3
+  cost: 80
+  rent: 20
+  extra_descriptions:
+  - keywords: rations food package
+    description: 'These rations have been preserved by some ancient process and remain
+      edible after
+
+      countless years. The food is bland but nutritious.'
+  affects: []
+- vnum: 3628
+  namelist: waterskin drink water large
+  short_desc: a large waterskin
+  long_desc: A large waterskin lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 0
+  value0: 5
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 80
+  rent: 20
+  extra_descriptions:
+  - keywords: waterskin water drink
+    description: 'This large waterskin can hold enough water for an extended expedition
+      into the
+
+      deeper sewers.'
+  affects: []
+- vnum: 3629
+  namelist: treasure chest small box
+  short_desc: a small treasure chest
+  long_desc: A small treasure chest sits here.
+  action_desc: ''
+  type_flag: 15
+  extra_flags: 0
+  wear_flags: 1
+  value0: 20
+  value1: 3615
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 500
+  rent: 125
+  extra_descriptions:
+  - keywords: chest treasure box
+    description: 'This small chest is locked with an ancient mechanism. It might contain
+      valuable
+
+      items from the lost civilization. The lock could be picked or perhaps there
+      is
+
+      a key somewhere in the sewers.'
+  affects: []
+- vnum: 3630
+  namelist: gem jewel precious
+  short_desc: a precious gem
+  long_desc: A precious gem glitters here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 0
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 1500
+  rent: 375
+  extra_descriptions:
+  - keywords: gem jewel precious
+    description: 'This gem is of exceptional quality, cut and polished by ancient
+      artisans. Such
+
+      gems are highly prized by collectors and jewelers.'
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 3500
+  arg2: 3
+  arg3: 3151
+- command: G
+  if_flag: 1
+  arg1: 3614
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3500
+  arg2: 3
+  arg3: 3152
+- command: G
+  if_flag: 1
+  arg1: 3614
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3501
+  arg2: 2
+  arg3: 3153
+- command: G
+  if_flag: 1
+  arg1: 3613
+  arg2: 50
+- command: E
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3502
+  arg2: 2
+  arg3: 3154
+- command: G
+  if_flag: 1
+  arg1: 3610
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3500
+  arg2: 3
+  arg3: 3155
+- command: M
+  if_flag: 0
+  arg1: 3503
+  arg2: 2
+  arg3: 3156
+- command: G
+  if_flag: 1
+  arg1: 3618
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 3502
+  arg2: 2
+  arg3: 3157
+- command: G
+  if_flag: 1
+  arg1: 3609
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3501
+  arg2: 2
+  arg3: 3158
+- command: G
+  if_flag: 1
+  arg1: 3612
+  arg2: 50
+- command: E
+  if_flag: 1
+  arg1: 3600
+  arg2: 100
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3500
+  arg2: 3
+  arg3: 3159
+- command: G
+  if_flag: 1
+  arg1: 3614
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3504
+  arg2: 2
+  arg3: 3160
+- command: M
+  if_flag: 0
+  arg1: 3503
+  arg2: 2
+  arg3: 3161
+- command: G
+  if_flag: 1
+  arg1: 3615
+  arg2: 30
+- command: M
+  if_flag: 0
+  arg1: 3505
+  arg2: 2
+  arg3: 3162
+- command: G
+  if_flag: 1
+  arg1: 3613
+  arg2: 50
+- command: E
+  if_flag: 1
+  arg1: 3601
+  arg2: 80
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3502
+  arg2: 2
+  arg3: 3163
+- command: M
+  if_flag: 0
+  arg1: 3507
+  arg2: 2
+  arg3: 3164
+- command: G
+  if_flag: 1
+  arg1: 3609
+  arg2: 100
+- command: M
+  if_flag: 0
+  arg1: 3501
+  arg2: 2
+  arg3: 3165
+- command: M
+  if_flag: 0
+  arg1: 3504
+  arg2: 2
+  arg3: 3166
+- command: O
+  if_flag: 0
+  arg1: 3608
+  arg2: 1
+  arg3: 3150
+- command: O
+  if_flag: 0
+  arg1: 3602
+  arg2: 1
+  arg3: 3153
+- command: O
+  if_flag: 0
+  arg1: 3606
+  arg2: 1
+  arg3: 3155
+- command: O
+  if_flag: 0
+  arg1: 3604
+  arg2: 1
+  arg3: 3157
+- command: O
+  if_flag: 0
+  arg1: 3611
+  arg2: 1
+  arg3: 3159
+- command: O
+  if_flag: 0
+  arg1: 3616
+  arg2: 1
+  arg3: 3162
+- command: M
+  if_flag: 0
+  arg1: 3505
+  arg2: 2
+  arg3: 3167
+- command: G
+  if_flag: 1
+  arg1: 3613
+  arg2: 80
+- command: E
+  if_flag: 1
+  arg1: 3620
+  arg2: 60
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3506
+  arg2: 2
+  arg3: 3169
+- command: G
+  if_flag: 1
+  arg1: 3612
+  arg2: 70
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 30
+- command: M
+  if_flag: 0
+  arg1: 3508
+  arg2: 2
+  arg3: 3170
+- command: G
+  if_flag: 1
+  arg1: 3621
+  arg2: 40
+- command: G
+  if_flag: 1
+  arg1: 3613
+  arg2: 80
+- command: M
+  if_flag: 0
+  arg1: 3509
+  arg2: 2
+  arg3: 3171
+- command: G
+  if_flag: 1
+  arg1: 3624
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 3505
+  arg2: 2
+  arg3: 3172
+- command: G
+  if_flag: 1
+  arg1: 3617
+  arg2: 60
+- command: M
+  if_flag: 0
+  arg1: 3506
+  arg2: 2
+  arg3: 3173
+- command: G
+  if_flag: 1
+  arg1: 3620
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 40
+- command: M
+  if_flag: 0
+  arg1: 3507
+  arg2: 2
+  arg3: 3174
+- command: M
+  if_flag: 0
+  arg1: 3508
+  arg2: 2
+  arg3: 3175
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 15
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 3510
+  arg2: 1
+  arg3: 3176
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 60
+- command: G
+  if_flag: 1
+  arg1: 3621
+  arg2: 40
+- command: E
+  if_flag: 1
+  arg1: 3621
+  arg2: 50
+  arg3: 16
+- command: O
+  if_flag: 0
+  arg1: 3619
+  arg2: 1
+  arg3: 3167
+- command: O
+  if_flag: 0
+  arg1: 3622
+  arg2: 1
+  arg3: 3171
+- command: O
+  if_flag: 0
+  arg1: 3620
+  arg2: 1
+  arg3: 3173
+- command: O
+  if_flag: 0
+  arg1: 3627
+  arg2: 1
+  arg3: 3174
+- command: O
+  if_flag: 0
+  arg1: 3629
+  arg2: 1
+  arg3: 3175
+- command: M
+  if_flag: 0
+  arg1: 3509
+  arg2: 2
+  arg3: 3177
+- command: M
+  if_flag: 0
+  arg1: 3510
+  arg2: 1
+  arg3: 3178
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 70
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 30
+- command: E
+  if_flag: 1
+  arg1: 3622
+  arg2: 40
+  arg3: 5
+- command: M
+  if_flag: 0
+  arg1: 3511
+  arg2: 1
+  arg3: 3179
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 80
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 25
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 20
+- command: M
+  if_flag: 0
+  arg1: 3508
+  arg2: 2
+  arg3: 3180
+- command: G
+  if_flag: 1
+  arg1: 3621
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 60
+- command: M
+  if_flag: 0
+  arg1: 3512
+  arg2: 2
+  arg3: 3181
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 70
+- command: G
+  if_flag: 1
+  arg1: 3624
+  arg2: 30
+- command: E
+  if_flag: 1
+  arg1: 3623
+  arg2: 40
+  arg3: 1
+- command: M
+  if_flag: 0
+  arg1: 3509
+  arg2: 2
+  arg3: 3182
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 25
+- command: M
+  if_flag: 0
+  arg1: 3513
+  arg2: 2
+  arg3: 3183
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 90
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 35
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 30
+- command: M
+  if_flag: 0
+  arg1: 3512
+  arg2: 2
+  arg3: 3184
+- command: G
+  if_flag: 1
+  arg1: 3624
+  arg2: 40
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 80
+- command: M
+  if_flag: 0
+  arg1: 3513
+  arg2: 2
+  arg3: 3185
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 40
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 35
+- command: M
+  if_flag: 0
+  arg1: 3514
+  arg2: 1
+  arg3: 3186
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 40
+- command: E
+  if_flag: 1
+  arg1: 3626
+  arg2: 30
+  arg3: 16
+- command: M
+  if_flag: 0
+  arg1: 3513
+  arg2: 2
+  arg3: 3187
+- command: G
+  if_flag: 1
+  arg1: 3624
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 90
+- command: M
+  if_flag: 0
+  arg1: 3514
+  arg2: 1
+  arg3: 3188
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 60
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 50
+- command: M
+  if_flag: 0
+  arg1: 3515
+  arg2: 1
+  arg3: 3189
+- command: G
+  if_flag: 1
+  arg1: 3625
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3626
+  arg2: 70
+- command: G
+  if_flag: 1
+  arg1: 3630
+  arg2: 60
+- command: E
+  if_flag: 1
+  arg1: 3626
+  arg2: 40
+  arg3: 16
+- command: E
+  if_flag: 1
+  arg1: 3623
+  arg2: 50
+  arg3: 1
+- command: O
+  if_flag: 0
+  arg1: 3626
+  arg2: 1
+  arg3: 3179
+- command: O
+  if_flag: 0
+  arg1: 3623
+  arg2: 1
+  arg3: 3181
+- command: O
+  if_flag: 0
+  arg1: 3624
+  arg2: 1
+  arg3: 3183
+- command: O
+  if_flag: 0
+  arg1: 3626
+  arg2: 1
+  arg3: 3186
+- command: O
+  if_flag: 0
+  arg1: 3630
+  arg2: 1
+  arg3: 3188
+- command: O
+  if_flag: 0
+  arg1: 3630
+  arg2: 1
+  arg3: 3189
+- command: O
+  if_flag: 0
+  arg1: 3629
+  arg2: 1
+  arg3: 3178
+- command: P
+  if_flag: 1
+  arg1: 3625
+  arg2: 1
+  arg3: 3629
+- command: P
+  if_flag: 1
+  arg1: 3630
+  arg2: 1
+  arg3: 3629
+- command: O
+  if_flag: 0
+  arg1: 3629
+  arg2: 1
+  arg3: 3181
+- command: P
+  if_flag: 1
+  arg1: 3625
+  arg2: 1
+  arg3: 3629
+- command: P
+  if_flag: 1
+  arg1: 3624
+  arg2: 1
+  arg3: 3629
+- command: O
+  if_flag: 0
+  arg1: 3629
+  arg2: 1
+  arg3: 3187
+- command: P
+  if_flag: 1
+  arg1: 3626
+  arg2: 1
+  arg3: 3629
+- command: P
+  if_flag: 1
+  arg1: 3625
+  arg2: 1
+  arg3: 3629
+shops: []
