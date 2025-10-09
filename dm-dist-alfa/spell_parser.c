@@ -708,7 +708,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 
 			if (GET_LEVEL(ch) < 21) {
 				if (GET_MANA(ch) < USE_MANA(ch, spl)) {
-					send_to_char("Your device has insufficient power charge.\n\r", ch);
+					send_to_char("Your device has insufficient flux charge.\n\r", ch);
 					return;
 				}
 			}

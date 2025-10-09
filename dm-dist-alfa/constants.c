@@ -517,7 +517,7 @@ const char *apply_types[] = {
 	"AGE",
 	"CHAR_WEIGHT",
 	"CHAR_HEIGHT",
-	"MANA",
+	"FLUX",
 	"HIT",
 	"MOVE",
 	"GOLD",

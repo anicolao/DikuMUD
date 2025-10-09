@@ -480,12 +480,12 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 				 		j->obj_flags.value[3] );
 					break;
 				case ITEM_WAND : 
-					sprintf(buf, "Spell : %d\n\rMana : %d",
+					sprintf(buf, "Spell : %d\n\rFlux : %d",
 						j->obj_flags.value[0],
 						j->obj_flags.value[1]);
 					break;
 				case ITEM_STAFF : 
-					sprintf(buf, "Spell : %d\n\rMana : %d",
+					sprintf(buf, "Spell : %d\n\rFlux : %d",
 						j->obj_flags.value[0],
 						j->obj_flags.value[1]);
 					break;
@@ -697,7 +697,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 				GET_CON(k) );
 			send_to_char(buf,ch);
 
-			sprintf(buf,"Mana p.:[%d/%d+%d]  Hit p.:[%d/%d+%d]  Move p.:[%d/%d+%d]\n\r",
+			sprintf(buf,"Flux p.:[%d/%d+%d]  Hit p.:[%d/%d+%d]  Move p.:[%d/%d+%d]\n\r",
 				GET_MANA(k),mana_limit(k),mana_gain(k),
 				GET_HIT(k),hit_limit(k),hit_gain(k),
 				GET_MOVE(k),move_limit(k),move_gain(k) );

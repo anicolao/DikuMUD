@@ -233,7 +233,7 @@ void do_set(struct char_data *ch, char *argument, int cmd)
 	};
 	char *values[] = {
 		"age","sex","class","level","height","weight","str","stradd",
-		"int","wis","dex","con","gold","exp","mana","hit","move",
+		"int","wis","dex","con","gold","exp","flux","hit","move",
 		"sessions","alignment","thirst","drunk","full","\n"
 	};
 	struct char_data *vict;
@@ -576,17 +576,17 @@ void do_set(struct char_data *ch, char *argument, int cmd)
 				vict->points.exp = value;
 			}
 			break;
-			case 14: /* mana */
+			case 14: /* flux */
 			{
 				value = atoi(buf);
 				if ((value <= -100) || (value > 200))
 				{
-					send_to_char("Mana-points must be more than -100\n\r", ch);
+					send_to_char("Flux-points must be more than -100\n\r", ch);
 					send_to_char("and less than 200.\n\r", ch);
 					return;
 				}
 				slog(buf2);
-				/* set original mana of victim */
+				/* set original flux of victim */
 				vict->points.mana = value;
 			}
 			break;
