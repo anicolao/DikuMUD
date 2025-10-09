@@ -3863,7 +3863,7 @@ objects:
   rent: 17
   extra_descriptions: []
   affects: []
-- vnum: 3630
+- vnum: 3593
   namelist: rations travel
   short_desc: travel rations
   long_desc: A package of preserved travel rations lies here.
@@ -3880,7 +3880,7 @@ objects:
   rent: 5
   extra_descriptions: []
   affects: []
-- vnum: 3631
+- vnum: 3594
   namelist: water purifier
   short_desc: water purification tablets
   long_desc: A container of water purification tablets sits here.
@@ -3897,7 +3897,7 @@ objects:
   rent: 7
   extra_descriptions: []
   affects: []
-- vnum: 3632
+- vnum: 3595
   namelist: salt preserved
   short_desc: preserved salt
   long_desc: A valuable container of salt for preserving food lies here.
@@ -3914,7 +3914,7 @@ objects:
   rent: 5
   extra_descriptions: []
   affects: []
-- vnum: 3640
+- vnum: 3596
   namelist: key bronze
   short_desc: a bronze key
   long_desc: A bronze key lies here.
@@ -3931,7 +3931,7 @@ objects:
   rent: 2
   extra_descriptions: []
   affects: []
-- vnum: 3641
+- vnum: 3597
   namelist: key silver
   short_desc: a silver key
   long_desc: An ornate silver key lies here.
@@ -3948,7 +3948,7 @@ objects:
   rent: 7
   extra_descriptions: []
   affects: []
-- vnum: 3642
+- vnum: 3598
   namelist: key gold
   short_desc: a golden key
   long_desc: A golden key decorated with gems lies here.
@@ -6388,7 +6388,7 @@ shops:
   producing:
   - 3510
   - 3511
-  - 3630
+  - 3593
   profit_buy: 1.2
   profit_sell: 0.9
   buy_types:

@@ -1616,7 +1616,7 @@ mobiles:
     default_position: 8
     sex: 1
 objects:
-- vnum: 3600
+- vnum: 3206
   namelist: rusty dagger blade knife
   short_desc: a rusty dagger
   long_desc: A rusty dagger lies here, abandoned.
@@ -1638,7 +1638,7 @@ objects:
 
       Someone must have dropped it while fleeing through the sewers.'
   affects: []
-- vnum: 3601
+- vnum: 3207
   namelist: short sword blade weapon
   short_desc: a short sword
   long_desc: A short sword lies here, partially covered in filth.
@@ -1660,7 +1660,7 @@ objects:
 
       suggesting it has seen considerable use. A decent weapon for a beginning warrior.'
   affects: []
-- vnum: 3602
+- vnum: 3208
   namelist: wooden club cudgel
   short_desc: a wooden club
   long_desc: A sturdy wooden club lies here.
@@ -1682,7 +1682,7 @@ objects:
 
       effective, it would serve well as a basic weapon.'
   affects: []
-- vnum: 3603
+- vnum: 3209
   namelist: spear javelin
   short_desc: a crude spear
   long_desc: A crude spear leans against the wall.
@@ -1704,7 +1704,7 @@ objects:
 
       and the point is sharp, making it suitable for hunting in the sewers.'
   affects: []
-- vnum: 3604
+- vnum: 3210
   namelist: leather jerkin armor chest
   short_desc: a leather jerkin
   long_desc: A worn leather jerkin lies here.
@@ -1726,7 +1726,7 @@ objects:
 
       It would be better than nothing for someone venturing into dangerous areas.'
   affects: []
-- vnum: 3605
+- vnum: 3211
   namelist: leather cap helmet hat
   short_desc: a leather cap
   long_desc: A simple leather cap lies here.
@@ -1746,7 +1746,7 @@ objects:
     description: This leather cap provides minimal head protection. It's simple but
       serviceable.
   affects: []
-- vnum: 3606
+- vnum: 3212
   namelist: leather boots footwear
   short_desc: leather boots
   long_desc: A pair of leather boots lies here.
@@ -1768,7 +1768,7 @@ objects:
 
       the wet, filthy sewer tunnels.'
   affects: []
-- vnum: 3607
+- vnum: 3213
   namelist: leather gloves gauntlets
   short_desc: leather gloves
   long_desc: A pair of leather gloves lies here.
@@ -1790,7 +1790,7 @@ objects:
 
       in the sewers.'
   affects: []
-- vnum: 3608
+- vnum: 3214
   namelist: radium lamp light
   short_desc: a radium lamp
   long_desc: A radium lamp casts a soft glow here.
@@ -1811,7 +1811,7 @@ objects:
 
       Its soft glow comes from radium-infused elements that will last for years.'
   affects: []
-- vnum: 3609
+- vnum: 3215
   namelist: dried meat ration food
   short_desc: dried meat
   long_desc: Some dried meat lies here.
@@ -1828,7 +1828,7 @@ objects:
   rent: 5
   extra_descriptions: []
   affects: []
-- vnum: 3610
+- vnum: 3216
   namelist: moldy bread food loaf
   short_desc: moldy bread
   long_desc: A loaf of moldy bread lies here.
@@ -1845,7 +1845,7 @@ objects:
   rent: 3
   extra_descriptions: []
   affects: []
-- vnum: 3611
+- vnum: 3217
   namelist: water flask canteen drink
   short_desc: a water flask
   long_desc: A leather water flask lies here.
@@ -1865,7 +1865,7 @@ objects:
     description: This flask contains relatively clean water, a precious commodity
       in the sewers.
   affects: []
-- vnum: 3612
+- vnum: 3218
   namelist: small pouch coins money
   short_desc: a small pouch
   long_desc: A small pouch lies here, slightly heavy.
@@ -1885,7 +1885,7 @@ objects:
     description: This small leather pouch jingles when moved. It appears to contain
       a few coins.
   affects: []
-- vnum: 3613
+- vnum: 3219
   namelist: silver coins money
   short_desc: silver coins
   long_desc: A few silver coins glint here in the muck.
@@ -1902,7 +1902,7 @@ objects:
   rent: 75
   extra_descriptions: []
   affects: []
-- vnum: 3614
+- vnum: 3220
   namelist: bronze coins money copper
   short_desc: bronze coins
   long_desc: Some bronze coins lie scattered here.
@@ -1919,7 +1919,7 @@ objects:
   rent: 40
   extra_descriptions: []
   affects: []
-- vnum: 3615
+- vnum: 3221
   namelist: iron key old rusty
   short_desc: an iron key
   long_desc: An old iron key lies here, corroded but intact.
@@ -1941,7 +1941,7 @@ objects:
 
       ancient doors or chests in the deeper sections of the sewers.'
   affects: []
-- vnum: 3616
+- vnum: 3222
   namelist: backpack bag pack container
   short_desc: a worn backpack
   long_desc: A worn backpack lies here.
@@ -1963,7 +1963,7 @@ objects:
 
       for carrying supplies while exploring.'
   affects: []
-- vnum: 3617
+- vnum: 3223
   namelist: healing salve ointment medicine
   short_desc: healing salve
   long_desc: A small jar of healing salve sits here.
@@ -1985,7 +1985,7 @@ objects:
 
       It smells terrible but might help heal wounds.'
   affects: []
-- vnum: 3618
+- vnum: 3224
   namelist: rope coil hemp
   short_desc: a coil of rope
   long_desc: A coil of rope lies here.
@@ -2007,7 +2007,7 @@ objects:
 
       securing items.'
   affects: []
-- vnum: 3619
+- vnum: 3225
   namelist: lantern light oil
   short_desc: an oil lantern
   long_desc: An oil lantern sits here.
@@ -2029,7 +2029,7 @@ objects:
 
       to have plenty of oil remaining.'
   affects: []
-- vnum: 3620
+- vnum: 3226
   namelist: steel dagger blade fine
   short_desc: a fine steel dagger
   long_desc: A well-crafted steel dagger lies here.
@@ -2053,7 +2053,7 @@ objects:
 
       of skill must have lost this.'
   affects: []
-- vnum: 3621
+- vnum: 3227
   namelist: longsword blade fine steel
   short_desc: a fine longsword
   long_desc: A fine longsword lies here, gleaming despite the filth.
@@ -2077,7 +2077,7 @@ objects:
 
       from the deeper vaults. A lucky find for any warrior.'
   affects: []
-- vnum: 3622
+- vnum: 3228
   namelist: leather armor hardened reinforced
   short_desc: hardened leather armor
   long_desc: A suit of hardened leather armor lies here.
@@ -2102,7 +2102,7 @@ objects:
 
       of the deeper vaults.'
   affects: []
-- vnum: 3623
+- vnum: 3229
   namelist: steel helmet helm
   short_desc: a steel helmet
   long_desc: A steel helmet lies here.
@@ -2124,7 +2124,7 @@ objects:
 
       ancient but the metal is still sound.'
   affects: []
-- vnum: 3624
+- vnum: 3230
   namelist: ancient artifact crystal
   short_desc: an ancient crystal
   long_desc: A glowing crystal lies here.
@@ -2148,7 +2148,7 @@ objects:
 
       Such artifacts are highly valuable to scholars and scientists.'
   affects: []
-- vnum: 3625
+- vnum: 3231
   namelist: gold coins money
   short_desc: gold coins
   long_desc: Several gold coins gleam here.
@@ -2165,7 +2165,7 @@ objects:
   rent: 200
   extra_descriptions: []
   affects: []
-- vnum: 3626
+- vnum: 3232
   namelist: ancient weapon blade artifact
   short_desc: an ancient weapon
   long_desc: An ancient weapon lies here, humming with power.
@@ -2189,7 +2189,7 @@ objects:
 
       rare and valuable.'
   affects: []
-- vnum: 3627
+- vnum: 3233
   namelist: food package rations preserved
   short_desc: preserved rations
   long_desc: A package of preserved rations lies here.
@@ -2211,7 +2211,7 @@ objects:
 
       countless years. The food is bland but nutritious.'
   affects: []
-- vnum: 3628
+- vnum: 3234
   namelist: waterskin drink water large
   short_desc: a large waterskin
   long_desc: A large waterskin lies here.
@@ -2233,7 +2233,7 @@ objects:
 
       deeper sewers.'
   affects: []
-- vnum: 3629
+- vnum: 3235
   namelist: treasure chest small box
   short_desc: a small treasure chest
   long_desc: A small treasure chest sits here.
@@ -2242,7 +2242,7 @@ objects:
   extra_flags: 0
   wear_flags: 1
   value0: 20
-  value1: 3615
+  value1: 3221
   value2: 0
   value3: 0
   weight: 15
@@ -2258,7 +2258,7 @@ objects:
 
       a key somewhere in the sewers.'
   affects: []
-- vnum: 3630
+- vnum: 3236
   namelist: gem jewel precious
   short_desc: a precious gem
   long_desc: A precious gem glitters here.
@@ -2288,7 +2288,7 @@ resets:
   arg3: 3151
 - command: G
   if_flag: 1
-  arg1: 3614
+  arg1: 3220
   arg2: 100
 - command: M
   if_flag: 0
@@ -2297,7 +2297,7 @@ resets:
   arg3: 3152
 - command: G
   if_flag: 1
-  arg1: 3614
+  arg1: 3220
   arg2: 100
 - command: M
   if_flag: 0
@@ -2306,11 +2306,11 @@ resets:
   arg3: 3153
 - command: G
   if_flag: 1
-  arg1: 3613
+  arg1: 3219
   arg2: 50
 - command: E
   if_flag: 1
-  arg1: 3600
+  arg1: 3206
   arg2: 100
   arg3: 16
 - command: M
@@ -2320,7 +2320,7 @@ resets:
   arg3: 3154
 - command: G
   if_flag: 1
-  arg1: 3610
+  arg1: 3216
   arg2: 100
 - command: M
   if_flag: 0
@@ -2334,7 +2334,7 @@ resets:
   arg3: 3156
 - command: G
   if_flag: 1
-  arg1: 3618
+  arg1: 3224
   arg2: 50
 - command: M
   if_flag: 0
@@ -2343,7 +2343,7 @@ resets:
   arg3: 3157
 - command: G
   if_flag: 1
-  arg1: 3609
+  arg1: 3215
   arg2: 100
 - command: M
   if_flag: 0
@@ -2352,11 +2352,11 @@ resets:
   arg3: 3158
 - command: G
   if_flag: 1
-  arg1: 3612
+  arg1: 3218
   arg2: 50
 - command: E
   if_flag: 1
-  arg1: 3600
+  arg1: 3206
   arg2: 100
   arg3: 16
 - command: M
@@ -2366,7 +2366,7 @@ resets:
   arg3: 3159
 - command: G
   if_flag: 1
-  arg1: 3614
+  arg1: 3220
   arg2: 100
 - command: M
   if_flag: 0
@@ -2380,7 +2380,7 @@ resets:
   arg3: 3161
 - command: G
   if_flag: 1
-  arg1: 3615
+  arg1: 3221
   arg2: 30
 - command: M
   if_flag: 0
@@ -2389,11 +2389,11 @@ resets:
   arg3: 3162
 - command: G
   if_flag: 1
-  arg1: 3613
+  arg1: 3219
   arg2: 50
 - command: E
   if_flag: 1
-  arg1: 3601
+  arg1: 3207
   arg2: 80
   arg3: 16
 - command: M
@@ -2408,7 +2408,7 @@ resets:
   arg3: 3164
 - command: G
   if_flag: 1
-  arg1: 3609
+  arg1: 3215
   arg2: 100
 - command: M
   if_flag: 0
@@ -2422,32 +2422,32 @@ resets:
   arg3: 3166
 - command: O
   if_flag: 0
-  arg1: 3608
+  arg1: 3214
   arg2: 1
   arg3: 3150
 - command: O
   if_flag: 0
-  arg1: 3602
+  arg1: 3208
   arg2: 1
   arg3: 3153
 - command: O
   if_flag: 0
-  arg1: 3606
+  arg1: 3212
   arg2: 1
   arg3: 3155
 - command: O
   if_flag: 0
-  arg1: 3604
+  arg1: 3210
   arg2: 1
   arg3: 3157
 - command: O
   if_flag: 0
-  arg1: 3611
+  arg1: 3217
   arg2: 1
   arg3: 3159
 - command: O
   if_flag: 0
-  arg1: 3616
+  arg1: 3222
   arg2: 1
   arg3: 3162
 - command: M
@@ -2457,11 +2457,11 @@ resets:
   arg3: 3167
 - command: G
   if_flag: 1
-  arg1: 3613
+  arg1: 3219
   arg2: 80
 - command: E
   if_flag: 1
-  arg1: 3620
+  arg1: 3226
   arg2: 60
   arg3: 16
 - command: M
@@ -2471,11 +2471,11 @@ resets:
   arg3: 3169
 - command: G
   if_flag: 1
-  arg1: 3612
+  arg1: 3218
   arg2: 70
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 30
 - command: M
   if_flag: 0
@@ -2484,11 +2484,11 @@ resets:
   arg3: 3170
 - command: G
   if_flag: 1
-  arg1: 3621
+  arg1: 3227
   arg2: 40
 - command: G
   if_flag: 1
-  arg1: 3613
+  arg1: 3219
   arg2: 80
 - command: M
   if_flag: 0
@@ -2497,7 +2497,7 @@ resets:
   arg3: 3171
 - command: G
   if_flag: 1
-  arg1: 3624
+  arg1: 3230
   arg2: 20
 - command: M
   if_flag: 0
@@ -2506,7 +2506,7 @@ resets:
   arg3: 3172
 - command: G
   if_flag: 1
-  arg1: 3617
+  arg1: 3223
   arg2: 60
 - command: M
   if_flag: 0
@@ -2515,11 +2515,11 @@ resets:
   arg3: 3173
 - command: G
   if_flag: 1
-  arg1: 3620
+  arg1: 3226
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 40
 - command: M
   if_flag: 0
@@ -2533,11 +2533,11 @@ resets:
   arg3: 3175
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 15
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 50
 - command: M
   if_flag: 0
@@ -2546,40 +2546,40 @@ resets:
   arg3: 3176
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 60
 - command: G
   if_flag: 1
-  arg1: 3621
+  arg1: 3227
   arg2: 40
 - command: E
   if_flag: 1
-  arg1: 3621
+  arg1: 3227
   arg2: 50
   arg3: 16
 - command: O
   if_flag: 0
-  arg1: 3619
+  arg1: 3225
   arg2: 1
   arg3: 3167
 - command: O
   if_flag: 0
-  arg1: 3622
+  arg1: 3228
   arg2: 1
   arg3: 3171
 - command: O
   if_flag: 0
-  arg1: 3620
+  arg1: 3226
   arg2: 1
   arg3: 3173
 - command: O
   if_flag: 0
-  arg1: 3627
+  arg1: 3233
   arg2: 1
   arg3: 3174
 - command: O
   if_flag: 0
-  arg1: 3629
+  arg1: 3235
   arg2: 1
   arg3: 3175
 - command: M
@@ -2594,15 +2594,15 @@ resets:
   arg3: 3178
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 70
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 30
 - command: E
   if_flag: 1
-  arg1: 3622
+  arg1: 3228
   arg2: 40
   arg3: 5
 - command: M
@@ -2612,15 +2612,15 @@ resets:
   arg3: 3179
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 80
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 25
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 20
 - command: M
   if_flag: 0
@@ -2629,11 +2629,11 @@ resets:
   arg3: 3180
 - command: G
   if_flag: 1
-  arg1: 3621
+  arg1: 3227
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 60
 - command: M
   if_flag: 0
@@ -2642,15 +2642,15 @@ resets:
   arg3: 3181
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 70
 - command: G
   if_flag: 1
-  arg1: 3624
+  arg1: 3230
   arg2: 30
 - command: E
   if_flag: 1
-  arg1: 3623
+  arg1: 3229
   arg2: 40
   arg3: 1
 - command: M
@@ -2660,7 +2660,7 @@ resets:
   arg3: 3182
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 25
 - command: M
   if_flag: 0
@@ -2669,15 +2669,15 @@ resets:
   arg3: 3183
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 90
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 35
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 30
 - command: M
   if_flag: 0
@@ -2686,11 +2686,11 @@ resets:
   arg3: 3184
 - command: G
   if_flag: 1
-  arg1: 3624
+  arg1: 3230
   arg2: 40
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 80
 - command: M
   if_flag: 0
@@ -2699,11 +2699,11 @@ resets:
   arg3: 3185
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 40
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 35
 - command: M
   if_flag: 0
@@ -2712,19 +2712,19 @@ resets:
   arg3: 3186
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 40
 - command: E
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 30
   arg3: 16
 - command: M
@@ -2734,11 +2734,11 @@ resets:
   arg3: 3187
 - command: G
   if_flag: 1
-  arg1: 3624
+  arg1: 3230
   arg2: 50
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 90
 - command: M
   if_flag: 0
@@ -2747,11 +2747,11 @@ resets:
   arg3: 3188
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 60
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 50
 - command: M
   if_flag: 0
@@ -2760,99 +2760,99 @@ resets:
   arg3: 3189
 - command: G
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 70
 - command: G
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 60
 - command: E
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 40
   arg3: 16
 - command: E
   if_flag: 1
-  arg1: 3623
+  arg1: 3229
   arg2: 50
   arg3: 1
 - command: O
   if_flag: 0
-  arg1: 3626
+  arg1: 3232
   arg2: 1
   arg3: 3179
 - command: O
   if_flag: 0
-  arg1: 3623
+  arg1: 3229
   arg2: 1
   arg3: 3181
 - command: O
   if_flag: 0
-  arg1: 3624
+  arg1: 3230
   arg2: 1
   arg3: 3183
 - command: O
   if_flag: 0
-  arg1: 3626
+  arg1: 3232
   arg2: 1
   arg3: 3186
 - command: O
   if_flag: 0
-  arg1: 3630
+  arg1: 3236
   arg2: 1
   arg3: 3188
 - command: O
   if_flag: 0
-  arg1: 3630
+  arg1: 3236
   arg2: 1
   arg3: 3189
 - command: O
   if_flag: 0
-  arg1: 3629
+  arg1: 3235
   arg2: 1
   arg3: 3178
 - command: P
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 - command: P
   if_flag: 1
-  arg1: 3630
+  arg1: 3236
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 - command: O
   if_flag: 0
-  arg1: 3629
+  arg1: 3235
   arg2: 1
   arg3: 3181
 - command: P
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 - command: P
   if_flag: 1
-  arg1: 3624
+  arg1: 3230
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 - command: O
   if_flag: 0
-  arg1: 3629
+  arg1: 3235
   arg2: 1
   arg3: 3187
 - command: P
   if_flag: 1
-  arg1: 3626
+  arg1: 3232
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 - command: P
   if_flag: 1
-  arg1: 3625
+  arg1: 3231
   arg2: 1
-  arg3: 3629
+  arg3: 3235
 shops: []
