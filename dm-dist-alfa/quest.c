@@ -92,7 +92,7 @@ void boot_quests(void)
 	char buf[256];
 	char line[256];
 	
-	if (!(fl = fopen("lib/tinyworld.qst", "r"))) {
+	if (!(fl = fopen("tinyworld.qst", "r"))) {
 		slog("   No quest file found - quests disabled");
 		return;
 	}
