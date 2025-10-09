@@ -1,11 +1,11 @@
 zone:
   number: 37
   name: Gathol - Allied City
-  top_room: 4299
+  top_room: 3789
   lifespan: 30
   reset_mode: 2
 rooms:
-- vnum: 4200
+- vnum: 3780
   name: The Main Plaza of Gathol
   description: "   You stand in the magnificent Main Plaza of Gathol, a jewel among\n    the city-states of Barsoom. The plaza is paved with polished stone inlaid with\n    platinum and diamonds that sparkle in the Martian sun. Graceful towers of\n    scarlet and gold rise around you, their surfaces decorated with precious gems.\n    Fountains of crystal-clear water splash musically in the center. The\n    architecture emphasizes beauty and sophistication. To the north stands Gahan's\n    magnificent palace."
   zone: 37
@@ -17,15 +17,15 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4201
+    to_room: 3781
   - direction: 2
     description: The Airship District lies south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4290
+    to_room: 3788
   extra_descriptions: []
-- vnum: 4201
+- vnum: 3781
   name: Palace Gates of Gathol
   description: "   You stand before the elegant gates of Gahan's palace. Unlike the\n    forbidding entrances of enemy cities, these gates are welcoming, with guards\n    in ceremonial silver and blue harnesses standing at respectful attention. The\n    gates themselves are crafted from rare metals and decorated with diamonds that\n    catch the light. The palace beyond is a masterwork of graceful architecture."
   zone: 37
@@ -37,15 +37,15 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4202
+    to_room: 3782
   - direction: 2
     description: The main plaza lies south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4200
+    to_room: 3780
   extra_descriptions: []
-- vnum: 4202
+- vnum: 3782
   name: Palace Entrance Hall
   description: "   The entrance hall soars high overhead, with vaulted ceilings decorated\n    with platinum leaf. Murals depicting Gathol's history and famous jetan games\n    adorn the walls. Elegant furniture and art pieces demonstrate the city's\n    refined culture. Unlike militaristic displays, these celebrate beauty,\n    strategy, and noble deeds."
   zone: 37
@@ -57,15 +57,15 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4203
+    to_room: 3783
   - direction: 2
     description: The palace gates are south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4201
+    to_room: 3781
   extra_descriptions: []
-- vnum: 4203
+- vnum: 3783
   name: The Throne Room of Gahan
   description: "   This elegant chamber serves as the throne room of Gahan, Jed of\n    Gathol. The throne itself is carved from a single diamond, representing\n    Gathol's wealth and Gahan's clarity of purpose. Banners of allied city-states\n    hang alongside those of Gathol. The room speaks of honor, wisdom, and noble\n    leadership rather than intimidation or conquest."
   zone: 37
@@ -77,9 +77,9 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4202
+    to_room: 3782
   extra_descriptions: []
-- vnum: 4290
+- vnum: 3788
   name: Airship Landing
   description: "   This large platform serves as the main airship landing for Gathol.\n    Flying ships arrive and depart regularly, connecting the city to Helium and\n    other allied territories. Guards maintain security while allowing legitimate\n    traffic to flow freely."
   zone: 37
@@ -91,15 +91,15 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4200
+    to_room: 3780
   - direction: 2
     description: The northern gate is south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4299
+    to_room: 3789
   extra_descriptions: []
-- vnum: 4299
+- vnum: 3789
   name: Northern Gate
   description: "   This gate provides access to the northern wilderness. Guards watch for\n    threats from Zodanga's direction while allowing traders and travelers to pass\n    freely. The road north leads across dangerous territory toward enemy lands."
   zone: 37
@@ -117,7 +117,7 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4290
+    to_room: 3788
   - direction: 3
     description: The wilderness extends west toward Zodanga.
     keywords: ''
@@ -126,7 +126,7 @@ rooms:
     to_room: 3729
   extra_descriptions: []
 mobiles:
-- vnum: 4200
+- vnum: 3780
   namelist: gahan jed gathol
   short_desc: Gahan, Jed of Gathol
   long_desc: Gahan, Jed of Gathol, stands here radiating nobility and honor.
@@ -146,7 +146,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 4201
+- vnum: 3781
   namelist: guard palace gathol
   short_desc: a palace guard
   long_desc: A palace guard in ceremonial silver and blue stands watch here.
@@ -166,7 +166,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 4202
+- vnum: 3782
   namelist: citizen gathol
   short_desc: a Gathol citizen
   long_desc: A citizen of Gathol goes about their business here.
@@ -187,7 +187,7 @@ mobiles:
     default_position: 8
     sex: 2
 objects:
-- vnum: 4200
+- vnum: 3780
   namelist: longsword gathol silver
   short_desc: a Gathol longsword
   long_desc: A beautifully crafted longsword lies here.
@@ -206,7 +206,7 @@ objects:
   - keywords: sword longsword
     description: "This longsword exemplifies Gathol craftsmanship. The blade is\n      perfectly balanced and decorated with silver inlay. While deadly in combat,\n      it is also a work of art. The hilt is wrapped in fine leather, and the pommel\n      bears Gathol's symbol. It represents the city's philosophy that function and\n      beauty should be one."
   affects: []
-- vnum: 4201
+- vnum: 3781
   namelist: harness gathol silver blue
   short_desc: a Gathol harness
   long_desc: An elegant silver and blue harness lies here.
@@ -228,49 +228,49 @@ objects:
 resets:
 - command: M
   if_flag: 0
-  arg1: 4200
+  arg1: 3780
   arg2: 1
-  arg3: 4203
+  arg3: 3783
   comment: Load Gahan in throne room
 - command: G
   if_flag: 1
-  arg1: 4200
+  arg1: 3780
   arg2: 100
   comment: Gahan gets sword
 - command: E
   if_flag: 1
-  arg1: 4201
+  arg1: 3781
   arg2: 1
   arg3: 4
   comment: Gahan wears harness
 - command: M
   if_flag: 0
-  arg1: 4201
+  arg1: 3781
   arg2: 2
-  arg3: 4201
+  arg3: 3781
   comment: Load palace guards at gates
 - command: M
   if_flag: 0
-  arg1: 4201
+  arg1: 3781
   arg2: 2
-  arg3: 4202
+  arg3: 3782
   comment: Load palace guards in entrance
 - command: M
   if_flag: 0
-  arg1: 4202
+  arg1: 3782
   arg2: 3
-  arg3: 4200
+  arg3: 3780
   comment: Load citizens in plaza
 - command: M
   if_flag: 0
-  arg1: 4202
+  arg1: 3782
   arg2: 2
-  arg3: 4290
+  arg3: 3788
   comment: Load citizens at airship landing
 - command: M
   if_flag: 0
-  arg1: 4201
+  arg1: 3781
   arg2: 2
-  arg3: 4299
+  arg3: 3789
   comment: Load guards at northern gate
 shops: []
