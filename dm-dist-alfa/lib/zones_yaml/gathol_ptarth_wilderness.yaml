@@ -23,7 +23,7 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3799
+    to_room: 3789
   extra_descriptions: []
 - vnum: 4401
   name: Dead Sea Bottom Plains
