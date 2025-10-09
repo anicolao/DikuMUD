@@ -1722,7 +1722,7 @@ mobiles:
     essential service, ensuring no one ventures into the dead sea bottom ill-prepared.
 
     He wears a simple brown harness with many pouches for records and writing implements.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1740,7 +1740,7 @@ mobiles:
     He''s
 
     always willing to share information about the route ahead - for a price.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -1998,7 +1998,7 @@ mobiles:
 
     chemicals. He''s eager but still learning, and treats the Factory with appropriate
     reverence.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2048,7 +2048,7 @@ mobiles:
     as a service
 
     to Mars itself.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2066,7 +2066,7 @@ mobiles:
     to Helium.
 
     Helping them could earn gratitude and reward.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed
@@ -2084,7 +2084,7 @@ mobiles:
     remnants of
 
     the ancient civilization that built the Factory and other wonders of old Mars.'
-  action_flags: 23
+  action_flags: 22
   affection_flags: 2
   alignment: 2
   type: detailed

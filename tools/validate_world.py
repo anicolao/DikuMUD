@@ -22,6 +22,14 @@ class WorldValidator:
         self.all_mobs = set()
         self.all_objects = set()
         self.zones = {}
+        self.mobs_with_spec_flag = {}  # vnum -> zone_name
+        
+        # Mobiles with assigned special procedures in spec_assign.c
+        # This list should be kept in sync with dm-dist-alfa/spec_assign.c
+        self.assigned_spec_procedures = {
+            1, 3005, 3020, 3021, 3022, 3023, 3024, 3025, 3026, 3027,
+            3060, 3061, 3062, 3066, 3067, 3143
+        }
     
     def error(self, msg: str):
         """Add an error message."""
@@ -115,6 +123,11 @@ class WorldValidator:
                     dice = simple.get(field, '')
                     if not re.match(r'^\d+d\d+[+-]\d+$', dice):
                         self.error(f"{zone_name}: Mobile {vnum} invalid {field}: {dice}")
+            
+            # Check for ACT_SPEC flag (bit 0, value 1) without assigned procedure
+            action_flags = mob.get('action_flags', 0)
+            if action_flags & 1:  # ACT_SPEC flag is set
+                self.mobs_with_spec_flag[vnum] = zone_name
         
         # Validate objects
         objects = data.get('objects', [])
@@ -209,6 +222,23 @@ class WorldValidator:
                     if room_vnum and room_vnum not in self.all_rooms:
                         self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
     
+    def validate_spec_procedures(self):
+        """Validate that mobiles with ACT_SPEC flag have assigned procedures."""
+        # Check for mobiles with ACT_SPEC flag but no assigned procedure
+        for vnum, zone_name in self.mobs_with_spec_flag.items():
+            if vnum not in self.assigned_spec_procedures:
+                self.error(f"{zone_name}: Mobile {vnum} has ACT_SPEC flag but no special procedure assigned in spec_assign.c")
+        
+        # Check for assigned procedures without ACT_SPEC flag (less critical)
+        for vnum in self.assigned_spec_procedures:
+            if vnum in self.all_mobs and vnum not in self.mobs_with_spec_flag:
+                zone_name = "unknown"
+                for v, z in self.mobs_with_spec_flag.items():
+                    if v == vnum:
+                        zone_name = z
+                        break
+                self.warning(f"Mobile {vnum} has assigned special procedure but no ACT_SPEC flag")
+    
     def validate_all(self, yaml_files: List[str]):
         """Validate all YAML zone files."""
         print(f"Validating {len(yaml_files)} zone files...")
@@ -219,6 +249,9 @@ class WorldValidator:
         
         # Second pass: check cross-references
         self.validate_cross_references(yaml_files)
+        
+        # Third pass: check special procedure assignments
+        self.validate_spec_procedures()
         
         # Print results
         print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects")

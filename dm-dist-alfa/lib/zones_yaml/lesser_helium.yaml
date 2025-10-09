@@ -1666,7 +1666,7 @@ mobiles:
     She wears an elegant jeweled harness that marks her position. Despite her
 
     welcoming smile, you notice a tired look in her large dark eyes.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 900
   type: simple
@@ -1818,7 +1818,7 @@ mobiles:
     scientific knowledge is evident. Her elaborate jeweled harness contains
 
     numerous instruments, and she is surrounded by a faint blue shimmer.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 1000
   type: simple
@@ -1844,7 +1844,7 @@ mobiles:
     and service. His simple but elegant harness bears holy symbols, and he
 
     is surrounded by a faint white aura of sanctity.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 128
   alignment: 1000
   type: simple
@@ -1871,7 +1871,7 @@ mobiles:
     into shadows. She wears a plain, dark harness that gives her the appearance
 
     of a common citizen, perfect camouflage.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 1000
   type: simple
@@ -1898,7 +1898,7 @@ mobiles:
     earned from centuries of combat. Despite his fearsome appearance, he has
 
     a calm, measured expression. He was fighting before you were born.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 1000
   type: simple
@@ -1925,7 +1925,7 @@ mobiles:
     jeweled harness contains numerous devices, and his superior knowledge of
 
     weapons and tactics make him a deadly opponent.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 800
   type: simple
@@ -1952,7 +1952,7 @@ mobiles:
     and his jeweled harness displays holy symbols. His religious devotion
 
     combined with superior martial skill makes him a deadly opponent.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 800
   type: simple
@@ -1978,7 +1978,7 @@ mobiles:
     point on every creature of Mars. His extraordinary stealth combined with
 
     deadly skill makes him a fearsome opponent.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 800
   type: simple
@@ -2005,7 +2005,7 @@ mobiles:
     scars. His duty is to protect the Warriors Guild, and his extreme skill
 
     combined with centuries of combat experience makes him deadly.'
-  action_flags: 2
+  action_flags: 3
   affection_flags: 0
   alignment: 800
   type: simple
