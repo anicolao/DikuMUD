@@ -1,7 +1,7 @@
 zone:
-  number: 0
+  number: 12
   name: zone_1200
-  top_room: 0
+  top_room: 1202
   lifespan: 0
   reset_mode: 0
 rooms:
@@ -13,7 +13,7 @@ rooms:
     which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
 
     the owner of this room needs none.'
-  zone: 0
+  zone: 12
   room_flags: 520
   sector_type: 0
   exits: []
@@ -30,7 +30,7 @@ rooms:
     to the stereo, even soak in a hot tub.
 
     There is a bell here for the butler.'
-  zone: 0
+  zone: 12
   room_flags: 520
   sector_type: 0
   exits: []
@@ -45,7 +45,7 @@ rooms:
     Exits fill the room in all 42 dimensions, leading everywhere.
 
     The only exit in your dimension unfortunatly leads right back here.'
-  zone: 0
+  zone: 12
   room_flags: 520
   sector_type: 0
   exits: []

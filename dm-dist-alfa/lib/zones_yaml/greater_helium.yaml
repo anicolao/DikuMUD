@@ -3863,210 +3863,6 @@ objects:
   rent: 17
   extra_descriptions: []
   affects: []
-- vnum: 3600
-  namelist: medicine kit
-  short_desc: a medicine kit
-  long_desc: A comprehensive Martian medicine kit lies here.
-  action_desc: ''
-  type_flag: 21
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 3
-  cost: 60
-  rent: 20
-  extra_descriptions: []
-  affects: []
-- vnum: 3601
-  namelist: bandages
-  short_desc: clean bandages
-  long_desc: Clean bandages for treating wounds are here.
-  action_desc: ''
-  type_flag: 21
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 1
-  cost: 10
-  rent: 3
-  extra_descriptions: []
-  affects: []
-- vnum: 3602
-  namelist: healing salve
-  short_desc: healing salve
-  long_desc: A jar of Martian healing salve sits here.
-  action_desc: ''
-  type_flag: 10
-  extra_flags: 0
-  wear_flags: 8193
-  value0: 2
-  value1: 1
-  value2: 2
-  value3: 2
-  weight: 2
-  cost: 40
-  rent: 13
-  extra_descriptions: []
-  affects: []
-- vnum: 3603
-  namelist: antidote poison
-  short_desc: poison antidote
-  long_desc: A vial of poison antidote is carefully sealed here.
-  action_desc: ''
-  type_flag: 10
-  extra_flags: 0
-  wear_flags: 8193
-  value0: 2
-  value1: 1
-  value2: 2
-  value3: 2
-  weight: 3
-  cost: 80
-  rent: 27
-  extra_descriptions: []
-  affects: []
-- vnum: 3610
-  namelist: book ancient
-  short_desc: an ancient book
-  long_desc: An ancient tome bound in rare materials lies here.
-  action_desc: ''
-  type_flag: 16
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 2
-  cost: 100
-  rent: 33
-  extra_descriptions: []
-  affects: []
-- vnum: 3611
-  namelist: manual combat
-  short_desc: a combat manual
-  long_desc: A manual on advanced combat techniques lies here.
-  action_desc: ''
-  type_flag: 16
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 3
-  cost: 50
-  rent: 17
-  extra_descriptions: []
-  affects: []
-- vnum: 3612
-  namelist: text scientific
-  short_desc: a scientific text
-  long_desc: A scientific text on Martian technology lies here.
-  action_desc: ''
-  type_flag: 16
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 3
-  cost: 60
-  rent: 20
-  extra_descriptions: []
-  affects: []
-- vnum: 3613
-  namelist: scroll spell
-  short_desc: a spell scroll
-  long_desc: A scroll containing mystical Martian formulas lies here.
-  action_desc: ''
-  type_flag: 16
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 5
-  cost: 150
-  rent: 50
-  extra_descriptions: []
-  affects: []
-- vnum: 3620
-  namelist: cloak travel
-  short_desc: a travel cloak
-  long_desc: A practical travel cloak lies here.
-  action_desc: ''
-  type_flag: 9
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 1
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 2
-  cost: 15
-  rent: 5
-  extra_descriptions: []
-  affects: []
-- vnum: 3621
-  namelist: cloak noble
-  short_desc: a noble's cloak
-  long_desc: An elegant cloak suitable for nobility lies here.
-  action_desc: ''
-  type_flag: 9
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 1
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 5
-  cost: 60
-  rent: 20
-  extra_descriptions: []
-  affects: []
-- vnum: 3622
-  namelist: belt utility
-  short_desc: a utility belt
-  long_desc: A utility belt with many pouches lies here.
-  action_desc: ''
-  type_flag: 9
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 1
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 2
-  cost: 20
-  rent: 7
-  extra_descriptions: []
-  affects: []
-- vnum: 3623
-  namelist: pouch coin
-  short_desc: a coin pouch
-  long_desc: A leather coin pouch lies here.
-  action_desc: ''
-  type_flag: 15
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 10
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 1
-  cost: 5
-  rent: 2
-  extra_descriptions: []
-  affects: []
 - vnum: 3630
   namelist: rations travel
   short_desc: travel rations
@@ -4764,57 +4560,6 @@ objects:
   rent: 15
   extra_descriptions: []
   affects: []
-- vnum: 3750
-  namelist: spear long
-  short_desc: a long spear
-  long_desc: A long spear with metal point lies here.
-  action_desc: ''
-  type_flag: 5
-  extra_flags: 0
-  wear_flags: 8193
-  value0: 0
-  value1: 1
-  value2: 6
-  value3: 11
-  weight: 5
-  cost: 40
-  rent: 13
-  extra_descriptions: []
-  affects: []
-- vnum: 3751
-  namelist: pike
-  short_desc: a pike
-  long_desc: A heavy pike for infantry combat lies here.
-  action_desc: ''
-  type_flag: 5
-  extra_flags: 0
-  wear_flags: 8193
-  value0: 0
-  value1: 1
-  value2: 7
-  value3: 7
-  weight: 8
-  cost: 60
-  rent: 20
-  extra_descriptions: []
-  affects: []
-- vnum: 3752
-  namelist: halberd
-  short_desc: a halberd
-  long_desc: A versatile halberd combines axe and spear lies here.
-  action_desc: ''
-  type_flag: 5
-  extra_flags: 0
-  wear_flags: 8193
-  value0: 0
-  value1: 1
-  value2: 8
-  value3: 7
-  weight: 10
-  cost: 80
-  rent: 27
-  extra_descriptions: []
-  affects: []
 - vnum: 3753
   namelist: javelin
   short_desc: a javelin
@@ -4864,23 +4609,6 @@ objects:
   weight: 5
   cost: 60
   rent: 20
-  extra_descriptions: []
-  affects: []
-- vnum: 3762
-  namelist: arrows
-  short_desc: a quiver of arrows
-  long_desc: A quiver full of arrows lies here.
-  action_desc: ''
-  type_flag: 21
-  extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
-  value3: 0
-  weight: 2
-  cost: 15
-  rent: 5
   extra_descriptions: []
   affects: []
 - vnum: 3763
@@ -4966,6 +4694,720 @@ objects:
   weight: 7
   cost: 65
   rent: 22
+  extra_descriptions: []
+  affects: []
+- vnum: 3900
+  namelist: item3900
+  short_desc: object 3900
+  long_desc: An object numbered 3900 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3901
+  namelist: item3901
+  short_desc: object 3901
+  long_desc: An object numbered 3901 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3902
+  namelist: item3902
+  short_desc: object 3902
+  long_desc: An object numbered 3902 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3903
+  namelist: item3903
+  short_desc: object 3903
+  long_desc: An object numbered 3903 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3904
+  namelist: item3904
+  short_desc: object 3904
+  long_desc: An object numbered 3904 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3910
+  namelist: item3910
+  short_desc: object 3910
+  long_desc: An object numbered 3910 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3911
+  namelist: item3911
+  short_desc: object 3911
+  long_desc: An object numbered 3911 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3920
+  namelist: item3920
+  short_desc: object 3920
+  long_desc: An object numbered 3920 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3921
+  namelist: item3921
+  short_desc: object 3921
+  long_desc: An object numbered 3921 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3922
+  namelist: item3922
+  short_desc: object 3922
+  long_desc: An object numbered 3922 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3923
+  namelist: item3923
+  short_desc: object 3923
+  long_desc: An object numbered 3923 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3924
+  namelist: item3924
+  short_desc: object 3924
+  long_desc: An object numbered 3924 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3930
+  namelist: item3930
+  short_desc: object 3930
+  long_desc: An object numbered 3930 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3931
+  namelist: item3931
+  short_desc: object 3931
+  long_desc: An object numbered 3931 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3932
+  namelist: item3932
+  short_desc: object 3932
+  long_desc: An object numbered 3932 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3933
+  namelist: item3933
+  short_desc: object 3933
+  long_desc: An object numbered 3933 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3940
+  namelist: item3940
+  short_desc: object 3940
+  long_desc: An object numbered 3940 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3941
+  namelist: item3941
+  short_desc: object 3941
+  long_desc: An object numbered 3941 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3942
+  namelist: item3942
+  short_desc: object 3942
+  long_desc: An object numbered 3942 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3943
+  namelist: item3943
+  short_desc: object 3943
+  long_desc: An object numbered 3943 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3950
+  namelist: item3950
+  short_desc: object 3950
+  long_desc: An object numbered 3950 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3951
+  namelist: item3951
+  short_desc: object 3951
+  long_desc: An object numbered 3951 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3952
+  namelist: item3952
+  short_desc: object 3952
+  long_desc: An object numbered 3952 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3953
+  namelist: item3953
+  short_desc: object 3953
+  long_desc: An object numbered 3953 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3960
+  namelist: item3960
+  short_desc: object 3960
+  long_desc: An object numbered 3960 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3961
+  namelist: item3961
+  short_desc: object 3961
+  long_desc: An object numbered 3961 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3962
+  namelist: item3962
+  short_desc: object 3962
+  long_desc: An object numbered 3962 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3963
+  namelist: item3963
+  short_desc: object 3963
+  long_desc: An object numbered 3963 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3964
+  namelist: item3964
+  short_desc: object 3964
+  long_desc: An object numbered 3964 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3970
+  namelist: item3970
+  short_desc: object 3970
+  long_desc: An object numbered 3970 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3971
+  namelist: item3971
+  short_desc: object 3971
+  long_desc: An object numbered 3971 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3972
+  namelist: item3972
+  short_desc: object 3972
+  long_desc: An object numbered 3972 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3973
+  namelist: item3973
+  short_desc: object 3973
+  long_desc: An object numbered 3973 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3974
+  namelist: item3974
+  short_desc: object 3974
+  long_desc: An object numbered 3974 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3980
+  namelist: item3980
+  short_desc: object 3980
+  long_desc: An object numbered 3980 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3981
+  namelist: item3981
+  short_desc: object 3981
+  long_desc: An object numbered 3981 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3982
+  namelist: item3982
+  short_desc: object 3982
+  long_desc: An object numbered 3982 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3983
+  namelist: item3983
+  short_desc: object 3983
+  long_desc: An object numbered 3983 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3984
+  namelist: item3984
+  short_desc: object 3984
+  long_desc: An object numbered 3984 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3990
+  namelist: item3990
+  short_desc: object 3990
+  long_desc: An object numbered 3990 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3991
+  namelist: item3991
+  short_desc: object 3991
+  long_desc: An object numbered 3991 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3992
+  namelist: item3992
+  short_desc: object 3992
+  long_desc: An object numbered 3992 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
   extra_descriptions: []
   affects: []
 resets:

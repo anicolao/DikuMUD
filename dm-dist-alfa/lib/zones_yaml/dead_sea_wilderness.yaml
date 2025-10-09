@@ -1104,6 +1104,125 @@ mobiles:
     default_position: 8
     sex: 3
 objects:
+- vnum: 3750
+  namelist: spear long
+  short_desc: a long spear
+  long_desc: A long spear with metal point lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 6
+  value3: 11
+  weight: 5
+  cost: 40
+  rent: 13
+  extra_descriptions: []
+  affects: []
+- vnum: 3751
+  namelist: pike
+  short_desc: a pike
+  long_desc: A heavy pike for infantry combat lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 7
+  value3: 7
+  weight: 8
+  cost: 60
+  rent: 20
+  extra_descriptions: []
+  affects: []
+- vnum: 3752
+  namelist: halberd
+  short_desc: a halberd
+  long_desc: A versatile halberd combines axe and spear lies here.
+  action_desc: ''
+  type_flag: 5
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 0
+  value1: 1
+  value2: 8
+  value3: 7
+  weight: 10
+  cost: 80
+  rent: 27
+  extra_descriptions: []
+  affects: []
+- vnum: 3754
+  namelist: item3754
+  short_desc: object 3754
+  long_desc: An object numbered 3754 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3755
+  namelist: item3755
+  short_desc: object 3755
+  long_desc: An object numbered 3755 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
+- vnum: 3762
+  namelist: arrows
+  short_desc: a quiver of arrows
+  long_desc: A quiver full of arrows lies here.
+  action_desc: ''
+  type_flag: 21
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 15
+  rent: 5
+  extra_descriptions: []
+  affects: []
+- vnum: 3766
+  namelist: item3766
+  short_desc: object 3766
+  long_desc: An object numbered 3766 lies here.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 10
+  rent: 1
+  extra_descriptions: []
+  affects: []
 - vnum: 3850
   namelist: moss ochre clump
   short_desc: a clump of ochre moss
