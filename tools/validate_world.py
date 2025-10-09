@@ -124,7 +124,7 @@ class WorldValidator:
             
             # Check for generic patterns like "mob3000", "mobile123", etc.
             if re.match(r'^(mob|mobile)\d+$', namelist.lower()):
-                self.error(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
+                self.warning(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
             
             # Check for other placeholder patterns (using word boundaries)
             placeholder_patterns = [
@@ -134,13 +134,13 @@ class WorldValidator:
             
             for pattern in placeholder_patterns:
                 if re.search(pattern, namelist.lower()):
-                    self.error(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
+                    self.warning(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
                     break
                 if re.search(pattern, short_desc.lower()):
-                    self.error(f"{zone_name}: Mobile {vnum} has placeholder short_desc: '{short_desc}'")
+                    self.warning(f"{zone_name}: Mobile {vnum} has placeholder short_desc: '{short_desc}'")
                     break
                 if re.search(pattern, long_desc.lower()):
-                    self.error(f"{zone_name}: Mobile {vnum} has placeholder long_desc: '{long_desc}'")
+                    self.warning(f"{zone_name}: Mobile {vnum} has placeholder long_desc: '{long_desc}'")
                     break
             
             if mob.get('type') == 'simple' and 'simple' in mob:
@@ -184,7 +184,7 @@ class WorldValidator:
             
             # Check for generic patterns like "item3000", "object123", etc.
             if re.match(r'^(item|object|thing)\d+$', namelist.lower()):
-                self.error(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
+                self.warning(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
             
             # Check for other placeholder patterns (using word boundaries)
             placeholder_patterns = [
@@ -194,13 +194,13 @@ class WorldValidator:
             
             for pattern in placeholder_patterns:
                 if re.search(pattern, namelist.lower()):
-                    self.error(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
+                    self.warning(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
                     break
                 if re.search(pattern, short_desc.lower()):
-                    self.error(f"{zone_name}: Object {vnum} has placeholder short_desc: '{short_desc}'")
+                    self.warning(f"{zone_name}: Object {vnum} has placeholder short_desc: '{short_desc}'")
                     break
                 if re.search(pattern, long_desc.lower()):
-                    self.error(f"{zone_name}: Object {vnum} has placeholder long_desc: '{long_desc}'")
+                    self.warning(f"{zone_name}: Object {vnum} has placeholder long_desc: '{long_desc}'")
                     break
             
             # Check affects

@@ -92,7 +92,19 @@ tools/
    ZONE_ORDER = limbo ... myzone system
    ```
 
-4. **Build and test** as above
+4. **Validate your zone** before building:
+   ```bash
+   cd dm-dist-alfa
+   make validate-world
+   ```
+   
+   This will check for:
+   - Duplicate vnums across zones
+   - Invalid cross-references
+   - Placeholder names (e.g., "item3000", "mob123")
+   - Required fields and format errors
+
+5. **Build and test** as above
 
 ### Converting Legacy Format to YAML
 
@@ -221,19 +233,23 @@ python3 tools/validate_world.py dm-dist-alfa/lib/zones_yaml/*.yaml
 ## Build System
 
 The makefile automatically:
-1. Loads all YAML zone files
-2. Validates basic format
-3. Sorts records by vnum
-4. Converts to DikuMUD format
-5. Adds proper EOF markers
-6. Writes `tinyworld.*` files
+1. **Validates** all YAML zone files for consistency
+2. Loads all YAML zone files
+3. Validates basic format
+4. Sorts records by vnum
+5. Converts to DikuMUD format
+6. Adds proper EOF markers
+7. Writes `tinyworld.*` files
 
 Build commands:
 ```bash
-make worldfiles      # Build only world data files
+make validate-world  # Run validation only (without building)
+make worldfiles      # Validate and build only world data files
 make all             # Build world files and executables
 make clean           # Remove built files
 ```
+
+**Note:** Since version 2024, validation runs automatically when building world files. If validation finds errors, the build will fail. Warnings (like placeholder object names) don't stop the build but should be addressed.
 
 ## Troubleshooting
 

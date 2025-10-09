@@ -14,23 +14,29 @@ ZONE_ORDER = limbo zone_1200 lesser_helium dead_sea_bottom_channel southern_appr
 # YAML source files
 YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
 
+# Validate world data before building
+.PHONY: validate-world
+validate-world: $(YAML_ZONES) ../tools/validate_world.py
+	@echo "Validating world data..."
+	@python3 ../tools/validate_world.py $(YAML_ZONES)
+
 # Build world data files from YAML zone files
-lib/tinyworld.wld: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.wld: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build wld $@ $(YAML_ZONES)
 
-lib/tinyworld.mob: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.mob: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build mob $@ $(YAML_ZONES)
 
-lib/tinyworld.obj: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.obj: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build obj $@ $(YAML_ZONES)
 
-lib/tinyworld.zon: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.zon: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build zon $@ $(YAML_ZONES)
 
-lib/tinyworld.shp: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.shp: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build shp $@ $(YAML_ZONES)
 
-lib/tinyworld.qst: $(YAML_ZONES) ../tools/world_builder.py
+lib/tinyworld.qst: validate-world $(YAML_ZONES) ../tools/world_builder.py
 	python3 ../tools/world_builder.py build qst $@ $(YAML_ZONES)
 
 # Main build targets
