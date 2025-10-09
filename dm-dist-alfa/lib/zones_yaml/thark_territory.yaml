@@ -3794,6 +3794,37 @@ objects:
 
       help it strike creatures immune to normal weapons.'
   affects: []
+- vnum: 4091
+  namelist: white ape tooth fang trophy
+  short_desc: a white ape tooth
+  long_desc: A massive tooth from a white ape lies here.
+  action_desc: ''
+  type_flag: 12
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 2
+  cost: 50
+  rent: 10
+  extra_descriptions:
+  - keywords: tooth fang white ape
+    description: 'This is a large, sharp tooth from one of the fearsome white apes that
+      roam the dead
+
+      sea bottoms of Mars. The tooth is over six inches long and still sharp. It serves
+      as proof
+
+      of a kill - green Martians often collect such trophies to demonstrate their prowess
+      in
+
+      battle. The tooth could be presented to someone as evidence of having faced and
+      defeated
+
+      one of these dangerous beasts.'
+  affects: []
 resets:
 - command: M
   if_flag: 0
@@ -4257,6 +4288,11 @@ resets:
   arg1: 4083
   arg2: 1
   arg3: 4035
+- command: G
+  if_flag: 1
+  arg1: 4091
+  arg2: 1
+  arg3: 0
 - command: M
   if_flag: 0
   arg1: 4084
@@ -4394,11 +4430,11 @@ quests:
   type: 62
   duration: 96
   target: 4051
-  item: 0
-  flags: 16777216
+  item: 4091
+  flags: 50331648
   reward_exp: 500
   reward_gold: 0
   reward_item: 4090
-  quest_text: "Sola looks at you with her kind eyes and speaks softly. 'I see kindness in your eyes, stranger. Few show compassion to the green Martians of Thark. If you would be a friend to me and my father Tars Tarkas, simply speak with me again when you have proven yourself worthy. I will know by your deeds.'"
-  complete_text: "Sola smiles warmly at you. 'I can see you have grown stronger since we last spoke. You have the bearing of a true warrior now. Please, accept this gift from my father - his old practice sword. It served him well when he was learning the ways of the blade, and now it shall serve you. May it bring you victory in battle.'"
-  fail_text: "Sola looks at you thoughtfully. 'Perhaps another time, when you are ready.'"
+  quest_text: "Sola looks at you with her kind eyes and speaks softly. 'White apes have been threatening our people, raiding our territory and stealing our supplies. If you would help us, go into the ancient ruins and defeat one of these beasts. Bring me a white ape tooth as proof of your deed, and my father will reward you with one of his practice swords. Will you help us?'"
+  complete_text: "Sola's eyes light up with relief and gratitude as she examines the white ape tooth. 'You have defeated one of the beasts! You have proven yourself a friend to the Tharks. My father, Tars Tarkas, would want you to have this - his old practice sword. It served him well when he was learning the blade, and now it shall serve you. May it bring you victory, warrior.'"
+  fail_text: "Sola looks disappointed. 'The white apes still threaten us. I had hoped you would help protect my people.'"

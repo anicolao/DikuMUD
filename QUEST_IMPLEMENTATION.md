@@ -94,19 +94,38 @@ S
 ### Implementation
 
 **Special Procedure** (`spec_procs.c`):
-- `sola_quest_giver()`: Handles quest assignment and completion
-- Responds to specific keywords in conversation
-- Checks for active quest and completes it on second visit
-- Awards rewards automatically upon completion
+- `quest_giver()`: Generic, data-driven quest handler for all quest types
+- Responds to keywords: "quest", "help", "task"
+- Quest assignment based on quest_data loaded from YAML
+- Quest completion detection integrated into game commands (e.g., do_give)
+
+**Quest Completion** (`act.obj1.c`):
+- Modified `do_give()` to detect quest item delivery
+- Automatically completes delivery and retrieval quests
+- Extracts quest item after completion
+- Awards rewards defined in quest data
 
 **Quest Assignment** (`spec_assign.c`):
 ```c
-mob_index[real_mobile(4051)].func = sola_quest_giver;
+mob_index[real_mobile(4051)].func = quest_giver;
 ```
 
-## Tars Tarkas's Practice Sword
+Any NPC can become a quest giver by:
+1. Adding quest data to the zone's YAML file
+2. Assigning the `quest_giver` special procedure to the NPC
 
-### Object Details
+## Quest Items
+
+### White Ape Tooth (Quest Item)
+
+- **Vnum**: 4091
+- **Type**: ITEM_OTHER (trophy)
+- **Weight**: 2 lbs
+- **Value**: 50 gold
+- **Obtained from**: White Apes (mob 4083) in Thark Territory ancient ruins
+- **Purpose**: Proof of defeating a white ape, required for Sola's quest
+
+### Tars Tarkas's Practice Sword (Quest Reward)
 
 - **Vnum**: 4090
 - **Type**: ITEM_WEAPON (slash)
@@ -117,9 +136,7 @@ mob_index[real_mobile(4051)].func = sola_quest_giver;
 - **Flags**: MAGIC (can hit magical creatures)
 - **Wear**: WIELD
 
-### Lore
-
-A well-worn training blade from Tars Tarkas's early days. The weapon bears the marks of four-handed grips from the great Thark chieftain's youth. It's enchanted with minor magic to strike creatures immune to normal weapons.
+**Lore:** A well-worn training blade from Tars Tarkas's early days. The weapon bears the marks of four-handed grips from the great Thark chieftain's youth. It's enchanted with minor magic to strike creatures immune to normal weapons.
 
 ## Usage
 
@@ -134,9 +151,11 @@ ask Sola quest
 
 To complete the quest:
 ```
-adventure and gain experience
+go to ancient ruins in Thark Territory
+kill a white ape
+take the white ape tooth
 return to Sola
-talk to Sola
+give tooth to Sola
 ```
 
 Check quest status:

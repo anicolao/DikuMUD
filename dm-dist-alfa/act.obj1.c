@@ -14,13 +14,15 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
+#include "quest.h"
 
 /* extern variables */
 
 extern struct str_app_type str_app[];
 extern struct room_data *world;
 extern struct descriptor_data *descriptor_list;
-extern struct room_data *world;
+extern struct index_data *obj_index;
+extern struct index_data *mob_index;
 		 
 /* extern functions */
 
@@ -571,5 +573,44 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 	act("$n gives $p to $N.", 1, ch, obj, vict, TO_NOTVICT);
 	act("$n gives you $p.", 0, ch, obj, vict, TO_VICT);
 	send_to_char("Ok.\n\r", ch);
+	
+	/* Check for quest completion - delivery or retrieval quests */
+	if (IS_NPC(vict) && !IS_NPC(ch)) {
+		struct affected_type *af;
+		struct quest_data *quest;
+		int obj_vnum = obj_index[obj->item_number].virtual;
+		
+		/* Check if player has an active delivery or retrieval quest */
+		for (af = ch->affected; af; af = af->next) {
+			if ((af->type == QUEST_DELIVERY || af->type == QUEST_RETRIEVAL) &&
+			    af->modifier == obj_vnum) {
+				
+				/* For delivery quest: check if giving to correct NPC */
+				if (af->type == QUEST_DELIVERY && af->location != mob_index[vict->nr].virtual)
+					continue;
+				
+				/* For retrieval quest: check if returning to quest giver */
+				if (af->type == QUEST_RETRIEVAL && af->location != mob_index[vict->nr].virtual)
+					continue;
+				
+				/* Quest completed! */
+				quest = find_quest_by_giver(af->location);
+				if (quest) {
+					/* Send completion message */
+					act(quest->complete_text, FALSE, vict, 0, ch, TO_VICT);
+					
+					/* Grant rewards */
+					grant_quest_reward(ch, quest);
+					
+					/* Remove quest affect */
+					affect_from_char(ch, af->type);
+					
+					/* Remove the quest item from recipient */
+					extract_obj(obj);
+				}
+				break;
+			}
+		}
+	}
 }
 

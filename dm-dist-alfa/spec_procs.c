@@ -1323,8 +1323,8 @@ int kings_hall(struct char_data *ch, int cmd, char *arg)
 	return(1);
 }
 
-/* Sola quest giver - simple quest for practice sword */
-int sola_quest_giver(struct char_data *ch, int cmd, char *arg)
+/* Generic quest giver - handles all quest types in a data-driven way */
+int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
 	struct char_data *questor;
 	struct affected_type af;
@@ -1349,29 +1349,25 @@ int sola_quest_giver(struct char_data *ch, int cmd, char *arg)
 	if (!quest)
 		return FALSE;
 	
-	/* Check if player already has an active quest from Sola */
-	if (has_quest_type(questor, QUEST_RETRIEVAL)) {
-		/* Quest is active - complete it */
-		act(quest->complete_text, FALSE, ch, 0, questor, TO_VICT);
-		
-		/* Grant rewards */
-		grant_quest_reward(questor, quest);
-		
-		/* Remove quest affect */
-		affect_from_char(questor, QUEST_RETRIEVAL);
-		
+	/* Check if player already has an active quest of this type */
+	if (has_quest_type(questor, quest->quest_type)) {
+		/* Player already has this quest - they may be returning to complete it */
+		/* For delivery/retrieval quests, completion happens in do_give */
+		/* For now, just remind them */
+		act("$n says, 'You already have a task from me. Complete it first!'", 
+			FALSE, ch, 0, 0, TO_ROOM);
 		return TRUE;
 	}
 	
-	/* Give quest if player asks about quest/help/sword/task */
-	if (!strcasecmp(arg, "quest") || !strcasecmp(arg, "sword") || 
-	    !strcasecmp(arg, "help") || !strcasecmp(arg, "task")) {
+	/* Give quest if player asks about quest/help/task */
+	if (!strcasecmp(arg, "quest") || !strcasecmp(arg, "help") || 
+	    !strcasecmp(arg, "task")) {
 		
 		/* Assign quest affect */
-		af.type = QUEST_RETRIEVAL;
+		af.type = quest->quest_type;
 		af.duration = quest->duration;
 		af.modifier = quest->item_vnum;
-		af.location = mob_index[ch->nr].virtual;
+		af.location = quest->target_vnum;
 		af.bitvector = AFF_QUEST | quest->quest_flags;
 		
 		affect_to_char(questor, &af);
