@@ -2839,37 +2839,37 @@ mobiles:
     sex: 1
 objects:
 - vnum: 3000
-  namelist: item3000
-  short_desc: object 3000
-  long_desc: An object numbered 3000 lies here.
+  namelist: water barrel
+  short_desc: a water barrel
+  long_desc: A sealed water barrel stands here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 50
+  value1: 50
+  value2: 1
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 65
+  cost: 300
+  rent: 100
   extra_descriptions: []
   affects: []
 - vnum: 3001
-  namelist: item3001
-  short_desc: object 3001
-  long_desc: An object numbered 3001 lies here.
+  namelist: water flask
+  short_desc: a water flask
+  long_desc: A metal water flask has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 17
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
-  value1: 0
-  value2: 0
+  wear_flags: 1
+  value0: 8
+  value1: 8
+  value2: 1
   value3: 0
-  weight: 1
-  cost: 10
-  rent: 1
+  weight: 10
+  cost: 20
+  rent: 8
   extra_descriptions: []
   affects: []
 - vnum: 3002
@@ -2924,37 +2924,37 @@ objects:
   extra_descriptions: []
   affects: []
 - vnum: 3010
-  namelist: item3010
-  short_desc: object 3010
-  long_desc: An object numbered 3010 lies here.
+  namelist: bread loaf
+  short_desc: a loaf of bread
+  long_desc: A loaf of Martian bread has been left here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 19
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 1
+  value0: 12
   value1: 0
   value2: 0
   value3: 0
   weight: 1
   cost: 10
-  rent: 1
+  rent: 10
   extra_descriptions: []
   affects: []
 - vnum: 3011
-  namelist: item3011
-  short_desc: object 3011
-  long_desc: An object numbered 3011 lies here.
+  namelist: pastry dried fruit
+  short_desc: dried fruit pastry
+  long_desc: A pastry made with dried Martian fruits has been placed here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 19
   extra_flags: 0
-  wear_flags: 16385
-  value0: 0
+  wear_flags: 1
+  value0: 5
   value1: 0
   value2: 0
   value3: 0
   weight: 1
-  cost: 10
-  rent: 1
+  cost: 5
+  rent: 5
   extra_descriptions: []
   affects: []
 - vnum: 3020

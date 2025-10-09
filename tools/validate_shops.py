@@ -96,6 +96,31 @@ def load_vnums(filename, pattern):
         pass
     return vnums
 
+def load_object_names(filename):
+    """Load object vnums and their short descriptions from obj file"""
+    obj_names = {}
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                # Look for object vnum marker
+                if line.startswith('#') and line[1:].isdigit():
+                    vnum = int(line[1:])
+                    i += 1
+                    # Skip namelist line
+                    if i < len(lines):
+                        i += 1
+                    # Get short description
+                    if i < len(lines):
+                        short_desc = lines[i].strip().rstrip('~')
+                        obj_names[vnum] = short_desc
+                i += 1
+    except FileNotFoundError:
+        pass
+    return obj_names
+
 def validate_shops(shop_file, mob_file, obj_file, wld_file):
     """Validate all shops in the shop file"""
     
@@ -109,6 +134,10 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
     print("Loading object vnums...")
     objs = load_vnums(obj_file, r'^#(\d+)')
     print(f"  Found {len(objs)} objects")
+    
+    print("Loading object names...")
+    obj_names = load_object_names(obj_file)
+    print(f"  Loaded {len(obj_names)} object names")
     
     print("Loading room vnums...")
     rooms = load_vnums(wld_file, r'^#(\d+)')
@@ -154,7 +183,13 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
                     print(f"    ERROR: Item {item_vnum} does not exist!")
                     errors += 1
                 else:
-                    print(f"    {item_vnum} ✓")
+                    obj_name = obj_names.get(item_vnum, "")
+                    # Check for placeholder names
+                    if obj_name.lower().startswith('object ') or obj_name.lower().startswith('item'):
+                        print(f"    ERROR: Item {item_vnum} has placeholder name '{obj_name}'")
+                        errors += 1
+                    else:
+                        print(f"    {item_vnum} ({obj_name}) ✓")
         
         # Check profit margins
         profit_buy = shop.get('profit_buy', 0.0)

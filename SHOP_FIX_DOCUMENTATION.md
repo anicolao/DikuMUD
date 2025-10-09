@@ -114,8 +114,16 @@ The validation tool found several pre-existing errors in other shops that were N
 - Shop #14 (greater_helium): Keeper mob 3505 and room 3524 do not exist
 - Shop #15 (lesser_helium): Produces nothing
 - Multiple shops have hours outside valid 0-23 range (showing 28)
+- Various shops sell items with placeholder names (e.g., "object 3066")
 
 These should be addressed in a separate fix if desired.
+
+## Enhanced Validation
+
+The validation tool (`tools/validate_shops.py`) was enhanced to detect placeholder object names:
+- Checks if items in shops have placeholder names like "object XXXX" or "itemXXXX"
+- Reports these as errors to prevent shops from displaying unhelpful names to players
+- Validates that all shop items have proper descriptive names
 
 ## Files Changed
 
