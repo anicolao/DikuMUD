@@ -116,6 +116,33 @@ class WorldValidator:
             # Validate mobile fields
             if not mob.get('namelist'):
                 self.error(f"{zone_name}: Mobile {vnum} missing namelist")
+            
+            # Check for placeholder/invalid names
+            namelist = mob.get('namelist', '')
+            short_desc = mob.get('short_desc', '')
+            long_desc = mob.get('long_desc', '')
+            
+            # Check for generic patterns like "mob3000", "mobile123", etc.
+            if re.match(r'^(mob|mobile)\d+$', namelist.lower()):
+                self.error(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
+            
+            # Check for other placeholder patterns (using word boundaries)
+            placeholder_patterns = [
+                r'\bplaceholder\b', r'\bxxx\b', r'\btbd\b', r'\btodo\b', r'\bfixme\b',
+                r'\bchangeme\b', r'\bgeneric mob\b', r'\btest mob\b'
+            ]
+            
+            for pattern in placeholder_patterns:
+                if re.search(pattern, namelist.lower()):
+                    self.error(f"{zone_name}: Mobile {vnum} has placeholder namelist: '{namelist}'")
+                    break
+                if re.search(pattern, short_desc.lower()):
+                    self.error(f"{zone_name}: Mobile {vnum} has placeholder short_desc: '{short_desc}'")
+                    break
+                if re.search(pattern, long_desc.lower()):
+                    self.error(f"{zone_name}: Mobile {vnum} has placeholder long_desc: '{long_desc}'")
+                    break
+            
             if mob.get('type') == 'simple' and 'simple' in mob:
                 simple = mob['simple']
                 # Validate dice notation
@@ -149,6 +176,32 @@ class WorldValidator:
             # Validate object fields
             if not obj.get('namelist'):
                 self.error(f"{zone_name}: Object {vnum} missing namelist")
+            
+            # Check for placeholder/invalid names
+            namelist = obj.get('namelist', '')
+            short_desc = obj.get('short_desc', '')
+            long_desc = obj.get('long_desc', '')
+            
+            # Check for generic patterns like "item3000", "object123", etc.
+            if re.match(r'^(item|object|thing)\d+$', namelist.lower()):
+                self.error(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
+            
+            # Check for other placeholder patterns (using word boundaries)
+            placeholder_patterns = [
+                r'\bplaceholder\b', r'\bxxx\b', r'\btbd\b', r'\btodo\b', r'\bfixme\b',
+                r'\bchangeme\b', r'\bgeneric item\b', r'\bgeneric object\b', r'\btest item\b'
+            ]
+            
+            for pattern in placeholder_patterns:
+                if re.search(pattern, namelist.lower()):
+                    self.error(f"{zone_name}: Object {vnum} has placeholder namelist: '{namelist}'")
+                    break
+                if re.search(pattern, short_desc.lower()):
+                    self.error(f"{zone_name}: Object {vnum} has placeholder short_desc: '{short_desc}'")
+                    break
+                if re.search(pattern, long_desc.lower()):
+                    self.error(f"{zone_name}: Object {vnum} has placeholder long_desc: '{long_desc}'")
+                    break
             
             # Check affects
             affects = obj.get('affects', [])
