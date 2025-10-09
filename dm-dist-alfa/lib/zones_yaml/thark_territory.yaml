@@ -4393,12 +4393,12 @@ quests:
   giver: 4051
   type: 62
   duration: 96
-  target: 0
-  item: 4090
+  target: 4051
+  item: 0
   flags: 16777216
   reward_exp: 500
   reward_gold: 0
   reward_item: 4090
-  quest_text: "Sola looks at you with her kind eyes and speaks softly. 'My father, Tars Tarkas, has asked me to find his old practice sword. It was taken by white apes during a raid on our storage chambers. If you could retrieve it and bring it back to me, I would be most grateful. The sword is very important to my father - it reminds him of when he first learned to fight. Please, will you help me?'"
-  complete_text: "Sola's eyes light up with joy as she sees the practice sword. 'You found it! My father will be so pleased. Thank you, friend. Please, keep the sword - my father would want you to have it, as a token of our friendship and gratitude.'"
-  fail_text: "Sola looks disappointed. 'I had hoped you would find my father's practice sword, but time has run out. Perhaps it is lost forever.'"
+  quest_text: "Sola looks at you with her kind eyes and speaks softly. 'I see kindness in your eyes, stranger. Few show compassion to the green Martians of Thark. If you would be a friend to me and my father Tars Tarkas, simply speak with me again when you have proven yourself worthy. I will know by your deeds.'"
+  complete_text: "Sola smiles warmly at you. 'I can see you have grown stronger since we last spoke. You have the bearing of a true warrior now. Please, accept this gift from my father - his old practice sword. It served him well when he was learning the ways of the blade, and now it shall serve you. May it bring you victory in battle.'"
+  fail_text: "Sola looks at you thoughtfully. 'Perhaps another time, when you are ready.'"

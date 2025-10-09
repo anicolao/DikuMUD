@@ -1323,13 +1323,12 @@ int kings_hall(struct char_data *ch, int cmd, char *arg)
 	return(1);
 }
 
-/* Sola quest giver - retrieval quest for practice sword */
+/* Sola quest giver - simple quest for practice sword */
 int sola_quest_giver(struct char_data *ch, int cmd, char *arg)
 {
 	struct char_data *questor;
 	struct affected_type af;
 	struct quest_data *quest;
-	struct obj_data *obj;
 	
 	/* Only respond to 'ask' or 'talk' commands */
 	if (cmd != 107 && cmd != 152)  /* ask and say/tell */
@@ -1345,44 +1344,28 @@ int sola_quest_giver(struct char_data *ch, int cmd, char *arg)
 	if (!questor)
 		return FALSE;
 	
-	/* Check if player already has this quest */
+	/* Find quest data for this NPC */
+	quest = find_quest_by_giver(mob_index[ch->nr].virtual);
+	if (!quest)
+		return FALSE;
+	
+	/* Check if player already has an active quest from Sola */
 	if (has_quest_type(questor, QUEST_RETRIEVAL)) {
-		act("$n says, 'You already have a quest to complete!'", FALSE, ch, 0, 0, TO_ROOM);
+		/* Quest is active - complete it */
+		act(quest->complete_text, FALSE, ch, 0, questor, TO_VICT);
+		
+		/* Grant rewards */
+		grant_quest_reward(questor, quest);
+		
+		/* Remove quest affect */
+		affect_from_char(questor, QUEST_RETRIEVAL);
+		
 		return TRUE;
 	}
 	
-	/* Check if player has the item already - quest completion */
-	obj = get_obj_in_list_num(4090, questor->carrying);
-	if (obj) {
-		/* Find the quest data */
-		quest = find_quest_by_giver(mob_index[ch->nr].virtual);
-		if (quest) {
-			act(quest->complete_text, FALSE, ch, 0, questor, TO_VICT);
-			act("$N thanks you warmly for returning the practice sword.", 
-				FALSE, questor, 0, ch, TO_CHAR);
-			
-			/* Remove the item */
-			extract_obj(obj);
-			
-			/* Grant rewards */
-			grant_quest_reward(questor, quest);
-			
-			/* Remove quest affect */
-			affect_from_char(questor, QUEST_RETRIEVAL);
-		}
-		return TRUE;
-	}
-	
-	/* Give quest if it mentions "quest" or "sword" or "help" */
+	/* Give quest if player asks about quest/help/sword/task */
 	if (!strcasecmp(arg, "quest") || !strcasecmp(arg, "sword") || 
 	    !strcasecmp(arg, "help") || !strcasecmp(arg, "task")) {
-		
-		/* Find quest for this NPC */
-		quest = find_quest_by_giver(mob_index[ch->nr].virtual);
-		if (!quest) {
-			act("$n says, 'I have no tasks for you at this time.'", FALSE, ch, 0, 0, TO_ROOM);
-			return TRUE;
-		}
 		
 		/* Assign quest affect */
 		af.type = QUEST_RETRIEVAL;
