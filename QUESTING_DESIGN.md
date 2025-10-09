@@ -64,6 +64,8 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
     struct char_data *questor;
     struct affected_type af;
+    struct quest_data *quest;
+    int i;
     
     /* Only respond to 'ask <npc> quest' or 'quest' command */
     if (cmd != CMD_ASK && cmd != CMD_QUEST)
@@ -78,42 +80,63 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
         return TRUE;
     }
     
-    /* Assign quest affect */
-    af.type = QUEST_DELIVERY;
-    af.duration = 48;  /* 48 MUD hours = 1 real hour */
-    af.modifier = 3010;  /* Object vnum: bread */
-    af.location = ch->nr;  /* This NPC's vnum */
-    af.bitvector = AFF_QUEST;
+    /* Find quest for this NPC from quest_index */
+    quest = NULL;
+    for (i = 0; i < top_of_quest_table; i++) {
+        if (quest_index[i].giver_vnum == ch->nr) {
+            quest = &quest_index[i];
+            break;
+        }
+    }
+    
+    if (!quest) {
+        do_say(ch, "I have no tasks for you at this time.", 0);
+        return TRUE;
+    }
+    
+    /* Assign quest affect from template */
+    af.type = quest->quest_type;
+    af.duration = quest->duration;
+    af.modifier = quest->item_vnum;
+    af.location = quest->target_vnum;
+    af.bitvector = AFF_QUEST | quest->quest_flags;
     
     affect_to_char(questor, &af);
     
-    do_say(ch, "Please bring me some bread. You have one hour!", 0);
+    /* Send quest text to player */
+    act(quest->quest_text, FALSE, ch, 0, questor, TO_VICT);
     return TRUE;
 }
 ```
 
 ### 2. Quest Data Storage
 
-For more complex quests, a new structure tracks additional quest data:
+Quest templates are loaded from the database file into a global quest index:
 
 ```c
-/* In structs.h */
-#define MAX_QUEST_DATA 10
-
+/* In structs.h or db.h */
 struct quest_data {
+    int qnum;             /* Quest number (virtual) */
+    int giver_vnum;       /* Mob that gives quest */
     int quest_type;       /* QUEST_* constant */
-    int target_vnum;      /* Target mob/object/room vnum */
+    int duration;         /* Time limit in MUD hours */
+    int target_vnum;      /* Target mob/room vnum */
     int item_vnum;        /* Item to deliver/retrieve */
-    int count_current;    /* For collection quests */
-    int count_needed;     /* Total items needed */
+    int quest_flags;      /* Visibility flags */
     int reward_exp;       /* Experience reward */
     int reward_gold;      /* Gold reward */
     int reward_item;      /* Item vnum reward */
+    char *quest_text;     /* Assignment message */
+    char *complete_text;  /* Completion message */
+    char *fail_text;      /* Failure message */
 };
 
-/* Global quest templates */
-extern struct quest_data quest_templates[MAX_QUEST_DATA];
+/* Global quest index (loaded from lib/tinyworld.qst) */
+extern struct quest_data *quest_index;
+extern int top_of_quest_table;
 ```
+
+Quest-giving NPCs reference quests by their quest number (qnum) from the quest_index.
 
 ## Quest Types Implementation
 
@@ -421,55 +444,416 @@ void display_quest_info(struct char_data *ch, struct affected_type *af)
 
 ## Database Integration
 
-### Quest Template File Format
+### Quest File Format (.qst)
 
-Create `lib/quests.dat` with quest definitions:
+Quest files follow the same format conventions as other DikuMUD data files (.mob, .obj, .wld, .zon).
+
+#### Record Structure
+
+```
+#<quest_number>
+<quest_giver_vnum> <quest_type> <duration>
+<target_vnum> <item_vnum> <quest_flags>
+<reward_exp> <reward_gold> <reward_item_vnum>
+<quest_text>~
+<complete_text>~
+<fail_text>~
+S
+```
+
+#### Field Definitions
+
+- **quest_number**: Unique quest identifier (virtual number)
+- **quest_giver_vnum**: Mobile vnum that assigns this quest
+- **quest_type**: Quest type constant (61-65: DELIVERY, RETRIEVAL, KILL, EXPLORE, COLLECT)
+- **duration**: Time limit in MUD hours (48 = 1 real hour)
+- **target_vnum**: Mob/room vnum for quest target (or 0 if not applicable)
+- **item_vnum**: Object vnum for quest item (or 0 if not applicable)
+- **quest_flags**: Bitvector for visibility options (QUEST_SHOW_TARGET, QUEST_SHOW_ITEM, etc.)
+- **reward_exp**: Experience points awarded on completion
+- **reward_gold**: Gold coins awarded on completion
+- **reward_item_vnum**: Object vnum to create as reward (or 0 for no item)
+- **quest_text**: Text shown when quest is assigned (~ terminated)
+- **complete_text**: Text shown when quest is completed (~ terminated)
+- **fail_text**: Text shown when quest expires (~ terminated)
+- **S**: Record terminator
+
+#### File Terminator
+
+Like all DikuMUD data files, quest files end with:
+```
+#99999
+$~
+```
+
+#### Example Quest File
 
 ```
 #1
-Quest Giver VNum: 3001
-Quest Type: 61 (DELIVERY)
-Target Mob: 3002
-Item Required: 3010
-Duration: 48
-Reward Exp: 100
-Reward Gold: 50
-Reward Item: 3020
-Quest Flags: 100663296 (SHOW_TARGET|SHOW_ITEM)
-Quest Text: Please bring me some fresh bread from the baker.
-Complete Text: Thank you for the bread! Here is your reward.
-Fail Text: You have failed to bring me the bread in time.
-
+3001 61 48
+3002 3010 100663296
+100 50 3020
+Please bring me some fresh bread from the baker.~
+Thank you for the bread! Here is your reward.~
+You have failed to bring me the bread in time.~
+S
 #2
-Quest Giver VNum: 3002
-Quest Type: 62 (RETRIEVAL)
-...
+3050 62 96
+0 3075 0
+200 100 0
+I seek an ancient amulet. Find it and return to me.~
+You have found the amulet! Your reward is well-earned.~
+You took too long. The amulet is lost to us now.~
+S
+#3
+3100 63 72
+3200 0 16777216
+500 250 3105
+A dangerous bandit leader threatens our city. Defeat him!~
+The bandit leader is dead! You have our gratitude.~
+The bandit leader still lives. You have failed us.~
+S
+#99999
+$~
 ```
 
-### Loading Quests
+### Quest Organization by Zone
+
+Quests are organized by zone - each quest is defined in the same zone file as the quest-giving NPC. This keeps related content together and makes zone maintenance easier.
+
+**Key Principle**: A quest belongs in the zone where its quest-giver NPC is defined, even if the quest references mobs, objects, or rooms in other zones.
+
+**Example**:
+- Greater Helium (zone 39) has NPC 3940 (a merchant)
+- Quest 3901 is defined in `greater_helium.yaml` because mob 3940 gives it
+- Quest 3901 might require delivering item 3010 (from zone 30) to mob 3050 (also zone 30)
+- The quest still belongs in zone 39's file because that's where the quest giver is
+
+### YAML Quest Format
+
+For easier maintenance, quests are defined in YAML within zone files and converted to .qst format by the world builder.
+
+#### YAML Schema Addition
+
+Add to each zone's YAML file (e.g., `lib/zones_yaml/greater_helium.yaml`):
+
+```yaml
+zone:
+  number: 39
+  name: "Greater Helium"
+  # ... existing zone fields ...
+
+# ... existing rooms, mobiles, objects, resets ...
+
+quests:
+  - qnum: 3901
+    giver: 3940
+    type: 61  # DELIVERY
+    duration: 48
+    target: 3941
+    item: 3510
+    flags: 100663296  # SHOW_TARGET | SHOW_ITEM
+    reward_exp: 100
+    reward_gold: 50
+    reward_item: 3520
+    quest_text: "Please deliver this message scroll to the officer."
+    complete_text: "Excellent! Here is your reward."
+    fail_text: "You took too long to deliver the message."
+    
+  - qnum: 3902
+    giver: 3942
+    type: 62  # RETRIEVAL
+    duration: 96
+    target: 0
+    item: 3530
+    flags: 16777216  # SHOW_ITEM only
+    reward_exp: 200
+    reward_gold: 100
+    reward_item: 0
+    quest_text: "Retrieve the stolen artifact and bring it back to me."
+    complete_text: "You found it! The artifact is safe once more."
+    fail_text: "The artifact remains lost."
+```
+
+#### Quest YAML Field Definitions
+
+- **qnum**: Quest virtual number (unique across all zones)
+- **giver**: Mobile vnum that gives this quest (must exist in database)
+- **type**: Quest type (61=DELIVERY, 62=RETRIEVAL, 63=KILL, 64=EXPLORE, 65=COLLECT)
+- **duration**: Time limit in MUD hours
+- **target**: Target mobile/room vnum (0 if not used)
+- **item**: Required item vnum (0 if not used)
+- **flags**: Quest visibility flags (bitfield)
+- **reward_exp**: Experience reward
+- **reward_gold**: Gold reward
+- **reward_item**: Item vnum reward (0 for none)
+- **quest_text**: Assignment message (multiline string)
+- **complete_text**: Completion message
+- **fail_text**: Failure/expiration message
+
+### Cross-Zone Validation
+
+Quest validation must verify references across zones:
+
+#### Validation Rules
+
+1. **Quest Giver Exists**: The `giver` mobile vnum must exist in the world
+2. **Target Exists**: The `target` mob/room vnum must exist (if non-zero)
+3. **Item Exists**: The `item` object vnum must exist (if non-zero)
+4. **Reward Item Exists**: The `reward_item` object vnum must exist (if non-zero)
+5. **Zone Dependencies**: Track which zones a quest depends on
+
+#### Validation Example
+
+For a quest in Greater Helium (zone 39):
+```yaml
+qnum: 3901
+giver: 3940     # Must exist in zone 39 (where quest is defined)
+target: 3050    # May exist in different zone (Lesser Helium, zone 30)
+item: 3010      # May exist in different zone
+```
+
+**Validation checks**:
+- Quest 3901 belongs in Greater Helium (where mob 3940 is defined)
+- Mob 3940 must exist
+- Mob 3050 must exist (may be in a different zone)
+- Object 3010 must exist (may be in a different zone)
+- Note dependency: Greater Helium quests require Lesser Helium data
+
+#### Dependency Tracking
+
+The world builder tracks zone dependencies for quests:
+
+```
+Zone 39 (Greater Helium) quests depend on:
+  - Zone 30 (Lesser Helium) for mob 3050
+  - Zone 30 (Lesser Helium) for object 3010
+  
+If Lesser Helium is disabled, Greater Helium quests will fail validation.
+```
+
+**Implementation**:
+
+```python
+def analyze_quest_dependencies(quests: List[Quest], 
+                               mob_zones: Dict[int, int],
+                               obj_zones: Dict[int, int],
+                               room_zones: Dict[int, int]) -> Dict[int, Set[int]]:
+    """Map each zone to the zones its quests depend on."""
+    dependencies = {}
+    
+    for quest in quests:
+        # Quest belongs to zone of its giver
+        giver_zone = mob_zones.get(quest.giver, None)
+        if not giver_zone:
+            continue
+            
+        if giver_zone not in dependencies:
+            dependencies[giver_zone] = set()
+        
+        # Check target dependency
+        if quest.target != 0:
+            if quest.type in [61, 62, 63]:  # MOB target
+                target_zone = mob_zones.get(quest.target)
+                if target_zone and target_zone != giver_zone:
+                    dependencies[giver_zone].add(target_zone)
+            elif quest.type == 64:  # ROOM target
+                target_zone = room_zones.get(quest.target)
+                if target_zone and target_zone != giver_zone:
+                    dependencies[giver_zone].add(target_zone)
+        
+        # Check item dependency
+        if quest.item != 0:
+            item_zone = obj_zones.get(quest.item)
+            if item_zone and item_zone != giver_zone:
+                dependencies[giver_zone].add(item_zone)
+        
+        # Check reward item dependency
+        if quest.reward_item != 0:
+            reward_zone = obj_zones.get(quest.reward_item)
+            if reward_zone and reward_zone != giver_zone:
+                dependencies[giver_zone].add(reward_zone)
+    
+    return dependencies
+```
+
+This ensures all quest-related entities are available when zones are loaded.
+
+### World Builder Integration
+
+Update `tools/world_builder.py` to handle quest conversion.
+
+#### Quest Loading from YAML
+
+```python
+@dataclass
+class Quest:
+    """Represents a quest."""
+    qnum: int
+    giver: int
+    type: int
+    duration: int
+    target: int
+    item: int
+    flags: int
+    reward_exp: int
+    reward_gold: int
+    reward_item: int
+    quest_text: str
+    complete_text: str
+    fail_text: str
+```
+
+#### Quest File Generation
+
+The world builder collects quests from all zone YAML files and concatenates them into a single `tinyworld.qst` file:
+
+```python
+def write_quest_file(quests: List[Quest], output_path: str):
+    """Write quests to DikuMUD .qst format."""
+    with open(output_path, 'w') as f:
+        # Sort all quests by qnum across all zones
+        for quest in sorted(quests, key=lambda q: q.qnum):
+            f.write(f"#{quest.qnum}\n")
+            f.write(f"{quest.giver} {quest.type} {quest.duration}\n")
+            f.write(f"{quest.target} {quest.item} {quest.flags}\n")
+            f.write(f"{quest.reward_exp} {quest.reward_gold} {quest.reward_item}\n")
+            f.write(f"{quest.quest_text}~\n")
+            f.write(f"{quest.complete_text}~\n")
+            f.write(f"{quest.fail_text}~\n")
+            f.write("S\n")
+        
+        # Single EOF marker at end of concatenated file
+        f.write("#99999\n")
+        f.write("$~\n")
+```
+
+**Note**: Like other database files, quests from all zones are concatenated into a single `lib/tinyworld.qst` file with quest records sorted by qnum and only one `$~` EOF marker at the very end.
+
+#### Quest Validation
+
+```python
+def validate_quests(quests: List[Quest], 
+                   all_mobs: Dict[int, Mobile],
+                   all_objs: Dict[int, Object],
+                   all_rooms: Dict[int, Room]) -> List[str]:
+    """Validate quest references."""
+    errors = []
+    
+    for quest in quests:
+        # Validate giver exists
+        if quest.giver not in all_mobs:
+            errors.append(f"Quest {quest.qnum}: giver mob {quest.giver} not found")
+        
+        # Validate target exists (if specified)
+        if quest.target != 0:
+            if quest.type in [61, 62, 63]:  # DELIVERY, RETRIEVAL, KILL
+                if quest.target not in all_mobs:
+                    errors.append(f"Quest {quest.qnum}: target mob {quest.target} not found")
+            elif quest.type == 64:  # EXPLORE
+                if quest.target not in all_rooms:
+                    errors.append(f"Quest {quest.qnum}: target room {quest.target} not found")
+        
+        # Validate item exists (if specified)
+        if quest.item != 0 and quest.item not in all_objs:
+            errors.append(f"Quest {quest.qnum}: item {quest.item} not found")
+        
+        # Validate reward item exists (if specified)
+        if quest.reward_item != 0 and quest.reward_item not in all_objs:
+            errors.append(f"Quest {quest.qnum}: reward item {quest.reward_item} not found")
+    
+    return errors
+```
+
+### Loading Quests in Game
 
 Add to `db.c`:
 
 ```c
+#define QUEST_FILE "lib/tinyworld.qst"
+
+struct quest_data {
+    int qnum;
+    int giver_vnum;
+    int quest_type;
+    int duration;
+    int target_vnum;
+    int item_vnum;
+    int quest_flags;
+    int reward_exp;
+    int reward_gold;
+    int reward_item;
+    char *quest_text;
+    char *complete_text;
+    char *fail_text;
+};
+
+struct quest_data *quest_index;
+int top_of_quest_table = 0;
+
 void boot_quests(void)
 {
     FILE *fl;
-    int nr = 0;
+    int nr = -1, last = 0;
+    char buf[256];
     
     if (!(fl = fopen(QUEST_FILE, "r"))) {
-        perror("boot_quests");
-        exit(0);
+        slog("No quest file found - quests disabled");
+        return;
     }
     
-    /* Parse quest templates */
-    while (nr < MAX_QUEST_DATA) {
-        /* Read quest data */
-        nr++;
+    /* Count quests */
+    while (fgets(buf, 256, fl)) {
+        if (*buf == '#')
+            nr++;
+    }
+    
+    rewind(fl);
+    
+    if (nr >= 0) {
+        CREATE(quest_index, struct quest_data, nr);
+        
+        for (nr = 0; nr < top_of_quest_table; nr++) {
+            /* Parse quest record */
+            fscanf(fl, " #%d\n", &quest_index[nr].qnum);
+            fscanf(fl, " %d %d %d\n", 
+                   &quest_index[nr].giver_vnum,
+                   &quest_index[nr].quest_type,
+                   &quest_index[nr].duration);
+            fscanf(fl, " %d %d %d\n",
+                   &quest_index[nr].target_vnum,
+                   &quest_index[nr].item_vnum,
+                   &quest_index[nr].quest_flags);
+            fscanf(fl, " %d %d %d\n",
+                   &quest_index[nr].reward_exp,
+                   &quest_index[nr].reward_gold,
+                   &quest_index[nr].reward_item);
+            
+            quest_index[nr].quest_text = fread_string(fl);
+            quest_index[nr].complete_text = fread_string(fl);
+            quest_index[nr].fail_text = fread_string(fl);
+            
+            /* Read S terminator */
+            fgets(buf, 256, fl);
+        }
+        
+        top_of_quest_table = nr;
     }
     
     fclose(fl);
-    slog("Quest templates loaded");
+    sprintf(buf, "   %d quests loaded", top_of_quest_table);
+    slog(buf);
 }
+```
+
+### Makefile Integration
+
+Update the makefile to build quest files:
+
+```makefile
+# Quest file building
+lib/tinyworld.qst: $(ZONE_YAML_FILES)
+	$(PYTHON) $(WORLD_BUILDER) --output-dir lib --build-quests
 ```
 
 ## Advantages of This Design
