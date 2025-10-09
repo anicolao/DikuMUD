@@ -1,0 +1,807 @@
+#3150
+Lower Sewer Access~
+   You descend through a narrow opening in the waste disposal area into the ancient
+sewer tunnels beneath Lesser Helium.  The air is thick and dank, filled with the
+smell of decay and stagnant water.  The walls are constructed from massive stone
+blocks, covered in centuries of slime and moss.  A faint squeaking sound echoes
+from deeper in the tunnels, and you can hear the rustle of unseen creatures in
+the darkness.
+~
+31 9 0
+D0
+The opening leads back up to the waste disposal area.
+~
+~
+0 -1 3030
+D2
+A dark tunnel extends deeper into the sewers.
+~
+~
+0 -1 3151
+S
+#3151
+Main Sewer Tunnel~
+   This wide tunnel was once part of Lesser Helium's water reclamation system.
+Water channels run along both sides, now mostly dry except for fetid pools of
+stagnant liquid.  The stone walls are slick with moisture and algae.  Small bones
+are scattered across the floor, and you hear the scurrying of many tiny feet in
+the shadows.
+~
+31 9 0
+D0
+The tunnel leads back to the entrance.
+~
+~
+0 -1 3150
+D1
+A side passage branches off to the east.
+~
+~
+0 -1 3152
+D2
+The main tunnel continues south.
+~
+~
+0 -1 3153
+S
+#3152
+Eastern Side Passage~
+   This narrow passage splits off from the main tunnel.  The ceiling is lower here,
+forcing you to crouch slightly.  Strange fungi grow on the walls, giving off a
+faint phosphorescent glow.  The floor is littered with debris and the remains of
+small creatures that met their end here.
+~
+31 9 0
+D3
+The passage leads back to the main tunnel.
+~
+~
+0 -1 3151
+D2
+The passage continues south.
+~
+~
+0 -1 3154
+S
+#3153
+Main Tunnel Junction~
+   The main sewer tunnel widens here into a junction chamber.  Multiple passages
+branch off in different directions.  Water drips constantly from the ceiling,
+creating small pools on the uneven floor.  The walls show signs of ancient repair
+work, and you can see where newer stones have been added to replace damaged
+sections.  A large nest of bones and refuse has been built in one corner.
+~
+31 9 0
+D0
+The main tunnel leads back north.
+~
+~
+0 -1 3151
+D1
+A narrow passage leads east.
+~
+~
+0 -1 3154
+D2
+A wide tunnel continues south.
+~
+~
+0 -1 3155
+D3
+A dark corridor extends west.
+~
+~
+0 -1 3156
+S
+#3154
+Narrow Eastern Tunnel~
+   This tight passage connects the eastern side passages.  The walls are rough
+and unfinished, suggesting this was a secondary tunnel.  Small creatures have
+made homes in crevices in the walls, and their droppings cover the floor.  The
+air is particularly stale here, with little circulation.
+~
+31 9 0
+D0
+The passage leads back north.
+~
+~
+0 -1 3152
+D3
+The passage opens into a junction.
+~
+~
+0 -1 3153
+S
+#3155
+Southern Main Tunnel~
+   The main sewer tunnel continues here, gradually descending deeper underground.
+The construction becomes older and more primitive as you go deeper, with rougher
+stonework and cruder drainage channels.  Something large has been dragging prey
+through here recently - you can see drag marks in the accumulated filth on the
+floor and blood spatters on the walls.
+~
+31 9 0
+D0
+The tunnel slopes back up to the junction.
+~
+~
+0 -1 3153
+D2
+The tunnel continues south into darkness.
+~
+~
+0 -1 3157
+S
+#3156
+Western Dark Corridor~
+   This corridor is particularly dark and oppressive.  No light from the upper
+tunnels reaches here, and the walls seem to absorb what little illumination you
+bring.  The floor is uneven and treacherous, covered in slippery slime and debris.
+You hear strange clicking sounds echoing from the walls.
+~
+31 9 0
+D1
+The corridor leads back to the junction.
+~
+~
+0 -1 3153
+D2
+The corridor continues south.
+~
+~
+0 -1 3158
+S
+#3157
+Deep Sewer Chamber~
+   The tunnel opens into a larger chamber where multiple drainage pipes empty
+their contents.  The smell is overwhelming here, and the floor is covered in a
+thick layer of muck and refuse.  Bones of various sizes protrude from the filth,
+evidence of the many creatures that have died here.  Several tunnels branch off
+from this chamber.
+~
+31 9 0
+D0
+The tunnel leads back north.
+~
+~
+0 -1 3155
+D1
+A smaller tunnel leads east.
+~
+~
+0 -1 3159
+D2
+A wide passage continues deeper south.
+~
+~
+0 -1 3160
+S
+#3158
+Western Sewer Tunnel~
+   This western branch of the sewer system shows more signs of collapse.  Several
+sections of the ceiling have fallen in, creating piles of rubble that must be
+climbed over.  Water seeps through cracks in the walls, and the floor is muddy
+and unstable.  Fresh claw marks on the walls suggest something large patrols
+this area regularly.
+~
+31 9 0
+D0
+The corridor leads back north.
+~
+~
+0 -1 3156
+D2
+The tunnel continues through the rubble.
+~
+~
+0 -1 3161
+S
+#3159
+Small Side Den~
+   This small chamber has been turned into a den by some creature.  The floor is
+lined with torn fabric, bones, and other debris gathered to make a crude nest.
+The walls are covered in scratch marks, and the smell of animal musk is strong.
+Fresh kills lie in one corner, still dripping blood.
+~
+31 9 0
+D3
+The tunnel leads back west.
+~
+~
+0 -1 3157
+S
+#3160
+Deeper Sewer Passage~
+   You are now quite deep beneath the city.  The air is thin and difficult to
+breathe, heavy with methane and other noxious gases.  The walls here are ancient,
+predating Lesser Helium itself, part of some earlier civilization's infrastructure.
+Strange symbols are carved into some of the stones, worn almost smooth by ages
+of moisture and decay.
+~
+31 9 0
+D0
+The passage slopes back up to the chamber.
+~
+~
+0 -1 3157
+D2
+The passage continues into the depths.
+~
+~
+0 -1 3162
+D3
+A side tunnel branches west.
+~
+~
+0 -1 3163
+S
+#3161
+Collapsed Western Section~
+   This section has suffered severe collapse.  Large stones block much of the
+passage, creating a maze of narrow gaps and unstable rubble piles.  The ceiling
+creaks ominously overhead, and small stones occasionally fall.  Despite the
+danger, something has made a lair in this treacherous area.
+~
+31 9 0
+D0
+The tunnel leads back through the rubble.
+~
+~
+0 -1 3158
+D2
+A narrow gap between fallen stones leads south.
+~
+~
+0 -1 3164
+S
+#3162
+Ancient Sewer Junction~
+   This junction shows the architecture of an older civilization.  The stonework
+is more sophisticated here, with precision-cut blocks fitted together perfectly.
+Strange glyphs decorate archways leading to different passages.  The floor is
+mostly dry here, suggesting better drainage design than the newer tunnels above.
+~
+31 9 0
+D0
+The passage leads back to newer construction.
+~
+~
+0 -1 3160
+D1
+An eastern passage leads into darkness.
+~
+~
+0 -1 3165
+D2
+A southern corridor extends ahead.
+~
+~
+0 -1 3166
+S
+#3163
+Western Storage Chamber~
+   This chamber appears to have been used for storage in ancient times.  Broken
+pottery and corroded metal containers are scattered about.  Most are empty, but
+some still contain unidentifiable desiccated substances.  The walls have niches
+carved into them, many still holding ancient artifacts now fused with rust and
+decay.
+~
+31 9 0
+D1
+The tunnel leads back east.
+~
+~
+0 -1 3160
+S
+#3164
+Hidden Western Lair~
+   Beyond the collapsed section lies a more secure area.  This large chamber has
+been claimed as a lair by larger predators.  Fresh kills are piled in corners,
+and the floor is stained with old blood.  The walls show deep claw marks, and
+bones are scattered everywhere.  This is clearly the domain of something powerful
+and dangerous.
+~
+31 9 0
+D0
+A narrow gap leads back through the rubble.
+~
+~
+0 -1 3161
+S
+#3165
+Ancient Eastern Passage~
+   This eastern passage maintains the sophisticated architecture of the ancient
+builders.  The walls are lined with carved panels depicting scenes from a lost
+civilization.  The drainage channels still function here, carrying away any water
+that seeps through the ceiling.  A faint breeze suggests this passage connects
+to the surface somewhere far away.
+~
+31 9 0
+D3
+The passage leads back to the junction.
+~
+~
+0 -1 3162
+D2
+The passage continues south, partially blocked by debris.
+~
+secret hatch concealed floor~
+1 -1 3167
+S
+#3166
+Ancient Southern Corridor~
+   The ancient corridor continues south from the junction.  The superior
+construction is evident in the smooth walls and level floor.  However, time has
+taken its toll - cracks snake across the ceiling, and some sections of wall have
+crumbled.  The silence here is profound, broken only by the occasional drip of
+water and the skitter of small claws.
+~
+31 9 0
+D0
+The corridor leads back to the junction.
+~
+~
+0 -1 3162
+D2
+The corridor continues deeper.
+~
+~
+0 -1 3168
+S
+#3167
+Secret Lower Level Access~
+   You have discovered a concealed hatch that leads down to an even deeper level
+of the ancient sewer system.  The stonework here is remarkably preserved, with
+intricate carvings still visible on the walls.  The air is dry and dusty, quite
+different from the damp upper tunnels.  This area was clearly sealed deliberately,
+perhaps to contain something dangerous.
+~
+31 9 0
+D0
+The concealed hatch leads back up.
+~
+secret hatch concealed floor~
+1 -1 3165
+D2
+A well-preserved tunnel leads south.
+~
+~
+0 -1 3169
+S
+#3168
+Deep Ancient Chamber~
+   This large chamber was clearly important in the ancient system.  The ceiling
+is high and supported by carved pillars.  Ancient pipes and channels run along
+the walls, still functional after countless centuries.  The floor is decorated
+with an intricate mosaic, now partially obscured by dirt and debris.  Multiple
+passages lead from this chamber.
+~
+31 9 0
+D0
+The corridor leads back north.
+~
+~
+0 -1 3166
+D1
+A passage leads east.
+~
+~
+0 -1 3170
+D2
+A grand archway leads south.
+~
+~
+0 -1 3171
+D3
+A western passage extends into darkness.
+~
+~
+0 -1 3172
+S
+#3169
+Sealed Ancient Tunnel~
+   This tunnel was sealed for good reason.  The walls are covered in warning
+symbols, and the floor shows signs of ancient combat - scorched stones, impact
+craters, and suspicious stains that might once have been blood.  Something
+valuable or dangerous was kept down here.  Several alcoves branch off the main
+tunnel, each sealed with heavy stone doors.
+~
+31 9 0
+D0
+The tunnel leads back to the access hatch.
+~
+~
+0 -1 3167
+D2
+The tunnel continues south.
+~
+~
+0 -1 3173
+S
+#3170
+Eastern Ancient Passage~
+   This passage shows signs of habitation by intelligent creatures in ancient
+times.  Faded murals on the walls depict daily life in the lost civilization.
+Stone benches are carved into the walls, and niches hold the remains of ancient
+lamps.  The floor is worn smooth by countless footsteps over the ages.
+~
+31 9 0
+D3
+The passage leads back to the chamber.
+~
+~
+0 -1 3168
+D2
+The passage continues south.
+~
+~
+0 -1 3174
+S
+#3171
+Grand Archive Chamber~
+   This magnificent chamber was clearly used as an archive or repository.  The
+walls are lined with stone shelves and cabinets, most now empty or containing
+only dust and fragments.  A large stone table dominates the center of the room,
+its surface covered in ancient diagrams and writing.  Despite the decay, this
+place still radiates a sense of former importance and grandeur.
+~
+31 9 0
+D0
+The grand archway leads back north.
+~
+~
+0 -1 3168
+D2
+A doorway leads to a smaller chamber.
+~
+~
+0 -1 3175
+S
+#3172
+Western Ritual Chamber~
+   This chamber has an unsettling atmosphere.  The walls are carved with disturbing
+images of creatures and rituals.  A circular platform dominates the center of the
+room, its surface stained dark with substances best left unidentified.  Channels
+carved in the floor lead to drains in the corners.  This was clearly a place where
+dark practices were conducted in the ancient past.
+~
+31 9 0
+D1
+The passage leads back to the main chamber.
+~
+~
+0 -1 3168
+S
+#3173
+Sealed Prison Corridor~
+   This corridor is lined with heavy doors, each sealed with ancient mechanisms.
+Most have been forced open from the inside, their locking bars bent or broken.
+The walls show deep gouges and scratch marks, as if something powerful fought to
+escape.  Whatever was imprisoned here is long gone, but the sense of menace
+remains.
+~
+31 9 0
+D0
+The tunnel leads back north.
+~
+~
+0 -1 3169
+D2
+The corridor ends at a large door.
+~
+~
+0 -1 3176
+S
+#3174
+Ancient Living Quarters~
+   This area was clearly residential quarters for those who maintained the ancient
+sewer system.  Stone bunks are carved into the walls, and storage alcoves still
+contain the remnants of personal belongings.  A small alcove contains the remains
+of a primitive kitchen area.  The people who lived here were clearly dedicated to
+their work, living underground to tend to the city's infrastructure.
+~
+31 9 0
+D0
+The passage leads back north.
+~
+~
+0 -1 3170
+D2
+A concealed passage lies behind a loose stone.
+~
+secret stone concealed loose~
+1 -1 3177
+S
+#3175
+Archive Vault~
+   This secure vault was used to store the most valuable or sensitive materials.
+The walls are lined with sealed compartments, though most have been opened and
+emptied over the centuries.  A few still contain fragments of ancient texts,
+maps, and artifacts.  This would have been one of the most secure locations in
+the entire ancient complex.
+~
+31 9 0
+D0
+The doorway leads back to the main archive.
+~
+~
+0 -1 3171
+S
+#3176
+Maximum Security Chamber~
+   Beyond the heavy door lies what was clearly the maximum security area of the
+ancient prison.  The walls are reinforced with thick metal bands, now corroded
+but still imposing.  Heavy chains and manacles are bolted to the walls and floor.
+The door itself shows massive damage from inside - whatever was held here was
+incredibly powerful.  Blood stains and claw marks cover every surface.
+~
+31 9 0
+D0
+The heavy door leads back to the corridor.
+~
+~
+0 -1 3173
+S
+#3177
+Secret Treasure Vault Access~
+   Behind a loose stone in the living quarters, you have discovered a hidden
+passage leading to what appears to be a secret vault.  The walls here are plain
+and undecorated, designed to avoid attention.  The passage slopes downward,
+taking you even deeper beneath the city.  The air is completely still and dry,
+preserved by the perfect seal.
+~
+31 9 0
+D0
+The concealed passage leads back to the living quarters.
+~
+secret stone concealed loose~
+1 -1 3174
+D2
+The passage leads down to the vault level.
+~
+~
+0 -1 3178
+S
+#3178
+Vault Antechamber~
+   This antechamber served as a final security checkpoint before the main vault.
+Heavy stone doors once sealed this area, but they have been forced open.  Guard
+posts are carved into the walls, and weapon racks still hold the corroded remains
+of ancient arms.  The floor is littered with bones - both of guards and intruders
+who died fighting over whatever treasure lies beyond.
+~
+31 9 0
+D0
+The passage leads back up to the hidden access.
+~
+~
+0 -1 3177
+D2
+The main vault door stands open.
+~
+~
+0 -1 3179
+D1
+A side passage leads to a guard chamber.
+~
+~
+0 -1 3180
+S
+#3179
+Main Treasure Vault~
+   The legendary treasure vault of the ancient civilization.  This massive chamber
+is lined with shelves and chests, though most have been emptied long ago.  The
+ceiling is carved with astronomical charts and mathematical formulas.  The walls
+contain hidden compartments, some still sealed and potentially containing valuable
+artifacts.  Despite countless looters over the ages, this place still holds
+secrets and treasures for those brave enough to face the guardians that have
+made it their lair.
+~
+31 9 0
+D0
+The vault door leads back to the antechamber.
+~
+~
+0 -1 3178
+D2
+A passage leads to a deeper vault section.
+~
+~
+0 -1 3181
+S
+#3180
+Ancient Guard Chamber~
+   This chamber housed the elite guards who protected the vault.  It is well-
+appointed for an underground facility, with carved stone furniture and decorated
+walls.  Weapon racks line one wall, and a large table in the center was likely
+used for planning security.  Personal effects of the guards are scattered about,
+giving a glimpse into their lives.
+~
+31 9 0
+D3
+The passage leads back to the antechamber.
+~
+~
+0 -1 3178
+S
+#3181
+Deep Vault Section~
+   The deepest section of the vault, where the most valuable and dangerous items
+were stored.  Heavy reinforced compartments line the walls, many still sealed
+with complex locking mechanisms.  The floor is trapped with pressure plates and
+hidden mechanisms, most now degraded but still potentially dangerous.  Strange
+creatures have made nests in the corners, drawn by the lingering magic that
+permeates this place.
+~
+31 9 0
+D0
+The passage leads back to the main vault.
+~
+~
+0 -1 3179
+D1
+A narrow passage leads to a security post.
+~
+~
+0 -1 3182
+D2
+The deepest passage extends further.
+~
+~
+0 -1 3183
+S
+#3182
+Secondary Guard Post~
+   This secondary guard station monitored the deep vault section.  It is smaller
+but more heavily fortified than the main guard chamber.  Arrow slits in the walls
+allowed guards to monitor the vault without entering.  A small armory contains
+the remains of ancient weapons specifically designed for the security of this
+area.
+~
+31 9 0
+D3
+The passage leads back to the deep vault.
+~
+~
+0 -1 3181
+S
+#3183
+Ancient Power Chamber~
+   This chamber housed some kind of ancient power source for the vault's defensive
+systems.  Strange crystalline formations grow from the floor and ceiling, pulsing
+with a faint inner light.  Ancient machinery, incomprehensible to modern
+understanding, is built into the walls.  The energy here attracts and mutates
+creatures that venture too close, creating powerful and dangerous guardians.
+~
+31 9 0
+D0
+The passage leads back to the deep vault.
+~
+~
+0 -1 3181
+D1
+A side chamber contains ancient equipment.
+~
+~
+0 -1 3184
+D2
+The power conduit leads deeper still.
+~
+~
+0 -1 3185
+S
+#3184
+Ancient Equipment Room~
+   This room housed the maintenance equipment for the power systems.  Ancient
+tools and devices are scattered about, their purposes now obscure.  Some of the
+equipment still functions, creating an eerie atmosphere of flickering lights and
+strange sounds.  Creatures corrupted by the ancient energy lair here, more
+powerful and dangerous than their surface-dwelling cousins.
+~
+31 9 0
+D3
+The chamber leads back to the power chamber.
+~
+~
+0 -1 3183
+S
+#3185
+Deep Power Conduit~
+   A narrow passage follows the ancient power conduits deeper underground.  The
+crystalline formations are more prevalent here, and the air crackles with residual
+energy.  This is an extremely dangerous area - the ancient power source has
+attracted and transformed the deadliest predators, creating apex hunters unlike
+anything found in the upper sewers.
+~
+31 9 0
+D0
+The conduit leads back to the power chamber.
+~
+~
+0 -1 3183
+D2
+The conduit continues to the core chamber.
+~
+~
+0 -1 3186
+S
+#3186
+Power Core Chamber~
+   The heart of the ancient power system.  A massive crystalline structure
+dominates the center of this chamber, pulsing with energy that has sustained
+itself for countless millennia.  The walls are covered in energy discharge marks,
+and the air is thick with power.  The most powerful creatures in the entire sewer
+system have claimed this chamber, drawn by the energy and mutated by its effects.
+This is the ultimate challenge for those who have ventured this deep.
+~
+31 9 0
+D0
+The conduit leads back up.
+~
+~
+0 -1 3185
+D1
+A chamber lies beyond the power source.
+~
+~
+0 -1 3187
+S
+#3187
+Ancient Control Center~
+   Behind the power core lies what appears to be a control center.  Ancient
+consoles and control panels line the walls, covered in dust but remarkably
+preserved.  The technology is far beyond anything in Lesser Helium today.
+Diagrams and schematics cover the walls, showing the layout of an extensive
+underground complex, of which these sewers are only a small part.
+~
+31 9 0
+D3
+The chamber leads back to the power core.
+~
+~
+0 -1 3186
+D2
+A sealed doorway leads to the final chamber.
+~
+~
+0 -1 3188
+S
+#3188
+Sealed Repository~
+   Beyond the control center lies a perfectly sealed chamber.  The walls are lined
+with stasis fields, still functioning after all these ages.  Within some of the
+fields, you can see preserved specimens and artifacts from the ancient civilization.
+This was clearly their most precious repository, sealed and protected with all
+their considerable knowledge.  Opening any of these stasis fields would be
+extremely dangerous but potentially extremely rewarding.
+~
+31 9 0
+D0
+The sealed doorway leads back to the control center.
+~
+~
+0 -1 3187
+D2
+A final passage leads to the deepest chamber.
+~
+~
+0 -1 3189
+S
+#3189
+The Deepest Chamber~
+   You have reached the absolute deepest point of the ancient complex.  This
+chamber appears to be a sanctuary or shrine of some kind.  A large altar stands
+in the center, covered in ancient offerings now turned to dust.  The walls are
+carved with prayers or warnings in the ancient language.  The most powerful
+guardian creatures of the deep have made this sacred space their final lair,
+protecting it from all intruders.  Whatever treasures or secrets lie here will
+not be given up easily.
+~
+31 9 0
+D0
+The passage leads back to the repository.
+~
+~
+0 -1 3188
+S
+$~

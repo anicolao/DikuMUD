@@ -669,7 +669,7 @@ The Waste Disposal~
    The waste disposal area where refuse from the city is processed.  Through the
 accumulated waste you can see access points to the underground water reclamation
 system.  South of here the ground slopes toward the dried channel and to the north
-is the common plaza.
+is the common plaza.  A dark opening in the floor leads down to the old sewer tunnels.
 ~
 30 4 2
 D0
@@ -677,6 +677,11 @@ You see the common plaza.
 ~
 ~
 0 -1 3025
+D5
+A narrow opening descends into darkness and the smell of decay.
+~
+~
+0 -1 3150
 S
 #3031
 The Calot Shop~
