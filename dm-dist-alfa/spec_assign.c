@@ -37,6 +37,7 @@ void assign_mobiles(void)
 	int bat_green(struct char_data *ch, int cmd, char *arg);
 	int bat_black(struct char_data *ch, int cmd, char *arg);
 	int bat_white(struct char_data *ch, int cmd, char *arg);
+	int sola_quest_giver(struct char_data *ch, int cmd, char *arg);
 
 
 	mob_index[real_mobile(1)].func = puff;
@@ -60,6 +61,9 @@ void assign_mobiles(void)
 	mob_index[real_mobile(3027)].func = guild_guard;
 
 	mob_index[real_mobile(3143)].func = mayor;
+
+	/* Quest givers */
+	mob_index[real_mobile(4051)].func = sola_quest_giver;  /* Sola in Thark Territory */
 
 	boot_the_shops();
 	assign_the_shopkeepers();

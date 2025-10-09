@@ -77,6 +77,13 @@
 #define SPELL_ACID_BREATH            59
 #define SPELL_LIGHTNING_BREATH       60
 
+/* Quest types (use affects to track active quests) */
+#define QUEST_DELIVERY               61  /* Deliver an object to an NPC */
+#define QUEST_RETRIEVAL              62  /* Retrieve an object from the world */
+#define QUEST_KILL                   63  /* Kill a specific mob */
+#define QUEST_EXPLORE                64  /* Visit a specific room */
+#define QUEST_COLLECT                65  /* Collect N items of a type */
+
 
 #define TYPE_HIT                     100
 #define TYPE_BLUDGEON                101
