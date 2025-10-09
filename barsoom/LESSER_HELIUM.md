@@ -282,12 +282,17 @@ The world of Barsoom uses different terrain sectors:
 - **Zodanga** (Zone 36, rooms 3600-3649)  
   Enemy city-state 1000+ miles north-northeast. Currently not directly connected from Lesser Helium - requires journey through wilderness zones (future implementation). Ruled by Than Kosis and Prince Sab Than. Dark, militaristic city focused on political intrigue, espionage, and military power. Features palace district, military quarter, merchant district, and espionage quarter. 50-room zone with complex political gameplay. High-level content (18-26).
 
+- **Zodanga Wilderness** (Zone 38, rooms 3650-3749)  
+  Dangerous wilderness connector zone between Zodanga and Gathol. Crosses dead sea bottom plains filled with predators (banths), ancient ruins, and contested territory. Zodangan scouts patrol the eastern approaches while Gathol scouts watch the western routes. Features traveler rest stops and crossroads. Travel distance of 12 major waypoints representing several hundred miles. Target levels 14-22. Connects Zodanga's Western Gate (3641) to Gathol's Northern Gate (4299).
+
+- **Gathol** (Zone 37, rooms 4200-4299)  
+  Allied city-state ruled by the noble Gahan of Gathol. Sophisticated culture emphasizing beauty, honor, and strategic thinking. Famous for jetan (Martian chess) tradition. Features Gahan's palace with diamond throne room, royal library, jetan hall, and royal gardens. Small but elegant implementation with 6 key rooms representing the city's districts. Safe haven for players allied with Helium. Target levels 12-20. Gahan of Gathol (level 20) resides in the throne room.
+
 ### Future Planned Zones
 
 The following zones are referenced in lore but not yet implemented:
 
-- **Wilderness Zones** - Connection routes between major cities across the dead sea bottom. Would connect Zodanga, Helium, and other distant locations.
-- **Gathol** - City-state multiple days northeast by airship.
-- **Ptarth** - City-state multiple days north by airship.
+- **Ptarth** - City-state multiple days north by airship. Home of Thuvia and her father Thuvan Dihn.
 - **Hastor** - Distant city, part of Helium empire to the south.
 - **Warhoon Territory** - Hostile green Martian horde north of Thark Territory.
+- **Additional Wilderness Routes** - More connection routes between distant cities.
