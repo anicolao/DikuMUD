@@ -1,0 +1,468 @@
+zone:
+  number: 43
+  name: Gathol-Ptarth Wilderness
+  top_room: 4499
+  lifespan: 25
+  reset_mode: 2
+rooms:
+- vnum: 4400
+  name: Northern Approaches to Gathol
+  description: "   You stand at the northern edge of Gathol's territory, where the city's\n    influence fades into the dangerous wilderness. The route northward stretches\n    across vast dead sea bottom plains toward distant Ptarth. Gathol's scouts patrol\n    this area regularly, but beyond lies frontier territory with all its dangers.\n    The civilized world of the city lies behind; ahead waits the journey through\n    untamed Mars."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The wilderness route continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4401
+  - direction: 2
+    description: Gathol's northern gate lies south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4299
+  extra_descriptions: []
+- vnum: 4401
+  name: Dead Sea Bottom Plains
+  description: "   The ochre moss-covered plains stretch endlessly in all directions. The\n    ancient sea bed is relatively flat, with occasional rocks and dried formations\n    marking where water once flowed. The thin Martian atmosphere and harsh sun beat\n    down relentlessly. This is the reality of travel on Mars - vast empty spaces\n    between pockets of civilization."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The plains continue northward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4410
+  - direction: 2
+    description: Gathol's approaches lie south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4400
+  extra_descriptions: []
+- vnum: 4410
+  name: Southern Guard Post
+  description: "   A fortified position marks Gathol's last major patrol base on the northern\n    route. Warriors from the city maintain this post, providing security for the\n    southern section of the journey. The guards are friendly to allies and can\n    provide information about conditions ahead. This represents the last reliable\n    safe point before entering the more dangerous central wilderness."
+  zone: 43
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The route continues north into wilderness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4420
+  - direction: 2
+    description: The plains stretch south toward Gathol.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4401
+  extra_descriptions: []
+- vnum: 4420
+  name: Ochre Moss Plains
+  description: "   The moss grows thick here, providing some color and life to the otherwise\n    desolate landscape. Small creatures burrow in the moss, and occasionally larger\n    predators hunt across these plains. The route is less clearly marked here, and\n    travelers must navigate carefully to stay on course toward distant Ptarth."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Ancient ruins visible to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4425
+  - direction: 2
+    description: The guard post lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4410
+  extra_descriptions: []
+- vnum: 4425
+  name: Ruins of the First Age
+  description: "   Ancient ruins rise from the dead sea bottom, remnants of a civilization that\n    flourished when oceans still covered Mars. Crumbling walls and fallen columns\n    speak of lost grandeur. These ruins serve as a major landmark for travelers -\n    the halfway point between Gathol and the central waystation. Some ruins provide\n    shelter, but predators also use them as lairs."
+  zone: 43
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The wilderness continues northward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4430
+  - direction: 2
+    description: The moss plains lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4420
+  extra_descriptions:
+  - keywords: ruins walls columns
+    description: "The architecture is ancient and sophisticated, suggesting Mars was once far\n      more advanced than it is now. Time and harsh conditions have taken their toll."
+- vnum: 4430
+  name: Dangerous Crossroads
+  description: "   This area sees less patrol activity from either city, making it more\n    dangerous. Multiple game trails converge here - signs of banth and calot packs\n    moving through the region. Green Martian groups also pass through this area\n    occasionally. Travelers must be especially alert."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The route continues toward the waystation.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4450
+  - direction: 1
+    description: A side trail leads east into wilderness.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4440
+  - direction: 2
+    description: The ruins lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4425
+  extra_descriptions: []
+- vnum: 4440
+  name: Banth Hunting Grounds
+  description: "   This area is known to be favored by banths - the ten-legged white apex\n    predators of Mars. Multiple tracks and scattered bones attest to their presence.\n    However, some banths in this region may be influenced by Princess Thuvia's\n    unique mental abilities, making encounters unpredictable. Some may be aggressive\n    hunters, while others might be strangely passive or even protective."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 3
+    description: The crossroads lie to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4430
+  extra_descriptions:
+  - keywords: tracks bones
+    description: "Large paw prints and scattered remnants of prey show this is active hunting\n      territory for Mars's most dangerous predators."
+- vnum: 4450
+  name: The Halfway Waystation
+  description: "   This fortified waystation marks the midpoint of the journey between Gathol\n    and Ptarth. Maintained cooperatively by both cities, it provides shelter, water,\n    and basic supplies to travelers. Guards from both cities rotate duty here,\n    symbolizing the alliance between the city-states. The waystation is the only\n    reliable safe point in the central wilderness and serves as a social hub for\n    travelers, merchants, and patrols."
+  zone: 43
+  room_flags: 40
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The northern route toward Ptarth.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4460
+  - direction: 2
+    description: The southern route toward Gathol.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4430
+  extra_descriptions:
+  - keywords: waystation shelter
+    description: "The structure is simple but sturdy, built to withstand Mars's harsh\n      conditions. Banners of both Gathol and Ptarth fly above it."
+- vnum: 4460
+  name: Northern Wilderness
+  description: "   The wilderness continues northward, but the character of the journey begins\n    to change. Ptarth's influence gradually becomes more apparent as you approach\n    the city. The route becomes slightly more traveled, and signs of northern patrols\n    increase. However, this is still dangerous frontier with predators and other\n    hazards."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: The route continues toward Ptarth.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4465
+  - direction: 2
+    description: The waystation lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4450
+  extra_descriptions: []
+- vnum: 4465
+  name: Open Plains
+  description: "   These vast open plains offer little cover but good visibility. Travelers can\n    see great distances across the dead sea bottom, making it easier to spot threats\n    but also harder to hide from predators or hostile groups. The route is more\n    clearly marked here as Ptarth patrols pass through regularly."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: An ancient watchtower stands to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4470
+  - direction: 2
+    description: The wilderness stretches south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4460
+  extra_descriptions: []
+- vnum: 4470
+  name: Ancient Watchtower
+  description: "   A partially ruined watchtower rises from the plains, one of many such\n    structures built in ages past. Ptarth's scouts sometimes use this tower as an\n    observation post, and it serves as a landmark for travelers. The view from here\n    (if you could climb it safely) would show the vast emptiness of Mars and the\n    distant towers of Ptarth on the northern horizon."
+  zone: 43
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The route continues toward Ptarth's guard post.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4480
+  - direction: 2
+    description: The open plains lie to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4465
+  extra_descriptions:
+  - keywords: tower watchtower
+    description: "The ancient structure is partially collapsed but still recognizable. It once\n      guarded this route when Mars was more populated."
+- vnum: 4480
+  name: Northern Guard Post
+  description: "   This fortified position marks Ptarth's southernmost major patrol base. \n    Warriors from the city maintain security for the northern section of the route.\n    The guards are professional and welcoming to allies, representing Ptarth's\n    combination of military readiness and diplomatic courtesy. This is the last\n    challenging stretch before reaching the safety of Ptarth proper."
+  zone: 43
+  room_flags: 8
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: The final approach to Ptarth lies ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4490
+  - direction: 2
+    description: The watchtower lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4470
+  extra_descriptions: []
+- vnum: 4490
+  name: Approach to Ptarth
+  description: "   The towers of Ptarth are clearly visible on the northern horizon now. The\n    route becomes safer as you approach the city, with more frequent patrols and\n    better maintenance. The journey through the wilderness is nearly complete, and\n    the promise of safety, supplies, and civilization lies just ahead."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Ptarth's southern gate is visible ahead.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4499
+  - direction: 2
+    description: The guard post lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4480
+  extra_descriptions:
+  - keywords: towers city ptarth
+    description: "The elegant towers of Ptarth rise against the Martian sky, showing the city's\n      traditional red Martian architecture and proud bearing."
+- vnum: 4499
+  name: Southern Approaches to Ptarth
+  description: "   You stand at the southern approaches to Ptarth, where the wilderness gives\n    way to the city's territory. Guards maintain security here, checking travelers\n    but welcoming allies. The journey from Gathol is complete - you've traversed\n    hundreds of miles of dangerous wilderness and can now enter the safety of\n    Ptarth's walls. To the north lies the city's southern gate."
+  zone: 43
+  room_flags: 0
+  sector_type: 4
+  exits:
+  - direction: 0
+    description: Ptarth's southern gate stands open.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4399
+  - direction: 2
+    description: The wilderness route stretches south toward Gathol.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4490
+  extra_descriptions: []
+mobiles:
+- vnum: 4400
+  namelist: gathol scout patrol warrior
+  short_desc: a Gathol scout
+  long_desc: A scout from Gathol patrols the southern wilderness.
+  detailed_desc: "   This warrior is part of Gathol's patrol forces that maintain security on the\n    southern portion of the route to Ptarth. Professional and well-trained, they are\n    friendly to allies and provide helpful information about conditions ahead. Their\n    presence demonstrates Gathol's commitment to maintaining the alliance network."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -700
+  type: simple
+  simple:
+    level: 16
+    thac0: 6
+    ac: 5
+    hp_dice: 3d8+64
+    damage_dice: 2d6+2
+    gold: 200
+    experience: 3500
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4401
+  namelist: ptarth scout patrol warrior
+  short_desc: a Ptarth scout
+  long_desc: A scout from Ptarth patrols the northern wilderness.
+  detailed_desc: "   This warrior is part of Ptarth's patrol forces that maintain security on the\n    northern portion of the route to Gathol. They represent Ptarth's commitment to\n    both military readiness and diplomatic cooperation. Courteous and professional,\n    they assist allied travelers while maintaining vigilance against threats."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -700
+  type: simple
+  simple:
+    level: 17
+    thac0: 5
+    ac: 5
+    hp_dice: 3d8+68
+    damage_dice: 2d6+3
+    gold: 250
+    experience: 4000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4402
+  namelist: waystation keeper guardian
+  short_desc: the waystation keeper
+  long_desc: The waystation keeper maintains this frontier outpost.
+  detailed_desc: "   This experienced individual maintains the halfway waystation between Gathol\n    and Ptarth. They know the route intimately and can share valuable information\n    about conditions, recent events, and safe travel. The keeper represents the\n    cooperation between the allied cities, welcoming travelers from both sides."
+  action_flags: 2
+  affection_flags: 0
+  alignment: -600
+  type: simple
+  simple:
+    level: 12
+    thac0: 10
+    ac: 6
+    hp_dice: 2d8+48
+    damage_dice: 1d8+2
+    gold: 300
+    experience: 2000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4403
+  namelist: banth predator white
+  short_desc: a white banth
+  long_desc: A fearsome white banth prowls here on ten powerful legs.
+  detailed_desc: "   This is one of Mars's apex predators - a massive white banth with ten legs\n    and a mouth full of dangerous fangs. These creatures are normally aggressive\n    hunters, but some banths in this region are affected by Princess Thuvia's unique\n    mental abilities. This particular banth seems strangely calm, suggesting it may\n    be under her influence, though it's still a powerful and potentially dangerous\n    creature that demands respect."
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 18
+    thac0: 4
+    ac: 3
+    hp_dice: 4d10+90
+    damage_dice: 2d10+4
+    gold: 0
+    experience: 8000
+    position: 8
+    default_position: 8
+    sex: 1
+- vnum: 4404
+  namelist: calot pack predator
+  short_desc: a calot
+  long_desc: A ten-legged calot paces here restlessly.
+  detailed_desc: "   This Martian dog-like creature has ten legs and is roughly the size of a\n    pony. Calots are common predators on Mars, often hunting in packs. While smaller\n    than banths, they are still dangerous, especially in groups. Some calots have\n    been domesticated by various Martian races, but wild ones are territorial and\n    aggressive."
+  action_flags: 2
+  affection_flags: 0
+  alignment: 0
+  type: simple
+  simple:
+    level: 13
+    thac0: 9
+    ac: 6
+    hp_dice: 3d8+52
+    damage_dice: 2d4+2
+    gold: 0
+    experience: 2500
+    position: 8
+    default_position: 8
+    sex: 1
+objects:
+- vnum: 4400
+  namelist: water container canteen supplies
+  short_desc: a water container
+  long_desc: A water container lies here, precious in the Martian wilderness.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 8193
+  value0: 10
+  value1: 10
+  value2: 0
+  value3: 0
+  weight: 5
+  cost: 50
+  rent: 5
+  extra_descriptions:
+  - keywords: container canteen water
+    description: "This container holds water - one of the most valuable commodities on Mars.\n      Essential for wilderness travel, water must be carefully rationed on long\n      journeys across the dead sea bottoms."
+  affects: []
+resets:
+- command: M
+  if_flag: 0
+  arg1: 4400
+  arg2: 2
+  arg3: 4410
+  comment: Load Gathol scout at southern guard post
+- command: M
+  if_flag: 0
+  arg1: 4400
+  arg2: 2
+  arg3: 4420
+  comment: Load Gathol scout in southern wilderness
+- command: M
+  if_flag: 0
+  arg1: 4402
+  arg2: 1
+  arg3: 4450
+  comment: Load waystation keeper
+- command: M
+  if_flag: 0
+  arg1: 4401
+  arg2: 2
+  arg3: 4480
+  comment: Load Ptarth scout at northern guard post
+- command: M
+  if_flag: 0
+  arg1: 4401
+  arg2: 2
+  arg3: 4490
+  comment: Load Ptarth scout in northern wilderness
+- command: M
+  if_flag: 0
+  arg1: 4403
+  arg2: 1
+  arg3: 4440
+  comment: Load banth in hunting grounds
+- command: M
+  if_flag: 0
+  arg1: 4404
+  arg2: 2
+  arg3: 4430
+  comment: Load calot at crossroads
+- command: O
+  if_flag: 0
+  arg1: 4400
+  arg2: 1
+  arg3: 4450
+  comment: Load water container at waystation
+shops: []

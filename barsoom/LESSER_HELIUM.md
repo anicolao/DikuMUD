@@ -288,11 +288,15 @@ The world of Barsoom uses different terrain sectors:
 - **Gathol** (Zone 37, rooms 4200-4299)  
   Allied city-state ruled by the noble Gahan of Gathol. Sophisticated culture emphasizing beauty, honor, and strategic thinking. Famous for jetan (Martian chess) tradition. Features Gahan's palace with diamond throne room, royal library, jetan hall, and royal gardens. Small but elegant implementation with 6 key rooms representing the city's districts. Safe haven for players allied with Helium. Target levels 12-20. Gahan of Gathol (level 20) resides in the throne room.
 
+- **Ptarth** (Zone 39, rooms 4300-4399)  
+  Allied city-state ruled by Jeddak Thuvan Dihn. Home of Princess Thuvia, famous for her unique ability to mentally control banths learned in Lothar. Diplomatic center and military stronghold located north of Gathol. Features royal palace with throne room, war room, and the famous palace gardens where Thuvia's kidnapping occurred. Military district, merchant quarter, and airship docks. Safe haven for players allied with Helium. Target levels 15-23. Thuvia (level 20) and Thuvan Dihn (level 22) are key NPCs.
+
+- **Gathol-Ptarth Wilderness** (Zone 43, rooms 4400-4499)  
+  Wilderness connector between Gathol and Ptarth allied cities. Unlike contested zones, features cooperative patrols from both cities maintaining security. Crosses dead sea bottom plains with ancient ruins, the Halfway Waystation (maintained by both cities), and banth hunting grounds. Some banths influenced by Thuvia's mental powers. Features Gathol scouts in southern sections, Ptarth scouts in northern sections. Travel distance representing several hundred miles. Target levels 15-23. Connects Gathol's area to Ptarth's Southern Gate (4399).
+
 ### Future Planned Zones
 
 The following zones are referenced in lore but not yet implemented:
-
-- **Ptarth** - City-state multiple days north by airship. Home of Thuvia and her father Thuvan Dihn.
 - **Hastor** - Distant city, part of Helium empire to the south.
 - **Warhoon Territory** - Hostile green Martian horde north of Thark Territory.
 - **Additional Wilderness Routes** - More connection routes between distant cities.

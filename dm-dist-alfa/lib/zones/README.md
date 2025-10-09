@@ -69,6 +69,23 @@ Each zone consists of five files:
 - Safe haven for players allied with Helium
 - Target levels: 12-20
 
+### ptarth (Zone 39)
+- Virtual numbers: 4300-4399
+- Allied city-state ruled by Thuvan Dihn
+- Home of Princess Thuvia with her unique banth-controlling abilities
+- Diplomatic center and military stronghold
+- Features throne room, palace gardens, military district
+- Safe haven for players allied with Helium
+- Target levels: 15-23
+
+### gathol_ptarth_wilderness (Zone 43)
+- Virtual numbers: 4400-4499
+- Wilderness connector between Gathol and Ptarth
+- Allied territory with cooperative patrols from both cities
+- Features halfway waystation, ancient ruins, banth hunting grounds
+- Some banths influenced by Thuvia's mental powers
+- Target levels: 15-23
+
 ### thark_territory (Zone 40)
 - Virtual numbers: 4000-4099
 - Ancient ruined city occupied by the Thark horde
@@ -122,10 +139,12 @@ This concatenates the zone files in the correct order:
 8. zodanga
 9. zodanga_wilderness
 10. gathol
-11. thark_territory
-12. atmosphere_factory
-13. atmosphere_lower
-14. system
+11. ptarth
+12. gathol_ptarth_wilderness
+13. thark_territory
+14. atmosphere_factory
+15. atmosphere_lower
+16. system
 
 ## Adding New Zones
 
