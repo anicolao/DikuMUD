@@ -107,10 +107,15 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 	char arg1[MAX_STRING_LENGTH];
 	char buf[MAX_STRING_LENGTH];
 	int number, i, percent;
+	struct obj_data *obj;
+	int has_equipment, has_inventory;
 
 	extern char *spells[];
 	extern struct spell_info_type spell_info[MAX_SPL_LIST];
 	extern struct int_app_type int_app[26];
+
+	struct obj_data *read_object(int nr, int type);
+	void obj_to_char(struct obj_data *object, struct char_data *ch);
 
 	static char *w_skills[] = {
 		"kick",  /* No. 50 */
@@ -127,6 +132,117 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 		"pick",
 		"\n"
 	};
+
+	/* Check if player needs reequip (when entering room) */
+	if (cmd == 0) {
+		/* Check if player has no equipment and no inventory and < 500 coins */
+		has_equipment = 0;
+		for (i = 0; i < MAX_WEAR; i++) {
+			if (ch->equipment[i]) {
+				has_equipment = 1;
+				break;
+			}
+		}
+		
+		has_inventory = (ch->carrying != NULL);
+		
+		if (!has_equipment && !has_inventory && GET_GOLD(ch) < 500) {
+			send_to_char("I see you have lost all of your fighting leathers. Use the command REEQUIP to gain some basic equipment.\n\r", ch);
+		}
+		return FALSE;
+	}
+
+	/* Handle REEQUIP command */
+	if (cmd == 221) {
+		/* Verify player still qualifies */
+		has_equipment = 0;
+		for (i = 0; i < MAX_WEAR; i++) {
+			if (ch->equipment[i]) {
+				has_equipment = 1;
+				break;
+			}
+		}
+		
+		if (has_equipment || GET_GOLD(ch) >= 500) {
+			send_to_char("You already have equipment or sufficient funds. You don't need my help.\n\r", ch);
+			return TRUE;
+		}
+		
+		/* Give class-appropriate equipment */
+		switch (GET_CLASS(ch)) {
+			case CLASS_MAGIC_USER: {
+				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), mace (3523) */
+				obj = read_object(3531, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3500, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3550, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3523, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				send_to_char("The Science Master equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a war mace\n\r", ch);
+				break;
+			}
+			case CLASS_CLERIC: {
+				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), mace (3523) */
+				obj = read_object(3531, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3500, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3550, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3523, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				send_to_char("The High Priest equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a war mace\n\r", ch);
+				break;
+			}
+			case CLASS_THIEF: {
+				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), dagger (3520) */
+				obj = read_object(3531, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3500, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3550, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3520, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				send_to_char("The Shadow Master equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a fine stiletto\n\r", ch);
+				break;
+			}
+			case CLASS_WARRIOR: {
+				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), shield (3563) */
+				obj = read_object(3531, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3500, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3550, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				obj = read_object(3563, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				send_to_char("The War Master equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a small shield\n\r", ch);
+				break;
+			}
+		}
+		
+		act("$N equips $n with basic adventuring gear.", FALSE, ch, 0, 0, TO_ROOM);
+		return TRUE;
+	}
 
 	if ((cmd != 164) && (cmd != 170)) return(FALSE);
 
