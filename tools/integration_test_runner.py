@@ -23,6 +23,7 @@ import yaml
 import telnetlib
 import signal
 import os
+import struct
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -92,6 +93,153 @@ class ServerManager:
                 pass
             self.process = None
     
+    def create_test_player(self, name: str, password: str, start_room: int = 3001):
+        """
+        Create a test player file with the specified starting room.
+        
+        This creates a minimal but valid character file that the server can load.
+        The structure matches struct char_file_u from structs.h.
+        
+        Args:
+            name: Character name (will be lowercased)
+            password: Character password (plaintext, will be encrypted by server)
+            start_room: Room vnum where character should start
+        """
+        lib_dir = os.path.dirname(self.server_path)
+        player_file = os.path.join(lib_dir, 'lib', 'players')
+        
+        # Calculate offsets carefully based on struct char_file_u
+        # Using standard C struct packing (no padding for most fields)
+        offset = 0
+        char_data = bytearray(2048)  # Should be enough for char_file_u
+        
+        # byte sex, class, level (3 bytes)
+        char_data[offset] = 1  # male
+        char_data[offset + 1] = 1  # fighter  
+        char_data[offset + 2] = 1  # level 1
+        offset += 3
+        
+        # Alignment padding to 4-byte boundary for time_t
+        offset = (offset + 3) & ~3
+        
+        # time_t birth (4 bytes on 32-bit, 8 on 64-bit - use 4 for compatibility)
+        birth_time = int(time.time())
+        struct.pack_into('i', char_data, offset, birth_time)
+        offset += 4
+        
+        # int played (4 bytes)
+        struct.pack_into('i', char_data, offset, 0)
+        offset += 4
+        
+        # ubyte weight, height (2 bytes)
+        char_data[offset] = 180
+        char_data[offset + 1] = 70
+        offset += 2
+        
+        # Alignment padding
+        offset = (offset + 1) & ~1
+        
+        # char title[80]
+        title = b"the Warrior\x00"
+        char_data[offset:offset+len(title)] = title
+        offset += 80
+        
+        # sh_int hometown (2 bytes)
+        struct.pack_into('h', char_data, offset, 3001)
+        offset += 2
+        
+        # char description[240]
+        desc = b"A test character.\x00"
+        char_data[offset:offset+len(desc)] = desc
+        offset += 240
+        
+        # bool talks[3] (3 bytes)
+        offset += 3
+        
+        # Alignment padding
+        offset = (offset + 1) & ~1
+        
+        # sh_int load_room (2 bytes) - THIS IS THE KEY FIELD
+        struct.pack_into('h', char_data, offset, start_room)
+        offset += 2
+        
+        # struct char_ability_data abilities (str, int, wis, dex, con, str_add - 6 bytes)
+        char_data[offset:offset+6] = bytes([16, 16, 16, 16, 16, 0])
+        offset += 6
+        
+        # Alignment padding
+        offset = (offset + 1) & ~1
+        
+        # struct char_point_data points
+        # hit, max_hit, mana, max_mana, move, max_move (6 sh_int = 12 bytes)
+        for val in [20, 20, 100, 100, 100, 100]:
+            struct.pack_into('h', char_data, offset, val)
+            offset += 2
+        
+        # armor, gold, exp, hitroll, damroll (2 sh_int + 1 int + 2 sh_int = 12 bytes)
+        struct.pack_into('h', char_data, offset, 100)  # armor
+        offset += 2
+        struct.pack_into('h', char_data, offset, 100)  # gold
+        offset += 2
+        struct.pack_into('i', char_data, offset, 0)    # exp
+        offset += 4
+        struct.pack_into('h', char_data, offset, 0)    # hitroll
+        offset += 2
+        struct.pack_into('h', char_data, offset, 0)    # damroll
+        offset += 2
+        
+        # Skip skills[53] and affected[25] - leave as zeros
+        # Each skill is ~4 bytes, affected is ~12 bytes
+        offset += (53 * 4) + (25 * 12)
+        
+        # byte spells_to_learn
+        char_data[offset] = 0
+        offset += 1
+        
+        # Alignment padding
+        offset = (offset + 3) & ~3
+        
+        # int alignment
+        struct.pack_into('i', char_data, offset, 0)
+        offset += 4
+        
+        # time_t last_logon
+        struct.pack_into('i', char_data, offset, birth_time)
+        offset += 4
+        
+        # ubyte act
+        char_data[offset] = 0
+        offset += 1
+        
+        # Alignment padding
+        offset = (offset + 3) & ~3
+        
+        # char name[20]
+        name_lower = name.lower()[:19].encode('ascii') + b'\x00'
+        char_data[offset:offset+len(name_lower)] = name_lower
+        offset += 20
+        
+        # char pwd[14] (13 + 1 for CRYPT_OUTPUT_SIZE + 1)
+        # Store plaintext password - server will encrypt on first login
+        pwd_bytes = password[:13].encode('ascii') + b'\x00'
+        char_data[offset:offset+len(pwd_bytes)] = pwd_bytes
+        offset += 14
+        
+        # sh_int apply_saving_throw[5] (10 bytes)
+        offset += 10
+        
+        # int conditions[3] (12 bytes) - set to non-hungry/thirsty/drunk
+        struct.pack_into('i', char_data, offset, 24)     # full
+        struct.pack_into('i', char_data, offset + 4, 24) # not thirsty
+        struct.pack_into('i', char_data, offset + 8, 0)  # not drunk
+        offset += 12
+        
+        # Write player file
+        with open(player_file, 'wb') as f:
+            f.write(char_data)
+        
+        print(f"    Created test player '{name}' starting in room {start_room}")
+    
     def cleanup(self):
         """Clean up test artifacts (player files, etc.)."""
         # Clean up test character files
@@ -99,11 +247,8 @@ class ServerManager:
         player_file = os.path.join(lib_dir, 'lib', 'players')
         if os.path.exists(player_file):
             try:
-                # Remove test players (those starting with Test)
-                with open(player_file, 'rb') as f:
-                    content = f.read()
-                # For now, just leave players as-is to avoid corruption
-                # In production, would implement proper player file cleanup
+                # Remove the test player file
+                os.remove(player_file)
             except Exception:
                 pass
     
@@ -486,6 +631,26 @@ class TestRunner:
         print(f"Test file: {test_file.name}")
         print('='*50)
         
+        # Load test definition first to check for setup requirements
+        try:
+            with open(test_file, 'r') as f:
+                test_def = yaml.safe_load(f)
+        except Exception as e:
+            print(f"✗ Failed to load test file: {e}")
+            return False
+        
+        # Check if we need to create a test player with a specific start room
+        if 'setup' in test_def and 'start_room' in test_def['setup']:
+            start_room = test_def['setup']['start_room']
+            char_name = test_def['setup'].get('character', {}).get('name', 'TestChar')
+            char_pass = test_def['setup'].get('character', {}).get('password', 'test')
+            
+            try:
+                self.server_manager.create_test_player(char_name, char_pass, start_room)
+            except Exception as e:
+                print(f"✗ Failed to create test player: {e}")
+                return False
+        
         # Start server
         try:
             port = self.server_manager.start()
@@ -507,7 +672,6 @@ class TestRunner:
             # Execute test
             executor = TestExecutor(client)
             try:
-                test_def = executor.load_test(test_file)
                 passed = executor.execute_test(test_def)
             except Exception as e:
                 print(f"✗ Test execution failed: {e}")
