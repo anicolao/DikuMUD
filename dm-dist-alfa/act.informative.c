@@ -1308,3 +1308,139 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
 		send_to_char("You ARE mad!\n\r", ch);
 
 }
+
+
+void do_zone(struct char_data *ch, char *argument, int cmd)
+{
+	char arg[MAX_INPUT_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	int i, zone_num, found, q, r;
+	int player_room;
+	int zone_start, zone_end;
+	
+	extern struct zone_data *zone_table;
+	extern int top_of_zone_table;
+	extern struct quest_data *quest_index;
+	extern int top_of_quest_table;
+	extern struct room_data *world;
+	extern int top_of_world;
+	
+	one_argument(argument, arg);
+	
+	if (!*arg) {
+		/* Show current zone info */
+		player_room = ch->in_room;
+		zone_num = world[player_room].zone;
+		
+		if (zone_num < 0 || zone_num > top_of_zone_table) {
+			send_to_char("You are in an unknown zone.\n\r", ch);
+			return;
+		}
+		
+		snprintf(buf, sizeof(buf), "You are in: %s\n\r", zone_table[zone_num].name);
+		send_to_char(buf, ch);
+		return;
+	}
+	
+	/* Check for "status" subcommand */
+	if (!strcasecmp(arg, "status")) {
+		int num_rooms, num_mobs;
+		struct char_data *mob;
+		extern struct char_data *character_list;
+		
+		/* Show all zones with metadata */
+		strcpy(buf, "Zone Status Summary:\n\r");
+		strcat(buf, "===================\n\r\n\r");
+		
+		for (i = 0; i <= top_of_zone_table; i++) {
+			/* Skip system zones and zone_1200 */
+			if (zone_table[i].top <= 3) continue;
+			if (!strcasecmp(zone_table[i].name, "zone_1200")) continue;
+			
+			/* Calculate zone range */
+			zone_start = (i == 0) ? 0 : (zone_table[i-1].top + 1);
+			zone_end = zone_table[i].top;
+			
+			/* Count rooms in this zone */
+			num_rooms = 0;
+			for (r = 0; r < top_of_world; r++) {
+				if (world[r].zone == i) {
+					num_rooms++;
+				}
+			}
+			
+			/* Count mobs alive in this zone */
+			num_mobs = 0;
+			for (mob = character_list; mob; mob = mob->next) {
+				if (IS_NPC(mob) && mob->in_room != NOWHERE) {
+					if (world[mob->in_room].zone == i) {
+						num_mobs++;
+					}
+				}
+			}
+			
+			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+				"%-40s (%d rooms, %d mobs)\n\r", 
+				zone_table[i].name, num_rooms, num_mobs);
+			
+			/* Add level range info for known zones */
+			if (!strcasecmp(zone_table[i].name, "Lesser Helium")) {
+				strcat(buf, "  Level Range: 1-10 (Starting zone)\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Lesser Helium Sewers")) {
+				strcat(buf, "  Level Range: 1-4\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Dead Sea Wilderness")) {
+				strcat(buf, "  Level Range: 5-15\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Greater Helium")) {
+				strcat(buf, "  Level Range: 8-16\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Zodanga - Enemy City")) {
+				strcat(buf, "  Level Range: 10-18\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Zodanga Wilderness")) {
+				strcat(buf, "  Level Range: 14-22\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Gathol - Allied City")) {
+				strcat(buf, "  Level Range: 12-20\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Ptarth - Allied City")) {
+				strcat(buf, "  Level Range: 15-23\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Kaol - Allied City")) {
+				strcat(buf, "  Level Range: 18-26\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Thark Territory")) {
+				strcat(buf, "  Level Range: 3-6\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Atmosphere Factory - Main Levels")) {
+				strcat(buf, "  Level Range: 4-8\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Atmosphere Factory - Lower Levels")) {
+				strcat(buf, "  Level Range: 8-12\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Southern Approach to Atmosphere Factory")) {
+				strcat(buf, "  Level Range: 3-6\n\r");
+			}
+			
+			/* Find quests in this zone by checking if quest giver falls in zone range */
+			found = 0;
+			for (q = 0; q < top_of_quest_table; q++) {
+				/* Check if quest giver vnum is in this zone's room range */
+				if (quest_index[q].giver_vnum >= zone_start && 
+				    quest_index[q].giver_vnum <= zone_end) {
+					found++;
+				}
+			}
+			
+			if (found > 0) {
+				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+					"  Quests: %d available\n\r", found);
+			}
+			
+			strcat(buf, "\n\r");
+			
+			/* Send in chunks if getting too long */
+			if (strlen(buf) > MAX_STRING_LENGTH - 500) {
+				send_to_char(buf, ch);
+				strcpy(buf, "");
+			}
+		}
+		
+		if (*buf) {
+			send_to_char(buf, ch);
+		}
+		return;
+	}
+	
+	send_to_char("Usage: zone [status]\n\r", ch);
+}
