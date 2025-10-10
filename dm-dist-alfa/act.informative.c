@@ -1344,21 +1344,44 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 	
 	/* Check for "status" subcommand */
 	if (!strcasecmp(arg, "status")) {
+		int num_rooms, num_mobs;
+		struct char_data *mob;
+		extern struct char_data *character_list;
+		
 		/* Show all zones with metadata */
 		strcpy(buf, "Zone Status Summary:\n\r");
 		strcat(buf, "===================\n\r\n\r");
 		
 		for (i = 0; i <= top_of_zone_table; i++) {
-			/* Skip system zones */
+			/* Skip system zones and zone_1200 */
 			if (zone_table[i].top <= 3) continue;
+			if (!strcasecmp(zone_table[i].name, "zone_1200")) continue;
 			
 			/* Calculate zone range */
 			zone_start = (i == 0) ? 0 : (zone_table[i-1].top + 1);
 			zone_end = zone_table[i].top;
 			
+			/* Count rooms in this zone */
+			num_rooms = 0;
+			for (r = 0; r < top_of_world; r++) {
+				if (world[r].zone == i) {
+					num_rooms++;
+				}
+			}
+			
+			/* Count mobs alive in this zone */
+			num_mobs = 0;
+			for (mob = character_list; mob; mob = mob->next) {
+				if (IS_NPC(mob) && mob->in_room != NOWHERE) {
+					if (world[mob->in_room].zone == i) {
+						num_mobs++;
+					}
+				}
+			}
+			
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-				"%-40s (Rooms %d-%d)\n\r", 
-				zone_table[i].name, zone_start, zone_end);
+				"%-40s (%d rooms, %d mobs)\n\r", 
+				zone_table[i].name, num_rooms, num_mobs);
 			
 			/* Add level range info for known zones */
 			if (!strcasecmp(zone_table[i].name, "Lesser Helium")) {
