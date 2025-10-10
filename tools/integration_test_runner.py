@@ -77,8 +77,9 @@ class ServerManager:
         if port is None:
             port = self._find_free_port()
         
-        # Create test lib directory
-        self._create_test_lib()
+        # Create test lib directory (if not already created by create_test_player)
+        if not self.test_lib_path:
+            self._create_test_lib()
         
         # Start server as subprocess with test_lib as the data directory
         server_dir = os.path.dirname(self.server_path)
