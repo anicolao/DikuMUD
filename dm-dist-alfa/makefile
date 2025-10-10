@@ -14,6 +14,12 @@ ZONE_ORDER = limbo zone_1200 lesser_helium sewers dead_sea_bottom_channel southe
 # YAML source files
 YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
 
+# Validate command mappings in interpreter.c
+.PHONY: validate-commands
+validate-commands: interpreter.c validate_commands.py
+	@echo "Validating command mappings..."
+	@python3 validate_commands.py
+
 # Validate world data before building
 .PHONY: validate-world
 validate-world: $(YAML_ZONES) ../tools/validate_world.py
@@ -40,7 +46,7 @@ lib/tinyworld.shp: lib/.worldfiles_built
 lib/tinyworld.qst: lib/.worldfiles_built
 
 # Main build targets
-all: delplay dmserver worldfiles
+all: validate-commands delplay dmserver worldfiles
 
 worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst
 
@@ -72,7 +78,7 @@ act.wizard.o : act.wizard.c structs.h utils.h comm.h interpreter.h \
 handler.o : handler.c structs.h utils.h db.h
 db.o : db.c structs.h utils.h db.h comm.h handler.h
 interpreter.o : interpreter.c structs.h comm.h interpreter.h db.h utils.h \
-  limits.h
+  limits.h validate-commands
 utility.o : utility.c structs.h utils.h
 spec_assign.o : spec_assign.c structs.h db.h
 spec_procs.o : spec_procs.c structs.h utils.h comm.h interpreter.h \
