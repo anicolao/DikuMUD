@@ -14,6 +14,13 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
 
+# Import the validator for build-all integration
+try:
+    from validate_world import WorldValidator
+except ImportError:
+    # Allow running without validator if needed
+    WorldValidator = None
+
 
 @dataclass
 class Room:
@@ -551,6 +558,84 @@ class YAMLConverter:
 class WorldBuilder:
     """Builds DikuMUD format files from YAML source."""
 
+    def build_all_files(self, yaml_files: List[str], output_dir: str, validate: bool = True):
+        """Build all world files from multiple YAML zone files in one pass.
+        
+        This is more efficient than calling build_world_file multiple times,
+        as it only reads the YAML files once.
+        
+        Args:
+            yaml_files: List of YAML zone files to process
+            output_dir: Directory where output files will be written
+            validate: Whether to validate before building (default True)
+        """
+        # Validate first if requested
+        if validate and WorldValidator is not None:
+            print("Validating world data...")
+            validator = WorldValidator()
+            result = validator.validate_all(yaml_files)
+            if result != 0:
+                print("Validation failed. Aborting build.")
+                sys.exit(result)
+        
+        # Load all YAML data once
+        all_data = []
+        for yaml_file in yaml_files:
+            with open(yaml_file, 'r') as f:
+                data = yaml.safe_load(f)
+                all_data.append(data)
+        
+        # Build each file type
+        file_types = ['wld', 'mob', 'obj', 'zon', 'shp', 'qst']
+        file_names = {
+            'wld': 'tinyworld.wld',
+            'mob': 'tinyworld.mob', 
+            'obj': 'tinyworld.obj',
+            'zon': 'tinyworld.zon',
+            'shp': 'tinyworld.shp',
+            'qst': 'tinyworld.qst'
+        }
+        
+        for file_type in file_types:
+            all_records = []
+            
+            for data in all_data:
+                if file_type == 'wld':
+                    records = data.get('rooms', [])
+                    all_records.extend([(r['vnum'], self._build_room(r)) for r in records])
+                elif file_type == 'mob':
+                    records = data.get('mobiles', [])
+                    all_records.extend([(m['vnum'], self._build_mobile(m)) for m in records])
+                elif file_type == 'obj':
+                    records = data.get('objects', [])
+                    all_records.extend([(o['vnum'], self._build_object(o)) for o in records])
+                elif file_type == 'zon':
+                    zone = data.get('zone', {})
+                    resets = data.get('resets', [])
+                    all_records.append((zone['number'], self._build_zone(zone, resets)))
+                elif file_type == 'shp':
+                    shops = data.get('shops', [])
+                    all_records.extend([(s['vnum'], self._build_shop(s)) for s in shops])
+                elif file_type == 'qst':
+                    quests = data.get('quests', [])
+                    all_records.extend([(q['qnum'], self._build_quest(q)) for q in quests])
+            
+            # Sort by vnum
+            all_records.sort(key=lambda x: x[0])
+            
+            # Write output
+            output_file = f"{output_dir}/{file_names[file_type]}"
+            with open(output_file, 'w') as f:
+                for _, record_text in all_records:
+                    f.write(record_text)
+                # Add final EOF marker
+                if file_type == 'wld':
+                    f.write("#9000\n$~\n")
+                else:
+                    f.write("$~\n")
+            
+            print(f"Built {output_file}")
+
     def build_world_file(self, yaml_files: List[str], output_file: str, file_type: str):
         """Build a complete world file from multiple YAML zone files."""
         all_records = []
@@ -759,6 +844,7 @@ def main():
         print("Usage:")
         print("  world_builder.py convert <zone_name> <input_dir> <output_yaml>")
         print("  world_builder.py build <file_type> <output_file> <yaml_file1> [yaml_file2 ...]")
+        print("  world_builder.py build-all <output_dir> <yaml_file1> [yaml_file2 ...]")
         sys.exit(1)
     
     command = sys.argv[1]
@@ -789,6 +875,18 @@ def main():
         builder = WorldBuilder()
         builder.build_world_file(yaml_files, output_file, file_type)
         print(f"Built {output_file} from {len(yaml_files)} zone files")
+    
+    elif command == 'build-all':
+        if len(sys.argv) < 4:
+            print("Usage: world_builder.py build-all <output_dir> <yaml_file1> [yaml_file2 ...]")
+            sys.exit(1)
+        
+        output_dir = sys.argv[2]
+        yaml_files = sys.argv[3:]
+        
+        builder = WorldBuilder()
+        builder.build_all_files(yaml_files, output_dir)
+        print(f"Built all world files from {len(yaml_files)} zone files")
     
     else:
         print(f"Unknown command: {command}")
