@@ -80,11 +80,12 @@ grep -q "^#3550" lib/tinyworld.obj && items_found=$((items_found + 1))  # leathe
 grep -q "^#3520" lib/tinyworld.obj && items_found=$((items_found + 1))  # stiletto
 grep -q "^#3523" lib/tinyworld.obj && items_found=$((items_found + 1))  # mace
 grep -q "^#3563" lib/tinyworld.obj && items_found=$((items_found + 1))  # shield
+grep -q "^#3521" lib/tinyworld.obj && items_found=$((items_found + 1))  # short sword
 
-if [ "$items_found" -eq 6 ]; then
+if [ "$items_found" -eq 7 ]; then
     echo "   ✓ All equipment items found in object database"
 else
-    echo "   ✗ Only found $items_found/6 equipment items"
+    echo "   ✗ Only found $items_found/7 equipment items"
     exit 1
 fi
 echo
@@ -110,11 +111,11 @@ echo
 echo "Summary of REEQUIP functionality:"
 echo "  - Command: REEQUIP (command #221)"
 echo "  - Triggered when: Player enters guild room with no equipment/inventory and <500 gold"
-echo "  - Equipment given (4 items per class):"
+echo "  - Equipment given (4-5 items per class):"
 echo "    * Scientist: glow crystal, water cask, leather harness, war mace"
 echo "    * Noble: glow crystal, water cask, leather harness, war mace"
 echo "    * Assassin: glow crystal, water cask, leather harness, fine stiletto"
-echo "    * Warrior: glow crystal, water cask, leather harness, small shield"
+echo "    * Warrior: glow crystal, water cask, leather harness, small shield, quality short sword"
 echo
 echo "Guildmaster locations:"
 echo "  - Science Master (mob 3020) - Scientist guild"

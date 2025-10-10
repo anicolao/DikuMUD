@@ -56,9 +56,8 @@ steps:
     command: "wield sword"
     description: "Try to wield the weapon (if we got a sword)"
     expected:
-      - pattern: "wield|You.*sword"
+      - pattern: "OK|wield|You.*sword"
         message: "Should be able to wield the weapon"
-        optional: true
     fail_on:
       - pattern: "don't have|can't find"
         message: "Should have a weapon to wield"
@@ -67,7 +66,7 @@ steps:
     command: "wear harness"
     description: "Try to wear the leather harness"
     expected:
-      - pattern: "wear|You.*harness"
+      - pattern: "OK|wear|You.*harness"
         message: "Should be able to wear the harness"
     fail_on:
       - pattern: "don't have|can't find|can't wear"
@@ -77,7 +76,7 @@ steps:
     command: "wear shield"
     description: "Try to wear the shield"
     expected:
-      - pattern: "wear|You.*shield"
+      - pattern: "OK|wear|You.*shield"
         message: "Should be able to wear the shield"
     fail_on:
       - pattern: "don't have|can't find|can't wear"
@@ -87,7 +86,7 @@ steps:
     command: "hold crystal"
     description: "Try to hold the glow crystal"
     expected:
-      - pattern: "hold|light|You.*crystal"
+      - pattern: "OK|hold|light|You.*crystal"
         message: "Should be able to hold the glow crystal"
     fail_on:
       - pattern: "don't have|can't find|can't hold"

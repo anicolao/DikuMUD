@@ -222,7 +222,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 				break;
 			}
 			case CLASS_WARRIOR: {
-				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), shield (3563) */
+				/* Light (glow crystal 3531), water (water cask 3500), harness (3550), shield (3563), sword (3521) */
 				obj = read_object(3531, VIRTUAL);
 				if (obj) obj_to_char(obj, ch);
 				
@@ -235,7 +235,10 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 				obj = read_object(3563, VIRTUAL);
 				if (obj) obj_to_char(obj, ch);
 				
-				send_to_char("The War Master equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a small shield\n\r", ch);
+				obj = read_object(3521, VIRTUAL);
+				if (obj) obj_to_char(obj, ch);
+				
+				send_to_char("The War Master equips you with:\n\r  a glow crystal\n\r  a water cask\n\r  a simple leather harness\n\r  a small shield\n\r  a quality short sword\n\r", ch);
 				break;
 			}
 		}
