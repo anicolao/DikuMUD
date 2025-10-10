@@ -1,0 +1,86 @@
+================================================================================
+COMBAT STATUS IN PROMPT - IMPLEMENTATION SUMMARY
+================================================================================
+
+FEATURE OVERVIEW:
+When any group member enters combat, all group members see combat status in
+their prompt showing the health of the player and mob engaged in combat.
+
+PROMPT EXAMPLES:
+
+Before combat:
+  100H 50F 82V 100C Exits:NESW>
+
+During combat (perfect health):
+  [PLAYER:perfect] [MOB:hurt] 100H 50F 82V 100C Exits:NESW>
+
+Taking damage:
+  [PLAYER:hurt] [MOB:pretty hurt] 70H 30F 60V 100C Exits:N>
+
+Critical condition:
+  [PLAYER:awful] [MOB:just a scratch] 8H 10F 30V 100C Exits:S>
+
+HEALTH STATUS LEVELS (based on HP %):
+  - perfect         (95-100%)
+  - just a scratch  (85-94%)
+  - hurt            (50-84%)
+  - pretty hurt     (10-49%)
+  - awful           (1-9%)
+  - stunned         (≤0 HP, stunned position)
+  - mostly dead     (≤0 HP, dying)
+
+KEY IMPLEMENTATION DETAILS:
+
+1. Added get_health_status() helper function in comm.c
+   - Calculates HP percentage
+   - Handles special positions (dead, stunned, etc.)
+   - Returns appropriate status string
+
+2. Modified make_prompt() function in comm.c
+   - Checks if player is in a group (AFF_GROUP flag)
+   - Iterates through combat_list to find group members fighting
+   - Displays combat status for all group members
+   - Works for solo combat as well
+
+3. Group Combat Detection:
+   - Finds group leader (ch->master or ch)
+   - Checks if leader is fighting
+   - Checks all followers for combat
+   - Shows first fighter's status to all members
+
+FILES MODIFIED:
+  - dm-dist-alfa/comm.c           (Implementation)
+  - dm-dist-alfa/.gitignore       (Added tinyworld.qst)
+
+FILES CREATED:
+  - COMBAT_PROMPT_IMPLEMENTATION.md   (Technical docs)
+  - COMBAT_PROMPT_EXAMPLES.md         (Visual examples)
+  - test_combat_prompt.sh             (Automated tests)
+
+TESTING:
+  ✓ Compiles successfully
+  ✓ Server boots without errors
+  ✓ All automated tests pass
+  ✓ No breaking changes to existing functionality
+
+MANUAL TESTING STEPS:
+  1. Start server: cd dm-dist-alfa && ./dmserver
+  2. Connect with two clients
+  3. Form a group between characters
+  4. Initiate combat with one character
+  5. Verify both see [PLAYER:...] [MOB:...] in prompt
+
+TECHNICAL DESIGN:
+  - Minimal code changes (surgical modifications)
+  - No data structure changes
+  - Uses existing combat_list and group mechanics
+  - Buffer-safe with snprintf
+  - Follows DikuMUD historical coding style
+
+COMPATIBILITY:
+  - Backward compatible with existing worlds
+  - No save file changes required
+  - Works with existing group/combat systems
+  - No network protocol changes
+
+================================================================================
