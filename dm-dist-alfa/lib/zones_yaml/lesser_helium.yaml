@@ -866,7 +866,8 @@ rooms:
 
     system.  South of here the ground slopes toward the dried channel and to the north
 
-    is the common plaza.  A dark opening in the floor leads down to the old sewer tunnels.'
+    is the common plaza.  A dark opening in the floor leads down to the old sewer
+    tunnels.'
   zone: 30
   room_flags: 4
   sector_type: 2
@@ -4017,7 +4018,7 @@ objects:
   rent: 1000
   extra_descriptions:
   - keywords: fountain
-    description: 'It is very nice.  Made from fine white marble.'
+    description: It is very nice.  Made from fine white marble.
   affects: []
 - vnum: 3138
   namelist: waterskin leather
@@ -4036,7 +4037,8 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: waterskin
-    description: 'A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.'
+    description: A sturdy leather waterskin for carrying water on journeys across
+      the dead sea bottoms.
   affects: []
 resets:
 - command: O
@@ -4729,7 +4731,7 @@ resets:
   arg2: 1
   arg3: 3001
 shops:
-- vnum: 1
+- vnum: 8
   producing:
   - 3010
   - 3011
@@ -4756,7 +4758,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 3
+- vnum: 9
   producing:
   - 3030
   - 3031
@@ -4789,7 +4791,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 5
+- vnum: 10
   producing:
   - 3002
   - 3003
@@ -4813,7 +4815,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 7
+- vnum: 11
   producing:
   - 3004
   - 3003
@@ -4838,7 +4840,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 9
+- vnum: 12
   producing:
   - 3040
   - 3041
@@ -4869,7 +4871,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 11
+- vnum: 13
   producing:
   - 3100
   - 3101
@@ -4894,7 +4896,7 @@ shops:
   close1: 23
   open2: 23
   close2: 24
-- vnum: 14
+- vnum: 15
   producing:
   - 3066
   - 3067
@@ -4923,7 +4925,7 @@ shops:
   close1: 14
   open2: 15
   close2: 21
-- vnum: 12
+- vnum: 14
   producing:
   - 3002
   - 3003

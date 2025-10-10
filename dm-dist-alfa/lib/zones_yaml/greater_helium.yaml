@@ -5427,7 +5427,8 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: waterskin
-    description: 'A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.'
+    description: A sturdy leather waterskin for carrying water on journeys across
+      the dead sea bottoms.
   affects: []
 - vnum: 3775
   namelist: fountain water marble
@@ -5446,7 +5447,9 @@ objects:
   rent: 1000
   extra_descriptions:
   - keywords: fountain
-    description: 'It is a magnificent structure.  Made from fine white marble with intricate carvings depicting the founding of Greater Helium.  Cool, clear water flows constantly from an ornate spout.'
+    description: It is a magnificent structure.  Made from fine white marble with
+      intricate carvings depicting the founding of Greater Helium.  Cool, clear water
+      flows constantly from an ornate spout.
   affects: []
 resets:
 - command: M
@@ -6427,7 +6430,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 3
+- vnum: 2
   producing:
   - 3510
   - 3511
@@ -6454,7 +6457,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 5
+- vnum: 3
   producing:
   - 3500
   - 3501
@@ -6478,7 +6481,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 7
+- vnum: 4
   producing:
   - 3501
   - 3500
@@ -6503,7 +6506,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 9
+- vnum: 5
   producing:
   - 3540
   - 3541
@@ -6533,7 +6536,7 @@ shops:
   close1: 28
   open2: 0
   close2: 0
-- vnum: 11
+- vnum: 6
   producing:
   - 3500
   - 3501
@@ -6560,7 +6563,7 @@ shops:
   close1: 23
   open2: 23
   close2: 24
-- vnum: 13
+- vnum: 7
   producing:
   - 3620
   - 3621
