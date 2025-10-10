@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Integration Test Runner for DikuMUD
 #
 # Usage:
