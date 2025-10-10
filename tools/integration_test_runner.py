@@ -42,9 +42,25 @@ class ServerManager:
     def __init__(self, server_path: str, lib_path: str):
         self.server_path = server_path
         self.lib_path = lib_path
+        self.test_lib_path = None  # Will be created as a copy of lib_path
         self.process = None
         self.port = None
     
+    def _create_test_lib(self):
+        """Create a test copy of the lib directory to avoid modifying real game assets."""
+        import shutil
+        
+        # Create test_lib directory
+        server_dir = os.path.dirname(self.server_path)
+        self.test_lib_path = os.path.join(server_dir, 'test_lib')
+        
+        # Remove if it already exists
+        if os.path.exists(self.test_lib_path):
+            shutil.rmtree(self.test_lib_path)
+        
+        # Copy lib directory to test_lib
+        shutil.copytree(self.lib_path, self.test_lib_path)
+        
     def start(self, port: Optional[int] = None) -> int:
         """
         Start DikuMUD server.
@@ -61,10 +77,14 @@ class ServerManager:
         if port is None:
             port = self._find_free_port()
         
-        # Start server as subprocess
+        # Create test lib directory
+        self._create_test_lib()
+        
+        # Start server as subprocess with test_lib as the data directory
+        server_dir = os.path.dirname(self.server_path)
         self.process = subprocess.Popen(
-            [self.server_path, '-p', str(port)],
-            cwd=os.path.dirname(self.server_path),
+            [self.server_path, '-p', str(port), '-d', 'test_lib'],
+            cwd=server_dir,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             preexec_fn=os.setsid  # Create new process group for clean shutdown
@@ -99,49 +119,67 @@ class ServerManager:
         
         Uses the C helper program to create a properly formatted player file
         that matches the exact struct char_file_u format from structs.h.
+        This creates the player in the test_lib directory, not the real lib directory.
         
         Args:
             name: Character name (will be lowercased)
             password: Character password (plaintext, will be encrypted by server)
             start_room: Room vnum where character should start
         """
-        lib_dir = os.path.dirname(self.server_path)
+        # Create test_lib first if not already created
+        if not self.test_lib_path:
+            self._create_test_lib()
+        
+        server_dir = os.path.dirname(self.server_path)
         helper_path = os.path.join(os.path.dirname(__file__), 'create_test_player')
         
         # Check if helper program exists
         if not os.path.exists(helper_path):
             print(f"    ! Warning: Helper program not found at {helper_path}")
-            print(f"    ! Compile it with: cd tools && gcc -I../dm-dist-alfa -o create_test_player create_test_player.c")
+            print(f"    ! Build it with: cd dm-dist-alfa && make ../tools/create_test_player")
             return
         
-        # Run helper program from the server directory
+        # Run helper program, setting the working directory to use test_lib
         try:
+            # Change to the server directory with test_lib
+            env = os.environ.copy()
+            
             result = subprocess.run(
                 [helper_path, name, password, str(start_room)],
-                cwd=lib_dir,
+                cwd=server_dir,
                 capture_output=True,
                 text=True,
-                timeout=5
+                timeout=5,
+                env=env
             )
             
             if result.returncode == 0:
-                print(f"    {result.stdout.strip()}")
+                # The helper creates in lib/, we need to move it to test_lib/
+                import shutil
+                src_player = os.path.join(server_dir, 'lib', 'players')
+                dst_player = os.path.join(server_dir, 'test_lib', 'players')
+                if os.path.exists(src_player):
+                    shutil.move(src_player, dst_player)
+                    print(f"    {result.stdout.strip()}")
+                else:
+                    print(f"    {result.stdout.strip()}")
             else:
                 print(f"    ! Error creating player file: {result.stderr}")
         except Exception as e:
             print(f"    ! Exception creating player file: {e}")
     
     def cleanup(self):
-        """Clean up test artifacts (player files, etc.)."""
-        # Clean up test character files
-        lib_dir = os.path.dirname(self.server_path)
-        player_file = os.path.join(lib_dir, 'lib', 'players')
-        if os.path.exists(player_file):
+        """Clean up test artifacts (test_lib directory, etc.)."""
+        import shutil
+        
+        # Remove the entire test_lib directory
+        if self.test_lib_path and os.path.exists(self.test_lib_path):
             try:
-                # Remove the test player file
-                os.remove(player_file)
-            except Exception:
-                pass
+                shutil.rmtree(self.test_lib_path)
+            except Exception as e:
+                print(f"    ! Warning: Failed to clean up test_lib: {e}")
+        
+        self.test_lib_path = None
     
     def _find_free_port(self) -> int:
         """Find an available port for the server."""

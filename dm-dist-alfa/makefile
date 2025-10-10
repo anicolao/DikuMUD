@@ -44,9 +44,9 @@ all: delplay dmserver worldfiles test
 
 worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst
 
-# Integration test helper
+# Integration test helper - build dynamically on host
 ../tools/create_test_player: ../tools/create_test_player.c structs.h utils.h
-	$(CC) -static -I. -o $@ $< -lcrypt
+	$(CC) $(CFLAGS) -I. -o $@ $< -lcrypt
 
 # Integration tests
 .PHONY: test
