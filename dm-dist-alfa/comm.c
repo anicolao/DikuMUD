@@ -342,18 +342,17 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 
 		/* Check each person fighting in the combat list */
 		for (fighter = combat_list; fighter; fighter = fighter->next_fighting) {
-			/* Check if this fighter is in our group */
-			if (fighter == group_leader || fighter == ch) {
-				/* This fighter is in our group */
+			/* Check if this fighter is the group leader */
+			if (fighter == group_leader && IS_AFFECTED(group_leader, AFF_GROUP)) {
 				if (!player_fighter) {
 					player_fighter = fighter;
 					mob_fighter = fighter->specials.fighting;
 				}
-			} else if (group_leader->followers) {
-				/* Check followers */
+			}
+			/* Check if this fighter is in the group's followers */
+			else if (group_leader->followers) {
 				for (f = group_leader->followers; f; f = f->next) {
 					if (IS_AFFECTED(f->follower, AFF_GROUP) && f->follower == fighter) {
-						/* This fighter is in our group */
 						if (!player_fighter) {
 							player_fighter = fighter;
 							mob_fighter = fighter->specials.fighting;
