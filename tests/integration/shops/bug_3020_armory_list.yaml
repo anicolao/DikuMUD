@@ -1,0 +1,74 @@
+# Integration test for bug report: **Winifred[3020]: armory list
+#
+# This test validates that the armory shop allows players to list
+# available weapons and armor.
+#
+# Bug Description:
+# Player Winifred reported from room 3020 that the armory doesn't
+# respond properly to the 'list' command.
+#
+# Expected Behavior:
+# - The 'list' command should show available weapons and armor
+# - Items should have appropriate prices
+# - Shop should be properly configured
+
+test:
+  id: bug_3020_armory_list
+  description: "Verify armory shop allows listing weapons and armor"
+  bug_report: "**Winifred[3020]: armory list"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [shop, bug_fix, armory, weapons]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001  # Temple of the Jeddak
+  gold: 5000  # Armor and weapons can be expensive
+
+steps:
+  # Navigate to armory (room 3020)
+  - action: move
+    description: "Walk to armory at room 3020"
+    target_room: 3020
+    expected:
+      - pattern: "armory|armorer|weapons|armor"
+        message: "Should arrive at armory"
+
+  # Verify armorer/merchant is present
+  - action: look
+    description: "Look for the armorer or merchant"
+    expected:
+      - pattern: "armorer|merchant|smith|weaponsmith"
+        message: "Shop keeper should be present"
+
+  # Test the list command
+  - action: command
+    description: "List items for sale at the armory"
+    command: "list"
+    expected:
+      - pattern: "sword|blade|armor|shield|weapon|helm|mail"
+        message: "Should show weapons or armor"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested"
+        message: "BUG: Armory should respond to list command"
+
+  # Try to buy something to verify shop works
+  - action: command
+    description: "Purchase an item to verify shop functionality"
+    command: "buy sword"
+    expected:
+      - pattern: "You buy|You purchase|don't have enough gold"
+        message: "Shop should respond to purchase attempts"
+
+result:
+  should_pass: true
+  description: "Armory should properly list weapons and armor for sale"
+  notes: |
+    The armory should sell weapons and armor appropriate for warriors.
+    This test verifies the shop is properly configured and responds
+    to the list command.

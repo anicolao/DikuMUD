@@ -1,0 +1,94 @@
+# Integration test for bug report: **Winifred[3003]: nobles waiter doesn't list
+#
+# This test validates that the nobles waiter shop allows players to list
+# available drinks and make purchases.
+#
+# Bug Description:
+# Player Winifred reported from room 3003 that the nobles waiter doesn't
+# respond to the 'list' command, preventing players from seeing what drinks
+# are available for purchase.
+#
+# Expected Behavior:
+# - The 'list' command should show available drinks with prices
+# - Players should be able to purchase drinks
+# - Shop should be open and functional
+
+test:
+  id: bug_3003_nobles_waiter_list
+  description: "Verify nobles waiter shop allows listing and purchasing drinks"
+  bug_report: "**Winifred[3003]: nobles waiter doesn't list"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [shop, bug_fix, nobles, drinks]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001  # Temple of the Jeddak (starting location)
+  gold: 1000  # Enough gold to make purchases
+
+steps:
+  # Step 1: Navigate to room 3003 where the nobles waiter is located
+  - action: move
+    description: "Walk to room 3003 (nobles waiter location)"
+    # Note: Actual path will depend on room connections
+    # This is a placeholder - implementation will determine correct path
+    target_room: 3003
+    expected:
+      - pattern: "nobles|waiter|bar|tavern"
+        message: "Should arrive at location with waiter"
+
+  # Step 2: Verify the waiter NPC is present in the room
+  - action: look
+    description: "Look around to see the waiter"
+    expected:
+      - pattern: "waiter"
+        message: "Waiter should be visible in the room"
+
+  # Step 3: Try to list available items
+  # This is the core of the bug - 'list' should work
+  - action: command
+    description: "List items for sale from the waiter"
+    command: "list"
+    expected:
+      - pattern: "wine|whiskey|drink|ale|mead"
+        message: "Should show available drinks"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "BUG: Shop should respond to list command"
+      - pattern: "You can't do that|Huh\\?"
+        message: "BUG: List command should be recognized"
+
+  # Step 4: Attempt to purchase a drink to verify shop is functional
+  - action: command
+    description: "Buy a drink from the waiter"
+    command: "buy wine"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a drink"
+    fail_on:
+      - pattern: "don't have that|not selling"
+        message: "Shop should sell the listed items"
+
+  # Step 5: Verify the purchased item is in inventory
+  - action: inventory
+    description: "Check that wine is now in inventory"
+    expected:
+      - pattern: "wine|flask"
+        message: "Purchased wine should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when nobles waiter responds to 'list' and allows purchases"
+  notes: |
+    This test validates the fix for the bug where the nobles waiter
+    didn't respond to the 'list' command. The shop should be properly
+    configured with:
+    - Correct keeper mob assignment
+    - Correct room location
+    - Valid drink items for sale
+    - Appropriate hours of operation

@@ -1,0 +1,84 @@
+# Integration test for bug report: **Kheldar[3010]: general store shouldn't be a grocer
+#
+# This test validates that the general store (room 3010) sells general goods
+# like lanterns, ropes, and packs rather than food items like a grocer would.
+#
+# Bug Description:
+# Player Kheldar reported from room 3010 that the general store is configured
+# as a grocer (selling food) when it should sell general adventuring supplies.
+#
+# Expected Behavior:
+# - General store should sell general goods (lanterns, packs, rope, etc.)
+# - General store should NOT sell food items (bread, fruit, provisions)
+# - Shop type should be appropriate for general goods
+
+test:
+  id: bug_3010_general_store_type
+  description: "Verify general store sells general goods, not food"
+  bug_report: "**Kheldar[3010]: general store shouldn't be a grocer"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [shop, bug_fix, general_store, shop_type]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001
+  gold: 1000
+
+steps:
+  # Navigate to general store (room 3010)
+  - action: move
+    description: "Walk to general store at room 3010"
+    target_room: 3010
+    expected:
+      - pattern: "general store|shop|merchant"
+        message: "Should arrive at general store"
+
+  # Verify merchant is present
+  - action: look
+    description: "Look for store keeper"
+    expected:
+      - pattern: "merchant|keeper|shopkeeper"
+        message: "Store keeper should be present"
+
+  # List items and verify they are GENERAL GOODS
+  - action: command
+    description: "List items to verify general goods are sold"
+    command: "list"
+    expected:
+      - pattern: "lantern|pack|rope|torch|backpack|sack"
+        message: "Should sell general adventuring supplies"
+    fail_on:
+      - pattern: "bread|fruit|provisions|food|meat|cheese"
+        message: "BUG: General store should not sell food items (that's a grocer)"
+
+  # Verify shop type is appropriate (not food/provisions)
+  # In DikuMUD, shop types determine what they trade
+  # Type 19 (FOOD) would make it a grocer
+  # General store should trade in different item types
+
+  # Try to buy a general good to verify shop works
+  - action: command
+    description: "Purchase a general good"
+    command: "buy lantern"
+    expected:
+      - pattern: "You buy|You purchase|don't have enough"
+        message: "Should be able to purchase general goods"
+
+result:
+  should_pass: true
+  description: "General store should sell general goods, not food items"
+  notes: |
+    This test ensures the shop at room 3010 is properly configured as
+    a general store rather than a grocer. The fix should:
+    
+    - Change shop produced items from food to general goods
+    - Update shop trade type from 19 (FOOD) to appropriate type
+    - Ensure items like lanterns, packs, rope are available
+    - Ensure food items like bread, fruit are NOT available
+    
+    This is likely a shop configuration issue in the .shp file where
+    the wrong items were assigned or the wrong trade type was set.
