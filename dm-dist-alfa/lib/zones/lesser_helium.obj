@@ -874,3 +874,15 @@ E
 key steel~
 A key of this size must fit a very strong lock.
 ~
+#3138
+waterskin leather~
+a leather waterskin~
+A leather waterskin lies here.~
+~
+17 0 1
+10 0 0 0
+4 30 10
+E
+waterskin~
+A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.
+~
