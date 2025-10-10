@@ -1,0 +1,80 @@
+# Integration test for bug reports:
+# - **Winifred[3011]: weapns list
+# - **Winifred[3011]: weapons
+#
+# This test validates that the weapons shop (room 3011) functions properly
+# and responds to list commands.
+#
+# Bug Description:
+# Player Winifred reported from room 3011 issues with listing weapons.
+# The typo "weapns" suggests they may have made a typo, but the second
+# report "weapons" indicates there's an actual problem.
+#
+# Expected Behavior:
+# - The 'list' command should work at the weapons shop
+# - Various weapons should be available
+# - Shop should be properly configured
+
+test:
+  id: bug_3011_weapons_list
+  description: "Verify weapons shop at room 3011 allows listing weapons"
+  bug_report: "**Winifred[3011]: weapns list / weapons"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [shop, bug_fix, weapons]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001
+  gold: 2000
+
+steps:
+  # Navigate to weapons shop (room 3011)
+  - action: move
+    description: "Walk to weapons shop at room 3011"
+    target_room: 3011
+    expected:
+      - pattern: "weapon|arms|weaponsmith"
+        message: "Should arrive at weapons shop"
+
+  # Check for shop keeper
+  - action: look
+    description: "Look for weapons merchant"
+    expected:
+      - pattern: "merchant|dealer|weaponsmith|armorer"
+        message: "Weapons merchant should be present"
+
+  # Test list command
+  - action: command
+    description: "List available weapons"
+    command: "list"
+    expected:
+      - pattern: "sword|dagger|axe|mace|spear|bow|weapon"
+        message: "Should show various weapons"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores|not interested"
+        message: "BUG: Weapons shop should respond to list command"
+
+  # Try purchasing to verify shop works
+  - action: command
+    description: "Attempt to purchase a weapon"
+    command: "buy dagger"
+    expected:
+      - pattern: "You buy|You purchase|don't have enough"
+        message: "Shop should respond to purchase attempts"
+
+result:
+  should_pass: true
+  description: "Weapons shop should list available weapons and allow purchases"
+  notes: |
+    This validates that room 3011 has a properly configured weapons shop.
+    The shop should:
+    - Have a weapons merchant/keeper
+    - Respond to 'list' command
+    - Show available weapons with prices
+    - Allow purchases when player has sufficient gold

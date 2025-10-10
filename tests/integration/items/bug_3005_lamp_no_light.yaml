@@ -1,0 +1,108 @@
+# Integration test for bug report: **Kheldar[3005]: lamp in temple of the jeddak has no light left
+#
+# This test validates that the lamp in the Temple of the Jeddak (room 3001 or nearby)
+# has light charges remaining and can be used for illumination.
+#
+# Bug Description:
+# Player Kheldar reported from room 3005 that a lamp in the temple area has
+# no light remaining, making it useless for illumination in dark areas.
+#
+# Expected Behavior:
+# - Lamp should exist in the temple area
+# - Lamp should have light charges remaining
+# - Lamp should be able to be lit or be already lit
+# - Lamp should provide illumination
+
+test:
+  id: bug_3005_lamp_no_light
+  description: "Verify temple lamp has light charges remaining"
+  bug_report: "**Kheldar[3005]: lamp in temple of the jeddak has no light left"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [item, bug_fix, temple, lamp, light]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001  # Temple of the Jeddak
+
+steps:
+  # First, check the starting room (3001) for the lamp
+  - action: look
+    description: "Look for lamp in Temple of the Jeddak (3001)"
+    expected:
+      - pattern: "lamp|light|lantern"
+        message: "Should see lamp in the room"
+        optional: true  # Might be in adjacent room
+
+  # If not in 3001, navigate to room 3005 where bug was reported
+  - action: move
+    description: "Move to room 3005 if not already there"
+    target_room: 3005
+    optional: true  # Only if lamp not in starting room
+
+  # Look for lamp in current room
+  - action: look
+    description: "Look for lamp in current room"
+    expected:
+      - pattern: "lamp|light|lantern"
+        message: "Lamp should be visible in the temple area"
+
+  # Examine the lamp to check its state
+  - action: command
+    description: "Examine the lamp to check light charges"
+    command: "examine lamp"
+    expected:
+      - pattern: "lit|glowing|burning|light"
+        message: "Lamp should be lit or have light available"
+    fail_on:
+      - pattern: "dark|empty|no light|burnt out|exhausted"
+        message: "BUG: Lamp should have light charges remaining"
+
+  # Alternative: Try to look at lamp
+  - action: command
+    description: "Look at lamp to see its description"
+    command: "look lamp"
+    expected:
+      - pattern: "lamp|light"
+        message: "Should see lamp description"
+    fail_on:
+      - pattern: "no light|empty|dark"
+        message: "BUG: Lamp should not be empty or dark"
+
+  # If lamp is an object that can be taken, check if it can provide light
+  - action: command
+    description: "Try to light the lamp if it's not already lit"
+    command: "light lamp"
+    expected:
+      - pattern: "lights up|already lit|glows|You light|starts glowing"
+        message: "Lamp should be lightable or already lit"
+    fail_on:
+      - pattern: "no fuel|empty|no light|won't light"
+        message: "BUG: Lamp should have fuel/light charges"
+    optional: true  # May not be a carriable item
+
+result:
+  should_pass: true
+  description: "Temple lamp should have light charges and be functional"
+  notes: |
+    This test validates that the lamp in the temple area is properly
+    configured with light charges. The fix should ensure:
+    
+    - Lamp object has value[2] > 0 (light hours remaining)
+    - Lamp is configured as ITEM_LIGHT type
+    - Lamp either:
+      a) Is already lit (value[2] shows hours remaining), or
+      b) Can be lit by players
+    
+    In DikuMUD, ITEM_LIGHT objects use:
+    - value[2]: Hours of light remaining (0 = empty)
+    
+    The lamp should be reset with sufficient light charges so players
+    can use it for illumination in dark areas of the dungeon.
+    
+    Room 3005 may be different from 3001 (Temple of the Jeddak), so
+    the test should check both locations or verify which room contains
+    the problematic lamp.

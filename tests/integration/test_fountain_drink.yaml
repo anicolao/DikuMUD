@@ -1,0 +1,55 @@
+# Test for drinking from fountain in Market Plaza
+# This test validates that start_room functionality works and that
+# a player can drink from the fountain without needing to navigate
+
+test:
+  id: test_fountain_drink
+  description: "Verify player can drink water from the fountain using start_room feature"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [fountain, drink, start_room, feature_test]
+
+setup:
+  character:
+    name: TestChar
+    password: test
+    class: warrior
+    level: 1
+  start_room: 3014  # Market Plaza with fountain
+  gold: 100
+
+steps:
+  - action: look
+    description: "Look around - should be in Market Plaza with fountain"
+    expected:
+      - pattern: "Market Plaza|market|plaza"
+        message: "Should be in Market Plaza"
+      - pattern: "fountain|water"
+        message: "Should see fountain in the room"
+
+  - action: command
+    command: "drink fountain"
+    description: "Drink water from the fountain"
+    expected:
+      - pattern: "drink|water|thirst|gulp"
+        message: "Should successfully drink from fountain"
+    fail_on:
+      - pattern: "don't see|can't find|You can't"
+        message: "Fountain should be accessible in the room"
+
+result:
+  should_pass: true
+  description: "Player should start in specified room and be able to interact with objects"
+  notes: |
+    This test demonstrates the start_room feature of the integration test framework.
+    The player is created with load_room set to 3014 (Market Plaza), so they start
+    directly in that room without needing to navigate.
+    
+    This validates:
+    - Player file creation with custom start_room works
+    - Player starts in the specified room
+    - Player can interact with room objects (fountain)
+    
+    Note: The test uses loose pattern matching because the exact server output
+    may vary. The key is demonstrating that the start_room feature works and
+    the player can execute commands in that room.
