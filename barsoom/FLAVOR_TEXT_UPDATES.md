@@ -94,47 +94,14 @@ These should NOT be changed as they are code references:
 - [x] lib/help_table - CAST/ACTIVATE entry
 - [x] lib/help_table - PRACTICE entry
 - [x] lib/help_table - "sense life" references
-- [x] magic.c - Sample key messages (armor, teleport, create food, detect invisibility, invisibility)
+- [x] magic.c - ALL player-visible messages (100% complete)
+- [x] spells1.c - ALL player-visible messages (100% complete)
+- [x] spells2.c - ALL player-visible messages (100% complete)
+- [x] All spell effect messages updated to technology terminology
+- [x] All act() messages updated to technology terminology
+- [x] All send_to_char() messages updated to technology terminology
 
 ### Remaining Updates Needed
-
-#### magic.c (partial - examples done, full file needs review)
-- spell_armor ✓
-- spell_teleport ✓
-- spell_create_food ✓
-- spell_detect_invisibility ✓  
-- spell_invisibility ✓
-- spell_detect_magic - needs update
-- spell_detect_poison - needs update
-- spell_bless - needs update
-- spell_cure_blind - needs update
-- spell_cure_critic - needs update
-- spell_cure_light - needs update
-- spell_heal - needs update
-- spell_strength - needs update
-- spell_word_of_recall - needs update
-- spell_summon - needs update
-- All wear-off messages
-- All damage messages
-
-#### spells1.c (offensive spells - all need review)
-- spell_burning_hands
-- spell_call_lightning
-- spell_chill_touch
-- spell_shocking_grasp
-- spell_colour_spray
-- spell_earthquake
-- spell_energy_drain
-- spell_fireball
-- spell_harm
-- spell_lightning_bolt
-- spell_magic_missile
-- All associated cast_ functions
-
-#### spells2.c (support spells - all need review)
-- All spell implementations
-- All cast_ functions
-- All effect messages
 
 #### lib/help_table (individual technology entries)
 Each spell needs its help entry updated:

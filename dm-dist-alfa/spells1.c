@@ -72,7 +72,7 @@ void cast_call_lightning( byte level, struct char_data *ch, char *arg, int type,
 			if (OUTSIDE(ch) && (weather_info.sky>=SKY_RAINING)) {
 				spell_call_lightning(level, ch, victim, 0);
 			} else {
-				send_to_char("You fail to call upon the lightning from the sky!\n\r", ch);
+				send_to_char("Atmospheric conditions insufficient for lightning rod activation!\n\r", ch);
 			}
 			break;
       case SPELL_TYPE_POTION:
