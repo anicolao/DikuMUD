@@ -22,15 +22,20 @@ steps:
   - action: look
     description: "Look around - should be in Market Plaza with fountain"
     expected:
-      - pattern: "."
-        message: "Should receive output from server"
+      - pattern: "Market Plaza|market|plaza"
+        message: "Should be in Market Plaza"
+      - pattern: "fountain|water"
+        message: "Should see fountain in the room"
 
   - action: command
     command: "drink fountain"
-    description: "Attempt to drink water from the fountain"
+    description: "Drink water from the fountain"
     expected:
-      - pattern: "."
-        message: "Should receive response from server"
+      - pattern: "drink|water|thirst|gulp"
+        message: "Should successfully drink from fountain"
+    fail_on:
+      - pattern: "don't see|can't find|You can't"
+        message: "Fountain should be accessible in the room"
 
 result:
   should_pass: true

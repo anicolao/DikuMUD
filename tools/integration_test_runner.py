@@ -97,8 +97,8 @@ class ServerManager:
         """
         Create a test player file with the specified starting room.
         
-        This creates a minimal but valid character file that the server can load.
-        The structure matches struct char_file_u from structs.h.
+        Uses the C helper program to create a properly formatted player file
+        that matches the exact struct char_file_u format from structs.h.
         
         Args:
             name: Character name (will be lowercased)
@@ -106,139 +106,30 @@ class ServerManager:
             start_room: Room vnum where character should start
         """
         lib_dir = os.path.dirname(self.server_path)
-        player_file = os.path.join(lib_dir, 'lib', 'players')
+        helper_path = os.path.join(os.path.dirname(__file__), 'create_test_player')
         
-        # Calculate offsets carefully based on struct char_file_u
-        # Using standard C struct packing (no padding for most fields)
-        offset = 0
-        char_data = bytearray(2048)  # Should be enough for char_file_u
+        # Check if helper program exists
+        if not os.path.exists(helper_path):
+            print(f"    ! Warning: Helper program not found at {helper_path}")
+            print(f"    ! Compile it with: cd tools && gcc -I../dm-dist-alfa -o create_test_player create_test_player.c")
+            return
         
-        # byte sex, class, level (3 bytes)
-        char_data[offset] = 1  # male
-        char_data[offset + 1] = 1  # fighter  
-        char_data[offset + 2] = 1  # level 1
-        offset += 3
-        
-        # Alignment padding to 4-byte boundary for time_t
-        offset = (offset + 3) & ~3
-        
-        # time_t birth (4 bytes on 32-bit, 8 on 64-bit - use 4 for compatibility)
-        birth_time = int(time.time())
-        struct.pack_into('i', char_data, offset, birth_time)
-        offset += 4
-        
-        # int played (4 bytes)
-        struct.pack_into('i', char_data, offset, 0)
-        offset += 4
-        
-        # ubyte weight, height (2 bytes)
-        char_data[offset] = 180
-        char_data[offset + 1] = 70
-        offset += 2
-        
-        # Alignment padding
-        offset = (offset + 1) & ~1
-        
-        # char title[80]
-        title = b"the Warrior\x00"
-        char_data[offset:offset+len(title)] = title
-        offset += 80
-        
-        # sh_int hometown (2 bytes)
-        struct.pack_into('h', char_data, offset, 3001)
-        offset += 2
-        
-        # char description[240]
-        desc = b"A test character.\x00"
-        char_data[offset:offset+len(desc)] = desc
-        offset += 240
-        
-        # bool talks[3] (3 bytes)
-        offset += 3
-        
-        # Alignment padding
-        offset = (offset + 1) & ~1
-        
-        # sh_int load_room (2 bytes) - THIS IS THE KEY FIELD
-        struct.pack_into('h', char_data, offset, start_room)
-        offset += 2
-        
-        # struct char_ability_data abilities (str, int, wis, dex, con, str_add - 6 bytes)
-        char_data[offset:offset+6] = bytes([16, 16, 16, 16, 16, 0])
-        offset += 6
-        
-        # Alignment padding
-        offset = (offset + 1) & ~1
-        
-        # struct char_point_data points
-        # hit, max_hit, mana, max_mana, move, max_move (6 sh_int = 12 bytes)
-        for val in [20, 20, 100, 100, 100, 100]:
-            struct.pack_into('h', char_data, offset, val)
-            offset += 2
-        
-        # armor, gold, exp, hitroll, damroll (2 sh_int + 1 int + 2 sh_int = 12 bytes)
-        struct.pack_into('h', char_data, offset, 100)  # armor
-        offset += 2
-        struct.pack_into('h', char_data, offset, 100)  # gold
-        offset += 2
-        struct.pack_into('i', char_data, offset, 0)    # exp
-        offset += 4
-        struct.pack_into('h', char_data, offset, 0)    # hitroll
-        offset += 2
-        struct.pack_into('h', char_data, offset, 0)    # damroll
-        offset += 2
-        
-        # Skip skills[53] and affected[25] - leave as zeros
-        # Each skill is ~4 bytes, affected is ~12 bytes
-        offset += (53 * 4) + (25 * 12)
-        
-        # byte spells_to_learn
-        char_data[offset] = 0
-        offset += 1
-        
-        # Alignment padding
-        offset = (offset + 3) & ~3
-        
-        # int alignment
-        struct.pack_into('i', char_data, offset, 0)
-        offset += 4
-        
-        # time_t last_logon
-        struct.pack_into('i', char_data, offset, birth_time)
-        offset += 4
-        
-        # ubyte act
-        char_data[offset] = 0
-        offset += 1
-        
-        # Alignment padding
-        offset = (offset + 3) & ~3
-        
-        # char name[20]
-        name_lower = name.lower()[:19].encode('ascii') + b'\x00'
-        char_data[offset:offset+len(name_lower)] = name_lower
-        offset += 20
-        
-        # char pwd[14] (13 + 1 for CRYPT_OUTPUT_SIZE + 1)
-        # Store plaintext password - server will encrypt on first login
-        pwd_bytes = password[:13].encode('ascii') + b'\x00'
-        char_data[offset:offset+len(pwd_bytes)] = pwd_bytes
-        offset += 14
-        
-        # sh_int apply_saving_throw[5] (10 bytes)
-        offset += 10
-        
-        # int conditions[3] (12 bytes) - set to non-hungry/thirsty/drunk
-        struct.pack_into('i', char_data, offset, 24)     # full
-        struct.pack_into('i', char_data, offset + 4, 24) # not thirsty
-        struct.pack_into('i', char_data, offset + 8, 0)  # not drunk
-        offset += 12
-        
-        # Write player file
-        with open(player_file, 'wb') as f:
-            f.write(char_data)
-        
-        print(f"    Created test player '{name}' starting in room {start_room}")
+        # Run helper program from the server directory
+        try:
+            result = subprocess.run(
+                [helper_path, name, password, str(start_room)],
+                cwd=lib_dir,
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.returncode == 0:
+                print(f"    {result.stdout.strip()}")
+            else:
+                print(f"    ! Error creating player file: {result.stderr}")
+        except Exception as e:
+            print(f"    ! Exception creating player file: {e}")
     
     def cleanup(self):
         """Clean up test artifacts (player files, etc.)."""
@@ -309,12 +200,14 @@ class GameClient:
         self.port = port
         self.connection = None
     
-    def connect(self, timeout: int = 10):
+    def connect(self, timeout: int = 10, char_name: str = None, char_pass: str = None):
         """
-        Connect to game server.
+        Connect to game server and optionally login.
         
         Args:
             timeout: Connection timeout in seconds
+            char_name: Character name for login (optional)
+            char_pass: Character password for login (optional)
             
         Raises:
             ConnectionError: If connection fails
@@ -323,7 +216,27 @@ class GameClient:
             self.connection = telnetlib.Telnet(self.host, self.port, timeout)
             # Read initial welcome message
             time.sleep(0.5)
-            self._read_available()
+            welcome = self._read_available()
+            
+            # If character name provided, handle login
+            if char_name and char_pass:
+                # Send character name
+                self.connection.write(char_name.encode('ascii') + b'\n')
+                time.sleep(0.5)
+                response = self._read_available()
+                
+                # Answer "yes" to name confirmation
+                if "Did I get that right" in response or "(Y/N)" in response:
+                    self.connection.write(b'yes\n')
+                    time.sleep(0.5)
+                    response = self._read_available()
+                
+                # Enter password
+                if "password" in response.lower() or "Password" in response:
+                    self.connection.write(char_pass.encode('ascii') + b'\n')
+                    time.sleep(1.0)  # Give server time to process login
+                    response = self._read_available()
+                    
         except Exception as e:
             raise ConnectionError(f"Failed to connect to {self.host}:{self.port}: {e}")
     
@@ -594,6 +507,9 @@ class TestExecutor:
             else:
                 if not optional:
                     print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
+                    # Debug: show first 200 chars of output
+                    debug_output = output[:200].replace('\n', '\\n').replace('\r', '\\r')
+                    print(f"      Output preview: {debug_output}...")
                     all_passed = False
                 else:
                     print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
@@ -639,11 +555,20 @@ class TestRunner:
             print(f"✗ Failed to load test file: {e}")
             return False
         
+        # Get character info from setup
+        char_name = None
+        char_pass = None
+        if 'setup' in test_def and 'character' in test_def['setup']:
+            char_name = test_def['setup']['character'].get('name', 'TestChar')
+            char_pass = test_def['setup']['character'].get('password', 'test')
+        
         # Check if we need to create a test player with a specific start room
         if 'setup' in test_def and 'start_room' in test_def['setup']:
             start_room = test_def['setup']['start_room']
-            char_name = test_def['setup'].get('character', {}).get('name', 'TestChar')
-            char_pass = test_def['setup'].get('character', {}).get('password', 'test')
+            if not char_name:
+                char_name = 'TestChar'
+            if not char_pass:
+                char_pass = 'test'
             
             try:
                 self.server_manager.create_test_player(char_name, char_pass, start_room)
@@ -663,8 +588,10 @@ class TestRunner:
             # Connect client
             client = GameClient('localhost', port)
             try:
-                client.connect()
+                client.connect(char_name=char_name, char_pass=char_pass)
                 print(f"✓ Connected to server")
+                if char_name:
+                    print(f"✓ Logged in as {char_name}")
             except Exception as e:
                 print(f"✗ Failed to connect: {e}")
                 return False
