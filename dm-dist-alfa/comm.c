@@ -63,6 +63,7 @@ int no_specials = 0; /* Suppress ass. of special routines */
 
 int maxdesc, avail_descs;
 int tics = 0;        /* for extern checkpointing */
+int pulse = 0;       /* global pulse counter for tick timing */
 
 int get_from_q(struct txt_q *queue, char *dest);
 /* write_to_q is in comm.h for the macro */
@@ -305,6 +306,8 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 	struct char_data *player_fighter = NULL;
 	struct char_data *mob_fighter = NULL;
 	extern struct char_data *combat_list;
+	extern int pulse;
+	int tick_pulse, secs_to_tick;
 
 	/* Default prompt for non-playing states */
 	if (!d->character || d->connected) {
@@ -314,6 +317,10 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 	}
 
 	ch = d->character;
+
+	/* Calculate seconds until next tick */
+	tick_pulse = SECS_PER_MUD_HOUR * 4;  /* 300 pulses = 75 seconds */
+	secs_to_tick = (tick_pulse - (pulse % tick_pulse)) / 4;
 
 	/* Build exits string - initialize entire buffer to 0 */
 	memset(exits_buf, 0, sizeof(exits_buf));
@@ -405,19 +412,21 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 
 	/* Build the full prompt */
 	if (has_combat) {
-		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s %s> ",
+		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC T:%d Exits:%s %s> ",
 			GET_HIT(ch),
 			GET_MANA(ch),
 			GET_MOVE(ch),
 			GET_GOLD(ch),
+			secs_to_tick,
 			exit_pos > 0 ? exits_buf : "None",
 			combat_buf);
 	} else {
-		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s> ",
+		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC T:%d Exits:%s> ",
 			GET_HIT(ch),
 			GET_MANA(ch),
 			GET_MOVE(ch),
 			GET_GOLD(ch),
+			secs_to_tick,
 			exit_pos > 0 ? exits_buf : "None");
 	}
 }
@@ -431,7 +440,7 @@ int game_loop(int s)
 	static struct timeval opt_time;
 	char comm[MAX_INPUT_LENGTH];
 	struct descriptor_data *t, *point, *next_point;
-	int pulse = 0, mask;
+	int mask;
 
 	null_time.tv_sec = 0;
 	null_time.tv_usec = 0;

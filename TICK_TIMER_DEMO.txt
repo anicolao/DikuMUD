@@ -1,0 +1,54 @@
+================================================================================
+                      TICK TIMER FEATURE DEMONSTRATION
+================================================================================
+
+The tick timer shows a countdown from 75 seconds to 0 before each game tick.
+
+PROMPT FORMAT:
+--------------
+XH XF XV XC T:XX Exits:XXX>
+
+Where:
+  XH = Hit Points
+  XF = Mana/Force Points  
+  XV = Movement Points
+  XC = Coins/Gold
+  T:XX = Tick Timer (seconds until next tick)
+  Exits:XXX = Available exits (N,E,S,W,U,D)
+
+SAMPLE PROMPTS SHOWING COUNTDOWN:
+----------------------------------
+
+5H 100F 82V 0C T:40 Exits:NSD>
+5H 100F 82V 0C T:37 Exits:NSD> (3 seconds later)
+5H 100F 82V 0C T:35 Exits:NSD> (2 seconds later)
+5H 100F 82V 0C T:32 Exits:NSD> (3 seconds later)
+5H 100F 82V 0C T:30 Exits:NSD> (2 seconds later)
+5H 100F 82V 0C T:27 Exits:NSD> (3 seconds later)
+
+The timer accurately counts down in real-time, showing exactly when the next
+game tick (regeneration, zone resets, etc.) will occur.
+
+COMBAT EXAMPLE:
+---------------
+
+45H 30F 60V 100C T:33 Exits:N [Warrior:pretty hurt] [troll:just a scratch]>
+
+The tick timer is integrated seamlessly with the existing combat status display.
+
+FEATURES:
+---------
+✓ Counts down from 75 to 0 in real seconds
+✓ Resets to 75 after reaching 0
+✓ Works with both combat and non-combat prompts
+✓ No performance impact
+✓ Minimal code changes
+
+TECHNICAL NOTES:
+----------------
+- Game ticks occur every 75 seconds (SECS_PER_MUD_HOUR)
+- The timer uses the global pulse counter (increments every 0.25 seconds)
+- Calculation: secs_to_tick = (300 - (pulse % 300)) / 4
+- Where 300 pulses = 75 seconds, and pulse rate is 4 per second
+
+================================================================================
