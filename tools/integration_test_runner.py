@@ -630,19 +630,23 @@ class TestRunner:
             char_name = test_def['setup']['character'].get('name', 'TestChar')
             char_pass = test_def['setup']['character'].get('password', 'test')
         
-        # Check if we need to create a test player with a specific start room
-        if 'setup' in test_def and 'start_room' in test_def['setup']:
-            start_room = test_def['setup']['start_room']
-            if not char_name:
-                char_name = 'TestChar'
-            if not char_pass:
-                char_pass = 'test'
-            
-            try:
-                self.server_manager.create_test_player(char_name, char_pass, start_room)
-            except Exception as e:
-                print(f"✗ Failed to create test player: {e}")
-                return False
+        # start_room is REQUIRED - all tests must specify where the character starts
+        if 'setup' not in test_def or 'start_room' not in test_def['setup']:
+            print(f"✗ Test error: 'start_room' is required in setup section")
+            print(f"   Add 'start_room: <vnum>' to the setup section of your test")
+            return False
+        
+        start_room = test_def['setup']['start_room']
+        if not char_name:
+            char_name = 'TestChar'
+        if not char_pass:
+            char_pass = 'test'
+        
+        try:
+            self.server_manager.create_test_player(char_name, char_pass, start_room)
+        except Exception as e:
+            print(f"✗ Failed to create test player: {e}")
+            return False
         
         # Start server
         try:

@@ -26,7 +26,7 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001  # Temple of the Jeddak
+  start_room: 3001  # Temple of the Jeddak
 
 steps:
   # First, check the starting room (3001) for the lamp

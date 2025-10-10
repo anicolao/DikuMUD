@@ -26,7 +26,7 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001  # Temple of the Jeddak (starting location)
+  start_room: 3001  # Temple of the Jeddak (starting location)
   gold: 1000  # Enough gold to make purchases
 
 steps:

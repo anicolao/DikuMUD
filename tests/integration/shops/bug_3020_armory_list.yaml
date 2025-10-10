@@ -25,7 +25,7 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001  # Temple of the Jeddak
+  start_room: 3001  # Temple of the Jeddak
   gold: 5000  # Armor and weapons can be expensive
 
 steps:
