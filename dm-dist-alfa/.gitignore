@@ -12,3 +12,5 @@ lib/tinyworld.mob
 lib/tinyworld.obj
 lib/tinyworld.zon
 lib/tinyworld.shp
+lib/tinyworld.qst
+lib/.worldfiles_built
