@@ -47,7 +47,7 @@ void cast_armor( byte level, struct char_data *ch, char *arg, int type,
 				return;
 			}
 			if (ch != tar_ch)
-				act("$N is protected by your deity.", FALSE, ch, 0, tar_ch, TO_CHAR);
+				act("$N's personal shield device is now active.", FALSE, ch, 0, tar_ch, TO_CHAR);
 
 			spell_armor(level,ch,tar_ch,0);
 			break;
@@ -298,7 +298,7 @@ void cast_create_food( byte level, struct char_data *ch, char *arg, int type,
 
   switch (type) {
     case SPELL_TYPE_SPELL:
-			act("$n magically creates a mushroom.",FALSE, ch, 0, 0, TO_ROOM);
+			act("$n synthesizes food from available materials.",FALSE, ch, 0, 0, TO_ROOM);
          spell_create_food(level,ch,0,0);
 			break;
     case SPELL_TYPE_SCROLL:
@@ -615,8 +615,8 @@ void cast_heal( byte level, struct char_data *ch, char *arg, int type,
 {
   switch (type) {
     case SPELL_TYPE_SPELL:
-			act("$n heals $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
-			act("You heal $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
+			act("$n activates regeneration technology on $N.", FALSE, ch, 0, tar_ch, TO_NOTVICT);
+			act("You activate the regeneration chamber for $N.", FALSE, ch, 0, tar_ch, TO_CHAR);
 			spell_heal(level, ch, tar_ch, 0);
 			break;
     case SPELL_TYPE_POTION:

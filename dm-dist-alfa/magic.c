@@ -271,7 +271,7 @@ void spell_dispel_evil(byte level, struct char_data *ch,
 		victim = ch;
 	else
 	  if (IS_GOOD(victim)) {
-			act("God protects $N.", FALSE, ch, 0, victim, TO_CHAR);
+			act("$N is shielded by powerful technology.", FALSE, ch, 0, victim, TO_CHAR);
   	  return;
 		}
 
@@ -631,7 +631,7 @@ void spell_curse(byte level, struct char_data *ch,
     /* LOWER ATTACK DICE BY -1 */
     if(obj->obj_flags.type_flag == ITEM_WEAPON)
       obj->obj_flags.value[2]--;
-		act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
+		act("$p pulses with disruptive energy.", FALSE, ch, obj, 0, TO_CHAR);
 	} else {
     if ( saves_spell(victim, SAVING_SPELL) ||
 		   affected_by_spell(victim, SPELL_CURSE))
@@ -648,8 +648,8 @@ void spell_curse(byte level, struct char_data *ch,
     af.modifier = 1; /* Make worse */
     affect_to_char(victim, &af);
 
-    act("$n briefly reveal a red aura!", FALSE, victim, 0, 0, TO_ROOM);
-		act("You feel very uncomfortable.",FALSE,victim,0,0,TO_CHAR);
+    act("$n's body flickers with disruptive energy!", FALSE, victim, 0, 0, TO_ROOM);
+		act("Neural inhibitor engaged - you feel impaired.",FALSE,victim,0,0,TO_CHAR);
 	}
 }
 
@@ -674,7 +674,7 @@ void spell_detect_evil(byte level, struct char_data *ch,
 
   affect_to_char(victim, &af);
 
-  send_to_char("Your eyes tingle.\n\r", victim);
+  send_to_char("Your alignment scanner activates.\n\r", victim);
 }
 
 
@@ -721,7 +721,7 @@ void spell_detect_magic(byte level, struct char_data *ch,
   af.bitvector = AFF_DETECT_MAGIC;
 
   affect_to_char(victim, &af);
-  send_to_char("Your eyes tingle.\n\r", victim);
+  send_to_char("Your technology scanner activates, detecting radium signatures.\n\r", victim);
 }
 
 
@@ -781,12 +781,12 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 
 		if (IS_GOOD(ch)) {
 			SET_BIT(obj->obj_flags.extra_flags, ITEM_ANTI_EVIL);
-			act("$p glows blue.",FALSE,ch,obj,0,TO_CHAR);
+			act("$p pulses with purifying energy.",FALSE,ch,obj,0,TO_CHAR);
 		} else if (IS_EVIL(ch)) {
       SET_BIT(obj->obj_flags.extra_flags, ITEM_ANTI_GOOD);
-      act("$p glows red.",FALSE,ch,obj,0,TO_CHAR);
+      act("$p radiates dark energy.",FALSE,ch,obj,0,TO_CHAR);
     } else {
-      act("$p glows yellow.",FALSE,ch,obj,0,TO_CHAR);
+      act("$p shimmers with neutral energy.",FALSE,ch,obj,0,TO_CHAR);
 		}
 	}
 }
@@ -985,8 +985,8 @@ void spell_sanctuary(byte level, struct char_data *ch,
 
   if (!affected_by_spell(victim, SPELL_SANCTUARY) ) {
 
-    act("$n is surrounded by a white aura.",TRUE,victim,0,0,TO_ROOM);
-		act("You start glowing.",TRUE,victim,0,0,TO_CHAR);
+    act("$n is surrounded by a shimmering energy field.",TRUE,victim,0,0,TO_ROOM);
+		act("Your sanctuary field generator activates with a radiant glow.",TRUE,victim,0,0,TO_CHAR);
 
     af.type      = SPELL_SANCTUARY;
     af.duration  = (level<21) ? 3 : level;
@@ -1252,7 +1252,7 @@ void spell_identify(byte level, struct char_data *ch,
 
 			case ITEM_SCROLL : 
 			case ITEM_POTION :
-				sprintf(buf, "Level %d spells of:\n\r",	obj->obj_flags.value[0]);
+				sprintf(buf, "Level %d technologies of:\n\r",	obj->obj_flags.value[0]);
 				send_to_char(buf, ch);
 				if (obj->obj_flags.value[1] >= 1) {
 					sprinttype(obj->obj_flags.value[1]-1,spells,buf);
@@ -1273,12 +1273,12 @@ void spell_identify(byte level, struct char_data *ch,
 
 			case ITEM_WAND : 
 			case ITEM_STAFF : 
-				sprintf(buf, "Has %d chages, with %d charges left.\n\r",
+				sprintf(buf, "Has %d charges, with %d charges left.\n\r",
 				  obj->obj_flags.value[1],
 				  obj->obj_flags.value[2]);
 				send_to_char(buf, ch);
 
-				sprintf(buf, "Level %d spell of:\n\r",	obj->obj_flags.value[0]);
+				sprintf(buf, "Level %d technology of:\n\r",	obj->obj_flags.value[0]);
 				send_to_char(buf, ch);
 
 				if (obj->obj_flags.value[3] >= 1) {
