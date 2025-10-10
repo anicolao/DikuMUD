@@ -167,3 +167,30 @@ void boot_quests(void)
 	snprintf(buf, sizeof(buf), "   %d quests loaded", top_of_quest_table);
 	slog(buf);
 }
+
+/* Automatically assign quest_giver special procedure to all quest-giving mobs */
+void assign_quest_givers(void)
+{
+	extern struct index_data *mob_index;
+	extern int real_mobile(int virtual);
+	extern int quest_giver(struct char_data *ch, int cmd, char *arg);
+	int i, real_mob;
+	char buf[256];
+	int assigned = 0;
+	
+	for (i = 0; i < top_of_quest_table; i++) {
+		real_mob = real_mobile(quest_index[i].giver_vnum);
+		if (real_mob >= 0) {
+			mob_index[real_mob].func = quest_giver;
+			assigned++;
+		} else {
+			snprintf(buf, sizeof(buf), 
+				"   Warning: Quest %d references non-existent mob %d",
+				quest_index[i].qnum, quest_index[i].giver_vnum);
+			slog(buf);
+		}
+	}
+	
+	snprintf(buf, sizeof(buf), "   %d quest givers assigned", assigned);
+	slog(buf);
+}

@@ -181,6 +181,8 @@ void boot_db(void)
 
 	slog("Loading quests.");
 	boot_quests();
+	slog("Assigning quest givers.");
+	assign_quest_givers();
 
 	slog("Updating characters with saved items:");
 	update_obj_file();

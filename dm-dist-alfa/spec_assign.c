@@ -37,8 +37,6 @@ void assign_mobiles(void)
 	int bat_green(struct char_data *ch, int cmd, char *arg);
 	int bat_black(struct char_data *ch, int cmd, char *arg);
 	int bat_white(struct char_data *ch, int cmd, char *arg);
-	int quest_giver(struct char_data *ch, int cmd, char *arg);
-
 
 	mob_index[real_mobile(1)].func = puff;
 
@@ -62,13 +60,8 @@ void assign_mobiles(void)
 
 	mob_index[real_mobile(3143)].func = mayor;
 
-	/* Quest givers - generic handler for all quest-giving NPCs */
-	mob_index[real_mobile(4051)].func = quest_giver;  /* Sola in Thark Territory */
-	mob_index[real_mobile(4202)].func = quest_giver;  /* Ras Thavas in Atmosphere Lower */
-	mob_index[real_mobile(4203)].func = quest_giver;  /* Vad Varo in Atmosphere Lower */
-	mob_index[real_mobile(4212)].func = quest_giver;  /* The First Engineer in Atmosphere Lower */
-	mob_index[real_mobile(4214)].func = quest_giver;  /* Power technician in Atmosphere Lower */
-	mob_index[real_mobile(4215)].func = quest_giver;  /* Biological researcher in Atmosphere Lower */
+	/* Quest givers are now assigned automatically in assign_quest_givers()
+	 * after boot_quests() loads quest data from tinyworld.qst */
 
 	boot_the_shops();
 	assign_the_shopkeepers();
