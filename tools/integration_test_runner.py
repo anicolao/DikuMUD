@@ -114,7 +114,7 @@ class ServerManager:
                 pass
             self.process = None
     
-    def create_test_player(self, name: str, password: str, start_room: int = 3001):
+    def create_test_player(self, name: str, password: str, start_room: int = 3001, level: int = 1):
         """
         Create a test player file with the specified starting room.
         
@@ -126,6 +126,7 @@ class ServerManager:
             name: Character name (will be lowercased)
             password: Character password (plaintext, will be encrypted by server)
             start_room: Room vnum where character should start
+            level: Character level (default: 1)
         """
         # Create test_lib first if not already created
         if not self.test_lib_path:
@@ -144,9 +145,14 @@ class ServerManager:
         try:
             env = os.environ.copy()
             
-            # Use -d parameter to write directly to test_lib, avoiding damage to lib/
+            # Build command with optional level parameter
+            cmd = [helper_path, '-d', self.test_lib_path]
+            if level > 1:
+                cmd.extend(['-l', str(level)])
+            cmd.extend([name, password, str(start_room)])
+            
             result = subprocess.run(
-                [helper_path, '-d', self.test_lib_path, name, password, str(start_room)],
+                cmd,
                 cwd=server_dir,
                 capture_output=True,
                 text=True,
@@ -635,9 +641,11 @@ class TestRunner:
         # Get character info from setup
         char_name = None
         char_pass = None
+        char_level = 1
         if 'setup' in test_def and 'character' in test_def['setup']:
             char_name = test_def['setup']['character'].get('name', 'TestChar')
             char_pass = test_def['setup']['character'].get('password', 'test')
+            char_level = test_def['setup']['character'].get('level', 1)
         
         # start_room is REQUIRED - all tests must specify where the character starts
         if 'setup' not in test_def or 'start_room' not in test_def['setup']:
@@ -652,7 +660,7 @@ class TestRunner:
             char_pass = 'test'
         
         try:
-            self.server_manager.create_test_player(char_name, char_pass, start_room)
+            self.server_manager.create_test_player(char_name, char_pass, start_room, char_level)
         except Exception as e:
             print(f"✗ Failed to create test player: {e}")
             return False
