@@ -167,6 +167,7 @@ void do_wiz(struct char_data *ch, char *argument, int cmd);
 
 void do_action(struct char_data *ch, char *arg, int cmd);
 void do_practice(struct char_data *ch, char *arg, int cmd);
+void do_zone(struct char_data *ch, char *arg, int cmd);
 
 
 const char *make_salt(const char *lsalt) {
@@ -405,6 +406,7 @@ char *command[]=
 	"gol",
 	"wizlist",
 	";",
+	"zone",      /* 221 */
   "\n"
 };
 
@@ -981,6 +983,7 @@ void assign_command_pointers ( void )
 	COMMANDO(218,POSITION_DEAD,do_log,24);
 	COMMANDO(219,POSITION_DEAD,do_wizlist,0);
 	COMMANDO(220,POSITION_DEAD,do_wiz,21);
+	COMMANDO(221,POSITION_RESTING,do_zone,0);
 
 }
 

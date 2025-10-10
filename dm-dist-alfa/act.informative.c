@@ -1308,3 +1308,91 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
 		send_to_char("You ARE mad!\n\r", ch);
 
 }
+
+
+void do_zone(struct char_data *ch, char *argument, int cmd)
+{
+	char arg[MAX_INPUT_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	int i, zone_num, found, q, r;
+	int player_room;
+	int zone_start, zone_end;
+	
+	extern struct zone_data *zone_table;
+	extern int top_of_zone_table;
+	extern struct quest_data *quest_index;
+	extern int top_of_quest_table;
+	extern struct room_data *world;
+	extern int top_of_world;
+	
+	one_argument(argument, arg);
+	
+	if (!*arg) {
+		/* Show current zone info */
+		player_room = ch->in_room;
+		zone_num = world[player_room].zone;
+		
+		if (zone_num < 0 || zone_num > top_of_zone_table) {
+			send_to_char("You are in an unknown zone.\n\r", ch);
+			return;
+		}
+		
+		snprintf(buf, sizeof(buf), "You are in: %s\n\r", zone_table[zone_num].name);
+		send_to_char(buf, ch);
+		return;
+	}
+	
+	/* Check for "status" subcommand */
+	if (!strcasecmp(arg, "status")) {
+		/* Show all zones with metadata */
+		strcpy(buf, "Zone Status Summary:\n\r");
+		strcat(buf, "===================\n\r\n\r");
+		
+		for (i = 0; i <= top_of_zone_table; i++) {
+			/* Skip system zones */
+			if (zone_table[i].top <= 3) continue;
+			
+			/* Calculate zone range */
+			zone_start = (i == 0) ? 0 : (zone_table[i-1].top + 1);
+			zone_end = zone_table[i].top;
+			
+			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+				"%-25s (Rooms %d-%d)\n\r", 
+				zone_table[i].name, zone_start, zone_end);
+			
+			/* Find quests in this zone by checking quest givers */
+			found = 0;
+			for (q = 0; q < top_of_quest_table; q++) {
+				/* Find which zone the quest giver is in */
+				for (r = 0; r < top_of_world; r++) {
+					if (world[r].number == quest_index[q].giver_vnum) {
+						if (world[r].zone == i) {
+							found++;
+							break;
+						}
+					}
+				}
+			}
+			
+			if (found > 0) {
+				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
+					"  Quests: %d available\n\r", found);
+			}
+			
+			strcat(buf, "\n\r");
+			
+			/* Send in chunks if getting too long */
+			if (strlen(buf) > MAX_STRING_LENGTH - 500) {
+				send_to_char(buf, ch);
+				strcpy(buf, "");
+			}
+		}
+		
+		if (*buf) {
+			send_to_char(buf, ch);
+		}
+		return;
+	}
+	
+	send_to_char("Usage: zone [status]\n\r", ch);
+}
