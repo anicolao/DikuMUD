@@ -140,13 +140,13 @@ class ServerManager:
             print(f"    ! Build it with: cd dm-dist-alfa && make ../tools/create_test_player")
             return
         
-        # Run helper program, setting the working directory to use test_lib
+        # Run helper program with -d parameter to write directly to test_lib
         try:
-            # Change to the server directory with test_lib
             env = os.environ.copy()
             
+            # Use -d parameter to write directly to test_lib, avoiding damage to lib/
             result = subprocess.run(
-                [helper_path, name, password, str(start_room)],
+                [helper_path, '-d', self.test_lib_path, name, password, str(start_room)],
                 cwd=server_dir,
                 capture_output=True,
                 text=True,
@@ -155,15 +155,7 @@ class ServerManager:
             )
             
             if result.returncode == 0:
-                # The helper creates in lib/, we need to move it to test_lib/
-                import shutil
-                src_player = os.path.join(server_dir, 'lib', 'players')
-                dst_player = os.path.join(server_dir, 'test_lib', 'players')
-                if os.path.exists(src_player):
-                    shutil.move(src_player, dst_player)
-                    print(f"    {result.stdout.strip()}")
-                else:
-                    print(f"    {result.stdout.strip()}")
+                print(f"    {result.stdout.strip()}")
             else:
                 print(f"    ! Error creating player file: {result.stderr}")
         except Exception as e:
@@ -398,9 +390,10 @@ class TestExecutor:
     - Report results
     """
     
-    def __init__(self, client: GameClient):
+    def __init__(self, client: GameClient, show_all_output: bool = False):
         self.client = client
         self.results = []
+        self.show_all_output = show_all_output
     
     def load_test(self, test_file: Path) -> Dict[str, Any]:
         """
@@ -509,6 +502,13 @@ class TestExecutor:
         command = step['command']
         output = self.client.send_command(command)
         
+        # Show all output if flag is set
+        if self.show_all_output:
+            print(f"\n    === Command Output ===")
+            print(f"    Command: {command}")
+            print(f"    Output:\n{output}")
+            print(f"    === End Output ===\n")
+        
         # Check fail_on conditions first
         if 'fail_on' in step:
             for fail_condition in step['fail_on']:
@@ -532,6 +532,13 @@ class TestExecutor:
             command = "look"
         
         output = self.client.send_command(command)
+        
+        # Show all output if flag is set
+        if self.show_all_output:
+            print(f"\n    === Command Output ===")
+            print(f"    Command: {command}")
+            print(f"    Output:\n{output}")
+            print(f"    === End Output ===\n")
         
         # Validate expectations
         if 'expected' in step:
@@ -597,9 +604,10 @@ class TestRunner:
     - Generate reports
     """
     
-    def __init__(self, server_path: str, lib_path: str):
+    def __init__(self, server_path: str, lib_path: str, show_all_output: bool = False):
         self.server_manager = ServerManager(server_path, lib_path)
         self.results = []
+        self.show_all_output = show_all_output
     
     def run_test_file(self, test_file: Path, verbose: bool = False) -> bool:
         """
@@ -670,7 +678,7 @@ class TestRunner:
                 return False
             
             # Execute test
-            executor = TestExecutor(client)
+            executor = TestExecutor(client, show_all_output=self.show_all_output)
             try:
                 passed = executor.execute_test(test_def)
             except Exception as e:
@@ -746,15 +754,29 @@ def main():
     
     # Parse arguments
     if len(sys.argv) < 3:
-        print("\nUsage: python3 integration_test_runner.py <server_path> <test_file_or_dir>")
-        print("       python3 integration_test_runner.py <server_path> --all <test_dir>")
+        print("\nUsage: python3 integration_test_runner.py [--show-all-output] <server_path> <test_file_or_dir>")
+        print("       python3 integration_test_runner.py [--show-all-output] <server_path> --all <test_dir>")
+        print("\nOptions:")
+        print("  --show-all-output    Show all command output from the game server")
         print("\nExample:")
         print("  python3 integration_test_runner.py ./dmserver tests/integration/shops/bug_3003_nobles_waiter_list.yaml")
         print("  python3 integration_test_runner.py ./dmserver --all tests/integration/")
+        print("  python3 integration_test_runner.py --show-all-output ./dmserver --all tests/integration/")
         sys.exit(1)
     
-    server_path = sys.argv[1]
-    test_arg = sys.argv[2]
+    # Check for --show-all-output flag
+    show_all_output = False
+    arg_offset = 1
+    if sys.argv[1] == '--show-all-output':
+        show_all_output = True
+        arg_offset = 2
+        if len(sys.argv) < 4:
+            print("\n✗ Error: Not enough arguments")
+            print("Usage: python3 integration_test_runner.py [--show-all-output] <server_path> <test_file_or_dir>")
+            sys.exit(1)
+    
+    server_path = sys.argv[arg_offset]
+    test_arg = sys.argv[arg_offset + 1]
     
     # Verify server exists
     if not os.path.exists(server_path):
@@ -766,12 +788,12 @@ def main():
     lib_path = os.path.join(os.path.dirname(server_path), 'lib')
     
     # Create test runner
-    runner = TestRunner(server_path, lib_path)
+    runner = TestRunner(server_path, lib_path, show_all_output=show_all_output)
     
     # Run tests
-    if test_arg == '--all' and len(sys.argv) > 3:
+    if test_arg == '--all' and len(sys.argv) > arg_offset + 2:
         # Run all tests in directory
-        test_dir = Path(sys.argv[3])
+        test_dir = Path(sys.argv[arg_offset + 2])
         if not test_dir.exists():
             print(f"\n✗ Error: Test directory not found: {test_dir}")
             sys.exit(1)

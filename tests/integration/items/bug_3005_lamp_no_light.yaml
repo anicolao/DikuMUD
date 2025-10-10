@@ -26,23 +26,9 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  start_room: 3001  # Temple of the Jeddak
+  start_room: 3005  # Start in room where bug was reported
 
 steps:
-  # First, check the starting room (3001) for the lamp
-  - action: look
-    description: "Look for lamp in Temple of the Jeddak (3001)"
-    expected:
-      - pattern: "lamp|light|lantern"
-        message: "Should see lamp in the room"
-        optional: true  # Might be in adjacent room
-
-  # If not in 3001, navigate to room 3005 where bug was reported
-  - action: move
-    description: "Move to room 3005 if not already there"
-    target_room: 3005
-    optional: true  # Only if lamp not in starting room
-
   # Look for lamp in current room
   - action: look
     description: "Look for lamp in current room"

@@ -28,20 +28,36 @@ static const char *encrypt_password(const char *pass, const char *salt) {
 int main(int argc, char *argv[]) {
     struct char_file_u player;
     FILE *fl;
-    char *name, *password;
+    char *name, *password, *data_dir = NULL;
     int load_room;
     char salt[256];
     char lowercase_name[20];
+    char player_file_path[512];
+    int i;
     
     if (argc < 4) {
-        printf("Usage: %s <name> <password> <load_room>\n", argv[0]);
-        printf("Example: %s TestChar test 3014\n", argv[0]);
+        printf("Usage: %s [-d data_dir] <name> <password> <load_room>\n", argv[0]);
+        printf("Example: %s -d test_lib TestChar test 3014\n", argv[0]);
+        printf("Example: %s TestChar test 3014  (writes to lib/players)\n", argv[0]);
         return 1;
     }
     
-    name = argv[1];
-    password = argv[2];
-    load_room = atoi(argv[3]);
+    /* Parse command line arguments */
+    i = 1;
+    if (argc >= 5 && strcmp(argv[i], "-d") == 0) {
+        data_dir = argv[i + 1];
+        i += 2;
+    }
+    
+    if (argc - i < 3) {
+        printf("Error: Missing required arguments\n");
+        printf("Usage: %s [-d data_dir] <name> <password> <load_room>\n", argv[0]);
+        return 1;
+    }
+    
+    name = argv[i];
+    password = argv[i + 1];
+    load_room = atoi(argv[i + 2]);
     
     /* Initialize structure to zeros */
     bzero(&player, sizeof(struct char_file_u));
@@ -112,7 +128,13 @@ int main(int argc, char *argv[]) {
     player.act = 0;
     
     /* Write player file */
-    if (!(fl = fopen("lib/players", "wb"))) {
+    if (data_dir) {
+        snprintf(player_file_path, sizeof(player_file_path), "%s/players", data_dir);
+    } else {
+        snprintf(player_file_path, sizeof(player_file_path), "lib/players");
+    }
+    
+    if (!(fl = fopen(player_file_path, "wb"))) {
         perror("Failed to create player file");
         return 1;
     }

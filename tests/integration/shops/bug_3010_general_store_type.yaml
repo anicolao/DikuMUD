@@ -25,18 +25,10 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  start_room: 3001
+  start_room: 3010  # Start directly in general store
   gold: 1000
 
 steps:
-  # Navigate to general store (room 3010)
-  - action: move
-    description: "Walk to general store at room 3010"
-    target_room: 3010
-    expected:
-      - pattern: "general store|shop|merchant"
-        message: "Should arrive at general store"
-
   # Verify merchant is present
   - action: look
     description: "Look for store keeper"
