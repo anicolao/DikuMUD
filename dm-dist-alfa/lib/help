@@ -7,7 +7,7 @@ SLEEP WAKE REST SIT STAND       |
 --------------------------------+----------------------------------------------
 Objects:                        | Information: 
 GET DROP PUT GIVE WEAR GRAB     | SCORE HELP INFO WHO NEWS TIME WEATHER WHERE
-INVENTORY EQUIPMENT EXAMINE EAT | CONSIDER LEVELS WIZLIST CREDITS WIZHELP
+INVENTORY EQUIPMENT EXAMINE EAT | CONSIDER LEVELS WIZLIST CREDITS WIZHELP ZONE
 TASTE POUR WRITE DRINK SIP      |
 --------------------------------+----------------------------------------------
 Combat:                         | Utility:

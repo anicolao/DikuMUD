@@ -1357,20 +1357,45 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 			zone_end = zone_table[i].top;
 			
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-				"%-25s (Rooms %d-%d)\n\r", 
+				"%-40s (Rooms %d-%d)\n\r", 
 				zone_table[i].name, zone_start, zone_end);
 			
-			/* Find quests in this zone by checking quest givers */
+			/* Add level range info for known zones */
+			if (!strcasecmp(zone_table[i].name, "Lesser Helium")) {
+				strcat(buf, "  Level Range: 1-10 (Starting zone)\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Lesser Helium Sewers")) {
+				strcat(buf, "  Level Range: 1-4\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Dead Sea Wilderness")) {
+				strcat(buf, "  Level Range: 5-15\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Greater Helium")) {
+				strcat(buf, "  Level Range: 8-16\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Zodanga - Enemy City")) {
+				strcat(buf, "  Level Range: 10-18\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Zodanga Wilderness")) {
+				strcat(buf, "  Level Range: 14-22\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Gathol - Allied City")) {
+				strcat(buf, "  Level Range: 12-20\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Ptarth - Allied City")) {
+				strcat(buf, "  Level Range: 15-23\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Kaol - Allied City")) {
+				strcat(buf, "  Level Range: 18-26\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Thark Territory")) {
+				strcat(buf, "  Level Range: 3-6\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Atmosphere Factory - Main Levels")) {
+				strcat(buf, "  Level Range: 4-8\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Atmosphere Factory - Lower Levels")) {
+				strcat(buf, "  Level Range: 8-12\n\r");
+			} else if (!strcasecmp(zone_table[i].name, "Southern Approach to Atmosphere Factory")) {
+				strcat(buf, "  Level Range: 3-6\n\r");
+			}
+			
+			/* Find quests in this zone by checking if quest giver falls in zone range */
 			found = 0;
 			for (q = 0; q < top_of_quest_table; q++) {
-				/* Find which zone the quest giver is in */
-				for (r = 0; r < top_of_world; r++) {
-					if (world[r].number == quest_index[q].giver_vnum) {
-						if (world[r].zone == i) {
-							found++;
-							break;
-						}
-					}
+				/* Check if quest giver vnum is in this zone's room range */
+				if (quest_index[q].giver_vnum >= zone_start && 
+				    quest_index[q].giver_vnum <= zone_end) {
+					found++;
 				}
 			}
 			
