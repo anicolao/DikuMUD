@@ -36,59 +36,109 @@ steps:
       - pattern: "lamp|light|lantern"
         message: "Lamp should be visible in the temple area"
 
-  # Examine the lamp to check its state
+  # Try to pick up the lamp (should succeed if weight is appropriate)
   - action: command
-    description: "Examine the lamp to check light charges"
-    command: "examine lamp"
+    description: "Pick up the lamp"
+    command: "get lamp"
     expected:
-      - pattern: "nothing special|lamp|light"
-        message: "Lamp should be examinable"
+      - pattern: "You get|You take|Ok"
+        message: "Should be able to pick up the lamp"
     fail_on:
-      - pattern: "dark|empty|no light|burnt out|exhausted"
-        message: "BUG: Lamp should have light charges remaining"
+      - pattern: "too heavy|can't carry|overweight|don't see"
+        message: "BUG: Lamp should be light enough to pick up"
 
-  # Alternative: Try to look at lamp
+  # Check inventory to confirm we have the lamp
   - action: command
-    description: "Look at lamp to see its description"
-    command: "look lamp"
+    description: "Check inventory for lamp"
+    command: "inventory"
     expected:
-      - pattern: "nothing special|lamp|light"
-        message: "Should see lamp description or default message"
-    fail_on:
-      - pattern: "no light|empty|dark"
-        message: "BUG: Lamp should not be empty or dark"
+      - pattern: "lamp|light"
+        message: "Lamp should be in inventory"
 
-  # If lamp is an object that can be taken, check if it can provide light
+  # Hold the lamp to light it (this equips it in the light slot)
   - action: command
-    description: "Try to light the lamp if it's not already lit"
-    command: "light lamp"
+    description: "Hold lamp to light it"
+    command: "hold lamp"
     expected:
-      - pattern: "lights up|already lit|glows|You light|starts glowing|Arglebargle"
-        message: "Lamp should be lightable or already lit (or command not supported)"
-        optional: true
+      - pattern: "Ok|You hold|You grab|already holding"
+        message: "Should be able to hold the lamp"
     fail_on:
-      - pattern: "no fuel|empty|no light|won't light"
-        message: "BUG: Lamp should have fuel/light charges"
+      - pattern: "don't have|can't hold|no light|empty"
+        message: "BUG: Should be able to hold the lamp"
+
+  # Verify lamp is equipped and providing light
+  - action: command
+    description: "Check equipment to see lamp is held"
+    command: "equipment"
+    expected:
+      - pattern: "lamp|light|<used as light>"
+        message: "Lamp should be equipped as light source"
+
+  # Navigate to dark room: s s s s d (3001 -> 3005 -> 3014 -> 3025 -> 3030 -> 3150)
+  - action: command
+    description: "Go south from temple"
+    command: "s"
+    expected:
+      - pattern: "Temple Plaza|plaza"
+        message: "Should move to temple plaza (room 3005)"
+
+  - action: command
+    description: "Go south to market"
+    command: "s"
+    expected:
+      - pattern: "Market Plaza|plaza"
+        message: "Should move to market plaza (room 3014)"
+
+  - action: command
+    description: "Go south to common area"
+    command: "s"
+    expected:
+      - pattern: "Common Plaza|plaza"
+        message: "Should move to common plaza (room 3025)"
+
+  - action: command
+    description: "Go south to waste disposal"
+    command: "s"
+    expected:
+      - pattern: "Waste Disposal|disposal"
+        message: "Should move to waste disposal (room 3030)"
+
+  - action: command
+    description: "Go down into sewers (dark room)"
+    command: "d"
+    expected:
+      - pattern: "Lower Sewer|sewer|tunnel"
+        message: "Should descend into dark sewer area (room 3150)"
+
+  # Verify we can see in the dark room because lamp is lit
+  - action: command
+    description: "Look in dark room with lamp lit"
+    command: "look"
+    expected:
+      - pattern: "Lower Sewer|sewer|stone blocks|darkness"
+        message: "Should be able to see room description with lamp providing light"
+    fail_on:
+      - pattern: "It is pitch black|too dark|can't see"
+        message: "BUG: Lamp should illuminate the dark room"
 
 result:
   should_pass: true
-  description: "Temple lamp should have light charges and be functional"
+  description: "Temple lamp should be functional and provide light in dark areas"
   notes: |
-    This test validates that the lamp in the temple area is properly
-    configured with light charges. The fix should ensure:
+    This test validates the complete lamp functionality:
     
-    - Lamp object has value[2] > 0 (light hours remaining)
-    - Lamp is configured as ITEM_LIGHT type
-    - Lamp either:
-      a) Is already lit (value[2] shows hours remaining), or
-      b) Can be lit by players
+    1. Lamp can be picked up (weight must be appropriate for level 1 characters)
+    2. Lamp can be held/equipped as a light source
+    3. Lamp has sufficient light charges (value[2] > 0)
+    4. Lamp illuminates dark rooms when equipped
     
-    In DikuMUD, ITEM_LIGHT objects use:
-    - value[2]: Hours of light remaining (0 = empty)
+    Technical requirements:
+    - Lamp object (3099) configured as ITEM_LIGHT (type_flag: 1)
+    - Weight: 1 lb (light enough for any character to carry)
+    - Light charges: value[2] >= 100 hours
+    - Wear flags: ITEM_TAKE | ITEM_HOLD (16385)
     
-    The lamp should be reset with sufficient light charges so players
-    can use it for illumination in dark areas of the dungeon.
+    Test path: Room 3001 (Temple) -> 3005 -> 3014 -> 3025 -> 3030 -> 3150 (Dark Sewer)
     
-    Room 3005 may be different from 3001 (Temple of the Jeddak), so
-    the test should check both locations or verify which room contains
-    the problematic lamp.
+    The dark room (3150) has DARK flag set, requiring a light source to see.
+    With the lamp held, the player should be able to see the room description.
