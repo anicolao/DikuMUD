@@ -47,11 +47,17 @@ Modified to check if the player or any group member is in combat. If so, display
    - Find the group leader (ch->master or ch itself)
    - Iterate through the global combat_list
    - Check if any fighter in combat_list is the group leader or a group follower
-   - If found, extract the player fighter and their opponent
-   - Display combat status for all group members
+   - If found, extract the mob opponent
+   - Determine which player the mob is attacking (the one "getting hit")
+   - Display combat status showing the player being attacked and the mob
+   - Display this status for all group members
 
 2. If player is not in a group but is fighting:
-   - Display combat status showing the player and their opponent
+   - Find the mob opponent
+   - Determine which character the mob is attacking (usually the player themselves)
+   - Display combat status showing the character being attacked and the mob
+
+**Key Detail:** The system shows the character who is being attacked BY the mob (the tank/front-line), not necessarily the first attacker. This ensures group members see who is taking damage.
 
 **Prompt Format:**
 - Without combat: `%dH %dF %dV %dC Exits:%s> `

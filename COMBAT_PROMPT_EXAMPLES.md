@@ -62,38 +62,38 @@ The combat status is displayed as `[name:status] [name:status]` at the end of th
 
 ## Group Combat Scenarios
 
-### Scenario 1: Two-Person Group, One Fighting
+### Scenario 1: Two-Person Group, Alice Tanking
 
-**Player A (fighting):**
+**Alice (fighting, being hit by troll):**
 ```
 70H 30F 60V 50C Exits:NESW [Alice:hurt] [troll:pretty hurt]>
 ```
 
-**Player B (in group, not fighting):**
+**Bob (in group, assisting but not being targeted):**
 ```
 100H 50F 82V 100C Exits:NESW [Alice:hurt] [troll:pretty hurt]>
 ```
 
-Both players see the same combat status showing Player A's health and their opponent's health.
+Both players see Alice's status because the troll is attacking Alice. Bob can assist but knows Alice is the one taking damage.
 
-### Scenario 2: Three-Person Group, One Fighting
+### Scenario 2: Three-Person Group, Bob Tanking
 
-**Player A (group leader, not fighting):**
+**Alice (group leader, assisting):**
 ```
 100H 50F 82V 100C Exits:NESW [Bob:perfect] [goblin:hurt]>
 ```
 
-**Player B (follower, fighting):**
+**Bob (follower, tanking - being hit by goblin):**
 ```
 100H 45F 75V 75C Exits:NE [Bob:perfect] [goblin:hurt]>
 ```
 
-**Player C (follower, not fighting):**
+**Carol (follower, assisting):**
 ```
 98H 48F 80V 120C Exits:NESW [Bob:perfect] [goblin:hurt]>
 ```
 
-All three see Player B's combat status (the first group member found fighting).
+All three see Bob's combat status because the goblin is attacking Bob. Alice and Carol can assist safely while Bob takes the hits.
 
 ### Scenario 3: Solo Combat (Not in Group)
 

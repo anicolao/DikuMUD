@@ -344,18 +344,28 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 		for (fighter = combat_list; fighter; fighter = fighter->next_fighting) {
 			/* Check if this fighter is the group leader */
 			if (fighter == group_leader && IS_AFFECTED(group_leader, AFF_GROUP)) {
-				if (!player_fighter) {
-					player_fighter = fighter;
+				if (!mob_fighter) {
 					mob_fighter = fighter->specials.fighting;
+					/* Find who the mob is actually attacking (getting hit by the mob) */
+					if (mob_fighter && mob_fighter->specials.fighting) {
+						player_fighter = mob_fighter->specials.fighting;
+					} else {
+						player_fighter = fighter;
+					}
 				}
 			}
 			/* Check if this fighter is in the group's followers */
 			else if (group_leader->followers) {
 				for (f = group_leader->followers; f; f = f->next) {
 					if (IS_AFFECTED(f->follower, AFF_GROUP) && f->follower == fighter) {
-						if (!player_fighter) {
-							player_fighter = fighter;
+						if (!mob_fighter) {
 							mob_fighter = fighter->specials.fighting;
+							/* Find who the mob is actually attacking (getting hit by the mob) */
+							if (mob_fighter && mob_fighter->specials.fighting) {
+								player_fighter = mob_fighter->specials.fighting;
+							} else {
+								player_fighter = fighter;
+							}
 						}
 						break;
 					}
@@ -376,8 +386,13 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 		}
 	} else if (ch->specials.fighting) {
 		/* Player is fighting but not in a group */
-		player_fighter = ch;
 		mob_fighter = ch->specials.fighting;
+		/* Find who the mob is actually attacking (getting hit by the mob) */
+		if (mob_fighter && mob_fighter->specials.fighting) {
+			player_fighter = mob_fighter->specials.fighting;
+		} else {
+			player_fighter = ch;
+		}
 		const char *player_name = IS_NPC(player_fighter) ? 
 			player_fighter->player.short_descr : GET_NAME(player_fighter);
 		const char *mob_name = IS_NPC(mob_fighter) ? 
