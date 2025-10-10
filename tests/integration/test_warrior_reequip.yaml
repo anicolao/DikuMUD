@@ -1,0 +1,118 @@
+# Test for warrior reequip functionality
+# This test validates that warriors can use reequip to get equipment,
+# and that all equipment can be properly wielded, worn, and held
+
+test:
+  id: test_warrior_reequip
+  description: "Verify warrior can reequip and use all equipment (wield weapon, wear harness, wear shield, hold light)"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [warrior, reequip, equipment, feature_test]
+
+setup:
+  character:
+    name: TestWarrior
+    password: test
+    class: warrior
+    level: 1
+  start_room: 3023  # Practice Yard - War Master's room
+  gold: 0  # Must have less than 500 gold to qualify for reequip
+
+steps:
+  - action: look
+    description: "Look around - should be in War Master's room"
+    expected:
+      - pattern: "Practice Yard|War Master"
+        message: "Should be in the War Master's room"
+
+  - action: command
+    command: "reequip"
+    description: "Use reequip command to get warrior equipment"
+    expected:
+      - pattern: "War Master equips you"
+        message: "War Master should respond to reequip command"
+      - pattern: "glow crystal"
+        message: "Should receive glow crystal (light source)"
+      - pattern: "water cask"
+        message: "Should receive water cask"
+      - pattern: "leather harness"
+        message: "Should receive leather harness (body armor)"
+      - pattern: "shield|sword"
+        message: "Should receive a weapon or shield"
+
+  - action: inventory
+    description: "Check inventory to verify we received the equipment"
+    expected:
+      - pattern: "glow crystal"
+        message: "Should have glow crystal in inventory"
+      - pattern: "water cask"
+        message: "Should have water cask in inventory"
+      - pattern: "leather harness"
+        message: "Should have leather harness in inventory"
+      - pattern: "shield|sword"
+        message: "Should have a weapon or shield in inventory"
+
+  - action: command
+    command: "wield sword"
+    description: "Try to wield the weapon (if we got a sword)"
+    expected:
+      - pattern: "OK|wield|You.*sword"
+        message: "Should be able to wield the weapon"
+    fail_on:
+      - pattern: "don't have|can't find"
+        message: "Should have a weapon to wield"
+
+  - action: command
+    command: "wear harness"
+    description: "Try to wear the leather harness"
+    expected:
+      - pattern: "OK|wear|You.*harness"
+        message: "Should be able to wear the harness"
+    fail_on:
+      - pattern: "don't have|can't find|can't wear"
+        message: "Should have a harness and be able to wear it"
+
+  - action: command
+    command: "wear shield"
+    description: "Try to wear the shield"
+    expected:
+      - pattern: "OK|wear|You.*shield"
+        message: "Should be able to wear the shield"
+    fail_on:
+      - pattern: "don't have|can't find|can't wear"
+        message: "Should have a shield and be able to wear it"
+
+  - action: command
+    command: "hold crystal"
+    description: "Try to hold the glow crystal"
+    expected:
+      - pattern: "OK|hold|light|You.*crystal"
+        message: "Should be able to hold the glow crystal"
+    fail_on:
+      - pattern: "don't have|can't find|can't hold"
+        message: "Should have a crystal and be able to hold it"
+
+  - action: command
+    command: "equipment"
+    description: "Check equipment to verify everything is equipped"
+    expected:
+      - pattern: "worn|wielded|held"
+        message: "Should show equipped items"
+
+result:
+  should_pass: true
+  description: "Warrior should be able to reequip and use all equipment"
+  notes: |
+    This test verifies the complete warrior reequip workflow:
+    1. Warrior uses reequip command to get basic equipment
+    2. Warrior receives: glow crystal, water cask, leather harness, weapon/shield
+    3. Warrior can wield the weapon
+    4. Warrior can wear the leather harness
+    5. Warrior can wear the shield
+    6. Warrior can hold the glow crystal
+    
+    This test will fail if:
+    - Warriors don't receive a weapon (currently only get shield)
+    - Harness has wrong wear flags (can't be worn on body)
+    - Shield has wrong wear flags (can't be worn as shield)
+    - Glow crystal has wrong flags (can't be held)

@@ -54,6 +54,7 @@ Each class receives four items tailored to their needs:
 - **Water cask** (item 3500) - Water container
 - **Simple leather harness** (item 3550) - Body armor
 - **Small shield** (item 3563) - Shield for defense
+- **Quality short sword** (item 3521) - Weapon
 
 ## Guildmaster Locations
 
