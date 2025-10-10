@@ -64,6 +64,11 @@ void assign_mobiles(void)
 
 	/* Quest givers - generic handler for all quest-giving NPCs */
 	mob_index[real_mobile(4051)].func = quest_giver;  /* Sola in Thark Territory */
+	mob_index[real_mobile(4202)].func = quest_giver;  /* Ras Thavas in Atmosphere Lower */
+	mob_index[real_mobile(4203)].func = quest_giver;  /* Vad Varo in Atmosphere Lower */
+	mob_index[real_mobile(4212)].func = quest_giver;  /* The First Engineer in Atmosphere Lower */
+	mob_index[real_mobile(4214)].func = quest_giver;  /* Power technician in Atmosphere Lower */
+	mob_index[real_mobile(4215)].func = quest_giver;  /* Biological researcher in Atmosphere Lower */
 
 	boot_the_shops();
 	assign_the_shopkeepers();
