@@ -249,14 +249,62 @@ int run_the_game(int port)
 /* Maximum number of exits in a room */
 #define MAX_EXITS 6
 
+/* Get health status string based on HP percentage and position */
+const char* get_health_status(struct char_data *ch)
+{
+	int percent;
+	int pos;
+	
+	if (!ch)
+		return "unknown";
+	
+	pos = GET_POS(ch);
+	
+	/* Check for special positions first */
+	if (pos == POSITION_DEAD)
+		return "dead";
+	if (pos == POSITION_MORTALLYW)
+		return "mostly dead";
+	if (pos == POSITION_INCAP)
+		return "mostly dead";
+	if (pos == POSITION_STUNNED)
+		return "stunned";
+	
+	/* Calculate HP percentage */
+	if (GET_MAX_HIT(ch) > 0)
+		percent = (100 * GET_HIT(ch)) / GET_MAX_HIT(ch);
+	else
+		percent = -1;
+	
+	/* Return status based on percentage */
+	if (percent < 0)
+		return "mostly dead";
+	else if (percent < 10)
+		return "awful";
+	else if (percent < 50)
+		return "pretty hurt";
+	else if (percent < 85)
+		return "hurt";
+	else if (percent < 95)
+		return "just a scratch";
+	else
+		return "perfect";
+}
+
 /* Build prompt string with character status */
 void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 {
-	struct char_data *ch;
+	struct char_data *ch, *fighter, *group_leader;
+	struct follow_type *f;
 	int door;
 	char exits_buf[MAX_EXITS * 3 + 1];  /* 3 chars per exit: X or (X) */
 	char *exit_names = "NESWUD";
 	int exit_pos = 0;
+	char combat_buf[256];
+	int has_combat = 0;
+	struct char_data *player_fighter = NULL;
+	struct char_data *mob_fighter = NULL;
+	extern struct char_data *combat_list;
 
 	/* Default prompt for non-playing states */
 	if (!d->character || d->connected) {
@@ -283,13 +331,73 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 		}
 	}
 
+	/* Check if player or anyone in their group is in combat */
+	combat_buf[0] = '\0';
+	if (IS_AFFECTED(ch, AFF_GROUP)) {
+		/* Find the group leader */
+		if (ch->master)
+			group_leader = ch->master;
+		else
+			group_leader = ch;
+
+		/* Check each person fighting in the combat list */
+		for (fighter = combat_list; fighter; fighter = fighter->next_fighting) {
+			/* Check if this fighter is in our group */
+			if (fighter == group_leader || fighter == ch) {
+				/* This fighter is in our group */
+				if (!player_fighter) {
+					player_fighter = fighter;
+					mob_fighter = fighter->specials.fighting;
+				}
+			} else if (group_leader->followers) {
+				/* Check followers */
+				for (f = group_leader->followers; f; f = f->next) {
+					if (IS_AFFECTED(f->follower, AFF_GROUP) && f->follower == fighter) {
+						/* This fighter is in our group */
+						if (!player_fighter) {
+							player_fighter = fighter;
+							mob_fighter = fighter->specials.fighting;
+						}
+						break;
+					}
+				}
+			}
+		}
+
+		/* Build combat status string if we found combat */
+		if (player_fighter && mob_fighter) {
+			snprintf(combat_buf, sizeof(combat_buf), "[PLAYER:%s] [MOB:%s] ",
+				get_health_status(player_fighter),
+				get_health_status(mob_fighter));
+			has_combat = 1;
+		}
+	} else if (ch->specials.fighting) {
+		/* Player is fighting but not in a group */
+		player_fighter = ch;
+		mob_fighter = ch->specials.fighting;
+		snprintf(combat_buf, sizeof(combat_buf), "[PLAYER:%s] [MOB:%s] ",
+			get_health_status(player_fighter),
+			get_health_status(mob_fighter));
+		has_combat = 1;
+	}
+
 	/* Build the full prompt */
-	snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s> ",
-		GET_HIT(ch),
-		GET_MANA(ch),
-		GET_MOVE(ch),
-		GET_GOLD(ch),
-		exit_pos > 0 ? exits_buf : "None");
+	if (has_combat) {
+		snprintf(prompt_buf, buf_size, "%s%dH %dF %dV %dC Exits:%s> ",
+			combat_buf,
+			GET_HIT(ch),
+			GET_MANA(ch),
+			GET_MOVE(ch),
+			GET_GOLD(ch),
+			exit_pos > 0 ? exits_buf : "None");
+	} else {
+		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s> ",
+			GET_HIT(ch),
+			GET_MANA(ch),
+			GET_MOVE(ch),
+			GET_GOLD(ch),
+			exit_pos > 0 ? exits_buf : "None");
+	}
 }
 
 /* Accept new connects, relay commands, and call 'heartbeat-functs' */
