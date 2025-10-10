@@ -1,16 +1,37 @@
 /* Create a test player file for integration testing */
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <crypt.h>
 #include "../dm-dist-alfa/structs.h"
 #include "../dm-dist-alfa/utils.h"
+
+/* Helper function to make salt like the server does */
+static void make_salt(const char *lsalt, char *salt_buf, size_t bufsize) {
+    snprintf(salt_buf, bufsize, "$6$%s$", lsalt);
+}
+
+/* Helper function to encrypt password like the server does */
+static const char *encrypt_password(const char *pass, const char *salt) {
+    struct crypt_data crypted;
+    memset(&crypted, 0, sizeof(crypted));
+    const char *ret = crypt_r(pass, salt, &crypted);
+    if (!ret) {
+        perror("password encryption failure");
+        return NULL;
+    }
+    return ret;
+}
 
 int main(int argc, char *argv[]) {
     struct char_file_u player;
     FILE *fl;
     char *name, *password;
     int load_room;
+    char salt[256];
+    char lowercase_name[20];
     
     if (argc < 4) {
         printf("Usage: %s <name> <password> <load_room>\n", argv[0]);
@@ -65,12 +86,21 @@ int main(int argc, char *argv[]) {
     
     /* Set name and password */
     /* Convert name to lowercase */
-    for (int i = 0; name[i]; i++) {
+    memset(lowercase_name, 0, sizeof(lowercase_name));
+    for (int i = 0; name[i] && i < sizeof(lowercase_name)-1; i++) {
+        lowercase_name[i] = LOWER(name[i]);
         player.name[i] = LOWER(name[i]);
     }
     
-    /* Copy password directly (will be encrypted by server on first login) */
-    strncpy(player.pwd, password, 10);
+    /* Encrypt password using the same method as the server */
+    make_salt(lowercase_name, salt, sizeof(salt));
+    const char *encrypted = encrypt_password(password, salt);
+    if (!encrypted) {
+        fprintf(stderr, "Failed to encrypt password\n");
+        return 1;
+    }
+    strncpy(player.pwd, encrypted, sizeof(player.pwd) - 1);
+    player.pwd[sizeof(player.pwd) - 1] = '\0';
     
     /* Set conditions (not hungry, not thirsty, not drunk) */
     player.conditions[0] = 24;  /* full */

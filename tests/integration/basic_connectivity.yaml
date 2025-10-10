@@ -11,9 +11,10 @@ test:
 setup:
   character:
     name: TestChar
+    password: test
     class: warrior
     level: 1
-  starting_room: 3001
+  start_room: 3001
 
 steps:
   - action: look

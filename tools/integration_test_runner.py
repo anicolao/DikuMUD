@@ -234,8 +234,32 @@ class GameClient:
                 # Enter password
                 if "password" in response.lower() or "Password" in response:
                     self.connection.write(char_pass.encode('ascii') + b'\n')
-                    time.sleep(1.0)  # Give server time to process login
+                    time.sleep(0.5)
                     response = self._read_available()
+                    
+                    # Handle password retype for new characters or wrong password
+                    if "retype" in response.lower() or "Retype" in response or "Wrong password" in response:
+                        self.connection.write(char_pass.encode('ascii') + b'\n')
+                        time.sleep(0.5)
+                        response = self._read_available()
+                    
+                    # Handle menu after login (press return)
+                    if "PRESS RETURN" in response:
+                        self.connection.write(b'\n')
+                        time.sleep(0.5)
+                        response = self._read_available()
+                    
+                    # Handle menu choice (enter the game)
+                    if "Make your choice" in response:
+                        self.connection.write(b'1\n')
+                        time.sleep(0.5)
+                        response = self._read_available()
+                    
+                    # Wait for login to complete and all MOTD/initial output to arrive
+                    # The server outputs MOTD and then the room description automatically
+                    time.sleep(2.0)
+                    # Use _read_until_prompt to properly drain the buffer until we see a prompt
+                    self._read_until_prompt(timeout=5)
                     
         except Exception as e:
             raise ConnectionError(f"Failed to connect to {self.host}:{self.port}: {e}")
@@ -302,15 +326,21 @@ class GameClient:
         """Read until we get a prompt or timeout."""
         output = ""
         start_time = time.time()
+        last_read_time = start_time
         
         while time.time() - start_time < timeout:
             try:
                 chunk = self.connection.read_very_eager()
                 if chunk:
-                    output += chunk.decode('ascii', errors='ignore')
+                    decoded = chunk.decode('ascii', errors='ignore')
+                    output += decoded
+                    last_read_time = time.time()
                     # Check for prompt patterns (>, ], etc.)
-                    if re.search(r'[>]$', output.strip()):
+                    if re.search(r'[>]\s*$', output):
                         break
+                # If we haven't received data for 0.5 seconds and we have some output, assume done
+                elif output and (time.time() - last_read_time > 0.5):
+                    break
                 time.sleep(0.1)
             except Exception:
                 break
