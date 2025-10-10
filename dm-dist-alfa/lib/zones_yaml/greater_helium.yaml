@@ -5410,6 +5410,44 @@ objects:
   rent: 1
   extra_descriptions: []
   affects: []
+- vnum: 3774
+  namelist: waterskin leather
+  short_desc: a leather waterskin
+  long_desc: A leather waterskin lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: waterskin
+    description: 'A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.'
+  affects: []
+- vnum: 3775
+  namelist: fountain water marble
+  short_desc: a marble fountain
+  long_desc: A beautiful marble fountain provides fresh water here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 0
+  value0: 50
+  value1: 50
+  value2: 0
+  value3: 0
+  weight: 500
+  cost: 3000
+  rent: 1000
+  extra_descriptions:
+  - keywords: fountain
+    description: 'It is a magnificent structure.  Made from fine white marble with intricate carvings depicting the founding of Greater Helium.  Cool, clear water flows constantly from an ornate spout.'
+  affects: []
 resets:
 - command: M
   if_flag: 0
@@ -6018,6 +6056,11 @@ resets:
   arg1: 3921
   arg2: 100
   arg3: 16
+- command: O
+  if_flag: 0
+  arg1: 3775
+  arg2: 1
+  arg3: 3920
 - command: M
   if_flag: 0
   arg1: 3914
@@ -6388,6 +6431,7 @@ shops:
   producing:
   - 3510
   - 3511
+  - 3774
   - 3593
   profit_buy: 1.2
   profit_sell: 0.9
