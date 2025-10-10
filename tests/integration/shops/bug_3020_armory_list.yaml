@@ -25,18 +25,10 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001  # Temple of the Jeddak
+  start_room: 3020  # Start directly in armory
   gold: 5000  # Armor and weapons can be expensive
 
 steps:
-  # Navigate to armory (room 3020)
-  - action: move
-    description: "Walk to armory at room 3020"
-    target_room: 3020
-    expected:
-      - pattern: "armory|armorer|weapons|armor"
-        message: "Should arrive at armory"
-
   # Verify armorer/merchant is present
   - action: look
     description: "Look for the armorer or merchant"

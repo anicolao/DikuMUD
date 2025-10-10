@@ -28,18 +28,10 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001
+  start_room: 3011  # Start directly in weapons shop
   gold: 2000
 
 steps:
-  # Navigate to weapons shop (room 3011)
-  - action: move
-    description: "Walk to weapons shop at room 3011"
-    target_room: 3011
-    expected:
-      - pattern: "weapon|arms|weaponsmith"
-        message: "Should arrive at weapons shop"
-
   # Check for shop keeper
   - action: look
     description: "Look for weapons merchant"

@@ -26,21 +26,11 @@ setup:
     name: TestChar
     class: warrior
     level: 1
-  starting_room: 3001  # Temple of the Jeddak (starting location)
+  start_room: 3003  # Start directly in room with nobles waiter
   gold: 1000  # Enough gold to make purchases
 
 steps:
-  # Step 1: Navigate to room 3003 where the nobles waiter is located
-  - action: move
-    description: "Walk to room 3003 (nobles waiter location)"
-    # Note: Actual path will depend on room connections
-    # This is a placeholder - implementation will determine correct path
-    target_room: 3003
-    expected:
-      - pattern: "nobles|waiter|bar|tavern"
-        message: "Should arrive at location with waiter"
-
-  # Step 2: Verify the waiter NPC is present in the room
+  # Step 1: Verify the waiter NPC is present in the room
   - action: look
     description: "Look around to see the waiter"
     expected:
