@@ -4103,29 +4103,28 @@ resets:
   arg3: 3011
 - command: G
   if_flag: 1
-  arg1: 3020
+  arg1: 3520
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3021
+  arg1: 3521
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3022
+  arg1: 3522
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3023
+  arg1: 3590
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3024
+  arg1: 3591
   arg2: 100
-- command: E
+- command: G
   if_flag: 1
-  arg1: 3022
+  arg1: 3226
   arg2: 100
-  arg3: 16
 - command: M
   if_flag: 0
   arg1: 3004
@@ -4133,117 +4132,28 @@ resets:
   arg3: 3020
 - command: G
   if_flag: 1
-  arg1: 3072
+  arg1: 3066
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3073
+  arg1: 3067
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3074
+  arg1: 3068
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3075
+  arg1: 3069
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3076
+  arg1: 3070
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3077
+  arg1: 3071
   arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3078
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3079
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3080
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3081
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3082
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3083
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3084
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3085
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3086
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3087
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3088
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3089
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3090
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3091
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3092
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3093
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3094
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3095
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3096
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3097
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3098
-  arg2: 100
-- command: E
-  if_flag: 1
-  arg1: 3022
-  arg2: 100
-  arg3: 16
 - command: M
   if_flag: 0
   arg1: 3002
@@ -4787,6 +4697,66 @@ shops:
   keeper: 3002
   with_who: 0
   in_room: 3010
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 17
+  producing:
+  - 3520
+  - 3521
+  - 3522
+  - 3590
+  - 3591
+  - 3226
+  profit_buy: 1.3
+  profit_sell: 0.4
+  buy_types:
+  - 5
+  - 6
+  - 7
+  messages:
+    no_such_item1: '%s I haven''t got that kind of a weapon.'
+    no_such_item2: '%s You don''t carry that weapon.'
+    do_not_buy: '%s I only buy weapons.'
+    missing_cash1: '%s I can''t afford such a great weapon.'
+    missing_cash2: '%s Sorry, but NO CREDIT!'
+    message_buy: '%s That just costs %d coins.'
+    message_sell: '%s Here you have %d coins for that.'
+  temper1: 0
+  temper2: 0
+  keeper: 3003
+  with_who: 0
+  in_room: 3011
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 18
+  producing:
+  - 3066
+  - 3067
+  - 3068
+  - 3069
+  - 3070
+  - 3071
+  profit_buy: 1.0
+  profit_sell: 0.5
+  buy_types:
+  - 9
+  messages:
+    no_such_item1: '%s Haven''t got that on storage - try list!'
+    no_such_item2: '%s You don''t seem to have that.'
+    do_not_buy: '%s I only buy armours.. Go away!'
+    missing_cash1: '%s That is too expensive for me - Try a wizard!'
+    missing_cash2: '%s You can''t afford it!'
+    message_buy: '%s That''ll be %d coins, please.'
+    message_sell: '%s You''ll get %d coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3004
+  with_who: 0
+  in_room: 3020
   open1: 0
   close1: 28
   open2: 0

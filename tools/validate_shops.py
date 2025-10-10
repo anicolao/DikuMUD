@@ -121,6 +121,53 @@ def load_object_names(filename):
         pass
     return obj_names
 
+def load_mob_names(filename):
+    """Load mob vnums and their short descriptions from mob file"""
+    mob_names = {}
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                # Look for mob vnum marker
+                if line.startswith('#') and line[1:].isdigit():
+                    vnum = int(line[1:])
+                    i += 1
+                    # Skip namelist line
+                    if i < len(lines):
+                        i += 1
+                    # Get short description
+                    if i < len(lines):
+                        short_desc = lines[i].strip().rstrip('~')
+                        mob_names[vnum] = short_desc
+                i += 1
+    except FileNotFoundError:
+        pass
+    return mob_names
+
+def load_room_names(filename):
+    """Load room vnums and their names from wld file"""
+    room_names = {}
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                # Look for room vnum marker
+                if line.startswith('#') and line[1:].isdigit():
+                    vnum = int(line[1:])
+                    i += 1
+                    # Get room name
+                    if i < len(lines):
+                        room_name = lines[i].strip().rstrip('~')
+                        room_names[vnum] = room_name
+                i += 1
+    except FileNotFoundError:
+        pass
+    return room_names
+
 def validate_shops(shop_file, mob_file, obj_file, wld_file):
     """Validate all shops in the shop file"""
     
@@ -130,6 +177,10 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
     print("Loading mob vnums...")
     mobs = load_vnums(mob_file, r'^#(\d+)')
     print(f"  Found {len(mobs)} mobs")
+    
+    print("Loading mob names...")
+    mob_names = load_mob_names(mob_file)
+    print(f"  Loaded {len(mob_names)} mob names")
     
     print("Loading object vnums...")
     objs = load_vnums(obj_file, r'^#(\d+)')
@@ -143,6 +194,10 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
     rooms = load_vnums(wld_file, r'^#(\d+)')
     print(f"  Found {len(rooms)} rooms")
     
+    print("Loading room names...")
+    room_names = load_room_names(wld_file)
+    print(f"  Loaded {len(room_names)} room names")
+    
     print(f"\nParsing shop file: {shop_file}")
     shops = parse_shop_file(shop_file)
     print(f"  Found {len(shops)} shops\n")
@@ -150,26 +205,34 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
     errors = 0
     warnings = 0
     
+    # Track which keepers and rooms have shops
+    keepers_with_shops = set()
+    rooms_with_shops = set()
+    
     for shop in shops:
         print(f"Shop #{shop['num']}:")
         
         # Check keeper mob
         keeper = shop.get('keeper')
         if keeper:
+            keepers_with_shops.add(keeper)
             if keeper not in mobs:
                 print(f"  ERROR: Keeper mob {keeper} does not exist!")
                 errors += 1
             else:
-                print(f"  Keeper: mob {keeper} ✓")
+                keeper_name = mob_names.get(keeper, "unknown")
+                print(f"  Keeper: mob {keeper} ({keeper_name}) ✓")
         
         # Check room
         room = shop.get('room')
         if room:
+            rooms_with_shops.add(room)
             if room not in rooms:
                 print(f"  ERROR: Shop room {room} does not exist!")
                 errors += 1
             else:
-                print(f"  Room: {room} ✓")
+                room_name = room_names.get(room, "unknown")
+                print(f"  Room: {room} ({room_name}) ✓")
         
         # Check producing items
         producing = shop.get('producing', [])
@@ -208,6 +271,57 @@ def validate_shops(shop_file, mob_file, obj_file, wld_file):
             print(f"  WARNING: Hours {hours} should be in range 0-23")
             warnings += 1
         
+        print()
+    
+    # Check for potential missing shops
+    print("=== Checking for Potential Missing Shops ===\n")
+    
+    # Keywords that suggest a mob might be a shopkeeper
+    shopkeeper_keywords = ['merchant', 'shopkeeper', 'grocer', 'baker', 'butcher', 
+                           'armorer', 'weaponsmith', 'blacksmith', 'fletcher',
+                           'jeweler', 'tailor', 'leatherworker', 'alchemist',
+                           'bartender', 'barkeep', 'innkeeper', 'vendor',
+                           'trader', 'dealer', 'seller', 'harness-maker']
+    
+    # Check for shopkeeper mobs without shops
+    potential_missing_keepers = []
+    for mob_vnum in mobs:
+        if mob_vnum not in keepers_with_shops:
+            mob_name = mob_names.get(mob_vnum, "").lower()
+            for keyword in shopkeeper_keywords:
+                if keyword in mob_name:
+                    potential_missing_keepers.append((mob_vnum, mob_names.get(mob_vnum, "")))
+                    break
+    
+    if potential_missing_keepers:
+        print("WARNING: Found potential shopkeeper mobs without shops:")
+        for mob_vnum, mob_name in potential_missing_keepers:
+            print(f"  Mob {mob_vnum}: {mob_name}")
+            warnings += 1
+        print()
+    
+    # Keywords that suggest a room might be a shop
+    shop_room_keywords = ['shop', 'store', 'merchant', 'armory', 'armoury', 
+                          'weapon smith', 'weaponsmith', 'blacksmith', 
+                          'jeweler', 'tailor', 'baker', 'butcher',
+                          'general store', 'provisions', 'tavern', 'inn',
+                          'trader', 'dealer', 'market']
+    
+    # Check for shop-like rooms without shops
+    potential_missing_rooms = []
+    for room_vnum in rooms:
+        if room_vnum not in rooms_with_shops:
+            room_name = room_names.get(room_vnum, "").lower()
+            for keyword in shop_room_keywords:
+                if keyword in room_name:
+                    potential_missing_rooms.append((room_vnum, room_names.get(room_vnum, "")))
+                    break
+    
+    if potential_missing_rooms:
+        print("WARNING: Found potential shop rooms without shops:")
+        for room_vnum, room_name in potential_missing_rooms:
+            print(f"  Room {room_vnum}: {room_name}")
+            warnings += 1
         print()
     
     print("=== Summary ===")
