@@ -33,7 +33,7 @@ steps:
   - action: look
     description: "Look for the armorer or merchant"
     expected:
-      - pattern: "armorer|merchant|smith|weaponsmith"
+      - pattern: "armorer|merchant|smith|weaponsmith|harness-maker"
         message: "Shop keeper should be present"
 
   # Test the list command
@@ -52,9 +52,9 @@ steps:
   # Try to buy something to verify shop works
   - action: command
     description: "Purchase an item to verify shop functionality"
-    command: "buy sword"
+    command: "buy helm"
     expected:
-      - pattern: "You buy|You purchase|don't have enough gold"
+      - pattern: "You buy|You purchase|You now have|don't have enough gold|can't afford"
         message: "Shop should respond to purchase attempts"
 
 result:

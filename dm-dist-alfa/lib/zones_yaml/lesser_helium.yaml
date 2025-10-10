@@ -3943,7 +3943,7 @@ objects:
   wear_flags: 16385
   value0: 0
   value1: 0
-  value2: 0
+  value2: 100
   value3: 0
   weight: 1
   cost: 10
@@ -4916,6 +4916,31 @@ shops:
   keeper: 3046
   with_who: 0
   in_room: 3048
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
+- vnum: 19
+  producing:
+  - 3502
+  - 3503
+  - 3504
+  profit_buy: 1.2
+  profit_sell: 0.9
+  buy_types: []
+  messages:
+    no_such_item1: '%s I regret we do not have that available today.'
+    no_such_item2: '%s I do not purchase items from patrons.'
+    do_not_buy: '%s I do not purchase items from patrons.'
+    missing_cash1: '%s I do not purchase items from patrons.'
+    missing_cash2: '%s I am afraid you lack sufficient funds.'
+    message_buy: '%s That will be %d gold coins.'
+    message_sell: '%s My apologies, but I do not purchase items.'
+  temper1: 0
+  temper2: 0
+  keeper: 3043
+  with_who: 0
+  in_room: 3003
   open1: 0
   close1: 28
   open2: 0
