@@ -40,7 +40,7 @@ const char* get_health_status(struct char_data *ch)
 
 #### `make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)`
 
-Modified to check if the player or any group member is in combat. If so, displays combat status before the normal prompt information.
+Modified to check if the player or any group member is in combat. If so, displays combat status at the end of the prompt, after the exits.
 
 **Behavior:**
 1. If player is in a group (AFF_GROUP flag set):
@@ -55,13 +55,17 @@ Modified to check if the player or any group member is in combat. If so, display
 
 **Prompt Format:**
 - Without combat: `%dH %dF %dV %dC Exits:%s> `
-- With combat: `[PLAYER:%s] [MOB:%s] %dH %dF %dV %dC Exits:%s> `
+- With combat: `%dH %dF %dV %dC Exits:%s [name:status] [name:status]> `
+
+The names shown are:
+- For players: their character name (via GET_NAME)
+- For NPCs/mobs: their short description
 
 Example prompts:
 ```
 100H 50F 82V 100C Exits:NESW>
-[PLAYER:perfect] [MOB:hurt] 100H 50F 82V 100C Exits:NESW>
-[PLAYER:pretty hurt] [MOB:just a scratch] 45H 30F 60V 100C Exits:N>
+100H 50F 82V 100C Exits:NESW [Warrior:perfect] [goblin:hurt]>
+45H 30F 60V 100C Exits:N [Warrior:pretty hurt] [troll:just a scratch]>
 ```
 
 ## Technical Design Choices

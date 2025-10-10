@@ -26,7 +26,7 @@ fi
 echo
 
 echo "3. Verifying combat status logic in make_prompt..."
-if grep -q "PLAYER:%s.*MOB:%s" comm.c; then
+if grep -q "get_health_status(player_fighter)" comm.c && grep -q "get_health_status(mob_fighter)" comm.c; then
     echo "   ✓ Combat status prompt format found"
 else
     echo "   ✗ Combat status prompt format not found"

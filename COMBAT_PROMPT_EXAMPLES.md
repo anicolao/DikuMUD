@@ -4,7 +4,7 @@ This document provides visual examples of how the combat prompt appears in diffe
 
 ## Prompt Format
 
-The combat status is displayed as `[PLAYER:<status>] [MOB:<status>]` before the normal prompt information.
+The combat status is displayed as `[name:status] [name:status]` at the end of the prompt, after the exits.
 
 ### Normal Prompt (No Combat)
 ```
@@ -15,37 +15,37 @@ The combat status is displayed as `[PLAYER:<status>] [MOB:<status>]` before the 
 
 #### Perfect Health vs Hurt Mob
 ```
-[PLAYER:perfect] [MOB:hurt] 100H 50F 82V 100C Exits:NESW>
+100H 50F 82V 100C Exits:NESW [Warrior:perfect] [goblin:hurt]>
 ```
 
 #### Taking Damage - Just a Scratch
 ```
-[PLAYER:just a scratch] [MOB:hurt] 93H 45F 75V 100C Exits:N>
+93H 45F 75V 100C Exits:N [Warrior:just a scratch] [goblin:hurt]>
 ```
 
 #### Getting Hurt
 ```
-[PLAYER:hurt] [MOB:pretty hurt] 70H 30F 60V 100C Exits:N>
+70H 30F 60V 100C Exits:N [Warrior:hurt] [goblin:pretty hurt]>
 ```
 
 #### Pretty Hurt vs Nearly Dead Mob
 ```
-[PLAYER:pretty hurt] [MOB:awful] 45H 20F 50V 100C Exits:NE>
+45H 20F 50V 100C Exits:NE [Warrior:pretty hurt] [troll:awful]>
 ```
 
 #### Critical Condition
 ```
-[PLAYER:awful] [MOB:just a scratch] 8H 10F 30V 100C Exits:S>
+8H 10F 30V 100C Exits:S [Warrior:awful] [dragon:just a scratch]>
 ```
 
 #### Stunned
 ```
-[PLAYER:stunned] [MOB:hurt] -2H 5F 20V 100C Exits:None>
+-2H 5F 20V 100C Exits:None [Warrior:stunned] [orc:hurt]>
 ```
 
 #### Mostly Dead (Mortally Wounded)
 ```
-[PLAYER:mostly dead] [MOB:perfect] -8H 0F 10V 100C Exits:None>
+-8H 0F 10V 100C Exits:None [Warrior:mostly dead] [giant:perfect]>
 ```
 
 ## Health Status Thresholds
@@ -66,12 +66,12 @@ The combat status is displayed as `[PLAYER:<status>] [MOB:<status>]` before the 
 
 **Player A (fighting):**
 ```
-[PLAYER:hurt] [MOB:pretty hurt] 70H 30F 60V 50C Exits:NESW>
+70H 30F 60V 50C Exits:NESW [Alice:hurt] [troll:pretty hurt]>
 ```
 
 **Player B (in group, not fighting):**
 ```
-[PLAYER:hurt] [MOB:pretty hurt] 100H 50F 82V 100C Exits:NESW>
+100H 50F 82V 100C Exits:NESW [Alice:hurt] [troll:pretty hurt]>
 ```
 
 Both players see the same combat status showing Player A's health and their opponent's health.
@@ -80,17 +80,17 @@ Both players see the same combat status showing Player A's health and their oppo
 
 **Player A (group leader, not fighting):**
 ```
-[PLAYER:perfect] [MOB:hurt] 100H 50F 82V 100C Exits:NESW>
+100H 50F 82V 100C Exits:NESW [Bob:perfect] [goblin:hurt]>
 ```
 
 **Player B (follower, fighting):**
 ```
-[PLAYER:perfect] [MOB:hurt] 100H 45F 75V 75C Exits:NE>
+100H 45F 75V 75C Exits:NE [Bob:perfect] [goblin:hurt]>
 ```
 
 **Player C (follower, not fighting):**
 ```
-[PLAYER:perfect] [MOB:hurt] 98H 48F 80V 120C Exits:NESW>
+98H 48F 80V 120C Exits:NESW [Bob:perfect] [goblin:hurt]>
 ```
 
 All three see Player B's combat status (the first group member found fighting).
@@ -99,7 +99,7 @@ All three see Player B's combat status (the first group member found fighting).
 
 **Player (fighting alone):**
 ```
-[PLAYER:hurt] [MOB:pretty hurt] 70H 30F 60V 50C Exits:N>
+70H 30F 60V 50C Exits:N [Warrior:hurt] [orc:pretty hurt]>
 ```
 
 When not in a group, the player only sees their own combat status.

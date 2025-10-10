@@ -365,30 +365,38 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 
 		/* Build combat status string if we found combat */
 		if (player_fighter && mob_fighter) {
-			snprintf(combat_buf, sizeof(combat_buf), "[PLAYER:%s] [MOB:%s] ",
-				get_health_status(player_fighter),
-				get_health_status(mob_fighter));
+			const char *player_name = IS_NPC(player_fighter) ? 
+				player_fighter->player.short_descr : GET_NAME(player_fighter);
+			const char *mob_name = IS_NPC(mob_fighter) ? 
+				mob_fighter->player.short_descr : GET_NAME(mob_fighter);
+			snprintf(combat_buf, sizeof(combat_buf), "[%s:%s] [%s:%s]",
+				player_name, get_health_status(player_fighter),
+				mob_name, get_health_status(mob_fighter));
 			has_combat = 1;
 		}
 	} else if (ch->specials.fighting) {
 		/* Player is fighting but not in a group */
 		player_fighter = ch;
 		mob_fighter = ch->specials.fighting;
-		snprintf(combat_buf, sizeof(combat_buf), "[PLAYER:%s] [MOB:%s] ",
-			get_health_status(player_fighter),
-			get_health_status(mob_fighter));
+		const char *player_name = IS_NPC(player_fighter) ? 
+			player_fighter->player.short_descr : GET_NAME(player_fighter);
+		const char *mob_name = IS_NPC(mob_fighter) ? 
+			mob_fighter->player.short_descr : GET_NAME(mob_fighter);
+		snprintf(combat_buf, sizeof(combat_buf), "[%s:%s] [%s:%s]",
+			player_name, get_health_status(player_fighter),
+			mob_name, get_health_status(mob_fighter));
 		has_combat = 1;
 	}
 
 	/* Build the full prompt */
 	if (has_combat) {
-		snprintf(prompt_buf, buf_size, "%s%dH %dF %dV %dC Exits:%s> ",
-			combat_buf,
+		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s %s> ",
 			GET_HIT(ch),
 			GET_MANA(ch),
 			GET_MOVE(ch),
 			GET_GOLD(ch),
-			exit_pos > 0 ? exits_buf : "None");
+			exit_pos > 0 ? exits_buf : "None",
+			combat_buf);
 	} else {
 		snprintf(prompt_buf, buf_size, "%dH %dF %dV %dC Exits:%s> ",
 			GET_HIT(ch),

@@ -12,13 +12,13 @@ Before combat:
   100H 50F 82V 100C Exits:NESW>
 
 During combat (perfect health):
-  [PLAYER:perfect] [MOB:hurt] 100H 50F 82V 100C Exits:NESW>
+  100H 50F 82V 100C Exits:NESW [Warrior:perfect] [goblin:hurt]>
 
 Taking damage:
-  [PLAYER:hurt] [MOB:pretty hurt] 70H 30F 60V 100C Exits:N>
+  70H 30F 60V 100C Exits:N [Warrior:hurt] [goblin:pretty hurt]>
 
 Critical condition:
-  [PLAYER:awful] [MOB:just a scratch] 8H 10F 30V 100C Exits:S>
+  8H 10F 30V 100C Exits:S [Warrior:awful] [dragon:just a scratch]>
 
 HEALTH STATUS LEVELS (based on HP %):
   - perfect         (95-100%)
@@ -39,7 +39,8 @@ KEY IMPLEMENTATION DETAILS:
 2. Modified make_prompt() function in comm.c
    - Checks if player is in a group (AFF_GROUP flag)
    - Iterates through combat_list to find group members fighting
-   - Displays combat status for all group members
+   - Displays combat status at end of prompt after exits
+   - Uses player names and mob short descriptions
    - Works for solo combat as well
 
 3. Group Combat Detection:
