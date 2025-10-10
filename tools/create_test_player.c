@@ -30,28 +30,39 @@ int main(int argc, char *argv[]) {
     FILE *fl;
     char *name, *password, *data_dir = NULL;
     int load_room;
+    int level = 1;  /* Default level */
     char salt[256];
     char lowercase_name[20];
     char player_file_path[512];
     int i;
     
     if (argc < 4) {
-        printf("Usage: %s [-d data_dir] <name> <password> <load_room>\n", argv[0]);
-        printf("Example: %s -d test_lib TestChar test 3014\n", argv[0]);
-        printf("Example: %s TestChar test 3014  (writes to lib/players)\n", argv[0]);
+        printf("Usage: %s [-d data_dir] [-l level] <name> <password> <load_room>\n", argv[0]);
+        printf("Example: %s -d test_lib -l 22 TestChar test 3014\n", argv[0]);
+        printf("Example: %s TestChar test 3014  (writes to lib/players, level 1)\n", argv[0]);
+        printf("Options:\n");
+        printf("  -d data_dir   Use specified data directory instead of lib/\n");
+        printf("  -l level      Set character level (default: 1)\n");
         return 1;
     }
     
     /* Parse command line arguments */
     i = 1;
-    if (argc >= 5 && strcmp(argv[i], "-d") == 0) {
-        data_dir = argv[i + 1];
-        i += 2;
+    while (i < argc) {
+        if (strcmp(argv[i], "-d") == 0 && i + 1 < argc) {
+            data_dir = argv[i + 1];
+            i += 2;
+        } else if (strcmp(argv[i], "-l") == 0 && i + 1 < argc) {
+            level = atoi(argv[i + 1]);
+            i += 2;
+        } else {
+            break;
+        }
     }
     
     if (argc - i < 3) {
         printf("Error: Missing required arguments\n");
-        printf("Usage: %s [-d data_dir] <name> <password> <load_room>\n", argv[0]);
+        printf("Usage: %s [-d data_dir] [-l level] <name> <password> <load_room>\n", argv[0]);
         return 1;
     }
     
@@ -65,7 +76,7 @@ int main(int argc, char *argv[]) {
     /* Set basic character data */
     player.sex = SEX_MALE;
     player.class = CLASS_WARRIOR;
-    player.level = 1;
+    player.level = level;
     player.birth = time(0);
     player.played = 0;
     
@@ -147,7 +158,7 @@ int main(int argc, char *argv[]) {
     
     fclose(fl);
     
-    printf("Created test player '%s' with load_room %d\n", name, load_room);
+    printf("Created test player '%s' with load_room %d, level %d\n", name, load_room, level);
     printf("Player file size: %lu bytes\n", sizeof(struct char_file_u));
     
     return 0;

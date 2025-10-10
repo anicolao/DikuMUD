@@ -1447,7 +1447,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	struct quest_data *quest;
 	
 	/* Only respond to 'ask' or 'talk' commands */
-	if (cmd != 107 && cmd != 152)  /* ask and say/tell */
+	if (cmd != 87 && cmd != 152)  /* ask and say/tell */
 		return FALSE;
 	
 	/* Find the player character in the room */
