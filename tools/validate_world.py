@@ -21,6 +21,7 @@ class WorldValidator:
         self.all_rooms = set()
         self.all_mobs = set()
         self.all_objects = set()
+        self.all_shops = {}  # shop_vnum -> zone_name
         self.zones = {}
         self.mobs_with_spec_flag = {}  # vnum -> zone_name
         
@@ -208,6 +209,31 @@ class WorldValidator:
             if len(affects) > 2:
                 self.error(f"{zone_name}: Object {vnum} has more than 2 affects")
         
+        # Validate shops
+        shops = data.get('shops', [])
+        for shop in shops:
+            shop_vnum = shop.get('vnum')
+            if shop_vnum is None:
+                self.error(f"{zone_name}: Shop missing vnum")
+                continue
+            
+            if shop_vnum in self.all_shops:
+                self.error(f"{zone_name}: Duplicate shop vnum {shop_vnum} (already defined in {self.all_shops[shop_vnum]})")
+            else:
+                self.all_shops[shop_vnum] = zone_name
+            
+            # Validate shop keeper exists
+            keeper_vnum = shop.get('keeper')
+            if keeper_vnum and keeper_vnum not in self.all_mobs:
+                # We'll check this in cross-reference validation since mobs may not be loaded yet
+                pass
+            
+            # Validate shop room exists
+            room_vnum = shop.get('in_room')
+            if room_vnum and room_vnum not in self.all_rooms:
+                # We'll check this in cross-reference validation
+                pass
+        
         # Validate resets
         resets = data.get('resets', [])
         for i, reset in enumerate(resets):
@@ -274,6 +300,23 @@ class WorldValidator:
                     room_vnum = reset.get('arg1')
                     if room_vnum and room_vnum not in self.all_rooms:
                         self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
+            
+            # Check shops
+            for shop in data.get('shops', []):
+                shop_vnum = shop.get('vnum')
+                keeper_vnum = shop.get('keeper')
+                room_vnum = shop.get('in_room')
+                
+                if keeper_vnum and keeper_vnum not in self.all_mobs:
+                    self.error(f"{zone_name}: Shop {shop_vnum} references non-existent keeper mobile {keeper_vnum}")
+                
+                if room_vnum and room_vnum not in self.all_rooms:
+                    self.error(f"{zone_name}: Shop {shop_vnum} references non-existent room {room_vnum}")
+                
+                # Check produced items
+                for item_vnum in shop.get('producing', []):
+                    if item_vnum > 0 and item_vnum not in self.all_objects:
+                        self.error(f"{zone_name}: Shop {shop_vnum} produces non-existent object {item_vnum}")
     
     def validate_spec_procedures(self):
         """Validate that mobiles with ACT_SPEC flag have assigned procedures."""
@@ -307,7 +350,7 @@ class WorldValidator:
         self.validate_spec_procedures()
         
         # Print results
-        print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects")
+        print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects, {len(self.all_shops)} shops")
         print(f"Found {len(self.zones)} zones")
         
         if self.errors:
