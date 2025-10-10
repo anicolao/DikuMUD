@@ -408,7 +408,7 @@ char *command[]=
 	"gol",
 	"wizlist",
 	";",
-	"zone",      /* 221 */
+	"zone",      /* 222 */
   "\n"
 };
 
@@ -985,7 +985,7 @@ void assign_command_pointers ( void )
 	COMMANDO(218,POSITION_DEAD,do_log,24);
 	COMMANDO(219,POSITION_DEAD,do_wizlist,0);
 	COMMANDO(220,POSITION_DEAD,do_wiz,21);
-	COMMANDO(221,POSITION_RESTING,do_zone,0);
+	COMMANDO(222,POSITION_RESTING,do_zone,0);
 	COMMANDO(199,POSITION_RESTING,do_action,0);
 	COMMANDO(200,POSITION_DEAD,do_brief,0);
 	COMMANDO(201,POSITION_DEAD,do_wiz,21);
@@ -1008,7 +1008,6 @@ void assign_command_pointers ( void )
 	COMMANDO(218,POSITION_DEAD,do_freeze,23);
 	COMMANDO(219,POSITION_DEAD,do_log,24);
 	COMMANDO(220,POSITION_DEAD,do_wizlist,0);
-	COMMANDO(221,POSITION_DEAD,do_wiz,21);
 
 }
 
