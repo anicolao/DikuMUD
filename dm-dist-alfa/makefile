@@ -20,24 +20,24 @@ validate-world: $(YAML_ZONES) ../tools/validate_world.py
 	@echo "Validating world data..."
 	@python3 ../tools/validate_world.py $(YAML_ZONES)
 
-# Build world data files from YAML zone files
-lib/tinyworld.wld: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build wld $@ $(YAML_ZONES)
+# Build all world data files from YAML zone files in one pass
+# This is much more efficient than building each file separately
+.PHONY: build-worldfiles
+build-worldfiles: $(YAML_ZONES) ../tools/world_builder.py ../tools/validate_world.py
+	python3 ../tools/world_builder.py build-all lib $(YAML_ZONES)
 
-lib/tinyworld.mob: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build mob $@ $(YAML_ZONES)
+# Marker file to track if worldfiles have been built
+lib/.worldfiles_built: $(YAML_ZONES) ../tools/world_builder.py ../tools/validate_world.py
+	python3 ../tools/world_builder.py build-all lib $(YAML_ZONES)
+	@touch lib/.worldfiles_built
 
-lib/tinyworld.obj: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build obj $@ $(YAML_ZONES)
-
-lib/tinyworld.zon: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build zon $@ $(YAML_ZONES)
-
-lib/tinyworld.shp: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build shp $@ $(YAML_ZONES)
-
-lib/tinyworld.qst: validate-world $(YAML_ZONES) ../tools/world_builder.py
-	python3 ../tools/world_builder.py build qst $@ $(YAML_ZONES)
+# Individual targets depend on the marker file
+lib/tinyworld.wld: lib/.worldfiles_built
+lib/tinyworld.mob: lib/.worldfiles_built
+lib/tinyworld.obj: lib/.worldfiles_built
+lib/tinyworld.zon: lib/.worldfiles_built
+lib/tinyworld.shp: lib/.worldfiles_built
+lib/tinyworld.qst: lib/.worldfiles_built
 
 # Main build targets
 all: delplay dmserver worldfiles
@@ -107,4 +107,4 @@ quest.o : quest.c structs.h utils.h comm.h db.h handler.h spells.h quest.h
 delplay.o : delplay.c structs.h
 
 clean:
-	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst
+	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built

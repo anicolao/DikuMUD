@@ -97,8 +97,12 @@ void do_drink(struct char_data *ch, char *argument, int cmd)
 
 	if(!(temp = get_obj_in_list_vis(ch,buf,ch->carrying)))
 	{
-		act("You can't find it!",FALSE,ch,0,0,TO_CHAR);
-		return;
+		/* Try to find it in the room */
+		if(!(temp = get_obj_in_list_vis(ch,buf,world[ch->in_room].contents)))
+		{
+			act("You can't find it!",FALSE,ch,0,0,TO_CHAR);
+			return;
+		}
 	}
 
 	if (temp->obj_flags.type_flag!=ITEM_DRINKCON)
@@ -135,7 +139,9 @@ void do_drink(struct char_data *ch, char *argument, int cmd)
 
 			amount = MIN(amount,temp->obj_flags.value[1]);
 
-			weight_change_object(temp, -amount);  /* Subtract amount */
+			/* Only change weight if object is being carried */
+			if(temp->carried_by)
+				weight_change_object(temp, -amount);  /* Subtract amount */
 
 			gain_condition(ch,DRUNK,(int)((int)drink_aff
 				[temp->obj_flags.value[2]][DRUNK]*amount)/4);
@@ -168,12 +174,14 @@ void do_drink(struct char_data *ch, char *argument, int cmd)
 				affect_join(ch,&af, FALSE, FALSE);
 			}
 
-			/* empty the container, and no longer poison. */
-			temp->obj_flags.value[1]-= amount;
-			if(!temp->obj_flags.value[1]) {  /* The last bit */
-				temp->obj_flags.value[2]=0;
-				temp->obj_flags.value[3]=0;
-				name_from_drinkcon(temp);
+			/* Deplete container only if being carried; fountains stay full */
+			if(temp->carried_by) {
+				temp->obj_flags.value[1]-= amount;
+				if(!temp->obj_flags.value[1]) {  /* The last bit */
+					temp->obj_flags.value[2]=0;
+					temp->obj_flags.value[3]=0;
+					name_from_drinkcon(temp);
+				}
 			}
 			return;
 
@@ -438,6 +446,98 @@ void do_sip(struct char_data *ch, char *argument, int cmd)
 
 	return;
 
+}
+
+
+void do_fill(struct char_data *ch, char *argument, int cmd)
+{
+	char arg1[MAX_STRING_LENGTH];
+	char arg2[MAX_STRING_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	struct obj_data *to_obj;
+	struct obj_data *from_obj;
+	int amount;
+
+	argument_interpreter(argument, arg1, arg2);
+
+	if(!*arg1) /* No arguments */
+	{
+		act("What do you want to fill?",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(!(to_obj = get_obj_in_list_vis(ch,arg1,ch->carrying)))
+	{
+		act("You can't find it!",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(to_obj->obj_flags.type_flag!=ITEM_DRINKCON)
+	{
+		act("You can't fill that!",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(!*arg2)
+	{
+		act("Fill from what?",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(!(from_obj = get_obj_in_list_vis(ch,arg2,world[ch->in_room].contents)))
+	{
+		act("You can't find it!",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(from_obj->obj_flags.type_flag!=ITEM_DRINKCON)
+	{
+		act("You can't fill from that.",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(from_obj->obj_flags.value[1] == 0)
+	{
+		act("The $p is empty.",FALSE,ch,from_obj,0,TO_CHAR);
+		return;
+	}
+
+	if((to_obj->obj_flags.value[1]!=0)&&
+		(to_obj->obj_flags.value[2]!=from_obj->obj_flags.value[2]))
+	{
+		act("There is already another liquid in it!",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	if(!(to_obj->obj_flags.value[1]<to_obj->obj_flags.value[0]))
+	{
+		act("There is no room for more.",FALSE,ch,0,0,TO_CHAR);
+		return;
+	}
+
+	sprintf(buf,"You fill $p from $P.");
+	act(buf,FALSE,ch,to_obj,from_obj,TO_CHAR);
+	sprintf(buf,"$n fills $p from $P.");
+	act(buf,TRUE,ch,to_obj,from_obj,TO_ROOM);
+
+	/* New alias */
+	if (to_obj->obj_flags.value[1]==0) 
+		name_to_drinkcon(to_obj,from_obj->obj_flags.value[2]);
+
+	/* First same type liq. */
+	to_obj->obj_flags.value[2]=from_obj->obj_flags.value[2];
+
+	/* Then how much to pour */
+	amount = to_obj->obj_flags.value[0]-to_obj->obj_flags.value[1];
+
+	/* give it to to_obj */
+	to_obj->obj_flags.value[1]+=amount;
+	weight_change_object(to_obj, amount);
+
+	/* Then the poison boogie */
+	to_obj->obj_flags.value[3]=from_obj->obj_flags.value[3];
+
+	return;
 }
 
 
