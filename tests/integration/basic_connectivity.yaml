@@ -1,0 +1,27 @@
+# Basic connectivity test
+# This is a simple test to verify the integration test framework works
+
+test:
+  id: basic_connectivity
+  description: "Verify server starts and accepts connections"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [smoke_test, connectivity]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  starting_room: 3001
+
+steps:
+  - action: look
+    description: "Look around to verify we're connected"
+    expected:
+      - pattern: "."
+        message: "Should receive some output from server"
+
+result:
+  should_pass: true
+  description: "Basic connectivity test passes if we can connect and execute a command"

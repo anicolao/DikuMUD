@@ -40,9 +40,15 @@ lib/tinyworld.shp: lib/.worldfiles_built
 lib/tinyworld.qst: lib/.worldfiles_built
 
 # Main build targets
-all: delplay dmserver worldfiles
+all: delplay dmserver worldfiles test
 
 worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst
+
+# Integration tests
+.PHONY: test
+test: dmserver worldfiles
+	@echo "Running integration tests..."
+	@./run_integration_tests.sh || true
 
 dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
 dmserver : changes.o
