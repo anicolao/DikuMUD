@@ -4,7 +4,6 @@ dmserver
 .direnv
 lib/players
 lib/board.messages
-lib/pcobjs.obj
 syntax_check
 # Assembled world files (generated from lib/zones/*)
 lib/tinyworld.wld
