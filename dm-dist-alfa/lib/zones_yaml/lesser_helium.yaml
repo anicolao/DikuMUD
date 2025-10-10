@@ -4000,6 +4000,44 @@ objects:
   rent: 1
   extra_descriptions: []
   affects: []
+- vnum: 3135
+  namelist: fountain water
+  short_desc: a fountain
+  long_desc: A water fountain provides fresh water here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 0
+  value0: 50
+  value1: 50
+  value2: 0
+  value3: 0
+  weight: 500
+  cost: 3000
+  rent: 1000
+  extra_descriptions:
+  - keywords: fountain
+    description: 'It is very nice.  Made from fine white marble.'
+  affects: []
+- vnum: 3138
+  namelist: waterskin leather
+  short_desc: a leather waterskin
+  long_desc: A leather waterskin lies here.
+  action_desc: ''
+  type_flag: 17
+  extra_flags: 0
+  wear_flags: 1
+  value0: 10
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 4
+  cost: 30
+  rent: 10
+  extra_descriptions:
+  - keywords: waterskin
+    description: 'A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.'
+  affects: []
 resets:
 - command: O
   if_flag: 0
@@ -4520,6 +4558,11 @@ resets:
   arg1: 3022
   arg2: 100
   arg3: 16
+- command: O
+  if_flag: 0
+  arg1: 3135
+  arg2: 1
+  arg3: 3014
 - command: M
   if_flag: 0
   arg1: 3060
@@ -4690,6 +4733,7 @@ shops:
   producing:
   - 3010
   - 3011
+  - 3138
   - 3000
   - 3001
   profit_buy: 1.1
