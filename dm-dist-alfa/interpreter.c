@@ -408,6 +408,7 @@ char *command[]=
 	"gol",
 	"wizlist",
 	";",
+	"reequip",   /* 221 */
 	"zone",      /* 222 */
   "\n"
 };
@@ -1008,6 +1009,8 @@ void assign_command_pointers ( void )
 	COMMANDO(218,POSITION_DEAD,do_freeze,23);
 	COMMANDO(219,POSITION_DEAD,do_log,24);
 	COMMANDO(220,POSITION_DEAD,do_wizlist,0);
+	COMMANDO(221,POSITION_STANDING,do_not_here,0);
+	COMMANDO(222,POSITION_RESTING,do_zone,0);
 
 }
 
