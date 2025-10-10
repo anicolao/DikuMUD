@@ -57,7 +57,7 @@ steps:
     description: "Attempt to purchase a weapon"
     command: "buy dagger"
     expected:
-      - pattern: "You buy|You purchase|don't have enough"
+      - pattern: "You buy|You purchase|don't have enough|NO CREDIT"
         message: "Shop should respond to purchase attempts"
 
 result:

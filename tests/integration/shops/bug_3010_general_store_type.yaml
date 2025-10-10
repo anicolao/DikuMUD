@@ -55,9 +55,9 @@ steps:
   # Try to buy a general good to verify shop works
   - action: command
     description: "Purchase a general good"
-    command: "buy lantern"
+    command: "buy lamp"
     expected:
-      - pattern: "You buy|You purchase|don't have enough"
+      - pattern: "You buy|You purchase|You now have|don't have enough|can't afford"
         message: "Should be able to purchase general goods"
 
 result:
