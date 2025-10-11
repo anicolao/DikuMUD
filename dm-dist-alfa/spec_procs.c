@@ -1541,12 +1541,18 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		return TRUE;
 	}
 	
-	/* Assign quest affect */
+	/* Assign quest affect 
+	 * Note: modifier and location fields are byte-sized, so we can't store vnums there.
+	 * Instead, we store the giver vnum in bitvector, shifted left 8 bits to avoid conflicts
+	 * with AFF_ flags (which use the lower bits).
+	 * The quest type is stored in 'type' field for has_quest_type() checks.
+	 */
 	af.type = quest->quest_type;
 	af.duration = quest->duration;
-	af.modifier = quest->item_vnum;
-	af.location = quest->target_vnum;
-	af.bitvector = AFF_QUEST | quest->quest_flags;
+	af.modifier = 0;  /* Not used for quests */
+	af.location = 0;  /* Not used for quests */
+	/* Pack giver vnum (bits 8-23) and AFF_QUEST flag (bit 24) into bitvector */
+	af.bitvector = AFF_QUEST | ((quest->giver_vnum & 0xFFFF) << 8);
 	
 	affect_to_char(ch, &af);
 	
