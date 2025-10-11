@@ -16,9 +16,13 @@ YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
 
 # Validate command mappings in interpreter.c
 .PHONY: validate-commands
-validate-commands: interpreter.c validate_commands.py
+validate-commands: .validate-commands-passed
+
+# Marker file to track if validation has passed
+.validate-commands-passed: interpreter.c validate_commands.py
 	@echo "Validating command mappings..."
 	@python3 validate_commands.py
+	@touch .validate-commands-passed
 
 # Validate world data before building
 .PHONY: validate-world
@@ -110,7 +114,7 @@ act.wizard.o : act.wizard.c structs.h utils.h comm.h interpreter.h \
 handler.o : handler.c structs.h utils.h db.h
 db.o : db.c structs.h utils.h db.h comm.h handler.h
 interpreter.o : interpreter.c structs.h comm.h interpreter.h db.h utils.h \
-  limits.h validate-commands
+  limits.h .validate-commands-passed
 utility.o : utility.c structs.h utils.h
 spec_assign.o : spec_assign.c structs.h db.h
 spec_procs.o : spec_procs.c structs.h utils.h comm.h interpreter.h \
@@ -145,4 +149,4 @@ quest.o : quest.c structs.h utils.h comm.h db.h handler.h spells.h quest.h
 delplay.o : delplay.c structs.h
 
 clean:
-	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built
+	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built .validate-commands-passed

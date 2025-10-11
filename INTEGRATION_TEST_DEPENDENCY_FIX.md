@@ -48,13 +48,19 @@ Verified the fix works correctly by:
 - **Correctness**: Tests still run when dependencies change
 - **Build system**: More accurate dependency tracking
 
-## Known Issue
+## Additional Fix: validate-commands Dependency
 
-There is a separate pre-existing issue where `interpreter.o` depends on the phony target `validate-commands`, causing dmserver to rebuild on every make invocation. This is unrelated to the worldfiles dependency fix but may mask the benefits of this fix in practice. If desired, this could be addressed separately by:
+Initially, there was a separate issue where `interpreter.o` depended on the phony target `validate-commands`, causing dmserver to rebuild on every make invocation. This masked the benefits of the worldfiles dependency fix.
 
-1. Creating a marker file for validate-commands (similar to lib/.worldfiles_built)
-2. Having validate-commands update the marker file only when validation actually changes something
-3. Making interpreter.o depend on the marker file instead of the phony target
+This was fixed using the same marker file approach:
+
+1. Created `.validate-commands-passed` marker file
+2. Made the phony `validate-commands` target depend on the marker file
+3. The marker file depends on `interpreter.c` and `validate_commands.py`
+4. Changed `interpreter.o` to depend on `.validate-commands-passed` instead of `validate-commands`
+5. Added marker file to clean target and .gitignore
+
+This ensures validation only runs when `interpreter.c` or the validation script changes, not on every build.
 
 ## Files Changed
 

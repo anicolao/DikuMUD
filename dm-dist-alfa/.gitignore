@@ -13,3 +13,4 @@ lib/tinyworld.zon
 lib/tinyworld.shp
 lib/tinyworld.qst
 lib/.worldfiles_built
+.validate-commands-passed
