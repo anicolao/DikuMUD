@@ -1455,59 +1455,110 @@ int kings_hall(struct char_data *ch, int cmd, char *arg)
 /* Generic quest giver - handles all quest types in a data-driven way */
 int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
-	struct char_data *questor;
+	struct char_data *mob;
 	struct affected_type af;
 	struct quest_data *quest;
+	char npc_name[MAX_INPUT_LENGTH], message[MAX_INPUT_LENGTH];
+	extern void half_chop(char *string, char *arg1, char *arg2);
+	extern int isname(char *str, char *namelist);
 	
-	/* Only respond to 'ask' or 'sneak' commands */
-	/* TODO: The sneak command seems wrong here, should probably be 'say' or 'tell' */
-	if (cmd != CMD_ASK && cmd != CMD_SNEAK)
+	/* Respond to 'ask', 'say', or 'tell' commands */
+	if (cmd != CMD_ASK && cmd != CMD_SAY && cmd != CMD_TELL)
 		return FALSE;
 	
-	/* Find the player character in the room */
-	questor = NULL;
-	for (questor = world[ch->in_room].people; questor; questor = questor->next_in_room) {
-		if (!IS_NPC(questor))
-			break;
+	/* For ask/tell: "ask <npc> <message>" or "tell <npc> <message>" 
+	 * For say: just "<message>" */
+	if (cmd == CMD_SAY) {
+		/* Player is saying something in the room - check if it contains quest keywords */
+		strncpy(message, arg, MAX_INPUT_LENGTH - 1);
+		message[MAX_INPUT_LENGTH - 1] = '\0';
+		npc_name[0] = '\0';  /* No specific NPC target for 'say' */
+	} else {
+		/* Parse argument: "ask/tell <npc> <message>" -> arg contains "<npc> <message>" */
+		half_chop(arg, npc_name, message);
+		
+		/* Check if we have both NPC name and message */
+		if (!*npc_name || !*message)
+			return FALSE;
 	}
 	
-	if (!questor)
+	/* Check if message contains quest-related keywords */
+	if (!strstr(message, "quest") && !strstr(message, "help") && 
+	    !strstr(message, "task") && !strstr(message, "Quest") &&
+	    !strstr(message, "Help") && !strstr(message, "Task")) {
 		return FALSE;
+	}
+	
+	/* Find the NPC being addressed in the room */
+	mob = NULL;
+	
+	if (cmd == CMD_SAY) {
+		/* For 'say', respond if we're the only quest giver in the room,
+		 * or if the player's message mentions our name */
+		int quest_giver_count = 0;
+		struct char_data *only_quest_giver = NULL;
+		
+		for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
+			if (IS_NPC(mob) && mob_index[mob->nr].func == quest_giver) {
+				quest_giver_count++;
+				only_quest_giver = mob;
+			}
+		}
+		
+		/* If there's only one quest giver, respond to the 'say' */
+		if (quest_giver_count == 1) {
+			mob = only_quest_giver;
+		} else {
+			/* Multiple quest givers - don't respond to generic 'say' */
+			return FALSE;
+		}
+	} else {
+		/* For ask/tell, find the specific NPC being addressed */
+		for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
+			if (IS_NPC(mob) && isname(npc_name, mob->player.name))
+				break;
+		}
+		
+		if (!mob)
+			return FALSE;
+		
+		/* Verify this mob is a quest giver */
+		if (mob_index[mob->nr].func != quest_giver)
+			return FALSE;
+	}
 	
 	/* Find quest data for this NPC */
-	quest = find_quest_by_giver(mob_index[ch->nr].virtual);
+	quest = find_quest_by_giver(mob_index[mob->nr].virtual);
 	if (!quest)
 		return FALSE;
 	
 	/* Check if player already has an active quest of this type */
-	if (has_quest_type(questor, quest->quest_type)) {
+	if (has_quest_type(ch, quest->quest_type)) {
 		/* Player already has this quest - they may be returning to complete it */
 		/* For delivery/retrieval quests, completion happens in do_give */
-		/* For now, just remind them */
 		act("$n says, 'You already have a task from me. Complete it first!'", 
-			FALSE, ch, 0, 0, TO_ROOM);
+			FALSE, mob, 0, 0, TO_ROOM);
 		return TRUE;
 	}
 	
-	/* Give quest if player asks about quest/help/task */
-	if (!strcasecmp(arg, "quest") || !strcasecmp(arg, "help") || 
-	    !strcasecmp(arg, "task")) {
-		
-		/* Assign quest affect */
-		af.type = quest->quest_type;
-		af.duration = quest->duration;
-		af.modifier = quest->item_vnum;
-		af.location = quest->target_vnum;
-		af.bitvector = AFF_QUEST | quest->quest_flags;
-		
-		affect_to_char(questor, &af);
-		
-		/* Send quest text */
-		act(quest->quest_text, FALSE, ch, 0, questor, TO_VICT);
-		
-		return TRUE;
-	}
+	/* Assign quest affect 
+	 * Note: modifier and location fields are byte-sized, so we can't store vnums there.
+	 * Instead, we store the giver vnum in bitvector, shifted left 8 bits to avoid conflicts
+	 * with AFF_ flags (which use the lower bits).
+	 * The quest type is stored in 'type' field for has_quest_type() checks.
+	 */
+	af.type = quest->quest_type;
+	af.duration = quest->duration;
+	af.modifier = 0;  /* Not used for quests */
+	af.location = 0;  /* Not used for quests */
+	/* Pack giver vnum (bits 8-23) and AFF_QUEST flag (bit 24) into bitvector */
+	af.bitvector = AFF_QUEST | ((quest->giver_vnum & 0xFFFF) << 8);
 	
-	return FALSE;
+	affect_to_char(ch, &af);
+	
+	/* Send quest text */
+	act(quest->quest_text, FALSE, mob, 0, ch, TO_VICT);
+	
+	return TRUE;
 }
 

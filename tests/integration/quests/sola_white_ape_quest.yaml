@@ -69,26 +69,41 @@ steps:
         message: "Score command should work"
         optional: true
 
-  # Step 4: Verify we have the white ape tooth in inventory
+  # Step 4: Load the white ape tooth for testing (god command)
   # NOTE: This requires the test character to be created with the item,
   # which is not yet implemented in create_test_player.
-  # For now, we'll use a god command to give ourselves the tooth.
+  # For now, we'll use a god command to create the tooth.
   - action: command
-    description: "Give ourselves the white ape tooth for testing (god command)"
+    description: "Load the white ape tooth for testing (god command)"
     command: "load obj 4091"
     expected:
-      - pattern: "You create|load|White|tooth"
+      - pattern: "Ok"
         message: "Should load the white ape tooth"
         optional: true
 
-  # Step 5: Check inventory to confirm we have the tooth
+  # Step 5: Look to see if the tooth is there
+  - action: look
+    description: "Look to see if the tooth is on the ground"
+    expected:
+      - pattern: "tooth"
+        message: "Tooth should be visible in the room"
+
+  # Step 6: Pick up the white ape tooth from the room
+  - action: command
+    description: "Pick up the white ape tooth"
+    command: "get tooth"
+    expected:
+      - pattern: "You get|you get|take"
+        message: "Should successfully pick up the tooth"
+
+  # Step 7: Check inventory to confirm we have the tooth
   - action: inventory
     description: "Verify white ape tooth is in inventory"
     expected:
       - pattern: "tooth|Tooth"
         message: "White ape tooth should be in inventory"
 
-  # Step 6: Give the white ape tooth to Sola to complete the quest
+  # Step 8: Give the white ape tooth to Sola to complete the quest
   - action: command
     description: "Give the white ape tooth to Sola to complete the quest"
     command: "give tooth sola"
@@ -101,7 +116,7 @@ steps:
       - pattern: "don't want that|not interested"
         message: "Sola should accept the white ape tooth for the quest"
 
-  # Step 7: Verify we received the experience reward
+  # Step 9: Verify we received the experience reward
   # We can't directly check experience, but the completion message should confirm
   - action: command
     description: "Check score to see experience gained"
@@ -110,14 +125,14 @@ steps:
       - pattern: "."
         message: "Score command should work"
 
-  # Step 8: Verify the practice sword is in our inventory
+  # Step 10: Verify the practice sword is in our inventory
   - action: inventory
     description: "Verify practice sword is now in inventory"
     expected:
       - pattern: "practice sword|Practice Sword|sword"
         message: "Tars Tarkas's Practice Sword should be in inventory"
 
-  # Step 9: Try to get the quest again - should be told we already completed it
+  # Step 11: Try to get the quest again - should be told we already completed it
   # or that we already have a task (depending on implementation)
   - action: command
     description: "Try asking Sola for the quest again"

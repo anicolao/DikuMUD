@@ -579,37 +579,52 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 		struct affected_type *af;
 		struct quest_data *quest;
 		int obj_vnum = obj_index[obj->item_number].virtual;
+		int vict_vnum = mob_index[vict->nr].virtual;
 		
 		/* Check if player has an active delivery or retrieval quest */
 		for (af = ch->affected; af; af = af->next) {
-			if ((af->type == QUEST_DELIVERY || af->type == QUEST_RETRIEVAL) &&
-			    af->modifier == obj_vnum) {
+			/* Check if this is a quest affect (has AFF_QUEST bit set) */
+			if (!(af->bitvector & AFF_QUEST))
+				continue;
 				
-				/* For delivery quest: check if giving to correct NPC */
-				if (af->type == QUEST_DELIVERY && af->location != mob_index[vict->nr].virtual)
-					continue;
-				
-				/* For retrieval quest: check if returning to quest giver */
-				if (af->type == QUEST_RETRIEVAL && af->location != mob_index[vict->nr].virtual)
-					continue;
-				
-				/* Quest completed! */
-				quest = find_quest_by_giver(af->location);
-				if (quest) {
-					/* Send completion message */
-					act(quest->complete_text, FALSE, vict, 0, ch, TO_VICT);
-					
-					/* Grant rewards */
-					grant_quest_reward(ch, quest);
-					
-					/* Remove quest affect */
-					affect_from_char(ch, af->type);
-					
-					/* Remove the quest item from recipient */
-					extract_obj(obj);
-				}
-				break;
-			}
+			/* Extract giver vnum from bitvector (bits 8-23, shifted right 8) */
+			int giver_vnum = (af->bitvector >> 8) & 0xFFFF;
+			
+			/* Look up quest data */
+			quest = find_quest_by_giver(giver_vnum);
+			if (!quest)
+				continue;
+			
+			/* Check if this is a delivery or retrieval quest */
+			if (af->type != QUEST_DELIVERY && af->type != QUEST_RETRIEVAL)
+				continue;
+			
+			/* Check if the object being given matches the quest item */
+			if (quest->item_vnum != obj_vnum)
+				continue;
+			
+			/* For delivery quest: check if giving to correct target NPC */
+			if (af->type == QUEST_DELIVERY && quest->target_vnum != vict_vnum)
+				continue;
+			
+			/* For retrieval quest: check if returning to quest giver */
+			if (af->type == QUEST_RETRIEVAL && giver_vnum != vict_vnum)
+				continue;
+			
+			/* Quest completed! */
+			/* Send completion message */
+			act(quest->complete_text, FALSE, vict, 0, ch, TO_VICT);
+			
+			/* Grant rewards */
+			grant_quest_reward(ch, quest);
+			
+			/* Remove quest affect */
+			affect_from_char(ch, af->type);
+			
+			/* Remove the quest item from recipient */
+			extract_obj(obj);
+			
+			break;
 		}
 	}
 }
