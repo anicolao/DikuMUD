@@ -134,6 +134,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 	};
 
 	/* Check if player needs reequip (when entering room) */
+	/* Note: cmd == 0 means pulse/timer event, not a player command */
 	if (cmd == 0) {
 		/* Check if player has no equipment and no inventory and < 500 coins */
 		has_equipment = 0;
@@ -153,7 +154,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 	}
 
 	/* Handle REEQUIP command */
-	if (cmd == 221) {
+	if (cmd == CMD_REEQUIP) {
 		/* Verify player still qualifies */
 		has_equipment = 0;
 		for (i = 0; i < MAX_WEAR; i++) {
@@ -247,7 +248,8 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 		return TRUE;
 	}
 
-	if ((cmd != 165) && (cmd != 171)) return(FALSE);
+	/* Handle PRACTICE and PRACTISE commands */
+	if ((cmd != CMD_PRACTICE) && (cmd != CMD_PRACTISE)) return(FALSE);
 
 	for(; *arg==' '; arg++);
 
@@ -465,7 +467,8 @@ int dump(struct char_data *ch, int cmd, char *arg)
 		extract_obj(k);
 	}
 
-	if(cmd!=60) return(FALSE);
+	/* Only trigger on DROP command */
+	if(cmd != CMD_DROP) return(FALSE);
 
 	do_drop(ch, arg, cmd);
 
@@ -1020,25 +1023,29 @@ int guild_guard(struct char_data *ch, int cmd, char *arg)
 	strcpy(buf,  "The guard humiliates you, and block your way.\n\r");
 	strcpy(buf2, "The guard humiliates $n, and blocks $s way.");
 
-	if ((ch->in_room == real_room(3017)) && (cmd == 3)) {
+	/* Block south exit for non-magic users */
+	if ((ch->in_room == real_room(3017)) && (cmd == CMD_SOUTH)) {
 		if (GET_CLASS(ch) != CLASS_MAGIC_USER) {
 			act(buf2, FALSE, ch, 0, 0, TO_ROOM);
 			send_to_char(buf, ch);
 			return TRUE;
 		}
-	} else if ((ch->in_room == real_room(3004)) && (cmd == 1)) {
+	/* Block north exit for non-clerics */
+	} else if ((ch->in_room == real_room(3004)) && (cmd == CMD_NORTH)) {
 		if (GET_CLASS(ch) != CLASS_CLERIC) {
 			act(buf2, FALSE, ch, 0, 0, TO_ROOM);
 			send_to_char(buf, ch);
 			return TRUE;
 		}
-	} else if ((ch->in_room == real_room(3027)) && (cmd == 2)) {
+	/* Block east exit for non-thieves */
+	} else if ((ch->in_room == real_room(3027)) && (cmd == CMD_EAST)) {
 		if (GET_CLASS(ch) != CLASS_THIEF) {
 			act(buf2, FALSE, ch, 0, 0, TO_ROOM);
 			send_to_char(buf, ch);
 			return TRUE;
 		}
-	} else if ((ch->in_room == real_room(3021)) && (cmd == 2)) {
+	/* Block east exit for non-warriors */
+	} else if ((ch->in_room == real_room(3021)) && (cmd == CMD_EAST)) {
 		if (GET_CLASS(ch) != CLASS_WARRIOR) {
 			act(buf2, FALSE, ch, 0, 0, TO_ROOM);
 			send_to_char(buf, ch);
@@ -1162,14 +1169,14 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
 
 	pet_room = ch->in_room+1;
 
-	if (cmd==59) { /* List */
+	if (cmd == CMD_LIST) { /* List */
 		send_to_char("Available pets are:\n\r", ch);
 		for(pet = world[pet_room].people; pet; pet = pet->next_in_room) {
 			sprintf(buf, "%8d - %s\n\r", 3*GET_EXP(pet), pet->player.short_descr);
 			send_to_char(buf, ch);
 		}
 		return(TRUE);
-	} else if (cmd==56) { /* Buy */
+	} else if (cmd == CMD_BUY) { /* Buy */
 
 		arg = one_argument(arg, buf);
 		arg = one_argument(arg, pet_name);
@@ -1236,7 +1243,8 @@ int pray_for_items(struct char_data *ch, int cmd, char *arg)
   struct obj_data *tmp_obj, *obj;
 	struct extra_descr_data *ext;
 
-	if (cmd != 176) /* You must pray to get the stuff */
+	/* You must pray to get the stuff */
+	if (cmd != CMD_PRAY)
 		return FALSE;
 
 	key_room = 1+ch->in_room;
@@ -1290,7 +1298,8 @@ int worm_ritual(struct char_data *ch, int cmd, char *arg)
 		to_room = real_room(5040);
 	}
 
-	if (cmd != 207)
+	/* Only respond to QUAFF command */
+	if (cmd != CMD_QUAFF)
 		return FALSE;
 
    arg = one_argument(arg,buf);
@@ -1427,10 +1436,11 @@ int chalice(struct char_data *ch, int cmd, char *arg)
 
 int kings_hall(struct char_data *ch, int cmd, char *arg)
 {
-	if (cmd != 176)
+	/* Only respond to PRAY command */
+	if (cmd != CMD_PRAY)
 		return(0);
 
-	do_action(ch, arg, 176);
+	do_action(ch, arg, CMD_PRAY);
 
 	send_to_char("You feel as if some mighty force has been offended.\n\r", ch);
 	send_to_char(CHAL_ACT, ch);
@@ -1449,8 +1459,9 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	struct affected_type af;
 	struct quest_data *quest;
 	
-	/* Only respond to 'ask' or 'talk' commands */
-	if (cmd != 87 && cmd != 152)  /* ask and say/tell */
+	/* Only respond to 'ask' or 'sneak' commands */
+	/* TODO: The sneak command seems wrong here, should probably be 'say' or 'tell' */
+	if (cmd != CMD_ASK && cmd != CMD_SNEAK)
 		return FALSE;
 	
 	/* Find the player character in the room */

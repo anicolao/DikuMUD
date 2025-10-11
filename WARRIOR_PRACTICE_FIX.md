@@ -2,7 +2,7 @@
 
 ## Summary
 
-Fixed the warrior guildmaster practice functionality that was not working due to incorrect command numbers in the guild special procedure. Created an integration test to validate the fix.
+Fixed the warrior guildmaster practice functionality by addressing the root cause: the "fill" command was incorrectly inserted in the middle of the command array (position 65) instead of at the end, causing all subsequent commands to shift by one position. This created off-by-one errors throughout the codebase wherever command numbers were hardcoded.
 
 ## Test Created
 
@@ -13,28 +13,49 @@ This integration test validates that warriors can:
 2. Practice kick, bash, and rescue skills
 3. Successfully consume practice sessions when practicing
 
+## Root Cause Analysis
+
+The "fill" command was added to the command array at position 65 (between "pour" and "grab"), causing all subsequent commands to shift forward by one position. This created a cascade of off-by-one errors throughout the codebase:
+
+- Commands 65-221 all shifted to positions 66-222
+- Hardcoded command numbers in spec_procs.c became incorrect
+- The guild special procedure checking for practice (164, 170) was actually checking for positions that no longer contained those commands
+
+The validation script showed numerous off-by-one warnings:
+- "string" had comment /* 71 */ but was at position 72
+- This pattern continued through the entire array from position 72 onwards
+
 ## Issues Found and Fixed
 
-### 1. Incorrect Practice Command Numbers
+### 1. Moved "fill" Command to End of Array
 
-**Problem**: The guild special procedure in `spec_procs.c` was checking for practice command numbers 164 and 170, but the actual command numbers in `interpreter.c` are 165 and 171.
+**Problem**: The "fill" command was inserted at position 65 in the middle of the command array, causing all subsequent commands to shift positions.
 
-**Root Cause**: The command array in `interpreter.c` has comments that count as positions, causing the actual command numbers to be different from what was expected. The commands are:
-- Position 165: "practice"
-- Position 171: "practise" (British spelling)
+**Fix**: Moved "fill" from position 65 to position 222 (at the end of the array), restoring original command positions for commands 65-221.
 
-**Fix**: Changed line 250 in `spec_procs.c`:
+**Files Modified**: 
+- `dm-dist-alfa/interpreter.c` - Command array and all COMMANDO mappings
+
+**Impact**: All commands from position 65 onwards are now back at their original positions, fixing any code that relied on the original command numbers.
+
+### 2. Created Command Number Constants
+
+**Problem**: Command numbers were hardcoded throughout the codebase, making the code fragile and error-prone when the command array changes.
+
+**Fix**: Created #define constants for all commonly-used command numbers in `interpreter.h`:
 ```c
-// Before:
-if ((cmd != 164) && (cmd != 170)) return(FALSE);
-
-// After:
-if ((cmd != 165) && (cmd != 171)) return(FALSE);
+#define CMD_NORTH       1
+#define CMD_PRACTICE    164
+#define CMD_PRACTISE    170
+#define CMD_REEQUIP     220
+// ... and more
 ```
 
-**File Modified**: `dm-dist-alfa/spec_procs.c`
+**Files Modified**:
+- `dm-dist-alfa/interpreter.h` - Added command number constants
+- `dm-dist-alfa/spec_procs.c` - Replaced all hardcoded command numbers with constants
 
-**Impact**: This fix affects ALL guild special procedures, not just warriors. All classes (Scientists, Nobles, Assassins, and Warriors) can now properly practice their skills.
+**Impact**: Future changes to the command array won't break code that uses these constants. The code is now self-documenting and maintainable.
 
 ### 2. Test Characters Missing Practice Sessions
 
