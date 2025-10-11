@@ -1111,6 +1111,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	struct char_data *ch, *tmp_ch;
 	struct descriptor_data *k;
 	extern struct descriptor_data *descriptor_list;
+	extern int spin_mode;
 
 	void do_look(struct char_data *ch, char *argument, int cmd);
 	void load_char_objs(struct char_data *ch);

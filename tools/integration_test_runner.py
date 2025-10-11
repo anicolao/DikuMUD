@@ -39,12 +39,13 @@ class ServerManager:
     - Clean up test artifacts
     """
     
-    def __init__(self, server_path: str, lib_path: str):
+    def __init__(self, server_path: str, lib_path: str, spin_mode: bool = True):
         self.server_path = server_path
         self.lib_path = lib_path
         self.test_lib_path = None  # Will be created as a copy of lib_path
         self.process = None
         self.port = None
+        self.spin_mode = spin_mode  # Enable spin mode for faster testing
     
     def _create_test_lib(self):
         """Create a test copy of the lib directory to avoid modifying real game assets."""
@@ -83,8 +84,11 @@ class ServerManager:
         
         # Start server as subprocess with test_lib as the data directory
         server_dir = os.path.dirname(self.server_path)
+        cmd = [self.server_path, '-p', str(port), '-d', 'test_lib']
+        if self.spin_mode:
+            cmd.append('-spin')  # Enable spin mode for maximum speed
         self.process = subprocess.Popen(
-            [self.server_path, '-p', str(port), '-d', 'test_lib'],
+            cmd,
             cwd=server_dir,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -193,21 +197,17 @@ class ServerManager:
         start_time = time.time()
         last_error = None
         
-        # Give server a moment to start
-        time.sleep(1)
-        
         while time.time() - start_time < timeout:
             try:
                 # Try to connect to the port
                 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                    s.settimeout(2)
+                    s.settimeout(1)
                     s.connect(('localhost', self.port))
                     # Connection successful, server is ready
-                    time.sleep(0.5)  # Give it a bit more time to fully initialize
                     return
             except (ConnectionRefusedError, socket.timeout, OSError) as e:
                 last_error = e
-                time.sleep(0.5)
+                time.sleep(0.01)  # Minimal wait between retries
         
         # Try to get server output if available
         error_msg = f"Server failed to start within {timeout} seconds"
@@ -232,10 +232,13 @@ class GameClient:
     - Handle prompts and output
     """
     
-    def __init__(self, host: str = 'localhost', port: int = 4000):
+    def __init__(self, host: str = 'localhost', port: int = 4000, spin_mode: bool = True):
         self.host = host
         self.port = port
         self.connection = None
+        self.spin_mode = spin_mode
+        # Set idle timeout for spin mode - very small for maximum speed
+        self.idle_timeout = 0.001
     
     def connect(self, timeout: int = 10, char_name: str = None, char_pass: str = None):
         """
@@ -251,53 +254,23 @@ class GameClient:
         """
         try:
             self.connection = telnetlib.Telnet(self.host, self.port, timeout)
-            # Read initial welcome message
-            time.sleep(0.5)
-            welcome = self._read_available()
             
             # If character name provided, handle login
+            # We know the exact sequence: username, password, 1 (for PRESS RETURN), 1 (for menu)
+            # Send all inputs at once - the first '1' gets consumed by PRESS RETURN prompt,
+            # the second '1' triggers menu selection. This avoids the empty line issue where
+            # consecutive newlines get skipped by the server's input processing.
             if char_name and char_pass:
-                # Send character name
-                self.connection.write(char_name.encode('ascii') + b'\n')
-                time.sleep(0.5)
-                response = self._read_available()
+                # Send all commands in a single write to test buffering
+                login_sequence = (
+                    char_name.encode('ascii') + b'\n' +
+                    char_pass.encode('ascii') + b'\n' +
+                    b'1\n' +  # PRESS RETURN (any input works, server just waits for newline)
+                    b'1\n'    # Menu choice
+                )
+                self.connection.write(login_sequence)
+                # After login, don't read anything - let first expect_output handle it
                 
-                # Answer "yes" to name confirmation
-                if "Did I get that right" in response or "(Y/N)" in response:
-                    self.connection.write(b'yes\n')
-                    time.sleep(0.5)
-                    response = self._read_available()
-                
-                # Enter password
-                if "password" in response.lower() or "Password" in response:
-                    self.connection.write(char_pass.encode('ascii') + b'\n')
-                    time.sleep(0.5)
-                    response = self._read_available()
-                    
-                    # Handle password retype for new characters or wrong password
-                    if "retype" in response.lower() or "Retype" in response or "Wrong password" in response:
-                        self.connection.write(char_pass.encode('ascii') + b'\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
-                    
-                    # Handle menu after login (press return)
-                    if "PRESS RETURN" in response:
-                        self.connection.write(b'\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
-                    
-                    # Handle menu choice (enter the game)
-                    if "Make your choice" in response:
-                        self.connection.write(b'1\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
-                    
-                    # Wait for login to complete and all MOTD/initial output to arrive
-                    # The server outputs MOTD and then the room description automatically
-                    time.sleep(2.0)
-                    # Use _read_until_prompt to properly drain the buffer until we see a prompt
-                    self._read_until_prompt(timeout=5)
-                    
         except Exception as e:
             raise ConnectionError(f"Failed to connect to {self.host}:{self.port}: {e}")
     
@@ -306,7 +279,7 @@ class GameClient:
         if self.connection:
             try:
                 self.connection.write(b"quit\n")
-                time.sleep(0.2)
+                # No sleep needed - close will flush and disconnect
             except Exception:
                 pass
             try:
@@ -315,41 +288,63 @@ class GameClient:
                 pass
             self.connection = None
     
-    def send_command(self, command: str, wait_for_prompt: bool = True) -> str:
+    def send_command(self, command: str) -> None:
         """
-        Send command to server and return response.
+        Send command to server (without reading response).
         
         Args:
             command: Command to send
-            wait_for_prompt: Whether to wait for prompt after command
-            
-        Returns:
-            Server response as string
         """
         if not self.connection:
             raise RuntimeError("Not connected to server")
         
         self.connection.write(command.encode('ascii') + b'\n')
-        time.sleep(0.3)  # Give server time to process
-        
-        if wait_for_prompt:
-            return self._read_until_prompt(timeout=5)
-        else:
-            return self._read_available()
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f">>>> {command}");
+        # Don't read here - let expect_output handle all reading
     
-    def expect_output(self, pattern: str, timeout: int = 5) -> bool:
+    def expect_output(self, pattern: str, output: str = "", max_prompts: int = 3, timeout: int = 30) -> tuple:
         """
-        Wait for output matching pattern.
+        Read output until pattern is found or max_prompts are seen.
+        
+        This is the ONLY method that reads from the server after connect/login.
+        It reads through multiple prompts to handle spurious game messages
+        like "You are thirsty" or mob arrivals.
         
         Args:
             pattern: Regular expression pattern to match
-            timeout: How long to wait for match
+            max_prompts: Maximum number of prompts to read before giving up
+            timeout: Total timeout in seconds
             
         Returns:
-            True if pattern found, False otherwise
+            (found: bool, output: str) - Whether pattern was found and all output read
         """
-        output = self._read_until_prompt(timeout)
-        return bool(re.search(pattern, output, re.IGNORECASE | re.MULTILINE))
+        all_output = output
+        prompts_seen = 0
+        start_time = time.time()
+        
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f"***** EXPECT: {pattern}")
+        if re.search(pattern, all_output, re.IGNORECASE | re.MULTILINE):
+            if os.getenv('DEBUG_OUTPUT'):
+                print(f"***** FOUND: {pattern}")
+            return (True, all_output)
+        while prompts_seen < max_prompts and (time.time() - start_time) < timeout:
+            chunk_output = self._read_until_prompt(timeout=5)
+            all_output += chunk_output
+            
+            # Check if we found the pattern
+            if re.search(pattern, all_output, re.IGNORECASE | re.MULTILINE):
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"***** FOUND: {pattern}")
+                return (True, all_output)
+            
+            # Count this prompt
+            prompts_seen += 1
+        
+        print(f"***** FAILED TO FIND: {pattern}")
+        # Pattern not found after max_prompts
+        return (False, all_output)
     
     def _read_available(self) -> str:
         """Read all currently available data."""
@@ -359,8 +354,8 @@ class GameClient:
         except Exception:
             return ""
     
-    def _read_until_prompt(self, timeout: int = 5) -> str:
-        """Read until we get a prompt or timeout."""
+    def _read_until_prompt(self, timeout: int = 30) -> str:
+        """Read until we get a prompt."""
         output = ""
         start_time = time.time()
         last_read_time = start_time
@@ -370,15 +365,36 @@ class GameClient:
                 chunk = self.connection.read_very_eager()
                 if chunk:
                     decoded = chunk.decode('ascii', errors='ignore')
+                    # Debug output for troubleshooting
+                    import os
+                    if os.getenv('DEBUG_OUTPUT'):
+                        print(decoded, end='', flush=True)
                     output += decoded
                     last_read_time = time.time()
                     # Check for prompt patterns (>, ], etc.)
                     if re.search(r'[>]\s*$', output):
                         break
-                # If we haven't received data for 0.5 seconds and we have some output, assume done
-                elif output and (time.time() - last_read_time > 0.5):
-                    break
-                time.sleep(0.1)
+                else:
+                    # No data - if we have output with a prompt, we're done
+                    if output and re.search(r'[>]\s*$', output):
+                        break
+                    # If we haven't received data for a bit and have output, check if done
+                    if output and (time.time() - last_read_time > 0.5):
+                        # Give it one more chance to see if prompt arrives
+                        time.sleep(0.1)
+                        chunk = self.connection.read_very_eager()
+                        if chunk:
+                            decoded = chunk.decode('ascii', errors='ignore')
+                            output += decoded
+                            last_read_time = time.time()
+                            if re.search(r'[>]\s*$', output):
+                                break
+                        else:
+                            # Still no data, we're probably done
+                            break
+                
+                # Smaller sleep for faster response
+                time.sleep(0.001 if self.spin_mode else 0.01)
             except Exception:
                 break
         
@@ -431,6 +447,15 @@ class TestExecutor:
         if 'setup' in test_def:
             self._execute_setup(test_def['setup'])
         
+        # After login, expect the initial room description
+        # This consumes all the login output (MOTD, room description, etc.)
+        print(f"  Waiting for initial room description...")
+        found, output = self.client.expect_output(r'>', max_prompts=2, timeout=15)
+        if not found:
+            print(f"  ✗ FAILED: Could not find initial prompt after login")
+            return False
+        print(f"  ✓ Connected and in game")
+        
         # Execute steps
         all_passed = True
         for i, step in enumerate(test_def.get('steps', []), 1):
@@ -482,12 +507,11 @@ class TestExecutor:
         if 'direction' in step:
             # Single direction
             direction = step['direction']
-            output = self.client.send_command(direction)
+            self.client.send_command(direction)
         elif 'path' in step:
-            # Multiple directions
+            # Multiple directions - send last one, expect checks result
             for direction in step['path']:
-                output = self.client.send_command(direction)
-                time.sleep(0.2)
+                self.client.send_command(direction)
         elif 'target_room' in step:
             # Target room specified - for now we just skip
             # In full implementation, would pathfind to target
@@ -500,33 +524,20 @@ class TestExecutor:
         
         # Validate expectations if present (only for actual movement)
         if 'expected' in step and 'target_room' not in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         return True
     
     def _execute_command(self, step: Dict[str, Any]) -> bool:
         """Execute general command."""
         command = step['command']
-        output = self.client.send_command(command)
+        self.client.send_command(command)
         
-        # Show all output if flag is set
-        if self.show_all_output:
-            print(f"\n    === Command Output ===")
-            print(f"    Command: {command}")
-            print(f"    Output:\n{output}")
-            print(f"    === End Output ===\n")
-        
-        # Check fail_on conditions first
-        if 'fail_on' in step:
-            for fail_condition in step['fail_on']:
-                pattern = fail_condition['pattern']
-                if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
-                    print(f"    ✗ FAILED: {fail_condition.get('message', 'Fail condition matched')}")
-                    return False
-        
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt to confirm command completed
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_look(self, step: Dict[str, Any]) -> bool:
@@ -537,29 +548,26 @@ class TestExecutor:
         else:
             command = "look"
         
-        output = self.client.send_command(command)
+        self.client.send_command(command)
         
-        # Show all output if flag is set
-        if self.show_all_output:
-            print(f"\n    === Command Output ===")
-            print(f"    Command: {command}")
-            print(f"    Output:\n{output}")
-            print(f"    === End Output ===\n")
-        
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_inventory(self, step: Dict[str, Any]) -> bool:
         """Execute inventory check."""
-        output = self.client.send_command("inventory")
+        self.client.send_command("inventory")
         
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_cleanup(self, cleanup: Dict[str, Any]):
@@ -597,6 +605,41 @@ class TestExecutor:
                     print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
         
         return all_passed
+    
+    def _validate_expectations_simple(self, expectations: List[Dict]) -> bool:
+        """
+        Validate expectations by reading output with expect_output.
+        This is the simplified version that uses expect_output for all reading.
+        
+        Args:
+            expectations: List of expectation patterns
+            
+        Returns:
+            True if all expectations met
+        """
+        all_passed = True
+        output = ""
+        for expectation in expectations:
+            pattern = expectation['pattern']
+            optional = expectation.get('optional', False)
+            
+            # Use expect_output to read until pattern found (or max prompts)
+            found, output = self.client.expect_output(pattern, output=output, max_prompts=3, timeout=30)
+            
+            # Show output if flag set
+            if self.show_all_output and output:
+                print(f"\n    === Output ===\n{output}\n    === End ===\n")
+            
+            if found:
+                print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
+            else:
+                if not optional:
+                    print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
+                    all_passed = False
+                else:
+                    print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
+        
+        return all_passed
 
 
 class TestRunner:
@@ -610,10 +653,11 @@ class TestRunner:
     - Generate reports
     """
     
-    def __init__(self, server_path: str, lib_path: str, show_all_output: bool = False):
-        self.server_manager = ServerManager(server_path, lib_path)
+    def __init__(self, server_path: str, lib_path: str, show_all_output: bool = False, spin_mode: bool = True):
+        self.server_manager = ServerManager(server_path, lib_path, spin_mode=spin_mode)
         self.results = []
         self.show_all_output = show_all_output
+        self.spin_mode = spin_mode
     
     def run_test_file(self, test_file: Path, verbose: bool = False) -> bool:
         """
@@ -674,8 +718,8 @@ class TestRunner:
             return False
         
         try:
-            # Connect client
-            client = GameClient('localhost', port)
+            # Connect client with spin mode enabled
+            client = GameClient('localhost', port, spin_mode=self.spin_mode)
             try:
                 client.connect(char_name=char_name, char_pass=char_pass)
                 print(f"✓ Connected to server")

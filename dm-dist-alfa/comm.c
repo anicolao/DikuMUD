@@ -36,6 +36,7 @@
 #define MAX_NAME_LENGTH 15
 #define MAX_HOSTNAME   256
 #define OPT_USEC 250000       /* time delay corresponding to 4 passes/sec */
+#define SPIN_USEC 1           /* 1 microsecond delay for spin mode (maximum speed) */
 
 
 
@@ -56,6 +57,7 @@ extern bool wizlock;
 struct descriptor_data *descriptor_list, *next_to_process;
 
 int lawful = 0;		/* work like the game regulator */
+int spin_mode = 0;	/* spin as fast as possible (testing) */
 int slow_death = 0;  /* Shut her down, Martha, she's sucking mud */
 int shutting_down = 0;    /* clean shutdown */
 int reboot = 0;      /* reboot the game after a shutdown */
@@ -137,8 +139,17 @@ int main(int argc, char **argv)
 				}
 			break;
 			case 's':
-				no_specials = 1;
-				slog("Suppressing assignment of special routines.");
+				/* Check if this is -spin or just -s */
+				if (strcmp(argv[pos], "-spin") == 0)
+				{
+					spin_mode = 1;
+					slog("Spin mode enabled - running at maximum speed.");
+				}
+				else
+				{
+					no_specials = 1;
+					slog("Suppressing assignment of special routines.");
+				}
 			break;
 			case 'p':
 				if (*(argv[pos] + 2))
@@ -163,7 +174,7 @@ int main(int argc, char **argv)
 	if (pos < argc)
 		if (!isdigit(*argv[pos]))
 		{
-			fprintf(stderr, "Usage: %s [-l] [-s] [-d pathname] [-p port] [ port # ]\n", 
+			fprintf(stderr, "Usage: %s [-l] [-s] [-spin] [-d pathname] [-p port] [ port # ]\n", 
 				argv[0]);
 			exit(0);
 		}
@@ -445,7 +456,8 @@ int game_loop(int s)
 	null_time.tv_sec = 0;
 	null_time.tv_usec = 0;
 
-	opt_time.tv_usec = OPT_USEC;  /* Init time values */
+	/* Init time values - use spin mode if enabled */
+	opt_time.tv_usec = spin_mode ? SPIN_USEC : OPT_USEC;
 	opt_time.tv_sec = 0;
 	gettimeofday(&last_time, (struct timeval *) 0);
 
@@ -1034,6 +1046,7 @@ int process_input(struct descriptor_data *t)
 		else
 		{
 			*(tmp + k) = 0;
+			
 			if(*tmp == '!')
 				strcpy(tmp,t->last_input);
 			else
