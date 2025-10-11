@@ -14,7 +14,7 @@ setup:
     name: WarriorPractice
     password: test
     class: warrior
-    level: 1
+    level: 2  # Level 2 to have practice sessions (gained from leveling to 2)
   start_room: 3023  # Practice Yard - War Master's room
   gold: 0
 
@@ -22,8 +22,10 @@ steps:
   - action: look
     description: "Look around - should be in War Master's room"
     expected:
-      - pattern: "Practice Yard|War Master"
-        message: "Should be in the War Master's room"
+      - pattern: "Practice Yard"
+        message: "Should be in the Practice Yard"
+      - pattern: "War Master"
+        message: "War Master should be present in the room"
 
   - action: command
     command: "practice"

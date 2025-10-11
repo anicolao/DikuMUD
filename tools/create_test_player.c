@@ -138,6 +138,14 @@ int main(int argc, char *argv[]) {
     player.last_logon = time(0);
     player.act = 0;
     
+    /* Give practice sessions based on level (simulating level gains) */
+    /* Characters get practice sessions when they level up */
+    if (level > 1) {
+        player.spells_to_learn = (level - 1) * 3;  /* Approximately 3 sessions per level */
+    } else {
+        player.spells_to_learn = 0;
+    }
+    
     /* Write player file */
     if (data_dir) {
         snprintf(player_file_path, sizeof(player_file_path), "%s/players", data_dir);

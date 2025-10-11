@@ -247,7 +247,7 @@ int guild(struct char_data *ch, int cmd, char *arg) {
 		return TRUE;
 	}
 
-	if ((cmd != 164) && (cmd != 170)) return(FALSE);
+	if ((cmd != 165) && (cmd != 171)) return(FALSE);
 
 	for(; *arg==' '; arg++);
 
