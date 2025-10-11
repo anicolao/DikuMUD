@@ -261,15 +261,17 @@ class GameClient:
             self.connection = telnetlib.Telnet(self.host, self.port, timeout)
             
             # If character name provided, handle login
-            # We know the exact sequence: username, password, enter, 1
-            # Send all inputs at once to test server buffering (with debug logging)
+            # We know the exact sequence: username, password, 1 (for PRESS RETURN), 1 (for menu)
+            # Send all inputs at once - the first '1' gets consumed by PRESS RETURN prompt,
+            # the second '1' triggers menu selection. This avoids the empty line issue where
+            # consecutive newlines get skipped by the server's input processing.
             if char_name and char_pass:
                 # Send all commands in a single write to test buffering
                 login_sequence = (
                     char_name.encode('ascii') + b'\n' +
                     char_pass.encode('ascii') + b'\n' +
-                    b'\n' +  # PRESS RETURN
-                    b'1\n'   # Menu choice
+                    b'1\n' +  # PRESS RETURN (any input works, server just waits for newline)
+                    b'1\n'    # Menu choice
                 )
                 self.connection.write(login_sequence)
                 
