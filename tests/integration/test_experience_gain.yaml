@@ -1,0 +1,46 @@
+# Integration test for experience gain on kill
+# Verifies that players see "You gained XX experience." when killing a creature
+
+test:
+  id: test_experience_gain
+  description: "Verify players see experience gain message when killing creatures"
+  author: Integration Test Framework
+  created: 2025-10-11
+  tags: [combat, experience, kill]
+
+setup:
+  character:
+    name: ExpTester
+    password: test
+    class: warrior
+    level: 22  # Level 22 to use god commands for testing
+  start_room: 3001  # Temple Square in Midgaard
+  gold: 100
+
+steps:
+  # Step 1: Verify we're in the temple
+  - action: look
+    description: "Look around to confirm we're in Temple Square"
+    expected:
+      - pattern: "Temple|temple"
+        message: "Should be in Temple Square"
+
+  # Step 2: Load a weak mobile to kill
+  - action: command
+    command: "load mob 10"
+    description: "Load a simple mobile (cityguard) for testing"
+    expected:
+      - pattern: "."
+        message: "Should get some response from load command"
+
+  # Step 3: Kill the mobile and check for experience message
+  - action: command
+    command: "kill guard"
+    description: "Attack the guard to test experience gain"
+    expected:
+      - pattern: "You gained [0-9]+ experience\\."
+        message: "Should see experience gain message with actual amount"
+
+result:
+  should_pass: true
+  description: "Test passes if we see 'You gained XX experience.' message on kill"
