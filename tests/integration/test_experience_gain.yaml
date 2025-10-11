@@ -27,8 +27,8 @@ steps:
 
   # Step 2: Load a weak mobile to kill
   - action: command
-    command: "load char 10"
-    description: "Load a simple mobile (cityguard) for testing"
+    command: "load char 3062"
+    description: "Load a weak calot for testing"
     expected:
       - pattern: "."
         message: "Should get some response from load command"
@@ -43,8 +43,8 @@ steps:
   # Step 4: Kill the mobile and check for experience message
   # Note: This may take multiple hits, so we may need to wait
   - action: command
-    command: "kill guard"
-    description: "Start attacking the guard"
+    command: "kill calot"
+    description: "Start attacking the calot"
     expected:
       - pattern: "."
         message: "Should start combat"
