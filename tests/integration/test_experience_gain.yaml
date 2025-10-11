@@ -27,16 +27,33 @@ steps:
 
   # Step 2: Load a weak mobile to kill
   - action: command
-    command: "load mob 10"
+    command: "load char 10"
     description: "Load a simple mobile (cityguard) for testing"
     expected:
       - pattern: "."
         message: "Should get some response from load command"
 
-  # Step 3: Kill the mobile and check for experience message
+  # Step 3: Look to see what we loaded
+  - action: look
+    description: "Look to see the loaded mobile"
+    expected:
+      - pattern: "."
+        message: "Should see something"
+
+  # Step 4: Kill the mobile and check for experience message
+  # Note: This may take multiple hits, so we may need to wait
   - action: command
     command: "kill guard"
-    description: "Attack the guard to test experience gain"
+    description: "Start attacking the guard"
+    expected:
+      - pattern: "."
+        message: "Should start combat"
+
+  # Step 5: Wait for the kill to complete - keep hitting
+  - action: command
+    command: "wait"
+    description: "Wait for auto-combat to finish"
+    delay_after: 5
     expected:
       - pattern: "You gained [0-9]+ experience\\."
         message: "Should see experience gain message with actual amount"
