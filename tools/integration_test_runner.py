@@ -260,36 +260,23 @@ class GameClient:
                 self.connection.write(char_name.encode('ascii') + b'\n')
                 response = self._read_until_idle(timeout=2)
                 
-                # Answer "yes" to name confirmation
-                if "Did I get that right" in response or "(Y/N)" in response:
-                    self.connection.write(b'yes\n')
+                self.connection.write(char_pass.encode('ascii') + b'\n')
+                response = self._read_until_idle(timeout=2)
+                    
+                # Handle menu after login (press return)
+                if "PRESS RETURN" in response:
+                    self.connection.write(b'\n')
                     response = self._read_until_idle(timeout=2)
+                    
+                # Handle menu choice (enter the game)
+                if "Make your choice" in response:
+                    self.connection.write(b'1\n')
+                    
+                # Wait for login to complete and all MOTD/initial output to arrive
+                # The server outputs MOTD and then the room description automatically
+                # Use _read_until_prompt to properly drain the buffer until we see a prompt
+                self._read_until_prompt(timeout=15)
                 
-                # Enter password
-                if "password" in response.lower() or "Password" in response:
-                    self.connection.write(char_pass.encode('ascii') + b'\n')
-                    response = self._read_until_idle(timeout=2)
-                    
-                    # Handle password retype for new characters or wrong password
-                    if "retype" in response.lower() or "Retype" in response or "Wrong password" in response:
-                        self.connection.write(char_pass.encode('ascii') + b'\n')
-                        response = self._read_until_idle(timeout=2)
-                    
-                    # Handle menu after login (press return)
-                    if "PRESS RETURN" in response:
-                        self.connection.write(b'\n')
-                        response = self._read_until_idle(timeout=2)
-                    
-                    # Handle menu choice (enter the game)
-                    if "Make your choice" in response:
-                        self.connection.write(b'1\n')
-                        response = self._read_until_idle(timeout=2)
-                    
-                    # Wait for login to complete and all MOTD/initial output to arrive
-                    # The server outputs MOTD and then the room description automatically
-                    # Use _read_until_prompt to properly drain the buffer until we see a prompt
-                    self._read_until_prompt(timeout=5)
-                    
         except Exception as e:
             raise ConnectionError(f"Failed to connect to {self.host}:{self.port}: {e}")
     
