@@ -13,8 +13,8 @@ setup:
     name: TestFighter
     password: test
     class: warrior
-    level: 22  # Level 22 for wizard access
-  start_room: 3151  # Upper sewer section with ulsio
+    level: 22 # Level 22 for wizard access
+  start_room: 4000
   gold: 0
 
 steps:
@@ -24,6 +24,13 @@ steps:
     expected:
       - pattern: "."
         message: "Command executed"
+
+  - action: command
+    command: "get all"
+    description: "get coins"
+    expected:
+      - pattern: "bronze"
+        message: "Get bronze coins"
 
   - action: command
     command: "drop all"
@@ -58,7 +65,7 @@ result:
     This test verifies that bronze coins dropped in ulsio corpses can be picked up.
     The issue was that bronze coins object (#3614) had wear_flags=0 instead of 
     wear_flags=1 (ITEM_TAKE), making them non-takeable.
-    
+
     This test will fail if:
     - Bronze coins cannot be picked up from the corpse
     - Bronze coins don't have the ITEM_TAKE flag set
