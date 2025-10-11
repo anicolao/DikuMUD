@@ -1118,16 +1118,6 @@ void nanny(struct descriptor_data *d, char *arg)
 	int load_char(char *name, struct char_file_u *char_element);
 	struct crypt_data crypted;
 
-	/* Debug logging in spin mode to trace command processing */
-	if (spin_mode) {
-		FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
-		if (debug_file) {
-			fprintf(debug_file, "NANNY_DEBUG: state=%d arg='%s' (fd=%d)\n", 
-				STATE(d), arg ? arg : "(null)", d->descriptor);
-			fclose(debug_file);
-		}
-	}
-
 	switch (STATE(d))
 	{
 		case CON_NME:		/* wait for input of name	*/

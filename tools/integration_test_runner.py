@@ -197,9 +197,6 @@ class ServerManager:
         start_time = time.time()
         last_error = None
         
-        # Give server a brief moment to start
-        time.sleep(0.2)
-        
         while time.time() - start_time < timeout:
             try:
                 # Try to connect to the port
@@ -207,11 +204,10 @@ class ServerManager:
                     s.settimeout(1)
                     s.connect(('localhost', self.port))
                     # Connection successful, server is ready
-                    time.sleep(0.1)  # Brief wait to let server fully initialize
                     return
             except (ConnectionRefusedError, socket.timeout, OSError) as e:
                 last_error = e
-                time.sleep(0.1)
+                time.sleep(0.01)  # Minimal wait between retries
         
         # Try to get server output if available
         error_msg = f"Server failed to start within {timeout} seconds"
@@ -241,9 +237,8 @@ class GameClient:
         self.port = port
         self.connection = None
         self.spin_mode = spin_mode
-        # Set idle timeout based on spin mode
-        # With 10ms spin, use same timeout as non-spin for consistency
-        self.idle_timeout = 0.05
+        # Set idle timeout for spin mode - very small for maximum speed
+        self.idle_timeout = 0.001
     
     def connect(self, timeout: int = 10, char_name: str = None, char_pass: str = None):
         """
@@ -339,41 +334,6 @@ class GameClient:
             return data.decode('ascii', errors='ignore')
         except Exception:
             return ""
-    
-    def _read_until_idle(self, timeout: int = 2, idle_time: float = None) -> str:
-        """
-        Read until no more data arrives for idle_time seconds.
-        
-        Args:
-            timeout: Maximum time to wait for data
-            idle_time: How long to wait without data before considering complete (uses self.idle_timeout if None)
-            
-        Returns:
-            All data read as string
-        """
-        if idle_time is None:
-            idle_time = self.idle_timeout
-            
-        output = ""
-        start_time = time.time()
-        last_read_time = start_time
-        
-        while time.time() - start_time < timeout:
-            try:
-                chunk = self.connection.read_very_eager()
-                if chunk:
-                    decoded = chunk.decode('ascii', errors='ignore')
-                    output += decoded
-                    last_read_time = time.time()
-                # If we haven't received data for idle_time and we have some output, we're done
-                elif output and (time.time() - last_read_time > idle_time):
-                    break
-                # Small sleep to avoid busy-waiting
-                time.sleep(0.001 if self.spin_mode else 0.01)
-            except Exception:
-                break
-        
-        return output
     
     def _read_until_prompt(self, timeout: int = 5) -> str:
         """Read until we get a prompt or timeout."""
