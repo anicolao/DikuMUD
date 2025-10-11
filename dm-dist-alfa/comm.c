@@ -35,7 +35,7 @@
 #define DFLT_PORT 4000        /* default port */
 #define MAX_NAME_LENGTH 15
 #define MAX_HOSTNAME   256
-#define OPT_USEC 250000       /* time delay corresponding to 4 passes/sec */
+#define OPT_USEC 40000        /* time delay corresponding to 25 passes/sec */
 
 
 
