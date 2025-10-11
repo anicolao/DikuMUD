@@ -36,7 +36,7 @@
 #define MAX_NAME_LENGTH 15
 #define MAX_HOSTNAME   256
 #define OPT_USEC 250000       /* time delay corresponding to 4 passes/sec */
-#define SPIN_USEC 10000           /* 1 microsecond delay for spin mode (maximum speed) */
+#define SPIN_USEC 1           /* 1 microsecond delay for spin mode (maximum speed) */
 
 
 
