@@ -338,7 +338,7 @@ class GameClient:
         except Exception:
             return ""
     
-    def _read_until_idle(self, timeout: int = 2, idle_time: float = 0.2) -> str:
+    def _read_until_idle(self, timeout: int = 2, idle_time: float = 0.05) -> str:
         """
         Read until no more data arrives for idle_time seconds.
         
@@ -364,7 +364,7 @@ class GameClient:
                 elif output and (time.time() - last_read_time > idle_time):
                     break
                 # Small sleep to avoid busy-waiting
-                time.sleep(0.05)
+                time.sleep(0.01)
             except Exception:
                 break
         
@@ -386,11 +386,11 @@ class GameClient:
                     # Check for prompt patterns (>, ], etc.)
                     if re.search(r'[>]\s*$', output):
                         break
-                # If we haven't received data for 0.2 seconds and we have some output, assume done
-                elif output and (time.time() - last_read_time > 0.2):
+                # If we haven't received data for 0.05 seconds and we have some output, assume done
+                elif output and (time.time() - last_read_time > 0.05):
                     break
                 # Smaller sleep for faster response
-                time.sleep(0.05)
+                time.sleep(0.01)
             except Exception:
                 break
         
