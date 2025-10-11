@@ -1458,40 +1458,74 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	struct char_data *mob;
 	struct affected_type af;
 	struct quest_data *quest;
-	char npc_name[MAX_INPUT_LENGTH], keyword[MAX_INPUT_LENGTH];
+	char npc_name[MAX_INPUT_LENGTH], message[MAX_INPUT_LENGTH];
 	extern void half_chop(char *string, char *arg1, char *arg2);
 	extern int isname(char *str, char *namelist);
 	
-	/* Only respond to 'ask' command */
-	if (cmd != CMD_ASK)
+	/* Respond to 'ask', 'say', or 'tell' commands */
+	if (cmd != CMD_ASK && cmd != CMD_SAY && cmd != CMD_TELL)
 		return FALSE;
 	
-	/* Parse argument: "ask <npc> <keyword>" -> arg contains "<npc> <keyword>" */
-	half_chop(arg, npc_name, keyword);
+	/* For ask/tell: "ask <npc> <message>" or "tell <npc> <message>" 
+	 * For say: just "<message>" */
+	if (cmd == CMD_SAY) {
+		/* Player is saying something in the room - check if it contains quest keywords */
+		strncpy(message, arg, MAX_INPUT_LENGTH - 1);
+		message[MAX_INPUT_LENGTH - 1] = '\0';
+		npc_name[0] = '\0';  /* No specific NPC target for 'say' */
+	} else {
+		/* Parse argument: "ask/tell <npc> <message>" -> arg contains "<npc> <message>" */
+		half_chop(arg, npc_name, message);
+		
+		/* Check if we have both NPC name and message */
+		if (!*npc_name || !*message)
+			return FALSE;
+	}
 	
-	/* Check if we have both NPC name and keyword */
-	if (!*npc_name || !*keyword)
-		return FALSE;
-	
-	/* Give quest if player asks about quest/help/task */
-	if (strcasecmp(keyword, "quest") != 0 && strcasecmp(keyword, "help") != 0 && 
-	    strcasecmp(keyword, "task") != 0) {
+	/* Check if message contains quest-related keywords */
+	if (!strstr(message, "quest") && !strstr(message, "help") && 
+	    !strstr(message, "task") && !strstr(message, "Quest") &&
+	    !strstr(message, "Help") && !strstr(message, "Task")) {
 		return FALSE;
 	}
 	
-	/* Find the NPC being asked in the room */
+	/* Find the NPC being addressed in the room */
 	mob = NULL;
-	for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
-		if (IS_NPC(mob) && isname(npc_name, mob->player.name))
-			break;
+	
+	if (cmd == CMD_SAY) {
+		/* For 'say', respond if we're the only quest giver in the room,
+		 * or if the player's message mentions our name */
+		int quest_giver_count = 0;
+		struct char_data *only_quest_giver = NULL;
+		
+		for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
+			if (IS_NPC(mob) && mob_index[mob->nr].func == quest_giver) {
+				quest_giver_count++;
+				only_quest_giver = mob;
+			}
+		}
+		
+		/* If there's only one quest giver, respond to the 'say' */
+		if (quest_giver_count == 1) {
+			mob = only_quest_giver;
+		} else {
+			/* Multiple quest givers - don't respond to generic 'say' */
+			return FALSE;
+		}
+	} else {
+		/* For ask/tell, find the specific NPC being addressed */
+		for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
+			if (IS_NPC(mob) && isname(npc_name, mob->player.name))
+				break;
+		}
+		
+		if (!mob)
+			return FALSE;
+		
+		/* Verify this mob is a quest giver */
+		if (mob_index[mob->nr].func != quest_giver)
+			return FALSE;
 	}
-	
-	if (!mob)
-		return FALSE;
-	
-	/* Check if this mob has a quest_giver special procedure */
-	if (mob_index[mob->nr].func != quest_giver)
-		return FALSE;
 	
 	/* Find quest data for this NPC */
 	quest = find_quest_by_giver(mob_index[mob->nr].virtual);
