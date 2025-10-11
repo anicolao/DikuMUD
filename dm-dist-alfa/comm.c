@@ -66,6 +66,7 @@ int no_specials = 0; /* Suppress ass. of special routines */
 int maxdesc, avail_descs;
 int tics = 0;        /* for extern checkpointing */
 int pulse = 0;       /* global pulse counter for tick timing */
+struct timeval last_game_hour_tick;  /* wall-clock time of last game hour tick */
 
 int get_from_q(struct txt_q *queue, char *dest);
 /* write_to_q is in comm.h for the macro */
@@ -317,8 +318,9 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 	struct char_data *player_fighter = NULL;
 	struct char_data *mob_fighter = NULL;
 	extern struct char_data *combat_list;
-	extern int pulse;
-	int tick_pulse, secs_to_tick;
+	extern struct timeval last_game_hour_tick;
+	struct timeval now;
+	int elapsed_usec, elapsed_secs, secs_to_tick;
 
 	/* Default prompt for non-playing states */
 	if (!d->character || d->connected) {
@@ -329,9 +331,13 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 
 	ch = d->character;
 
-	/* Calculate seconds until next tick */
-	tick_pulse = SECS_PER_MUD_HOUR * 4;  /* 300 pulses = 75 seconds */
-	secs_to_tick = (tick_pulse - (pulse % tick_pulse)) / 4;
+	/* Calculate seconds until next tick based on wall-clock time */
+	gettimeofday(&now, (struct timeval *) 0);
+	elapsed_usec = (now.tv_sec - last_game_hour_tick.tv_sec) * 1000000 + 
+	               (now.tv_usec - last_game_hour_tick.tv_usec);
+	elapsed_secs = elapsed_usec / 1000000;
+	secs_to_tick = SECS_PER_MUD_HOUR - elapsed_secs;
+	if (secs_to_tick < 0) secs_to_tick = 0;  /* Clamp to 0 if overdue */
 
 	/* Build exits string - initialize entire buffer to 0 */
 	memset(exits_buf, 0, sizeof(exits_buf));
@@ -460,6 +466,9 @@ int game_loop(int s)
 	opt_time.tv_usec = spin_mode ? SPIN_USEC : OPT_USEC;
 	opt_time.tv_sec = 0;
 	gettimeofday(&last_time, (struct timeval *) 0);
+	
+	/* Initialize game hour tick timer */
+	gettimeofday(&last_game_hour_tick, (struct timeval *) 0);
 
 	maxdesc = s;
 	avail_descs = getdtablesize() - 2; /* !! Change if more needed !! */
@@ -626,12 +635,25 @@ int game_loop(int s)
 		if (!(pulse % PULSE_VIOLENCE))
 			perform_violence();
 
-		if (!(pulse % (SECS_PER_MUD_HOUR*4))){
-			weather_and_time(1);
-			affect_update();
-			point_update();
-			if ( time_info.hours == 1 )
-				update_time();
+		/* Check for game hour tick based on wall-clock time */
+		{
+			struct timeval now;
+			int elapsed_usec, elapsed_secs;
+			
+			gettimeofday(&now, (struct timeval *) 0);
+			elapsed_usec = (now.tv_sec - last_game_hour_tick.tv_sec) * 1000000 + 
+			               (now.tv_usec - last_game_hour_tick.tv_usec);
+			elapsed_secs = elapsed_usec / 1000000;
+			
+			if (elapsed_secs >= SECS_PER_MUD_HOUR) {
+				weather_and_time(1);
+				affect_update();
+				point_update();
+				if ( time_info.hours == 1 )
+					update_time();
+				/* Update last tick time */
+				last_game_hour_tick = now;
+			}
 		}
 
 		if (pulse >= 2400) {
