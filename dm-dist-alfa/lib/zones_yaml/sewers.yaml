@@ -1193,7 +1193,7 @@ mobiles:
   simple:
     level: 1
     thac0: 0
-    ac: 0
+    ac: 10
     hp_dice: 1d8+15
     damage_dice: 1d4+0
     gold: 50
@@ -1218,7 +1218,7 @@ mobiles:
   simple:
     level: 2
     thac0: 0
-    ac: 0
+    ac: 7
     hp_dice: 2d8+30
     damage_dice: 1d5+1
     gold: 150
@@ -1245,7 +1245,7 @@ mobiles:
   simple:
     level: 2
     thac0: 0
-    ac: 0
+    ac: 8
     hp_dice: 2d8+35
     damage_dice: 1d5+1
     gold: 180
@@ -1272,7 +1272,7 @@ mobiles:
   simple:
     level: 2
     thac0: 0
-    ac: 0
+    ac: 7
     hp_dice: 2d10+40
     damage_dice: 1d6+1
     gold: 220
@@ -1299,7 +1299,7 @@ mobiles:
   simple:
     level: 2
     thac0: 0
-    ac: 0
+    ac: 9
     hp_dice: 2d10+50
     damage_dice: 1d5+2
     gold: 250
