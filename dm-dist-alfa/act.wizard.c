@@ -1104,12 +1104,12 @@ void do_load(struct char_data *ch, char *argument, int cmd)
 			return;
 		}
 		obj = read_object(r_num, REAL);
-		obj_to_room(obj, ch->in_room);
+		obj_to_char(obj, ch);
 		act("$n makes a strange magical gesture.", TRUE, ch, 0, 0, TO_ROOM);
 		act("$n has created $p!", FALSE, ch, obj, 0, TO_ROOM);
 		send_to_char("Ok.\n\r", ch);
-		sprintf(buf,"%s loads %s at %s.",GET_NAME(ch),
-		        obj->short_description,world[ch->in_room].name);
+		sprintf(buf,"%s loads %s.",GET_NAME(ch),
+		        obj->short_description);
 		slog(buf);
 
 	}
