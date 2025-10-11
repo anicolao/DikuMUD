@@ -54,10 +54,10 @@ The framework consists of three main components:
 - Human-readable and easy to edit
 - Support for comments and documentation
 
-### 3. Test Harness (Shell wrapper)
-- Discovers and executes tests
-- Manages server lifecycle
-- Aggregates results
+### 3. Test Harness (Makefile integration)
+- Discovers and executes tests via make targets
+- Proper dependency tracking
+- Result aggregation from output files
 - Integrates with CI/CD
 
 ## Component Details
@@ -232,29 +232,26 @@ steps:
         message: "Lamp should not be empty"
 ```
 
-### 3. Test Harness: `dm-dist-alfa/run_integration_tests.sh`
+### 3. Test Harness: Makefile Integration
 
 **Responsibilities:**
-- Test discovery
-- Batch test execution
-- Result aggregation
+- Test discovery via find command
+- Individual test execution with pattern rules
+- Result aggregation from output files
 - CI/CD integration
 
 **Features:**
 ```bash
-#!/bin/bash
 # Run integration tests
 
 # Usage:
-#   ./run_integration_tests.sh              # Run all tests
-#   ./run_integration_tests.sh bug_3003*    # Run specific test(s)
-#   ./run_integration_tests.sh --verbose    # Detailed output
+#   make integration_tests                                    # Run all tests
+#   make integration_test_outputs/shops/bug_3003*.out        # Run specific test(s)
+#   cat integration_test_outputs/shops/bug_3003*.out         # View detailed output
 
-# Environment:
-#   TEST_DIR=tests/integration             # Test directory
-#   SERVER_PATH=./dmserver                 # Server binary
-#   LIB_PATH=./lib                         # Game data
-#   TIMEOUT=60                             # Per-test timeout
+# Pattern rule creates output files for each test
+# Summary aggregates PASSED/FAILED status from all output files
+# Proper dependency tracking: tests rerun when YAML, dmserver, or worldfiles change
 ```
 
 **Output Format:**
@@ -476,13 +473,13 @@ jobs:
       - name: Build server
         run: cd dm-dist-alfa && make dmserver
       - name: Run integration tests
-        run: cd dm-dist-alfa && ./run_integration_tests.sh
+        run: cd dm-dist-alfa && make integration_tests
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
         with:
           name: test-results
-          path: dm-dist-alfa/test-results/
+          path: dm-dist-alfa/integration_test_outputs/
 ```
 
 ## Example Test Cases

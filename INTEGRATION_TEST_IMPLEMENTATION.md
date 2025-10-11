@@ -39,21 +39,23 @@ The integration testing framework has been fully implemented and is now operatio
 - Detailed pass/fail reporting
 - Summary statistics
 
-### 2. Shell Test Harness (`dm-dist-alfa/run_integration_tests.sh`)
+### 2. Makefile Integration
 
-- Test discovery (finds all *.yaml files)
-- Batch execution with progress reporting
-- Color-coded output (green/red for pass/fail)
-- Summary statistics at end
-- Support for running specific tests or all tests
+Replaced shell script approach with make-based test orchestration:
+- Pattern rule `integration_test_outputs/%.out` runs individual tests
+- Test discovery via `find` command (finds all *.yaml files)
+- Batch execution with proper dependency tracking
+- Output files stored in `integration_test_outputs/` (gitignored)
+- Summary statistics aggregated from all output files
+- Support for running all tests or individual tests by naming output file
+- Proper dependency tracking: tests rebuild when YAML files change
 
-### 3. Makefile Integration
-
-Added `test` target that:
+Added `integration_tests` target that:
 - Runs after `dmserver` and `worldfiles` are built
-- Executes all integration tests via shell script
-- Non-blocking (uses `|| true` to not fail the build)
-- Integrated into `make all`
+- Creates output files for each test showing pass/fail
+- Generates summary report from output files
+- Exit code reflects test results (0 = all pass, 1 = failures)
+- Integrated into `make all` via `test` target
 
 ### 4. Example Test
 
@@ -70,20 +72,36 @@ Created `tests/integration/basic_connectivity.yaml` - a working test that:
 
 ```bash
 cd dm-dist-alfa
-make test
+make integration_tests
 ```
 
-Or directly:
+Or use the legacy `test` target:
 
 ```bash
 cd dm-dist-alfa
-./run_integration_tests.sh
+make test
 ```
 
 ### Run Specific Test
 
 ```bash
-./run_integration_tests.sh basic_connectivity.yaml
+cd dm-dist-alfa
+make integration_test_outputs/basic_connectivity.out
+```
+
+Or for tests in subdirectories:
+
+```bash
+cd dm-dist-alfa
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
+```
+
+### View Test Results
+
+Test output files are in `integration_test_outputs/`:
+
+```bash
+cat integration_test_outputs/basic_connectivity.out
 ```
 
 ### Run as Part of Build
@@ -206,14 +224,14 @@ result:
 ### Architecture
 
 ```
-Shell Script (run_integration_tests.sh)
+Makefile (integration_tests target)
     ↓
 Python Runner (integration_test_runner.py)
     ↓
     ├── ServerManager → DikuMUD Server
     ├── GameClient → Telnet Connection
     ├── TestExecutor → YAML Parser
-    └── TestRunner → Results
+    └── TestRunner → Results → Output Files
 ```
 
 ### Dependencies
@@ -298,8 +316,7 @@ Example tests provided (require pathfinding for full execution):
 - `INTEGRATION_TEST_IMPLEMENTATION.md` - This document
 
 **Modified:**
-- `dm-dist-alfa/run_integration_tests.sh` - Updated to use real runner
-- `dm-dist-alfa/makefile` - Added test target
+- `dm-dist-alfa/makefile` - Added integration_tests target with pattern rules
 
 **Preserved:**
 - `INTEGRATION_TEST_FRAMEWORK_DESIGN.md` - Original design document

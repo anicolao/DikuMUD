@@ -51,9 +51,16 @@ steps:
 
 ### 2. Run the Test
 
+Run a specific test:
 ```bash
 cd dm-dist-alfa
-./run_integration_tests.sh shops/bug_3003_nobles_waiter_list.yaml
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
+```
+
+Or run all tests:
+```bash
+cd dm-dist-alfa
+make integration_tests
 ```
 
 ### 3. Get Results
@@ -213,9 +220,9 @@ steps:
 - `tests/integration/shops/` - Shop tests
 - `tests/integration/items/` - Item tests
 
-### Stubs (Design Only)
-- `dm-dist-alfa/run_integration_tests.sh` - Test harness
-- `tools/integration_test_runner.py` - Python runner
+### Implementation
+- `dm-dist-alfa/makefile` - Test orchestration with make targets
+- `tools/integration_test_runner.py` - Python test execution engine
 
 ## Next Steps
 

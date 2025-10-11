@@ -17,20 +17,37 @@ Integration tests automate the process of:
 
 ```bash
 cd dm-dist-alfa
-./run_integration_tests.sh
+make integration_tests
+```
+
+Or use the legacy `test` target:
+
+```bash
+cd dm-dist-alfa
+make test
 ```
 
 ### Running Specific Tests
 
 ```bash
-# Run all shop tests
-./run_integration_tests.sh shops/
-
 # Run a specific test
-./run_integration_tests.sh shops/bug_3003_nobles_waiter_list.yaml
+cd dm-dist-alfa
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
 
-# Run with verbose output
-./run_integration_tests.sh --verbose shops/
+# Run all shop tests (using make's pattern matching)
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out \
+     integration_test_outputs/shops/bug_3010_general_store_type.out \
+     integration_test_outputs/shops/bug_3011_weapons_list.out \
+     integration_test_outputs/shops/bug_3020_armory_list.out
+```
+
+### Viewing Test Results
+
+Test output files are stored in `integration_test_outputs/`:
+
+```bash
+cd dm-dist-alfa
+cat integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
 ```
 
 ### Creating Your First Test
@@ -407,28 +424,24 @@ steps:
 
 ## Debugging Tests
 
-### Verbose Output
+### View Test Output
 
-Run with verbose flag to see all server output:
+Test output is saved to files in `integration_test_outputs/`. View them to debug:
 ```bash
-./run_integration_tests.sh --verbose shops/bug_3003_nobles_waiter_list.yaml
+cat integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
 ```
 
-### Keep Server Running
+### Manual Testing
 
-For manual inspection:
+For manual testing, you can run the Python test runner directly with options:
 ```bash
-./run_integration_tests.sh --no-cleanup --port 4000 test.yaml
-# Server stays running on port 4000
-# Connect with: telnet localhost 4000
+cd dm-dist-alfa
+python3 ../tools/integration_test_runner.py ./dmserver ../tests/integration/shops/bug_3003_nobles_waiter_list.yaml
 ```
 
-### Save Transcripts
+### Advanced Debugging
 
-```bash
-./run_integration_tests.sh --save-transcript test.yaml
-# Creates test.yaml.transcript with all input/output
-```
+The test runner Python script (`../tools/integration_test_runner.py`) supports various debugging options. Check its source for details on available command-line flags.
 
 ## Troubleshooting
 
