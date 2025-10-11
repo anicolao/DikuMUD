@@ -617,14 +617,16 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 			/* look ''		*/ 
 			case 8 : {
 
-				send_to_char("---<", ch);
+				if (!IS_SET(ch->specials.act, PLR_BRIEF)) {
+					send_to_char("---<", ch);
+				}
 				send_to_char(world[ch->in_room].name, ch);
 				send_to_char("\n\r", ch);
 
-				if (!IS_SET(ch->specials.act, PLR_BRIEF))
+				if (!IS_SET(ch->specials.act, PLR_BRIEF)) {
 					send_to_char(world[ch->in_room].description, ch);
-
-				send_to_char(">--\n\r", ch);
+					send_to_char(">--\n\r", ch);
+				}
 
 				list_obj_to_char(world[ch->in_room].contents, ch, 0,FALSE);
 

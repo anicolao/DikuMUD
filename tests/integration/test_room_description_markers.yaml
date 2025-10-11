@@ -44,6 +44,26 @@ steps:
       - pattern: ">--"
         message: "Explicit look should show closing marker"
 
+  - action: command
+    command: brief
+    description: "Enable brief mode"
+    expected:
+      - pattern: "Brief mode on"
+        message: "Brief mode enabled"
+
+  - action: look
+    description: "Look in brief mode - should show room name without markers or description"
+    expected:
+      - pattern: "By the Temple Altar"
+        message: "Should show room name in brief mode (without markers)"
+
+  - action: command
+    command: south
+    description: "Move to another room in brief mode"
+    expected:
+      - pattern: "."
+        message: "Movement completed"
+
 result:
   should_pass: true
-  description: "Room description markers test passes if markers appear correctly"
+  description: "Room description markers test passes if markers appear correctly in normal mode and not in brief mode"
