@@ -547,6 +547,16 @@ int game_loop(int s)
 
 			if ((--(point->wait) <= 0) && get_from_q(&point->input, comm))
 			{
+				/* Debug logging in spin mode to trace command consumption */
+				if (spin_mode) {
+					FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
+					if (debug_file) {
+						fprintf(debug_file, "CONSUME_DEBUG: got command='%s' (len=%d) connected=%d (fd=%d)\n", 
+							comm, (int)strlen(comm), point->connected, point->descriptor);
+						fclose(debug_file);
+					}
+				}
+
 				if (point->character && point->connected == CON_PLYNG &&
 					point->character->specials.was_in_room !=	NOWHERE)
 				{
@@ -1019,6 +1029,17 @@ int process_input(struct descriptor_data *t)
 		if (!*(t->buf + i))
 			return(0);
 
+	/* Debug: show raw buffer in spin mode */
+	if (spin_mode) {
+		FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
+		if (debug_file) {
+			int debug_len = strlen(t->buf);
+			fprintf(debug_file, "BUFFER_DEBUG: processing %d chars from buffer (fd=%d)\n", 
+				debug_len, t->descriptor);
+			fclose(debug_file);
+		}
+	}
+
 	/* input contains 1 or more newlines; process the stuff */
 	for (i = 0, k = 0; *(t->buf + i);)
 	{
@@ -1046,10 +1067,31 @@ int process_input(struct descriptor_data *t)
 		else
 		{
 			*(tmp + k) = 0;
+			
+			/* Debug: trace every line processing */
+			if (spin_mode) {
+				FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
+				if (debug_file) {
+					fprintf(debug_file, "LINE_DEBUG: k=%d tmp='%s' i=%d buf[i]=%d (fd=%d)\n", 
+						k, tmp, i, (int)*(t->buf + i), t->descriptor);
+					fclose(debug_file);
+				}
+			}
+			
 			if(*tmp == '!')
 				strcpy(tmp,t->last_input);
 			else
 				strcpy(t->last_input,tmp);
+
+			/* Debug logging in spin mode to trace command queueing */
+			if (spin_mode) {
+				FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
+				if (debug_file) {
+					fprintf(debug_file, "INPUT_DEBUG: queueing command='%s' (len=%d fd=%d)\n", 
+						tmp, (int)strlen(tmp), t->descriptor);
+					fclose(debug_file);
+				}
+			}
 
 			write_to_q(tmp, &t->input);
 

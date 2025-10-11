@@ -1111,11 +1111,22 @@ void nanny(struct descriptor_data *d, char *arg)
 	struct char_data *ch, *tmp_ch;
 	struct descriptor_data *k;
 	extern struct descriptor_data *descriptor_list;
+	extern int spin_mode;
 
 	void do_look(struct char_data *ch, char *argument, int cmd);
 	void load_char_objs(struct char_data *ch);
 	int load_char(char *name, struct char_file_u *char_element);
 	struct crypt_data crypted;
+
+	/* Debug logging in spin mode to trace command processing */
+	if (spin_mode) {
+		FILE *debug_file = fopen("/tmp/dikumud_login_debug.log", "a");
+		if (debug_file) {
+			fprintf(debug_file, "NANNY_DEBUG: state=%d arg='%s' (fd=%d)\n", 
+				STATE(d), arg ? arg : "(null)", d->descriptor);
+			fclose(debug_file);
+		}
+	}
 
 	switch (STATE(d))
 	{

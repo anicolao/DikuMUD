@@ -262,22 +262,16 @@ class GameClient:
             
             # If character name provided, handle login
             # We know the exact sequence: username, password, enter, 1
-            # Send them all with minimal delays to let server process each input
+            # Send all inputs at once to test server buffering (with debug logging)
             if char_name and char_pass:
-                # Send character name
-                self.connection.write(char_name.encode('ascii') + b'\n')
-                time.sleep(0.05)  # Give server time to process
-                
-                # Send password
-                self.connection.write(char_pass.encode('ascii') + b'\n')
-                time.sleep(0.05)
-                
-                # Press return for "PRESS RETURN" prompt
-                self.connection.write(b'\n')
-                time.sleep(0.05)
-                
-                # Send menu choice 1 to enter the game
-                self.connection.write(b'1\n')
+                # Send all commands in a single write to test buffering
+                login_sequence = (
+                    char_name.encode('ascii') + b'\n' +
+                    char_pass.encode('ascii') + b'\n' +
+                    b'\n' +  # PRESS RETURN
+                    b'1\n'   # Menu choice
+                )
+                self.connection.write(login_sequence)
                 
                 # Now read until we get the game prompt
                 # This will consume all the welcome messages, MOTD, and room description
