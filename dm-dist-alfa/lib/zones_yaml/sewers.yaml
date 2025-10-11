@@ -1909,7 +1909,7 @@ objects:
   action_desc: ''
   type_flag: 10
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0
