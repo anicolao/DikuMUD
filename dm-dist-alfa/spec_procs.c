@@ -1455,59 +1455,70 @@ int kings_hall(struct char_data *ch, int cmd, char *arg)
 /* Generic quest giver - handles all quest types in a data-driven way */
 int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
-	struct char_data *questor;
+	struct char_data *mob;
 	struct affected_type af;
 	struct quest_data *quest;
+	char npc_name[MAX_INPUT_LENGTH], keyword[MAX_INPUT_LENGTH];
+	extern void half_chop(char *string, char *arg1, char *arg2);
+	extern int isname(char *str, char *namelist);
 	
-	/* Only respond to 'ask' or 'sneak' commands */
-	/* TODO: The sneak command seems wrong here, should probably be 'say' or 'tell' */
-	if (cmd != CMD_ASK && cmd != CMD_SNEAK)
+	/* Only respond to 'ask' command */
+	if (cmd != CMD_ASK)
 		return FALSE;
 	
-	/* Find the player character in the room */
-	questor = NULL;
-	for (questor = world[ch->in_room].people; questor; questor = questor->next_in_room) {
-		if (!IS_NPC(questor))
+	/* Parse argument: "ask <npc> <keyword>" -> arg contains "<npc> <keyword>" */
+	half_chop(arg, npc_name, keyword);
+	
+	/* Check if we have both NPC name and keyword */
+	if (!*npc_name || !*keyword)
+		return FALSE;
+	
+	/* Give quest if player asks about quest/help/task */
+	if (strcasecmp(keyword, "quest") != 0 && strcasecmp(keyword, "help") != 0 && 
+	    strcasecmp(keyword, "task") != 0) {
+		return FALSE;
+	}
+	
+	/* Find the NPC being asked in the room */
+	mob = NULL;
+	for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
+		if (IS_NPC(mob) && isname(npc_name, mob->player.name))
 			break;
 	}
 	
-	if (!questor)
+	if (!mob)
+		return FALSE;
+	
+	/* Check if this mob has a quest_giver special procedure */
+	if (mob_index[mob->nr].func != quest_giver)
 		return FALSE;
 	
 	/* Find quest data for this NPC */
-	quest = find_quest_by_giver(mob_index[ch->nr].virtual);
+	quest = find_quest_by_giver(mob_index[mob->nr].virtual);
 	if (!quest)
 		return FALSE;
 	
 	/* Check if player already has an active quest of this type */
-	if (has_quest_type(questor, quest->quest_type)) {
+	if (has_quest_type(ch, quest->quest_type)) {
 		/* Player already has this quest - they may be returning to complete it */
 		/* For delivery/retrieval quests, completion happens in do_give */
-		/* For now, just remind them */
 		act("$n says, 'You already have a task from me. Complete it first!'", 
-			FALSE, ch, 0, 0, TO_ROOM);
+			FALSE, mob, 0, 0, TO_ROOM);
 		return TRUE;
 	}
 	
-	/* Give quest if player asks about quest/help/task */
-	if (!strcasecmp(arg, "quest") || !strcasecmp(arg, "help") || 
-	    !strcasecmp(arg, "task")) {
-		
-		/* Assign quest affect */
-		af.type = quest->quest_type;
-		af.duration = quest->duration;
-		af.modifier = quest->item_vnum;
-		af.location = quest->target_vnum;
-		af.bitvector = AFF_QUEST | quest->quest_flags;
-		
-		affect_to_char(questor, &af);
-		
-		/* Send quest text */
-		act(quest->quest_text, FALSE, ch, 0, questor, TO_VICT);
-		
-		return TRUE;
-	}
+	/* Assign quest affect */
+	af.type = quest->quest_type;
+	af.duration = quest->duration;
+	af.modifier = quest->item_vnum;
+	af.location = quest->target_vnum;
+	af.bitvector = AFF_QUEST | quest->quest_flags;
 	
-	return FALSE;
+	affect_to_char(ch, &af);
+	
+	/* Send quest text */
+	act(quest->quest_text, FALSE, mob, 0, ch, TO_VICT);
+	
+	return TRUE;
 }
 
