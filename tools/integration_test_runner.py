@@ -349,6 +349,10 @@ class GameClient:
                 chunk = self.connection.read_very_eager()
                 if chunk:
                     decoded = chunk.decode('ascii', errors='ignore')
+                    # Debug output for troubleshooting
+                    import os
+                    if os.getenv('DEBUG_OUTPUT'):
+                        print(decoded, end='', flush=True)
                     output += decoded
                     last_read_time = time.time()
                     # Check for prompt patterns (>, ], etc.)
