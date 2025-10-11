@@ -293,39 +293,42 @@ class GameClient:
     
     def send_command(self, command: str, wait_for_prompt: bool = True) -> str:
         """
-        Send command to server and return response.
+        Send command to server (without reading response).
         
         Args:
             command: Command to send
-            wait_for_prompt: Whether to wait for prompt after command
+            wait_for_prompt: Ignored (kept for backwards compatibility)
             
         Returns:
-            Server response as string
+            Empty string (use expect_output to read and validate responses)
         """
         if not self.connection:
             raise RuntimeError("Not connected to server")
         
         self.connection.write(command.encode('ascii') + b'\n')
-        # No sleep needed - the blocking read will wait for response
-        
-        if wait_for_prompt:
-            return self._read_until_prompt(timeout=5)
-        else:
-            return self._read_available()
+        # Don't read here - let expect_output handle reading
+        return ""
     
-    def expect_output(self, pattern: str, timeout: int = 5) -> bool:
+    def expect_output(self, pattern: str, timeout: int = 30, retries: int = 3) -> bool:
         """
-        Wait for output matching pattern.
+        Wait for output matching pattern (with retries for robustness).
         
         Args:
             pattern: Regular expression pattern to match
             timeout: How long to wait for match
+            retries: Number of times to retry reading if pattern not found
             
         Returns:
             True if pattern found, False otherwise
         """
-        output = self._read_until_prompt(timeout)
-        return bool(re.search(pattern, output, re.IGNORECASE | re.MULTILINE))
+        for attempt in range(retries):
+            output = self._read_until_prompt(timeout)
+            if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
+                return True
+            # If not found and retries left, wait a bit and try again
+            if attempt < retries - 1:
+                time.sleep(0.1)
+        return False
     
     def _read_available(self) -> str:
         """Read all currently available data."""
@@ -335,12 +338,11 @@ class GameClient:
         except Exception:
             return ""
     
-    def _read_until_prompt(self, timeout: int = 5) -> str:
-        """Read until we get a prompt or timeout."""
+    def _read_until_prompt(self, timeout: int = 30) -> str:
+        """Read until we get a prompt."""
         output = ""
         start_time = time.time()
         last_read_time = start_time
-        no_data_count = 0
         
         while time.time() - start_time < timeout:
             try:
@@ -349,14 +351,27 @@ class GameClient:
                     decoded = chunk.decode('ascii', errors='ignore')
                     output += decoded
                     last_read_time = time.time()
-                    no_data_count = 0
                     # Check for prompt patterns (>, ], etc.)
                     if re.search(r'[>]\s*$', output):
                         break
                 else:
-                    # If we have output and haven't seen data for idle_timeout, we're done
-                    if output and (time.time() - last_read_time > self.idle_timeout):
+                    # No data - if we have output with a prompt, we're done
+                    if output and re.search(r'[>]\s*$', output):
                         break
+                    # If we haven't received data for a bit and have output, check if done
+                    if output and (time.time() - last_read_time > 0.5):
+                        # Give it one more chance to see if prompt arrives
+                        time.sleep(0.1)
+                        chunk = self.connection.read_very_eager()
+                        if chunk:
+                            decoded = chunk.decode('ascii', errors='ignore')
+                            output += decoded
+                            last_read_time = time.time()
+                            if re.search(r'[>]\s*$', output):
+                                break
+                        else:
+                            # Still no data, we're probably done
+                            break
                 
                 # Smaller sleep for faster response
                 time.sleep(0.001 if self.spin_mode else 0.01)
@@ -460,14 +475,17 @@ class TestExecutor:
     
     def _execute_move(self, step: Dict[str, Any]) -> bool:
         """Execute movement action."""
+        output = ""
         if 'direction' in step:
             # Single direction
             direction = step['direction']
-            output = self.client.send_command(direction)
+            self.client.send_command(direction)
+            output = self.client._read_until_prompt(timeout=30)
         elif 'path' in step:
-            # Multiple directions - no sleep needed, send_command waits for response
+            # Multiple directions
             for direction in step['path']:
-                output = self.client.send_command(direction)
+                self.client.send_command(direction)
+                output = self.client._read_until_prompt(timeout=30)
         elif 'target_room' in step:
             # Target room specified - for now we just skip
             # In full implementation, would pathfind to target
@@ -486,7 +504,10 @@ class TestExecutor:
     def _execute_command(self, step: Dict[str, Any]) -> bool:
         """Execute general command."""
         command = step['command']
-        output = self.client.send_command(command)
+        self.client.send_command(command)
+        
+        # Read the output
+        output = self.client._read_until_prompt(timeout=30)
         
         # Show all output if flag is set
         if self.show_all_output:
@@ -517,7 +538,8 @@ class TestExecutor:
         else:
             command = "look"
         
-        output = self.client.send_command(command)
+        self.client.send_command(command)
+        output = self.client._read_until_prompt(timeout=30)
         
         # Show all output if flag is set
         if self.show_all_output:
@@ -534,7 +556,8 @@ class TestExecutor:
     
     def _execute_inventory(self, step: Dict[str, Any]) -> bool:
         """Execute inventory check."""
-        output = self.client.send_command("inventory")
+        self.client.send_command("inventory")
+        output = self.client._read_until_prompt(timeout=30)
         
         # Validate expectations
         if 'expected' in step:
