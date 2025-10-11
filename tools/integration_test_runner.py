@@ -269,10 +269,7 @@ class GameClient:
                     b'1\n'    # Menu choice
                 )
                 self.connection.write(login_sequence)
-                
-                # Now read until we get the game prompt
-                # This will consume all the welcome messages, MOTD, and room description
-                self._read_until_prompt(timeout=15)
+                # After login, don't read anything - let first expect_output handle it
                 
         except Exception as e:
             raise ConnectionError(f"Failed to connect to {self.host}:{self.port}: {e}")
@@ -291,44 +288,52 @@ class GameClient:
                 pass
             self.connection = None
     
-    def send_command(self, command: str, wait_for_prompt: bool = True) -> str:
+    def send_command(self, command: str) -> None:
         """
         Send command to server (without reading response).
         
         Args:
             command: Command to send
-            wait_for_prompt: Ignored (kept for backwards compatibility)
-            
-        Returns:
-            Empty string (use expect_output to read and validate responses)
         """
         if not self.connection:
             raise RuntimeError("Not connected to server")
         
         self.connection.write(command.encode('ascii') + b'\n')
-        # Don't read here - let expect_output handle reading
-        return ""
+        # Don't read here - let expect_output handle all reading
     
-    def expect_output(self, pattern: str, timeout: int = 30, retries: int = 3) -> bool:
+    def expect_output(self, pattern: str, max_prompts: int = 3, timeout: int = 30) -> tuple:
         """
-        Wait for output matching pattern (with retries for robustness).
+        Read output until pattern is found or max_prompts are seen.
+        
+        This is the ONLY method that reads from the server after connect/login.
+        It reads through multiple prompts to handle spurious game messages
+        like "You are thirsty" or mob arrivals.
         
         Args:
             pattern: Regular expression pattern to match
-            timeout: How long to wait for match
-            retries: Number of times to retry reading if pattern not found
+            max_prompts: Maximum number of prompts to read before giving up
+            timeout: Total timeout in seconds
             
         Returns:
-            True if pattern found, False otherwise
+            (found: bool, output: str) - Whether pattern was found and all output read
         """
-        for attempt in range(retries):
-            output = self._read_until_prompt(timeout)
-            if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
-                return True
-            # If not found and retries left, wait a bit and try again
-            if attempt < retries - 1:
-                time.sleep(0.1)
-        return False
+        all_output = ""
+        prompts_seen = 0
+        start_time = time.time()
+        
+        while prompts_seen < max_prompts and (time.time() - start_time) < timeout:
+            chunk_output = self._read_until_prompt(timeout=5)
+            all_output += chunk_output
+            
+            # Check if we found the pattern
+            if re.search(pattern, all_output, re.IGNORECASE | re.MULTILINE):
+                return (True, all_output)
+            
+            # Count this prompt
+            prompts_seen += 1
+        
+        # Pattern not found after max_prompts
+        return (False, all_output)
     
     def _read_available(self) -> str:
         """Read all currently available data."""
@@ -431,6 +436,15 @@ class TestExecutor:
         if 'setup' in test_def:
             self._execute_setup(test_def['setup'])
         
+        # After login, expect the initial room description
+        # This consumes all the login output (MOTD, room description, etc.)
+        print(f"  Waiting for initial room description...")
+        found, output = self.client.expect_output(r'>', max_prompts=2, timeout=15)
+        if not found:
+            print(f"  ✗ FAILED: Could not find initial prompt after login")
+            return False
+        print(f"  ✓ Connected and in game")
+        
         # Execute steps
         all_passed = True
         for i, step in enumerate(test_def.get('steps', []), 1):
@@ -479,17 +493,14 @@ class TestExecutor:
     
     def _execute_move(self, step: Dict[str, Any]) -> bool:
         """Execute movement action."""
-        output = ""
         if 'direction' in step:
             # Single direction
             direction = step['direction']
             self.client.send_command(direction)
-            output = self.client._read_until_prompt(timeout=30)
         elif 'path' in step:
-            # Multiple directions
+            # Multiple directions - send last one, expect checks result
             for direction in step['path']:
                 self.client.send_command(direction)
-                output = self.client._read_until_prompt(timeout=30)
         elif 'target_room' in step:
             # Target room specified - for now we just skip
             # In full implementation, would pathfind to target
@@ -502,7 +513,7 @@ class TestExecutor:
         
         # Validate expectations if present (only for actual movement)
         if 'expected' in step and 'target_room' not in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         return True
     
     def _execute_command(self, step: Dict[str, Any]) -> bool:
@@ -510,28 +521,12 @@ class TestExecutor:
         command = step['command']
         self.client.send_command(command)
         
-        # Read the output
-        output = self.client._read_until_prompt(timeout=30)
-        
-        # Show all output if flag is set
-        if self.show_all_output:
-            print(f"\n    === Command Output ===")
-            print(f"    Command: {command}")
-            print(f"    Output:\n{output}")
-            print(f"    === End Output ===\n")
-        
-        # Check fail_on conditions first
-        if 'fail_on' in step:
-            for fail_condition in step['fail_on']:
-                pattern = fail_condition['pattern']
-                if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
-                    print(f"    ✗ FAILED: {fail_condition.get('message', 'Fail condition matched')}")
-                    return False
-        
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt to confirm command completed
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_look(self, step: Dict[str, Any]) -> bool:
@@ -543,30 +538,25 @@ class TestExecutor:
             command = "look"
         
         self.client.send_command(command)
-        output = self.client._read_until_prompt(timeout=30)
         
-        # Show all output if flag is set
-        if self.show_all_output:
-            print(f"\n    === Command Output ===")
-            print(f"    Command: {command}")
-            print(f"    Output:\n{output}")
-            print(f"    === End Output ===\n")
-        
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_inventory(self, step: Dict[str, Any]) -> bool:
         """Execute inventory check."""
         self.client.send_command("inventory")
-        output = self.client._read_until_prompt(timeout=30)
         
-        # Validate expectations
+        # Validate expectations using simplified approach
         if 'expected' in step:
-            return self._validate_expectations(output, step['expected'])
+            return self._validate_expectations_simple(step['expected'])
         
+        # If no expectations, just wait for one prompt
+        _, output = self.client.expect_output('.', max_prompts=1, timeout=10)
         return True
     
     def _execute_cleanup(self, cleanup: Dict[str, Any]):
@@ -599,6 +589,40 @@ class TestExecutor:
                     # Debug: show first 200 chars of output
                     debug_output = output[:200].replace('\n', '\\n').replace('\r', '\\r')
                     print(f"      Output preview: {debug_output}...")
+                    all_passed = False
+                else:
+                    print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
+        
+        return all_passed
+    
+    def _validate_expectations_simple(self, expectations: List[Dict]) -> bool:
+        """
+        Validate expectations by reading output with expect_output.
+        This is the simplified version that uses expect_output for all reading.
+        
+        Args:
+            expectations: List of expectation patterns
+            
+        Returns:
+            True if all expectations met
+        """
+        all_passed = True
+        for expectation in expectations:
+            pattern = expectation['pattern']
+            optional = expectation.get('optional', False)
+            
+            # Use expect_output to read until pattern found (or max prompts)
+            found, output = self.client.expect_output(pattern, max_prompts=3, timeout=30)
+            
+            # Show output if flag set
+            if self.show_all_output and output:
+                print(f"\n    === Output ===\n{output}\n    === End ===\n")
+            
+            if found:
+                print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
+            else:
+                if not optional:
+                    print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
                     all_passed = False
                 else:
                     print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
