@@ -5719,23 +5719,27 @@ resets:
   arg3: 3924
 - command: G
   if_flag: 1
-  arg1: 3970
+  arg1: 3570
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3971
+  arg1: 3571
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3972
+  arg1: 3572
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3973
+  arg1: 3573
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3974
+  arg1: 3574
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3552
   arg2: 100
 - command: M
   if_flag: 0
@@ -6592,3 +6596,33 @@ shops:
   close1: 14
   open2: 15
   close2: 21
+- vnum: 20
+  producing:
+  - 3570
+  - 3571
+  - 3572
+  - 3573
+  - 3574
+  - 3552
+  profit_buy: 1.5
+  profit_sell: 0.3
+  buy_types:
+  - 12
+  - 9
+  messages:
+    no_such_item1: '%s I don''t have that particular piece - try list!'
+    no_such_item2: '%s You don''t seem to have that item.'
+    do_not_buy: '%s I only buy jewelry and precious gems.'
+    missing_cash1: '%s Such a treasure is beyond my means!'
+    missing_cash2: '%s You cannot afford such fine jewelry!'
+    message_buy: '%s That will be %d gold coins for this exquisite piece.'
+    message_sell: '%s I''ll give you %d gold coins for it!'
+  temper1: 0
+  temper2: 0
+  keeper: 3905
+  with_who: 0
+  in_room: 3924
+  open1: 8
+  close1: 18
+  open2: 0
+  close2: 0

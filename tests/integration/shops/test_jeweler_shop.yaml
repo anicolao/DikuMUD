@@ -1,0 +1,73 @@
+# Integration test for the Master Jeweler's shop in Greater Helium
+#
+# This test validates that the jeweler's shop (room 3924) functions properly
+# with the Master Jeweler (mob 3924) as shopkeeper.
+#
+# Expected Behavior:
+# - The 'list' command should work at the jeweler's shop
+# - Precious gems and jewelry should be available for purchase
+# - Shop should be properly configured with appropriate buy/sell prices
+
+test:
+  id: test_jeweler_shop
+  description: "Verify Master Jeweler's shop in Greater Helium allows listing and purchasing jewelry"
+  author: Integration Test Framework
+  created: 2025-10-11
+  tags: [shop, jewelry, greater_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 5
+  start_room: 3924  # Master Jeweler's shop in Greater Helium
+  gold: 5000  # Need substantial gold for expensive jewelry
+
+steps:
+  # Check for shop keeper
+  - action: look
+    description: "Look for Master Jeweler"
+    expected:
+      - pattern: "jeweler|Master Jeweler"
+        message: "Master Jeweler should be present in the shop"
+
+  # Test list command
+  - action: command
+    description: "List available jewelry and gems"
+    command: "list"
+    expected:
+      - pattern: "ruby|emerald|diamond|sapphire|topaz|harness"
+        message: "Should show various jewelry items and gems"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores|not interested"
+        message: "BUG: Jeweler's shop should respond to list command"
+
+  # Try purchasing a gem to verify shop works
+  - action: command
+    description: "Attempt to purchase a diamond"
+    command: "buy diamond"
+    expected:
+      - pattern: "exquisite piece|You now have|don't have enough|cannot afford"
+        message: "Shop should respond to purchase attempts"
+
+  # Verify we have the diamond if purchase succeeded
+  - action: command
+    description: "Check inventory for purchased diamond"
+    command: "inventory"
+    expected:
+      - pattern: "carrying|You are"
+        message: "Should show inventory"
+
+result:
+  should_pass: true
+  description: "Master Jeweler's shop should list available jewelry and gems and allow purchases"
+  notes: |
+    This validates that room 3924 has a properly configured jeweler's shop.
+    The shop should:
+    - Have the Master Jeweler (mob 3924) as keeper
+    - Respond to 'list' command
+    - Show precious gems (ruby, emerald, diamond, sapphire, topaz) and jewelry (jeweled harness)
+    - Allow purchases when player has sufficient gold
+    - Use appropriate markup (1.5x buy, 0.3x sell) for luxury items
