@@ -591,18 +591,28 @@ class TestExecutor:
         for expectation in expectations:
             pattern = expectation['pattern']
             optional = expectation.get('optional', False)
+            must_not_match = expectation.get('must_not_match', False)
             
-            if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
-                print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
-            else:
-                if not optional:
-                    print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
-                    # Debug: show first 200 chars of output
-                    debug_output = output[:200].replace('\n', '\\n').replace('\r', '\\r')
-                    print(f"      Output preview: {debug_output}...")
+            if must_not_match:
+                # Negative assertion: pattern should NOT be found
+                if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
+                    print(f"    ✗ FAILED: {expectation.get('message', 'Forbidden pattern found')}")
                     all_passed = False
                 else:
-                    print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
+                    print(f"    ✓ {expectation.get('message', 'Pattern correctly absent')}")
+            else:
+                # Normal assertion: pattern should be found
+                if re.search(pattern, output, re.IGNORECASE | re.MULTILINE):
+                    print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
+                else:
+                    if not optional:
+                        print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
+                        # Debug: show first 200 chars of output
+                        debug_output = output[:200].replace('\n', '\\n').replace('\r', '\\r')
+                        print(f"      Output preview: {debug_output}...")
+                        all_passed = False
+                    else:
+                        print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
         
         return all_passed
     
@@ -622,6 +632,7 @@ class TestExecutor:
         for expectation in expectations:
             pattern = expectation['pattern']
             optional = expectation.get('optional', False)
+            must_not_match = expectation.get('must_not_match', False)
             
             # Use expect_output to read until pattern found (or max prompts)
             found, output = self.client.expect_output(pattern, output=output, max_prompts=3, timeout=30)
@@ -630,14 +641,23 @@ class TestExecutor:
             if self.show_all_output and output:
                 print(f"\n    === Output ===\n{output}\n    === End ===\n")
             
-            if found:
-                print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
-            else:
-                if not optional:
-                    print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
+            if must_not_match:
+                # Negative assertion: pattern should NOT be found
+                if found:
+                    print(f"    ✗ FAILED: {expectation.get('message', 'Forbidden pattern found')}")
                     all_passed = False
                 else:
-                    print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
+                    print(f"    ✓ {expectation.get('message', 'Pattern correctly absent')}")
+            else:
+                # Normal assertion: pattern should be found
+                if found:
+                    print(f"    ✓ {expectation.get('message', 'Pattern matched')}")
+                else:
+                    if not optional:
+                        print(f"    ✗ FAILED: {expectation.get('message', 'Pattern not found')}")
+                        all_passed = False
+                    else:
+                        print(f"    - {expectation.get('message', 'Optional pattern not found')} (optional)")
         
         return all_passed
 

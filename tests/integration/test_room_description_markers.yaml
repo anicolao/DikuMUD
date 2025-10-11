@@ -56,6 +56,12 @@ steps:
     expected:
       - pattern: "By the Temple Altar"
         message: "Should show room name in brief mode (without markers)"
+      - pattern: "---<"
+        must_not_match: true
+        message: "Opening marker must NOT appear in brief mode"
+      - pattern: ">--"
+        must_not_match: true
+        message: "Closing marker must NOT appear in brief mode"
 
   - action: command
     command: south
@@ -63,6 +69,12 @@ steps:
     expected:
       - pattern: "."
         message: "Movement completed"
+      - pattern: "---<"
+        must_not_match: true
+        message: "Opening marker must NOT appear after movement in brief mode"
+      - pattern: ">--"
+        must_not_match: true
+        message: "Closing marker must NOT appear after movement in brief mode"
 
 result:
   should_pass: true
