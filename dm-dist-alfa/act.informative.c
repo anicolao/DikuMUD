@@ -618,7 +618,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 			case 8 : {
 
 				if (!IS_SET(ch->specials.act, PLR_BRIEF)) {
-					send_to_char("---<", ch);
+					send_to_char("--<\n\r", ch);
 				}
 				send_to_char(world[ch->in_room].name, ch);
 				send_to_char("\n\r", ch);

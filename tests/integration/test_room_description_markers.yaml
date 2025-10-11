@@ -1,5 +1,5 @@
 # Test for room description markers
-# Verifies that room descriptions are wrapped with ---< and >-- markers
+# Verifies that room descriptions are wrapped with --< and >-- markers
 
 test:
   id: room_description_markers
@@ -20,8 +20,8 @@ steps:
   - action: look
     description: "Look at room to verify markers appear"
     expected:
-      - pattern: "---<"
-        message: "Should have opening marker ---< before room description"
+      - pattern: "--<"
+        message: "Should have opening marker --< before room description"
       - pattern: ">--"
         message: "Should have closing marker >-- after room description"
       - pattern: "The Temple of the Jeddak"
@@ -31,7 +31,7 @@ steps:
     command: north
     description: "Move to another room and verify markers still appear"
     expected:
-      - pattern: "---<"
+      - pattern: "--<"
         message: "Should have opening marker after movement"
       - pattern: ">--"
         message: "Should have closing marker after movement"
@@ -39,7 +39,7 @@ steps:
   - action: look
     description: "Explicit look command should also show markers"
     expected:
-      - pattern: "---<"
+      - pattern: "--<"
         message: "Explicit look should show opening marker"
       - pattern: ">--"
         message: "Explicit look should show closing marker"
@@ -56,7 +56,7 @@ steps:
     expected:
       - pattern: "By the Temple Altar"
         message: "Should show room name in brief mode (without markers)"
-      - pattern: "---<"
+      - pattern: "--<"
         must_not_match: true
         message: "Opening marker must NOT appear in brief mode"
       - pattern: ">--"
@@ -69,7 +69,7 @@ steps:
     expected:
       - pattern: "."
         message: "Movement completed"
-      - pattern: "---<"
+      - pattern: "--<"
         must_not_match: true
         message: "Opening marker must NOT appear after movement in brief mode"
       - pattern: ">--"
