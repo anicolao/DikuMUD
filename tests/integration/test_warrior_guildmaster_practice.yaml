@@ -1,0 +1,101 @@
+# Test for warrior guildmaster practice functionality
+# This test validates that warriors can practice their available skills
+# at the War Master's location (kick, bash, rescue)
+
+test:
+  id: test_warrior_guildmaster_practice
+  description: "Verify warrior can practice all available skills (kick, bash, rescue) with the War Master"
+  author: Integration Test Framework
+  created: 2025-10-10
+  tags: [warrior, practice, guildmaster, skills]
+
+setup:
+  character:
+    name: WarriorPractice
+    password: test
+    class: warrior
+    level: 1
+  start_room: 3023  # Practice Yard - War Master's room
+  gold: 0
+
+steps:
+  - action: look
+    description: "Look around - should be in War Master's room"
+    expected:
+      - pattern: "Practice Yard|War Master"
+        message: "Should be in the War Master's room"
+
+  - action: command
+    command: "practice"
+    description: "Use practice command to see available skills"
+    expected:
+      - pattern: "practice sessions left"
+        message: "Should show how many practice sessions are left"
+      - pattern: "kick"
+        message: "Should list kick as an available skill"
+      - pattern: "bash"
+        message: "Should list bash as an available skill"
+      - pattern: "rescue"
+        message: "Should list rescue as an available skill"
+
+  - action: command
+    command: "practice kick"
+    description: "Practice the kick skill"
+    expected:
+      - pattern: "Practice for a while|learned"
+        message: "Should practice kick skill successfully"
+    fail_on:
+      - pattern: "do not have ability|don't know"
+        message: "Warriors should be able to practice kick"
+
+  - action: command
+    command: "practice bash"
+    description: "Practice the bash skill"
+    expected:
+      - pattern: "Practice for a while|learned"
+        message: "Should practice bash skill successfully"
+    fail_on:
+      - pattern: "do not have ability|don't know"
+        message: "Warriors should be able to practice bash"
+
+  - action: command
+    command: "practice rescue"
+    description: "Practice the rescue skill"
+    expected:
+      - pattern: "Practice for a while|learned"
+        message: "Should practice rescue skill successfully"
+    fail_on:
+      - pattern: "do not have ability|don't know"
+        message: "Warriors should be able to practice rescue"
+
+  - action: command
+    command: "practice"
+    description: "Check practice command again to see updated skills"
+    expected:
+      - pattern: "kick"
+        message: "Should still show kick skill"
+      - pattern: "bash"
+        message: "Should still show bash skill"
+      - pattern: "rescue"
+        message: "Should still show rescue skill"
+
+result:
+  should_pass: true
+  description: "Warrior should be able to practice all three combat skills"
+  notes: |
+    This test verifies the warrior practice workflow:
+    1. Warrior is in the War Master's room (Practice Yard, room 3023)
+    2. Warrior can use 'practice' command to see available skills
+    3. Warrior can practice kick, bash, and rescue skills
+    4. Each practice session consumes one practice session
+    
+    Available warrior skills:
+    - kick (skill #50)
+    - bash (skill #51)
+    - rescue (skill #52)
+    
+    This test will fail if:
+    - The War Master (mob 3023) is not in the Practice Yard (room 3023)
+    - The guild() function is not assigned to the War Master
+    - Warriors cannot practice their available skills
+    - The skill names or numbers are incorrect
