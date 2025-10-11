@@ -65,7 +65,7 @@ integration_test_outputs:
 	@mkdir -p integration_test_outputs integration_test_outputs/shops integration_test_outputs/items integration_test_outputs/quests
 
 # Pattern rule to run a single integration test and capture output
-integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver worldfiles ../tools/create_test_player | integration_test_outputs
+integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst ../tools/create_test_player | integration_test_outputs
 	@echo "Running test: $<"
 	@python3 ../tools/integration_test_runner.py ./dmserver $< > $@ 2>&1 && echo "PASSED" >> $@ || echo "FAILED" >> $@
 
