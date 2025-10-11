@@ -13,17 +13,17 @@ setup:
     name: ExpTester
     password: test
     class: warrior
-    level: 22  # Level 22 to use god commands for testing
-  start_room: 3001  # Temple Square in Midgaard
+    level: 22 # Level 22 to use god commands for testing
+  start_room: 1200 # room with no exits
   gold: 100
 
 steps:
   # Step 1: Verify we're in the temple
   - action: look
-    description: "Look around to confirm we're in Temple Square"
+    description: "Look around to confirm we're in the Chat Room"
     expected:
-      - pattern: "Temple|temple"
-        message: "Should be in Temple Square"
+      - pattern: "Chat|chat"
+        message: "Should be in chat room"
 
   # Step 2: Load a weak mobile to kill
   - action: command
@@ -45,13 +45,21 @@ steps:
   - action: command
     command: "kill calot"
     description: "Start attacking the calot"
+    delay_after: 2
     expected:
       - pattern: "."
         message: "Should start combat"
+  - action: command
+    command: "kill calot"
+    description: "Keep attacking"
+    delay_after: 5
+    expected:
+      - pattern: "."
+        message: "Continue combat"
 
   # Step 5: Wait for the kill to complete - keep hitting
   - action: command
-    command: "wait"
+    command: "kill calot"
     description: "Wait for auto-combat to finish"
     delay_after: 5
     expected:
