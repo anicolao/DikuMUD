@@ -1,0 +1,71 @@
+# Test for bronze coins retrieval from ulsio corpse
+# This test validates that bronze coins can be picked up from ulsio corpses
+
+test:
+  id: test_bronze_coins_ulsio
+  description: "Verify bronze coins can be retrieved from ulsio corpse"
+  author: Integration Test Framework
+  created: 2025-10-11
+  tags: [items, coins, loot, sewers]
+
+setup:
+  character:
+    name: TestFighter
+    password: test
+    class: warrior
+    level: 22 # Level 22 for wizard access
+  start_room: 4000
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3220"
+    description: "Load bronze coins object"
+    expected:
+      - pattern: "."
+        message: "Command executed"
+
+  - action: command
+    command: "get all"
+    description: "get coins"
+    expected:
+      - pattern: "bronze"
+        message: "Get bronze coins"
+
+  - action: command
+    command: "drop all"
+    description: "Drop everything to see what we have"
+    expected:
+      - pattern: "bronze"
+        message: "Drop bronze coins"
+
+  - action: look
+    description: "Look to see what's on the ground"
+    expected:
+      - pattern: "bronze"
+        message: "See bronze coins on ground"
+
+  - action: command
+    command: "get all"
+    description: "Try to get everything from ground"
+    expected:
+      - pattern: "You get|OK"
+        message: "Should be able to get items"
+
+  - action: inventory
+    description: "Check what we picked up"
+    expected:
+      - pattern: "bronze"
+        message: "Have bronze coins in inventory"
+
+result:
+  should_pass: true
+  description: "Bronze coins should be retrievable from ulsio corpse"
+  notes: |
+    This test verifies that bronze coins dropped in ulsio corpses can be picked up.
+    The issue was that bronze coins object (#3614) had wear_flags=0 instead of 
+    wear_flags=1 (ITEM_TAKE), making them non-takeable.
+
+    This test will fail if:
+    - Bronze coins cannot be picked up from the corpse
+    - Bronze coins don't have the ITEM_TAKE flag set
