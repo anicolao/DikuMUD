@@ -259,33 +259,28 @@ class GameClient:
         """
         try:
             self.connection = telnetlib.Telnet(self.host, self.port, timeout)
-            # Read initial welcome message using blocking read
-            welcome = self._read_until_idle(timeout=3)
             
             # If character name provided, handle login
+            # We know the exact sequence: username, password, enter, 1
+            # Send them all with minimal delays to let server process each input
             if char_name and char_pass:
                 # Send character name
                 self.connection.write(char_name.encode('ascii') + b'\n')
-                response = self._read_until_idle(timeout=2)
+                time.sleep(0.05)  # Give server time to process
                 
+                # Send password
                 self.connection.write(char_pass.encode('ascii') + b'\n')
-                response = self._read_until_idle(timeout=2)
-                    
-                # Handle menu after login (press return)
-                if "PRESS RETURN" in response:
-                    self.connection.write(b'\n')
-                    response = self._read_until_idle(timeout=2)
-                    
-                # Handle menu choice (enter the game)
-                if "Make your choice" in response:
-                    self.connection.write(b'1\n')
-                    # Don't read here - let _read_until_prompt below handle it
-                    # Just give the server a moment to process the input
-                    time.sleep(0.05)
-                    
-                # Wait for login to complete and all MOTD/initial output to arrive
-                # The server outputs MOTD and then the room description automatically
-                # Use _read_until_prompt to properly drain the buffer until we see a prompt
+                time.sleep(0.05)
+                
+                # Press return for "PRESS RETURN" prompt
+                self.connection.write(b'\n')
+                time.sleep(0.05)
+                
+                # Send menu choice 1 to enter the game
+                self.connection.write(b'1\n')
+                
+                # Now read until we get the game prompt
+                # This will consume all the welcome messages, MOTD, and room description
                 self._read_until_prompt(timeout=15)
                 
         except Exception as e:
