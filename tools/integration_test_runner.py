@@ -634,8 +634,18 @@ class TestExecutor:
             optional = expectation.get('optional', False)
             must_not_match = expectation.get('must_not_match', False)
             
-            # Use expect_output to read until pattern found (or max prompts)
-            found, output = self.client.expect_output(pattern, output=output, max_prompts=3, timeout=30)
+            if must_not_match:
+                # Negative assertion: check existing output first, only read one prompt if needed
+                # This is much faster since we don't wait for a pattern that shouldn't be there
+                if output:
+                    # We already have output from previous expectations, just check it
+                    found = bool(re.search(pattern, output, re.IGNORECASE | re.MULTILINE))
+                else:
+                    # No output yet, need to read one prompt
+                    found, output = self.client.expect_output(pattern, output=output, max_prompts=1, timeout=5)
+            else:
+                # Use expect_output to read until pattern found (or max prompts)
+                found, output = self.client.expect_output(pattern, output=output, max_prompts=3, timeout=30)
             
             # Show output if flag set
             if self.show_all_output and output:
