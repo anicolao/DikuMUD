@@ -51,9 +51,16 @@ steps:
 
 ### 2. Run the Test
 
+Run a specific test:
 ```bash
 cd dm-dist-alfa
-./run_integration_tests.sh shops/bug_3003_nobles_waiter_list.yaml
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
+```
+
+Or run all tests:
+```bash
+cd dm-dist-alfa
+make integration_tests
 ```
 
 ### 3. Get Results
