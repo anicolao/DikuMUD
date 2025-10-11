@@ -5718,27 +5718,27 @@ resets:
   arg2: 1
   arg3: 3924
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3570
   arg2: 100
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3571
   arg2: 100
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3572
   arg2: 100
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3573
   arg2: 100
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3574
   arg2: 100
 - command: G
-  if_flag: 0
+  if_flag: 1
   arg1: 3552
   arg2: 100
 - command: M
