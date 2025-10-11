@@ -342,7 +342,9 @@ void group_gain(struct char_data *ch, struct char_data *victim)
 
 	if (IS_AFFECTED(k, AFF_GROUP) &&
 	   (k->in_room == ch->in_room)) {
-		act("You receive your share of experience.", FALSE, k, 0, 0, TO_CHAR);
+		sprintf(buf, "You gained %d experience.", share);
+		send_to_char(buf, k);
+		send_to_char("\n\r", k);
 		gain_exp(k, share);
 		change_alignment(k, victim);
 	}
@@ -350,7 +352,9 @@ void group_gain(struct char_data *ch, struct char_data *victim)
 	for (f=k->followers; f; f=f->next) {
 		if (IS_AFFECTED(f->follower, AFF_GROUP) &&
 		   (f->follower->in_room == ch->in_room)) {
-			act("You receive your share of experience.", FALSE, f->follower,0,0,TO_CHAR);
+			sprintf(buf, "You gained %d experience.", share);
+			send_to_char(buf, f->follower);
+			send_to_char("\n\r", f->follower);
 			gain_exp(f->follower, share);
 			change_alignment(f->follower, victim);
 		}
@@ -655,6 +659,9 @@ void damage(struct char_data *ch, struct char_data *victim,
 				else
 					exp += (exp*MIN(8, (GET_LEVEL(victim) - GET_LEVEL(ch))))>>3;
 				exp = MAX(exp, 1);
+				sprintf(buf, "You gained %d experience.", exp);
+				send_to_char(buf, ch);
+				send_to_char("\n\r", ch);
 				gain_exp(ch, exp);
 				change_alignment(ch, victim);
 			}
