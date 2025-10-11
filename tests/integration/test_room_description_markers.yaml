@@ -1,0 +1,81 @@
+# Test for room description markers
+# Verifies that room descriptions are wrapped with --< and >-- markers
+
+test:
+  id: room_description_markers
+  description: "Verify room descriptions have proper markers for client parsing"
+  author: Integration Test Framework
+  created: 2025-10-11
+  tags: [room_display, markers, client_support]
+
+setup:
+  character:
+    name: TestChar
+    password: test
+    class: warrior
+    level: 1
+  start_room: 3001
+
+steps:
+  - action: look
+    description: "Look at room to verify markers appear"
+    expected:
+      - pattern: "--<"
+        message: "Should have opening marker --< before room description"
+      - pattern: ">--"
+        message: "Should have closing marker >-- after room description"
+      - pattern: "The Temple of the Jeddak"
+        message: "Should show room name"
+
+  - action: command
+    command: north
+    description: "Move to another room and verify markers still appear"
+    expected:
+      - pattern: "--<"
+        message: "Should have opening marker after movement"
+      - pattern: ">--"
+        message: "Should have closing marker after movement"
+
+  - action: look
+    description: "Explicit look command should also show markers"
+    expected:
+      - pattern: "--<"
+        message: "Explicit look should show opening marker"
+      - pattern: ">--"
+        message: "Explicit look should show closing marker"
+
+  - action: command
+    command: brief
+    description: "Enable brief mode"
+    expected:
+      - pattern: "Brief mode on"
+        message: "Brief mode enabled"
+
+  - action: look
+    description: "Look in brief mode - should show room name without markers or description"
+    expected:
+      - pattern: "By the Temple Altar"
+        message: "Should show room name in brief mode (without markers)"
+      - pattern: "--<"
+        must_not_match: true
+        message: "Opening marker must NOT appear in brief mode"
+      - pattern: ">--"
+        must_not_match: true
+        message: "Closing marker must NOT appear in brief mode"
+
+  - action: command
+    command: south
+    description: "Move to another room in brief mode"
+    expected:
+      - pattern: "."
+        message: "Movement completed"
+      - pattern: "--<"
+        must_not_match: true
+        message: "Opening marker must NOT appear after movement in brief mode"
+      - pattern: ">--"
+        must_not_match: true
+        message: "Closing marker must NOT appear after movement in brief mode"
+
+result:
+  should_pass: true
+  description: "Room description markers test passes if markers appear correctly in normal mode and not in brief mode"
