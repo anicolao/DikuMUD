@@ -39,12 +39,13 @@ class ServerManager:
     - Clean up test artifacts
     """
     
-    def __init__(self, server_path: str, lib_path: str):
+    def __init__(self, server_path: str, lib_path: str, spin_mode: bool = True):
         self.server_path = server_path
         self.lib_path = lib_path
         self.test_lib_path = None  # Will be created as a copy of lib_path
         self.process = None
         self.port = None
+        self.spin_mode = spin_mode  # Enable spin mode for faster testing
     
     def _create_test_lib(self):
         """Create a test copy of the lib directory to avoid modifying real game assets."""
@@ -83,8 +84,11 @@ class ServerManager:
         
         # Start server as subprocess with test_lib as the data directory
         server_dir = os.path.dirname(self.server_path)
+        cmd = [self.server_path, '-p', str(port), '-d', 'test_lib']
+        if self.spin_mode:
+            cmd.append('-spin')  # Enable spin mode for maximum speed
         self.process = subprocess.Popen(
-            [self.server_path, '-p', str(port), '-d', 'test_lib'],
+            cmd,
             cwd=server_dir,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -232,10 +236,14 @@ class GameClient:
     - Handle prompts and output
     """
     
-    def __init__(self, host: str = 'localhost', port: int = 4000):
+    def __init__(self, host: str = 'localhost', port: int = 4000, spin_mode: bool = True):
         self.host = host
         self.port = port
         self.connection = None
+        self.spin_mode = spin_mode
+        # Set idle timeout based on spin mode
+        # Telnet lib buffering dominates, so use same timeout for both modes
+        self.idle_timeout = 0.05
     
     def connect(self, timeout: int = 10, char_name: str = None, char_pass: str = None):
         """
@@ -338,17 +346,20 @@ class GameClient:
         except Exception:
             return ""
     
-    def _read_until_idle(self, timeout: int = 2, idle_time: float = 0.05) -> str:
+    def _read_until_idle(self, timeout: int = 2, idle_time: float = None) -> str:
         """
         Read until no more data arrives for idle_time seconds.
         
         Args:
             timeout: Maximum time to wait for data
-            idle_time: How long to wait without data before considering complete
+            idle_time: How long to wait without data before considering complete (uses self.idle_timeout if None)
             
         Returns:
             All data read as string
         """
+        if idle_time is None:
+            idle_time = self.idle_timeout
+            
         output = ""
         start_time = time.time()
         last_read_time = start_time
@@ -364,7 +375,7 @@ class GameClient:
                 elif output and (time.time() - last_read_time > idle_time):
                     break
                 # Small sleep to avoid busy-waiting
-                time.sleep(0.01)
+                time.sleep(0.001 if self.spin_mode else 0.01)
             except Exception:
                 break
         
@@ -375,6 +386,7 @@ class GameClient:
         output = ""
         start_time = time.time()
         last_read_time = start_time
+        no_data_count = 0
         
         while time.time() - start_time < timeout:
             try:
@@ -383,14 +395,17 @@ class GameClient:
                     decoded = chunk.decode('ascii', errors='ignore')
                     output += decoded
                     last_read_time = time.time()
+                    no_data_count = 0
                     # Check for prompt patterns (>, ], etc.)
                     if re.search(r'[>]\s*$', output):
                         break
-                # If we haven't received data for 0.05 seconds and we have some output, assume done
-                elif output and (time.time() - last_read_time > 0.05):
-                    break
+                else:
+                    # If we have output and haven't seen data for idle_timeout, we're done
+                    if output and (time.time() - last_read_time > self.idle_timeout):
+                        break
+                
                 # Smaller sleep for faster response
-                time.sleep(0.01)
+                time.sleep(0.001 if self.spin_mode else 0.01)
             except Exception:
                 break
         
@@ -621,10 +636,11 @@ class TestRunner:
     - Generate reports
     """
     
-    def __init__(self, server_path: str, lib_path: str, show_all_output: bool = False):
-        self.server_manager = ServerManager(server_path, lib_path)
+    def __init__(self, server_path: str, lib_path: str, show_all_output: bool = False, spin_mode: bool = True):
+        self.server_manager = ServerManager(server_path, lib_path, spin_mode=spin_mode)
         self.results = []
         self.show_all_output = show_all_output
+        self.spin_mode = spin_mode
     
     def run_test_file(self, test_file: Path, verbose: bool = False) -> bool:
         """
@@ -685,8 +701,8 @@ class TestRunner:
             return False
         
         try:
-            # Connect client
-            client = GameClient('localhost', port)
+            # Connect client with spin mode enabled
+            client = GameClient('localhost', port, spin_mode=self.spin_mode)
             try:
                 client.connect(char_name=char_name, char_pass=char_pass)
                 print(f"✓ Connected to server")
