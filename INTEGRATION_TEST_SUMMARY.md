@@ -15,7 +15,7 @@ A complete design for an automated integration testing framework that validates 
 
 **After:** Automated tests verify fixes and prevent regressions
 ```bash
-./run_integration_tests.sh
+make integration_tests
 ✓ bug_3003_nobles_waiter_list - PASSED
 ✓ bug_3010_general_store_type - PASSED  
 ✓ bug_3005_lamp_no_light - PASSED
@@ -41,11 +41,11 @@ A complete design for an automated integration testing framework that validates 
 | `bug_3010_general_store_type.yaml` | General store shouldn't be grocer | Shop |
 | `bug_3005_lamp_no_light.yaml` | Lamp has no light left | Item |
 
-### 🛠️ Framework Stubs (2 executables)
+### 🛠️ Framework Implementation
 
-| File | Purpose | Language |
-|------|---------|----------|
-| `run_integration_tests.sh` | Test harness and runner | Shell |
+| Component | Purpose | Type |
+|-----------|---------|------|
+| Makefile integration | Test orchestration and dependency tracking | Make |
 | `integration_test_runner.py` | Core test execution engine | Python |
 
 ## Architecture
@@ -60,7 +60,7 @@ A complete design for an automated integration testing framework that validates 
         ▼                     ▼                     ▼
 ┌──────────────┐      ┌──────────────┐     ┌──────────────┐
 │ Test Scripts │      │ Test Runner  │     │ Test Harness │
-│    (YAML)    │──────│   (Python)   │─────│   (Shell)    │
+│    (YAML)    │──────│   (Python)   │─────│  (Makefile)  │
 └──────────────┘      └──────────────┘     └──────────────┘
         │                     │                     │
         │              ┌──────┴──────┐              │
@@ -206,7 +206,7 @@ Running test: bug_3003_nobles_waiter_list
 ├── INTEGRATION_TEST_SUMMARY.md             # This file
 │
 ├── dm-dist-alfa/
-│   └── run_integration_tests.sh            # Test harness (executable)
+│   └── makefile                            # Integration test targets
 │
 ├── tests/
 │   └── integration/
@@ -228,31 +228,26 @@ Running test: bug_3003_nobles_waiter_list
 ### Run All Tests
 ```bash
 cd dm-dist-alfa
-./run_integration_tests.sh
+make integration_tests
 ```
 
 ### Run Specific Tests
 ```bash
-# All shop tests
-./run_integration_tests.sh shops/
-
 # Specific test
-./run_integration_tests.sh shops/bug_3003_nobles_waiter_list.yaml
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
 
-# Pattern match
-./run_integration_tests.sh bug_3003*
+# Multiple tests
+make integration_test_outputs/shops/bug_3003_nobles_waiter_list.out \
+     integration_test_outputs/shops/bug_3010_general_store_type.out
 ```
 
-### Run with Options
+### View Test Results
 ```bash
-# Verbose output
-./run_integration_tests.sh --verbose shops/
+# View test output
+cat integration_test_outputs/shops/bug_3003_nobles_waiter_list.out
 
-# Keep server running
-./run_integration_tests.sh --no-cleanup --port 4000 test.yaml
-
-# Save transcript
-./run_integration_tests.sh --save-transcript test.yaml
+# View all test results
+ls -la integration_test_outputs/
 ```
 
 ## Success Criteria
@@ -303,8 +298,8 @@ Framework will be successful when:
 - Example tests in `tests/integration/shops/` and `tests/integration/items/`
 
 ### When Implementing
-- `tools/integration_test_runner.py` - Implementation stub
-- `dm-dist-alfa/run_integration_tests.sh` - Harness stub
+- `tools/integration_test_runner.py` - Test execution engine
+- `dm-dist-alfa/makefile` - Test orchestration via make targets
 
 ## Summary
 

@@ -224,14 +224,14 @@ result:
 ### Architecture
 
 ```
-Shell Script (run_integration_tests.sh)
+Makefile (integration_tests target)
     ↓
 Python Runner (integration_test_runner.py)
     ↓
     ├── ServerManager → DikuMUD Server
     ├── GameClient → Telnet Connection
     ├── TestExecutor → YAML Parser
-    └── TestRunner → Results
+    └── TestRunner → Results → Output Files
 ```
 
 ### Dependencies
@@ -316,8 +316,7 @@ Example tests provided (require pathfinding for full execution):
 - `INTEGRATION_TEST_IMPLEMENTATION.md` - This document
 
 **Modified:**
-- `dm-dist-alfa/run_integration_tests.sh` - Updated to use real runner
-- `dm-dist-alfa/makefile` - Added test target
+- `dm-dist-alfa/makefile` - Added integration_tests target with pattern rules
 
 **Preserved:**
 - `INTEGRATION_TEST_FRAMEWORK_DESIGN.md` - Original design document

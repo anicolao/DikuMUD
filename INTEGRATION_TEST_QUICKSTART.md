@@ -220,9 +220,9 @@ steps:
 - `tests/integration/shops/` - Shop tests
 - `tests/integration/items/` - Item tests
 
-### Stubs (Design Only)
-- `dm-dist-alfa/run_integration_tests.sh` - Test harness
-- `tools/integration_test_runner.py` - Python runner
+### Implementation
+- `dm-dist-alfa/makefile` - Test orchestration with make targets
+- `tools/integration_test_runner.py` - Python test execution engine
 
 ## Next Steps
 
