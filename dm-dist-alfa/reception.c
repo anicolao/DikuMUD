@@ -487,7 +487,7 @@ int receptionist(struct char_data *ch, int cmd, char *arg)
 	if (IS_NPC(ch))
 		return(FALSE);
 
-	if ((cmd != 92) && (cmd != 93)) {
+	if ((cmd != CMD_RENT) && (cmd != CMD_OFFER)) {
 		if (!number(0, 30))
 			do_action(recep, "", action_tabel[number(0,8)]);
 		return(FALSE);
@@ -504,7 +504,7 @@ int receptionist(struct char_data *ch, int cmd, char *arg)
 		return(TRUE);
 	}
 
-	if (cmd == 92) { /* Rent  */
+	if (cmd == CMD_RENT) { /* Rent  */
 		if (recep_offer(ch, recep, &cost)) {
 
 			act("$n stores your stuff in the safe, and helps you into your chamber.",

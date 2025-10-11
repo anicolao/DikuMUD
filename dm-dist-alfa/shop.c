@@ -418,7 +418,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 
 	for(shop_nr=0 ; shop_index[shop_nr].keeper != keeper->nr; shop_nr++);
 
-	if((cmd == 56) && (ch->in_room == 
+	if((cmd == CMD_BUY) && (ch->in_room == 
 	   real_room(shop_index[shop_nr].in_room)))
 	 /* Buy */
 	{
@@ -426,7 +426,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 		return(TRUE);
 	}
 
-	if((cmd ==57 ) && (ch->in_room == 
+	if((cmd == CMD_SELL) && (ch->in_room == 
 	   real_room(shop_index[shop_nr].in_room)))
 	 /* Sell */
 	{
@@ -434,7 +434,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 		return(TRUE);
 	}
 
-	if((cmd == 58) && (ch->in_room == 
+	if((cmd == CMD_VALUE) && (ch->in_room == 
 	   real_room(shop_index[shop_nr].in_room)))
 	 /* value */
 	{
@@ -442,7 +442,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 		return(TRUE);
 	}
 
-	if((cmd == 59) && (ch->in_room == 
+	if((cmd == CMD_LIST) && (ch->in_room == 
 	   real_room(shop_index[shop_nr].in_room)))
 	 /* List */
 	{
@@ -451,7 +451,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 	}
 
 /*
-	if ((cmd == 25) || (cmd==70)) 
+	if ((cmd == CMD_KILL) || (cmd == CMD_HIT)) 
 	{
 		one_argument(arg, argm);
 
@@ -460,7 +460,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 			shopping_kill(arg,ch,keeper,shop_nr);
 			return(TRUE);
 		}
-	} else if ((cmd==84) || (cmd==207) || (cmd==172)) {
+	} else if ((cmd == CMD_ACTIVATE) || (cmd == CMD_RECITE) || (cmd == CMD_USE)) {
 		act("$N tells you 'No magic here - kid!'.", FALSE, ch, 0, keeper, TO_CHAR);
     return TRUE;
 	}
