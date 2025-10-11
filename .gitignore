@@ -2,3 +2,4 @@
 __pycache__/
 tools/create_test_player
 dm-dist-alfa/test_lib/
+dm-dist-alfa/integration_test_outputs/

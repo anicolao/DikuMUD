@@ -54,11 +54,33 @@ worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.
 ../tools/create_test_player: ../tools/create_test_player.c structs.h utils.h
 	$(CC) $(CFLAGS) -I. -o $@ $< -lcrypt
 
-# Integration tests
+# Find all integration test YAML files
+INTEGRATION_TEST_YAMLS := $(shell find ../tests/integration -name "*.yaml" -type f 2>/dev/null | sort)
+
+# Convert test paths to output file paths
+INTEGRATION_TEST_OUTPUTS := $(patsubst ../tests/integration/%.yaml,integration_test_outputs/%.out,$(INTEGRATION_TEST_YAMLS))
+
+# Create output directory if it doesn't exist
+integration_test_outputs:
+	@mkdir -p integration_test_outputs integration_test_outputs/shops integration_test_outputs/items integration_test_outputs/quests
+
+# Pattern rule to run a single integration test and capture output
+integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver worldfiles ../tools/create_test_player | integration_test_outputs
+	@echo "Running test: $<"
+	@python3 ../tools/integration_test_runner.py ./dmserver $< > $@ 2>&1 && echo "PASSED" >> $@ || echo "FAILED" >> $@
+
+# Run all integration tests
+.PHONY: integration_tests
+integration_tests: $(INTEGRATION_TEST_OUTPUTS)
+	@echo ""
+	@echo "=========================================="
+	@echo "Integration Test Results Summary"
+	@echo "=========================================="
+	@python3 -c 'import sys, os, glob; outputs = sorted(glob.glob("integration_test_outputs/**/*.out", recursive=True)); total = len(outputs); passed = sum(1 for f in outputs if open(f).readlines()[-1].strip() == "PASSED"); failed = total - passed; print(f"Total:  {total}"); print(f"Passed: {passed}"); print(f"Failed: {failed}"); print(""); (print("✅ All tests passed!") if failed == 0 else (print(f"❌ {failed} test(s) failed"), print(""), print("Failed tests:"), [print(f"  - {f}") for f in outputs if open(f).readlines()[-1].strip() == "FAILED"])); sys.exit(0 if failed == 0 else 1)'
+
+# Legacy test target - now calls integration_tests
 .PHONY: test
-test: dmserver worldfiles ../tools/create_test_player
-	@echo "Running integration tests..."
-	@./run_integration_tests.sh || true
+test: integration_tests
 
 dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
 dmserver : changes.o
