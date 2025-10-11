@@ -242,7 +242,7 @@ class GameClient:
         self.connection = None
         self.spin_mode = spin_mode
         # Set idle timeout based on spin mode
-        # Telnet lib buffering dominates, so use same timeout for both modes
+        # With 10ms spin, use same timeout as non-spin for consistency
         self.idle_timeout = 0.05
     
     def connect(self, timeout: int = 10, char_name: str = None, char_pass: str = None):
@@ -279,6 +279,9 @@ class GameClient:
                 # Handle menu choice (enter the game)
                 if "Make your choice" in response:
                     self.connection.write(b'1\n')
+                    # Don't read here - let _read_until_prompt below handle it
+                    # Just give the server a moment to process the input
+                    time.sleep(0.05)
                     
                 # Wait for login to complete and all MOTD/initial output to arrive
                 # The server outputs MOTD and then the room description automatically
