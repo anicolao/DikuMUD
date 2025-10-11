@@ -29,14 +29,14 @@ steps:
     command: "drop all"
     description: "Drop everything to see what we have"
     expected:
-      - pattern: "."
-        message: "Drop all items"
+      - pattern: "bronze"
+        message: "Drop bronze coins"
 
   - action: look
     description: "Look to see what's on the ground"
     expected:
-      - pattern: "."
-        message: "Room description"
+      - pattern: "bronze"
+        message: "See bronze coins on ground"
 
   - action: command
     command: "get all"
@@ -48,8 +48,8 @@ steps:
   - action: inventory
     description: "Check what we picked up"
     expected:
-      - pattern: "."
-        message: "Show inventory"
+      - pattern: "bronze"
+        message: "Have bronze coins in inventory"
 
 result:
   should_pass: true
