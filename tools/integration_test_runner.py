@@ -193,21 +193,21 @@ class ServerManager:
         start_time = time.time()
         last_error = None
         
-        # Give server a moment to start
-        time.sleep(1)
+        # Give server a brief moment to start
+        time.sleep(0.2)
         
         while time.time() - start_time < timeout:
             try:
                 # Try to connect to the port
                 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                    s.settimeout(2)
+                    s.settimeout(1)
                     s.connect(('localhost', self.port))
                     # Connection successful, server is ready
-                    time.sleep(0.5)  # Give it a bit more time to fully initialize
+                    time.sleep(0.1)  # Brief wait to let server fully initialize
                     return
             except (ConnectionRefusedError, socket.timeout, OSError) as e:
                 last_error = e
-                time.sleep(0.5)
+                time.sleep(0.1)
         
         # Try to get server output if available
         error_msg = f"Server failed to start within {timeout} seconds"
@@ -251,50 +251,42 @@ class GameClient:
         """
         try:
             self.connection = telnetlib.Telnet(self.host, self.port, timeout)
-            # Read initial welcome message
-            time.sleep(0.5)
-            welcome = self._read_available()
+            # Read initial welcome message using blocking read
+            welcome = self._read_until_idle(timeout=3)
             
             # If character name provided, handle login
             if char_name and char_pass:
                 # Send character name
                 self.connection.write(char_name.encode('ascii') + b'\n')
-                time.sleep(0.5)
-                response = self._read_available()
+                response = self._read_until_idle(timeout=2)
                 
                 # Answer "yes" to name confirmation
                 if "Did I get that right" in response or "(Y/N)" in response:
                     self.connection.write(b'yes\n')
-                    time.sleep(0.5)
-                    response = self._read_available()
+                    response = self._read_until_idle(timeout=2)
                 
                 # Enter password
                 if "password" in response.lower() or "Password" in response:
                     self.connection.write(char_pass.encode('ascii') + b'\n')
-                    time.sleep(0.5)
-                    response = self._read_available()
+                    response = self._read_until_idle(timeout=2)
                     
                     # Handle password retype for new characters or wrong password
                     if "retype" in response.lower() or "Retype" in response or "Wrong password" in response:
                         self.connection.write(char_pass.encode('ascii') + b'\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
+                        response = self._read_until_idle(timeout=2)
                     
                     # Handle menu after login (press return)
                     if "PRESS RETURN" in response:
                         self.connection.write(b'\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
+                        response = self._read_until_idle(timeout=2)
                     
                     # Handle menu choice (enter the game)
                     if "Make your choice" in response:
                         self.connection.write(b'1\n')
-                        time.sleep(0.5)
-                        response = self._read_available()
+                        response = self._read_until_idle(timeout=2)
                     
                     # Wait for login to complete and all MOTD/initial output to arrive
                     # The server outputs MOTD and then the room description automatically
-                    time.sleep(2.0)
                     # Use _read_until_prompt to properly drain the buffer until we see a prompt
                     self._read_until_prompt(timeout=5)
                     
@@ -306,7 +298,7 @@ class GameClient:
         if self.connection:
             try:
                 self.connection.write(b"quit\n")
-                time.sleep(0.2)
+                # No sleep needed - close will flush and disconnect
             except Exception:
                 pass
             try:
@@ -330,7 +322,7 @@ class GameClient:
             raise RuntimeError("Not connected to server")
         
         self.connection.write(command.encode('ascii') + b'\n')
-        time.sleep(0.3)  # Give server time to process
+        # No sleep needed - the blocking read will wait for response
         
         if wait_for_prompt:
             return self._read_until_prompt(timeout=5)
@@ -359,6 +351,38 @@ class GameClient:
         except Exception:
             return ""
     
+    def _read_until_idle(self, timeout: int = 2, idle_time: float = 0.2) -> str:
+        """
+        Read until no more data arrives for idle_time seconds.
+        
+        Args:
+            timeout: Maximum time to wait for data
+            idle_time: How long to wait without data before considering complete
+            
+        Returns:
+            All data read as string
+        """
+        output = ""
+        start_time = time.time()
+        last_read_time = start_time
+        
+        while time.time() - start_time < timeout:
+            try:
+                chunk = self.connection.read_very_eager()
+                if chunk:
+                    decoded = chunk.decode('ascii', errors='ignore')
+                    output += decoded
+                    last_read_time = time.time()
+                # If we haven't received data for idle_time and we have some output, we're done
+                elif output and (time.time() - last_read_time > idle_time):
+                    break
+                # Small sleep to avoid busy-waiting
+                time.sleep(0.05)
+            except Exception:
+                break
+        
+        return output
+    
     def _read_until_prompt(self, timeout: int = 5) -> str:
         """Read until we get a prompt or timeout."""
         output = ""
@@ -375,10 +399,11 @@ class GameClient:
                     # Check for prompt patterns (>, ], etc.)
                     if re.search(r'[>]\s*$', output):
                         break
-                # If we haven't received data for 0.5 seconds and we have some output, assume done
-                elif output and (time.time() - last_read_time > 0.5):
+                # If we haven't received data for 0.2 seconds and we have some output, assume done
+                elif output and (time.time() - last_read_time > 0.2):
                     break
-                time.sleep(0.1)
+                # Smaller sleep for faster response
+                time.sleep(0.05)
             except Exception:
                 break
         
@@ -484,10 +509,9 @@ class TestExecutor:
             direction = step['direction']
             output = self.client.send_command(direction)
         elif 'path' in step:
-            # Multiple directions
+            # Multiple directions - no sleep needed, send_command waits for response
             for direction in step['path']:
                 output = self.client.send_command(direction)
-                time.sleep(0.2)
         elif 'target_room' in step:
             # Target room specified - for now we just skip
             # In full implementation, would pathfind to target
