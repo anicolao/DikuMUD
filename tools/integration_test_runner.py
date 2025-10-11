@@ -299,9 +299,11 @@ class GameClient:
             raise RuntimeError("Not connected to server")
         
         self.connection.write(command.encode('ascii') + b'\n')
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f">>>> {command}");
         # Don't read here - let expect_output handle all reading
     
-    def expect_output(self, pattern: str, max_prompts: int = 3, timeout: int = 30) -> tuple:
+    def expect_output(self, pattern: str, output: str = "", max_prompts: int = 3, timeout: int = 30) -> tuple:
         """
         Read output until pattern is found or max_prompts are seen.
         
@@ -317,21 +319,30 @@ class GameClient:
         Returns:
             (found: bool, output: str) - Whether pattern was found and all output read
         """
-        all_output = ""
+        all_output = output
         prompts_seen = 0
         start_time = time.time()
         
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f"***** EXPECT: {pattern}")
+        if re.search(pattern, all_output, re.IGNORECASE | re.MULTILINE):
+            if os.getenv('DEBUG_OUTPUT'):
+                print(f"***** FOUND: {pattern}")
+            return (True, all_output)
         while prompts_seen < max_prompts and (time.time() - start_time) < timeout:
             chunk_output = self._read_until_prompt(timeout=5)
             all_output += chunk_output
             
             # Check if we found the pattern
             if re.search(pattern, all_output, re.IGNORECASE | re.MULTILINE):
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"***** FOUND: {pattern}")
                 return (True, all_output)
             
             # Count this prompt
             prompts_seen += 1
         
+        print(f"***** FAILED TO FIND: {pattern}")
         # Pattern not found after max_prompts
         return (False, all_output)
     
@@ -607,12 +618,13 @@ class TestExecutor:
             True if all expectations met
         """
         all_passed = True
+        output = ""
         for expectation in expectations:
             pattern = expectation['pattern']
             optional = expectation.get('optional', False)
             
             # Use expect_output to read until pattern found (or max prompts)
-            found, output = self.client.expect_output(pattern, max_prompts=3, timeout=30)
+            found, output = self.client.expect_output(pattern, output=output, max_prompts=3, timeout=30)
             
             # Show output if flag set
             if self.show_all_output and output:
