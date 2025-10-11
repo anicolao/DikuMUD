@@ -6622,7 +6622,7 @@ shops:
   keeper: 3905
   with_who: 0
   in_room: 3924
-  open1: 8
-  close1: 18
+  open1: 0
+  close1: 28
   open2: 0
   close2: 0
