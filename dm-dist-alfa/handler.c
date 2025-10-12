@@ -552,17 +552,31 @@ int get_number(char **name) {
 
 	int i;
 	char *ppos;
+	char *start_ptr;
   char number[MAX_INPUT_LENGTH] = "";
  
+	start_ptr = *name;  /* Save the original pointer position */
+	
 	if (ppos = index(*name, '.')) {
-		*ppos++ = '\0';
+		*ppos = '\0';  /* Temporarily terminate to extract the prefix */
 		strcpy(number,*name);
-		strcpy(*name, ppos);
+		*ppos = '.';  /* Restore the dot */
 
 		for(i=0; *(number+i); i++)
-			if (!isdigit(*(number+i)))
-				return(0);
+			if (!isdigit(*(number+i))) {
+				/* Not a number - treat dots as wildcards (spaces) */
+				/* Replace all dots with spaces in place */
+				for (i = 0; start_ptr[i]; i++) {
+					if (start_ptr[i] == '.') {
+						start_ptr[i] = ' ';
+					}
+				}
+				return(1);
+			}
 
+		/* It was a number - extract the part after the dot */
+		ppos++;
+		strcpy(*name, ppos);
 		return(atoi(number));
 	}
 
