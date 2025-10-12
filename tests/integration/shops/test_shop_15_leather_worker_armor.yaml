@@ -1,0 +1,65 @@
+# Integration test for Shop #15: Red Martian Leather Worker
+#
+# This test validates that the Leather Worker's shop at the Leather Worker's Shop
+# allows players to list and purchase studded armor pieces.
+#
+# Shop Details:
+# - Shop #15
+# - Keeper: mob 3010 (the Red Martian Leather Worker)
+# - Location: room 3035 (The Leather Worker's Shop)
+# - Products: studded chest harness (3066), studded helm (3067), studded leg harness (3068), studded boots (3069), studded gloves (3070), studded sleeves (3071)
+
+test:
+  id: test_shop_15_leather_worker_armor
+  description: "Verify Leather Worker's armor shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, armor, leather, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3035  # The Leather Worker's Shop
+  gold: 1000
+
+steps:
+  # Step 1: Verify the leather worker is present
+  - action: look
+    description: "Look around to see the leather worker"
+    expected:
+      - pattern: "Leather|leather|Worker|worker"
+        message: "Leather worker should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "studded|harness|helm|boots|gloves|sleeves"
+        message: "Should show studded armor for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy studded boots from the leather worker"
+    command: "buy boots"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase boots"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that boots are in inventory"
+    expected:
+      - pattern: "boots|studded"
+        message: "Purchased boots should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Leather Worker's armor shop is fully functional"

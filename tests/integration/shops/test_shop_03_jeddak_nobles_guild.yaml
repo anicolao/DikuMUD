@@ -1,0 +1,65 @@
+# Integration test for Shop #3: Tardos Mors, Jeddak of Helium (Nobles Guild)
+#
+# This test validates that the Jeddak's shop at the Guild of Nobles
+# allows players to list and purchase water supplies.
+#
+# Shop Details:
+# - Shop #3
+# - Keeper: mob 3943 (Tardos Mors, Jeddak of Helium)
+# - Location: room 3916 (Guild of Nobles)
+# - Products: water cask (3500), crystal water flask (3501)
+
+test:
+  id: test_shop_03_jeddak_nobles_guild
+  description: "Verify Jeddak's nobles guild shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, water, guild, nobles, greater_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: cleric
+    level: 1
+  start_room: 3916  # Guild of Nobles
+  gold: 1000
+
+steps:
+  # Step 1: Verify the Jeddak is present
+  - action: look
+    description: "Look around to see the Jeddak"
+    expected:
+      - pattern: "Tardos|Jeddak|Helium"
+        message: "Jeddak should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "water|cask|flask"
+        message: "Should show water items for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a water cask from the Jeddak"
+    command: "buy cask"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a water cask"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that cask is in inventory"
+    expected:
+      - pattern: "cask|water"
+        message: "Purchased cask should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Jeddak's nobles guild shop is fully functional"

@@ -1,0 +1,65 @@
+# Integration test for Shop #12: Red Martian Scientist
+#
+# This test validates that the Scientist's shop at the Scientific Supply Shop
+# allows players to list and purchase magical scrolls and potions.
+#
+# Shop Details:
+# - Shop #12
+# - Keeper: mob 3000 (the Red Martian Scientist)
+# - Location: room 3033 (The Scientific Supply Shop)
+# - Products: map scroll (3040), sight enhancement potion (3041), recall scroll (3042), invisibility device (3043), sleeping staff (3044)
+
+test:
+  id: test_shop_12_scientist_supplies
+  description: "Verify Scientist's supply shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, scrolls, potions, magic, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: magic_user
+    level: 1
+  start_room: 3033  # The Scientific Supply Shop
+  gold: 1000
+
+steps:
+  # Step 1: Verify the scientist is present
+  - action: look
+    description: "Look around to see the scientist"
+    expected:
+      - pattern: "Scientist|scientist"
+        message: "Scientist should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "scroll|potion|device|staff"
+        message: "Should show magical supplies for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a recall scroll from the scientist"
+    command: "buy recall"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a recall scroll"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that scroll is in inventory"
+    expected:
+      - pattern: "recall|scroll"
+        message: "Purchased scroll should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Scientist's supply shop is fully functional"

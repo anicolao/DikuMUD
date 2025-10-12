@@ -1,0 +1,65 @@
+# Integration test for Shop #6: Royal Innkeeper (drinks/alcohol)
+#
+# This test validates that the Royal Innkeeper's drinks shop at the Royal Helium Inn
+# allows players to list and purchase alcoholic beverages.
+#
+# Shop Details:
+# - Shop #6
+# - Keeper: mob 3911 (the Royal Innkeeper)
+# - Location: room 3941 (The Royal Helium Inn)
+# - Products: water cask (3500), crystal water flask (3501), vintage wine (3502), aged whiskey (3503), rare wine (3504)
+
+test:
+  id: test_shop_06_royal_innkeeper_drinks
+  description: "Verify Royal Innkeeper drinks shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, drinks, wine, whiskey, inn, greater_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3941  # The Royal Helium Inn
+  gold: 1000
+
+steps:
+  # Step 1: Verify the innkeeper is present
+  - action: look
+    description: "Look around to see the innkeeper"
+    expected:
+      - pattern: "Innkeeper|innkeeper"
+        message: "Innkeeper should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "wine|whiskey|flask|water"
+        message: "Should show drinks for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy whiskey from the innkeeper"
+    command: "buy whiskey"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase whiskey"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that whiskey is in inventory"
+    expected:
+      - pattern: "whiskey|flask"
+        message: "Purchased whiskey should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Royal Innkeeper drinks shop is fully functional"

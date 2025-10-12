@@ -1,0 +1,65 @@
+# Integration test for Shop #16: Thark Trader
+#
+# This test validates that the Thark Trader's shop at the Thark Trading Post
+# allows players to list and purchase Thark weapons.
+#
+# Shop Details:
+# - Shop #16
+# - Keeper: mob 4090 (a Thark Trader)
+# - Location: room 4040 (Thark Trading Post)
+# - Products: Thark great longsword (4100), Thark radium rifle (4101), barbed Thark spear (4102), meteorite mace (4103), Thark fighting dagger (4104), Thark short sword (4105)
+
+test:
+  id: test_shop_16_thark_trader
+  description: "Verify Thark Trader's shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, weapons, thark]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 5
+  start_room: 4040  # Thark Trading Post
+  gold: 5000
+
+steps:
+  # Step 1: Verify the trader is present
+  - action: look
+    description: "Look around to see the trader"
+    expected:
+      - pattern: "Trader|trader|Thark"
+        message: "Thark Trader should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "sword|rifle|spear|mace|dagger"
+        message: "Should show Thark weapons for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a dagger from the trader"
+    command: "buy dagger"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a dagger"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that dagger is in inventory"
+    expected:
+      - pattern: "dagger|Thark"
+        message: "Purchased dagger should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Thark Trader's shop is fully functional"

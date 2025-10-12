@@ -1,0 +1,65 @@
+# Integration test for Shop #13: Red Martian Maid
+#
+# This test validates that the Maid's shop at the Rocky Outcrop
+# allows players to list and purchase metal cups.
+#
+# Shop Details:
+# - Shop #13
+# - Keeper: mob 3100 (the Red Martian Maid)
+# - Location: room 3106 (Rocky Outcrop)
+# - Products: metal cup (3100), metal cup (3101), metal cup (3102)
+
+test:
+  id: test_shop_13_maid
+  description: "Verify Maid's shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, cups, miscellaneous, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3106  # Rocky Outcrop
+  gold: 1000
+
+steps:
+  # Step 1: Verify the maid is present
+  - action: look
+    description: "Look around to see the maid"
+    expected:
+      - pattern: "Maid|maid"
+        message: "Maid should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "cup|metal"
+        message: "Should show cups for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a cup from the maid"
+    command: "buy cup"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a cup"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that cup is in inventory"
+    expected:
+      - pattern: "cup|metal"
+        message: "Purchased cup should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Maid's shop is fully functional"
