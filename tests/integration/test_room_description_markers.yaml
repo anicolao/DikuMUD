@@ -18,31 +18,37 @@ setup:
 
 steps:
   - action: look
-    description: "Look at room to verify markers appear"
+    description: "Look at room to verify markers appear with exits"
     expected:
       - pattern: "--<"
         message: "Should have opening marker --< before room description"
-      - pattern: ">--"
-        message: "Should have closing marker >-- after room description"
+      - pattern: ">-- Exits:"
+        message: "Should have closing marker >-- with Exits: after room description"
       - pattern: "The Temple of the Jeddak"
         message: "Should show room name"
+      - pattern: ">-- Exits:[NESWUD]+"
+        message: "Should show exits in compact format (e.g., NSD for North, South, Down)"
 
   - action: command
     command: north
-    description: "Move to another room and verify markers still appear"
+    description: "Move to another room and verify markers still appear with exits"
     expected:
       - pattern: "--<"
         message: "Should have opening marker after movement"
-      - pattern: ">--"
-        message: "Should have closing marker after movement"
+      - pattern: ">-- Exits:"
+        message: "Should have closing marker with Exits: after movement"
+      - pattern: ">-- Exits:[NESWUD]+"
+        message: "Should show exits after movement"
 
   - action: look
-    description: "Explicit look command should also show markers"
+    description: "Explicit look command should also show markers with exits"
     expected:
       - pattern: "--<"
         message: "Explicit look should show opening marker"
-      - pattern: ">--"
-        message: "Explicit look should show closing marker"
+      - pattern: ">-- Exits:"
+        message: "Explicit look should show closing marker with Exits:"
+      - pattern: ">-- Exits:[NESWUD]+"
+        message: "Explicit look should show exits"
 
   - action: command
     command: brief
@@ -78,4 +84,4 @@ steps:
 
 result:
   should_pass: true
-  description: "Room description markers test passes if markers appear correctly in normal mode and not in brief mode"
+  description: "Room description markers test passes if markers with exits appear correctly in normal mode and not in brief mode"

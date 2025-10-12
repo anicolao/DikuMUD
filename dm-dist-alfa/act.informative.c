@@ -616,6 +616,9 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 
 			/* look ''		*/ 
 			case 8 : {
+				char exits_buf[20];
+				int door;
+				char *exit_letters = "NESWUD";  /* North, East, South, West, Up, Down */
 
 				if (!IS_SET(ch->specials.act, PLR_BRIEF)) {
 					send_to_char("--<\n\r", ch);
@@ -625,7 +628,18 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 
 				if (!IS_SET(ch->specials.act, PLR_BRIEF)) {
 					send_to_char(world[ch->in_room].description, ch);
-					send_to_char(">--\n\r", ch);
+					
+					/* Build compact exits string */
+					strcpy(exits_buf, ">-- Exits:");
+					for (door = 0; door <= 5; door++) {
+						if (EXIT(ch, door) && 
+						    EXIT(ch, door)->to_room != NOWHERE &&
+						    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
+							strncat(exits_buf, &exit_letters[door], 1);
+						}
+					}
+					strcat(exits_buf, "\n\r");
+					send_to_char(exits_buf, ch);
 				}
 
 				list_obj_to_char(world[ch->in_room].contents, ch, 0,FALSE);

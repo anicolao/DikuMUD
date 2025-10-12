@@ -9,10 +9,18 @@ Room descriptions are now wrapped with special markers `---<` and `>--` to help 
 ```
 ---<Room Name
 Room description text...
->--
+>-- Exits:NSD
 Objects in room...
 Mobiles in room...
 ```
+
+The exits line shows a compact summary of available exits using single letters:
+- N = North
+- E = East
+- S = South
+- W = West
+- U = Up
+- D = Down
 
 ## Example Output
 
@@ -25,7 +33,7 @@ color, and most of the walls are covered by ancient murals depicting the history
 of the red Martian race and the glory of Helium.
    Large steps lead down through the grand temple gate, descending from the elevated
 platform upon which the temple is built to the temple plaza below.
->--
+>-- Exits:NSD
 A tarnished copper lamp lies here, looking bright.
 
 20H 100F 100V 100C T:75 Exits:NSD> 
@@ -37,7 +45,7 @@ A tarnished copper lamp lies here, looking bright.
    You are by the temple altar in the northern end of Lesser Helium's great temple.
 A huge altar carved from scarlet marble stands before you, and behind it is a
 magnificent statue depicting the Jeddak of Helium in full ceremonial regalia.
->--
+>-- Exits:S
 
 20H 100F 99V 100C T:75 Exits:S> 
 ```
@@ -58,9 +66,10 @@ MUD clients can use these markers to:
 
 - **File**: `dm-dist-alfa/act.informative.c`
 - **Function**: `do_look()`, case 8 (empty look command)
-- **Lines Modified**: 3 lines added
-  - Opening marker before room name
-  - Closing marker after description, before objects/mobiles
+- **Lines Modified**: 
+  - Opening marker `---<` before room name
+  - Closing marker `>-- Exits:X` after description with compact exits summary
+  - Exits only shown for open, non-closed exits
 
 ### Behavior
 
@@ -89,13 +98,14 @@ import re
 
 def parse_room_description(text):
     """Parse room description from MUD output."""
-    pattern = r'---<([^\n]+)\n(.*?)>--'
+    pattern = r'---<([^\n]+)\n(.*?)>-- Exits:([NESWUD]*)'
     match = re.search(pattern, text, re.DOTALL)
     if match:
         room_name = match.group(1).strip()
         room_description = match.group(2).strip()
-        return room_name, room_description
-    return None, None
+        exits = match.group(3)
+        return room_name, room_description, exits
+    return None, None, None
 ```
 
 ## Backward Compatibility
