@@ -1,0 +1,61 @@
+# Integration test for Quest 4205 - Ras Thavas Data Crystal (RETRIEVAL)
+test:
+  id: quest_4205_ras_thavas_crystal
+  description: "Test Ras Thavas data crystal retrieval quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, atmosphere_lower, retrieval]
+
+setup:
+  character:
+    name: CrystalTester
+    password: test
+    level: 22
+    class: warrior
+  start_room: 4199  # Where Ras Thavas is located
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're with Ras Thavas"
+    expected:
+      - pattern: "Ras Thavas"
+        message: "Ras Thavas should be present"
+
+  - action: command
+    description: "Ask Ras Thavas for quest"
+    command: "ask thavas quest"
+    expected:
+      - pattern: "crystal|data|archive"
+        message: "Ras Thavas should offer retrieval quest"
+
+  - action: command
+    description: "Load the data crystal for testing"
+    command: "load obj 4263"
+    expected:
+      - pattern: "Ok"
+        message: "Should load data crystal"
+
+  - action: command
+    description: "Get the crystal"
+    command: "get crystal"
+    expected:
+      - pattern: "get|take"
+        message: "Should pick up crystal"
+
+  - action: command
+    description: "Give crystal to Ras Thavas to complete quest"
+    command: "give crystal thavas"
+    expected:
+      - pattern: "Excellent|crystal|technique|manual"
+        message: "Ras Thavas should acknowledge completion"
+
+  - action: inventory
+    description: "Verify we received the procedure manual reward"
+    expected:
+      - pattern: "manual"
+        message: "Should have medical procedure manual"
+
+result:
+  should_pass: true
+  description: "Test passes when quest can be given, completed, and rewards granted"

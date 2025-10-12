@@ -1,0 +1,42 @@
+# Integration test for Quest 4204 - Archive Chamber Exploration (EXPLORE)
+test:
+  id: quest_4204_archive_explore
+  description: "Test First Engineer archive chamber exploration quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, atmosphere_lower, explore]
+
+setup:
+  character:
+    name: ExploreTester
+    password: test
+    level: 22
+    class: warrior
+  start_room: 4193  # Where First Engineer is located
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're with First Engineer"
+    expected:
+      - pattern: "Engineer"
+        message: "First Engineer should be present"
+
+  - action: command
+    description: "Ask First Engineer for quest"
+    command: "ask engineer quest"
+    expected:
+      - pattern: "archive|knowledge|ancient"
+        message: "First Engineer should offer exploration quest"
+
+  - action: command
+    description: "Check quest status"
+    command: "score"
+    expected:
+      - pattern: "Quest|quest"
+        message: "Should show active quest"
+        optional: true
+
+result:
+  should_pass: true
+  description: "Test passes when explore quest can be assigned (NOTE: Explore quest completion may not be fully implemented yet)"

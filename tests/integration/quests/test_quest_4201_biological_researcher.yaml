@@ -1,0 +1,61 @@
+# Integration test for Quest 4201 - Biological Researcher's Specimen Quest (RETRIEVAL)
+test:
+  id: quest_4201_biological_researcher
+  description: "Test biological researcher specimen retrieval quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, atmosphere_lower, retrieval]
+
+setup:
+  character:
+    name: BioTester
+    password: test
+    level: 22
+    class: warrior
+  start_room: 4181  # Research Laboratory
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're in the Research Laboratory with the researcher"
+    expected:
+      - pattern: "researcher"
+        message: "Biological researcher should be present"
+
+  - action: command
+    description: "Ask researcher for quest"
+    command: "ask researcher quest"
+    expected:
+      - pattern: "specimen|research"
+        message: "Researcher should offer specimen quest"
+
+  - action: command
+    description: "Load the specimen item for testing"
+    command: "load obj 4264"
+    expected:
+      - pattern: "Ok"
+        message: "Should load specimen"
+
+  - action: command
+    description: "Get the specimen"
+    command: "get specimen"
+    expected:
+      - pattern: "get|take"
+        message: "Should pick up specimen"
+
+  - action: command
+    description: "Give specimen to researcher to complete quest"
+    command: "give specimen researcher"
+    expected:
+      - pattern: "Perfect|relief|research|medicine"
+        message: "Researcher should acknowledge completion and give reward"
+
+  - action: inventory
+    description: "Verify we received the healing medicine reward"
+    expected:
+      - pattern: "medicine"
+        message: "Should have advanced healing medicine"
+
+result:
+  should_pass: true
+  description: "Test passes when quest can be given, completed, and rewards granted"
