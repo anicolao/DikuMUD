@@ -1,0 +1,74 @@
+test:
+  id: test_wildcard_dots_short_desc
+  description: "Test that dots match words in short_desc with proper priority"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [targeting, wildcard, short_desc, feature_test]
+
+setup:
+  character:
+    name: testshort
+    password: testpass
+    class: warrior
+    level: 30
+  start_room: 3751  # Room with Red Martian Traveler
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're in the room with Red Martian Traveler"
+    expected:
+      - pattern: "Red Martian|Martian Traveler|traveler"
+        message: "Should see Red Martian Traveler in the room"
+
+  # Test that we can match by short_desc words
+  # The mob has namelist "traveler red martian merchant" and short_descr "a Red Martian Traveler"
+  - action: command
+    command: "consider Martian.Traveler"
+    description: "Test targeting by short_desc words (case insensitive)"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should successfully target using short_desc words"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find the traveler by short_desc"
+
+  # Test exact short_desc match (highest priority)
+  - action: command
+    command: "consider a Red Martian Traveler"
+    description: "Test exact short_desc match (should be highest priority)"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should successfully target with exact short_desc"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find with exact short_desc match"
+
+  # Test that namelist still has priority over short_desc words
+  - action: command
+    command: "consider merchant"
+    description: "Test namelist word (should work as it's in namelist)"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should match 'merchant' from namelist"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find by namelist word"
+
+result:
+  should_pass: true
+  description: "Wildcard dots should match short_desc with proper priority"
+  notes: |
+    This test validates the priority system for wildcard dot matching:
+    1. Exact match of entire short_desc (highest priority)
+    2. All words match in namelist (medium priority)
+    3. All words match in short_desc (lowest priority)
+    
+    The mob "a Red Martian Traveler" has:
+    - namelist: "traveler red martian merchant"
+    - short_descr: "a Red Martian Traveler"
+    
+    So we can match by:
+    - Exact: "a Red Martian Traveler"
+    - Namelist words: "traveler", "red", "martian", "merchant"
+    - Short_desc words: "Red", "Martian", "Traveler" (with proper case-insensitive matching)

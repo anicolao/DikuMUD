@@ -76,6 +76,136 @@ int isname(char *str, char *namelist)
 }
 
 
+/* Check if all dot-separated words in search_str match a target string (name or desc) */
+static int all_words_match(char *search_str, char *target_str)
+{
+	char *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
+	int k;
+	
+	if (!target_str || !search_str || !*search_str)
+		return 0;
+	
+	word_start = search_str;
+	
+	while (*word_start) {
+		/* Find the next dot or end of string */
+		word_end = word_start;
+		while (*word_end && *word_end != '.') {
+			word_end++;
+		}
+		
+		/* Extract the word */
+		k = 0;
+		while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+			word[k++] = *word_start++;
+		}
+		word[k] = '\0';
+		
+		/* Check if this word matches */
+		if (!isname(word, target_str)) {
+			return 0;
+		}
+		
+		/* Move past the dot if present */
+		if (*word_end == '.') {
+			word_start = word_end + 1;
+		} else {
+			word_start = word_end;
+		}
+	}
+	
+	return 1;
+}
+
+
+/* Check if search string matches target with wildcard dots
+ * Priority:
+ * 1. Exact match of entire short_desc (if provided)
+ * 2. All words match in namelist
+ * 3. All words match in short_desc (if provided)
+ */
+static int wildcard_match_char(char *search_str, char *namelist, char *short_desc)
+{
+	if (!search_str || !*search_str || !namelist)
+		return 0;
+	
+	/* Priority 1: Check if search matches entire short_desc exactly (case-insensitive) */
+	if (short_desc && *short_desc) {
+		char *s1 = search_str;
+		char *s2 = short_desc;
+		int exact_match = 1;
+		
+		while (*s1 && *s2) {
+			if (LOWER(*s1) != LOWER(*s2)) {
+				exact_match = 0;
+				break;
+			}
+			s1++;
+			s2++;
+		}
+		
+		/* Both strings must end at the same time for exact match */
+		if (exact_match && !*s1 && !*s2) {
+			return 1;
+		}
+	}
+	
+	/* Priority 2: Check if all words match in namelist */
+	if (all_words_match(search_str, namelist)) {
+		return 1;
+	}
+	
+	/* Priority 3: Check if all words match in short_desc */
+	if (short_desc && all_words_match(search_str, short_desc)) {
+		return 1;
+	}
+	
+	return 0;
+}
+
+
+/* Similar to wildcard_match_char but for objects */
+static int wildcard_match_obj(char *search_str, char *namelist, char *short_desc)
+{
+	if (!search_str || !*search_str || !namelist)
+		return 0;
+	
+	/* Priority 1: Check if search matches entire short_desc exactly (case-insensitive) */
+	if (short_desc && *short_desc) {
+		char *s1 = search_str;
+		char *s2 = short_desc;
+		int exact_match = 1;
+		
+		while (*s1 && *s2) {
+			if (LOWER(*s1) != LOWER(*s2)) {
+				exact_match = 0;
+				break;
+			}
+			s1++;
+			s2++;
+		}
+		
+		/* Both strings must end at the same time for exact match */
+		if (exact_match && !*s1 && !*s2) {
+			return 1;
+		}
+	}
+	
+	/* Priority 2: Check if all words match in namelist */
+	if (all_words_match(search_str, namelist)) {
+		return 1;
+	}
+	
+	/* Priority 3: Check if all words match in short_desc */
+	if (short_desc && all_words_match(search_str, short_desc)) {
+		return 1;
+	}
+	
+	return 0;
+}
+
+
 
 void affect_modify(struct char_data *ch, byte loc, byte mod, long bitv, bool add)
 {
@@ -1041,10 +1171,10 @@ void extract_char(struct char_data *ch)
 struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 {
 	struct char_data *i;
-	int j, number, k, all_match;
+	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp, *word_start, *word_end;
-	char word[MAX_INPUT_LENGTH];
+	char *tmp;
+	char *short_desc;
 
 	strcpy(tmpname,name);
 	tmp = tmpname;
@@ -1052,38 +1182,11 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name)
     return(0);
 
 	for (i = world[ch->in_room].people, j = 1; i && (j <= number); i = i->next_in_room) {
-		/* Check if all dot-separated words in tmp match the mob's name */
-		all_match = 1;
-		word_start = tmp;
+		/* Get short_desc if this is an NPC */
+		short_desc = IS_NPC(i) ? i->player.short_descr : NULL;
 		
-		while (*word_start && all_match) {
-			/* Find the next dot or end of string */
-			word_end = word_start;
-			while (*word_end && *word_end != '.') {
-				word_end++;
-			}
-			
-			/* Extract the word */
-			k = 0;
-			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
-				word[k++] = *word_start++;
-			}
-			word[k] = '\0';
-			
-			/* Check if this word matches */
-			if (!isname(word, GET_NAME(i))) {
-				all_match = 0;
-			}
-			
-			/* Move past the dot if present */
-			if (*word_end == '.') {
-				word_start = word_end + 1;
-			} else {
-				word_start = word_end;
-			}
-		}
-		
-		if (all_match && CAN_SEE(ch, i)) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_char(tmp, GET_NAME(i), short_desc) && CAN_SEE(ch, i)) {
 			if (j == number) 
 				return(i);
 			j++;
@@ -1100,10 +1203,10 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 struct char_data *get_char_vis(struct char_data *ch, char *name)
 {
 	struct char_data *i;
-	int j, number, k, all_match;
+	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp, *word_start, *word_end;
-	char word[MAX_INPUT_LENGTH];
+	char *tmp;
+	char *short_desc;
 
 	/* check location */
 	if (i = get_char_room_vis(ch, name))
@@ -1115,38 +1218,11 @@ struct char_data *get_char_vis(struct char_data *ch, char *name)
 		return(0);
 
 	for (i = character_list, j = 1; i && (j <= number); i = i->next) {
-		/* Check if all dot-separated words in tmp match the mob's name */
-		all_match = 1;
-		word_start = tmp;
+		/* Get short_desc if this is an NPC */
+		short_desc = IS_NPC(i) ? i->player.short_descr : NULL;
 		
-		while (*word_start && all_match) {
-			/* Find the next dot or end of string */
-			word_end = word_start;
-			while (*word_end && *word_end != '.') {
-				word_end++;
-			}
-			
-			/* Extract the word */
-			k = 0;
-			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
-				word[k++] = *word_start++;
-			}
-			word[k] = '\0';
-			
-			/* Check if this word matches */
-			if (!isname(word, GET_NAME(i))) {
-				all_match = 0;
-			}
-			
-			/* Move past the dot if present */
-			if (*word_end == '.') {
-				word_start = word_end + 1;
-			} else {
-				word_start = word_end;
-			}
-		}
-		
-		if (all_match && CAN_SEE(ch, i)) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_char(tmp, GET_NAME(i), short_desc) && CAN_SEE(ch, i)) {
 			if (j == number)
 				return(i);
 			j++;
@@ -1165,10 +1241,9 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 				struct obj_data *list)
 {
 	struct obj_data *i;
-	int j, number, k, all_match;
+	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp, *word_start, *word_end;
-	char word[MAX_INPUT_LENGTH];
+	char *tmp;
 
   strcpy(tmpname,name);
 	tmp = tmpname;
@@ -1176,38 +1251,8 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 		return(0);
 
 	for (i = list, j = 1; i && (j <= number); i = i->next_content) {
-		/* Check if all dot-separated words in tmp match the object's name */
-		all_match = 1;
-		word_start = tmp;
-		
-		while (*word_start && all_match) {
-			/* Find the next dot or end of string */
-			word_end = word_start;
-			while (*word_end && *word_end != '.') {
-				word_end++;
-			}
-			
-			/* Extract the word */
-			k = 0;
-			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
-				word[k++] = *word_start++;
-			}
-			word[k] = '\0';
-			
-			/* Check if this word matches */
-			if (!isname(word, i->name)) {
-				all_match = 0;
-			}
-			
-			/* Move past the dot if present */
-			if (*word_end == '.') {
-				word_start = word_end + 1;
-			} else {
-				word_start = word_end;
-			}
-		}
-		
-		if (all_match && CAN_SEE_OBJ(ch, i)) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_obj(tmp, i->name, i->short_description) && CAN_SEE_OBJ(ch, i)) {
 			if (j == number)
 				return(i);
 			j++;
@@ -1224,10 +1269,9 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 struct obj_data *get_obj_vis(struct char_data *ch, char *name)
 {
 	struct obj_data *i;
-	int j, number, k, all_match;
+	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp, *word_start, *word_end;
-	char word[MAX_INPUT_LENGTH];
+	char *tmp;
 
 	/* scan items carried */
 	if (i = get_obj_in_list_vis(ch, name, ch->carrying))
@@ -1244,38 +1288,8 @@ struct obj_data *get_obj_vis(struct char_data *ch, char *name)
 
 	/* ok.. no luck yet. scan the entire obj list   */
 	for (i = object_list, j = 1; i && (j <= number); i = i->next) {
-		/* Check if all dot-separated words in tmp match the object's name */
-		all_match = 1;
-		word_start = tmp;
-		
-		while (*word_start && all_match) {
-			/* Find the next dot or end of string */
-			word_end = word_start;
-			while (*word_end && *word_end != '.') {
-				word_end++;
-			}
-			
-			/* Extract the word */
-			k = 0;
-			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
-				word[k++] = *word_start++;
-			}
-			word[k] = '\0';
-			
-			/* Check if this word matches */
-			if (!isname(word, i->name)) {
-				all_match = 0;
-			}
-			
-			/* Move past the dot if present */
-			if (*word_end == '.') {
-				word_start = word_end + 1;
-			} else {
-				word_start = word_end;
-			}
-		}
-		
-		if (all_match && CAN_SEE_OBJ(ch, i)) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_obj(tmp, i->name, i->short_description) && CAN_SEE_OBJ(ch, i)) {
 			if (j == number)
 				return(i);
 			j++;

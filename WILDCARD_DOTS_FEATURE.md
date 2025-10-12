@@ -24,12 +24,24 @@ consider the.red.martian.beggar
 
 ### How It Works
 
-When you use dots in a target name, the game treats each dot-separated word as a requirement. The target must have ALL the words in its namelist to match.
+When you use dots in a target name, the game uses a priority-based matching system:
 
-For example, with a mob named "the red martian beggar traveler":
-- `red.martian` matches ✓ (has both "red" and "martian")
-- `red.beggar` matches ✓ (has both "red" and "beggar")
-- `red.green` doesn't match ✗ (doesn't have "green")
+**Priority 1: Exact short_description match**
+- If the entire search string matches the mob's short description exactly (case-insensitive), it's matched immediately
+- Example: `a Red Martian Traveler` exactly matches a mob with that short_desc
+
+**Priority 2: All words in namelist**
+- The target must have ALL dot-separated words in its namelist
+- Example: With namelist "the red martian beggar traveler":
+  - `red.martian` matches ✓ (has both "red" and "martian" in namelist)
+  - `red.beggar` matches ✓ (has both "red" and "beggar" in namelist)
+  - `red.green` doesn't match ✗ (doesn't have "green")
+
+**Priority 3: All words in short_description**
+- If not matched by namelist, the game checks if ALL words appear in the short description
+- Example: Mob with short_desc "a Red Martian Traveler":
+  - `Martian.Traveler` matches ✓ (both words in short_desc)
+  - `Red.Beggar` doesn't match ✗ ("Beggar" not in short_desc)
 
 ### Numeric Targeting Still Works
 
@@ -46,18 +58,30 @@ The system automatically detects whether the prefix before the first dot is a nu
 The following functions in `handler.c` were updated to support wildcard dots:
 
 1. **`get_number(char **name)`**: Modified to detect non-numeric prefixes and treat them as wildcards instead of returning an error
-2. **`get_char_room_vis(...)`**: Split dot-separated terms and match all of them against mob names in the current room
-3. **`get_char_vis(...)`**: Applied same logic for world-wide character targeting
-4. **`get_obj_in_list_vis(...)`**: Applied same logic for object targeting in inventories and rooms
-5. **`get_obj_vis(...)`**: Applied same logic for world-wide object targeting
+2. **`all_words_match(...)`**: Helper function to check if all dot-separated words match a target string
+3. **`wildcard_match_char(...)`**: Priority-based matching for characters (exact short_desc, namelist, short_desc words)
+4. **`wildcard_match_obj(...)`**: Priority-based matching for objects (exact short_desc, namelist, short_desc words)
+5. **`get_char_room_vis(...)`**: Uses wildcard matching for characters in the current room
+6. **`get_char_vis(...)`**: Uses wildcard matching for world-wide character targeting
+7. **`get_obj_in_list_vis(...)`**: Uses wildcard matching for object targeting in inventories and rooms
+8. **`get_obj_vis(...)`**: Uses wildcard matching for world-wide object targeting
 
 ### Algorithm
 
 For each target name with dots (e.g., "red.martian.traveler"):
-1. Split the name by dots into individual words
-2. For each potential target, check if ALL words match the target's namelist
-3. Use the existing `isname()` function to match individual words
-4. Only return the target if all words match
+
+**Priority 1: Exact Short Description Match**
+- Check if the entire search string matches the target's short_description exactly (case-insensitive)
+- If matched, return immediately (highest priority)
+
+**Priority 2: Namelist Word Matching**
+- Split the search string by dots into individual words
+- For each word, check if it matches any word in the target's namelist using `isname()`
+- All words must match for the target to be selected
+
+**Priority 3: Short Description Word Matching**
+- If not matched by namelist, check if all dot-separated words appear in the short_description
+- Similar to namelist matching but uses the short_description field instead
 
 ### Example Matching Logic
 
@@ -99,6 +123,14 @@ You hit the Red Martian Traveler hard.
 
 > 2.red.martian
 You hit the second Red Martian Traveler.
+
+> consider a Red Martian Traveler
+Easy.
+(Exact short_desc match - highest priority)
+
+> consider Martian.Traveler
+The perfect match!
+(Short_desc word match - works even if not in namelist)
 ```
 
 ### Inventory Management
