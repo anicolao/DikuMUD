@@ -1,0 +1,42 @@
+# Integration test for Quest 3003 - Temple Offering (DELIVERY)
+test:
+  id: quest_3003_temple_offering
+  description: "Test Lesser Helium temple offering quest - deliver sacred wine"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, lesser_helium, delivery]
+
+setup:
+  character:
+    name: TempleTester
+    password: test
+    level: 5
+    class: warrior
+  start_room: 3002  # Where priest guildmaster is located
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're in the room with priest"
+    expected:
+      - pattern: "priest|guildmaster"
+        message: "Priest guildmaster should be present"
+
+  - action: command
+    description: "Ask priest for quest"
+    command: "ask priest quest"
+    expected:
+      - pattern: "blessing|offering|wine|ritual"
+        message: "Priest should offer temple quest"
+
+  - action: command
+    description: "Check quest status"
+    command: "score"
+    expected:
+      - pattern: "Quest|quest"
+        message: "Should show active quest"
+        optional: true
+
+result:
+  should_pass: true
+  description: "Test passes when delivery quest can be assigned"

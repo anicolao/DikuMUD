@@ -495,3 +495,36 @@ resets:
   arg3: 4500
   comment: Load citizens in Court of Honor
 shops: []
+quests:
+- qnum: 4501
+  giver: 4500
+  type: 63
+  duration: 144
+  target: 4510
+  item: 0
+  flags: 33554432
+  reward_exp: 3000
+  reward_gold: 1500
+  reward_item: 4515
+  quest_text: The military commander speaks with authority. 'A dishonorable foe threatens
+    Kaol. Defeat them and restore our honor. Warriors of Kaol do not tolerate such
+    insults.'
+  complete_text: The commander nods approvingly. 'Honor is restored! You've proven
+    yourself a true warrior. Take this masterwork weapon - you've earned it.'
+  fail_text: The commander looks stern. 'The dishonor remains. Kaol needs justice.'
+- qnum: 4502
+  giver: 4501
+  type: 64
+  duration: 120
+  target: 4550
+  item: 0
+  flags: 33554432
+  reward_exp: 2800
+  reward_gold: 1200
+  reward_item: 4516
+  quest_text: The training master speaks firmly. 'Prove your combat skills. Complete
+    the training course and show you're worthy of Kaol's finest military.'
+  complete_text: The master nods with respect. 'You've completed the training with
+    distinction. Take this military equipment - you've earned it.'
+  fail_text: The master shakes his head. 'The training course awaits. Return when
+    you're ready.'

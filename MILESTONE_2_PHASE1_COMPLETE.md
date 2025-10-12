@@ -84,6 +84,11 @@ This allows storing both vnums while preserving 8 bits for flags.
 5. **structs.h**
    - Added AFF_QUEST_COMPLETE flag (value: 33554432)
 
+6. **spell_parser.c** (added after initial Phase 1)
+   - Added quest expiration warnings in affect_update()
+   - Warns at 12 MUD hours (1 real hour) remaining
+   - Urgent warning at 3 MUD hours (15 minutes) remaining
+
 ### Testing Results
 
 All quest integration tests passing:
@@ -184,7 +189,7 @@ From WHATS_NEXT.md, Phase 1 requirements:
 
 4. **COLLECT Quest Type**: Not yet implemented but framework is ready. Would need additional code to track collection count.
 
-5. **Quest Expiration Warnings**: Could add to affect_update() in spells.c to warn players when quests are about to expire
+5. **Quest Expiration Warnings**: ✅ IMPLEMENTED - Added to affect_update() in spell_parser.c to warn players at 1 hour and 15 minutes remaining
 
 ## Credits
 

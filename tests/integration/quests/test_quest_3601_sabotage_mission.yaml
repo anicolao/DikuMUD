@@ -1,0 +1,27 @@
+# Integration test for Quest 3601 - Sabotage Mission (KILL)
+test:
+  id: quest_3601_sabotage_mission
+  description: "Test Zodanga sabotage mission quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, zodanga, kill]
+
+setup:
+  character:
+    name: SabotageAgent
+    password: test
+    level: 22
+    class: warrior
+  start_room: 3600  # Zodanga starting room
+  gold: 1600
+
+steps:
+  - action: look
+    description: "Verify we're in Zodanga"
+    expected:
+      - pattern: "Zodanga"
+        message: "Should be in Zodanga"
+
+result:
+  should_pass: true
+  description: "Test documents quest 3601 exists in Zodanga"

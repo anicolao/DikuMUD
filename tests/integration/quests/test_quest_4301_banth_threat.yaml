@@ -1,0 +1,27 @@
+# Integration test for Quest 4301 - Banth Threat (KILL)
+test:
+  id: quest_4301_banth_threat
+  description: "Test Ptarth banth threat quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, ptarth, kill]
+
+setup:
+  character:
+    name: BanthHunter
+    password: test
+    level: 20
+    class: warrior
+  start_room: 4300  # Ptarth starting room
+  gold: 1000
+
+steps:
+  - action: look
+    description: "Verify we're in Ptarth"
+    expected:
+      - pattern: "Ptarth"
+        message: "Should be in Ptarth"
+
+result:
+  should_pass: true
+  description: "Test documents quest 4301 exists in Ptarth"

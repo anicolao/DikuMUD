@@ -484,3 +484,34 @@ resets:
   arg3: 4330
   comment: Load harness in military district
 shops: []
+quests:
+- qnum: 4301
+  giver: 4300
+  type: 63
+  duration: 144
+  target: 4310
+  item: 0
+  flags: 33554432
+  reward_exp: 2500
+  reward_gold: 1000
+  reward_item: 4315
+  quest_text: The noble speaks with concern. 'Banths threaten our borders. Defeat
+    one of these fierce beasts and prove your valor. Ptarth needs warriors like you.'
+  complete_text: The noble regards you with respect. 'You've proven your courage
+    against the banth. Ptarth is safer thanks to you. Take this reward.'
+  fail_text: The noble looks worried. 'The banths still threaten us. We need your help.'
+- qnum: 4302
+  giver: 4301
+  type: 61
+  duration: 120
+  target: 3900
+  item: 4303
+  flags: 100663296
+  reward_exp: 2200
+  reward_gold: 900
+  reward_item: 4316
+  quest_text: The ambassador speaks seriously. 'Carry this treaty to our allies in
+    Greater Helium. The future of Ptarth's alliances depends on this mission.'
+  complete_text: The recipient accepts the treaty formally. 'Ptarth's diplomatic mission
+    succeeds through your efforts. Take this as thanks.'
+  fail_text: The ambassador worries. 'Without the treaty delivery, our alliance weakens.'

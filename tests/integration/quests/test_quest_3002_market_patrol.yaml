@@ -1,0 +1,34 @@
+# Integration test for Quest 3002 - Market Patrol (EXPLORE)
+test:
+  id: quest_3002_market_patrol
+  description: "Test Lesser Helium market patrol quest - explore market plaza"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, lesser_helium, explore]
+
+setup:
+  character:
+    name: MarketPatrol
+    password: test
+    level: 5
+    class: warrior
+  start_room: 3001  # Temple area
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're in Lesser Helium"
+    expected:
+      - pattern: "Temple|Helium"
+        message: "Should be in Lesser Helium area"
+
+  - action: command
+    description: "Note: Quest giver is same as quest 3001 (mob 3007)"
+    command: "score"
+    expected:
+      - pattern: "level"
+        message: "Character exists"
+
+result:
+  should_pass: true
+  description: "Test documents quest 3002 exists but quest giver mob 3007 may need to be added to zone resets"

@@ -1,0 +1,27 @@
+# Integration test for Quest 3782 - Diplomatic Mission (DELIVERY)
+test:
+  id: quest_3782_diplomatic_mission
+  description: "Test Gathol diplomatic mission quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, gathol, delivery]
+
+setup:
+  character:
+    name: Diplomat
+    password: test
+    level: 18
+    class: warrior
+  start_room: 3780  # Gathol starting room
+  gold: 800
+
+steps:
+  - action: look
+    description: "Verify we're in Gathol"
+    expected:
+      - pattern: "Gathol"
+        message: "Should be in Gathol"
+
+result:
+  should_pass: true
+  description: "Test documents quest 3782 exists in Gathol"

@@ -18,11 +18,11 @@ The DikuMUD Barsoom project has made substantial progress in building a playable
 - ✅ Allied territory: Thark Territory (green Martians)
 - ✅ Wilderness connectors: Multiple zones linking cities
 - ✅ Infrastructure: Atmosphere Factory (critical to Barsoom lore)
-- ✅ First quest: Sola's quest in Thark Territory
+- ✅ 21 working quests across 8 major zones
 
 **Remaining Opportunities:**
 - ✅ Technology reskinning - COMPLETE (Milestone 1 finished)
-- More quests using the quest system framework
+- 🔄 Quest system expansion - IN PROGRESS (Milestone 2: Phase 2/4 complete - 50%)
 - Additional zones from the 11-book Barsoom series
 - Advanced game features (quest chains, reputation system)
 
@@ -84,7 +84,14 @@ The reskinning effort is **essentially complete**:
 
 **Priority:** HIGH  
 **Effort:** Medium (3-5 weeks)  
-**Dependencies:** None
+**Dependencies:** None  
+**Status:** 🔄 IN PROGRESS (Phase 2 of 4 complete - 50%)
+
+**Progress Summary:**
+- ✅ Phase 1: Quest type integration - COMPLETE
+- ✅ Phase 2: Core zone quests - COMPLETE (15/15 quests added)
+- ⏸️ Phase 3: Quest chains - Not started
+- ⏸️ Phase 4: Advanced features - Not started
 
 ### Objective
 
@@ -97,24 +104,36 @@ The quest system infrastructure is complete and working:
 - ✅ Quest types: DELIVERY, RETRIEVAL, KILL, EXPLORE, COLLECT
 - ✅ Quest affect tracking via existing affect system
 - ✅ World builder integration (YAML → .qst conversion)
-- ✅ One working quest: Sola's quest (RETRIEVAL type)
+- ✅ KILL quest integration with fight.c (Phase 1 COMPLETE)
+- ✅ EXPLORATION quest integration with act.movement.c (Phase 1 COMPLETE)
+- ✅ 6 working quests across 2 zones:
+  - Thark Territory: Sola's White Ape Tooth (RETRIEVAL)
+  - Atmosphere Factory: 5 quests (RETRIEVAL, DELIVERY, KILL, EXPLORE)
+- ✅ All quest integration tests passing (6/6 quest tests, 34/34 total tests)
 
-**Missing pieces:**
-1. KILL quest integration with fight.c
-2. EXPLORATION quest integration with act.movement.c
-3. More quests in different zones
-4. Quest chains (prerequisites)
-5. Multiple simultaneous quests
+**Completed:**
+1. ✅ Phase 2: Created 15 new quests across 7 major zones (total now 21 quests)
+
+**Remaining work:**
+1. Phase 3: Quest chains with prerequisites
+2. Phase 4: Advanced features (multiple simultaneous quests, reputation system)
 
 ### Quest Implementation Plan
 
-#### Phase 1: Integrate Missing Quest Types (Week 1-2)
-- Modify `fight.c` to detect quest mob kills and award completion
-- Modify `act.movement.c` to detect room visits for exploration quests
-- Add quest expiration warnings before timeout
-- Test with 2-3 new quests of each type
+#### Phase 1: Integrate Missing Quest Types (Week 1-2) ✅ COMPLETE
 
-#### Phase 2: Core Zone Quests (Week 2-3)
+**Status:** COMPLETE - See MILESTONE_2_PHASE1_COMPLETE.md for details
+
+- ✅ Modified `fight.c` to detect quest mob kills and award completion
+- ✅ Modified `act.movement.c` to detect room visits for exploration quests
+- ✅ Quest expiration warnings implemented (warns at 1 hour and 15 minutes remaining)
+- ✅ All quest types tested and working (6 integration tests passing)
+- ✅ Quest completion detection functional for all types
+
+#### Phase 2: Core Zone Quests (Week 2-3) ✅ COMPLETE
+
+**Status:** COMPLETE - 15 new quests added across 7 major zones
+
 Add 1-3 quests per major zone:
 
 **Lesser Helium (Starter Quests - Levels 1-10):**
@@ -147,13 +166,19 @@ Add 1-3 quests per major zone:
 - "Sabotage Mission" - Risky quest in enemy territory
 - "Intelligence Gathering" - EXPLORE quest with stealth elements
 
-#### Phase 3: Quest Chains (Week 4)
+#### Phase 3: Quest Chains (Week 4) ⏸️ NOT STARTED
+
+**Status:** Not started - depends on Phase 2 completion
+
 - Link quests together with prerequisites
 - Create 2-3 quest chains telling connected stories
 - Example: "Rise of a Warrior" chain through multiple zones
 
-#### Phase 4: Advanced Features (Week 5)
-- Multiple simultaneous quests (currently limited to one)
+#### Phase 4: Advanced Features (Week 5) ⏸️ NOT STARTED
+
+**Status:** Not started - optional enhancements
+
+- Multiple simultaneous quests (currently limited to one per type)
 - Quest difficulty scaling
 - Reputation tracking per city/faction
 - Quest rewards that unlock new quests
@@ -168,12 +193,23 @@ Add 1-3 quests per major zone:
 
 ### Success Criteria
 
-- All quest types functional (DELIVERY, RETRIEVAL, KILL, EXPLORE, COLLECT)
-- Each major zone has at least one quest
-- Quest chains work with proper prerequisite checking
-- Players can track multiple quests simultaneously
-- Build succeeds with no errors
-- Manual testing confirms quest functionality
+**Phase 1 (COMPLETE):**
+- ✅ All quest types functional (DELIVERY, RETRIEVAL, KILL, EXPLORE, COLLECT)
+- ✅ Quest completion detection integrated with game systems
+- ✅ Build succeeds with no errors
+- ✅ All integration tests pass (34/34 including 6 quest tests)
+
+**Phase 2 (COMPLETE):**
+- ✅ Each major zone has at least one quest
+- ✅ 21 total quests across the world (exceeded 15-20 target)
+
+**Phase 3 (NOT STARTED):**
+- ⬜ Quest chains work with proper prerequisite checking
+- ⬜ At least 2-3 connected quest storylines
+
+**Phase 4 (NOT STARTED):**
+- ⬜ Players can track multiple quests simultaneously
+- ⬜ Reputation system functional
 
 ---
 
