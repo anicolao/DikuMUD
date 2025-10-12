@@ -36,7 +36,7 @@ void check_explore_quest(struct char_data *ch)
 {
 	struct affected_type *af, *next_af;
 	char buf[MAX_STRING_LENGTH];
-	int room_vnum;
+	int room_vnum, target_vnum;
 	
 	/* Only check for player characters */
 	if (!ch || IS_NPC(ch))
@@ -50,8 +50,11 @@ void check_explore_quest(struct char_data *ch)
 		next_af = af->next;
 		
 		if (af->type == QUEST_EXPLORE) {
+			/* Extract target vnum from bitvector (bits 8-19) */
+			target_vnum = (af->bitvector >> 8) & 0xFFF;
+			
 			/* Check if current room vnum matches quest target */
-			if (room_vnum == af->modifier) {
+			if (room_vnum == target_vnum) {
 				/* Mark quest as complete by setting bitvector flag */
 				af->bitvector |= AFF_QUEST_COMPLETE;
 				

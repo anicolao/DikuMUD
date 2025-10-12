@@ -1536,13 +1536,20 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	if (has_quest_type(ch, quest->quest_type)) {
 		struct affected_type *af;
 		int quest_complete = 0;
+		int giver_vnum;
 		
 		/* Check if quest is marked as complete */
 		for (af = ch->affected; af; af = af->next) {
-			if (af->type == quest->quest_type && 
-			    (af->bitvector & AFF_QUEST_COMPLETE)) {
-				quest_complete = 1;
-				break;
+			if (af->type == quest->quest_type) {
+				/* Extract giver vnum from bitvector (bits 20-31) */
+				giver_vnum = (af->bitvector >> 20) & 0xFFF;
+				
+				/* Make sure this is the right quest giver */
+				if (giver_vnum == quest->giver_vnum && 
+				    (af->bitvector & AFF_QUEST_COMPLETE)) {
+					quest_complete = 1;
+					break;
+				}
 			}
 		}
 		
@@ -1565,15 +1572,20 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	}
 	
 	/* Assign quest affect 
-	 * Note: modifier stores the target vnum (mob for KILL, room for EXPLORE)
+	 * Note: modifier and location fields are byte-sized (0-255), insufficient for vnums.
+	 * We pack both target_vnum and giver_vnum into the bitvector field:
+	 * - Bits 0-7: Reserved for AFF_QUEST and AFF_QUEST_COMPLETE flags
+	 * - Bits 8-19: target_vnum (12 bits, supports vnums 0-4095)
+	 * - Bits 20-31: giver_vnum (12 bits, supports vnums 0-4095)
 	 * The quest type is stored in 'type' field for has_quest_type() checks.
-	 * The location field stores the giver vnum for quest completion validation
 	 */
 	af.type = quest->quest_type;
 	af.duration = quest->duration;
-	af.modifier = quest->target_vnum;  /* Target mob/room vnum */
-	af.location = quest->giver_vnum;   /* Quest giver vnum */
-	af.bitvector = AFF_QUEST;
+	af.modifier = 0;  /* Not used for quests */
+	af.location = 0;  /* Not used for quests */
+	af.bitvector = AFF_QUEST | 
+	               ((quest->target_vnum & 0xFFF) << 8) |
+	               ((quest->giver_vnum & 0xFFF) << 20);
 	
 	affect_to_char(ch, &af);
 	

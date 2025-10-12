@@ -319,6 +319,7 @@ void check_kill_quest(struct char_data *killer, struct char_data *victim)
 {
 	struct affected_type *af, *next_af;
 	char buf[MAX_STRING_LENGTH];
+	int target_vnum;
 	
 	/* Only check for NPC victims */
 	if (!IS_NPC(victim))
@@ -333,8 +334,11 @@ void check_kill_quest(struct char_data *killer, struct char_data *victim)
 		next_af = af->next;
 		
 		if (af->type == QUEST_KILL) {
+			/* Extract target vnum from bitvector (bits 8-19) */
+			target_vnum = (af->bitvector >> 8) & 0xFFF;
+			
 			/* Check if victim's vnum matches quest target */
-			if (mob_index[victim->nr].virtual == af->modifier) {
+			if (mob_index[victim->nr].virtual == target_vnum) {
 				/* Mark quest as complete by setting bitvector flag */
 				af->bitvector |= AFF_QUEST_COMPLETE;
 				

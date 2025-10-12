@@ -580,6 +580,7 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 		struct quest_data *quest;
 		int obj_vnum = obj_index[obj->item_number].virtual;
 		int vict_vnum = mob_index[vict->nr].virtual;
+		int giver_vnum, target_vnum;
 		
 		/* Check if player has an active delivery or retrieval quest */
 		for (af = ch->affected; af; af = af->next) {
@@ -591,8 +592,9 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 			if (af->type != QUEST_DELIVERY && af->type != QUEST_RETRIEVAL)
 				continue;
 			
-			/* Get giver vnum from location field */
-			int giver_vnum = af->location;
+			/* Extract giver and target vnums from bitvector */
+			target_vnum = (af->bitvector >> 8) & 0xFFF;  /* Bits 8-19 */
+			giver_vnum = (af->bitvector >> 20) & 0xFFF;  /* Bits 20-31 */
 			
 			/* Look up quest data */
 			quest = find_quest_by_giver(giver_vnum);
@@ -604,7 +606,7 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 				continue;
 			
 			/* For delivery quest: check if giving to correct target NPC */
-			if (af->type == QUEST_DELIVERY && quest->target_vnum != vict_vnum)
+			if (af->type == QUEST_DELIVERY && target_vnum != vict_vnum)
 				continue;
 			
 			/* For retrieval quest: check if returning to quest giver */
