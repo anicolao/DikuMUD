@@ -197,9 +197,18 @@ void affect_update( void )
 	for (i = character_list; i; i = i->next)
 		for (af = i->affected; af; af = next_af_dude) {
 			next_af_dude = af->next;
-			if (af->duration >= 1)
+			if (af->duration >= 1) {
 				af->duration--;
-			else {
+				
+				/* Quest expiration warnings */
+				if (af->type >= 61 && af->type <= 65) { /* Quest types */
+					if (af->duration == 12) { /* 12 MUD hours = 1 real hour warning */
+						send_to_char("Your quest will expire in about one hour.\n\r", i);
+					} else if (af->duration == 3) { /* 3 MUD hours = 15 minutes warning */
+						send_to_char("Your quest will expire soon! Return to complete it quickly.\n\r", i);
+					}
+				}
+			} else {
 				if ((af->type > 0) && (af->type <= 52)) /* It must be a spell */
 					if (!af->next || (af->next->type != af->type) ||
 					    (af->next->duration > 0))
