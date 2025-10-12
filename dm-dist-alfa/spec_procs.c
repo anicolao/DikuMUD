@@ -1534,25 +1534,58 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	
 	/* Check if player already has an active quest of this type */
 	if (has_quest_type(ch, quest->quest_type)) {
-		/* Player already has this quest - they may be returning to complete it */
-		/* For delivery/retrieval quests, completion happens in do_give */
-		act("$n says, 'You already have a task from me. Complete it first!'", 
-			FALSE, mob, 0, 0, TO_ROOM);
-		return TRUE;
+		struct affected_type *af;
+		int quest_complete = 0;
+		int giver_vnum;
+		
+		/* Check if quest is marked as complete */
+		for (af = ch->affected; af; af = af->next) {
+			if (af->type == quest->quest_type) {
+				/* Extract giver vnum from bitvector (bits 20-31) */
+				giver_vnum = (af->bitvector >> 20) & 0xFFF;
+				
+				/* Make sure this is the right quest giver */
+				if (giver_vnum == quest->giver_vnum && 
+				    (af->bitvector & AFF_QUEST_COMPLETE)) {
+					quest_complete = 1;
+					break;
+				}
+			}
+		}
+		
+		if (quest_complete) {
+			/* Award quest rewards */
+			act(quest->complete_text, FALSE, mob, 0, ch, TO_VICT);
+			grant_quest_reward(ch, quest);
+			
+			/* Remove the quest affect */
+			affect_from_char(ch, quest->quest_type);
+			
+			return TRUE;
+		} else {
+			/* Quest in progress but not complete */
+			/* For delivery/retrieval quests, completion happens in do_give */
+			act("$n says, 'You already have a task from me. Complete it first!'", 
+				FALSE, mob, 0, 0, TO_ROOM);
+			return TRUE;
+		}
 	}
 	
 	/* Assign quest affect 
-	 * Note: modifier and location fields are byte-sized, so we can't store vnums there.
-	 * Instead, we store the giver vnum in bitvector, shifted left 8 bits to avoid conflicts
-	 * with AFF_ flags (which use the lower bits).
+	 * Note: modifier and location fields are byte-sized (0-255), insufficient for vnums.
+	 * We pack both target_vnum and giver_vnum into the bitvector field:
+	 * - Bits 0-7: Reserved for AFF_QUEST and AFF_QUEST_COMPLETE flags
+	 * - Bits 8-19: target_vnum (12 bits, supports vnums 0-4095)
+	 * - Bits 20-31: giver_vnum (12 bits, supports vnums 0-4095)
 	 * The quest type is stored in 'type' field for has_quest_type() checks.
 	 */
 	af.type = quest->quest_type;
 	af.duration = quest->duration;
 	af.modifier = 0;  /* Not used for quests */
 	af.location = 0;  /* Not used for quests */
-	/* Pack giver vnum (bits 8-23) and AFF_QUEST flag (bit 24) into bitvector */
-	af.bitvector = AFF_QUEST | ((quest->giver_vnum & 0xFFFF) << 8);
+	af.bitvector = AFF_QUEST | 
+	               ((quest->target_vnum & 0xFFF) << 8) |
+	               ((quest->giver_vnum & 0xFFF) << 20);
 	
 	affect_to_char(ch, &af);
 	

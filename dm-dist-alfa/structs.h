@@ -312,6 +312,7 @@ struct room_data
 #define AFF_CHARM             4194304
 #define AFF_FOLLOW            8388608
 #define AFF_QUEST             16777216  /* Character is on a quest */
+#define AFF_QUEST_COMPLETE    33554432  /* Quest objective completed */
 
 /* Quest visibility flags (stored in upper bits of bitvector) */
 #define QUEST_SHOW_TARGET     16777216  /* Show target NPC name (1 << 24) */

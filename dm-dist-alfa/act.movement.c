@@ -14,6 +14,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
+#include "quest.h"
 
 /*   external vars  */
 
@@ -28,6 +29,46 @@ extern int movement_loss[];
 /* external functs */
 
 int special(struct char_data *ch, int cmd, char *arg);
+
+
+/* Check if entering this room completes an exploration quest */
+void check_explore_quest(struct char_data *ch)
+{
+	struct affected_type *af, *next_af;
+	char buf[MAX_STRING_LENGTH];
+	int room_vnum, target_vnum;
+	
+	/* Only check for player characters */
+	if (!ch || IS_NPC(ch))
+		return;
+	
+	/* Get the virtual number of the current room */
+	room_vnum = world[ch->in_room].number;
+	
+	/* Look through character's affects for QUEST_EXPLORE */
+	for (af = ch->affected; af; af = next_af) {
+		next_af = af->next;
+		
+		if (af->type == QUEST_EXPLORE) {
+			/* Extract target vnum from bitvector (bits 8-19) */
+			target_vnum = (af->bitvector >> 8) & 0xFFF;
+			
+			/* Check if current room vnum matches quest target */
+			if (room_vnum == target_vnum) {
+				/* Mark quest as complete by setting bitvector flag */
+				af->bitvector |= AFF_QUEST_COMPLETE;
+				
+				snprintf(buf, sizeof(buf), 
+					"You have reached the location for your quest!\n\r");
+				send_to_char(buf, ch);
+				
+				snprintf(buf, sizeof(buf),
+					"Return to your quest giver to claim your reward.\n\r");
+				send_to_char(buf, ch);
+			}
+		}
+	}
+}
 void death_cry(struct char_data *ch);
 struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 	struct obj_data *list);
@@ -99,6 +140,9 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 		act("$n has arrived.", TRUE, ch, 0,0, TO_ROOM);	
 
 	do_look(ch, "\0",15);
+	
+	/* Check if entering this room completes an exploration quest */
+	check_explore_quest(ch);
 
 	if (IS_SET(world[ch->in_room].room_flags, DEATH) && GET_LEVEL(ch) < 21) {
 		death_cry(ch);
