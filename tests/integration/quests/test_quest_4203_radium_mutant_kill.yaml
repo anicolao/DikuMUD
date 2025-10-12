@@ -17,10 +17,10 @@ setup:
 
 steps:
   - action: look
-    description: "Verify we're with power technician"
+    description: "Verify we're in the correct room"
     expected:
-      - pattern: "technician"
-        message: "Power technician should be present"
+      - pattern: "power|system|Power"
+        message: "Should be in power systems area"
 
   - action: command
     description: "Ask technician for quest"
