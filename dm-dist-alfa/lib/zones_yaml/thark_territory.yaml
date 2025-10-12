@@ -4447,3 +4447,21 @@ quests:
     now it shall serve you. May it bring you victory, warrior.'
   fail_text: Sola looks disappointed. 'The white apes still threaten us. I had hoped
     you would help protect my people.'
+- qnum: 4002
+  giver: 4050
+  type: 63
+  duration: 120
+  target: 4085
+  item: 0
+  flags: 33554432
+  reward_exp: 1600
+  reward_gold: 600
+  reward_item: 4092
+  quest_text: Tars Tarkas regards you with his four arms crossed. 'You have proven
+    yourself to Sola. Now prove yourself to me. Hunt the great calot in the wastes
+    and bring proof of your kill. Only then will you have the respect of the Tharks.'
+  complete_text: Tars Tarkas nods with approval as you report your success. 'You
+    fight well, for an outsider. Take this weapon - you've earned the respect of
+    the green Martians. May it serve you in battle.'
+  fail_text: Tars Tarkas looks at you sternly. 'The calot still roams. Return when
+    you're ready to face it.'

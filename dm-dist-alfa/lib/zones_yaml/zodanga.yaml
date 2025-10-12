@@ -3159,3 +3159,40 @@ resets:
   arg2: 1
   arg3: 3610
 shops: []
+quests:
+- qnum: 3601
+  giver: 3001
+  type: 63
+  duration: 168
+  target: 3620
+  item: 0
+  flags: 33554432
+  reward_exp: 3200
+  reward_gold: 1600
+  reward_item: 3615
+  quest_text: The Helium spy speaks in hushed tones. 'Helium needs brave souls to
+    disrupt Zodanga's war preparations. Eliminate one of their key operatives. Are
+    you willing to risk everything for Helium?'
+  complete_text: The spy nods grimly. 'Well done. Your actions have set back Zodanga's
+    plans. Helium thanks you. Take this equipment - you've earned it through dangerous
+    work.'
+  fail_text: The spy looks concerned. 'The operative still threatens Helium. We need
+    your courage.'
+- qnum: 3602
+  giver: 3002
+  type: 64
+  duration: 144
+  target: 3650
+  item: 0
+  flags: 33554432
+  reward_exp: 2900
+  reward_gold: 1400
+  reward_item: 3616
+  quest_text: The intelligence officer speaks urgently. 'We need maps of Zodanga's
+    defenses. Infiltrate their territory and scout the key positions. This information
+    is vital for Helium's security.'
+  complete_text: The officer examines your report carefully. 'Excellent intelligence.
+    This will help Helium immensely. Take this reward - you've done Mars a great
+    service.'
+  fail_text: The officer looks anxious. 'We still need that intelligence. Helium
+    depends on it.'

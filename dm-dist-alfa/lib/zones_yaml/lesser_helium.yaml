@@ -4945,3 +4945,56 @@ shops:
   close1: 28
   open2: 0
   close2: 0
+quests:
+- qnum: 3001
+  giver: 3007
+  type: 63
+  duration: 96
+  target: 3500
+  item: 0
+  flags: 33554432
+  reward_exp: 200
+  reward_gold: 50
+  reward_item: 3015
+  quest_text: The Red Martian warrior regards you with a critical eye. 'Welcome, recruit!
+    To prove you're ready to serve Helium, venture into the sewers beneath the city
+    and deal with one of the ulsio vermin. They've been growing bold lately. Return
+    when you've succeeded, and I'll see you're properly equipped.'
+  complete_text: The warrior nods with approval as you report your success. 'Well
+    done! You've proven you have the makings of a defender of Helium. Take this equipment
+    - it will serve you well in the battles ahead.'
+  fail_text: The warrior shakes his head. 'The ulsio still infest our sewers. Come
+    back when you're ready to face them.'
+- qnum: 3002
+  giver: 3007
+  type: 64
+  duration: 72
+  target: 3014
+  item: 0
+  flags: 33554432
+  reward_exp: 250
+  reward_gold: 100
+  reward_item: 3001
+  quest_text: The warrior gestures toward the city. 'I need someone to make a patrol
+    through the market plaza and report back on the activity there. Simply make your
+    way to the market plaza and return to me.'
+  complete_text: The warrior nods as you report your patrol findings. 'Good work.
+    Vigilance keeps Helium safe. Here is your compensation.'
+  fail_text: The warrior looks disappointed. 'I still need that patrol completed.'
+- qnum: 3003
+  giver: 3021
+  type: 61
+  duration: 96
+  target: 3021
+  item: 3002
+  flags: 100663296
+  reward_exp: 300
+  reward_gold: 75
+  reward_item: 3003
+  quest_text: The temple priest speaks in hushed tones. 'The morning blessing ceremony
+    requires a sacred offering. Please take this blessed wine and bring it to complete
+    the ritual. May the blessings of the Jeddak be upon you.'
+  complete_text: The priest accepts the wine with a solemn nod. 'The ritual is complete.
+    Your service to the temple is blessed. Take this as thanks.'
+  fail_text: The priest looks concerned. 'The ceremony cannot proceed without the
+    offering. Please help us.'

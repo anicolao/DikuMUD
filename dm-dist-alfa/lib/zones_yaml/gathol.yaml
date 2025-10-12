@@ -318,3 +318,36 @@ resets:
   arg3: 3789
   comment: Load guards at northern gate
 shops: []
+quests:
+- qnum: 3781
+  giver: 3780
+  type: 63
+  duration: 120
+  target: 3782
+  item: 0
+  flags: 33554432
+  reward_exp: 2000
+  reward_gold: 800
+  reward_item: 3785
+  quest_text: The Jetan master regards you coolly. 'The tournament requires champions.
+    Face an opponent and show your tactical prowess. Victory brings honor to Gathol.'
+  complete_text: The master nods with approval. 'Well played! Your tactical skill
+    is noted. Take this reward - you've earned it.'
+  fail_text: The master looks disappointed. 'The tournament awaits worthy challengers.'
+- qnum: 3782
+  giver: 3781
+  type: 61
+  duration: 144
+  target: 3900
+  item: 3783
+  flags: 100663296
+  reward_exp: 1800
+  reward_gold: 700
+  reward_item: 3786
+  quest_text: The diplomat speaks urgently. 'I trust you to deliver this sealed message
+    to our allies in Greater Helium. Guard it with your life - the future of Gathol
+    may depend on it.'
+  complete_text: The recipient accepts the message with gratitude. 'Gathol's diplomacy
+    is strengthened by your service. Take this gift as thanks.'
+  fail_text: The diplomat worries. 'The message must be delivered. Our alliance depends
+    on it.'
