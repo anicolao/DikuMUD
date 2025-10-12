@@ -76,6 +76,136 @@ int isname(char *str, char *namelist)
 }
 
 
+/* Check if all dot-separated words in search_str match a target string (name or desc) */
+static int all_words_match(char *search_str, char *target_str)
+{
+	char *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
+	int k;
+	
+	if (!target_str || !search_str || !*search_str)
+		return 0;
+	
+	word_start = search_str;
+	
+	while (*word_start) {
+		/* Find the next dot or end of string */
+		word_end = word_start;
+		while (*word_end && *word_end != '.') {
+			word_end++;
+		}
+		
+		/* Extract the word */
+		k = 0;
+		while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+			word[k++] = *word_start++;
+		}
+		word[k] = '\0';
+		
+		/* Check if this word matches */
+		if (!isname(word, target_str)) {
+			return 0;
+		}
+		
+		/* Move past the dot if present */
+		if (*word_end == '.') {
+			word_start = word_end + 1;
+		} else {
+			word_start = word_end;
+		}
+	}
+	
+	return 1;
+}
+
+
+/* Check if search string matches target with wildcard dots
+ * Priority:
+ * 1. Exact match of entire short_desc (if provided)
+ * 2. All words match in namelist
+ * 3. All words match in short_desc (if provided)
+ */
+static int wildcard_match_char(char *search_str, char *namelist, char *short_desc)
+{
+	if (!search_str || !*search_str || !namelist)
+		return 0;
+	
+	/* Priority 1: Check if search matches entire short_desc exactly (case-insensitive) */
+	if (short_desc && *short_desc) {
+		char *s1 = search_str;
+		char *s2 = short_desc;
+		int exact_match = 1;
+		
+		while (*s1 && *s2) {
+			if (LOWER(*s1) != LOWER(*s2)) {
+				exact_match = 0;
+				break;
+			}
+			s1++;
+			s2++;
+		}
+		
+		/* Both strings must end at the same time for exact match */
+		if (exact_match && !*s1 && !*s2) {
+			return 1;
+		}
+	}
+	
+	/* Priority 2: Check if all words match in namelist */
+	if (all_words_match(search_str, namelist)) {
+		return 1;
+	}
+	
+	/* Priority 3: Check if all words match in short_desc */
+	if (short_desc && all_words_match(search_str, short_desc)) {
+		return 1;
+	}
+	
+	return 0;
+}
+
+
+/* Similar to wildcard_match_char but for objects */
+static int wildcard_match_obj(char *search_str, char *namelist, char *short_desc)
+{
+	if (!search_str || !*search_str || !namelist)
+		return 0;
+	
+	/* Priority 1: Check if search matches entire short_desc exactly (case-insensitive) */
+	if (short_desc && *short_desc) {
+		char *s1 = search_str;
+		char *s2 = short_desc;
+		int exact_match = 1;
+		
+		while (*s1 && *s2) {
+			if (LOWER(*s1) != LOWER(*s2)) {
+				exact_match = 0;
+				break;
+			}
+			s1++;
+			s2++;
+		}
+		
+		/* Both strings must end at the same time for exact match */
+		if (exact_match && !*s1 && !*s2) {
+			return 1;
+		}
+	}
+	
+	/* Priority 2: Check if all words match in namelist */
+	if (all_words_match(search_str, namelist)) {
+		return 1;
+	}
+	
+	/* Priority 3: Check if all words match in short_desc */
+	if (short_desc && all_words_match(search_str, short_desc)) {
+		return 1;
+	}
+	
+	return 0;
+}
+
+
 
 void affect_modify(struct char_data *ch, byte loc, byte mod, long bitv, bool add)
 {
@@ -553,15 +683,22 @@ int get_number(char **name) {
 	int i;
 	char *ppos;
   char number[MAX_INPUT_LENGTH] = "";
+	char original[MAX_INPUT_LENGTH] = "";
  
 	if (ppos = index(*name, '.')) {
+		/* Save original in case it's not a number prefix */
+		strcpy(original, *name);
+		
 		*ppos++ = '\0';
 		strcpy(number,*name);
 		strcpy(*name, ppos);
 
 		for(i=0; *(number+i); i++)
-			if (!isdigit(*(number+i)))
-				return(0);
+			if (!isdigit(*(number+i))) {
+				/* Not a number - restore original string and treat as wildcard */
+				strcpy(*name, original);
+				return(1);
+			}
 
 		return(atoi(number));
 	}
@@ -1037,19 +1174,24 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
 	char *tmp;
+	char *short_desc;
 
 	strcpy(tmpname,name);
 	tmp = tmpname;
 	if(!(number = get_number(&tmp)))
     return(0);
 
-	for (i = world[ch->in_room].people, j = 1; i && (j <= number); i = i->next_in_room)
-		if (isname(tmp, GET_NAME(i)))
-			if (CAN_SEE(ch, i))	{
-				if (j == number) 
-					return(i);
-				j++;
-			}
+	for (i = world[ch->in_room].people, j = 1; i && (j <= number); i = i->next_in_room) {
+		/* Get short_desc if this is an NPC */
+		short_desc = IS_NPC(i) ? i->player.short_descr : NULL;
+		
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_char(tmp, GET_NAME(i), short_desc) && CAN_SEE(ch, i)) {
+			if (j == number) 
+				return(i);
+			j++;
+		}
+	}
 
 	return(0);
 }
@@ -1064,6 +1206,7 @@ struct char_data *get_char_vis(struct char_data *ch, char *name)
 	int j, number;
   char tmpname[MAX_INPUT_LENGTH];
 	char *tmp;
+	char *short_desc;
 
 	/* check location */
 	if (i = get_char_room_vis(ch, name))
@@ -1074,13 +1217,17 @@ struct char_data *get_char_vis(struct char_data *ch, char *name)
 	if(!(number = get_number(&tmp)))
 		return(0);
 
-	for (i = character_list, j = 1; i && (j <= number); i = i->next)
-		if (isname(tmp, GET_NAME(i)))
-			if (CAN_SEE(ch, i))	{
-				if (j == number)
-					return(i);
-				j++;
-			}
+	for (i = character_list, j = 1; i && (j <= number); i = i->next) {
+		/* Get short_desc if this is an NPC */
+		short_desc = IS_NPC(i) ? i->player.short_descr : NULL;
+		
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_char(tmp, GET_NAME(i), short_desc) && CAN_SEE(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 
 	return(0);
 }
@@ -1103,13 +1250,14 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 	if(!(number = get_number(&tmp)))
 		return(0);
 
-	for (i = list, j = 1; i && (j <= number); i = i->next_content)
-		if (isname(tmp, i->name))
-			if (CAN_SEE_OBJ(ch, i)) {
-				if (j == number)
-					return(i);
-				j++;
-			}
+	for (i = list, j = 1; i && (j <= number); i = i->next_content) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_obj(tmp, i->name, i->short_description) && CAN_SEE_OBJ(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 	return(0);
 }
 
@@ -1139,13 +1287,14 @@ struct obj_data *get_obj_vis(struct char_data *ch, char *name)
 		return(0);
 
 	/* ok.. no luck yet. scan the entire obj list   */
-	for (i = object_list, j = 1; i && (j <= number); i = i->next)
-		if (isname(tmp, i->name))
-			if (CAN_SEE_OBJ(ch, i)) {
-				if (j == number)
-					return(i);
-				j++;
-			}
+	for (i = object_list, j = 1; i && (j <= number); i = i->next) {
+		/* Use wildcard matching with priority: exact short_desc, namelist, short_desc words */
+		if (wildcard_match_obj(tmp, i->name, i->short_description) && CAN_SEE_OBJ(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 	return(0);
 }
 

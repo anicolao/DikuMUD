@@ -1,0 +1,75 @@
+test:
+  id: test_wildcard_dots
+  description: "Test that dots can be used as wildcards (spaces) in target matching"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [targeting, wildcard, feature_test]
+
+setup:
+  character:
+    name: testdots
+    password: testpass
+    class: warrior
+    level: 30
+  start_room: 3751  # Room with Red Martian Traveler
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're in the room with Red Martian Traveler"
+    expected:
+      - pattern: "Red Martian|Martian Traveler|traveler"
+        message: "Should see Red Martian Traveler in the room"
+
+  - action: command
+    command: "consider traveler"
+    description: "Test normal targeting with single word works"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad|Consider killing who"
+        message: "Should successfully target traveler with single word"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find the traveler"
+
+  - action: command
+    command: "consider red.martian"
+    description: "Test targeting with dots as wildcards"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should successfully target using dots as wildcards"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find the traveler using dots"
+
+  - action: command
+    command: "consider traveler.red.martian.merchant"
+    description: "Test full name with dots"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should successfully target using full name with dots"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find the traveler with full name"
+
+  - action: command
+    command: "consider red.martian.traveler"
+    description: "Test another variation with dots"
+    expected:
+      - pattern: "chicken|needle|Easy|match|luck|mad"
+        message: "Should successfully target using dots in different order"
+    fail_on:
+      - pattern: "Consider killing who"
+        message: "Should find the traveler with dots in different order"
+
+result:
+  should_pass: true
+  description: "Dots should work as wildcards (spaces) in target matching"
+  notes: |
+    This test validates that the dot character (.) can be used as a wildcard
+    that acts like a space in target matching. This allows commands like:
+    - kill the.red.martian.beggar
+    to work the same as:
+    - kill the red martian beggar
+    
+    This feature makes it easier to target mobs with multi-word names without
+    having to type spaces, which can be convenient in fast-paced gameplay.
