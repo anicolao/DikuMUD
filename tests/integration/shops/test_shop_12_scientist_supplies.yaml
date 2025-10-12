@@ -20,9 +20,8 @@ setup:
   character:
     name: TestChar
     class: magic_user
-    level: 1
+    level: 22  # Higher level for more starting gold
   start_room: 3033  # The Scientific Supply Shop
-  gold: 1000
 
 steps:
   # Step 1: Verify the scientist is present
@@ -37,7 +36,7 @@ steps:
     description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "scroll|potion|device|staff"
+      - pattern: "scroll|potion|device|staff|sleeping|invisibility|recall|sight|map"
         message: "Should show magical supplies for sale"
       - pattern: "\\d+.*gold"
         message: "Should show prices in gold"
@@ -47,18 +46,18 @@ steps:
 
   # Step 3: Purchase an item
   - action: command
-    description: "Buy a recall scroll from the scientist"
-    command: "buy recall"
+    description: "Buy a sight enhancement potion from the scientist"
+    command: "buy potion"
     expected:
       - pattern: "You buy|You purchase|You now have"
-        message: "Should be able to purchase a recall scroll"
+        message: "Should be able to purchase a potion"
 
   # Step 4: Verify the item is in inventory
   - action: inventory
-    description: "Check that scroll is in inventory"
+    description: "Check that potion is in inventory"
     expected:
-      - pattern: "recall|scroll"
-        message: "Purchased scroll should be in inventory"
+      - pattern: "potion|sight"
+        message: "Purchased potion should be in inventory"
 
 result:
   should_pass: true

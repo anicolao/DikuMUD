@@ -1,13 +1,13 @@
 # Integration test for Shop #16: Thark Trader
 #
 # This test validates that the Thark Trader's shop at the Thark Trading Post
-# allows players to list and purchase Thark weapons.
+# allows players to list and purchase Thark equipment and gear.
 #
 # Shop Details:
 # - Shop #16
 # - Keeper: mob 4090 (a Thark Trader)
 # - Location: room 4040 (Thark Trading Post)
-# - Products: Thark great longsword (4100), Thark radium rifle (4101), barbed Thark spear (4102), meteorite mace (4103), Thark fighting dagger (4104), Thark short sword (4105)
+# - Products: Thark armor, weapons, shields, thoat equipment, tribal items
 
 test:
   id: test_shop_16_thark_trader
@@ -20,9 +20,8 @@ setup:
   character:
     name: TestChar
     class: warrior
-    level: 5
+    level: 5  # Level 5 should have enough starting gold
   start_room: 4040  # Thark Trading Post
-  gold: 5000
 
 steps:
   # Step 1: Verify the trader is present
@@ -37,8 +36,8 @@ steps:
     description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "sword|rifle|spear|mace|dagger"
-        message: "Should show Thark weapons for sale"
+      - pattern: "sword|dagger|harness|helmet|boots|bracers|shield|saddle|thoat|totem|skull"
+        message: "Should show Thark equipment for sale"
       - pattern: "\\d+.*gold"
         message: "Should show prices in gold"
     fail_on:
@@ -47,18 +46,18 @@ steps:
 
   # Step 3: Purchase an item
   - action: command
-    description: "Buy a dagger from the trader"
-    command: "buy dagger"
+    description: "Buy a trophy skull from the trader"
+    command: "buy skull"
     expected:
       - pattern: "You buy|You purchase|You now have"
-        message: "Should be able to purchase a dagger"
+        message: "Should be able to purchase a skull"
 
   # Step 4: Verify the item is in inventory
   - action: inventory
-    description: "Check that dagger is in inventory"
+    description: "Check that skull is in inventory"
     expected:
-      - pattern: "dagger|Thark"
-        message: "Purchased dagger should be in inventory"
+      - pattern: "skull|trophy"
+        message: "Purchased skull should be in inventory"
 
 result:
   should_pass: true

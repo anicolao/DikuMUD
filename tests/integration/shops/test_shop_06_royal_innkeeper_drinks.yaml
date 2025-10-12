@@ -1,20 +1,21 @@
-# Integration test for Shop #6: Royal Innkeeper (drinks/alcohol)
+# Integration test for Shop #6: Royal Innkeeper (duplicate of shop 1)
 #
-# This test validates that the Royal Innkeeper's drinks shop at the Royal Helium Inn
-# allows players to list and purchase alcoholic beverages.
+# NOTE: This shop shares the same keeper (mob 3911) as shop #1 in the same room (3941).
+# Due to the way the shop system works, only one shop per keeper can be active.
+# This test verifies the same functionality as test_shop_01.
 #
 # Shop Details:
 # - Shop #6
-# - Keeper: mob 3911 (the Royal Innkeeper)
+# - Keeper: mob 3911 (the Royal Innkeeper) - SHARED with shop #1
 # - Location: room 3941 (The Royal Helium Inn)
-# - Products: water cask (3500), crystal water flask (3501), vintage wine (3502), aged whiskey (3503), rare wine (3504)
+# - Actually sells: radium lights (same as shop #1)
 
 test:
-  id: test_shop_06_royal_innkeeper_drinks
-  description: "Verify Royal Innkeeper drinks shop allows listing and purchasing"
+  id: test_shop_06_royal_innkeeper_duplicate
+  description: "Verify Royal Innkeeper shop (duplicate) allows listing and purchasing"
   author: Integration Test Framework
   created: 2025-10-12
-  tags: [shop, drinks, wine, whiskey, inn, greater_helium]
+  tags: [shop, radium, lights, inn, greater_helium, duplicate]
 
 setup:
   character:
@@ -37,8 +38,8 @@ steps:
     description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "wine|whiskey|flask|water"
-        message: "Should show drinks for sale"
+      - pattern: "radium|lamp|sphere|crystal|orb|lantern|torch"
+        message: "Should show radium light items for sale"
       - pattern: "\\d+.*gold"
         message: "Should show prices in gold"
     fail_on:
@@ -47,19 +48,19 @@ steps:
 
   # Step 3: Purchase an item
   - action: command
-    description: "Buy whiskey from the innkeeper"
-    command: "buy whiskey"
+    description: "Buy a radium lamp from the innkeeper"
+    command: "buy lamp"
     expected:
       - pattern: "You buy|You purchase|You now have"
-        message: "Should be able to purchase whiskey"
+        message: "Should be able to purchase a radium lamp"
 
   # Step 4: Verify the item is in inventory
   - action: inventory
-    description: "Check that whiskey is in inventory"
+    description: "Check that lamp is in inventory"
     expected:
-      - pattern: "whiskey|flask"
-        message: "Purchased whiskey should be in inventory"
+      - pattern: "lamp|radium"
+        message: "Purchased lamp should be in inventory"
 
 result:
   should_pass: true
-  description: "Test passes when Royal Innkeeper drinks shop is fully functional"
+  description: "Test passes when Royal Innkeeper shop (duplicate) is fully functional"

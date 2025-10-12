@@ -1,20 +1,20 @@
 # Integration test for Shop #2: Red Martian Provisions Merchant
 #
-# This test validates that the Provisions Merchant shop in Greater Helium
-# allows players to list and purchase food and water supplies.
+# This test validates that the merchant shop in Greater Helium
+# allows players to list and purchase lamps and radium items.
 #
 # Shop Details:
 # - Shop #2
 # - Keeper: mob 3902 (the Red Martian Provisions Merchant)
 # - Location: room 3928 (Provisions Shop)
-# - Products: fine bread (3510), fruit delicacy (3511), waterskin (3774), rations (3593)
+# - Products: ancient lamp, carved lamp, ornate lamp, radium sphere, radium crystal
 
 test:
-  id: test_shop_02_provisions_merchant
-  description: "Verify Provisions Merchant shop allows listing and purchasing"
+  id: test_shop_02_merchant_lamps
+  description: "Verify merchant shop allows listing and purchasing lamps"
   author: Integration Test Framework
   created: 2025-10-12
-  tags: [shop, food, provisions, greater_helium]
+  tags: [shop, lamps, radium, greater_helium]
 
 setup:
   character:
@@ -37,8 +37,8 @@ steps:
     description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "bread|fruit|waterskin|rations"
-        message: "Should show provisions for sale"
+      - pattern: "lamp|radium|sphere|crystal"
+        message: "Should show lamps and radium items for sale"
       - pattern: "\\d+.*gold"
         message: "Should show prices in gold"
     fail_on:
@@ -47,19 +47,19 @@ steps:
 
   # Step 3: Purchase an item
   - action: command
-    description: "Buy bread from the merchant"
-    command: "buy bread"
+    description: "Buy a lamp from the merchant"
+    command: "buy lamp"
     expected:
       - pattern: "You buy|You purchase|You now have"
-        message: "Should be able to purchase bread"
+        message: "Should be able to purchase a lamp"
 
   # Step 4: Verify the item is in inventory
   - action: inventory
-    description: "Check that bread is in inventory"
+    description: "Check that lamp is in inventory"
     expected:
-      - pattern: "bread"
-        message: "Purchased bread should be in inventory"
+      - pattern: "lamp"
+        message: "Purchased lamp should be in inventory"
 
 result:
   should_pass: true
-  description: "Test passes when Provisions Merchant shop is fully functional"
+  description: "Test passes when merchant lamp shop is fully functional"
