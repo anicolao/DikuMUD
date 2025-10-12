@@ -1,0 +1,64 @@
+# Integration test for Shop #16: Thark Trader
+#
+# This test validates that the Thark Trader's shop at the Thark Trading Post
+# allows players to list and purchase Thark equipment and gear.
+#
+# Shop Details:
+# - Shop #16
+# - Keeper: mob 4090 (a Thark Trader)
+# - Location: room 4040 (Thark Trading Post)
+# - Products: Thark armor, weapons, shields, thoat equipment, tribal items
+
+test:
+  id: test_shop_16_thark_trader
+  description: "Verify Thark Trader's shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, weapons, thark]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 5  # Level 5 should have enough starting gold
+  start_room: 4040  # Thark Trading Post
+
+steps:
+  # Step 1: Verify the trader is present
+  - action: look
+    description: "Look around to see the trader"
+    expected:
+      - pattern: "Trader|trader|Thark"
+        message: "Thark Trader should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "sword|dagger|harness|helmet|boots|bracers|shield|saddle|thoat|totem|skull"
+        message: "Should show Thark equipment for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a trophy skull from the trader"
+    command: "buy skull"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a skull"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that skull is in inventory"
+    expected:
+      - pattern: "skull|trophy"
+        message: "Purchased skull should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Thark Trader's shop is fully functional"

@@ -1,0 +1,65 @@
+# Integration test for Shop #8: Red Martian Baker
+#
+# This test validates that the Baker's shop in Lesser Helium
+# allows players to list and purchase bread and provisions.
+#
+# Shop Details:
+# - Shop #8
+# - Keeper: mob 3001 (the Red Martian Baker)
+# - Location: room 3009 (The Provisions Merchant)
+# - Products: loaf of bread (3010), dried fruit pastry (3011), waterskin (3138), water barrel (3000), water flask (3001)
+
+test:
+  id: test_shop_08_baker
+  description: "Verify Baker's shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, food, bread, provisions, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3009  # The Provisions Merchant
+  gold: 1000
+
+steps:
+  # Step 1: Verify the baker is present
+  - action: look
+    description: "Look around to see the baker"
+    expected:
+      - pattern: "Baker|baker|Merchant"
+        message: "Baker should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "bread|pastry|waterskin|water|barrel|flask"
+        message: "Should show bread and provisions for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy bread from the baker"
+    command: "buy bread"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase bread"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that bread is in inventory"
+    expected:
+      - pattern: "bread|loaf"
+        message: "Purchased bread should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Baker's shop is fully functional"

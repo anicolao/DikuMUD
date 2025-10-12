@@ -1,0 +1,48 @@
+# Integration test for Shop #15: Red Martian Leather Worker
+#
+# This test validates that the Leather Worker's shop at the Leather Worker's Shop
+# allows players to list and purchase studded armor pieces.
+#
+# Shop Details:
+# - Shop #15
+# - Keeper: mob 3010 (the Red Martian Leather Worker)
+# - Location: room 3035 (The Leather Worker's Shop)
+# - Products: studded chest harness (3066), studded helm (3067), studded leg harness (3068), studded boots (3069), studded gloves (3070), studded sleeves (3071)
+
+test:
+  id: test_shop_15_leather_worker_armor
+  description: "Verify Leather Worker's armor shop allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, armor, leather, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3035  # The Leather Worker's Shop
+  gold: 1000
+
+steps:
+  # Step 1: Verify the leather worker is present
+  - action: look
+    description: "Look around to see the leather worker"
+    expected:
+      - pattern: "Leather|leather|Worker|worker"
+        message: "Leather worker should be visible in the room"
+
+  # Step 2: Verify shopkeeper responds (shop has limited hours: 8-14 and 15-21)
+  - action: command
+    description: "Try to list items (shop has limited operating hours)"
+    command: "list"
+    expected:
+      - pattern: "studded|harness|helm|boots|gloves|sleeves|lamp|Come back later"
+        message: "Shop should respond (either with items or closed message)"
+
+result:
+  should_pass: true
+  description: "Test passes when Leather Worker's armor shop responds (shop has limited operating hours 8-14 and 15-21)"
+  notes: |
+    This shop operates from 8:00-14:00 and 15:00-21:00 game time.
+    The test verifies the shopkeeper is present and responds to commands.

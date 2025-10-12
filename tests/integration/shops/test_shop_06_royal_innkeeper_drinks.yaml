@@ -1,0 +1,66 @@
+# Integration test for Shop #6: Royal Innkeeper (duplicate of shop 1)
+#
+# NOTE: This shop shares the same keeper (mob 3911) as shop #1 in the same room (3941).
+# Due to the way the shop system works, only one shop per keeper can be active.
+# This test verifies the same functionality as test_shop_01.
+#
+# Shop Details:
+# - Shop #6
+# - Keeper: mob 3911 (the Royal Innkeeper) - SHARED with shop #1
+# - Location: room 3941 (The Royal Helium Inn)
+# - Actually sells: radium lights (same as shop #1)
+
+test:
+  id: test_shop_06_royal_innkeeper_duplicate
+  description: "Verify Royal Innkeeper shop (duplicate) allows listing and purchasing"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [shop, radium, lights, inn, greater_helium, duplicate]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3941  # The Royal Helium Inn
+  gold: 1000
+
+steps:
+  # Step 1: Verify the innkeeper is present
+  - action: look
+    description: "Look around to see the innkeeper"
+    expected:
+      - pattern: "Innkeeper|innkeeper"
+        message: "Innkeeper should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "radium|lamp|sphere|crystal|orb|lantern|torch"
+        message: "Should show radium light items for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy a radium lamp from the innkeeper"
+    command: "buy lamp"
+    expected:
+      - pattern: "You buy|You purchase|You now have"
+        message: "Should be able to purchase a radium lamp"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that lamp is in inventory"
+    expected:
+      - pattern: "lamp|radium"
+        message: "Purchased lamp should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Royal Innkeeper shop (duplicate) is fully functional"
