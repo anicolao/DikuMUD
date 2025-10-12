@@ -15,6 +15,7 @@
 #include "interpreter.h"
 #include "db.h"
 #include "spells.h"
+#include "quest.h"
 
 /* Structures */
 
@@ -27,6 +28,7 @@ struct char_data *combat_next_dude = 0; /* Next dude global trick           */
 extern struct room_data *world;
 extern struct message_list fight_messages[MAX_MESSAGES];
 extern struct obj_data  *object_list;
+extern struct index_data *mob_index;
 
 /* External procedures */
 extern void slog(char *msg);
@@ -311,6 +313,42 @@ void die(struct char_data *ch)
 	raw_kill(ch);
 }
 
+
+/* Check if killing this mob completes a quest for any player in the room */
+void check_kill_quest(struct char_data *killer, struct char_data *victim)
+{
+	struct affected_type *af, *next_af;
+	char buf[MAX_STRING_LENGTH];
+	
+	/* Only check for NPC victims */
+	if (!IS_NPC(victim))
+		return;
+	
+	/* Check if killer has a KILL quest */
+	if (!killer || IS_NPC(killer))
+		return;
+	
+	/* Look through killer's affects for QUEST_KILL */
+	for (af = killer->affected; af; af = next_af) {
+		next_af = af->next;
+		
+		if (af->type == QUEST_KILL) {
+			/* Check if victim's vnum matches quest target */
+			if (mob_index[victim->nr].virtual == af->modifier) {
+				/* Mark quest as complete by setting bitvector flag */
+				af->bitvector |= AFF_QUEST_COMPLETE;
+				
+				snprintf(buf, sizeof(buf), 
+					"You have completed your quest objective!\n\r");
+				send_to_char(buf, killer);
+				
+				snprintf(buf, sizeof(buf),
+					"Return to your quest giver to claim your reward.\n\r");
+				send_to_char(buf, killer);
+			}
+		}
+	}
+}
 
 
 void group_gain(struct char_data *ch, struct char_data *victim)
@@ -672,6 +710,10 @@ void damage(struct char_data *ch, struct char_data *victim,
 				world[victim->in_room].name);
 			slog(buf);
 		}
+		
+		/* Check if this kill completes a quest */
+		check_kill_quest(ch, victim);
+		
 		die(victim);
 	}
 }

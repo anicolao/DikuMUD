@@ -586,17 +586,17 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 			/* Check if this is a quest affect (has AFF_QUEST bit set) */
 			if (!(af->bitvector & AFF_QUEST))
 				continue;
-				
-			/* Extract giver vnum from bitvector (bits 8-23, shifted right 8) */
-			int giver_vnum = (af->bitvector >> 8) & 0xFFFF;
+			
+			/* Check if this is a delivery or retrieval quest */
+			if (af->type != QUEST_DELIVERY && af->type != QUEST_RETRIEVAL)
+				continue;
+			
+			/* Get giver vnum from location field */
+			int giver_vnum = af->location;
 			
 			/* Look up quest data */
 			quest = find_quest_by_giver(giver_vnum);
 			if (!quest)
-				continue;
-			
-			/* Check if this is a delivery or retrieval quest */
-			if (af->type != QUEST_DELIVERY && af->type != QUEST_RETRIEVAL)
 				continue;
 			
 			/* Check if the object being given matches the quest item */
