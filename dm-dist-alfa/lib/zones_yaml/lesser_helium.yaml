@@ -3224,7 +3224,7 @@ objects:
   short_desc: a sleeping staff
   long_desc: A long staff with strange properties lies here.
   action_desc: ''
-  type_flag: 4
+  type_flag: 12
   extra_flags: 64
   wear_flags: 16385
   value0: 12
@@ -3413,7 +3413,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 33
+  wear_flags: 9
   value0: 3
   value1: 0
   value2: 0
