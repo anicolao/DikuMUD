@@ -2867,7 +2867,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 9
   value0: 8
   value1: 0
   value2: 0
@@ -2895,7 +2895,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 9
   value0: 10
   value1: 0
   value2: 0
@@ -2923,7 +2923,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 257
   value0: 4
   value1: 0
   value2: 0
@@ -2974,7 +2974,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 17
   value0: 5
   value1: 0
   value2: 0
@@ -3002,7 +3002,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 513
   value0: 6
   value1: 0
   value2: 0
@@ -3028,7 +3028,7 @@ objects:
   short_desc: a thoat saddle
   long_desc: A massive saddle designed for eight-legged mounts lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 12
@@ -3058,9 +3058,9 @@ objects:
   short_desc: thoat bridle and reins
   long_desc: A set of bridle and reins for a thoat lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 4
   value1: 0
   value2: 0
@@ -3086,9 +3086,9 @@ objects:
   short_desc: a thoat carrying harness
   long_desc: A harness for carrying loads on a thoat is here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 8
   value1: 0
   value2: 0
@@ -3114,9 +3114,9 @@ objects:
   short_desc: a thoat supply bag
   long_desc: A large leather bag for thoat travel lies here.
   action_desc: ''
-  type_flag: 2
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 150
   value1: 0
   value2: 0
@@ -3140,9 +3140,9 @@ objects:
   short_desc: a large waterskin
   long_desc: A large waterskin suitable for long journeys lies here.
   action_desc: ''
-  type_flag: 17
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 150
   value1: 150
   value2: 1
@@ -3168,7 +3168,7 @@ objects:
   short_desc: strong leather rope
   long_desc: A coil of strong leather rope lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -3196,9 +3196,9 @@ objects:
   short_desc: a Thark tribal totem
   long_desc: A small carved totem lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 0
   value1: 0
   value2: 0
@@ -3225,7 +3225,7 @@ objects:
   short_desc: a trophy skull
   long_desc: A skull from a defeated enemy lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -3258,7 +3258,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 2049
   value0: 2
   value1: 0
   value2: 0
@@ -3284,9 +3284,9 @@ objects:
   short_desc: a medicine pouch
   long_desc: A leather pouch containing dried herbs and medicines lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 1
   value1: 0
   value2: 0
@@ -3426,7 +3426,7 @@ objects:
   short_desc: soft incubator moss
   long_desc: A pile of soft moss used for cushioning eggs lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
   wear_flags: 1
   value0: 2
@@ -3454,9 +3454,9 @@ objects:
   short_desc: a radium heater
   long_desc: A small radium-powered heating device sits here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 3
   value1: 0
   value2: 0
@@ -3509,7 +3509,7 @@ objects:
   short_desc: a rough Martian gemstone
   long_desc: A rough gemstone lies here, glinting in the light.
   action_desc: ''
-  type_flag: 9
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -3537,7 +3537,7 @@ objects:
   short_desc: scrap metal
   long_desc: A piece of scrap metal lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -3565,7 +3565,7 @@ objects:
   short_desc: an ancient artifact
   long_desc: A mysterious artifact from the lost civilization lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 1
@@ -3624,9 +3624,9 @@ objects:
   short_desc: a Thark battle banner
   long_desc: A crude banner marked with tribal symbols lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 2
   value1: 0
   value2: 0
@@ -3652,9 +3652,9 @@ objects:
   short_desc: a signal drum
   long_desc: A large drum used for signaling lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 8
   value1: 0
   value2: 0
@@ -3682,7 +3682,7 @@ objects:
   short_desc: sleeping furs
   long_desc: A pile of furs used for sleeping lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
   wear_flags: 1
   value0: 5
@@ -3710,7 +3710,7 @@ objects:
   short_desc: raw beast hide
   long_desc: A raw hide from a beast lies here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
   wear_flags: 1
   value0: 8
@@ -3737,9 +3737,9 @@ objects:
   short_desc: bone tools
   long_desc: Several tools made from bone lie here.
   action_desc: ''
-  type_flag: 9
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 2
   value1: 0
   value2: 0

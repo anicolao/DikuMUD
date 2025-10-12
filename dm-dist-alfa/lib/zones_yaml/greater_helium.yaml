@@ -3137,7 +3137,7 @@ objects:
   action_desc: ''
   type_flag: 17
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 9
   value0: 10
   value1: 10
   value2: 1
@@ -3154,7 +3154,7 @@ objects:
   action_desc: ''
   type_flag: 17
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 1025
   value0: 10
   value1: 10
   value2: 3
@@ -3547,7 +3547,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 9
   value0: 4
   value1: 0
   value2: 0
@@ -3564,7 +3564,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 17
   value0: 1
   value1: 0
   value2: 0
@@ -3581,7 +3581,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 129
   value0: 1
   value1: 0
   value2: 0
@@ -3649,7 +3649,7 @@ objects:
   action_desc: ''
   type_flag: 12
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 5
   value0: 0
   value1: 0
   value2: 0
@@ -3666,7 +3666,7 @@ objects:
   action_desc: ''
   type_flag: 12
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 3
   value0: 0
   value1: 0
   value2: 0
@@ -4089,7 +4089,7 @@ objects:
   short_desc: a smith's hammer
   long_desc: A heavy smith's hammer lies here.
   action_desc: ''
-  type_flag: 21
+  type_flag: 12
   extra_flags: 0
   wear_flags: 16385
   value0: 0
@@ -4259,7 +4259,7 @@ objects:
   short_desc: a calot training collar
   long_desc: A heavy collar for controlling calots lies here.
   action_desc: ''
-  type_flag: 21
+  type_flag: 12
   extra_flags: 0
   wear_flags: 16385
   value0: 0
@@ -4276,7 +4276,7 @@ objects:
   short_desc: a calot harness
   long_desc: A harness designed for riding calots lies here.
   action_desc: ''
-  type_flag: 21
+  type_flag: 12
   extra_flags: 0
   wear_flags: 16385
   value0: 0
@@ -4499,7 +4499,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 9
   value0: 3
   value1: 0
   value2: 0
@@ -4516,7 +4516,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 257
   value0: 2
   value1: 0
   value2: 0
@@ -4550,7 +4550,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 33
   value0: 2
   value1: 0
   value2: 0
@@ -4616,9 +4616,9 @@ objects:
   short_desc: spare bowstrings
   long_desc: Extra bowstrings for repairs lie here.
   action_desc: ''
-  type_flag: 21
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 16385
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0

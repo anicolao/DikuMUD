@@ -344,7 +344,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 33
+  wear_flags: 9
   value0: 6
   value1: 0
   value2: 0
@@ -545,7 +545,7 @@ objects:
   short_desc: a golden silk cloak
   long_desc: A golden silk cloak lies here.
   action_desc: ''
-  type_flag: 12
+  type_flag: 9
   extra_flags: 64
   wear_flags: 1025
   value0: 0

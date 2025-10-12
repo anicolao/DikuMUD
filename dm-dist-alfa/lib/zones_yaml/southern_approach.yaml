@@ -2233,9 +2233,9 @@ objects:
   short_desc: a guard's leather harness
   long_desc: A leather harness designed for guards lies here.
   action_desc: ''
-  type_flag: 3
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 9
   value0: 6
   value1: 0
   value2: 0
@@ -2294,9 +2294,9 @@ objects:
   short_desc: a guard's helmet
   long_desc: A metal helmet lies here, bearing Helium's colors.
   action_desc: ''
-  type_flag: 4
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 17
   value0: 4
   value1: 0
   value2: 0
@@ -2413,7 +2413,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 513
   value0: 4
   value1: 0
   value2: 0
@@ -2489,9 +2489,9 @@ objects:
   short_desc: a weatherproof travel cloak
   long_desc: A durable travel cloak lies here.
   action_desc: ''
-  type_flag: 12
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1025
   value0: 2
   value1: 0
   value2: 0
@@ -2577,9 +2577,9 @@ objects:
   short_desc: reinforced battle harness
   long_desc: A reinforced battle harness lies here.
   action_desc: ''
-  type_flag: 3
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 9
   value0: 7
   value1: 0
   value2: 0

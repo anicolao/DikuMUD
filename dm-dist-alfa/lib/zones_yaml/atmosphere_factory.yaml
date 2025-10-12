@@ -2177,9 +2177,9 @@ objects:
   short_desc: reinforced factory guard armor
   long_desc: Enhanced armor bearing the factory insignia lies here.
   action_desc: ''
-  type_flag: 3
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 9
   value0: 8
   value1: 0
   value2: 0
@@ -2202,9 +2202,9 @@ objects:
   short_desc: a factory guard helmet
   long_desc: A well-made helmet with the factory insignia lies here.
   action_desc: ''
-  type_flag: 4
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 17
   value0: 5
   value1: 0
   value2: 0
@@ -2225,9 +2225,9 @@ objects:
   short_desc: an engineering tool set
   long_desc: A comprehensive set of engineering tools lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 12
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 16385
   value0: 0
   value1: 0
   value2: 0
@@ -2477,9 +2477,9 @@ objects:
   short_desc: insulated work gloves
   long_desc: A pair of insulated work gloves lies here.
   action_desc: ''
-  type_flag: 6
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 129
   value0: 2
   value1: 0
   value2: 0

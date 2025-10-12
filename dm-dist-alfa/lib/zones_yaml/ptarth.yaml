@@ -7,7 +7,13 @@ zone:
 rooms:
 - vnum: 4300
   name: The Plaza of Alliance
-  description: "   You stand in the grand Plaza of Alliance, the heart of Ptarth's diplomatic\n    district. The plaza is paved with polished red stone and decorated with\n    monuments celebrating Ptarth's alliances with Helium, Gathol, Kaol, and other\n    friendly city-states. Fountains splash musically in the center. The architecture\n    reflects traditional red Martian design - strong but elegant, military but not\n    aggressive. The royal palace stands north, while gates lead to various city\n    districts and the wilderness beyond."
+  description: "   You stand in the grand Plaza of Alliance, the heart of Ptarth's\
+    \ diplomatic\n    district. The plaza is paved with polished red stone and decorated\
+    \ with\n    monuments celebrating Ptarth's alliances with Helium, Gathol, Kaol,\
+    \ and other\n    friendly city-states. Fountains splash musically in the center.\
+    \ The architecture\n    reflects traditional red Martian design - strong but elegant,\
+    \ military but not\n    aggressive. The royal palace stands north, while gates\
+    \ lead to various city\n    districts and the wilderness beyond."
   zone: 39
   room_flags: 0
   sector_type: 1
@@ -45,7 +51,12 @@ rooms:
   extra_descriptions: []
 - vnum: 4301
   name: Palace Gates of Ptarth
-  description: "   You stand before the impressive gates of Thuvan Dihn's royal palace. The\n    gates are crafted from rare metals and decorated with the symbols of Ptarth's\n    proud history. Guards in traditional red leather harnesses stand at attention,\n    watchful but courteous. The palace beyond combines military functionality with\n    regal elegance, reflecting Ptarth's dual nature as both warrior city and\n    diplomatic center."
+  description: "   You stand before the impressive gates of Thuvan Dihn's royal palace.\
+    \ The\n    gates are crafted from rare metals and decorated with the symbols of\
+    \ Ptarth's\n    proud history. Guards in traditional red leather harnesses stand\
+    \ at attention,\n    watchful but courteous. The palace beyond combines military\
+    \ functionality with\n    regal elegance, reflecting Ptarth's dual nature as both\
+    \ warrior city and\n    diplomatic center."
   zone: 39
   room_flags: 8
   sector_type: 1
@@ -65,7 +76,12 @@ rooms:
   extra_descriptions: []
 - vnum: 4302
   name: Palace Entrance Hall
-  description: "   The entrance hall of Ptarth's royal palace is both impressive and practical.\n    High ceilings and elegant murals depicting Ptarth's history create a sense of\n    grandeur, while the layout clearly shows military efficiency. Corridors lead to\n    various palace functions - the throne room ahead, the war room to the west, and\n    the famous palace gardens to the east. Guards maintain security while allowing\n    legitimate visitors access."
+  description: "   The entrance hall of Ptarth's royal palace is both impressive and\
+    \ practical.\n    High ceilings and elegant murals depicting Ptarth's history\
+    \ create a sense of\n    grandeur, while the layout clearly shows military efficiency.\
+    \ Corridors lead to\n    various palace functions - the throne room ahead, the\
+    \ war room to the west, and\n    the famous palace gardens to the east. Guards\
+    \ maintain security while allowing\n    legitimate visitors access."
   zone: 39
   room_flags: 12
   sector_type: 0
@@ -97,7 +113,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4303
   name: The Throne Room of Thuvan Dihn
-  description: "   This magnificent chamber serves as the throne room of Thuvan Dihn, Jeddak\n    of Ptarth. The throne itself is carved from ancient stone and draped with the\n    colors of Ptarth's proud heritage. Banners of allied city-states hang alongside\n    those of Ptarth, particularly prominent is Helium's banner representing the deep\n    bond between the cities. The room speaks of wisdom, strength, and diplomatic\n    acumen rather than intimidation or conquest. This is where important decisions\n    affecting Mars are made."
+  description: "   This magnificent chamber serves as the throne room of Thuvan Dihn,\
+    \ Jeddak\n    of Ptarth. The throne itself is carved from ancient stone and draped\
+    \ with the\n    colors of Ptarth's proud heritage. Banners of allied city-states\
+    \ hang alongside\n    those of Ptarth, particularly prominent is Helium's banner\
+    \ representing the deep\n    bond between the cities. The room speaks of wisdom,\
+    \ strength, and diplomatic\n    acumen rather than intimidation or conquest. This\
+    \ is where important decisions\n    affecting Mars are made."
   zone: 39
   room_flags: 12
   sector_type: 0
@@ -111,7 +133,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4304
   name: The War Room
-  description: "   This chamber serves as Ptarth's military command center. Large maps of Mars\n    cover the walls, showing allied territories, potential threats, and strategic\n    positions. A massive table in the center displays current troop deployments and\n    intelligence reports. Military officers gather here to plan defensive operations\n    and coordinate with allied forces. The room reflects Ptarth's readiness to\n    defend itself and its allies without aggressive expansionism."
+  description: "   This chamber serves as Ptarth's military command center. Large\
+    \ maps of Mars\n    cover the walls, showing allied territories, potential threats,\
+    \ and strategic\n    positions. A massive table in the center displays current\
+    \ troop deployments and\n    intelligence reports. Military officers gather here\
+    \ to plan defensive operations\n    and coordinate with allied forces. The room\
+    \ reflects Ptarth's readiness to\n    defend itself and its allies without aggressive\
+    \ expansionism."
   zone: 39
   room_flags: 12
   sector_type: 0
@@ -125,7 +153,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4305
   name: The Palace Gardens
-  description: "   You walk through the famous palace gardens of Ptarth, where Princess Thuvia\n    often spends her time. These gardens are renowned throughout Mars for their\n    beauty - rare flowers bloom in carefully tended beds, fountains create soothing\n    sounds, and shaded paths wind between ancient trees. The gardens provide a\n    peaceful sanctuary within the palace grounds. This is where Thuvia's story\n    began, when she was kidnapped from these very paths, triggering a crisis that\n    nearly brought Mars to war."
+  description: "   You walk through the famous palace gardens of Ptarth, where Princess\
+    \ Thuvia\n    often spends her time. These gardens are renowned throughout Mars\
+    \ for their\n    beauty - rare flowers bloom in carefully tended beds, fountains\
+    \ create soothing\n    sounds, and shaded paths wind between ancient trees. The\
+    \ gardens provide a\n    peaceful sanctuary within the palace grounds. This is\
+    \ where Thuvia's story\n    began, when she was kidnapped from these very paths,\
+    \ triggering a crisis that\n    nearly brought Mars to war."
   zone: 39
   room_flags: 8
   sector_type: 4
@@ -138,10 +172,16 @@ rooms:
     to_room: 4302
   extra_descriptions:
   - keywords: flowers plants garden
-    description: "Beautiful alien flowers of Mars bloom in vibrant colors. The gardens are\n      impeccably maintained, showing the care Ptarth takes in preserving beauty\n      even in a harsh world."
+    description: "Beautiful alien flowers of Mars bloom in vibrant colors. The gardens\
+      \ are\n      impeccably maintained, showing the care Ptarth takes in preserving\
+      \ beauty\n      even in a harsh world."
 - vnum: 4310
   name: Merchant Quarter
-  description: "   The merchant quarter of Ptarth bustles with activity. Shops line the streets\n    selling northern goods, weapons, armor, and supplies. Ptarth's merchants are\n    known for fair dealing and quality products. Traders from allied cities frequent\n    this area, creating a cosmopolitan atmosphere. The quarter serves as an economic\n    hub for northern trade routes."
+  description: "   The merchant quarter of Ptarth bustles with activity. Shops line\
+    \ the streets\n    selling northern goods, weapons, armor, and supplies. Ptarth's\
+    \ merchants are\n    known for fair dealing and quality products. Traders from\
+    \ allied cities frequent\n    this area, creating a cosmopolitan atmosphere. The\
+    \ quarter serves as an economic\n    hub for northern trade routes."
   zone: 39
   room_flags: 0
   sector_type: 1
@@ -155,7 +195,12 @@ rooms:
   extra_descriptions: []
 - vnum: 4320
   name: Airship Docks
-  description: "   This extensive docking facility handles airships traveling between Ptarth\n    and other allied cities. The docks are heavily guarded but efficiently managed,\n    allowing legitimate traffic to flow freely. Flying ships arrive from Helium,\n    Gathol, Kaol, and other allied territories, bringing diplomats, merchants, and\n    travelers. The docks represent Ptarth's connections to the broader alliance\n    network."
+  description: "   This extensive docking facility handles airships traveling between\
+    \ Ptarth\n    and other allied cities. The docks are heavily guarded but efficiently\
+    \ managed,\n    allowing legitimate traffic to flow freely. Flying ships arrive\
+    \ from Helium,\n    Gathol, Kaol, and other allied territories, bringing diplomats,\
+    \ merchants, and\n    travelers. The docks represent Ptarth's connections to the\
+    \ broader alliance\n    network."
   zone: 39
   room_flags: 0
   sector_type: 1
@@ -169,7 +214,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4398
   name: Northern Gate of Ptarth
-  description: "   You stand at the northern gate of Ptarth, the entrance for travelers heading\n    to or arriving from Kaol and other northern territories. The gate is well-\n    fortified, reflecting Ptarth's military strength, yet welcoming to allies. Guards\n    maintain security while assisting friendly travelers. Beyond the gate stretches\n    the long wilderness route to Kaol - a journey of hundreds of miles across dead\n    sea bottoms requiring strength and endurance. The Plaza of Alliance lies to the\n    south within the city."
+  description: "   You stand at the northern gate of Ptarth, the entrance for travelers\
+    \ heading\n    to or arriving from Kaol and other northern territories. The gate\
+    \ is well-\n    fortified, reflecting Ptarth's military strength, yet welcoming\
+    \ to allies. Guards\n    maintain security while assisting friendly travelers.\
+    \ Beyond the gate stretches\n    the long wilderness route to Kaol - a journey\
+    \ of hundreds of miles across dead\n    sea bottoms requiring strength and endurance.\
+    \ The Plaza of Alliance lies to the\n    south within the city."
   zone: 39
   room_flags: 8
   sector_type: 1
@@ -189,7 +240,12 @@ rooms:
   extra_descriptions: []
 - vnum: 4330
   name: Military District
-  description: "   Ptarth's military district showcases the city's martial readiness. Barracks\n    house well-trained warriors, training grounds echo with the sounds of practice\n    combat, and armories store quality weapons and equipment. The military presence\n    is professional rather than aggressive - these forces exist to defend Ptarth and\n    support its allies, not to conquer neighbors. Officers coordinate with other\n    allied cities to maintain regional security."
+  description: "   Ptarth's military district showcases the city's martial readiness.\
+    \ Barracks\n    house well-trained warriors, training grounds echo with the sounds\
+    \ of practice\n    combat, and armories store quality weapons and equipment. The\
+    \ military presence\n    is professional rather than aggressive - these forces\
+    \ exist to defend Ptarth and\n    support its allies, not to conquer neighbors.\
+    \ Officers coordinate with other\n    allied cities to maintain regional security."
   zone: 39
   room_flags: 0
   sector_type: 1
@@ -203,7 +259,12 @@ rooms:
   extra_descriptions: []
 - vnum: 4399
   name: Southern Gate of Ptarth
-  description: "   You stand at the southern gate of Ptarth, the main entrance for travelers\n    arriving from Gathol and other southern territories via the overland route. The\n    gate is well-fortified but welcoming to allies, with guards checking\n    credentials while remaining courteous. Beyond the gate, the wilderness stretches\n    south toward distant Gathol. Within the city, the plaza lies to the north."
+  description: "   You stand at the southern gate of Ptarth, the main entrance for\
+    \ travelers\n    arriving from Gathol and other southern territories via the overland\
+    \ route. The\n    gate is well-fortified but welcoming to allies, with guards\
+    \ checking\n    credentials while remaining courteous. Beyond the gate, the wilderness\
+    \ stretches\n    south toward distant Gathol. Within the city, the plaza lies\
+    \ to the north."
   zone: 39
   room_flags: 0
   sector_type: 1
@@ -226,7 +287,14 @@ mobiles:
   namelist: thuvia princess ptarth
   short_desc: Thuvia, Princess of Ptarth
   long_desc: Thuvia, Princess of Ptarth, stands here gracefully.
-  detailed_desc: "   Thuvia is one of the most remarkable women on Barsoom. Beautiful with the\n    classic features of red Martian nobility, she possesses an inner strength forged\n    by surviving captivity among the Therns. Her most unique trait is her ability to\n    mentally control banths, the fearsome white apex predators of Mars - a power she\n    learned during her time in the mysterious city of Lothar. She is torn between\n    duty and love, her heart belonging to Carthoris of Helium though she was once\n    betrothed to Kulan Tith of Kaol. Her independence and resourcefulness make her\n    far more than a mere damsel."
+  detailed_desc: "   Thuvia is one of the most remarkable women on Barsoom. Beautiful\
+    \ with the\n    classic features of red Martian nobility, she possesses an inner\
+    \ strength forged\n    by surviving captivity among the Therns. Her most unique\
+    \ trait is her ability to\n    mentally control banths, the fearsome white apex\
+    \ predators of Mars - a power she\n    learned during her time in the mysterious\
+    \ city of Lothar. She is torn between\n    duty and love, her heart belonging\
+    \ to Carthoris of Helium though she was once\n    betrothed to Kulan Tith of Kaol.\
+    \ Her independence and resourcefulness make her\n    far more than a mere damsel."
   action_flags: 2
   affection_flags: 0
   alignment: -900
@@ -246,7 +314,15 @@ mobiles:
   namelist: thuvan dihn jeddak ruler
   short_desc: Thuvan Dihn, Jeddak of Ptarth
   long_desc: Thuvan Dihn, the wise Jeddak of Ptarth, stands here with regal bearing.
-  detailed_desc: "   Thuvan Dihn is the ruler of Ptarth and father of Princess Thuvia. He is a\n    wise and experienced leader who has guided his city-state through many\n    challenges. His greatest strength is balancing military readiness with diplomatic\n    wisdom - he is prepared to defend his city and daughter fiercely, but he has the\n    judgment to seek truth before rushing to war. His recent experience with\n    Thuvia's kidnapping nearly drove him to mobilize against Helium, but he\n    ultimately showed restraint and wisdom. He greatly respects John Carter and\n    maintains strong alliances with Helium and other friendly cities."
+  detailed_desc: "   Thuvan Dihn is the ruler of Ptarth and father of Princess Thuvia.\
+    \ He is a\n    wise and experienced leader who has guided his city-state through\
+    \ many\n    challenges. His greatest strength is balancing military readiness\
+    \ with diplomatic\n    wisdom - he is prepared to defend his city and daughter\
+    \ fiercely, but he has the\n    judgment to seek truth before rushing to war.\
+    \ His recent experience with\n    Thuvia's kidnapping nearly drove him to mobilize\
+    \ against Helium, but he\n    ultimately showed restraint and wisdom. He greatly\
+    \ respects John Carter and\n    maintains strong alliances with Helium and other\
+    \ friendly cities."
   action_flags: 2
   affection_flags: 0
   alignment: -800
@@ -266,7 +342,11 @@ mobiles:
   namelist: palace guard ptarth warrior
   short_desc: a palace guard
   long_desc: A palace guard stands here watchfully.
-  detailed_desc: "   This elite warrior serves in Ptarth's palace guard, protecting the royal\n    family and maintaining security in the palace district. Unlike guards in hostile\n    cities, these warriors are professional but courteous, understanding that their\n    duty includes being welcoming to legitimate visitors and allies. They are well-\n    trained and loyal to Thuvan Dihn and Thuvia."
+  detailed_desc: "   This elite warrior serves in Ptarth's palace guard, protecting\
+    \ the royal\n    family and maintaining security in the palace district. Unlike\
+    \ guards in hostile\n    cities, these warriors are professional but courteous,\
+    \ understanding that their\n    duty includes being welcoming to legitimate visitors\
+    \ and allies. They are well-\n    trained and loyal to Thuvan Dihn and Thuvia."
   action_flags: 2
   affection_flags: 0
   alignment: -700
@@ -286,7 +366,10 @@ mobiles:
   namelist: citizen ptarth resident
   short_desc: a citizen of Ptarth
   long_desc: A citizen of Ptarth goes about their business.
-  detailed_desc: "   This resident of Ptarth represents the common people of the city. They are\n    proud of their city's traditions, loyal to their rulers, and welcoming to allies\n    of Helium. The citizens particularly revere Princess Thuvia, and any disrespect\n    toward her would be met with strong disapproval."
+  detailed_desc: "   This resident of Ptarth represents the common people of the city.\
+    \ They are\n    proud of their city's traditions, loyal to their rulers, and welcoming\
+    \ to allies\n    of Helium. The citizens particularly revere Princess Thuvia,\
+    \ and any disrespect\n    toward her would be met with strong disapproval."
   action_flags: 0
   affection_flags: 0
   alignment: -500
@@ -320,7 +403,11 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: sword longsword
-    description: "This long sword exemplifies northern craftsmanship. The blade is perfectly\n      balanced and shows quality metallurgy. The hilt is wrapped in leather with brass\n      fittings bearing Ptarth's symbols. While not as ornate as Gathol's weapons or as\n      dark as Zodanga's, it reflects Ptarth's practical excellence."
+    description: "This long sword exemplifies northern craftsmanship. The blade is\
+      \ perfectly\n      balanced and shows quality metallurgy. The hilt is wrapped\
+      \ in leather with brass\n      fittings bearing Ptarth's symbols. While not\
+      \ as ornate as Gathol's weapons or as\n      dark as Zodanga's, it reflects\
+      \ Ptarth's practical excellence."
   affects: []
 - vnum: 4301
   namelist: ptarth harness armor leather
@@ -329,7 +416,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 17
+  wear_flags: 9
   value0: 4
   value1: 0
   value2: 0
@@ -339,7 +426,11 @@ objects:
   rent: 80
   extra_descriptions:
   - keywords: harness armor
-    description: "This military harness is standard issue for Ptarth's warriors. Made from\n      quality red leather with brass fittings, it provides solid protection while\n      allowing freedom of movement. The design is traditional red Martian style -\n      practical straps and plates offering coverage without bulk. Ptarth's symbols are\n      subtly worked into the leather."
+    description: "This military harness is standard issue for Ptarth's warriors. Made\
+      \ from\n      quality red leather with brass fittings, it provides solid protection\
+      \ while\n      allowing freedom of movement. The design is traditional red Martian\
+      \ style -\n      practical straps and plates offering coverage without bulk.\
+      \ Ptarth's symbols are\n      subtly worked into the leather."
   affects:
   - location: 9
     modifier: -4

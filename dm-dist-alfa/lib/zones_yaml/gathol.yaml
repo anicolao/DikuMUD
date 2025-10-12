@@ -7,7 +7,13 @@ zone:
 rooms:
 - vnum: 3780
   name: The Main Plaza of Gathol
-  description: "   You stand in the magnificent Main Plaza of Gathol, a jewel among\n    the city-states of Barsoom. The plaza is paved with polished stone inlaid with\n    platinum and diamonds that sparkle in the Martian sun. Graceful towers of\n    scarlet and gold rise around you, their surfaces decorated with precious gems.\n    Fountains of crystal-clear water splash musically in the center. The\n    architecture emphasizes beauty and sophistication. To the north stands Gahan's\n    magnificent palace."
+  description: "   You stand in the magnificent Main Plaza of Gathol, a jewel among\n\
+    \    the city-states of Barsoom. The plaza is paved with polished stone inlaid\
+    \ with\n    platinum and diamonds that sparkle in the Martian sun. Graceful towers\
+    \ of\n    scarlet and gold rise around you, their surfaces decorated with precious\
+    \ gems.\n    Fountains of crystal-clear water splash musically in the center.\
+    \ The\n    architecture emphasizes beauty and sophistication. To the north stands\
+    \ Gahan's\n    magnificent palace."
   zone: 37
   room_flags: 0
   sector_type: 1
@@ -27,7 +33,11 @@ rooms:
   extra_descriptions: []
 - vnum: 3781
   name: Palace Gates of Gathol
-  description: "   You stand before the elegant gates of Gahan's palace. Unlike the\n    forbidding entrances of enemy cities, these gates are welcoming, with guards\n    in ceremonial silver and blue harnesses standing at respectful attention. The\n    gates themselves are crafted from rare metals and decorated with diamonds that\n    catch the light. The palace beyond is a masterwork of graceful architecture."
+  description: "   You stand before the elegant gates of Gahan's palace. Unlike the\n\
+    \    forbidding entrances of enemy cities, these gates are welcoming, with guards\n\
+    \    in ceremonial silver and blue harnesses standing at respectful attention.\
+    \ The\n    gates themselves are crafted from rare metals and decorated with diamonds\
+    \ that\n    catch the light. The palace beyond is a masterwork of graceful architecture."
   zone: 37
   room_flags: 8
   sector_type: 1
@@ -47,7 +57,11 @@ rooms:
   extra_descriptions: []
 - vnum: 3782
   name: Palace Entrance Hall
-  description: "   The entrance hall soars high overhead, with vaulted ceilings decorated\n    with platinum leaf. Murals depicting Gathol's history and famous jetan games\n    adorn the walls. Elegant furniture and art pieces demonstrate the city's\n    refined culture. Unlike militaristic displays, these celebrate beauty,\n    strategy, and noble deeds."
+  description: "   The entrance hall soars high overhead, with vaulted ceilings decorated\n\
+    \    with platinum leaf. Murals depicting Gathol's history and famous jetan games\n\
+    \    adorn the walls. Elegant furniture and art pieces demonstrate the city's\n\
+    \    refined culture. Unlike militaristic displays, these celebrate beauty,\n\
+    \    strategy, and noble deeds."
   zone: 37
   room_flags: 12
   sector_type: 0
@@ -67,7 +81,11 @@ rooms:
   extra_descriptions: []
 - vnum: 3783
   name: The Throne Room of Gahan
-  description: "   This elegant chamber serves as the throne room of Gahan, Jed of\n    Gathol. The throne itself is carved from a single diamond, representing\n    Gathol's wealth and Gahan's clarity of purpose. Banners of allied city-states\n    hang alongside those of Gathol. The room speaks of honor, wisdom, and noble\n    leadership rather than intimidation or conquest."
+  description: "   This elegant chamber serves as the throne room of Gahan, Jed of\n\
+    \    Gathol. The throne itself is carved from a single diamond, representing\n\
+    \    Gathol's wealth and Gahan's clarity of purpose. Banners of allied city-states\n\
+    \    hang alongside those of Gathol. The room speaks of honor, wisdom, and noble\n\
+    \    leadership rather than intimidation or conquest."
   zone: 37
   room_flags: 12
   sector_type: 0
@@ -81,7 +99,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3788
   name: Airship Landing
-  description: "   This large platform serves as the main airship landing for Gathol.\n    Flying ships arrive and depart regularly, connecting the city to Helium and\n    other allied territories. Guards maintain security while allowing legitimate\n    traffic to flow freely."
+  description: "   This large platform serves as the main airship landing for Gathol.\n\
+    \    Flying ships arrive and depart regularly, connecting the city to Helium and\n\
+    \    other allied territories. Guards maintain security while allowing legitimate\n\
+    \    traffic to flow freely."
   zone: 37
   room_flags: 0
   sector_type: 1
@@ -101,7 +122,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3789
   name: Northern Gate
-  description: "   This gate provides access to the northern wilderness. Guards watch for\n    threats from Zodanga's direction while allowing traders and travelers to pass\n    freely. The road north leads across dangerous territory toward enemy lands."
+  description: "   This gate provides access to the northern wilderness. Guards watch\
+    \ for\n    threats from Zodanga's direction while allowing traders and travelers\
+    \ to pass\n    freely. The road north leads across dangerous territory toward\
+    \ enemy lands."
   zone: 37
   room_flags: 8
   sector_type: 1
@@ -130,7 +154,13 @@ mobiles:
   namelist: gahan jed gathol
   short_desc: Gahan, Jed of Gathol
   long_desc: Gahan, Jed of Gathol, stands here radiating nobility and honor.
-  detailed_desc: "This is Gahan of Gathol, the noble Jed who proved his worth by\n    rescuing Tara of Helium while disguised as Turan the panthan. He is a master\n    of both swordplay and jetan strategy. His bearing shows confidence without\n    arrogance, and his eyes reflect intelligence and wisdom. He wears an elegant\n    harness of silver and blue, the colors of Gathol, decorated with diamonds and\n    platinum. His famous sword rests at his side, ready but not threatening. He\n    embodies the ideal of nobility through character rather than birth."
+  detailed_desc: "This is Gahan of Gathol, the noble Jed who proved his worth by\n\
+    \    rescuing Tara of Helium while disguised as Turan the panthan. He is a master\n\
+    \    of both swordplay and jetan strategy. His bearing shows confidence without\n\
+    \    arrogance, and his eyes reflect intelligence and wisdom. He wears an elegant\n\
+    \    harness of silver and blue, the colors of Gathol, decorated with diamonds\
+    \ and\n    platinum. His famous sword rests at his side, ready but not threatening.\
+    \ He\n    embodies the ideal of nobility through character rather than birth."
   action_flags: 2
   affection_flags: 0
   alignment: -1000
@@ -150,7 +180,11 @@ mobiles:
   namelist: guard palace gathol
   short_desc: a palace guard
   long_desc: A palace guard in ceremonial silver and blue stands watch here.
-  detailed_desc: "This red Martian warrior serves in Gahan's palace guard. Unlike the\n    harsh guards of enemy cities, this warrior maintains dignity and courtesy\n    while remaining vigilant. The silver and blue harness is both beautiful and\n    functional. This guard represents Gathol's balance of martial prowess and\n    cultural refinement."
+  detailed_desc: "This red Martian warrior serves in Gahan's palace guard. Unlike\
+    \ the\n    harsh guards of enemy cities, this warrior maintains dignity and courtesy\n\
+    \    while remaining vigilant. The silver and blue harness is both beautiful and\n\
+    \    functional. This guard represents Gathol's balance of martial prowess and\n\
+    \    cultural refinement."
   action_flags: 2
   affection_flags: 0
   alignment: -1000
@@ -170,7 +204,10 @@ mobiles:
   namelist: citizen gathol
   short_desc: a Gathol citizen
   long_desc: A citizen of Gathol goes about their business here.
-  detailed_desc: "This red Martian exemplifies Gathol's sophisticated culture. Well-dressed\n    and courteous, the citizen takes pride in their city's reputation for beauty\n    and honor. They are friendly to visitors but maintain the refined manner\n    expected in Gathol society."
+  detailed_desc: "This red Martian exemplifies Gathol's sophisticated culture. Well-dressed\n\
+    \    and courteous, the citizen takes pride in their city's reputation for beauty\n\
+    \    and honor. They are friendly to visitors but maintain the refined manner\n\
+    \    expected in Gathol society."
   action_flags: 0
   affection_flags: 0
   alignment: -1000
@@ -204,7 +241,11 @@ objects:
   rent: 400
   extra_descriptions:
   - keywords: sword longsword
-    description: "This longsword exemplifies Gathol craftsmanship. The blade is\n      perfectly balanced and decorated with silver inlay. While deadly in combat,\n      it is also a work of art. The hilt is wrapped in fine leather, and the pommel\n      bears Gathol's symbol. It represents the city's philosophy that function and\n      beauty should be one."
+    description: "This longsword exemplifies Gathol craftsmanship. The blade is\n\
+      \      perfectly balanced and decorated with silver inlay. While deadly in combat,\n\
+      \      it is also a work of art. The hilt is wrapped in fine leather, and the\
+      \ pommel\n      bears Gathol's symbol. It represents the city's philosophy that\
+      \ function and\n      beauty should be one."
   affects: []
 - vnum: 3781
   namelist: harness gathol silver blue
@@ -213,7 +254,7 @@ objects:
   action_desc: ''
   type_flag: 9
   extra_flags: 0
-  wear_flags: 17
+  wear_flags: 9
   value0: 3
   value1: 0
   value2: 0
@@ -223,7 +264,10 @@ objects:
   rent: 250
   extra_descriptions:
   - keywords: harness armor
-    description: "This leather harness is crafted in Gathol's signature silver and\n      blue colors. It provides good protection while maintaining an elegant\n      appearance. Subtle diamond accents catch the light. It represents Gathol's\n      blend of martial effectiveness and aesthetic beauty."
+    description: "This leather harness is crafted in Gathol's signature silver and\n\
+      \      blue colors. It provides good protection while maintaining an elegant\n\
+      \      appearance. Subtle diamond accents catch the light. It represents Gathol's\n\
+      \      blend of martial effectiveness and aesthetic beauty."
   affects: []
 resets:
 - command: M
