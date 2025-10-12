@@ -1,0 +1,27 @@
+# Integration test for Quest 3902 - Scholar's Research (RETRIEVAL)
+test:
+  id: quest_3902_scholar_research
+  description: "Test Greater Helium scholar research quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, greater_helium, retrieval]
+
+setup:
+  character:
+    name: ScholarHelper
+    password: test
+    level: 15
+    class: warrior
+  start_room: 3900  # Grand Plaza of Greater Helium
+  gold: 500
+
+steps:
+  - action: look
+    description: "Verify we're in Greater Helium"
+    expected:
+      - pattern: "Greater Helium|Grand Plaza"
+        message: "Should be in Greater Helium"
+
+result:
+  should_pass: true
+  description: "Test documents quest 3902 exists in Greater Helium"

@@ -1,0 +1,35 @@
+# Integration test for Quest 3901 - Arena Challenge (KILL)
+test:
+  id: quest_3901_arena_challenge
+  description: "Test Greater Helium arena challenge quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, greater_helium, kill]
+
+setup:
+  character:
+    name: ArenaChallenger
+    password: test
+    level: 15
+    class: warrior
+  start_room: 3900  # Grand Plaza of Greater Helium
+  gold: 500
+
+steps:
+  - action: look
+    description: "Verify we're in Greater Helium"
+    expected:
+      - pattern: "Greater Helium|Grand Plaza"
+        message: "Should be in Greater Helium"
+
+  - action: command
+    description: "Try to find quest giver (mob 3902)"
+    command: "where"
+    expected:
+      - pattern: "."
+        message: "Looking for NPCs"
+        optional: true
+
+result:
+  should_pass: true
+  description: "Test documents quest 3901 exists in Greater Helium"

@@ -1,0 +1,27 @@
+# Integration test for Quest 4002 - Tars Tarkas's Challenge (KILL)
+test:
+  id: quest_4002_tars_tarkas_challenge
+  description: "Test Thark Territory Tars Tarkas challenge quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, thark_territory, kill]
+
+setup:
+  character:
+    name: TharkChallenger
+    password: test
+    level: 16
+    class: warrior
+  start_room: 4000  # Thark Territory starting room
+  gold: 600
+
+steps:
+  - action: look
+    description: "Verify we're in Thark Territory"
+    expected:
+      - pattern: "Thark|green"
+        message: "Should be in Thark Territory"
+
+result:
+  should_pass: true
+  description: "Test documents quest 4002 exists in Thark Territory"

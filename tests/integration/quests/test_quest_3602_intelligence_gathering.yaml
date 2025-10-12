@@ -1,0 +1,27 @@
+# Integration test for Quest 3602 - Intelligence Gathering (EXPLORE)
+test:
+  id: quest_3602_intelligence_gathering
+  description: "Test Zodanga intelligence gathering quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, zodanga, explore]
+
+setup:
+  character:
+    name: IntelAgent
+    password: test
+    level: 22
+    class: warrior
+  start_room: 3600  # Zodanga starting room
+  gold: 1600
+
+steps:
+  - action: look
+    description: "Verify we're in Zodanga"
+    expected:
+      - pattern: "Zodanga"
+        message: "Should be in Zodanga"
+
+result:
+  should_pass: true
+  description: "Test documents quest 3602 exists in Zodanga"

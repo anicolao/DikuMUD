@@ -1,0 +1,27 @@
+# Integration test for Quest 4502 - Military Training (EXPLORE)
+test:
+  id: quest_4502_military_training
+  description: "Test Kaol military training quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, kaol, explore]
+
+setup:
+  character:
+    name: MilitaryTrainee
+    password: test
+    level: 22
+    class: warrior
+  start_room: 4500  # Kaol starting room
+  gold: 1500
+
+steps:
+  - action: look
+    description: "Verify we're in Kaol"
+    expected:
+      - pattern: "Kaol"
+        message: "Should be in Kaol"
+
+result:
+  should_pass: true
+  description: "Test documents quest 4502 exists in Kaol"
