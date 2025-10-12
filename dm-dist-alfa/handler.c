@@ -552,31 +552,24 @@ int get_number(char **name) {
 
 	int i;
 	char *ppos;
-	char *start_ptr;
   char number[MAX_INPUT_LENGTH] = "";
+	char original[MAX_INPUT_LENGTH] = "";
  
-	start_ptr = *name;  /* Save the original pointer position */
-	
 	if (ppos = index(*name, '.')) {
-		*ppos = '\0';  /* Temporarily terminate to extract the prefix */
+		/* Save original in case it's not a number prefix */
+		strcpy(original, *name);
+		
+		*ppos++ = '\0';
 		strcpy(number,*name);
-		*ppos = '.';  /* Restore the dot */
+		strcpy(*name, ppos);
 
 		for(i=0; *(number+i); i++)
 			if (!isdigit(*(number+i))) {
-				/* Not a number - treat dots as wildcards (spaces) */
-				/* Replace all dots with spaces in place */
-				for (i = 0; start_ptr[i]; i++) {
-					if (start_ptr[i] == '.') {
-						start_ptr[i] = ' ';
-					}
-				}
+				/* Not a number - restore original string and treat as wildcard */
+				strcpy(*name, original);
 				return(1);
 			}
 
-		/* It was a number - extract the part after the dot */
-		ppos++;
-		strcpy(*name, ppos);
 		return(atoi(number));
 	}
 
@@ -1048,22 +1041,54 @@ void extract_char(struct char_data *ch)
 struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 {
 	struct char_data *i;
-	int j, number;
+	int j, number, k, all_match;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp;
+	char *tmp, *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
 
 	strcpy(tmpname,name);
 	tmp = tmpname;
 	if(!(number = get_number(&tmp)))
     return(0);
 
-	for (i = world[ch->in_room].people, j = 1; i && (j <= number); i = i->next_in_room)
-		if (isname(tmp, GET_NAME(i)))
-			if (CAN_SEE(ch, i))	{
-				if (j == number) 
-					return(i);
-				j++;
+	for (i = world[ch->in_room].people, j = 1; i && (j <= number); i = i->next_in_room) {
+		/* Check if all dot-separated words in tmp match the mob's name */
+		all_match = 1;
+		word_start = tmp;
+		
+		while (*word_start && all_match) {
+			/* Find the next dot or end of string */
+			word_end = word_start;
+			while (*word_end && *word_end != '.') {
+				word_end++;
 			}
+			
+			/* Extract the word */
+			k = 0;
+			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+				word[k++] = *word_start++;
+			}
+			word[k] = '\0';
+			
+			/* Check if this word matches */
+			if (!isname(word, GET_NAME(i))) {
+				all_match = 0;
+			}
+			
+			/* Move past the dot if present */
+			if (*word_end == '.') {
+				word_start = word_end + 1;
+			} else {
+				word_start = word_end;
+			}
+		}
+		
+		if (all_match && CAN_SEE(ch, i)) {
+			if (j == number) 
+				return(i);
+			j++;
+		}
+	}
 
 	return(0);
 }
@@ -1075,9 +1100,10 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 struct char_data *get_char_vis(struct char_data *ch, char *name)
 {
 	struct char_data *i;
-	int j, number;
+	int j, number, k, all_match;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp;
+	char *tmp, *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
 
 	/* check location */
 	if (i = get_char_room_vis(ch, name))
@@ -1088,13 +1114,44 @@ struct char_data *get_char_vis(struct char_data *ch, char *name)
 	if(!(number = get_number(&tmp)))
 		return(0);
 
-	for (i = character_list, j = 1; i && (j <= number); i = i->next)
-		if (isname(tmp, GET_NAME(i)))
-			if (CAN_SEE(ch, i))	{
-				if (j == number)
-					return(i);
-				j++;
+	for (i = character_list, j = 1; i && (j <= number); i = i->next) {
+		/* Check if all dot-separated words in tmp match the mob's name */
+		all_match = 1;
+		word_start = tmp;
+		
+		while (*word_start && all_match) {
+			/* Find the next dot or end of string */
+			word_end = word_start;
+			while (*word_end && *word_end != '.') {
+				word_end++;
 			}
+			
+			/* Extract the word */
+			k = 0;
+			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+				word[k++] = *word_start++;
+			}
+			word[k] = '\0';
+			
+			/* Check if this word matches */
+			if (!isname(word, GET_NAME(i))) {
+				all_match = 0;
+			}
+			
+			/* Move past the dot if present */
+			if (*word_end == '.') {
+				word_start = word_end + 1;
+			} else {
+				word_start = word_end;
+			}
+		}
+		
+		if (all_match && CAN_SEE(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 
 	return(0);
 }
@@ -1108,22 +1165,54 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 				struct obj_data *list)
 {
 	struct obj_data *i;
-	int j, number;
+	int j, number, k, all_match;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp;
+	char *tmp, *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
 
   strcpy(tmpname,name);
 	tmp = tmpname;
 	if(!(number = get_number(&tmp)))
 		return(0);
 
-	for (i = list, j = 1; i && (j <= number); i = i->next_content)
-		if (isname(tmp, i->name))
-			if (CAN_SEE_OBJ(ch, i)) {
-				if (j == number)
-					return(i);
-				j++;
+	for (i = list, j = 1; i && (j <= number); i = i->next_content) {
+		/* Check if all dot-separated words in tmp match the object's name */
+		all_match = 1;
+		word_start = tmp;
+		
+		while (*word_start && all_match) {
+			/* Find the next dot or end of string */
+			word_end = word_start;
+			while (*word_end && *word_end != '.') {
+				word_end++;
 			}
+			
+			/* Extract the word */
+			k = 0;
+			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+				word[k++] = *word_start++;
+			}
+			word[k] = '\0';
+			
+			/* Check if this word matches */
+			if (!isname(word, i->name)) {
+				all_match = 0;
+			}
+			
+			/* Move past the dot if present */
+			if (*word_end == '.') {
+				word_start = word_end + 1;
+			} else {
+				word_start = word_end;
+			}
+		}
+		
+		if (all_match && CAN_SEE_OBJ(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 	return(0);
 }
 
@@ -1135,9 +1224,10 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 struct obj_data *get_obj_vis(struct char_data *ch, char *name)
 {
 	struct obj_data *i;
-	int j, number;
+	int j, number, k, all_match;
   char tmpname[MAX_INPUT_LENGTH];
-	char *tmp;
+	char *tmp, *word_start, *word_end;
+	char word[MAX_INPUT_LENGTH];
 
 	/* scan items carried */
 	if (i = get_obj_in_list_vis(ch, name, ch->carrying))
@@ -1153,13 +1243,44 @@ struct obj_data *get_obj_vis(struct char_data *ch, char *name)
 		return(0);
 
 	/* ok.. no luck yet. scan the entire obj list   */
-	for (i = object_list, j = 1; i && (j <= number); i = i->next)
-		if (isname(tmp, i->name))
-			if (CAN_SEE_OBJ(ch, i)) {
-				if (j == number)
-					return(i);
-				j++;
+	for (i = object_list, j = 1; i && (j <= number); i = i->next) {
+		/* Check if all dot-separated words in tmp match the object's name */
+		all_match = 1;
+		word_start = tmp;
+		
+		while (*word_start && all_match) {
+			/* Find the next dot or end of string */
+			word_end = word_start;
+			while (*word_end && *word_end != '.') {
+				word_end++;
 			}
+			
+			/* Extract the word */
+			k = 0;
+			while (word_start < word_end && k < MAX_INPUT_LENGTH - 1) {
+				word[k++] = *word_start++;
+			}
+			word[k] = '\0';
+			
+			/* Check if this word matches */
+			if (!isname(word, i->name)) {
+				all_match = 0;
+			}
+			
+			/* Move past the dot if present */
+			if (*word_end == '.') {
+				word_start = word_end + 1;
+			} else {
+				word_start = word_end;
+			}
+		}
+		
+		if (all_match && CAN_SEE_OBJ(ch, i)) {
+			if (j == number)
+				return(i);
+			j++;
+		}
+	}
 	return(0);
 }
 
