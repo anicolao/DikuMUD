@@ -124,10 +124,9 @@ The quest system infrastructure is complete and working:
 
 - ✅ Modified `fight.c` to detect quest mob kills and award completion
 - ✅ Modified `act.movement.c` to detect room visits for exploration quests
+- ✅ Quest expiration warnings implemented (warns at 1 hour and 15 minutes remaining)
 - ✅ All quest types tested and working (6 integration tests passing)
 - ✅ Quest completion detection functional for all types
-
-**Note:** Quest expiration warnings not yet implemented (optional enhancement)
 
 #### Phase 2: Core Zone Quests (Week 2-3) 📝 DESIGNED, NOT STARTED
 
