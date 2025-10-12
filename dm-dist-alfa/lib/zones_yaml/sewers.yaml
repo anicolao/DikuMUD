@@ -1751,9 +1751,9 @@ objects:
   short_desc: leather boots
   long_desc: A pair of leather boots lies here.
   action_desc: ''
-  type_flag: 2
+  type_flag: 9
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 65
   value0: 2
   value1: 0
   value2: 0
