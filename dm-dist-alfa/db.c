@@ -103,6 +103,7 @@ struct help_index_element *build_help_index(FILE *fl, int *num);
 void boot_db(void)
 {
 	int i;
+	char buf2[256];
 	extern int no_specials;
 
 	slog("Boot db -- BEGIN.");
@@ -113,7 +114,17 @@ void boot_db(void)
 	slog("Reading newsfile, credits, help-page, info and motd.");
 	file_to_string(NEWS_FILE, news);
 	file_to_string(CREDITS_FILE, credits);
-	file_to_string(MOTD_FILE, motd);
+	
+	/* Randomly select one of 9 MOTD files */
+	{
+		char motd_filename[256];
+		int motd_num = (time(0) % 9) + 1;
+		snprintf(motd_filename, sizeof(motd_filename), "motd.%d", motd_num);
+		file_to_string(motd_filename, motd);
+		sprintf(buf2, "   Selected MOTD: %s", motd_filename);
+		slog(buf2);
+	}
+	
 	file_to_string(HELP_PAGE_FILE, help);
 	file_to_string(INFO_FILE, info);
 	file_to_string(WIZLIST_FILE, wizlist);
