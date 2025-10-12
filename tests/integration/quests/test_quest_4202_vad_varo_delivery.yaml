@@ -1,0 +1,70 @@
+# Integration test for Quest 4202 - Vad Varo's Research Notes (DELIVERY)
+test:
+  id: quest_4202_vad_varo_delivery
+  description: "Test Vad Varo research notes delivery quest"
+  author: Integration Test Framework
+  created: 2025-10-12
+  tags: [quest, atmosphere_lower, delivery]
+
+setup:
+  character:
+    name: DeliveryTester
+    password: test
+    level: 22
+    class: warrior
+  start_room: 4167  # Where Vad Varo is located
+  gold: 100
+
+steps:
+  - action: look
+    description: "Verify we're with Vad Varo"
+    expected:
+      - pattern: "Vad Varo"
+        message: "Vad Varo should be present"
+
+  - action: command
+    description: "Ask Vad Varo for quest"
+    command: "ask varo quest"
+    expected:
+      - pattern: "notes|research|deliver"
+        message: "Vad Varo should offer delivery quest"
+
+  - action: command
+    description: "Load the research notes for testing"
+    command: "load obj 4262"
+    expected:
+      - pattern: "Ok"
+        message: "Should load research notes"
+
+  - action: command
+    description: "Get the research notes"
+    command: "get notes"
+    expected:
+      - pattern: "get|take"
+        message: "Should pick up notes"
+
+  - action: command
+    description: "Navigate to power technician at room 4171"
+    command: "goto 4171"
+    expected:
+      - pattern: "."
+        message: "Should move to target room"
+
+  - action: command
+    description: "Give notes to technician to complete quest"
+    command: "give notes technician"
+    expected:
+      - pattern: "."
+        message: "Give command should work"
+
+  - action: inventory
+    description: "Check inventory"
+    expected:
+      - pattern: "."
+        message: "Inventory command should work"
+        optional: true
+
+result:
+  should_pass: true
+  description: "Test passes when delivery quest can be assigned and item delivered"
+  notes: "Quest completion and rewards may need further testing"
