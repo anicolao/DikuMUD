@@ -23,13 +23,13 @@ This document describes the implementation of the next logical city-state zone f
 3. **Allied City**: Provides another safe haven for mid-level players
 4. **Cultural Variety**: Sophisticated culture emphasizing beauty and strategy, different from militaristic Zodanga
 5. **Geographic Logic**: Located northeast of Helium region, creating a triangle with Helium and Zodanga
-6. **Level Progression**: Target levels 12-20, filling gap between Lesser Helium (1-15) and Zodanga (18-26)
+6. **Level Progression**: Target levels 12-20, filling gap between Lesser Helium (1-15) and Zodanga (16-20)
 
 ### Required Infrastructure
 
 To connect Gathol to the existing world, a wilderness connector zone was needed between the previously isolated Zodanga and the new Gathol city, providing:
 - Overland travel route as alternative to airship
-- Mid-level wilderness challenges (14-22)
+- Mid-level wilderness challenges (14-20)
 - Contested territory between enemy and allied cities
 - Connection point for future northern zones
 
@@ -273,8 +273,8 @@ Players now have a clear progression:
 2. **Level 8-15**: Greater Helium, Dead Sea Wilderness
 3. **Level 10-16**: Southern Approach, Thark Territory
 4. **Level 12-20**: Gathol (new allied city)
-5. **Level 14-22**: Zodanga Wilderness (new dangerous zone)
-6. **Level 18-26**: Zodanga (enemy city)
+5. **Level 14-20**: Zodanga Wilderness (new dangerous zone)
+6. **Level 16-20**: Zodanga (enemy city)
 
 ### Strategic Implications
 

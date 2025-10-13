@@ -12,7 +12,7 @@ Zodanga is located approximately 1000+ miles north-northeast of Lesser Helium ac
 
 **Zone Number:** 36  
 **Virtual Number Range:** 3600-3649 (50 rooms)  
-**Target Level Range:** 18-26 adventurers  
+**Target Level Range:** 16-20 adventurers  
 **Zone Type:** City/Political intrigue  
 **Terrain:** City (sector type 1), Indoor areas (sector type 0)
 
@@ -76,13 +76,13 @@ The shadowy world of Zodangan intelligence:
 ### Royal Family
 
 **Than Kosis, Jeddak of Zodanga (mob 3600, room 3604)**
-- Level 26, extremely powerful ruler
+- Level 20, extremely powerful ruler
 - Ambitious and calculating
 - Schemes to expand Zodangan power
 - Commands one of Mars' strongest military forces
 
 **Sab Than, Prince of Zodanga (mob 3601, room 3609)**
-- Level 24, skilled warrior and heir
+- Level 19, skilled warrior and heir
 - Arrogant and entitled
 - Betrothed to Dejah Thoris (against her will)
 - Sees princess as prize rather than person
@@ -90,13 +90,13 @@ The shadowy world of Zodangan intelligence:
 ### Political Figures
 
 **Zat Arrras, Jed of Zodanga (mob 3602, room 3606)**
-- Level 23, master schemer
+- Level 19, master schemer
 - Politician rather than warrior
 - Uses law and custom as weapons
 - Hates John Carter's heroism
 
 **The Spy Master (mob 3603, room 3608)**
-- Level 25, intelligence chief
+- Level 20, intelligence chief
 - Commands agents across Barsoom
 - Knows secrets that could topple governments
 - Maintains files on all important figures
@@ -104,46 +104,46 @@ The shadowy world of Zodangan intelligence:
 ### Military and Guards
 
 **Elite Palace Guard (mob 3604)**
-- Level 24, finest warriors
+- Level 19, finest warriors
 - Defend the Jeddak with their lives
 - Ornate purple armor
 
 **Zodangan Soldier (mob 3605)**
-- Level 20, standard military
+- Level 18, standard military
 - Disciplined and ruthless
 - Dark purple harnesses
 
 **Zodangan Officer (mob 3606)**
-- Level 22, experienced commanders
+- Level 19, experienced commanders
 - Lead troops in campaigns
 - Tactical expertise
 
 **Military Instructor (mob 3611)**
-- Level 22, veteran trainer
+- Level 19, veteran trainer
 - Harsh and unforgiving
 - Produces elite soldiers
 
 ### Espionage and Crime
 
 **Zodangan Spy (mob 3609)**
-- Level 19, infiltration expert
+- Level 18, infiltration expert
 - Nondescript appearance
 - Trained in information gathering
 
 **Zodangan Assassin (mob 3610)**
-- Level 21, silent killer
+- Level 19, silent killer
 - Professional efficiency
 - Concealed weapons specialist
 
 **Prison Guard/Jailer (mob 3613)**
-- Level 20, harsh and cruel
+- Level 18, harsh and cruel
 - Breaks prisoners' spirits
 - Extracts information through torture
 
 ### Civilians and Services
 
 **Zodangan Weaponsmith (mob 3607)**
-- Level 18, master craftsman
+- Level 17, master craftsman
 - Creates quality weapons
 - Supplies military
 
@@ -153,12 +153,12 @@ The shadowy world of Zodangan intelligence:
 - Flexible ethics
 
 **Priest of War (mob 3612)**
-- Level 19, temple servant
+- Level 18, temple servant
 - Preaches military conquest
 - Blesses warriors and weapons
 
 **Arena Gladiator (mob 3614)**
-- Level 21, scarred survivor
+- Level 19, scarred survivor
 - Fights for entertainment and survival
 - Expects to die in combat
 

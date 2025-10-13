@@ -11,9 +11,9 @@ This document describes the implementation of Ptarth, the next logical city-stat
 Before Ptarth implementation:
 - **Lesser Helium** (Zone 30): Starting city, allied (levels 1-15)
 - **Greater Helium** (Zone 35): Twin city, allied, home of John Carter
-- **Zodanga** (Zone 36): Enemy city-state (levels 18-26)
+- **Zodanga** (Zone 36): Enemy city-state (levels 16-20)
 - **Gathol** (Zone 37): Allied city-state (levels 12-20)
-- **Zodanga Wilderness** (Zone 38): Contested connector between Zodanga and Gathol (levels 14-22)
+- **Zodanga Wilderness** (Zone 38): Contested connector between Zodanga and Gathol (levels 14-20)
 - **Thark Territory** (Zone 40): Allied green Martian settlement
 - **Atmosphere Factory** (Zones 41-42): Critical infrastructure
 - **Dead Sea zones** (32, 33, 34): Various connectors
@@ -26,7 +26,7 @@ Before Ptarth implementation:
 3. **Geographic Logic**: Located north of Gathol, extending the northern territories
 4. **Character Significance**: Home of Princess Thuvia with unique banth-controlling abilities
 5. **Allied City**: Provides another safe haven for mid-to-high level players
-6. **Level Progression**: Target levels 15-23, filling gap between Gathol (12-20) and Zodanga (18-26)
+6. **Level Progression**: Target levels 15-20, filling gap between Gathol (12-20) and high-level zones
 7. **Diplomatic Hub**: Ptarth serves as a northern alliance center, different from military-focused cities
 8. **Story Integration**: The kidnapping of Thuvia is a major plot point in Book 4
 
@@ -34,7 +34,7 @@ Before Ptarth implementation:
 
 To connect Ptarth to the existing world, a wilderness connector zone was needed between Gathol and Ptarth:
 - Overland travel route as alternative to airship
-- Mid-to-high level wilderness challenges (15-23)
+- Mid-to-high level wilderness challenges (15-20)
 - Allied territory with cooperative patrols (different from contested Zodanga Wilderness)
 - Some banths influenced by Thuvia's mental powers (unique gameplay element)
 - Connection point for future northern zones (Kaol, Warhoon Territory, etc.)
@@ -131,7 +131,7 @@ To connect Ptarth to the existing world, a wilderness connector zone was needed 
 - Current Implementation: 15 key rooms (representing several hundred miles)
 - Lifespan: 25 minutes
 - Reset Mode: 2 (always reset)
-- Target Levels: 15-23
+- Target Levels: 15-20
 
 **Room Layout:**
 - 4400: Northern Approaches to Gathol - Departure point
@@ -300,10 +300,10 @@ Players can now follow this progression:
 3. Thark Territory (10-18) - allied green Martians
 4. Gathol (12-20) - sophisticated allied city
 5. Atmosphere Factory (4-12) - critical infrastructure
-6. Zodanga Wilderness (14-22) - contested territory
-7. **Ptarth (15-23)** - diplomatic hub **[NEW]**
-8. **Gathol-Ptarth Wilderness (15-23)** - allied connector **[NEW]**
-9. Zodanga (18-26) - enemy territory
+6. Zodanga Wilderness (14-20) - contested territory
+7. **Ptarth (15-20)** - diplomatic hub **[NEW]**
+8. **Gathol-Ptarth Wilderness (15-20)** - allied connector **[NEW]**
+9. Zodanga (16-20) - enemy territory
 
 ### Alliance Network
 
@@ -408,7 +408,7 @@ These cities contrast with enemy territory:
 
 ### Balanced Progression
 
-- Level 15-23 fills gap in progression
+- Level 15-20 fills gap in progression
 - Higher than Gathol but accessible from it
 - Prepares players for highest-level content
 - Allied cities provide safe havens at various levels
@@ -482,7 +482,7 @@ This implementation successfully adds Ptarth (from Book 4: "Thuvia, Maid of Mars
 ### Key Achievements
 
 1. **Logical Progression**: Filled in Book 4 content, continuing the chronological implementation
-2. **Level Gap Filled**: Added content for levels 15-23, bridging mid to high-level play
+2. **Level Gap Filled**: Added content for levels 15-20, bridging mid to high-level play
 3. **Allied Network Extended**: Strengthened the alliance system with diplomatic Ptarth
 4. **Unique Gameplay**: Introduced Thuvia's banth control as a unique element
 5. **Different Wilderness**: Created allied territory connector vs. contested zones

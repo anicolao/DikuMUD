@@ -18,7 +18,7 @@ Key landmarks include ancient ruins from a bygone era, a maintained waystation j
 
 **Zone Number:** 45  
 **Virtual Number Range:** 4600-4699 (100 rooms)  
-**Target Level Range:** 18-26 adventurers  
+**Target Level Range:** 16-20 adventurers  
 **Zone Type:** Wilderness/Allied territory  
 **Terrain:** Dead sea bottom plains (sector type 4), Ruins and outposts (sector type 1)
 
@@ -59,21 +59,21 @@ Ancient rock formations (room 4640) that once were islands in the Martian seas n
 
 ## Important NPCs and Encounters
 
-### Ptarthian Scouts (Level 19)
+### Ptarthian Scouts (Level 18)
 Well-equipped warriors from Ptarth who patrol the southern and central portions of the route. They monitor for threats, assist allied travelers, and maintain communication lines. Professional and helpful to those allied with Ptarth.
 
 **Locations:** Ptarthian Patrol Post (4620), plains areas  
 **Behavior:** Friendly to allies, provide information and warnings  
 **Equipment:** Ptarth military harness, patrol supplies
 
-### Kaolian Scouts (Level 20)
+### Kaolian Scouts (Level 19)
 Warriors exemplifying Kaolian military excellence, patrolling the northern and central route sections. They provide security, assist travelers, and coordinate with Ptarthian scouts. Disciplined and dedicated to their duty.
 
 **Locations:** Northern Guard Post (4690), patrol zones (4680)  
 **Behavior:** Friendly to allies, offer escort services near Kaol  
 **Equipment:** Kaolian military harness, maintained to perfection
 
-### Great Banths (Level 21)
+### Great Banths (Level 20)
 The apex predators of Mars - massive eight-legged lions with incredible strength, speed, and ferocity. These specimens are particularly dangerous, hunting in the prime territory between the cities. Some exhibit strange calm at times, suggesting Thuvia's mental influence.
 
 **Locations:** Banth Hunting Grounds (4660), scattered encounters  
@@ -81,7 +81,7 @@ The apex predators of Mars - massive eight-legged lions with incredible strength
 **Behavior:** Aggressive hunters, occasionally calm periods  
 **Loot:** None, but defeating one is significant achievement
 
-### White Apes (Level 22)
+### White Apes (Level 20)
 Among Mars' most dangerous predators - twelve-foot tall creatures with four powerful arms and tusked faces showing primitive cunning. Nearly fearless and incredibly strong, they attack almost anything.
 
 **Locations:** Rocky outcroppings (4640), ambush points  
@@ -143,7 +143,7 @@ The wilderness is organized as a relatively linear north-south route with major 
 
 ### Travel Recommendations
 - **Preparation:** Ensure adequate supplies and healing
-- **Level:** 18-26 adventurers recommended
+- **Level:** 16-20 adventurers recommended
 - **Group:** Solo travel risky; groups advised
 - **Awareness:** Stay alert for predator encounters
 - **Rest Points:** Use patrol posts and waystation

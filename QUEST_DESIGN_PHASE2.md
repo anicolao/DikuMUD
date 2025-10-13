@@ -125,10 +125,10 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Level**: 12-18
    - **Quest Text**: "I trust you to deliver this sealed message to our allies. Guard it with your life."
 
-### Ptarth (Vnum 3500-3599, Levels 15-23)
+### Ptarth (Vnum 3500-3599, Levels 15-20)
 
 **Zone Theme**: Thuvia's city, diplomacy, culture
-**Target Players**: High-level characters (levels 15-23)
+**Target Players**: High-level characters (levels 15-20)
 **Existing NPCs**: Thuvia, city officials, guards
 
 **Planned Quests:**
@@ -138,7 +138,7 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Objective**: Retrieve item or defeat banth threat
    - **Location**: Ptarth territory
    - **Rewards**: 2500 exp, 1000 gold, rare item
-   - **Level**: 18-23
+   - **Level**: 16-20
    - **Quest Text**: "I need your assistance with a matter of importance. Banths threaten our borders - deal with them."
 
 2. **"Diplomatic Mission"** (DELIVERY)
@@ -149,10 +149,10 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Level**: 15-20
    - **Quest Text**: "Carry this treaty to our allies. The future of Ptarth depends on this alliance."
 
-### Kaol (Vnum 3600-3699, Levels 18-26)
+### Kaol (Vnum 3600-3699, Levels 16-20)
 
 **Zone Theme**: Military city, Kulan Tith's domain
-**Target Players**: High-level characters (levels 18-26)
+**Target Players**: High-level characters (levels 16-20)
 **Existing NPCs**: Kulan Tith, military commanders, warriors
 
 **Planned Quests:**
@@ -162,7 +162,7 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Objective**: Defeat dishonorable enemy or threat
    - **Location**: Kaol territory or borders
    - **Rewards**: 3000 exp, 1500 gold, masterwork weapon
-   - **Level**: 20-26
+   - **Level**: 18-20
    - **Quest Text**: "A dishonorable foe threatens Kaol. Defeat them and restore our honor."
 
 2. **"Military Training"** (EXPLORE or KILL)
@@ -170,7 +170,7 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Objective**: Complete training course or defeat training opponents
    - **Location**: Kaol military grounds
    - **Rewards**: 2800 exp, 1200 gold, military equipment
-   - **Level**: 18-24
+   - **Level**: 16-20
    - **Quest Text**: "Prove your combat skills. Complete the training course and show you're worthy of Kaol's finest."
 
 ### Thark Territory (Vnum 4000-4099, Levels 10-18)
@@ -190,10 +190,10 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Level**: 14-18
    - **Quest Text**: "You have proven yourself to Sola. Now prove yourself to me. Hunt the great calot and bring proof of your kill."
 
-### Zodanga (Vnum 3700-3799, Levels 18-26)
+### Zodanga (Vnum 3700-3799, Levels 16-20)
 
 **Zone Theme**: Enemy city, hostile territory, Than Kosis's domain
-**Target Players**: High-level characters (levels 18-26)
+**Target Players**: High-level characters (levels 16-20)
 **Existing NPCs**: Enemy soldiers, Than Kosis, spies
 
 **Planned Quests:**
@@ -203,7 +203,7 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Objective**: Sabotage enemy operations or steal plans
    - **Location**: Zodanga territory (dangerous)
    - **Rewards**: 3200 exp, 1600 gold, spy equipment
-   - **Level**: 20-26
+   - **Level**: 18-20
    - **Quest Text**: "Helium needs brave souls to disrupt Zodanga's war preparations. Are you willing to risk everything?"
 
 2. **"Intelligence Gathering"** (EXPLORE)
@@ -211,7 +211,7 @@ This document outlines the design for 15-20 new quests to be added across all ma
    - **Objective**: Scout Zodanga defenses, visit key locations
    - **Location**: Zodanga territory (dangerous)
    - **Rewards**: 2900 exp, 1400 gold, information reward
-   - **Level**: 18-24
+   - **Level**: 16-20
    - **Quest Text**: "We need maps of Zodanga's defenses. Infiltrate their territory and report on key positions."
 
 ## Implementation Checklist

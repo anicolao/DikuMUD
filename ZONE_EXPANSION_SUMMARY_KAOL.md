@@ -12,12 +12,12 @@ After the successful implementation of Ptarth (Zone 39) and the Gathol-Ptarth Wi
 
 - **Lesser Helium** (Zone 30): Starting city, allied (levels 1-15)
 - **Greater Helium** (Zone 35): Twin city, allied, home of John Carter (levels 1-15)
-- **Zodanga** (Zone 36): Enemy city-state (levels 18-26)
+- **Zodanga** (Zone 36): Enemy city-state (levels 16-20)
 - **Gathol** (Zone 37): Allied city-state (levels 12-20)
-- **Ptarth** (Zone 39): Allied city-state, diplomatic hub (levels 15-23)
+- **Ptarth** (Zone 39): Allied city-state, diplomatic hub (levels 15-20)
 - **Dead Sea Wilderness** (Zone 33): Connector (levels 8-15)
-- **Zodanga Wilderness** (Zone 38): Contested territory (levels 14-22)
-- **Gathol-Ptarth Wilderness** (Zone 43): Allied territory (levels 15-23)
+- **Zodanga Wilderness** (Zone 38): Contested territory (levels 14-20)
+- **Gathol-Ptarth Wilderness** (Zone 43): Allied territory (levels 15-20)
 - **Thark Territory** (Zone 40): Allied green Martians (levels 10-18)
 - **Atmosphere Factory** (Zones 41-42): Critical infrastructure (levels 4-12)
 - **Southern Approach** (Zone 34): Connector zone (levels 8-12)
@@ -32,7 +32,7 @@ The ZONE_EXPANSION_SUMMARY_PTARTH.md document specifically recommended Kaol as t
 
 3. **Alliance Network**: Kaol strengthens the northern alliance chain (Helium → Gathol → Ptarth → Kaol), providing additional allied territory and expanding the player's safe exploration options.
 
-4. **Level Progression**: Target levels 18-26, providing appropriate progression after Ptarth (15-23) and filling the gap before end-game content.
+4. **Level Progression**: Target levels 16-20, providing appropriate progression after Ptarth (15-20) for high-level content.
 
 5. **Geographic Logic**: Located north of Ptarth, continuing the northward expansion pattern established by previous additions.
 
@@ -43,7 +43,7 @@ The ZONE_EXPANSION_SUMMARY_PTARTH.md document specifically recommended Kaol as t
 To connect Kaol to the existing world, a wilderness connector zone was needed between Ptarth and Kaol:
 
 - Overland travel route maintaining the alliance network
-- Mid-to-high level wilderness challenges (18-26)
+- Mid-to-high level wilderness challenges (16-20)
 - Allied territory with cooperative patrols (unlike contested Zodanga Wilderness)
 - Connection point for future northern zones (Warhoon Territory, Dusar, etc.)
 - Demonstration of practical alliance benefits through joint security
@@ -68,7 +68,7 @@ To connect Kaol to the existing world, a wilderness connector zone was needed be
 - Merchant District (4510): Honest trade and quality goods
 
 **NPCs:**
-- **Kulan Tith** (mob 4500): Level 24 Jeddak, honorable ruler who released Thuvia
+- **Kulan Tith** (mob 4500): Level 20 Jeddak, honorable ruler who released Thuvia
 - **Torkar Bar** (mob 4503): Level 20 loyal officer and advisor
 - **Palace Guards** (mob 4501): Level 19 elite security forces
 - **Kaolian Warriors** (mob 4502): Level 18 disciplined soldiers
@@ -114,8 +114,8 @@ To connect Kaol to the existing world, a wilderness connector zone was needed be
 **NPCs:**
 - **Ptarthian Scouts** (mob 4600): Level 19 southern patrol forces
 - **Kaolian Scouts** (mob 4601): Level 20 northern patrol forces
-- **Great Banths** (mob 4602): Level 21 apex predators
-- **White Apes** (mob 4603): Level 22 extremely dangerous predators
+- **Great Banths** (mob 4602): Level 20 apex predators
+- **White Apes** (mob 4603): Level 20 extremely dangerous predators
 - **Fierce Calots** (mob 4604): Level 18 war-hound packs
 - **Waystation Keeper** (mob 4605): Level 15 facility maintainer
 
@@ -225,12 +225,12 @@ Players can now follow this progression:
 3. Thark Territory (10-18) - allied green Martians
 4. Gathol (12-20) - sophisticated allied city
 5. Atmosphere Factory (4-12) - critical infrastructure
-6. Zodanga Wilderness (14-22) - contested territory
-7. Ptarth (15-23) - diplomatic hub
-8. Gathol-Ptarth Wilderness (15-23) - allied connector
-9. **Kaol (18-26)** - military honor city **[NEW]**
-10. **Ptarth-Kaol Wilderness (18-26)** - challenging allied route **[NEW]**
-11. Zodanga (18-26) - enemy territory
+6. Zodanga Wilderness (14-20) - contested territory
+7. Ptarth (15-20) - diplomatic hub
+8. Gathol-Ptarth Wilderness (15-20) - allied connector
+9. **Kaol (16-20)** - military honor city **[NEW]**
+10. **Ptarth-Kaol Wilderness (16-20)** - challenging allied route **[NEW]**
+11. Zodanga (16-20) - enemy territory
 
 ### Alliance Network
 
@@ -423,7 +423,7 @@ These cities contrast with enemy territory:
 - No broken or missing exits
 
 ### Balance
-- Level ranges appropriate for progression (18-26)
+- Level ranges appropriate for progression (16-20)
 - Predator difficulty matches level expectations
 - Allied scouts provide appropriate support without trivializing challenge
 - Equipment bonuses reasonable for level range
@@ -442,7 +442,7 @@ This implementation successfully adds Kaol (from Book 4: "Thuvia, Maid of Mars")
 
 1. **Alliance Network Expansion**: Added key member city strengthening northern alliance
 2. **Character Representation**: Kulan Tith properly portrayed as noble and honorable ruler
-3. **Level Progression**: Filled 18-26 level gap with appropriate content
+3. **Level Progression**: Filled 16-20 level gap with appropriate content
 4. **Cultural Variety**: Military honor theme differs from other allied cities
 5. **Infrastructure**: Allied wilderness shows cooperation rather than conflict
 6. **Scalability**: Designed for extensive future expansion

@@ -12,7 +12,7 @@ Ptarth is located in the northern equatorial region of Barsoom, several days' jo
 
 **Zone Number:** 39  
 **Virtual Number Range:** 4300-4399 (100 rooms)  
-**Target Level Range:** 15-23 adventurers  
+**Target Level Range:** 15-20 adventurers  
 **Zone Type:** Allied city/Diplomatic center  
 **Terrain:** City (sector type 1), Indoor areas (sector type 0), Gardens (sector type 4)
 
@@ -38,7 +38,7 @@ Trading district featuring shops and markets. Ptarth's merchants deal in norther
 
 ## Important NPCs and Encounters
 
-### Thuvia, Princess of Ptarth (Level 20)
+### Thuvia, Princess of Ptarth (Level 19)
 The most famous daughter of Ptarth, Thuvia possesses the unique ability to mentally control banths - a power she learned during her time in Lothar. She is beautiful, brave, and independent, having survived captivity by the Therns before being freed. Thuvia is torn between duty (her betrothal to Kulan Tith of Kaol) and love (her feelings for Carthoris of Helium). She represents the best qualities of red Martian nobility: strength, grace, and resourcefulness.
 
 **Location:** Palace Gardens (room 4305) or Throne Room (room 4303)  
@@ -46,7 +46,7 @@ The most famous daughter of Ptarth, Thuvia possesses the unique ability to menta
 **Alignment:** Very good (-900)  
 **Equipment:** Elegant harness, jeweled long sword, royal jewelry
 
-### Thuvan Dihn, Jeddak of Ptarth (Level 22)
+### Thuvan Dihn, Jeddak of Ptarth (Level 20)
 The ruler of Ptarth and Thuvia's father. He is a wise and experienced leader who balances military strength with diplomatic acumen. Fiercely protective of his daughter and his city's honor, he is nonetheless level-headed enough to seek truth before rushing to war. He maintains strong alliances with Helium and respects John Carter greatly.
 
 **Location:** Throne Room (room 4303)  
