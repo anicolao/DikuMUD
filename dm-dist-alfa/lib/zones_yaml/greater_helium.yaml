@@ -6628,7 +6628,7 @@ shops:
   close2: 0
 quests:
 - qnum: 3901
-  giver: 3902
+  giver: 3925
   type: 63
   duration: 120
   target: 3910

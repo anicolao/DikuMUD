@@ -22,6 +22,8 @@ class WorldValidator:
         self.all_mobs = set()
         self.all_objects = set()
         self.all_shops = {}  # shop_vnum -> zone_name
+        self.shop_keepers = {}  # keeper_vnum -> shop_vnum
+        self.quest_givers = {}  # giver_vnum -> [quest_vnums]
         self.zones = {}
         self.mobs_with_spec_flag = {}  # vnum -> zone_name
         
@@ -222,8 +224,12 @@ class WorldValidator:
             else:
                 self.all_shops[shop_vnum] = zone_name
             
-            # Validate shop keeper exists
+            # Track shop keeper
             keeper_vnum = shop.get('keeper')
+            if keeper_vnum:
+                self.shop_keepers[keeper_vnum] = shop_vnum
+            
+            # Validate shop keeper exists
             if keeper_vnum and keeper_vnum not in self.all_mobs:
                 # We'll check this in cross-reference validation since mobs may not be loaded yet
                 pass
@@ -233,6 +239,16 @@ class WorldValidator:
             if room_vnum and room_vnum not in self.all_rooms:
                 # We'll check this in cross-reference validation
                 pass
+        
+        # Track quest givers
+        quests = data.get('quests', [])
+        for quest in quests:
+            quest_vnum = quest.get('qnum')
+            giver_vnum = quest.get('giver')
+            if giver_vnum:
+                if giver_vnum not in self.quest_givers:
+                    self.quest_givers[giver_vnum] = []
+                self.quest_givers[giver_vnum].append(quest_vnum)
         
         # Validate resets
         resets = data.get('resets', [])
@@ -335,6 +351,33 @@ class WorldValidator:
                         break
                 self.warning(f"Mobile {vnum} has assigned special procedure but no ACT_SPEC flag")
     
+    def validate_spec_procedure_collisions(self):
+        """Validate that mobs don't have conflicting special procedure assignments.
+        
+        Each mob can only have ONE special procedure assigned. This checks for conflicts between:
+        - Shopkeepers (shop special procedure)
+        - Quest givers (quest_giver special procedure)
+        - Hardcoded special procedures in spec_assign.c
+        """
+        # Check for shopkeeper vs quest giver conflicts
+        for keeper_vnum, shop_vnum in self.shop_keepers.items():
+            if keeper_vnum in self.quest_givers:
+                quest_vnums = self.quest_givers[keeper_vnum]
+                self.error(f"Mobile {keeper_vnum} is shopkeeper for shop #{shop_vnum} but also quest giver for quest(s) {quest_vnums}. "
+                          f"Mob can only have ONE special procedure - shop will NOT work!")
+        
+        # Check for shopkeeper vs spec_assign.c conflicts
+        for keeper_vnum, shop_vnum in self.shop_keepers.items():
+            if keeper_vnum in self.assigned_spec_procedures:
+                self.error(f"Mobile {keeper_vnum} is shopkeeper for shop #{shop_vnum} but also has hardcoded special procedure in spec_assign.c. "
+                          f"Mob can only have ONE special procedure - shop will NOT work!")
+        
+        # Check for quest giver vs spec_assign.c conflicts
+        for giver_vnum, quest_vnums in self.quest_givers.items():
+            if giver_vnum in self.assigned_spec_procedures:
+                self.error(f"Mobile {giver_vnum} is quest giver for quest(s) {quest_vnums} but also has hardcoded special procedure in spec_assign.c. "
+                          f"Mob can only have ONE special procedure - quests will NOT work!")
+    
     def validate_all(self, yaml_files: List[str]):
         """Validate all YAML zone files."""
         print(f"Validating {len(yaml_files)} zone files...")
@@ -348,6 +391,9 @@ class WorldValidator:
         
         # Third pass: check special procedure assignments
         self.validate_spec_procedures()
+        
+        # Fourth pass: check for special procedure collisions
+        self.validate_spec_procedure_collisions()
         
         # Print results
         print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects, {len(self.all_shops)} shops")
