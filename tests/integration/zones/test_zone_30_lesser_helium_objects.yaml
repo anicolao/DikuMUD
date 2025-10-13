@@ -14,7 +14,7 @@ setup:
     password: test
     class: warrior
     level: 34
-  start_room: 3001
+  start_room: 1200
   gold: 0
 steps:
 - action: look

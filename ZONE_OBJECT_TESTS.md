@@ -49,33 +49,28 @@ This script:
 | Atmosphere Factory | 41 | 5 | ✅ PASS |
 | Southern Approach | 34 | 11 | ✅ PASS |
 | Lesser Helium | 30 | 47 | ✅ PASS |
+| Sewers | 31 | 13 | ✅ PASS |
+| Dead Sea Bottom | 32 | 10 | ✅ PASS |
+| Dead Sea Wilderness | 33 | 15 | ✅ PASS |
+| Thark Territory | 40 | 14 | ✅ PASS |
 
 ### Failing Tests ❌
 
 | Zone | Zone # | Objects Tested | Status | Issue |
 |------|--------|----------------|--------|-------|
-| Zodanga | 36 | 7 | ❌ FAIL | Object keyword matching issue |
-| Dead Sea Bottom | 32 | 10 | ❌ FAIL | Object keyword matching issue |
-| Dead Sea Wilderness | 33 | 15 | ❌ FAIL | Object keyword matching issue |
-| Thark Territory | 40 | 14 | ❌ FAIL | Object keyword matching issue |
-| Greater Helium | 35 | 72 | ⚠️ UNTESTED | Large test - needs validation |
-
-### Skipped Tests ⚠️
-
-| Zone | Zone # | Reason |
-|------|--------|--------|
-| Sewers | 31 | All rooms are dark, light sources lack HOLD flag |
+| Zodanga | 36 | 7 | ❌ FAIL | Remove pattern matching issue |
+| Greater Helium | 35 | 72 | ❌ FAIL | Pattern matching issue |
 
 ## Known Issues
 
-### 1. Dark Rooms
+### 1. Room Selection
 
-The sewers zone has all dark rooms and the light sources in that zone don't have the ITEM_HOLD flag set properly. The test generator skips zones where all rooms are dark.
+All tests now start in room 1200 (The Chat Room), which is:
+- Always lit (no dark room issues)
+- Isolated (no mob interference)
+- Reliable (no random events or wandering NPCs)
 
-**Solution**: Either:
-- Fix the light objects in sewers to have ITEM_HOLD flag
-- Start tests with a light from another zone
-- Give wizard characters infravision
+This solves the previous issues with dark rooms and unreliable test execution.
 
 ### 2. Object Keyword Matching
 
@@ -93,7 +88,7 @@ Wizard characters (level 34) need:
 - ✅ Maximum strength (18/100) to wield heavy weapons
 - ✅ Access to `load obj` command
 - ✅ Access to `purge` command
-- ✅ Ability to start in any room
+- ✅ Start in room 1200 (The Chat Room) - isolated, always lit, no mob interference
 
 These requirements are met by the updated `tools/create_test_player.c`.
 
@@ -143,13 +138,13 @@ DEBUG_OUTPUT=1 python3 ../tools/integration_test_runner.py ./dmserver \
 ## Test Coverage
 
 Total zones analyzed: 18
-- Tests created: 12
-- Tests passing: 7
-- Tests failing: 4  (keyword matching issues - likely minor)
-- Tests untested: 1 (Greater Helium - large test)
-- Tests skipped: 1 (Sewers - dark rooms)
+- Tests created: 13
+- Tests passing: 11
+- Tests failing: 2 (pattern matching issues)
 
-Total objects validated: **192 objects** across passing tests
+Total objects validated: **~240+ objects** across passing tests
+
+**Key Improvement**: All tests now start in room 1200 (The Chat Room) for reliability and consistency.
 
 ## Future Improvements
 

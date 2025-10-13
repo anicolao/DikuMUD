@@ -158,23 +158,9 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         print(f"  No testable objects found in {zone_name}, skipping")
         return None
     
-    # Find a suitable starting room (prefer non-dark rooms)
-    rooms = data.get('rooms', [])
-    if not rooms:
-        print(f"  No rooms found in {zone_name}, skipping")
-        return None
-    
-    # Find a non-dark room to start in (room_flags & 1 == 0)
-    start_room = None
-    for room in rooms:
-        if (room.get('room_flags', 0) & 1) == 0:  # Not dark
-            start_room = room.get('vnum')
-            break
-    
-    # If all rooms are dark, skip this zone
-    if start_room is None:
-        print(f"  Skipping {zone_name} - all rooms are dark (needs light source fix)")
-        return None
+    # Use room 1200 (The Chat Room) as starting room for all tests
+    # This is a reliable, isolated room that is always lit and has no mob interference
+    start_room = 1200
     
     # Generate test structure
     test = {

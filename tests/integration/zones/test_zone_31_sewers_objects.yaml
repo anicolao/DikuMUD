@@ -13,7 +13,7 @@ setup:
     password: test
     class: warrior
     level: 34
-  start_room: 3150
+  start_room: 1200
   gold: 0
 steps:
 - action: look
@@ -22,7 +22,7 @@ steps:
   command: load obj 3206
   description: Load weapon 3206 (dagger)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -32,7 +32,7 @@ steps:
   command: wield dagger
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove dagger
   description: Remove the weapon
@@ -47,12 +47,12 @@ steps:
   command: purge dagger
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3207
   description: Load weapon 3207 (short)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -62,7 +62,7 @@ steps:
   command: wield short
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove short
   description: Remove the weapon
@@ -77,12 +77,12 @@ steps:
   command: purge short
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3208
   description: Load weapon 3208 (wooden)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -92,7 +92,7 @@ steps:
   command: wield wooden
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove wooden
   description: Remove the weapon
@@ -107,12 +107,12 @@ steps:
   command: purge wooden
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3209
   description: Load weapon 3209 (spear)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -122,7 +122,7 @@ steps:
   command: wield spear
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove spear
   description: Remove the weapon
@@ -137,12 +137,12 @@ steps:
   command: purge spear
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3210
   description: Load armor 3210 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -152,7 +152,7 @@ steps:
   command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove leather
   description: Remove the armor
@@ -167,12 +167,12 @@ steps:
   command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3211
   description: Load armor 3211 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -182,7 +182,7 @@ steps:
   command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove leather
   description: Remove the armor
@@ -197,12 +197,12 @@ steps:
   command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3212
   description: Load armor 3212 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -212,7 +212,7 @@ steps:
   command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove leather
   description: Remove the armor
@@ -227,12 +227,12 @@ steps:
   command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3213
   description: Load armor 3213 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -242,7 +242,7 @@ steps:
   command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove leather
   description: Remove the armor
@@ -257,12 +257,12 @@ steps:
   command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3226
   description: Load weapon 3226 (dagger)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -272,7 +272,7 @@ steps:
   command: wield dagger
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove dagger
   description: Remove the weapon
@@ -287,12 +287,12 @@ steps:
   command: purge dagger
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3227
   description: Load weapon 3227 (longsword)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -302,7 +302,7 @@ steps:
   command: wield longsword
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove longsword
   description: Remove the weapon
@@ -317,12 +317,12 @@ steps:
   command: purge longsword
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3228
   description: Load armor 3228 (hardened)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -332,7 +332,7 @@ steps:
   command: wear hardened
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove hardened
   description: Remove the armor
@@ -347,12 +347,12 @@ steps:
   command: purge hardened
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3229
   description: Load armor 3229 (helmet)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -362,7 +362,7 @@ steps:
   command: wear helmet
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove helmet
   description: Remove the armor
@@ -377,12 +377,12 @@ steps:
   command: purge helmet
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3232
   description: Load weapon 3232 (ancient)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -392,7 +392,7 @@ steps:
   command: wield ancient
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove ancient
   description: Remove the weapon
@@ -407,7 +407,7 @@ steps:
   command: purge ancient
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 13 objects in Sewers should be properly configured
