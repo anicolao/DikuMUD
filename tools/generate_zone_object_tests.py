@@ -1,0 +1,316 @@
+#!/usr/bin/env python3
+"""
+Generate integration tests for zone objects.
+
+This script creates one test per zone that validates all objects in the zone
+are properly configured - lights can be held, weapons can be wielded, armor
+can be worn, shields can be worn.
+"""
+
+import yaml
+import os
+import sys
+
+# Item type constants
+ITEM_LIGHT = 1
+ITEM_WEAPON = 5
+ITEM_ARMOR = 9
+
+# Wear flag constants
+ITEM_TAKE = 1
+ITEM_WIELD = 8192
+ITEM_HOLD = 16384
+ITEM_WEAR_SHIELD = 512
+ITEM_WEAR_BODY = 8
+ITEM_WEAR_HEAD = 16
+ITEM_WEAR_LEGS = 32
+ITEM_WEAR_FEET = 64
+ITEM_WEAR_HANDS = 128
+ITEM_WEAR_ARMS = 256
+ITEM_WEAR_ABOUT = 1024
+ITEM_WEAR_WAISTE = 2048
+ITEM_WEAR_WRIST = 4096
+ITEM_WEAR_NECK = 4
+ITEM_WEAR_FINGER = 2
+
+def get_wear_command(wear_flags):
+    """Determine the appropriate wear command based on wear flags."""
+    # Check for shield first
+    if wear_flags & ITEM_WEAR_SHIELD:
+        return "wear", "shield"
+    # Check other wear locations
+    if wear_flags & ITEM_WEAR_BODY:
+        return "wear", "body"
+    if wear_flags & ITEM_WEAR_HEAD:
+        return "wear", "head"
+    if wear_flags & ITEM_WEAR_LEGS:
+        return "wear", "legs"
+    if wear_flags & ITEM_WEAR_FEET:
+        return "wear", "feet"
+    if wear_flags & ITEM_WEAR_HANDS:
+        return "wear", "hands"
+    if wear_flags & ITEM_WEAR_ARMS:
+        return "wear", "arms"
+    if wear_flags & ITEM_WEAR_ABOUT:
+        return "wear", "about"
+    if wear_flags & ITEM_WEAR_WAISTE:
+        return "wear", "waist"
+    if wear_flags & ITEM_WEAR_WRIST:
+        return "wear", "wrist"
+    if wear_flags & ITEM_WEAR_NECK:
+        return "wear", "neck"
+    if wear_flags & ITEM_WEAR_FINGER:
+        return "wear", "finger"
+    return "wear", None
+
+def get_first_keyword(namelist):
+    """Get the first keyword from a namelist."""
+    if not namelist:
+        return None
+    return namelist.split()[0]
+
+def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
+    """Generate a test YAML file for a zone."""
+    
+    with open(zone_file) as f:
+        data = yaml.safe_load(f)
+    
+    objects = data.get('objects', [])
+    
+    # Categorize objects
+    testable_objects = []
+    
+    for obj in objects:
+        type_flag = obj.get('type_flag', 0)
+        wear_flags = obj.get('wear_flags', 0)
+        vnum = obj.get('vnum')
+        namelist = obj.get('namelist', '')
+        short_desc = obj.get('short_desc', '')
+        
+        # Skip empty objects
+        if not namelist:
+            continue
+        
+        keyword = get_first_keyword(namelist)
+        if not keyword:
+            continue
+        
+        # Determine object category and action
+        if type_flag == ITEM_WEAPON and (wear_flags & ITEM_WIELD):
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': 'wield',
+                'expected_pattern': 'OK|wield',
+                'type': 'weapon'
+            })
+        elif type_flag == ITEM_LIGHT and (wear_flags & ITEM_HOLD):
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': 'hold',
+                'expected_pattern': 'OK|hold|light',
+                'type': 'light'
+            })
+        elif type_flag == ITEM_ARMOR and (wear_flags & ~ITEM_TAKE):
+            wear_cmd, wear_loc = get_wear_command(wear_flags)
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': wear_cmd,
+                'expected_pattern': 'OK|wear',
+                'type': 'armor',
+                'wear_location': wear_loc
+            })
+        elif wear_flags & ITEM_WEAR_SHIELD:
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': 'wear',
+                'expected_pattern': 'OK|wear',
+                'type': 'shield'
+            })
+    
+    if not testable_objects:
+        print(f"  No testable objects found in {zone_name}, skipping")
+        return None
+    
+    # Find a suitable starting room (first room in zone)
+    rooms = data.get('rooms', [])
+    if not rooms:
+        print(f"  No rooms found in {zone_name}, skipping")
+        return None
+    
+    start_room = rooms[0].get('vnum', 3001)
+    
+    # Generate test structure
+    test = {
+        'test': {
+            'id': f'test_zone_{zone_number}_objects',
+            'description': f'Verify all objects in {zone_name} are properly configured and can be used',
+            'author': 'Integration Test Framework',
+            'created': '2025-10-13',
+            'tags': ['zone_test', 'object_validation', zone_name.lower().replace(' ', '_')]
+        },
+        'setup': {
+            'character': {
+                'name': 'TestWizard',
+                'password': 'test',
+                'class': 'warrior',
+                'level': 34,  # Wizard level
+            },
+            'start_room': start_room,
+            'gold': 0
+        },
+        'steps': []
+    }
+    
+    # Add initial look
+    test['steps'].append({
+        'action': 'look',
+        'description': f'Verify starting location in {zone_name}'
+    })
+    
+    # Add steps for each object
+    for obj in testable_objects:
+        vnum = obj['vnum']
+        keyword = obj['keyword']
+        obj_type = obj['type']
+        action = obj['action']
+        expected = obj['expected_pattern']
+        
+        # Load object
+        test['steps'].append({
+            'action': 'command',
+            'command': f'load obj {vnum}',
+            'description': f'Load {obj_type} {vnum} ({keyword})',
+            'expected': [
+                {'pattern': 'Ok'}
+            ]
+        })
+        
+        # Get all
+        test['steps'].append({
+            'action': 'command',
+            'command': 'get all',
+            'description': f'Pick up the {obj_type}',
+            'expected': [
+                {'pattern': keyword}
+            ]
+        })
+        
+        # Use the object appropriately
+        test['steps'].append({
+            'action': 'command',
+            'command': f'{action} {keyword}',
+            'description': f'{action.capitalize()} the {obj_type}',
+            'expected': [
+                {'pattern': expected}
+            ]
+        })
+        
+        # Remove it
+        test['steps'].append({
+            'action': 'command',
+            'command': f'remove {keyword}',
+            'description': f'Remove the {obj_type}',
+            'expected': [
+                {'pattern': 'stop using|stop|remove'}
+            ]
+        })
+        
+        # Drop it
+        test['steps'].append({
+            'action': 'command',
+            'command': f'drop {keyword}',
+            'description': f'Drop the {obj_type}',
+            'expected': [
+                {'pattern': 'drop'}
+            ]
+        })
+        
+        # Purge it
+        test['steps'].append({
+            'action': 'command',
+            'command': f'purge {keyword}',
+            'description': f'Purge the {obj_type}',
+            'expected': [
+                {'pattern': 'Ok|destroy'}
+            ]
+        })
+    
+    # Add result section
+    test['result'] = {
+        'should_pass': True,
+        'description': f'All {len(testable_objects)} objects in {zone_name} should be properly configured',
+        'notes': f'This test validates that all usable objects in {zone_name} can be:\n'
+                 f'  - Loaded by a wizard\n'
+                 f'  - Picked up\n'
+                 f'  - Used appropriately (wielded, worn, or held)\n'
+                 f'  - Removed\n'
+                 f'  - Dropped\n'
+                 f'  - Purged\n'
+                 f'\n'
+                 f'Object types tested: weapons ({sum(1 for o in testable_objects if o["type"] == "weapon")}), '
+                 f'armor ({sum(1 for o in testable_objects if o["type"] == "armor")}), '
+                 f'lights ({sum(1 for o in testable_objects if o["type"] == "light")}), '
+                 f'shields ({sum(1 for o in testable_objects if o["type"] == "shield")})'
+    }
+    
+    # Write to file
+    safe_zone_name = zone_name.lower().replace(' ', '_').replace('-', '_')
+    output_file = os.path.join(output_dir, f'test_zone_{zone_number}_{safe_zone_name}_objects.yaml')
+    
+    with open(output_file, 'w') as f:
+        yaml.dump(test, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    
+    print(f"  Created test: {output_file}")
+    print(f"    {len(testable_objects)} objects to test")
+    return output_file
+
+def main():
+    # Paths
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    zones_dir = os.path.join(repo_root, 'dm-dist-alfa', 'lib', 'zones_yaml')
+    output_dir = os.path.join(repo_root, 'tests', 'integration', 'zones')
+    
+    # Zones to process
+    zones = [
+        ('lesser_helium.yaml', 'Lesser Helium', 30),
+        ('sewers.yaml', 'Sewers', 31),
+        ('dead_sea_bottom_channel.yaml', 'Dead Sea Bottom Channel', 32),
+        ('southern_approach.yaml', 'Southern Approach', 34),
+        ('dead_sea_wilderness.yaml', 'Dead Sea Wilderness', 33),
+        ('greater_helium.yaml', 'Greater Helium', 35),
+        ('zodanga.yaml', 'Zodanga', 36),
+        ('gathol.yaml', 'Gathol', 37),
+        ('ptarth.yaml', 'Ptarth', 39),
+        ('kaol.yaml', 'Kaol', 44),
+        ('thark_territory.yaml', 'Thark Territory', 40),
+        ('atmosphere_factory.yaml', 'Atmosphere Factory', 41),
+        ('atmosphere_lower.yaml', 'Atmosphere Lower', 42),
+    ]
+    
+    print(f"Generating zone object tests...")
+    print(f"Output directory: {output_dir}")
+    
+    created = 0
+    for zone_file, zone_name, zone_number in zones:
+        zone_path = os.path.join(zones_dir, zone_file)
+        if not os.path.exists(zone_path):
+            print(f"  Warning: {zone_path} not found, skipping")
+            continue
+        
+        print(f"\nProcessing {zone_name}...")
+        result = generate_test_for_zone(zone_path, zone_name, zone_number, output_dir)
+        if result:
+            created += 1
+    
+    print(f"\n{created} test files created successfully!")
+
+if __name__ == '__main__':
+    main()

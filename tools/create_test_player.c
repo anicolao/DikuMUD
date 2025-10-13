@@ -90,13 +90,24 @@ int main(int argc, char *argv[]) {
     /* Set load room - THIS IS THE KEY FIELD */
     player.load_room = load_room;
     
-    /* Set abilities */
-    player.abilities.str = 16;
-    player.abilities.intel = 16;
-    player.abilities.wis = 16;
-    player.abilities.dex = 16;
-    player.abilities.con = 16;
-    player.abilities.str_add = 0;
+    /* Set abilities - wizards get max stats */
+    if (level >= 34) {
+        /* Wizard/god level - max stats */
+        player.abilities.str = 18;
+        player.abilities.intel = 18;
+        player.abilities.wis = 18;
+        player.abilities.dex = 18;
+        player.abilities.con = 18;
+        player.abilities.str_add = 100;  /* Max strength bonus */
+    } else {
+        /* Normal test character */
+        player.abilities.str = 16;
+        player.abilities.intel = 16;
+        player.abilities.wis = 16;
+        player.abilities.dex = 16;
+        player.abilities.con = 16;
+        player.abilities.str_add = 0;
+    }
     
     /* Set points */
     player.points.hit = 20;

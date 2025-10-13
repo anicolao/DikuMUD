@@ -66,7 +66,7 @@ INTEGRATION_TEST_OUTPUTS := $(patsubst ../tests/integration/%.yaml,integration_t
 
 # Create output directory if it doesn't exist
 integration_test_outputs:
-	@mkdir -p integration_test_outputs integration_test_outputs/shops integration_test_outputs/items integration_test_outputs/quests
+	@mkdir -p integration_test_outputs integration_test_outputs/shops integration_test_outputs/items integration_test_outputs/quests integration_test_outputs/zones
 
 # Pattern rule to run a single integration test and capture output
 integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst ../tools/create_test_player | integration_test_outputs
