@@ -21,39 +21,39 @@ steps:
   description: Verify starting location in Dead Sea Bottom Channel
 - action: command
   command: load obj 3304
-  description: Load weapon 3304 (mace)
+  description: Load weapon 3304 (ornate)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: mace
+  - pattern: ornate
 - action: command
-  command: wield mace
+  command: wield ornate
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove mace
+  command: remove ornate
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop mace
+  command: drop ornate
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge mace
+  command: purge ornate
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3305
   description: Load armor 3305 (harness)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -63,7 +63,7 @@ steps:
   command: wear harness
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove harness
   description: Remove the armor
@@ -78,12 +78,12 @@ steps:
   command: purge harness
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3306
   description: Load armor 3306 (harness)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -93,7 +93,7 @@ steps:
   command: wear harness
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove harness
   description: Remove the armor
@@ -108,12 +108,12 @@ steps:
   command: purge harness
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3312
   description: Load armor 3312 (harness)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -123,7 +123,7 @@ steps:
   command: wear harness
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove harness
   description: Remove the armor
@@ -138,42 +138,42 @@ steps:
   command: purge harness
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3313
-  description: Load armor 3313 (helm)
+  description: Load armor 3313 (golden)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: helm
+  - pattern: golden
 - action: command
-  command: wear helm
+  command: wear golden
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove helm
+  command: remove golden
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop helm
+  command: drop golden
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge helm
+  command: purge golden
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3314
   description: Load armor 3314 (sleeves)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -183,7 +183,7 @@ steps:
   command: wear sleeves
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove sleeves
   description: Remove the armor
@@ -198,72 +198,72 @@ steps:
   command: purge sleeves
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3315
-  description: Load armor 3315 (cloak)
+  description: Load armor 3315 (golden)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: cloak
+  - pattern: golden
 - action: command
-  command: wear cloak
+  command: wear golden
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove cloak
+  command: remove golden
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop cloak
+  command: drop golden
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge cloak
+  command: purge golden
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3316
-  description: Load armor 3316 (shield)
+  description: Load shield 3316 (shield)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
-  description: Pick up the armor
+  description: Pick up the shield
   expected:
   - pattern: shield
 - action: command
   command: wear shield
-  description: Wear the armor
+  description: Wear the shield
   expected:
-  - pattern: OK|wear
+  - pattern: start using|wear
 - action: command
   command: remove shield
-  description: Remove the armor
+  description: Remove the shield
   expected:
   - pattern: stop using|stop|remove
 - action: command
   command: drop shield
-  description: Drop the armor
+  description: Drop the shield
   expected:
   - pattern: drop
 - action: command
   command: purge shield
-  description: Purge the armor
+  description: Purge the shield
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3317
   description: Load armor 3317 (gloves)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -273,7 +273,7 @@ steps:
   command: wear gloves
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove gloves
   description: Remove the armor
@@ -288,41 +288,41 @@ steps:
   command: purge gloves
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3318
-  description: Load armor 3318 (harness)
+  description: Load armor 3318 (golden)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: golden
 - action: command
-  command: wear harness
+  command: wear golden
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove harness
+  command: remove golden
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop golden
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge golden
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 10 objects in Dead Sea Bottom Channel should be properly configured
   notes: "This test validates that all usable objects in Dead Sea Bottom Channel can\
     \ be:\n  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded,\
     \ worn, or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested:\
-    \ weapons (1), armor (9), lights (0), shields (0)"
+    \ weapons (1), armor (8), lights (0), shields (1)"

@@ -22,7 +22,7 @@ steps:
   command: load obj 3600
   description: Load weapon 3600 (longsword)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -32,7 +32,7 @@ steps:
   command: wield longsword
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove longsword
   description: Remove the weapon
@@ -47,191 +47,191 @@ steps:
   command: purge longsword
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3602
-  description: Load armor 3602 (harness)
+  description: Load armor 3602 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: zodangan
 - action: command
-  command: wear harness
+  command: wear zodangan
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove harness
+  command: remove zodangan
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop zodangan
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge zodangan
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3603
-  description: Load armor 3603 (harness)
+  description: Load armor 3603 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: zodangan
 - action: command
-  command: wear harness
+  command: wear zodangan
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove harness
+  command: remove zodangan
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop zodangan
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge zodangan
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3604
-  description: Load weapon 3604 (dagger)
+  description: Load weapon 3604 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: dagger
+  - pattern: zodangan
 - action: command
-  command: wield dagger
+  command: wield zodangan
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove dagger
+  command: remove zodangan
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop dagger
+  command: drop zodangan
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge dagger
+  command: purge zodangan
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3605
-  description: Load weapon 3605 (spear)
+  description: Load weapon 3605 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: spear
+  - pattern: zodangan
 - action: command
-  command: wield spear
+  command: wield zodangan
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove spear
+  command: remove zodangan
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop spear
+  command: drop zodangan
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge spear
+  command: purge zodangan
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3606
-  description: Load armor 3606 (shield)
+  description: Load shield 3606 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
-  description: Pick up the armor
+  description: Pick up the shield
   expected:
-  - pattern: shield
+  - pattern: zodangan
 - action: command
-  command: wear shield
-  description: Wear the armor
+  command: wear zodangan
+  description: Wear the shield
   expected:
-  - pattern: OK|wear
+  - pattern: start using|wear
 - action: command
-  command: remove shield
-  description: Remove the armor
+  command: remove zodangan
+  description: Remove the shield
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop shield
-  description: Drop the armor
+  command: drop zodangan
+  description: Drop the shield
   expected:
   - pattern: drop
 - action: command
-  command: purge shield
-  description: Purge the armor
+  command: purge zodangan
+  description: Purge the shield
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3607
-  description: Load armor 3607 (armor)
+  description: Load armor 3607 (zodangan)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: armor
+  - pattern: zodangan
 - action: command
-  command: wear armor
+  command: wear zodangan
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove armor
+  command: remove zodangan
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop armor
+  command: drop zodangan
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge armor
+  command: purge zodangan
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 7 objects in Zodanga should be properly configured
   notes: "This test validates that all usable objects in Zodanga can be:\n  - Loaded\
     \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, or held)\n\
     \  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons (3), armor\
-    \ (4), lights (0), shields (0)"
+    \ (3), lights (0), shields (1)"

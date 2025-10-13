@@ -23,7 +23,7 @@ steps:
   command: load obj 3402
   description: Load weapon 3402 (longsword)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -33,7 +33,7 @@ steps:
   command: wield longsword
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove longsword
   description: Remove the weapon
@@ -48,12 +48,12 @@ steps:
   command: purge longsword
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3403
   description: Load weapon 3403 (dagger)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -63,7 +63,7 @@ steps:
   command: wield dagger
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove dagger
   description: Remove the weapon
@@ -78,12 +78,12 @@ steps:
   command: purge dagger
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3404
   description: Load armor 3404 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -93,7 +93,7 @@ steps:
   command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove leather
   description: Remove the armor
@@ -108,42 +108,42 @@ steps:
   command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3406
-  description: Load weapon 3406 (spear)
+  description: Load weapon 3406 (hunting)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: spear
+  - pattern: hunting
 - action: command
-  command: wield spear
+  command: wield hunting
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove spear
+  command: remove hunting
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop spear
+  command: drop hunting
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge spear
+  command: purge hunting
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3407
   description: Load armor 3407 (helmet)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -153,7 +153,7 @@ steps:
   command: wear helmet
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove helmet
   description: Remove the armor
@@ -168,72 +168,72 @@ steps:
   command: purge helmet
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3408
-  description: Load armor 3408 (boots)
+  description: Load armor 3408 (leather)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: boots
+  - pattern: leather
 - action: command
-  command: wear boots
+  command: wear leather
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove boots
+  command: remove leather
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop boots
+  command: drop leather
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge boots
+  command: purge leather
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3413
-  description: Load armor 3413 (shield)
+  description: Load shield 3413 (shield)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
-  description: Pick up the armor
+  description: Pick up the shield
   expected:
   - pattern: shield
 - action: command
   command: wear shield
-  description: Wear the armor
+  description: Wear the shield
   expected:
-  - pattern: OK|wear
+  - pattern: start using|wear
 - action: command
   command: remove shield
-  description: Remove the armor
+  description: Remove the shield
   expected:
   - pattern: stop using|stop|remove
 - action: command
   command: drop shield
-  description: Drop the armor
+  description: Drop the shield
   expected:
   - pattern: drop
 - action: command
   command: purge shield
-  description: Purge the armor
+  description: Purge the shield
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3414
   description: Load weapon 3414 (shortsword)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -243,7 +243,7 @@ steps:
   command: wield shortsword
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove shortsword
   description: Remove the weapon
@@ -258,101 +258,101 @@ steps:
   command: purge shortsword
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3417
-  description: Load armor 3417 (cloak)
+  description: Load armor 3417 (weatherproof)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: cloak
+  - pattern: weatherproof
 - action: command
-  command: wear cloak
+  command: wear weatherproof
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove cloak
+  command: remove weatherproof
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop cloak
+  command: drop weatherproof
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge cloak
+  command: purge weatherproof
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3420
-  description: Load weapon 3420 (sword)
+  description: Load weapon 3420 (officer)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: sword
+  - pattern: officer
 - action: command
-  command: wield sword
+  command: wield officer
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove sword
+  command: remove officer
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop sword
+  command: drop officer
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge sword
+  command: purge officer
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 3421
-  description: Load armor 3421 (armor)
+  description: Load armor 3421 (reinforced)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: armor
+  - pattern: reinforced
 - action: command
-  command: wear armor
+  command: wear reinforced
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove armor
+  command: remove reinforced
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop armor
+  command: drop reinforced
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge armor
+  command: purge reinforced
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 11 objects in Southern Approach should be properly configured
   notes: "This test validates that all usable objects in Southern Approach can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
     \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (5), armor (6), lights (0), shields (0)"
+    \ (5), armor (5), lights (0), shields (1)"

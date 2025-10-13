@@ -23,7 +23,7 @@ steps:
   command: load obj 4054
   description: Load weapon 4054 (sword)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -33,7 +33,7 @@ steps:
   command: wield sword
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove sword
   description: Remove the weapon
@@ -48,127 +48,127 @@ steps:
   command: purge sword
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 4056
-  description: Load armor 4056 (armor)
+  description: Load armor 4056 (reinforced)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: armor
+  - pattern: reinforced
 - action: command
-  command: wear armor
+  command: wear reinforced
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove armor
+  command: remove reinforced
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop armor
+  command: drop reinforced
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge armor
+  command: purge reinforced
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 4057
-  description: Load armor 4057 (helmet)
+  description: Load armor 4057 (factory)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: helmet
+  - pattern: factory
 - action: command
-  command: wear helmet
+  command: wear factory
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove helmet
+  command: remove factory
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop helmet
+  command: drop factory
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge helmet
+  command: purge factory
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 4066
-  description: Load weapon 4066 (dagger)
+  description: Load weapon 4066 (factory)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: dagger
+  - pattern: factory
 - action: command
-  command: wield dagger
+  command: wield factory
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
-  command: remove dagger
+  command: remove factory
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop dagger
+  command: drop factory
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge dagger
+  command: purge factory
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 4068
-  description: Load armor 4068 (gloves)
+  description: Load armor 4068 (insulated)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: gloves
+  - pattern: insulated
 - action: command
-  command: wear gloves
+  command: wear insulated
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
-  command: remove gloves
+  command: remove insulated
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop gloves
+  command: drop insulated
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge gloves
+  command: purge insulated
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 5 objects in Atmosphere Factory should be properly configured

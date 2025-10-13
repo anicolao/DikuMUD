@@ -22,7 +22,7 @@ steps:
   command: load obj 4500
   description: Load armor 4500 (kaolian)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
@@ -32,7 +32,7 @@ steps:
   command: wear kaolian
   description: Wear the armor
   expected:
-  - pattern: OK|wear
+  - pattern: ok\.?|wear
 - action: command
   command: remove kaolian
   description: Remove the armor
@@ -47,12 +47,12 @@ steps:
   command: purge kaolian
   description: Purge the armor
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 - action: command
   command: load obj 4501
   description: Load weapon 4501 (ceremonial)
   expected:
-  - pattern: Ok
+  - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
@@ -62,7 +62,7 @@ steps:
   command: wield ceremonial
   description: Wield the weapon
   expected:
-  - pattern: OK|wield
+  - pattern: ok\.?|wield
 - action: command
   command: remove ceremonial
   description: Remove the weapon
@@ -77,7 +77,7 @@ steps:
   command: purge ceremonial
   description: Purge the weapon
   expected:
-  - pattern: Ok|destroy
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
   description: All 2 objects in Kaol should be properly configured

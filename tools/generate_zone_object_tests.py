@@ -63,11 +63,29 @@ def get_wear_command(wear_flags):
         return "wear", "finger"
     return "wear", None
 
-def get_first_keyword(namelist):
-    """Get the first keyword from a namelist."""
+def get_best_keyword(namelist, short_desc):
+    """Get the best keyword from a namelist for testing.
+    
+    Prefers keywords that appear as complete words in short_desc,
+    or falls back to the first keyword.
+    """
     if not namelist:
         return None
-    return namelist.split()[0]
+    
+    keywords = namelist.split()
+    if not keywords:
+        return None
+    
+    # If we have a short description, try to find a keyword that appears in it
+    if short_desc:
+        short_lower = short_desc.lower()
+        # Prefer longer, more specific keywords
+        for keyword in sorted(keywords, key=len, reverse=True):
+            if keyword.lower() in short_lower:
+                return keyword
+    
+    # Fall back to first keyword
+    return keywords[0]
 
 def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
     """Generate a test YAML file for a zone."""
@@ -91,12 +109,22 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         if not namelist:
             continue
         
-        keyword = get_first_keyword(namelist)
+        keyword = get_best_keyword(namelist, short_desc)
         if not keyword:
             continue
         
         # Determine object category and action
-        if type_flag == ITEM_WEAPON and (wear_flags & ITEM_WIELD):
+        # Check for shield first (before armor) since shields can be type ARMOR
+        if wear_flags & ITEM_WEAR_SHIELD:
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': 'wear',
+                'expected_pattern': 'start using|wear',
+                'type': 'shield'
+            })
+        elif type_flag == ITEM_WEAPON and (wear_flags & ITEM_WIELD):
             testable_objects.append({
                 'vnum': vnum,
                 'keyword': keyword,
@@ -125,27 +153,28 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
                 'type': 'armor',
                 'wear_location': wear_loc
             })
-        elif wear_flags & ITEM_WEAR_SHIELD:
-            testable_objects.append({
-                'vnum': vnum,
-                'keyword': keyword,
-                'short_desc': short_desc,
-                'action': 'wear',
-                'expected_pattern': 'OK|wear',
-                'type': 'shield'
-            })
     
     if not testable_objects:
         print(f"  No testable objects found in {zone_name}, skipping")
         return None
     
-    # Find a suitable starting room (first room in zone)
+    # Find a suitable starting room (prefer non-dark rooms)
     rooms = data.get('rooms', [])
     if not rooms:
         print(f"  No rooms found in {zone_name}, skipping")
         return None
     
-    start_room = rooms[0].get('vnum', 3001)
+    # Find a non-dark room to start in (room_flags & 1 == 0)
+    start_room = None
+    for room in rooms:
+        if (room.get('room_flags', 0) & 1) == 0:  # Not dark
+            start_room = room.get('vnum')
+            break
+    
+    # If all rooms are dark, skip this zone
+    if start_room is None:
+        print(f"  Skipping {zone_name} - all rooms are dark (needs light source fix)")
+        return None
     
     # Generate test structure
     test = {
@@ -189,7 +218,7 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
             'command': f'load obj {vnum}',
             'description': f'Load {obj_type} {vnum} ({keyword})',
             'expected': [
-                {'pattern': 'Ok'}
+                {'pattern': r'ok\.?'}
             ]
         })
         
@@ -204,6 +233,9 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         })
         
         # Use the object appropriately
+        # Make pattern more flexible - "ok" with optional period
+        if 'OK' in expected or 'Ok' in expected:
+            expected = expected.replace('OK', r'ok\.?').replace('Ok', r'ok\.?')
         test['steps'].append({
             'action': 'command',
             'command': f'{action} {keyword}',
@@ -239,7 +271,7 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
             'command': f'purge {keyword}',
             'description': f'Purge the {obj_type}',
             'expected': [
-                {'pattern': 'Ok|destroy'}
+                {'pattern': r'ok\.?|destroy'}
             ]
         })
     
