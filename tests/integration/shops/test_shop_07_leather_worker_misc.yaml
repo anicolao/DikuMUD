@@ -32,13 +32,13 @@ steps:
       - pattern: "Leather|leather|Worker|worker"
         message: "Leather worker should be visible in the room"
 
-  # Step 2: Verify shopkeeper responds
+  # Step 2: Verify shopkeeper responds (shop has limited hours: 8-14 and 15-21)
   - action: command
     description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "shackles|wine|rope|medal|collar|harness"
-        message: "Shop should show leather goods and supplies for sale"
+      - pattern: "shackles|wine|rope|medal|collar|harness|Come back later"
+        message: "Shop should respond (either with items or closed message)"
 
 result:
   should_pass: true

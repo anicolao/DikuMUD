@@ -5653,23 +5653,19 @@ resets:
   arg3: 3928
 - command: G
   if_flag: 1
-  arg1: 3910
+  arg1: 3510
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3911
+  arg1: 3511
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3930
+  arg1: 3774
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3931
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3932
+  arg1: 3593
   arg2: 100
 - command: M
   if_flag: 0
@@ -5748,20 +5744,28 @@ resets:
   arg3: 3925
 - command: G
   if_flag: 1
-  arg1: 3920
+  arg1: 3620
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3921
+  arg1: 3621
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3922
+  arg1: 3622
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3923
+  arg1: 3623
   arg2: 100
+- command: G
+  arg1: 3700
+  arg2: 1
+  if_flag: 1
+- command: G
+  arg1: 3701
+  arg2: 1
+  if_flag: 1
 - command: M
   if_flag: 0
   arg1: 3928
@@ -6637,9 +6641,9 @@ quests:
   reward_exp: 1500
   reward_gold: 500
   reward_item: 3915
-  quest_text: The noble warrior regards you with interest. 'You look capable. The arena
-    awaits those with courage. Face one of the practice opponents and prove your mettle
-    to the warriors of Greater Helium. Return when you've succeeded.'
+  quest_text: The noble warrior regards you with interest. 'You look capable. The
+    arena awaits those with courage. Face one of the practice opponents and prove
+    your mettle to the warriors of Greater Helium. Return when you've succeeded.'
   complete_text: The warrior nods with respect. 'Well fought! You've proven yourself
     worthy. Take this as your reward - you've earned it through combat.'
   fail_text: The warrior shakes his head. 'The arena awaits. Return when you're ready

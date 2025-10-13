@@ -1176,7 +1176,7 @@ rooms:
     to_room: 3188
   extra_descriptions: []
 mobiles:
-- vnum: 3150
+- vnum: 3500
   namelist: ulsio rat sewer
   short_desc: an ulsio
   long_desc: A small ulsio scurries through the filth here.
@@ -1201,7 +1201,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3151
+- vnum: 3501
   namelist: ulsio pack rat sewer large
   short_desc: a large ulsio
   long_desc: A large ulsio prowls here, searching for prey.
@@ -1226,7 +1226,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3152
+- vnum: 3502
   namelist: carrion bird scavenger sewer
   short_desc: a carrion bird
   long_desc: A carrion bird picks at refuse here.
@@ -1253,7 +1253,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3153
+- vnum: 3503
   namelist: spider sewer large web
   short_desc: a large sewer spider
   long_desc: A large spider lurks here, waiting in its web.
@@ -1280,7 +1280,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3154
+- vnum: 3504
   namelist: slime mold fungus creature
   short_desc: a slime mold
   long_desc: A pulsating mass of slime mold oozes here.
@@ -1307,7 +1307,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3155
+- vnum: 3505
   namelist: centipede giant sewer insect
   short_desc: a giant centipede
   long_desc: A giant centipede undulates through the muck here.
@@ -1334,7 +1334,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3156
+- vnum: 3506
   namelist: ulsio swarm pack rats
   short_desc: a swarm of ulsio
   long_desc: A writhing swarm of ulsio covers the floor here.
@@ -1361,7 +1361,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3157
+- vnum: 3507
   namelist: bat colony sewer flying
   short_desc: a colony of bats
   long_desc: A colony of bats swirls through the air here.
@@ -1388,7 +1388,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3158
+- vnum: 3508
   namelist: carrion stalker bird alpha
   short_desc: a carrion stalker
   long_desc: A large carrion stalker bird watches you with malevolent eyes.
@@ -1415,7 +1415,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3159
+- vnum: 3509
   namelist: fungus walker infected creature
   short_desc: a fungus walker
   long_desc: A shambling fungus-infected creature staggers here.
@@ -1442,7 +1442,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3160
+- vnum: 3510
   namelist: ulsio king alpha rat
   short_desc: the ulsio king
   long_desc: The ulsio king, a massive rat, commands here.
@@ -1471,7 +1471,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3161
+- vnum: 3511
   namelist: spider mother queen broodmother
   short_desc: the spider mother
   long_desc: A massive spider, the mother of the brood, lurks here.
@@ -1500,7 +1500,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3162
+- vnum: 3512
   namelist: ancient guardian construct sewer
   short_desc: an ancient guardian
   long_desc: An ancient guardian construct stands here, still fulfilling its duty.
@@ -1529,7 +1529,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3163
+- vnum: 3513
   namelist: mutant predator creature enhanced
   short_desc: a mutant predator
   long_desc: A hideously mutated creature prowls here.
@@ -1558,7 +1558,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3164
+- vnum: 3514
   namelist: energy wraith spirit ancient
   short_desc: an energy wraith
   long_desc: A ghostly figure formed of crackling energy drifts here.
@@ -1588,7 +1588,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3165
+- vnum: 3515
   namelist: corrupted guardian elite construct
   short_desc: a corrupted guardian
   long_desc: A corrupted guardian construct guards this chamber.
@@ -2283,7 +2283,7 @@ objects:
 resets:
 - command: M
   if_flag: 0
-  arg1: 3150
+  arg1: 3500
   arg2: 3
   arg3: 3151
 - command: G
@@ -2292,7 +2292,7 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3150
+  arg1: 3500
   arg2: 3
   arg3: 3152
 - command: G
@@ -2301,7 +2301,7 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3151
+  arg1: 3501
   arg2: 2
   arg3: 3153
 - command: G
@@ -2315,7 +2315,7 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
-  arg1: 3152
+  arg1: 3502
   arg2: 2
   arg3: 3154
 - command: G
@@ -2324,12 +2324,12 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3150
+  arg1: 3500
   arg2: 3
   arg3: 3155
 - command: M
   if_flag: 0
-  arg1: 3153
+  arg1: 3503
   arg2: 2
   arg3: 3156
 - command: G
@@ -2338,7 +2338,7 @@ resets:
   arg2: 50
 - command: M
   if_flag: 0
-  arg1: 3152
+  arg1: 3502
   arg2: 2
   arg3: 3157
 - command: G
@@ -2347,7 +2347,7 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3151
+  arg1: 3501
   arg2: 2
   arg3: 3158
 - command: G
@@ -2361,7 +2361,7 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
-  arg1: 3150
+  arg1: 3500
   arg2: 3
   arg3: 3159
 - command: G
@@ -2370,12 +2370,12 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3154
+  arg1: 3504
   arg2: 2
   arg3: 3160
 - command: M
   if_flag: 0
-  arg1: 3153
+  arg1: 3503
   arg2: 2
   arg3: 3161
 - command: G
@@ -2384,7 +2384,7 @@ resets:
   arg2: 30
 - command: M
   if_flag: 0
-  arg1: 3155
+  arg1: 3505
   arg2: 2
   arg3: 3162
 - command: G
@@ -2398,12 +2398,12 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
-  arg1: 3152
+  arg1: 3502
   arg2: 2
   arg3: 3163
 - command: M
   if_flag: 0
-  arg1: 3157
+  arg1: 3507
   arg2: 2
   arg3: 3164
 - command: G
@@ -2412,12 +2412,12 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3151
+  arg1: 3501
   arg2: 2
   arg3: 3165
 - command: M
   if_flag: 0
-  arg1: 3154
+  arg1: 3504
   arg2: 2
   arg3: 3166
 - command: O
@@ -2452,7 +2452,7 @@ resets:
   arg3: 3162
 - command: M
   if_flag: 0
-  arg1: 3155
+  arg1: 3505
   arg2: 2
   arg3: 3167
 - command: G
@@ -2466,7 +2466,7 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
-  arg1: 3156
+  arg1: 3506
   arg2: 2
   arg3: 3169
 - command: G
@@ -2479,7 +2479,7 @@ resets:
   arg2: 30
 - command: M
   if_flag: 0
-  arg1: 3158
+  arg1: 3508
   arg2: 2
   arg3: 3170
 - command: G
@@ -2492,7 +2492,7 @@ resets:
   arg2: 80
 - command: M
   if_flag: 0
-  arg1: 3159
+  arg1: 3509
   arg2: 2
   arg3: 3171
 - command: G
@@ -2501,7 +2501,7 @@ resets:
   arg2: 20
 - command: M
   if_flag: 0
-  arg1: 3155
+  arg1: 3505
   arg2: 2
   arg3: 3172
 - command: G
@@ -2510,7 +2510,7 @@ resets:
   arg2: 60
 - command: M
   if_flag: 0
-  arg1: 3156
+  arg1: 3506
   arg2: 2
   arg3: 3173
 - command: G
@@ -2523,12 +2523,12 @@ resets:
   arg2: 40
 - command: M
   if_flag: 0
-  arg1: 3157
+  arg1: 3507
   arg2: 2
   arg3: 3174
 - command: M
   if_flag: 0
-  arg1: 3158
+  arg1: 3508
   arg2: 2
   arg3: 3175
 - command: G
@@ -2541,7 +2541,7 @@ resets:
   arg2: 50
 - command: M
   if_flag: 0
-  arg1: 3160
+  arg1: 3510
   arg2: 1
   arg3: 3176
 - command: G
@@ -2584,12 +2584,12 @@ resets:
   arg3: 3175
 - command: M
   if_flag: 0
-  arg1: 3159
+  arg1: 3509
   arg2: 2
   arg3: 3177
 - command: M
   if_flag: 0
-  arg1: 3160
+  arg1: 3510
   arg2: 1
   arg3: 3178
 - command: G
@@ -2607,7 +2607,7 @@ resets:
   arg3: 5
 - command: M
   if_flag: 0
-  arg1: 3161
+  arg1: 3511
   arg2: 1
   arg3: 3179
 - command: G
@@ -2624,7 +2624,7 @@ resets:
   arg2: 20
 - command: M
   if_flag: 0
-  arg1: 3158
+  arg1: 3508
   arg2: 2
   arg3: 3180
 - command: G
@@ -2637,7 +2637,7 @@ resets:
   arg2: 60
 - command: M
   if_flag: 0
-  arg1: 3162
+  arg1: 3512
   arg2: 2
   arg3: 3181
 - command: G
@@ -2655,7 +2655,7 @@ resets:
   arg3: 1
 - command: M
   if_flag: 0
-  arg1: 3159
+  arg1: 3509
   arg2: 2
   arg3: 3182
 - command: G
@@ -2664,7 +2664,7 @@ resets:
   arg2: 25
 - command: M
   if_flag: 0
-  arg1: 3163
+  arg1: 3513
   arg2: 2
   arg3: 3183
 - command: G
@@ -2681,7 +2681,7 @@ resets:
   arg2: 30
 - command: M
   if_flag: 0
-  arg1: 3162
+  arg1: 3512
   arg2: 2
   arg3: 3184
 - command: G
@@ -2694,7 +2694,7 @@ resets:
   arg2: 80
 - command: M
   if_flag: 0
-  arg1: 3163
+  arg1: 3513
   arg2: 2
   arg3: 3185
 - command: G
@@ -2707,7 +2707,7 @@ resets:
   arg2: 35
 - command: M
   if_flag: 0
-  arg1: 3164
+  arg1: 3514
   arg2: 1
   arg3: 3186
 - command: G
@@ -2729,7 +2729,7 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
-  arg1: 3163
+  arg1: 3513
   arg2: 2
   arg3: 3187
 - command: G
@@ -2742,7 +2742,7 @@ resets:
   arg2: 90
 - command: M
   if_flag: 0
-  arg1: 3164
+  arg1: 3514
   arg2: 1
   arg3: 3188
 - command: G
@@ -2755,7 +2755,7 @@ resets:
   arg2: 50
 - command: M
   if_flag: 0
-  arg1: 3165
+  arg1: 3515
   arg2: 1
   arg3: 3189
 - command: G

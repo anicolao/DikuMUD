@@ -505,8 +505,13 @@ void boot_the_shops()
 				{
 					fscanf(shop_f,"%d \n", &temp);
 					if (temp >= 0)
-						shop_index[number_of_shops].producing[count]=
-							real_object(temp);
+					{
+						int obj_index = real_object(temp);
+						shop_index[number_of_shops].producing[count]= obj_index;
+						fprintf(stderr, "DEBUG shop_load: Shop #%d item %d: vnum %d -> index %d\n",
+							number_of_shops + 1, count, temp, obj_index);
+						fflush(stderr);
+					}
 					else
 						shop_index[number_of_shops].producing[count]= temp;
 				}
