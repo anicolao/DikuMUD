@@ -5875,23 +5875,31 @@ resets:
   arg3: 3941
 - command: G
   if_flag: 1
-  arg1: 3500
+  arg1: 3900
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3501
+  arg1: 3901
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3502
+  arg1: 3902
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3503
+  arg1: 3903
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3504
+  arg1: 3904
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3910
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3911
   arg2: 100
 - command: M
   if_flag: 0
@@ -6428,8 +6436,13 @@ resets:
 shops:
 - vnum: 1
   producing:
-  - 3500
-  - 3501
+  - 3900
+  - 3901
+  - 3902
+  - 3903
+  - 3904
+  - 3910
+  - 3911
   profit_buy: 1.1
   profit_sell: 0.9
   buy_types: []
@@ -6558,11 +6571,13 @@ shops:
   close2: 0
 - vnum: 6
   producing:
-  - 3500
-  - 3501
-  - 3502
-  - 3503
-  - 3504
+  - 3900
+  - 3901
+  - 3902
+  - 3903
+  - 3904
+  - 3910
+  - 3911
   profit_buy: 1.1
   profit_sell: 0.9
   buy_types: []

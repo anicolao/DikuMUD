@@ -4180,6 +4180,46 @@ resets:
   if_flag: 1
   arg1: 4105
   arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4110
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4111
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4112
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4113
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4114
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4115
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4120
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4121
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4130
+  arg2: 50
+- command: G
+  if_flag: 1
+  arg1: 4131
+  arg2: 50
 - command: M
   if_flag: 0
   arg1: 4091
@@ -4362,6 +4402,16 @@ shops:
   - 4103
   - 4104
   - 4105
+  - 4110
+  - 4111
+  - 4112
+  - 4113
+  - 4114
+  - 4115
+  - 4120
+  - 4121
+  - 4130
+  - 4131
   profit_buy: 1.2
   profit_sell: 0.8
   buy_types:
