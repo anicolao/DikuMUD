@@ -1265,7 +1265,7 @@ rooms:
     to_room: 3605
   extra_descriptions: []
 mobiles:
-- vnum: 3600
+- vnum: 3626
   namelist: than kosis jeddak zodanga ruler king
   short_desc: Than Kosis, Jeddak of Zodanga
   long_desc: Than Kosis, the mighty Jeddak of Zodanga, stands here in regal authority.
@@ -1300,7 +1300,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3601
+- vnum: 3627
   namelist: sab than prince zodanga
   short_desc: Sab Than, Prince of Zodanga
   long_desc: Sab Than, arrogant Prince of Zodanga, stands here with evident self-importance.
@@ -1335,7 +1335,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3602
+- vnum: 3628
   namelist: zat arrras jed zodanga schemer
   short_desc: Zat Arrras, Jed of Zodanga
   long_desc: Zat Arrras, a scheming Jed of Zodanga, watches everything with calculating
@@ -1371,7 +1371,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3603
+- vnum: 3629
   namelist: spy master intelligence chief zodanga
   short_desc: the Spy Master
   long_desc: The head of Zodangan intelligence stands here, his eyes missing nothing.
@@ -1406,7 +1406,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3604
+- vnum: 3630
   namelist: palace guard elite royal zodangan
   short_desc: an elite palace guard
   long_desc: An elite guard in ornate purple armor stands at attention here.
@@ -1437,7 +1437,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3605
+- vnum: 3631
   namelist: zodangan soldier warrior guard
   short_desc: a Zodangan soldier
   long_desc: A Zodangan soldier in dark purple stands guard here.
@@ -1466,7 +1466,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3606
+- vnum: 3632
   namelist: officer military commander zodangan
   short_desc: a Zodangan officer
   long_desc: A military officer in decorated purple armor commands here.
@@ -1495,7 +1495,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3607
+- vnum: 3633
   namelist: weaponsmith armorer crafter zodangan
   short_desc: a Zodangan weaponsmith
   long_desc: A skilled weaponsmith works at his forge here.
@@ -1526,7 +1526,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3608
+- vnum: 3634
   namelist: merchant trader zodangan shrewd
   short_desc: a Zodangan merchant
   long_desc: A shrewd Zodangan merchant eyes potential customers here.
@@ -1555,7 +1555,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3609
+- vnum: 3635
   namelist: spy agent infiltrator zodangan
   short_desc: a Zodangan spy
   long_desc: A nondescript figure who might be a spy watches carefully here.
@@ -1586,7 +1586,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3610
+- vnum: 3636
   namelist: assassin killer zodangan deadly
   short_desc: a Zodangan assassin
   long_desc: A deadly-looking figure in dark clothing watches from the shadows.
@@ -1617,7 +1617,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3611
+- vnum: 3637
   namelist: instructor trainer drill sergeant zodangan
   short_desc: a military instructor
   long_desc: A stern military instructor drills recruits here.
@@ -1648,7 +1648,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3612
+- vnum: 3638
   namelist: priest war temple zodangan
   short_desc: a priest of war
   long_desc: A priest in dark robes tends to the temple here.
@@ -1679,7 +1679,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3613
+- vnum: 3639
   namelist: jailer guard torturer zodangan
   short_desc: a prison guard
   long_desc: A harsh-faced guard watches the prisoners with cold eyes.
@@ -1708,7 +1708,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3614
+- vnum: 3640
   namelist: gladiator arena fighter zodangan
   short_desc: an arena gladiator
   long_desc: A scarred gladiator awaits the next match here.
@@ -1737,7 +1737,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3615
+- vnum: 3641
   namelist: noble courtier zodangan
   short_desc: a Zodangan noble
   long_desc: A well-dressed noble conducts business here.
@@ -1768,7 +1768,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3616
+- vnum: 3642
   namelist: citizen zodangan commoner
   short_desc: a Zodangan citizen
   long_desc: A Zodangan citizen goes about their business here.
@@ -1797,7 +1797,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3617
+- vnum: 3643
   namelist: thief pickpocket zodangan criminal
   short_desc: a Zodangan thief
   long_desc: A shifty-eyed thief looks for opportunities here.
@@ -1826,7 +1826,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3618
+- vnum: 3644
   namelist: tavern keeper bartender zodangan
   short_desc: a tavern keeper
   long_desc: A tavern keeper serves drinks and gossip here.
@@ -1855,7 +1855,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
-- vnum: 3619
+- vnum: 3645
   namelist: messenger courier zodangan
   short_desc: a messenger
   long_desc: A swift messenger rushes past on urgent business.
@@ -1882,7 +1882,7 @@ mobiles:
     position: 8
     default_position: 8
     sex: 2
-- vnum: 3620
+- vnum: 3646
   namelist: engineer mechanic technician zodangan
   short_desc: a Zodangan engineer
   long_desc: An engineer works on mechanical systems here.
@@ -2620,7 +2620,7 @@ objects:
 resets:
 - command: M
   if_flag: 0
-  arg1: 3600
+  arg1: 3626
   arg2: 1
   arg3: 3604
 - command: G
@@ -2634,7 +2634,7 @@ resets:
   arg3: 4
 - command: M
   if_flag: 0
-  arg1: 3601
+  arg1: 3627
   arg2: 1
   arg3: 3609
 - command: G
@@ -2648,7 +2648,7 @@ resets:
   arg3: 4
 - command: M
   if_flag: 0
-  arg1: 3602
+  arg1: 3628
   arg2: 1
   arg3: 3606
 - command: G
@@ -2662,7 +2662,7 @@ resets:
   arg3: 4
 - command: M
   if_flag: 0
-  arg1: 3603
+  arg1: 3629
   arg2: 1
   arg3: 3608
 - command: G
@@ -2675,7 +2675,7 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3604
+  arg1: 3630
   arg2: 2
   arg3: 3602
 - command: G
@@ -2689,7 +2689,7 @@ resets:
   arg3: 5
 - command: M
   if_flag: 0
-  arg1: 3604
+  arg1: 3630
   arg2: 2
   arg3: 3603
 - command: G
@@ -2703,12 +2703,12 @@ resets:
   arg3: 5
 - command: M
   if_flag: 0
-  arg1: 3604
+  arg1: 3630
   arg2: 2
   arg3: 3604
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 4
   arg3: 3610
 - command: G
@@ -2722,17 +2722,17 @@ resets:
   arg3: 4
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 3
   arg3: 3611
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 2
   arg3: 3614
 - command: M
   if_flag: 0
-  arg1: 3606
+  arg1: 3632
   arg2: 2
   arg3: 3613
 - command: G
@@ -2750,7 +2750,7 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3606
+  arg1: 3632
   arg2: 1
   arg3: 3616
 - command: G
@@ -2759,7 +2759,7 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3611
+  arg1: 3637
   arg2: 1
   arg3: 3614
 - command: G
@@ -2768,7 +2768,7 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3611
+  arg1: 3637
   arg2: 1
   arg3: 3617
 - command: G
@@ -2777,7 +2777,7 @@ resets:
   arg2: 100
 - command: M
   if_flag: 0
-  arg1: 3607
+  arg1: 3633
   arg2: 1
   arg3: 3624
 - command: G
@@ -2798,7 +2798,7 @@ resets:
   arg2: 50
 - command: M
   if_flag: 0
-  arg1: 3608
+  arg1: 3634
   arg2: 2
   arg3: 3621
 - command: G
@@ -2811,7 +2811,7 @@ resets:
   arg2: 10
 - command: M
   if_flag: 0
-  arg1: 3608
+  arg1: 3634
   arg2: 1
   arg3: 3623
 - command: G
@@ -2824,7 +2824,7 @@ resets:
   arg2: 20
 - command: M
   if_flag: 0
-  arg1: 3609
+  arg1: 3635
   arg2: 2
   arg3: 3630
 - command: G
@@ -2837,12 +2837,12 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3609
+  arg1: 3635
   arg2: 1
   arg3: 3631
 - command: M
   if_flag: 0
-  arg1: 3609
+  arg1: 3635
   arg2: 1
   arg3: 3633
 - command: G
@@ -2851,7 +2851,7 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3610
+  arg1: 3636
   arg2: 1
   arg3: 3637
 - command: G
@@ -2864,12 +2864,12 @@ resets:
   arg2: 3
 - command: M
   if_flag: 0
-  arg1: 3610
+  arg1: 3636
   arg2: 1
   arg3: 3638
 - command: M
   if_flag: 0
-  arg1: 3612
+  arg1: 3638
   arg2: 1
   arg3: 3645
 - command: G
@@ -2878,7 +2878,7 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3613
+  arg1: 3639
   arg2: 2
   arg3: 3646
 - command: G
@@ -2891,7 +2891,7 @@ resets:
   arg2: 5
 - command: M
   if_flag: 0
-  arg1: 3613
+  arg1: 3639
   arg2: 2
   arg3: 3647
 - command: G
@@ -2900,12 +2900,12 @@ resets:
   arg2: 3
 - command: M
   if_flag: 0
-  arg1: 3613
+  arg1: 3639
   arg2: 1
   arg3: 3648
 - command: M
   if_flag: 0
-  arg1: 3614
+  arg1: 3640
   arg2: 2
   arg3: 3644
 - command: G
@@ -2919,7 +2919,7 @@ resets:
   arg3: 4
 - command: M
   if_flag: 0
-  arg1: 3615
+  arg1: 3641
   arg2: 2
   arg3: 3600
 - command: E
@@ -2933,27 +2933,27 @@ resets:
   arg2: 5
 - command: M
   if_flag: 0
-  arg1: 3615
+  arg1: 3641
   arg2: 1
   arg3: 3605
 - command: M
   if_flag: 0
-  arg1: 3616
+  arg1: 3642
   arg2: 5
   arg3: 3620
 - command: M
   if_flag: 0
-  arg1: 3616
+  arg1: 3642
   arg2: 3
   arg3: 3621
 - command: M
   if_flag: 0
-  arg1: 3616
+  arg1: 3642
   arg2: 2
   arg3: 3600
 - command: M
   if_flag: 0
-  arg1: 3617
+  arg1: 3643
   arg2: 2
   arg3: 3621
 - command: G
@@ -2962,12 +2962,12 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3617
+  arg1: 3643
   arg2: 1
   arg3: 3632
 - command: M
   if_flag: 0
-  arg1: 3618
+  arg1: 3644
   arg2: 1
   arg3: 3628
 - command: G
@@ -2976,17 +2976,17 @@ resets:
   arg2: 10
 - command: M
   if_flag: 0
-  arg1: 3619
+  arg1: 3645
   arg2: 2
   arg3: 3600
 - command: M
   if_flag: 0
-  arg1: 3619
+  arg1: 3645
   arg2: 1
   arg3: 3616
 - command: M
   if_flag: 0
-  arg1: 3620
+  arg1: 3646
   arg2: 1
   arg3: 3615
 - command: G
@@ -2995,22 +2995,22 @@ resets:
   arg2: 1
 - command: M
   if_flag: 0
-  arg1: 3620
+  arg1: 3646
   arg2: 1
   arg3: 3618
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 2
   arg3: 3640
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 2
   arg3: 3641
 - command: M
   if_flag: 0
-  arg1: 3605
+  arg1: 3631
   arg2: 2
   arg3: 3642
 - command: O
@@ -3164,7 +3164,7 @@ quests:
   giver: 3006
   type: 63
   duration: 168
-  target: 3620
+  target: 3646
   item: 0
   flags: 33554432
   reward_exp: 3200
@@ -3192,7 +3192,6 @@ quests:
     defenses. Infiltrate their territory and scout the key positions. This information
     is vital for Helium's security.'
   complete_text: The officer examines your report carefully. 'Excellent intelligence.
-    This will help Helium immensely. Take this reward - you've done Mars a great
-    service.'
-  fail_text: The officer looks anxious. 'We still need that intelligence. Helium
-    depends on it.'
+    This will help Helium immensely. Take this reward - you've done Mars a great service.'
+  fail_text: The officer looks anxious. 'We still need that intelligence. Helium depends
+    on it.'
