@@ -3161,7 +3161,7 @@ resets:
 shops: []
 quests:
 - qnum: 3601
-  giver: 3001
+  giver: 3006
   type: 63
   duration: 168
   target: 3620
@@ -3179,7 +3179,7 @@ quests:
   fail_text: The spy looks concerned. 'The operative still threatens Helium. We need
     your courage.'
 - qnum: 3602
-  giver: 3002
+  giver: 3007
   type: 64
   duration: 144
   target: 3650

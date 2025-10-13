@@ -12,22 +12,22 @@ setup:
     password: test
     level: 5
     class: warrior
-  start_room: 3002  # Where priest guildmaster is located
+  start_room: 3031  # Where Beast-Handler is located
   gold: 100
 
 steps:
   - action: look
-    description: "Verify we're in the room with priest"
+    description: "Verify we're in the room with Beast-Handler"
     expected:
-      - pattern: "priest|guildmaster"
-        message: "Priest guildmaster should be present"
+      - pattern: "beast-handler|Beast-Handler"
+        message: "Beast-Handler should be present"
 
   - action: command
-    description: "Ask priest for quest"
-    command: "ask priest quest"
+    description: "Ask Beast-Handler for quest"
+    command: "ask handler quest"
     expected:
-      - pattern: "blessing|offering|wine|ritual"
-        message: "Priest should offer temple quest"
+      - pattern: "blessing|offering|wine|ritual|priest|temple"
+        message: "Beast-Handler should offer temple delivery quest"
 
   - action: command
     description: "Check quest status"

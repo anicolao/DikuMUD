@@ -1,20 +1,20 @@
 # Integration test for Shop #7: Master Leather Worker
 #
 # This test validates that the Master Leather Worker's shop in Greater Helium
-# allows players to list and purchase lamps and radium items.
+# allows players to list and purchase leather goods and supplies.
 #
 # Shop Details:
 # - Shop #7
 # - Keeper: mob 3906 (the Master Leather Worker)
 # - Location: room 3925 (Leather Worker's Shop)
-# - Products: silver lamp, copper lamp, brass lamp, radium rod
+# - Products: heavy shackles, Zodangan wine, rope, Zodangan medal, calot collar, calot harness
 
 test:
-  id: test_shop_07_leather_worker_lamps
-  description: "Verify Master Leather Worker shop allows listing and purchasing lamps"
+  id: test_shop_07_leather_worker_misc
+  description: "Verify Master Leather Worker shop allows listing and purchasing leather goods"
   author: Integration Test Framework
   created: 2025-10-12
-  tags: [shop, lamps, radium, greater_helium]
+  tags: [shop, leather, supplies, greater_helium]
 
 setup:
   character:
@@ -32,17 +32,16 @@ steps:
       - pattern: "Leather|leather|Worker|worker"
         message: "Leather worker should be visible in the room"
 
-  # Step 2: Verify shopkeeper responds (shop may be closed at certain times)
+  # Step 2: Verify shopkeeper responds (shop has limited hours: 8-14 and 15-21)
   - action: command
-    description: "Try to list items (shop has limited hours)"
+    description: "List items for sale"
     command: "list"
     expected:
-      - pattern: "lamp|silver|copper|brass|radium|rod|Come back later"
+      - pattern: "shackles|wine|rope|medal|collar|harness|Come back later"
         message: "Shop should respond (either with items or closed message)"
 
 result:
   should_pass: true
-  description: "Test passes when Master Leather Worker shop responds (shop has limited operating hours)"
+  description: "Test passes when Master Leather Worker shop is fully functional"
   notes: |
-    This shop operates on a schedule and may be closed at certain game times.
-    The test verifies the shopkeeper is present and responds to commands.
+    This shop sells leather goods including rope, calot training equipment, and misc supplies.

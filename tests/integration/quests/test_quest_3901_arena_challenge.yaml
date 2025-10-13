@@ -23,7 +23,7 @@ steps:
         message: "Should be in Greater Helium"
 
   - action: command
-    description: "Try to find quest giver (mob 3902)"
+    description: "Try to find quest giver (mob 3925)"
     command: "where"
     expected:
       - pattern: "."

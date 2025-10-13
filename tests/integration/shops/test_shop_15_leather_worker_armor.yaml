@@ -37,7 +37,7 @@ steps:
     description: "Try to list items (shop has limited operating hours)"
     command: "list"
     expected:
-      - pattern: "studded|harness|helm|boots|gloves|sleeves|lamp|Come back later"
+      - pattern: "studded|harness|helm|boots|gloves|sleeves|Come back later"
         message: "Shop should respond (either with items or closed message)"
 
 result:
