@@ -26,6 +26,6 @@ Whether you're interested in world-building, coding, or just want to follow the 
 
 This repository contains the original DikuMUD Alfa and Gamma releases. DikuMUD was created by Hans Henrik Staerfeldt, Katja Nyboe, Tom Madsen, Michael Seifert, and Sebastian Hammer.
 
-Please note the LGPL additions to licensing which you'll find in the doc/license.doc document.
+Please note the LGPL additions to licensing which you'll find in the docs/original/license.doc document.
 
 Original Alfa release uploaded by Michael Seifert on 2020-02-03 20:02

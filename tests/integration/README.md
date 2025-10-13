@@ -515,7 +515,7 @@ Planned features:
 ## Support
 
 For questions or issues:
-- Check [INTEGRATION_TEST_FRAMEWORK_DESIGN.md](../../INTEGRATION_TEST_FRAMEWORK_DESIGN.md)
+- Check [INTEGRATION_TEST_FRAMEWORK_DESIGN.md](../../docs/testing/INTEGRATION_TEST_FRAMEWORK_DESIGN.md)
 - Review example tests in each subdirectory
 - Ask in project Discord: https://discord.gg/MeNQzXNCfb
 
