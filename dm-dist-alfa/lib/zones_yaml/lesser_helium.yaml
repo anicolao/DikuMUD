@@ -4982,7 +4982,7 @@ quests:
     Vigilance keeps Helium safe. Here is your compensation.'
   fail_text: The warrior looks disappointed. 'I still need that patrol completed.'
 - qnum: 3003
-  giver: 3021
+  giver: 3008
   type: 61
   duration: 96
   target: 3021
