@@ -20,31 +20,31 @@ steps:
   description: Verify starting location in Ptarth
 - action: command
   command: load obj 4300
-  description: Load weapon 4300 (ptarth)
+  description: Load weapon 4300 (sword)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: ptarth
+  - pattern: sword
 - action: command
-  command: wield ptarth
+  command: wield sword
   description: Wield the weapon
   expected:
   - pattern: ok\.?|wield
 - action: command
-  command: remove ptarth
+  command: remove sword
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop ptarth
+  command: drop sword
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge ptarth
+  command: purge sword
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
@@ -62,7 +62,7 @@ steps:
   command: wear harness
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove harness
   description: Remove the armor

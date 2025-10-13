@@ -63,11 +63,11 @@ def get_wear_command(wear_flags):
         return "wear", "finger"
     return "wear", None
 
-def get_best_keyword(namelist, short_desc):
+def get_best_keyword(namelist, short_desc, all_objects_in_zone):
     """Get the best keyword from a namelist for testing.
     
-    Prefers keywords that appear as complete words in short_desc,
-    or falls back to the first keyword.
+    Prefers keywords that are unique and specific to this object,
+    avoiding zone-wide generic keywords that might match multiple objects.
     """
     if not namelist:
         return None
@@ -76,16 +76,32 @@ def get_best_keyword(namelist, short_desc):
     if not keywords:
         return None
     
-    # If we have a short description, try to find a keyword that appears in it
+    # Count how many objects in the zone use each keyword
+    keyword_counts = {}
+    for keyword in keywords:
+        count = 0
+        for obj in all_objects_in_zone:
+            obj_namelist = obj.get('namelist', '')
+            if keyword in obj_namelist.split():
+                count += 1
+        keyword_counts[keyword] = count
+    
+    # Prefer keywords that appear in fewer objects (more specific)
+    # Also prefer keywords that appear in the short description
     if short_desc:
         short_lower = short_desc.lower()
-        # Prefer longer, more specific keywords
-        for keyword in sorted(keywords, key=len, reverse=True):
-            if keyword.lower() in short_lower:
-                return keyword
+        # Sort by: 1) appears in short desc, 2) used by fewer objects, 3) length
+        def keyword_score(kw):
+            in_desc = 1 if kw.lower() in short_lower else 0
+            uniqueness = -keyword_counts.get(kw, 999)  # Negative so fewer is better
+            length = len(kw)
+            return (in_desc, uniqueness, length)
+        
+        keywords_sorted = sorted(keywords, key=keyword_score, reverse=True)
+        return keywords_sorted[0]
     
-    # Fall back to first keyword
-    return keywords[0]
+    # Fall back to most unique keyword
+    return min(keywords, key=lambda k: keyword_counts.get(k, 999))
 
 def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
     """Generate a test YAML file for a zone."""
@@ -109,7 +125,7 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         if not namelist:
             continue
         
-        keyword = get_best_keyword(namelist, short_desc)
+        keyword = get_best_keyword(namelist, short_desc, objects)
         if not keyword:
             continue
         
@@ -142,17 +158,23 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
                 'expected_pattern': 'OK|hold|light',
                 'type': 'light'
             })
-        elif type_flag == ITEM_ARMOR and (wear_flags & ~ITEM_TAKE):
-            wear_cmd, wear_loc = get_wear_command(wear_flags)
-            testable_objects.append({
-                'vnum': vnum,
-                'keyword': keyword,
-                'short_desc': short_desc,
-                'action': wear_cmd,
-                'expected_pattern': 'OK|wear',
-                'type': 'armor',
-                'wear_location': wear_loc
-            })
+        elif type_flag == ITEM_ARMOR:
+            # Check if it has actual armor wear flags (not just TAKE or HOLD)
+            armor_wear_flags = (ITEM_WEAR_BODY | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS | 
+                              ITEM_WEAR_FEET | ITEM_WEAR_HANDS | ITEM_WEAR_ARMS | 
+                              ITEM_WEAR_ABOUT | ITEM_WEAR_WAISTE | ITEM_WEAR_WRIST | 
+                              ITEM_WEAR_NECK | ITEM_WEAR_FINGER)
+            if wear_flags & armor_wear_flags:
+                wear_cmd, wear_loc = get_wear_command(wear_flags)
+                testable_objects.append({
+                    'vnum': vnum,
+                    'keyword': keyword,
+                    'short_desc': short_desc,
+                    'action': wear_cmd,
+                    'expected_pattern': r'ok\.?|You.*wear',  # More specific to avoid matching "can't wear"
+                    'type': 'armor',
+                    'wear_location': wear_loc
+                })
     
     if not testable_objects:
         print(f"  No testable objects found in {zone_name}, skipping")

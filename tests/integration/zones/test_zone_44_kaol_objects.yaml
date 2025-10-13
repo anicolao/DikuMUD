@@ -20,31 +20,31 @@ steps:
   description: Verify starting location in Kaol
 - action: command
   command: load obj 4500
-  description: Load armor 4500 (kaolian)
+  description: Load armor 4500 (harness)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: kaolian
+  - pattern: harness
 - action: command
-  command: wear kaolian
+  command: wear harness
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
-  command: remove kaolian
+  command: remove harness
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop kaolian
+  command: drop harness
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge kaolian
+  command: purge harness
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy

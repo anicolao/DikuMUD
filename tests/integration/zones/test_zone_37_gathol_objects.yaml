@@ -62,7 +62,7 @@ steps:
   command: wear harness
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove harness
   description: Remove the armor

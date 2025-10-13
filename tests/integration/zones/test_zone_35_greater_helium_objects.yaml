@@ -51,31 +51,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3521
-  description: Load weapon 3521 (quality)
+  description: Load weapon 3521 (sword)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: quality
+  - pattern: sword
 - action: command
-  command: wield quality
+  command: wield sword
   description: Wield the weapon
   expected:
   - pattern: ok\.?|wield
 - action: command
-  command: remove quality
+  command: remove sword
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop quality
+  command: drop sword
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge quality
+  command: purge sword
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
@@ -171,121 +171,121 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3550
-  description: Load armor 3550 (harness)
+  description: Load armor 3550 (simple)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: simple
 - action: command
-  command: wear harness
+  command: wear simple
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
-  command: remove harness
+  command: remove simple
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop simple
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge simple
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3551
-  description: Load armor 3551 (harness)
+  description: Load armor 3551 (quality)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: quality
 - action: command
-  command: wear harness
+  command: wear quality
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
-  command: remove harness
+  command: remove quality
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop quality
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge quality
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3552
-  description: Load armor 3552 (harness)
+  description: Load armor 3552 (noble)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: noble
 - action: command
-  command: wear harness
+  command: wear noble
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
-  command: remove harness
+  command: remove noble
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop noble
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge noble
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3553
-  description: Load armor 3553 (harness)
+  description: Load armor 3553 (palace)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the armor
   expected:
-  - pattern: harness
+  - pattern: palace
 - action: command
-  command: wear harness
+  command: wear palace
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
-  command: remove harness
+  command: remove palace
   description: Remove the armor
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop harness
+  command: drop palace
   description: Drop the armor
   expected:
   - pattern: drop
 - action: command
-  command: purge harness
+  command: purge palace
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
@@ -303,7 +303,7 @@ steps:
   command: wear helmet
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove helmet
   description: Remove the armor
@@ -333,7 +333,7 @@ steps:
   command: wear gauntlets
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove gauntlets
   description: Remove the armor
@@ -363,7 +363,7 @@ steps:
   command: wear combat
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove combat
   description: Remove the armor
@@ -471,31 +471,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3591
-  description: Load weapon 3591 (radium)
+  description: Load weapon 3591 (rifle)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: radium
+  - pattern: rifle
 - action: command
-  command: wield radium
+  command: wield rifle
   description: Wield the weapon
   expected:
   - pattern: ok\.?|wield
 - action: command
-  command: remove radium
+  command: remove rifle
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop rifle
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge rifle
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
@@ -603,7 +603,7 @@ steps:
   command: wear armor
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove armor
   description: Remove the armor
@@ -633,7 +633,7 @@ steps:
   command: wear vambraces
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove vambraces
   description: Remove the armor
@@ -646,36 +646,6 @@ steps:
   - pattern: drop
 - action: command
   command: purge vambraces
-  description: Purge the armor
-  expected:
-  - pattern: ok\.?|destroy
-- action: command
-  command: load obj 3742
-  description: Load armor 3742 (pauldrons)
-  expected:
-  - pattern: ok\.?
-- action: command
-  command: get all
-  description: Pick up the armor
-  expected:
-  - pattern: pauldrons
-- action: command
-  command: wear pauldrons
-  description: Wear the armor
-  expected:
-  - pattern: ok\.?|wear
-- action: command
-  command: remove pauldrons
-  description: Remove the armor
-  expected:
-  - pattern: stop using|stop|remove
-- action: command
-  command: drop pauldrons
-  description: Drop the armor
-  expected:
-  - pattern: drop
-- action: command
-  command: purge pauldrons
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
@@ -693,7 +663,7 @@ steps:
   command: wear greaves
   description: Wear the armor
   expected:
-  - pattern: ok\.?|wear
+  - pattern: ok\.?|You.*wear
 - action: command
   command: remove greaves
   description: Remove the armor
@@ -801,31 +771,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3770
-  description: Load weapon 3770 (battle)
+  description: Load weapon 3770 (axe)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the weapon
   expected:
-  - pattern: battle
+  - pattern: axe
 - action: command
-  command: wield battle
+  command: wield axe
   description: Wield the weapon
   expected:
   - pattern: ok\.?|wield
 - action: command
-  command: remove battle
+  command: remove axe
   description: Remove the weapon
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop battle
+  command: drop axe
   description: Drop the weapon
   expected:
   - pattern: drop
 - action: command
-  command: purge battle
+  command: purge axe
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
@@ -921,91 +891,91 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3900
-  description: Load light 3900 (radium)
+  description: Load light 3900 (small)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: small
 - action: command
-  command: hold radium
+  command: hold small
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove small
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop small
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge small
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3901
-  description: Load light 3901 (radium)
+  description: Load light 3901 (large)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: large
 - action: command
-  command: hold radium
+  command: hold large
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove large
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop large
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge large
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3902
-  description: Load light 3902 (radium)
+  description: Load light 3902 (torch)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: torch
 - action: command
-  command: hold radium
+  command: hold torch
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove torch
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop torch
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge torch
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1041,31 +1011,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3904
-  description: Load light 3904 (radium)
+  description: Load light 3904 (orb)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: orb
 - action: command
-  command: hold radium
+  command: hold orb
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove orb
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop orb
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge orb
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1101,61 +1071,61 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3911
-  description: Load light 3911 (radium)
+  description: Load light 3911 (sphere)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: sphere
 - action: command
-  command: hold radium
+  command: hold sphere
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove sphere
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop sphere
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge sphere
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3920
-  description: Load light 3920 (radium)
+  description: Load light 3920 (rod)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: rod
 - action: command
-  command: hold radium
+  command: hold rod
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove rod
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop rod
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge rod
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1251,31 +1221,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3924
-  description: Load light 3924 (lamp)
+  description: Load light 3924 (gold)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: lamp
+  - pattern: gold
 - action: command
-  command: hold lamp
+  command: hold gold
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove lamp
+  command: remove gold
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop lamp
+  command: drop gold
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge lamp
+  command: purge gold
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1431,151 +1401,151 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3941
-  description: Load light 3941 (phosphor)
+  description: Load light 3941 (stone)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: phosphor
+  - pattern: stone
 - action: command
-  command: hold phosphor
+  command: hold stone
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove phosphor
+  command: remove stone
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop phosphor
+  command: drop stone
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge phosphor
+  command: purge stone
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3942
-  description: Load light 3942 (crystal)
+  description: Load light 3942 (clear)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: crystal
+  - pattern: clear
 - action: command
-  command: hold crystal
+  command: hold clear
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove crystal
+  command: remove clear
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop crystal
+  command: drop clear
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge crystal
+  command: purge clear
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3943
-  description: Load light 3943 (crystal)
+  description: Load light 3943 (blue)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: crystal
+  - pattern: blue
 - action: command
-  command: hold crystal
+  command: hold blue
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove crystal
+  command: remove blue
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop crystal
+  command: drop blue
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge crystal
+  command: purge blue
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3950
-  description: Load light 3950 (crystal)
+  description: Load light 3950 (red)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: crystal
+  - pattern: red
 - action: command
-  command: hold crystal
+  command: hold red
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove crystal
+  command: remove red
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop crystal
+  command: drop red
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge crystal
+  command: purge red
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3951
-  description: Load light 3951 (crystal)
+  description: Load light 3951 (green)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: crystal
+  - pattern: green
 - action: command
-  command: hold crystal
+  command: hold green
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove crystal
+  command: remove green
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop crystal
+  command: drop green
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge crystal
+  command: purge green
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1761,31 +1731,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3964
-  description: Load light 3964 (candle)
+  description: Load light 3964 (white)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: candle
+  - pattern: white
 - action: command
-  command: hold candle
+  command: hold white
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove candle
+  command: remove white
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop candle
+  command: drop white
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge candle
+  command: purge white
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1821,121 +1791,121 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3971
-  description: Load light 3971 (lamp)
+  description: Load light 3971 (oil)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: lamp
+  - pattern: oil
 - action: command
-  command: hold lamp
+  command: hold oil
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove lamp
+  command: remove oil
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop lamp
+  command: drop oil
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge lamp
+  command: purge oil
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3972
-  description: Load light 3972 (radium)
+  description: Load light 3972 (small)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: small
 - action: command
-  command: hold radium
+  command: hold small
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove small
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop small
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge small
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3973
-  description: Load light 3973 (radium)
+  description: Load light 3973 (large)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: large
 - action: command
-  command: hold radium
+  command: hold large
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove large
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop large
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge large
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3974
-  description: Load light 3974 (radium)
+  description: Load light 3974 (torch)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: torch
 - action: command
-  command: hold radium
+  command: hold torch
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove torch
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop torch
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge torch
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -1971,31 +1941,31 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3981
-  description: Load light 3981 (radium)
+  description: Load light 3981 (orb)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: orb
 - action: command
-  command: hold radium
+  command: hold orb
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove orb
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop orb
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge orb
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -2031,91 +2001,91 @@ steps:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3983
-  description: Load light 3983 (radium)
+  description: Load light 3983 (sphere)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: sphere
 - action: command
-  command: hold radium
+  command: hold sphere
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove sphere
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop sphere
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge sphere
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3984
-  description: Load light 3984 (radium)
+  description: Load light 3984 (rod)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: radium
+  - pattern: rod
 - action: command
-  command: hold radium
+  command: hold rod
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove radium
+  command: remove rod
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop radium
+  command: drop rod
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge radium
+  command: purge rod
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
 - action: command
   command: load obj 3990
-  description: Load light 3990 (bright)
+  description: Load light 3990 (brass)
   expected:
   - pattern: ok\.?
 - action: command
   command: get all
   description: Pick up the light
   expected:
-  - pattern: bright
+  - pattern: brass
 - action: command
-  command: hold bright
+  command: hold brass
   description: Hold the light
   expected:
   - pattern: ok\.?|hold|light
 - action: command
-  command: remove bright
+  command: remove brass
   description: Remove the light
   expected:
   - pattern: stop using|stop|remove
 - action: command
-  command: drop bright
+  command: drop brass
   description: Drop the light
   expected:
   - pattern: drop
 - action: command
-  command: purge bright
+  command: purge brass
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
@@ -2181,8 +2151,8 @@ steps:
   - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 72 objects in Greater Helium should be properly configured
+  description: All 71 objects in Greater Helium should be properly configured
   notes: "This test validates that all usable objects in Greater Helium can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
     \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (17), armor (11), lights (42), shields (2)"
+    \ (17), armor (10), lights (42), shields (2)"
