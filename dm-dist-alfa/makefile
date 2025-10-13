@@ -80,7 +80,7 @@ integration_tests: $(INTEGRATION_TEST_OUTPUTS)
 	@echo "=========================================="
 	@echo "Integration Test Results Summary"
 	@echo "=========================================="
-	@python3 -c 'import sys, os, glob; outputs = sorted(glob.glob("integration_test_outputs/**/*.out", recursive=True)); total = len(outputs); passed = sum(1 for f in outputs if open(f).readlines()[-1].strip() == "PASSED"); failed = total - passed; print(f"Total:  {total}"); print(f"Passed: {passed}"); print(f"Failed: {failed}"); print(""); (print("✅ All tests passed!") if failed == 0 else (print(f"❌ {failed} test(s) failed"), print(""), print("Failed tests:"), [print(f"  - {f}") for f in outputs if open(f).readlines()[-1].strip() == "FAILED"])); sys.exit(0 if failed == 0 else 1)'
+	@python3 process_test_results.py
 
 # Legacy test target - now calls integration_tests
 .PHONY: test
@@ -150,3 +150,4 @@ delplay.o : delplay.c structs.h
 
 clean:
 	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built .validate-commands-passed
+	rm -rf integration_test_outputs integration_test_failures
