@@ -23,6 +23,8 @@ class WorldValidator:
         self.all_objects = set()
         self.all_shops = {}  # shop_vnum -> zone_name
         self.shop_keepers = {}  # keeper_vnum -> shop_vnum
+        self.shop_producing = {}  # keeper_vnum -> set of producing item vnums
+        self.keeper_given_items = {}  # keeper_vnum -> set of item vnums from G resets
         self.quest_givers = {}  # giver_vnum -> [quest_vnums]
         self.zones = {}
         self.mobs_with_spec_flag = {}  # vnum -> zone_name
@@ -224,10 +226,15 @@ class WorldValidator:
             else:
                 self.all_shops[shop_vnum] = zone_name
             
-            # Track shop keeper
+            # Track shop keeper and producing items
             keeper_vnum = shop.get('keeper')
             if keeper_vnum:
                 self.shop_keepers[keeper_vnum] = shop_vnum
+                # Track what items this shop produces
+                producing = shop.get('producing', [])
+                if keeper_vnum not in self.shop_producing:
+                    self.shop_producing[keeper_vnum] = set()
+                self.shop_producing[keeper_vnum].update(producing)
             
             # Validate shop keeper exists
             if keeper_vnum and keeper_vnum not in self.all_mobs:
@@ -279,12 +286,14 @@ class WorldValidator:
                     if to_room and to_room != -1 and to_room not in self.all_rooms:
                         self.warning(f"{zone_name}: Room {room['vnum']} exit to non-existent room {to_room}")
             
-            # Check reset commands
+            # Check reset commands and track keeper inventory
+            last_mob_vnum = None
             for reset in data.get('resets', []):
                 cmd = reset.get('command')
                 if cmd == 'M':
                     # Mobile reset
                     mob_vnum = reset.get('arg1')
+                    last_mob_vnum = mob_vnum
                     room_vnum = reset.get('arg3')
                     if mob_vnum and mob_vnum not in self.all_mobs:
                         self.error(f"{zone_name}: Reset references non-existent mobile {mob_vnum}")
@@ -303,6 +312,11 @@ class WorldValidator:
                     obj_vnum = reset.get('arg1')
                     if obj_vnum and obj_vnum not in self.all_objects:
                         self.error(f"{zone_name}: Reset references non-existent object {obj_vnum}")
+                    # Track items given to shopkeepers via G command
+                    if cmd == 'G' and last_mob_vnum and last_mob_vnum in self.shop_keepers:
+                        if last_mob_vnum not in self.keeper_given_items:
+                            self.keeper_given_items[last_mob_vnum] = set()
+                        self.keeper_given_items[last_mob_vnum].add(obj_vnum)
                 elif cmd == 'P':
                     # Put object in object
                     obj1 = reset.get('arg1')
@@ -378,6 +392,37 @@ class WorldValidator:
                 self.error(f"Mobile {giver_vnum} is quest giver for quest(s) {quest_vnums} but also has hardcoded special procedure in spec_assign.c. "
                           f"Mob can only have ONE special procedure - quests will NOT work!")
     
+    def validate_shop_inventory(self):
+        """Validate that shopkeeper zone reset inventory matches shop producing list.
+        
+        DikuMUD shops display items from the keeper's carrying inventory. Zone resets
+        must give the keeper objects via G commands that match the shop's producing list.
+        """
+        for keeper_vnum, shop_vnum in self.shop_keepers.items():
+            producing = self.shop_producing.get(keeper_vnum, set())
+            given_items = self.keeper_given_items.get(keeper_vnum, set())
+            
+            # Check if keeper is given any items
+            if not given_items and producing:
+                self.error(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) has no G reset commands to give inventory! "
+                          f"Shop produces {sorted(producing)} but keeper is given nothing via zone resets. "
+                          f"Players will see empty shop!")
+            
+            # Check for mismatches
+            if producing and given_items:
+                missing_items = producing - given_items
+                extra_items = given_items - producing
+                
+                if missing_items:
+                    self.error(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset missing items! "
+                              f"Shop produces {sorted(producing)} but keeper only given {sorted(given_items)}. "
+                              f"Missing: {sorted(missing_items)}. Players won't see these items in shop!")
+                
+                if extra_items:
+                    self.warning(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset has extra items. "
+                                f"Shop produces {sorted(producing)} but keeper given {sorted(given_items)}. "
+                                f"Extra items: {sorted(extra_items)}. These will show in shop but can't be restocked!")
+    
     def validate_all(self, yaml_files: List[str]):
         """Validate all YAML zone files."""
         print(f"Validating {len(yaml_files)} zone files...")
@@ -394,6 +439,9 @@ class WorldValidator:
         
         # Fourth pass: check for special procedure collisions
         self.validate_spec_procedure_collisions()
+        
+        # Fifth pass: check shop inventory matches zone resets
+        self.validate_shop_inventory()
         
         # Print results
         print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects, {len(self.all_shops)} shops")
