@@ -404,7 +404,7 @@ class WorldValidator:
             
             # Check if keeper is given any items
             if not given_items and producing:
-                self.warning(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) has no G reset commands to give inventory! "
+                self.error(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) has no G reset commands to give inventory! "
                             f"Shop produces {sorted(producing)} but keeper is given nothing via zone resets. "
                             f"Players will see empty shop!")
             
@@ -414,12 +414,12 @@ class WorldValidator:
                 extra_items = given_items - producing
                 
                 if missing_items:
-                    self.warning(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset missing items! "
+                    self.error(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset missing items! "
                                 f"Shop produces {sorted(producing)} but keeper only given {sorted(given_items)}. "
                                 f"Missing: {sorted(missing_items)}. Players won't see these items in shop!")
                 
                 if extra_items:
-                    self.warning(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset has extra items. "
+                    self.error(f"Shopkeeper mob {keeper_vnum} (shop #{shop_vnum}) zone reset has extra items. "
                                 f"Shop produces {sorted(producing)} but keeper given {sorted(given_items)}. "
                                 f"Extra items: {sorted(extra_items)}. These will show in shop but can't be restocked!")
     

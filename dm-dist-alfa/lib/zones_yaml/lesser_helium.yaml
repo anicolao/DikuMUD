@@ -4173,6 +4173,10 @@ resets:
   arg2: 100
 - command: G
   if_flag: 1
+  arg1: 3033
+  arg2: 100
+- command: G
+  if_flag: 1
   arg1: 3034
   arg2: 100
 - command: G
@@ -4217,30 +4221,6 @@ resets:
   arg1: 3010
   arg2: 1
   arg3: 3035
-- command: G
-  if_flag: 1
-  arg1: 3060
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3061
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3062
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3063
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3064
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 3065
-  arg2: 100
 - command: G
   if_flag: 1
   arg1: 3066
@@ -4308,16 +4288,37 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
+  arg1: 3100
+  arg2: 1
+  arg3: 3007
+- command: G
+  if_flag: 1
+  arg1: 3100
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3101
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3102
+  arg2: 100
+- command: M
+  if_flag: 0
   arg1: 3043
   arg2: 1
   arg3: 3003
 - command: G
   if_flag: 1
-  arg1: 3002
+  arg1: 3502
   arg2: 100
 - command: G
   if_flag: 1
-  arg1: 3004
+  arg1: 3503
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3504
   arg2: 100
 - command: E
   if_flag: 1
@@ -4387,6 +4388,10 @@ resets:
   arg1: 3046
   arg2: 1
   arg3: 3048
+- command: G
+  if_flag: 1
+  arg1: 3002
+  arg2: 100
 - command: G
   if_flag: 1
   arg1: 3003
@@ -4645,9 +4650,6 @@ shops:
   producing:
   - 3010
   - 3011
-  - 3138
-  - 3000
-  - 3001
   profit_buy: 1.1
   profit_sell: 1.0
   buy_types: []
@@ -4861,7 +4863,7 @@ shops:
   temper2: 0
   keeper: 3100
   with_who: 0
-  in_room: 3106
+  in_room: 3007
   open1: 6
   close1: 23
   open2: 23
