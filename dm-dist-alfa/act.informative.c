@@ -1414,13 +1414,13 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 			} else if (!strcasecmp(zone_table[i].name, "Zodanga - Enemy City")) {
 				strcat(buf, "  Level Range: 10-18\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Zodanga Wilderness")) {
-				strcat(buf, "  Level Range: 14-22\n\r");
+				strcat(buf, "  Level Range: 14-20\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Gathol - Allied City")) {
 				strcat(buf, "  Level Range: 12-20\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Ptarth - Allied City")) {
-				strcat(buf, "  Level Range: 15-23\n\r");
+				strcat(buf, "  Level Range: 15-20\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Kaol - Allied City")) {
-				strcat(buf, "  Level Range: 18-26\n\r");
+				strcat(buf, "  Level Range: 16-20\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Thark Territory")) {
 				strcat(buf, "  Level Range: 3-6\n\r");
 			} else if (!strcasecmp(zone_table[i].name, "Atmosphere Factory - Main Levels")) {
