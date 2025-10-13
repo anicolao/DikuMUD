@@ -38,7 +38,7 @@ def main():
         
         # Create failures directory structure
         os.makedirs("integration_test_failures", exist_ok=True)
-        for subdir in ["shops", "items", "quests"]:
+        for subdir in ["shops", "items", "quests", "zones"]:
             os.makedirs(f"integration_test_failures/{subdir}", exist_ok=True)
         
         # Move failed test outputs

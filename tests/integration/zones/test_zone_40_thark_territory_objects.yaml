@@ -1,0 +1,448 @@
+test:
+  id: test_zone_40_objects
+  description: Verify all objects in Thark Territory are properly configured and can
+    be used
+  author: Integration Test Framework
+  created: '2025-10-13'
+  tags:
+  - zone_test
+  - object_validation
+  - thark_territory
+setup:
+  character:
+    name: TestWizard
+    password: test
+    class: warrior
+    level: 34
+  start_room: 1200
+  gold: 0
+steps:
+- action: look
+  description: Verify starting location in Thark Territory
+- action: command
+  command: load obj 4100
+  description: Load weapon 4100 (longsword)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: longsword
+- action: command
+  command: wield longsword
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove longsword
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop longsword
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge longsword
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4102
+  description: Load weapon 4102 (barbed)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: barbed
+- action: command
+  command: wield barbed
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove barbed
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop barbed
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge barbed
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4103
+  description: Load weapon 4103 (meteorite)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: meteorite
+- action: command
+  command: wield meteorite
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove meteorite
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop meteorite
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge meteorite
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4104
+  description: Load weapon 4104 (fighting)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: fighting
+- action: command
+  command: wield fighting
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove fighting
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop fighting
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge fighting
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4105
+  description: Load weapon 4105 (short)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: short
+- action: command
+  command: wield short
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove short
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop short
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge short
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4110
+  description: Load armor 4110 (harness)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: harness
+- action: command
+  command: wear harness
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove harness
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop harness
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge harness
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4111
+  description: Load armor 4111 (ornate)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: ornate
+- action: command
+  command: wear ornate
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove ornate
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop ornate
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge ornate
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4112
+  description: Load armor 4112 (bracers)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: bracers
+- action: command
+  command: wear bracers
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove bracers
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop bracers
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge bracers
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4113
+  description: Load armor 4113 (boots)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: boots
+- action: command
+  command: wear boots
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove boots
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop boots
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge boots
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4114
+  description: Load armor 4114 (helmet)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: helmet
+- action: command
+  command: wear helmet
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove helmet
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop helmet
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge helmet
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4115
+  description: Load shield 4115 (shield)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the shield
+  expected:
+  - pattern: shield
+- action: command
+  command: wear shield
+  description: Wear the shield
+  expected:
+  - pattern: start using|wear
+- action: command
+  command: remove shield
+  description: Remove the shield
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop shield
+  description: Drop the shield
+  expected:
+  - pattern: drop
+- action: command
+  command: purge shield
+  description: Purge the shield
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4132
+  description: Load armor 4132 (belt)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the armor
+  expected:
+  - pattern: belt
+- action: command
+  command: wear belt
+  description: Wear the armor
+  expected:
+  - pattern: ok\.?|You.*wear
+- action: command
+  command: remove belt
+  description: Remove the armor
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop belt
+  description: Drop the armor
+  expected:
+  - pattern: drop
+- action: command
+  command: purge belt
+  description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4136
+  description: Load weapon 4136 (practice)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: practice
+- action: command
+  command: wield practice
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove practice
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop practice
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge practice
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4090
+  description: Load weapon 4090 (tarkas)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the weapon
+  expected:
+  - pattern: tarkas
+- action: command
+  command: wield tarkas
+  description: Wield the weapon
+  expected:
+  - pattern: ok\.?|wield
+- action: command
+  command: remove tarkas
+  description: Remove the weapon
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop tarkas
+  description: Drop the weapon
+  expected:
+  - pattern: drop
+- action: command
+  command: purge tarkas
+  description: Purge the weapon
+  expected:
+  - pattern: ok\.?|destroy
+result:
+  should_pass: true
+  description: All 14 objects in Thark Territory should be properly configured
+  notes: "This test validates that all usable objects in Thark Territory can be:\n\
+    \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
+    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
+    \ (7), armor (6), lights (0), shields (1)"
