@@ -6509,7 +6509,7 @@ shops:
   temper2: 0
   keeper: 3943
   with_who: 0
-  in_room: 3916
+  in_room: 3903
   open1: 0
   close1: 28
   open2: 0
@@ -6534,7 +6534,7 @@ shops:
   temper2: 0
   keeper: 3944
   with_who: 0
-  in_room: 3935
+  in_room: 3967
   open1: 0
   close1: 28
   open2: 0

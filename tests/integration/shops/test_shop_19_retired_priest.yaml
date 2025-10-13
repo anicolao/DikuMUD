@@ -1,0 +1,65 @@
+# Integration test for Shop #19: Red Martian Retired Priest
+#
+# This test validates that the Retired Priest's shop at the Noble's Guild
+# allows players to list and purchase fine wines.
+#
+# Shop Details:
+# - Shop #19
+# - Keeper: mob 3043 (the Red Martian Retired Priest)
+# - Location: room 3003 (Noble's Common Room)
+# - Products: vintage wine (3502), aged whiskey (3503), rare wine (3504)
+
+test:
+  id: test_shop_19_retired_priest
+  description: "Verify Retired Priest shop allows listing and purchasing fine wines"
+  author: Integration Test Framework
+  created: 2025-10-13
+  tags: [shop, wine, whiskey, nobles, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 3
+  start_room: 3003  # Noble's Common Room
+  gold: 1000
+
+steps:
+  # Step 1: Verify the priest is present
+  - action: look
+    description: "Look around to see the priest"
+    expected:
+      - pattern: "Martian|waiter|spiritual"
+        message: "Retired Priest should be visible in the room"
+
+  # Step 2: List available items
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "wine|whiskey|vintage|aged|rare"
+        message: "Should show fine wines and spirits for sale"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores you|not interested in trading"
+        message: "Shop should respond to list command"
+
+  # Step 3: Purchase an item
+  - action: command
+    description: "Buy wine from the priest"
+    command: "buy wine"
+    expected:
+      - pattern: "You buy|You purchase|You now have|will be|gold"
+        message: "Should be able to purchase wine"
+
+  # Step 4: Verify the item is in inventory
+  - action: inventory
+    description: "Check that wine is in inventory"
+    expected:
+      - pattern: "wine|vintage|rare"
+        message: "Purchased wine should be in inventory"
+
+result:
+  should_pass: true
+  description: "Test passes when Retired Priest's shop is fully functional"
