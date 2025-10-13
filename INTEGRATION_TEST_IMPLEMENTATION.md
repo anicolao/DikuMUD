@@ -56,6 +56,7 @@ Added `integration_tests` target that:
 - Generates summary report from output files
 - Exit code reflects test results (0 = all pass, 1 = failures)
 - Integrated into `make all` via `test` target
+- **NEW**: Failed test outputs moved to `integration_test_failures/` for incremental retry
 
 ### 4. Example Test
 
@@ -115,6 +116,26 @@ This will:
 2. Build dmserver
 3. Build worldfiles
 4. Run integration tests
+
+### Retry Failed Tests (NEW)
+
+When tests fail, their outputs are moved to `integration_test_failures/`. 
+Running `make all` again will only rerun the failed tests:
+
+```bash
+# First run - some tests fail
+make all
+# Output: "❌ 2 test(s) failed"
+# Failed outputs moved to integration_test_failures/
+
+# Second run - only failed tests rerun
+make all
+# Only 2 tests run instead of all 53+
+
+# Repeat until all tests pass
+```
+
+See `INTEGRATION_TEST_RETRY_FEATURE.md` for detailed documentation.
 
 ## Test Output Example
 
