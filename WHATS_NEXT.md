@@ -150,11 +150,11 @@ Add 1-3 quests per major zone:
 - "Jetan Tournament" - Special quest related to Martian chess
 - "Gahan's Trust" - DELIVERY quest proving loyalty
 
-**Ptarth (Levels 15-23):**
+**Ptarth (Levels 15-20):**
 - "Thuvia's Request" - Quest involving banth control
 - "Diplomatic Mission" - DELIVERY quest between cities
 
-**Kaol (Levels 18-26):**
+**Kaol (Levels 16-20):**
 - "Kulan Tith's Honor" - KILL quest against dishonorable enemies
 - "Military Training" - Multi-part quest chain
 
@@ -162,7 +162,7 @@ Add 1-3 quests per major zone:
 - "Tars Tarkas's Challenge" - Advanced KILL quest (already have Sola's quest)
 - "Proving Grounds" - Arena-style quest
 
-**Zodanga (Enemy Territory - Levels 18-26):**
+**Zodanga (Enemy Territory - Levels 16-20):**
 - "Sabotage Mission" - Risky quest in enemy territory
 - "Intelligence Gathering" - EXPLORE quest with stealth elements
 
