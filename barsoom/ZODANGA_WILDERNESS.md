@@ -12,7 +12,7 @@ The wilderness stretches across several hundred miles of dead sea bottom plains 
 
 **Zone Number:** 38  
 **Virtual Number Range:** 3650-3749 (100 rooms)  
-**Target Level Range:** 14-22 adventurers  
+**Target Level Range:** 14-20 adventurers  
 **Zone Type:** Wilderness/Contested territory  
 **Terrain:** Dead sea bottom plains (sector type 4), ruins (sector type 1)
 

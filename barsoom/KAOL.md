@@ -12,7 +12,7 @@ Kaol is located in the northern equatorial region of Barsoom, several days' jour
 
 **Zone Number:** 44  
 **Virtual Number Range:** 4500-4599 (100 rooms)  
-**Target Level Range:** 18-26 adventurers  
+**Target Level Range:** 16-20 adventurers  
 **Zone Type:** Allied city/Military center  
 **Terrain:** City (sector type 1), Indoor areas (sector type 0)
 
@@ -35,7 +35,7 @@ A thriving commercial center where Kaolian merchants pride themselves on fair de
 
 ## Important NPCs and Encounters
 
-### Kulan Tith, Jeddak of Kaol (Level 24)
+### Kulan Tith, Jeddak of Kaol (Level 20)
 The ruler of Kaol and one of Barsoom's most honorable leaders. Tall, strong, and bearing himself with quiet confidence, Kulan Tith embodies the ideal of nobility through character rather than mere rank. His most famous act was releasing Princess Thuvia from their betrothal when he realized she loved Carthoris of Helium - choosing her happiness over his own desires. This selfless decision earned him respect throughout Mars and strengthened the alliance between Kaol and Helium.
 
 **Location:** Throne Room (room 4503)  
@@ -45,7 +45,7 @@ The ruler of Kaol and one of Barsoom's most honorable leaders. Tall, strong, and
 
 **Character Notes:** Kulan Tith represents the best of Martian nobility - honor over personal gain, wisdom over impulse, and integrity in all dealings. He values alliances built on mutual respect rather than fear or obligation. His court is known for just rulings and fair treatment of all who come before him.
 
-### Torkar Bar, Loyal Officer (Level 20)
+### Torkar Bar, Loyal Officer (Level 19)
 A distinguished Kaolian officer who has served Kulan Tith faithfully for many years. Torkar Bar has accompanied his Jeddak on various missions and diplomatic journeys, serving as both bodyguard and trusted advisor. His bearing shows both military competence and personal loyalty.
 
 **Location:** War Room (room 4504)  
@@ -53,7 +53,7 @@ A distinguished Kaolian officer who has served Kulan Tith faithfully for many ye
 **Alignment:** Very good (-900)  
 **Equipment:** Officer's harness, quality long sword
 
-### Palace Guards (Level 19)
+### Palace Guards (Level 18)
 Elite warriors who protect the royal palace and the Jeddak. They are professional, disciplined, and loyal. Unlike guards in enemy cities, they maintain security while remaining courteous to visitors - strength without arrogance.
 
 **Locations:** Palace entrance (4501), Throne Room (4503)  
