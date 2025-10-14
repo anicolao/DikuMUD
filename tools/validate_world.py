@@ -24,6 +24,7 @@ class WorldValidator:
         self.all_shops = {}  # shop_vnum -> zone_name
         self.shop_keepers = {}  # keeper_vnum -> shop_vnum
         self.shop_producing = {}  # keeper_vnum -> set of producing item vnums
+        self.shop_details = {}  # shop_vnum -> (keeper_vnum, zone_name, producing_list)
         self.keeper_given_items = {}  # keeper_vnum -> set of item vnums from G resets
         self.quest_givers = {}  # giver_vnum -> [quest_vnums]
         self.zones = {}
@@ -228,10 +229,14 @@ class WorldValidator:
             
             # Track shop keeper and producing items
             keeper_vnum = shop.get('keeper')
+            producing = shop.get('producing', [])
+            
+            # Store shop details for validation
+            self.shop_details[shop_vnum] = (keeper_vnum, zone_name, producing)
+            
             if keeper_vnum:
                 self.shop_keepers[keeper_vnum] = shop_vnum
                 # Track what items this shop produces
-                producing = shop.get('producing', [])
                 if keeper_vnum not in self.shop_producing:
                     self.shop_producing[keeper_vnum] = set()
                 self.shop_producing[keeper_vnum].update(producing)
@@ -398,6 +403,16 @@ class WorldValidator:
         DikuMUD shops display items from the keeper's carrying inventory. Zone resets
         must give the keeper objects via G commands that match the shop's producing list.
         """
+        # First, check all shops for producing nothing
+        for shop_vnum, (keeper_vnum, zone_name, producing) in self.shop_details.items():
+            # Filter out invalid/negative item vnums
+            valid_producing = [item for item in producing if item > 0]
+            
+            if not valid_producing:
+                self.error(f"Shop #{shop_vnum} in {zone_name} (keeper mob {keeper_vnum}) produces NOTHING! "
+                            f"Shop has empty or invalid producing list. Players cannot buy anything from this shop!")
+        
+        # Then check keeper inventory matching
         for keeper_vnum, shop_vnum in self.shop_keepers.items():
             producing = self.shop_producing.get(keeper_vnum, set())
             given_items = self.keeper_given_items.get(keeper_vnum, set())
