@@ -105,6 +105,26 @@ All generated files are byte-identical to the previous build method:
 - ✓ tinyworld.shp
 - ✓ tinyworld.qst
 
+## Important: Zone Ordering
+
+The `ZONE_ORDER` variable in the makefile **must** list zones in ascending order by room number range. This is because the DikuMUD server assigns rooms to zones sequentially based on the zone's `top` value in the `.zon` file.
+
+**How zone assignment works:**
+1. Zones are processed in the order they appear in `tinyworld.zon`
+2. Each room is assigned to the first zone where `room_vnum <= zone.top`
+3. If zones are out of order, rooms will be assigned to the wrong zones
+
+The world builder:
+- Automatically calculates each zone's `top` value from its maximum room vnum
+- Preserves the input order of zones (does not sort by zone number)
+- Ensures zones appear in `tinyworld.zon` in the same order as `ZONE_ORDER`
+
+**Example:**
+```
+ZONE_ORDER = limbo system zone_1200 lesser_helium southern_approach ...
+```
+This ensures rooms 0-2 go to limbo, 1200-1202 go to zone_1200, 3001-3055 go to lesser_helium, etc.
+
 ## Future Improvements
 
 Possible further optimizations:

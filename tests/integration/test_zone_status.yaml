@@ -1,0 +1,38 @@
+test:
+  id: test_zone_status
+  description: Verify zone status command shows all zones with correct room/mob counts
+  author: Integration Test Framework
+  created: '2025-10-14'
+  tags: ['zone_test', 'command_validation']
+
+setup:
+  character:
+    name: TestWizard
+    password: test
+    class: warrior
+    level: 34
+  start_room: 1200
+  gold: 0
+
+steps:
+  - action: command
+    command: zone status
+    description: Check zone status shows all zones with their room and mob counts
+    expected:
+      # Verify key zones are shown with non-zero room counts
+      - pattern: 'Lesser Helium\s+\(51 rooms'
+      - pattern: 'Southern Approach to Atmosphere Factory\s+\(50 rooms'
+      - pattern: 'Lesser Helium Sewers\s+\(40 rooms'
+      - pattern: 'Dead Sea Bottom Channel\s+\(6 rooms'
+      - pattern: 'Zodanga - Enemy City\s+\(50 rooms'
+      - pattern: 'Zodanga Wilderness\s+\(12 rooms'
+      - pattern: 'Dead Sea Wilderness\s+\(20 rooms'
+      - pattern: 'Gathol - Allied City\s+\(6 rooms'
+      - pattern: 'Greater Helium\s+\(90 rooms'
+      - pattern: 'Thark Territory\s+\(50 rooms'
+      - pattern: 'Atmosphere Factory - Main Levels\s+\(55 rooms'
+      - pattern: 'Atmosphere Factory - Lower Levels\s+\(40 rooms'
+      - pattern: 'Ptarth - Allied City\s+\(11 rooms'
+      - pattern: 'Gathol-Ptarth Wilderness\s+\(14 rooms'
+      - pattern: 'Kaol - Allied City\s+\(10 rooms'
+      - pattern: 'Ptarth-Kaol Wilderness\s+\(11 rooms'

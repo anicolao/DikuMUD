@@ -8,8 +8,8 @@ CFLAG+=-fsanitize=address -fno-omit-frame-pointer
 LDLIBS=-lcrypt
 HEADERFILES = structs.h utils.h comm.h interpreter.h db.h
 
-# Zone files - ordered by zone number
-ZONE_ORDER = limbo zone_1200 lesser_helium sewers dead_sea_bottom_channel southern_approach dead_sea_wilderness greater_helium zodanga zodanga_wilderness gathol ptarth gathol_ptarth_wilderness kaol ptarth_kaol_wilderness thark_territory atmosphere_factory atmosphere_lower system
+# Zone files - ordered by room number range (required for proper zone assignment in db.c)
+ZONE_ORDER = limbo system zone_1200 lesser_helium southern_approach sewers dead_sea_bottom_channel zodanga zodanga_wilderness dead_sea_wilderness gathol greater_helium thark_territory atmosphere_factory atmosphere_lower ptarth gathol_ptarth_wilderness kaol ptarth_kaol_wilderness
 
 # YAML source files
 YAML_ZONES = $(foreach zone,$(ZONE_ORDER),lib/zones_yaml/$(zone).yaml)
