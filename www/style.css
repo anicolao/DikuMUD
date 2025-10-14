@@ -20,11 +20,12 @@
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     background: linear-gradient(180deg, var(--mars-night) 0%, var(--mars-sky) 50%, var(--mars-dark-red) 100%);
     color: var(--text-light);
     line-height: 1.6;
     min-height: 100vh;
+    font-size: 18px;
 }
 
 header {
@@ -171,9 +172,9 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.class-grid, .race-grid {
+.class-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -240,7 +241,7 @@ footer a:hover {
 
 .feature-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -265,6 +266,15 @@ em {
     color: var(--mars-orange);
 }
 
+/* Tablet: 2x2 grid */
+@media (max-width: 1024px) {
+    .class-grid,
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: single column */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -279,7 +289,8 @@ em {
         margin: 0.5rem 0;
     }
     
-    .class-grid, .race-grid {
+    .class-grid,
+    .feature-list {
         grid-template-columns: 1fr;
     }
 }
