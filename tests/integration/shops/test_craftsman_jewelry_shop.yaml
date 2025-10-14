@@ -1,0 +1,77 @@
+# Integration test for the craftsman's jewelry shop in Lesser Helium
+#
+# This test validates that the jewelry shop (room 3034) functions properly
+# with the Red Martian Jeweller craftsman (mob 3009) as shopkeeper.
+#
+# Bug Report: The craftsman (mob 3009) in the jewelry shop in lesser helium
+# (room 3034) isn't a shopkeeper for some reason -- no special procedure assigned.
+#
+# Expected Behavior:
+# - The 'list' command should work at the jewelry shop
+# - Precious gems and jewelry should be available for purchase
+# - Shop should be properly configured with appropriate buy/sell prices
+
+test:
+  id: test_craftsman_jewelry_shop
+  description: "Verify craftsman's jewelry shop in Lesser Helium allows listing and purchasing jewelry"
+  bug_report: "**Player[3034]: The craftsman (mob 3009) in the jewelry shop in lesser helium (room 3034) isn't a shopkeeper for some reason -- no special procedure assigned.**"
+  author: Integration Test Framework
+  created: 2025-10-14
+  tags: [shop, jewelry, lesser_helium, bug_fix]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 5
+  start_room: 3034  # The Jeweler's Shop in Lesser Helium
+  gold: 5000  # Need substantial gold for expensive jewelry
+
+steps:
+  # Check for shop keeper
+  - action: look
+    description: "Look for Red Martian Jeweller craftsman"
+    expected:
+      - pattern: "jeweller|craftsman|Jeweller"
+        message: "Red Martian Jeweller should be present in the shop"
+
+  # Test list command
+  - action: command
+    description: "List available jewelry and gems"
+    command: "list"
+    expected:
+      - pattern: "ruby|emerald|diamond|sapphire|topaz|harness"
+        message: "Should show various jewelry items and gems"
+      - pattern: "\\d+.*gold"
+        message: "Should show prices in gold"
+    fail_on:
+      - pattern: "don't seem interested|ignores|not interested"
+        message: "BUG: Craftsman's jewelry shop should respond to list command"
+
+  # Try purchasing a gem to verify shop works
+  - action: command
+    description: "Attempt to purchase a ruby"
+    command: "buy ruby"
+    expected:
+      - pattern: "exquisite piece|You now have|don't have enough|can't afford|cannot afford"
+        message: "Shop should respond to purchase attempts"
+
+  # Verify we have the ruby if purchase succeeded
+  - action: command
+    description: "Check inventory for purchased ruby"
+    command: "inventory"
+    expected:
+      - pattern: "carrying|You are"
+        message: "Should show inventory"
+
+result:
+  should_pass: true
+  description: "Craftsman's jewelry shop should list available jewelry and gems and allow purchases"
+  notes: |
+    This validates that room 3034 has a properly configured jewelry shop.
+    The shop should:
+    - Have the Red Martian Jeweller craftsman (mob 3009) as keeper
+    - Respond to 'list' command
+    - Show precious gems (ruby, emerald, diamond, sapphire, topaz) and jewelry (jeweled harness)
+    - Allow purchases when player has sufficient gold
+    - Use appropriate markup (1.5x buy, 0.5x sell) for luxury items
