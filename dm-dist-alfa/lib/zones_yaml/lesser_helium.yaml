@@ -4216,6 +4216,30 @@ resets:
   arg1: 3009
   arg2: 1
   arg3: 3034
+- command: G
+  if_flag: 1
+  arg1: 3570
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3571
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3572
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3573
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3574
+  arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3552
+  arg2: 100
 - command: M
   if_flag: 0
   arg1: 3010
@@ -4870,33 +4894,33 @@ shops:
   close2: 24
 - vnum: 15
   producing:
-  - 3066
-  - 3067
-  - 3068
-  - 3069
-  - 3070
-  - 3071
-  profit_buy: 1.1
-  profit_sell: 0.9
+  - 3570
+  - 3571
+  - 3572
+  - 3573
+  - 3574
+  - 3552
+  profit_buy: 1.5
+  profit_sell: 0.5
   buy_types:
-  - 9
+  - 8
   messages:
     no_such_item1: '%s Haven''t got that on storage - try list!'
     no_such_item2: '%s You don''t seem to have that.'
-    do_not_buy: '%s I only buy armours..'
-    missing_cash1: '%s That is too expensive for me - Try a wizard!'
-    missing_cash2: '%s You can''t afford it!'
+    do_not_buy: '%s I only buy fine jewelry..'
+    missing_cash1: '%s That is such an expensive item that I dare not possess it!'
+    missing_cash2: '%s You can''t afford it, you slut!'
     message_buy: '%s That''ll be %d coins, please.'
     message_sell: '%s You''ll get %d coins for it!'
   temper1: 0
   temper2: 0
-  keeper: 3010
+  keeper: 3009
   with_who: 0
-  in_room: 3035
-  open1: 8
-  close1: 14
-  open2: 15
-  close2: 21
+  in_room: 3034
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
 - vnum: 14
   producing:
   - 3002
