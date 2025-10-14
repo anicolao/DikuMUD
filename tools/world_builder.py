@@ -612,6 +612,13 @@ class WorldBuilder:
                 elif file_type == 'zon':
                     zone = data.get('zone', {})
                     resets = data.get('resets', [])
+                    # Always calculate top_room from actual rooms to ensure correctness
+                    rooms = data.get('rooms', [])
+                    if rooms:
+                        zone['top_room'] = max(r['vnum'] for r in rooms)
+                    elif 'top_room' not in zone:
+                        # Default to zone number * 100 if no rooms and no top_room specified
+                        zone['top_room'] = zone.get('number', 0) * 100
                     all_records.append((zone['number'], self._build_zone(zone, resets)))
                 elif file_type == 'shp':
                     shops = data.get('shops', [])
@@ -620,8 +627,9 @@ class WorldBuilder:
                     quests = data.get('quests', [])
                     all_records.extend([(q['qnum'], self._build_quest(q)) for q in quests])
             
-            # Sort by vnum
-            all_records.sort(key=lambda x: x[0])
+            # Sort by vnum - except for zones which must maintain input order
+            if file_type != 'zon':
+                all_records.sort(key=lambda x: x[0])
             
             # Write output
             output_file = f"{output_dir}/{file_names[file_type]}"
@@ -656,6 +664,13 @@ class WorldBuilder:
             elif file_type == 'zon':
                 zone = data.get('zone', {})
                 resets = data.get('resets', [])
+                # Always calculate top_room from actual rooms to ensure correctness
+                rooms = data.get('rooms', [])
+                if rooms:
+                    zone['top_room'] = max(r['vnum'] for r in rooms)
+                elif 'top_room' not in zone:
+                    # Default to zone number * 100 if no rooms and no top_room specified
+                    zone['top_room'] = zone.get('number', 0) * 100
                 all_records.append((zone['number'], self._build_zone(zone, resets)))
             elif file_type == 'shp':
                 # Build shops from YAML
@@ -666,8 +681,9 @@ class WorldBuilder:
                 quests = data.get('quests', [])
                 all_records.extend([(q['qnum'], self._build_quest(q)) for q in quests])
         
-        # Sort by vnum
-        all_records.sort(key=lambda x: x[0])
+        # Sort by vnum - except for zones which must maintain input order
+        if file_type != 'zon':
+            all_records.sort(key=lambda x: x[0])
         
         # Write output
         with open(output_file, 'w') as f:
