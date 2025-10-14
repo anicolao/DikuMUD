@@ -1,0 +1,296 @@
+/* Barsoom MUD - Mars Theme */
+
+:root {
+    /* Mars color palette */
+    --mars-red: #cd5c5c;
+    --mars-dark-red: #8b3a3a;
+    --mars-orange: #ff8c42;
+    --mars-sand: #daa520;
+    --mars-sky: #2c1810;
+    --mars-night: #1a0f08;
+    --text-light: #f4e4d7;
+    --text-accent: #ffcc66;
+    --border-color: #8b6914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(180deg, var(--mars-night) 0%, var(--mars-sky) 50%, var(--mars-dark-red) 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+header {
+    background: rgba(139, 58, 58, 0.9);
+    padding: 2rem 0;
+    border-bottom: 3px solid var(--mars-orange);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--text-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+nav {
+    background: rgba(26, 15, 8, 0.9);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-accent);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    border-color: var(--mars-orange);
+    background: rgba(205, 92, 92, 0.3);
+}
+
+nav a.active {
+    border-color: var(--mars-orange);
+    background: rgba(205, 92, 92, 0.5);
+}
+
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(139, 58, 58, 0.4);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    border: 2px solid var(--border-color);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--text-accent);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--mars-orange);
+    color: var(--mars-night);
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid var(--mars-sand);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: var(--mars-sand);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 204, 102, 0.5);
+}
+
+.section {
+    background: rgba(26, 15, 8, 0.7);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--mars-orange);
+    padding-bottom: 0.5rem;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    color: var(--mars-orange);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.class-card, .race-card {
+    background: rgba(139, 58, 58, 0.4);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.class-card:hover, .race-card:hover {
+    border-color: var(--mars-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3);
+}
+
+.class-card h3, .race-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-accent);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.class-card .subtitle, .race-card .subtitle {
+    color: var(--mars-orange);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.stats {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.stats strong {
+    color: var(--text-accent);
+}
+
+footer {
+    background: rgba(26, 15, 8, 0.9);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 3px solid var(--mars-orange);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--mars-orange);
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background: rgba(139, 58, 58, 0.3);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--mars-orange);
+}
+
+.feature-item h4 {
+    color: var(--text-accent);
+    margin-bottom: 0.5rem;
+}
+
+strong {
+    color: var(--text-accent);
+}
+
+em {
+    color: var(--mars-orange);
+}
+
+/* Tablet: 2x2 grid */
+@media (max-width: 1024px) {
+    .class-grid,
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .class-grid,
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
