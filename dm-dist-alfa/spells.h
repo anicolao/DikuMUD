@@ -94,6 +94,7 @@
 #define TYPE_BITE                    106  /* NO MESSAGES WRITTEN YET! */
 #define TYPE_STING                   107  /* NO MESSAGES WRITTEN YET! */
 #define TYPE_CRUSH                   108  /* NO MESSAGES WRITTEN YET! */
+#define TYPE_SHOOT                   109
 
 
 

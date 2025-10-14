@@ -58,6 +58,7 @@ Value[3]: The weapon type. Type is one of:
             7  : Bludgeon      "pound/pounds"
 
            11  : Pierce        "pierce/pierces"
+           12  : Shoot         "shoot/shoots"
 
           New types will be added as needed.
 

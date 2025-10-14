@@ -336,7 +336,7 @@ a radium pistol~
 A radium pistol, the advanced weapon of Mars, lies here.~
 ~
 5 0 8193
-0 2 4 3
+0 2 4 12
 5 200 67
 #3591
 rifle radium~
@@ -344,7 +344,7 @@ a radium rifle~
 A long-range radium rifle lies here.~
 ~
 5 0 8193
-0 2 6 3
+0 2 6 12
 8 350 117
 #3592
 charges radium~
@@ -712,7 +712,7 @@ a small crossbow~
 A compact crossbow lies here.~
 ~
 5 0 8193
-0 1 4 3
+0 1 4 12
 3 50 17
 #3723
 bolts crossbow~
@@ -816,7 +816,7 @@ a short bow~
 A short bow for mounted archery lies here.~
 ~
 5 0 8193
-0 1 4 3
+0 1 4 12
 3 35 12
 #3761
 bow long~
@@ -824,7 +824,7 @@ a long bow~
 A powerful long bow lies here.~
 ~
 5 0 8193
-0 1 6 3
+0 1 6 12
 5 60 20
 #3762
 arrows~
