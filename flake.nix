@@ -51,9 +51,13 @@
             echo "Virtual environment activated."
             echo "Available tools: python, pip, gcloud"
             echo ""
-            echo "To generate images, first configure your PROJECT_ID in tools/image_generator.py"
-            echo "Then run: gcloud auth application-default login"
-            echo "Finally, run: python tools/image_generator.py"
+            echo "--- Image Generation Setup ---"
+            echo "1. Configure your PROJECT_ID in tools/image_generator.py"
+            echo "2. Authenticate with Google Cloud: gcloud auth application-default login"
+            echo "3. Set the quota project: gcloud auth application-default set-quota-project YOUR_PROJECT_ID"
+            echo "4. Run the script: python tools/image_generator.py"
+            echo ""
+            echo "NOTE: Replace YOUR_PROJECT_ID in step 3 with the same project ID from step 1."
           '';
         };
       });
