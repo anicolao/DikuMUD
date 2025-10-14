@@ -1886,11 +1886,11 @@ objects:
       a few coins.
   affects: []
 - vnum: 3219
-  namelist: silver coins money
+  namelist: silver coins money jewelry
   short_desc: silver coins
   long_desc: A few silver coins glint here in the muck.
   action_desc: ''
-  type_flag: 10
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -1900,14 +1900,18 @@ objects:
   weight: 1
   cost: 300
   rent: 75
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: silver coins money
+    description: 'These silver coins appear to be Martian currency of some value. A
+      jeweler would likely be interested in purchasing them for their precious metal
+      content.'
   affects: []
 - vnum: 3220
-  namelist: bronze coins money copper
+  namelist: bronze coins money copper jewelry
   short_desc: bronze coins
   long_desc: Some bronze coins lie scattered here.
   action_desc: ''
-  type_flag: 10
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -1917,7 +1921,10 @@ objects:
   weight: 1
   cost: 150
   rent: 40
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: bronze coins money
+    description: 'These bronze coins appear to be Martian currency of lesser value.
+      A jeweler would likely be interested in purchasing them for their metal content.'
   affects: []
 - vnum: 3221
   namelist: iron key old rusty
@@ -2149,11 +2156,11 @@ objects:
       Such artifacts are highly valuable to scholars and scientists.'
   affects: []
 - vnum: 3231
-  namelist: gold coins money
+  namelist: gold coins money jewelry
   short_desc: gold coins
   long_desc: Several gold coins gleam here.
   action_desc: ''
-  type_flag: 10
+  type_flag: 8
   extra_flags: 0
   wear_flags: 1
   value0: 0
@@ -2163,7 +2170,10 @@ objects:
   weight: 1
   cost: 800
   rent: 200
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: gold coins money
+    description: 'These gold coins are valuable Martian currency. A jeweler would
+      gladly purchase them for their precious metal content.'
   affects: []
 - vnum: 3232
   namelist: ancient weapon blade artifact

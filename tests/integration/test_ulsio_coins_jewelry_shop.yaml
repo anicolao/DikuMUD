@@ -1,0 +1,92 @@
+# Test for ulsio coin sales at jewelry shop
+# This test validates that bronze, silver, and gold coins can be sold at the jewelry shop
+test:
+  id: test_ulsio_coins_jewelry_shop
+  description: "Verify ulsio coins can be sold at the jewelry shop"
+  timeout: 60
+
+setup:
+  character:
+    name: TestJewelBuyer
+    password: test
+    class: warrior
+    level: 22
+  start_room: 3034
+  gold: 0
+
+steps:
+  # Load test coins
+  - action: command
+    command: "load obj 3220"
+    description: "Load bronze coins"
+    expected:
+      - pattern: "."
+        message: "Command executed"
+
+  - action: command
+    command: "load obj 3219"
+    description: "Load silver coins"
+    expected:
+      - pattern: "."
+        message: "Command executed"
+
+  - action: command
+    command: "load obj 3231"
+    description: "Load gold coins"
+    expected:
+      - pattern: "."
+        message: "Command executed"
+
+  # Test that shopkeeper will value the coins (meaning they can be sold)
+  - action: command
+    command: "value bronze"
+    description: "Check value of bronze coins"
+    expected:
+      - pattern: "I'll give you [0-9]+ gold coins"
+        message: "Shopkeeper should give a price for bronze coins"
+
+  - action: command
+    command: "value silver"
+    description: "Check value of silver coins"
+    expected:
+      - pattern: "I'll give you [0-9]+ gold coins"
+        message: "Shopkeeper should give a price for silver coins"
+
+  - action: command
+    command: "value gold"
+    description: "Check value of gold coins"
+    expected:
+      - pattern: "I'll give you [0-9]+ gold coins"
+        message: "Shopkeeper should give a price for gold coins"
+
+  # Test selling the coins
+  - action: command
+    command: "sell bronze"
+    description: "Sell bronze coins to jeweler"
+    expected:
+      - pattern: "You'll get [0-9]+ gold coins"
+        message: "Bronze coins sold successfully"
+
+  - action: command
+    command: "sell silver"
+    description: "Sell silver coins to jeweler"
+    expected:
+      - pattern: "You'll get [0-9]+ gold coins"
+        message: "Silver coins sold successfully"
+
+  - action: command
+    command: "sell gold"
+    description: "Sell gold coins to jeweler"
+    expected:
+      - pattern: "You'll get [0-9]+ gold coins"
+        message: "Gold coins sold successfully"
+
+result:
+  should_pass: true
+  description: "Ulsio coins should be sellable at jewelry shop"
+  notes: |
+    This test verifies that bronze, silver, and gold coins from ulsio and other
+    sewer creatures can be sold at the jewelry shop (room 3034).
+    
+    The coins were changed from type 10 (ITEM_POTION) to type 8 (ITEM_TREASURE)
+    so they can be sold to the Red Martian Jeweller craftsman who buys treasure items.
