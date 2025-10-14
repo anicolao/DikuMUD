@@ -34,11 +34,12 @@ Then visit http://localhost:8080 in your browser.
 ## Game Client Link
 
 All "Play Now" buttons link to:
-https://dikuclient.morpheum.dev/?server=barsoom.morpheum.dev:5174
+https://dikuclient.morpheum.dev/?server=barsoom.morpheum.dev&port=4000
 
 ## Design Notes
 
 The site uses a Mars color palette:
+
 - Mars red (#cd5c5c, #8b3a3a)
 - Mars orange (#ff8c42)
 - Mars sand/gold (#daa520)
