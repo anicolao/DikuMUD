@@ -50,7 +50,8 @@ struct attack_hit_type attack_hit_text[] =
   {"claw", "claws"},             /* TYPE_CLAW     */
   {"bite", "bites"},             /* TYPE_BITE     */
   {"sting", "stings"},           /* TYPE_STING    */
-  {"crush", "crushes"}           /* TYPE_CRUSH    */
+  {"crush", "crushes"},          /* TYPE_CRUSH    */
+  {"shoot", "shoots"}            /* TYPE_SHOOT    */
 };
 
 
@@ -600,7 +601,7 @@ void damage(struct char_data *ch, struct char_data *victim,
 	update_pos(victim);
 
 
-	if ((attacktype >= TYPE_HIT) && (attacktype <= TYPE_SLASH)) {
+	if ((attacktype >= TYPE_HIT) && (attacktype <= TYPE_SHOOT)) {
 		if (!ch->equipment[WIELD]) {
 			dam_message(dam, ch, victim, TYPE_HIT);
 		} else {
@@ -763,6 +764,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 			case 9  :
 			case 10 :
 			case 11 : w_type = TYPE_PIERCE; break;
+			case 12 : w_type = TYPE_SHOOT; break;
 
 			default : w_type = TYPE_HIT; break;
 		}
