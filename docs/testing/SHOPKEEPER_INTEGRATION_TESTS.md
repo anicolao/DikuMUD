@@ -6,10 +6,10 @@ This document summarizes the implementation of comprehensive integration tests f
 
 ## Test Coverage
 
-**Total shops in game:** 20
-**Functional shops tested:** 17 (100% of working shops)
-**Total integration tests:** 27 (including 5 pre-existing + 12 new + 10 other tests)
-**Test pass rate:** 27/27 (100%)
+**Total shops in game:** 21
+**Functional shops tested:** 18 (100% of working shops)
+**Total integration tests:** 28 (including 5 pre-existing + 13 new + 10 other tests)
+**Test pass rate:** 28/28 (100%)
 
 ## Functional Shops with Tests
 
@@ -21,7 +21,7 @@ This document summarizes the implementation of comprehensive integration tests f
 5. **Shop #7** - Master Leather Worker (lamps) - room 3925
 6. **Shop #20** - Master Jeweler (jewelry) - room 3924 [existing test]
 
-### Lesser Helium (8 shops tested)
+### Lesser Helium (9 shops tested)
 7. **Shop #8** - Baker (bread/provisions) - room 3009
 8. **Shop #9** - Grocer (general goods) - room 3010 [existing test]
 9. **Shop #10** - Retired Scientist (drinks) - room 3018
@@ -32,9 +32,10 @@ This document summarizes the implementation of comprehensive integration tests f
 14. **Shop #17** - Weaponsmith (weapons) - room 3011 [existing test]
 15. **Shop #18** - Harness-Maker (armor) - room 3020 [existing test]
 16. **Shop #19** - Retired Priest (drinks) - room 3003 [existing test]
+17. **Shop #21** - Red Martian Jeweller Craftsman (jewelry) - room 3034 [bug fix]
 
 ### Thark Territory (1 shop tested)
-17. **Shop #16** - Thark Trader (Thark equipment) - room 4040
+18. **Shop #16** - Thark Trader (Thark equipment) - room 4040
 
 ## Non-Functional Shops (Not Tested)
 
@@ -108,6 +109,7 @@ New integration test files:
 - `tests/integration/shops/test_shop_14_filthy_bartender.yaml`
 - `tests/integration/shops/test_shop_15_leather_worker_armor.yaml`
 - `tests/integration/shops/test_shop_16_thark_trader.yaml`
+- `tests/integration/shops/test_craftsman_jewelry_shop.yaml`
 
 ## Recommendations
 
