@@ -1949,16 +1949,29 @@ char *fread_string(FILE *fl)
 		{
 			char error_buf[512];
 			long file_pos = ftell(fl);
+			const char *file_name = "unknown";
+			
+			/* Try to identify which file is being read */
+			if (fl == mob_f) {
+				file_name = MOB_FILE;
+			} else if (fl == obj_f) {
+				file_name = OBJ_FILE;
+			} else if (fl == help_fl) {
+				file_name = HELP_KWRD_FILE;
+			}
 			
 			if (feof(fl)) {
 				snprintf(error_buf, sizeof(error_buf), 
-					"fread_string: unexpected EOF at file position %ld", file_pos);
+					"fread_string: unexpected EOF in %s at file position %ld", 
+					file_name, file_pos);
 			} else if (ferror(fl)) {
 				snprintf(error_buf, sizeof(error_buf), 
-					"fread_string: file error at position %ld", file_pos);
+					"fread_string: file error in %s at position %ld", 
+					file_name, file_pos);
 			} else {
 				snprintf(error_buf, sizeof(error_buf), 
-					"fread_string: unknown error at position %ld", file_pos);
+					"fread_string: unknown error in %s at position %ld", 
+					file_name, file_pos);
 			}
 			
 			slog(error_buf);
