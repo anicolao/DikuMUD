@@ -654,13 +654,19 @@ class TestExecutor:
                     print(f"  Server process output (for diagnosis):")
                     print(f"  {'='*60}")
                     if stdout:
-                        # Show last 1000 chars of stdout
-                        stdout_preview = stdout[-1000:] if len(stdout) > 1000 else stdout
-                        print(f"  STDOUT (last 1000 chars):\n{stdout_preview}")
+                        # Show last 5000 chars of stdout (or all if shorter)
+                        if len(stdout) > 5000:
+                            stdout_preview = stdout[-5000:]
+                            print(f"  STDOUT (last 5000 chars, {len(stdout)} total):\n{stdout_preview}")
+                        else:
+                            print(f"  STDOUT ({len(stdout)} chars):\n{stdout}")
                     if stderr:
-                        # Show last 1000 chars of stderr
-                        stderr_preview = stderr[-1000:] if len(stderr) > 1000 else stderr
-                        print(f"  STDERR (last 1000 chars):\n{stderr_preview}")
+                        # Show last 5000 chars of stderr (or all if shorter)
+                        if len(stderr) > 5000:
+                            stderr_preview = stderr[-5000:]
+                            print(f"  STDERR (last 5000 chars, {len(stderr)} total):\n{stderr_preview}")
+                        else:
+                            print(f"  STDERR ({len(stderr)} chars):\n{stderr}")
                     print(f"  {'='*60}")
                 else:
                     print(f"\n  ⚠️  Server process stdout/stderr are empty")
