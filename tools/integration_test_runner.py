@@ -24,6 +24,8 @@ import telnetlib
 import signal
 import os
 import struct
+import threading
+import queue
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -46,6 +48,29 @@ class ServerManager:
         self.process = None
         self.port = None
         self.spin_mode = spin_mode  # Enable spin mode for faster testing
+        # Background output capture
+        self.stdout_data = []
+        self.stderr_data = []
+        self.stdout_thread = None
+        self.stderr_thread = None
+    
+    def _read_pipe(self, pipe, data_list):
+        """
+        Background thread function to continuously read from a pipe.
+        
+        This prevents the pipe buffer from filling up and blocking the subprocess.
+        Accumulates data in the provided list for later retrieval.
+        
+        Args:
+            pipe: The pipe to read from (stdout or stderr)
+            data_list: List to accumulate chunks of data
+        """
+        try:
+            for line in iter(pipe.readline, b''):
+                if line:
+                    data_list.append(line)
+        except Exception:
+            pass  # Pipe closed or error - thread will exit
     
     def _create_test_lib(self):
         """Create a test copy of the lib directory to avoid modifying real game assets."""
@@ -152,6 +177,23 @@ class ServerManager:
             preexec_fn=os.setsid  # Create new process group for clean shutdown
         )
         
+        # Start background threads to continuously read stdout/stderr
+        # This prevents pipe buffers from filling up and blocking the server
+        self.stdout_data = []
+        self.stderr_data = []
+        self.stdout_thread = threading.Thread(
+            target=self._read_pipe,
+            args=(self.process.stdout, self.stdout_data),
+            daemon=True
+        )
+        self.stderr_thread = threading.Thread(
+            target=self._read_pipe,
+            args=(self.process.stderr, self.stderr_data),
+            daemon=True
+        )
+        self.stdout_thread.start()
+        self.stderr_thread.start()
+        
         self.port = port
         
         # Wait for server to be ready
@@ -163,76 +205,45 @@ class ServerManager:
         """
         Get output from the server process.
         
+        Background threads continuously read stdout/stderr to prevent pipe buffer
+        overflow. This method returns the accumulated output.
+        
         Args:
-            terminate_first: If True, terminates the process before reading output.
-                           This ensures we get all output without blocking.
+            terminate_first: If True, terminates the process before returning output.
                            After reading, sets self.process to None.
         
         Returns:
             Tuple of (stdout_data, stderr_data) as strings
         """
-        stdout_data = ""
-        stderr_data = ""
-        
-        if self.process:
+        if terminate_first and self.process:
             try:
-                if terminate_first:
-                    # Terminate the process first to ensure we can read all output
-                    try:
-                        # Send SIGTERM to the process group
-                        os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
-                        # Use communicate() to read all remaining output with a timeout
-                        stdout, stderr = self.process.communicate(timeout=5)
-                        if stdout:
-                            stdout_data = stdout.decode('utf-8', errors='ignore')
-                        if stderr:
-                            stderr_data = stderr.decode('utf-8', errors='ignore')
-                    except subprocess.TimeoutExpired:
-                        # Force kill if necessary
-                        os.killpg(os.getpgid(self.process.pid), signal.SIGKILL)
-                        stdout, stderr = self.process.communicate()
-                        if stdout:
-                            stdout_data = stdout.decode('utf-8', errors='ignore')
-                        if stderr:
-                            stderr_data = stderr.decode('utf-8', errors='ignore')
-                    except ProcessLookupError:
-                        # Process already dead, try to read any remaining output
-                        try:
-                            stdout, stderr = self.process.communicate(timeout=1)
-                            if stdout:
-                                stdout_data = stdout.decode('utf-8', errors='ignore')
-                            if stderr:
-                                stderr_data = stderr.decode('utf-8', errors='ignore')
-                        except:
-                            pass
-                    
-                    # Mark process as terminated
-                    self.process = None
-                else:
-                    # Non-blocking read - read a limited amount
-                    # This is risky and can still block, so we use a small read size
-                    import select
-                    if self.process.stdout:
-                        ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
-                        if ready:
-                            # Read up to 64KB
-                            data = self.process.stdout.read(65536)
-                            if data:
-                                stdout_data = data.decode('utf-8', errors='ignore')
-                    
-                    if self.process.stderr:
-                        ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
-                        if ready:
-                            # Read up to 64KB
-                            data = self.process.stderr.read(65536)
-                            if data:
-                                stderr_data = data.decode('utf-8', errors='ignore')
+                # Terminate the process
+                try:
+                    # Send SIGTERM to the process group
+                    os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+                    self.process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    # Force kill if necessary
+                    os.killpg(os.getpgid(self.process.pid), signal.SIGKILL)
+                    self.process.wait()
+                except ProcessLookupError:
+                    # Process already dead
+                    pass
+                
+                # Mark process as terminated
+                self.process = None
             except Exception as e:
                 if os.getenv('DEBUG_OUTPUT'):
-                    print(f"Debug: Error reading server output: {e}")
-                # Make sure to clean up process reference on error
-                if terminate_first:
-                    self.process = None
+                    print(f"Debug: Error terminating process: {e}")
+                self.process = None
+        
+        # Wait a moment for background threads to finish reading any remaining data
+        if terminate_first:
+            time.sleep(0.1)
+        
+        # Collect accumulated data from background threads
+        stdout_data = b''.join(self.stdout_data).decode('utf-8', errors='ignore')
+        stderr_data = b''.join(self.stderr_data).decode('utf-8', errors='ignore')
         
         return stdout_data, stderr_data
     
