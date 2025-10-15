@@ -200,6 +200,46 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3853
+  description: Load container 3853 (pouch)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: pouch
+- action: command
+  command: drop pouch
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge pouch
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3854
+  description: Load drink 3854 (dented)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: dented
+- action: command
+  command: drop dented
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge dented
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3862
   description: Load armor 3862 (harness)
   expected:
@@ -227,6 +267,86 @@ steps:
 - action: command
   command: purge harness
   description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3863
+  description: Load container 3863 (scattered)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: scattered
+- action: command
+  command: drop scattered
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge scattered
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3866
+  description: Load money 3866 (map)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the money
+  expected:
+  - pattern: map
+- action: command
+  command: drop map
+  description: Drop the money
+  expected:
+  - pattern: drop
+- action: command
+  command: purge map
+  description: Purge the money
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3868
+  description: Load light_item 3868 (makeshift)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: makeshift
+- action: command
+  command: drop makeshift
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge makeshift
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3870
+  description: Load container 3870 (backpack)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: backpack
+- action: command
+  command: drop backpack
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge backpack
+  description: Purge the container
   expected:
   - pattern: ok\.?|destroy
 - action: command
@@ -380,6 +500,46 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3880
+  description: Load container 3880 (gem)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: gem
+- action: command
+  command: drop gem
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge gem
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3887
+  description: Load drink 3887 (skin)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: skin
+- action: command
+  command: drop skin
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge skin
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3888
   description: Load armor 3888 (cloak)
   expected:
@@ -469,10 +629,31 @@ steps:
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3899
+  description: Load drink 3899 (canteen)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: canteen
+- action: command
+  command: drop canteen
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge canteen
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 15 objects in Dead Sea Wilderness should be properly configured
+  description: All 24 objects in Dead Sea Wilderness should be properly configured
   notes: "This test validates that all usable objects in Dead Sea Wilderness can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (7), armor (4), lights (3), shields (1)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 57\nObjects tested:\
+    \ 24\nObject types: armor (4), container (4), drink (3), light (3), light_item\
+    \ (1), money (1), shield (1), weapon (7)"

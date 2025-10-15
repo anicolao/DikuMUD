@@ -110,6 +110,26 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3405
+  description: Load key 3405 (basic)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: basic
+- action: command
+  command: drop basic
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge basic
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3406
   description: Load weapon 3406 (hunting)
   expected:
@@ -349,10 +369,30 @@ steps:
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3422
+  description: Load key 3422 (enhanced)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: enhanced
+- action: command
+  command: drop enhanced
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge enhanced
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 11 objects in Southern Approach should be properly configured
+  description: All 13 objects in Southern Approach should be properly configured
   notes: "This test validates that all usable objects in Southern Approach can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (5), armor (5), lights (0), shields (1)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 26\nObjects tested:\
+    \ 13\nObject types: armor (5), key (2), shield (1), weapon (5)"

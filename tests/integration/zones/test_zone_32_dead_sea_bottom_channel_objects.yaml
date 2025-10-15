@@ -20,6 +20,66 @@ steps:
 - action: look
   description: Verify starting location in Dead Sea Bottom Channel
 - action: command
+  command: load obj 3300
+  description: Load key 3300 (metal)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: metal
+- action: command
+  command: drop metal
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge metal
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3301
+  description: Load key 3301 (brass)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: brass
+- action: command
+  command: drop brass
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge brass
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3302
+  description: Load key 3302 (metal)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: metal
+- action: command
+  command: drop metal
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge metal
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3304
   description: Load weapon 3304 (ornate)
   expected:
@@ -107,6 +167,66 @@ steps:
 - action: command
   command: purge brass
   description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3307
+  description: Load key 3307 (mithril)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: mithril
+- action: command
+  command: drop mithril
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge mithril
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3309
+  description: Load drink 3309 (flask)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: flask
+- action: command
+  command: drop flask
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge flask
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3310
+  description: Load key 3310 (iron)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: iron
+- action: command
+  command: drop iron
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge iron
+  description: Purge the key
   expected:
   - pattern: ok\.?|destroy
 - action: command
@@ -319,10 +439,71 @@ steps:
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3320
+  description: Load drink 3320 (flask)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: flask
+- action: command
+  command: drop flask
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge flask
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3321
+  description: Load key 3321 (iron)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: iron
+- action: command
+  command: drop iron
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge iron
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3323
+  description: Load drink 3323 (flask)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: flask
+- action: command
+  command: drop flask
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge flask
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 10 objects in Dead Sea Bottom Channel should be properly configured
+  description: All 19 objects in Dead Sea Bottom Channel should be properly configured
   notes: "This test validates that all usable objects in Dead Sea Bottom Channel can\
     \ be:\n  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded,\
-    \ worn, or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested:\
-    \ weapons (1), armor (8), lights (0), shields (1)"
+    \ worn, held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 24\nObjects\
+    \ tested: 19\nObject types: armor (8), drink (3), key (6), shield (1), weapon\
+    \ (1)"

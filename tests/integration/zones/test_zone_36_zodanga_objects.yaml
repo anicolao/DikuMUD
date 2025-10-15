@@ -49,6 +49,26 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3601
+  description: Load key 3601 (radium)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: radium
+- action: command
+  command: drop radium
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge radium
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3602
   description: Load armor 3602 (leather)
   expected:
@@ -228,10 +248,70 @@ steps:
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3614
+  description: Load drink 3614 (waterskin)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: waterskin
+- action: command
+  command: drop waterskin
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge waterskin
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3615
+  description: Load light_item 3615 (torch)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: torch
+- action: command
+  command: drop torch
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge torch
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3616
+  description: Load key 3616 (iron)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: iron
+- action: command
+  command: drop iron
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge iron
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 7 objects in Zodanga should be properly configured
+  description: All 11 objects in Zodanga should be properly configured
   notes: "This test validates that all usable objects in Zodanga can be:\n  - Loaded\
-    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, or held)\n\
-    \  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons (3), armor\
-    \ (3), lights (0), shields (1)"
+    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, held, etc.)\n\
+    \  - Dropped\n  - Purged\n\nTotal objects in zone: 26\nObjects tested: 11\nObject\
+    \ types: armor (3), drink (1), key (2), light_item (1), shield (1), weapon (3)"

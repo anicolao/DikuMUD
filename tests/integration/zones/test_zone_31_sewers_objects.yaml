@@ -259,6 +259,266 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3214
+  description: Load light 3214 (radium)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light
+  expected:
+  - pattern: radium
+- action: command
+  command: hold radium
+  description: Hold the light
+  expected:
+  - pattern: ok\.?|hold|light
+- action: command
+  command: remove radium
+  description: Remove the light
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop radium
+  description: Drop the light
+  expected:
+  - pattern: drop
+- action: command
+  command: purge radium
+  description: Purge the light
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3215
+  description: Load food 3215 (dried)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the food
+  expected:
+  - pattern: dried
+- action: command
+  command: drop dried
+  description: Drop the food
+  expected:
+  - pattern: drop
+- action: command
+  command: purge dried
+  description: Purge the food
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3216
+  description: Load food 3216 (moldy)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the food
+  expected:
+  - pattern: moldy
+- action: command
+  command: drop moldy
+  description: Drop the food
+  expected:
+  - pattern: drop
+- action: command
+  command: purge moldy
+  description: Purge the food
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3217
+  description: Load drink 3217 (flask)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: flask
+- action: command
+  command: drop flask
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge flask
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3218
+  description: Load money 3218 (pouch)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the money
+  expected:
+  - pattern: pouch
+- action: command
+  command: drop pouch
+  description: Drop the money
+  expected:
+  - pattern: drop
+- action: command
+  command: purge pouch
+  description: Purge the money
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3219
+  description: Load treasure 3219 (silver)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: silver
+- action: command
+  command: drop silver
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge silver
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3220
+  description: Load treasure 3220 (bronze)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: bronze
+- action: command
+  command: drop bronze
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge bronze
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3221
+  description: Load key 3221 (iron)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: iron
+- action: command
+  command: drop iron
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge iron
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3222
+  description: Load container 3222 (backpack)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: backpack
+- action: command
+  command: drop backpack
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge backpack
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3223
+  description: Load light_item 3223 (healing)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: healing
+- action: command
+  command: drop healing
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge healing
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3224
+  description: Load light_item 3224 (rope)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: rope
+- action: command
+  command: drop rope
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge rope
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3225
+  description: Load light 3225 (lantern)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light
+  expected:
+  - pattern: lantern
+- action: command
+  command: hold lantern
+  description: Hold the light
+  expected:
+  - pattern: ok\.?|hold|light
+- action: command
+  command: remove lantern
+  description: Remove the light
+  expected:
+  - pattern: stop using|stop|remove
+- action: command
+  command: drop lantern
+  description: Drop the light
+  expected:
+  - pattern: drop
+- action: command
+  command: purge lantern
+  description: Purge the light
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3226
   description: Load weapon 3226 (dagger)
   expected:
@@ -379,6 +639,46 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 3230
+  description: Load light_item 3230 (crystal)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: crystal
+- action: command
+  command: drop crystal
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge crystal
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3231
+  description: Load treasure 3231 (gold)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: gold
+- action: command
+  command: drop gold
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge gold
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3232
   description: Load weapon 3232 (ancient)
   expected:
@@ -408,10 +708,91 @@ steps:
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3233
+  description: Load food 3233 (preserved)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the food
+  expected:
+  - pattern: preserved
+- action: command
+  command: drop preserved
+  description: Drop the food
+  expected:
+  - pattern: drop
+- action: command
+  command: purge preserved
+  description: Purge the food
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3234
+  description: Load drink 3234 (waterskin)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: waterskin
+- action: command
+  command: drop waterskin
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge waterskin
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3235
+  description: Load container 3235 (treasure)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: treasure
+- action: command
+  command: drop treasure
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge treasure
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3236
+  description: Load light_item 3236 (precious)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: precious
+- action: command
+  command: drop precious
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge precious
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 13 objects in Sewers should be properly configured
+  description: All 31 objects in Sewers should be properly configured
   notes: "This test validates that all usable objects in Sewers can be:\n  - Loaded\
-    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, or held)\n\
-    \  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons (7), armor\
-    \ (6), lights (0), shields (0)"
+    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, held, etc.)\n\
+    \  - Dropped\n  - Purged\n\nTotal objects in zone: 31\nObjects tested: 31\nObject\
+    \ types: armor (6), container (2), drink (2), food (3), key (1), light (2), light_item\
+    \ (4), money (1), treasure (3), weapon (7)"
