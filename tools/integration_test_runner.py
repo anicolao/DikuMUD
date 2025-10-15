@@ -159,9 +159,46 @@ class ServerManager:
         
         return port
     
+    def get_server_output(self):
+        """Get any available output from the server process (non-blocking)."""
+        stdout_data = ""
+        stderr_data = ""
+        
+        if self.process:
+            try:
+                import select
+                # Check stdout
+                if self.process.stdout:
+                    ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
+                    if ready:
+                        data = self.process.stdout.read()
+                        if data:
+                            stdout_data = data.decode('utf-8', errors='ignore')
+                
+                # Check stderr
+                if self.process.stderr:
+                    ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
+                    if ready:
+                        data = self.process.stderr.read()
+                        if data:
+                            stderr_data = data.decode('utf-8', errors='ignore')
+            except Exception as e:
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"Debug: Error reading server output: {e}")
+        
+        return stdout_data, stderr_data
+    
     def stop(self):
         """Stop the server gracefully."""
         if self.process:
+            # Get any remaining output before stopping (if DEBUG_OUTPUT is set)
+            if os.getenv('DEBUG_OUTPUT'):
+                stdout, stderr = self.get_server_output()
+                if stdout:
+                    print(f"\n***** Server stdout (before stop):\n{stdout}")
+                if stderr:
+                    print(f"\n***** Server stderr (before stop):\n{stderr}")
+            
             try:
                 # Send SIGTERM to the process group
                 os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
@@ -510,10 +547,11 @@ class TestExecutor:
     - Report results
     """
     
-    def __init__(self, client: GameClient, show_all_output: bool = False):
+    def __init__(self, client: GameClient, show_all_output: bool = False, server_manager=None):
         self.client = client
         self.results = []
         self.show_all_output = show_all_output
+        self.server_manager = server_manager
     
     def load_test(self, test_file: Path) -> Dict[str, Any]:
         """
@@ -564,6 +602,30 @@ class TestExecutor:
                     print(f"\n  💡 HINT: The server is prompting for new character creation.")
                     print(f"     This means the test player file was not created properly.")
                     print(f"     Make sure to build the helper: cd dm-dist-alfa && make ../tools/create_test_player")
+            else:
+                print(f"  No output received from telnet connection.")
+            
+            # Check server stdout/stderr for additional diagnostic info
+            # Always show this when test fails, not just with DEBUG_OUTPUT
+            if self.server_manager:
+                stdout, stderr = self.server_manager.get_server_output()
+                if stdout or stderr:
+                    print(f"\n  {'='*60}")
+                    print(f"  Server process output (for diagnosis):")
+                    print(f"  {'='*60}")
+                    if stdout:
+                        # Show last 1000 chars of stdout
+                        stdout_preview = stdout[-1000:] if len(stdout) > 1000 else stdout
+                        print(f"  STDOUT (last 1000 chars):\n{stdout_preview}")
+                    if stderr:
+                        # Show last 1000 chars of stderr
+                        stderr_preview = stderr[-1000:] if len(stderr) > 1000 else stderr
+                        print(f"  STDERR (last 1000 chars):\n{stderr_preview}")
+                    print(f"  {'='*60}")
+                else:
+                    print(f"\n  ⚠️  Server process stdout/stderr are empty")
+                    print(f"     This is unusual - the server may not be producing output")
+                    print(f"     or output redirection may not be working properly.")
             
             if os.getenv('DEBUG_OUTPUT'):
                 print(f"\n  Full output received:\n{'='*60}\n{output}\n{'='*60}")
@@ -875,7 +937,7 @@ class TestRunner:
                 return False
             
             # Execute test
-            executor = TestExecutor(client, show_all_output=self.show_all_output)
+            executor = TestExecutor(client, show_all_output=self.show_all_output, server_manager=self.server_manager)
             try:
                 passed = executor.execute_test(test_def)
             except Exception as e:
