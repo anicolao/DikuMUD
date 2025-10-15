@@ -68,6 +68,8 @@ class ServerManager:
         try:
             for line in iter(pipe.readline, b''):
                 if line:
+                    if os.getenv('DEBUG_OUTPUT'):
+                        print(f"@{line}")
                     data_list.append(line)
         except Exception:
             pass  # Pipe closed or error - thread will exit
