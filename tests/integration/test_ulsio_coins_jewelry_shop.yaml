@@ -11,48 +11,44 @@ setup:
     password: test
     class: warrior
     level: 22
-  start_room: 3034
+  start_room: 1200
   gold: 0
 
 steps:
-  # Load test coins
+  # Load test coins in safe room 1200 where mobs cannot enter and pick them up
   - action: command
     command: "load obj 3220"
-    description: "Load bronze coins"
-    expected:
-      - pattern: "."
-        message: "Command executed"
-
-  - action: command
-    command: "get bronze"
-    description: "Get bronze coins"
+    description: "Load bronze coins in safe room"
     expected:
       - pattern: "."
         message: "Command executed"
 
   - action: command
     command: "load obj 3219"
-    description: "Load silver coins"
-    expected:
-      - pattern: "."
-        message: "Command executed"
-
-  - action: command
-    command: "get silver"
-    description: "Get silver coins"
+    description: "Load silver coins in safe room"
     expected:
       - pattern: "."
         message: "Command executed"
 
   - action: command
     command: "load obj 3231"
-    description: "Load gold coins"
+    description: "Load gold coins in safe room"
     expected:
       - pattern: "."
         message: "Command executed"
+
+  # Get all coins at once in the safe room
   - action: command
-    command: "get gold"
-    description: "Get gold coins"
+    command: "get all"
+    description: "Get all coins in safe room"
+    expected:
+      - pattern: "."
+        message: "Command executed"
+
+  # Now teleport to the jewelry shop
+  - action: command
+    command: "goto 3034"
+    description: "Teleport to jewelry shop"
     expected:
       - pattern: "."
         message: "Command executed"
