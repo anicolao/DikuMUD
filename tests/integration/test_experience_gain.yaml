@@ -13,7 +13,7 @@ setup:
     name: ExpTester
     password: test
     class: warrior
-    level: 22 # Level 22 to use god commands for testing
+    level: 22 # Level 22 to use god commands and maximize combat ability
   start_room: 1200 # room with no exits
   gold: 100
 
@@ -25,7 +25,31 @@ steps:
       - pattern: "Chat|chat"
         message: "Should be in chat room"
 
-  # Step 2: Load a weak mobile to kill
+  # Step 2: Load a powerful weapon to ensure we can hit and kill quickly
+  - action: command
+    command: "load obj 4501"
+    description: "Load a Kaolian ceremonial blade (5d4+3 damage)"
+    expected:
+      - pattern: "."
+        message: "Should get some response from load command"
+
+  # Step 3: Get the weapon
+  - action: command
+    command: "get blade"
+    description: "Pick up the ceremonial blade"
+    expected:
+      - pattern: "."
+        message: "Should pick up the weapon"
+
+  # Step 4: Wield the weapon
+  - action: command
+    command: "wield blade"
+    description: "Wield the powerful blade"
+    expected:
+      - pattern: "."
+        message: "Should wield the weapon"
+
+  # Step 5: Load a weak mobile to kill
   - action: command
     command: "load char 3062"
     description: "Load a weak calot for testing"
@@ -33,35 +57,28 @@ steps:
       - pattern: "."
         message: "Should get some response from load command"
 
-  # Step 3: Look to see what we loaded
+  # Step 6: Look to see what we loaded
   - action: look
     description: "Look to see the loaded mobile"
     expected:
       - pattern: "."
         message: "Should see something"
 
-  # Step 4: Kill the mobile and check for experience message
-  # Note: This may take multiple hits, so we may need to wait
+  # Step 7: Kill the mobile with the powerful weapon
+  # With the Kaolian ceremonial blade (5d4+3 damage), we should kill quickly
   - action: command
     command: "kill calot"
-    description: "Start attacking the calot"
-    delay_after: 2
+    description: "Attack the calot with powerful weapon"
+    delay_after: 3
     expected:
       - pattern: "."
         message: "Should start combat"
-  - action: command
-    command: "kill calot"
-    description: "Keep attacking"
-    delay_after: 5
-    expected:
-      - pattern: "."
-        message: "Continue combat"
 
-  # Step 5: Wait for the kill to complete - keep hitting
+  # Step 8: Finish the kill and check for experience message
   - action: command
     command: "kill calot"
-    description: "Wait for auto-combat to finish"
-    delay_after: 5
+    description: "Finish the kill (if not already dead)"
+    delay_after: 3
     expected:
       - pattern: "You gained [0-9]+ experience\\."
         message: "Should see experience gain message with actual amount"
