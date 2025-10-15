@@ -24,6 +24,8 @@ import telnetlib
 import signal
 import os
 import struct
+import threading
+import queue
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -46,6 +48,31 @@ class ServerManager:
         self.process = None
         self.port = None
         self.spin_mode = spin_mode  # Enable spin mode for faster testing
+        # Background output capture
+        self.stdout_data = []
+        self.stderr_data = []
+        self.stdout_thread = None
+        self.stderr_thread = None
+    
+    def _read_pipe(self, pipe, data_list):
+        """
+        Background thread function to continuously read from a pipe.
+        
+        This prevents the pipe buffer from filling up and blocking the subprocess.
+        Accumulates data in the provided list for later retrieval.
+        
+        Args:
+            pipe: The pipe to read from (stdout or stderr)
+            data_list: List to accumulate chunks of data
+        """
+        try:
+            for line in iter(pipe.readline, b''):
+                if line:
+                    if os.getenv('DEBUG_OUTPUT'):
+                        print(f"@{line}")
+                    data_list.append(line)
+        except Exception:
+            pass  # Pipe closed or error - thread will exit
     
     def _create_test_lib(self):
         """Create a test copy of the lib directory to avoid modifying real game assets."""
@@ -61,6 +88,53 @@ class ServerManager:
         
         # Copy lib directory to test_lib
         shutil.copytree(self.lib_path, self.test_lib_path)
+    
+    def _check_world_files(self):
+        """Check that required world files exist before starting the server."""
+        required_files = [
+            'tinyworld.wld',
+            'tinyworld.mob',
+            'tinyworld.obj',
+            'tinyworld.zon'
+        ]
+        
+        missing_files = []
+        for filename in required_files:
+            filepath = os.path.join(self.test_lib_path, filename)
+            if not os.path.exists(filepath):
+                missing_files.append(filename)
+        
+        if missing_files:
+            # Check if files exist in source lib directory
+            lib_missing = []
+            for filename in missing_files:
+                lib_filepath = os.path.join(self.lib_path, filename)
+                if not os.path.exists(lib_filepath):
+                    lib_missing.append(filename)
+            
+            error_msg = "❌ ERROR: Required world files are missing:\n"
+            if lib_missing:
+                error_msg += f"\nMissing from source lib directory ({self.lib_path}):\n"
+                for filename in lib_missing:
+                    error_msg += f"  - {filename}\n"
+            
+            if os.getenv('DEBUG_OUTPUT'):
+                error_msg += f"\nAlso checked test_lib directory: {self.test_lib_path}\n"
+                error_msg += f"Missing from test_lib:\n"
+                for filename in missing_files:
+                    error_msg += f"  - {filename}\n"
+            
+            error_msg += "\n💡 These files must be built from YAML zone files before running tests.\n"
+            error_msg += "\nTo fix this issue:\n"
+            error_msg += "  1. Go to the dm-dist-alfa directory:\n"
+            error_msg += "       cd dm-dist-alfa\n\n"
+            error_msg += "  2. Build the world files:\n"
+            error_msg += "       make worldfiles\n\n"
+            error_msg += "  3. Or build everything (recommended):\n"
+            error_msg += "       make\n\n"
+            error_msg += "The world files are generated from YAML zone definitions in lib/zones_yaml/\n"
+            error_msg += "and are required for the server to start.\n"
+            raise RuntimeError(error_msg)
         
     def start(self, port: Optional[int] = None) -> int:
         """
@@ -82,11 +156,21 @@ class ServerManager:
         if not self.test_lib_path:
             self._create_test_lib()
         
+        # Check that required world files exist in test_lib
+        self._check_world_files()
+        
         # Start server as subprocess with test_lib as the data directory
         server_dir = os.path.dirname(self.server_path)
         cmd = [self.server_path, '-p', str(port), '-d', 'test_lib']
         if self.spin_mode:
             cmd.append('-spin')  # Enable spin mode for maximum speed
+        
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f"\n***** Starting server with command: {' '.join(cmd)}")
+            print(f"***** Working directory: {server_dir}")
+            print(f"***** Port: {port}")
+            print(f"***** Test lib path: {self.test_lib_path}\n")
+        
         self.process = subprocess.Popen(
             cmd,
             cwd=server_dir,
@@ -95,12 +179,75 @@ class ServerManager:
             preexec_fn=os.setsid  # Create new process group for clean shutdown
         )
         
+        # Start background threads to continuously read stdout/stderr
+        # This prevents pipe buffers from filling up and blocking the server
+        self.stdout_data = []
+        self.stderr_data = []
+        self.stdout_thread = threading.Thread(
+            target=self._read_pipe,
+            args=(self.process.stdout, self.stdout_data),
+            daemon=True
+        )
+        self.stderr_thread = threading.Thread(
+            target=self._read_pipe,
+            args=(self.process.stderr, self.stderr_data),
+            daemon=True
+        )
+        self.stdout_thread.start()
+        self.stderr_thread.start()
+        
         self.port = port
         
         # Wait for server to be ready
         self._wait_for_startup(timeout=15)
         
         return port
+    
+    def get_server_output(self, terminate_first=True):
+        """
+        Get output from the server process.
+        
+        Background threads continuously read stdout/stderr to prevent pipe buffer
+        overflow. This method returns the accumulated output.
+        
+        Args:
+            terminate_first: If True, terminates the process before returning output.
+                           After reading, sets self.process to None.
+        
+        Returns:
+            Tuple of (stdout_data, stderr_data) as strings
+        """
+        if terminate_first and self.process:
+            try:
+                # Terminate the process
+                try:
+                    # Send SIGTERM to the process group
+                    os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+                    self.process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    # Force kill if necessary
+                    os.killpg(os.getpgid(self.process.pid), signal.SIGKILL)
+                    self.process.wait()
+                except ProcessLookupError:
+                    # Process already dead
+                    pass
+                
+                # Mark process as terminated
+                self.process = None
+            except Exception as e:
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"Debug: Error terminating process: {e}")
+                self.process = None
+        
+        # Wait a moment for background threads to finish reading any remaining data
+        if terminate_first:
+            time.sleep(0.1)
+        
+        # Collect accumulated data from background threads
+        stdout_data = b''.join(self.stdout_data).decode('utf-8', errors='ignore')
+        stderr_data = b''.join(self.stderr_data).decode('utf-8', errors='ignore')
+        
+        return stdout_data, stderr_data
     
     def stop(self):
         """Stop the server gracefully."""
@@ -141,8 +288,14 @@ class ServerManager:
         
         # Check if helper program exists
         if not os.path.exists(helper_path):
-            print(f"    ! Warning: Helper program not found at {helper_path}")
-            print(f"    ! Build it with: cd dm-dist-alfa && make ../tools/create_test_player")
+            print(f"    ⚠️  WARNING: Test player creation helper not found!")
+            print(f"       Path: {helper_path}")
+            print(f"       ")
+            print(f"       Without this helper, the test player file cannot be created,")
+            print(f"       which will cause login to fail with character creation prompts.")
+            print(f"       ")
+            print(f"       To fix: cd dm-dist-alfa && make ../tools/create_test_player")
+            print(f"       ")
             return
         
         # Run helper program with -d parameter to write directly to test_lib
@@ -211,12 +364,47 @@ class ServerManager:
         
         # Try to get server output if available
         error_msg = f"Server failed to start within {timeout} seconds"
-        if self.process and self.process.poll() is not None:
-            stderr = self.process.stderr.read() if self.process.stderr else b""
-            if stderr:
-                error_msg += f"\nServer error: {stderr.decode('utf-8', errors='ignore')}"
+        
+        # Try to read stderr even if process is still running
+        stderr_text = ""
+        if self.process:
+            try:
+                # Try to read any available stderr without blocking
+                import select
+                if self.process.stderr:
+                    # Check if there's data available to read
+                    ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
+                    if ready:
+                        stderr = self.process.stderr.read()
+                        if stderr:
+                            stderr_text = stderr.decode('utf-8', errors='ignore')
+                    elif self.process.poll() is not None:
+                        # Process has exited, safe to read all
+                        stderr = self.process.stderr.read()
+                        if stderr:
+                            stderr_text = stderr.decode('utf-8', errors='ignore')
+            except Exception as e:
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"Debug: Error reading stderr: {e}")
+        
+        if stderr_text:
+            error_msg += f"\n\n{'='*50}"
+            error_msg += f"\nServer stderr output:"
+            error_msg += f"\n{'='*50}"
+            error_msg += f"\n{stderr_text}"
+            error_msg += f"{'='*50}\n"
+            
+            # Check for specific known errors and provide helpful hints
+            if "No such file or directory" in stderr_text and "boot:" in stderr_text:
+                error_msg += "\n💡 HINT: The server cannot find required world files (tinyworld.wld, tinyworld.mob, etc.)"
+                error_msg += "\n   These files need to be built from YAML zone files first."
+                error_msg += "\n\n   To fix this, run:"
+                error_msg += "\n     cd dm-dist-alfa && make worldfiles"
+                error_msg += "\n\n   Or run the full build:"
+                error_msg += "\n     cd dm-dist-alfa && make"
+        
         if last_error:
-            error_msg += f"\nLast connection error: {last_error}"
+            error_msg += f"\n\nLast connection error: {last_error}"
         
         raise RuntimeError(error_msg)
 
@@ -412,10 +600,11 @@ class TestExecutor:
     - Report results
     """
     
-    def __init__(self, client: GameClient, show_all_output: bool = False):
+    def __init__(self, client: GameClient, show_all_output: bool = False, server_manager=None):
         self.client = client
         self.results = []
         self.show_all_output = show_all_output
+        self.server_manager = server_manager
     
     def load_test(self, test_file: Path) -> Dict[str, Any]:
         """
@@ -453,6 +642,53 @@ class TestExecutor:
         found, output = self.client.expect_output(r'>', max_prompts=2, timeout=15)
         if not found:
             print(f"  ✗ FAILED: Could not find initial prompt after login")
+            
+            # Show what we actually received to help debug
+            if output:
+                # Show a preview of what we got
+                preview = output[-500:] if len(output) > 500 else output
+                preview = preview.replace('\n', '\\n').replace('\r', '\\r')
+                print(f"  Last output received (up to 500 chars): {preview}")
+                
+                # Check for common issues
+                if "Did I get that right" in output or "Please type Yes or No" in output:
+                    print(f"\n  💡 HINT: The server is prompting for new character creation.")
+                    print(f"     This means the test player file was not created properly.")
+                    print(f"     Make sure to build the helper: cd dm-dist-alfa && make ../tools/create_test_player")
+            else:
+                print(f"  No output received from telnet connection.")
+            
+            # Check server stdout/stderr for additional diagnostic info
+            # Always show this when test fails, not just with DEBUG_OUTPUT
+            if self.server_manager:
+                stdout, stderr = self.server_manager.get_server_output()
+                if stdout or stderr:
+                    print(f"\n  {'='*60}")
+                    print(f"  Server process output (for diagnosis):")
+                    print(f"  {'='*60}")
+                    if stdout:
+                        # Show last 5000 chars of stdout (or all if shorter)
+                        if len(stdout) > 5000:
+                            stdout_preview = stdout[-5000:]
+                            print(f"  STDOUT (last 5000 chars, {len(stdout)} total):\n{stdout_preview}")
+                        else:
+                            print(f"  STDOUT ({len(stdout)} chars):\n{stdout}")
+                    if stderr:
+                        # Show last 5000 chars of stderr (or all if shorter)
+                        if len(stderr) > 5000:
+                            stderr_preview = stderr[-5000:]
+                            print(f"  STDERR (last 5000 chars, {len(stderr)} total):\n{stderr_preview}")
+                        else:
+                            print(f"  STDERR ({len(stderr)} chars):\n{stderr}")
+                    print(f"  {'='*60}")
+                else:
+                    print(f"\n  ⚠️  Server process stdout/stderr are empty")
+                    print(f"     This is unusual - the server may not be producing output")
+                    print(f"     or output redirection may not be working properly.")
+            
+            if os.getenv('DEBUG_OUTPUT'):
+                print(f"\n  Full output received:\n{'='*60}\n{output}\n{'='*60}")
+            
             return False
         print(f"  ✓ Connected and in game")
         
@@ -760,7 +996,7 @@ class TestRunner:
                 return False
             
             # Execute test
-            executor = TestExecutor(client, show_all_output=self.show_all_output)
+            executor = TestExecutor(client, show_all_output=self.show_all_output, server_manager=self.server_manager)
             try:
                 passed = executor.execute_test(test_def)
             except Exception as e:
@@ -840,10 +1076,13 @@ def main():
         print("       python3 integration_test_runner.py [--show-all-output] <server_path> --all <test_dir>")
         print("\nOptions:")
         print("  --show-all-output    Show all command output from the game server")
+        print("\nEnvironment Variables:")
+        print("  DEBUG_OUTPUT=1       Show detailed telnet communication for debugging")
         print("\nExample:")
         print("  python3 integration_test_runner.py ./dmserver tests/integration/shops/bug_3003_nobles_waiter_list.yaml")
         print("  python3 integration_test_runner.py ./dmserver --all tests/integration/")
         print("  python3 integration_test_runner.py --show-all-output ./dmserver --all tests/integration/")
+        print("  DEBUG_OUTPUT=1 python3 integration_test_runner.py ./dmserver tests/integration/basic_connectivity.yaml")
         sys.exit(1)
     
     # Check for --show-all-output flag
