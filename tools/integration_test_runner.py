@@ -61,6 +61,37 @@ class ServerManager:
         
         # Copy lib directory to test_lib
         shutil.copytree(self.lib_path, self.test_lib_path)
+    
+    def _check_world_files(self):
+        """Check that required world files exist before starting the server."""
+        required_files = [
+            'tinyworld.wld',
+            'tinyworld.mob',
+            'tinyworld.obj',
+            'tinyworld.zon'
+        ]
+        
+        missing_files = []
+        for filename in required_files:
+            filepath = os.path.join(self.test_lib_path, filename)
+            if not os.path.exists(filepath):
+                missing_files.append(filename)
+        
+        if missing_files:
+            error_msg = "❌ ERROR: Required world files are missing from lib directory:\n"
+            for filename in missing_files:
+                error_msg += f"  - {filename}\n"
+            error_msg += "\n💡 These files must be built from YAML zone files before running tests.\n"
+            error_msg += "\nTo fix this issue:\n"
+            error_msg += "  1. Go to the dm-dist-alfa directory:\n"
+            error_msg += "       cd dm-dist-alfa\n\n"
+            error_msg += "  2. Build the world files:\n"
+            error_msg += "       make worldfiles\n\n"
+            error_msg += "  3. Or build everything (recommended):\n"
+            error_msg += "       make\n\n"
+            error_msg += "The world files are generated from YAML zone definitions in lib/zones_yaml/\n"
+            error_msg += "and are required for the server to start.\n"
+            raise RuntimeError(error_msg)
         
     def start(self, port: Optional[int] = None) -> int:
         """
@@ -81,6 +112,9 @@ class ServerManager:
         # Create test lib directory (if not already created by create_test_player)
         if not self.test_lib_path:
             self._create_test_lib()
+        
+        # Check that required world files exist in test_lib
+        self._check_world_files()
         
         # Start server as subprocess with test_lib as the data directory
         server_dir = os.path.dirname(self.server_path)
@@ -214,9 +248,19 @@ class ServerManager:
         if self.process and self.process.poll() is not None:
             stderr = self.process.stderr.read() if self.process.stderr else b""
             if stderr:
-                error_msg += f"\nServer error: {stderr.decode('utf-8', errors='ignore')}"
+                stderr_text = stderr.decode('utf-8', errors='ignore')
+                error_msg += f"\n\nServer stderr output:\n{stderr_text}"
+                
+                # Check for specific known errors and provide helpful hints
+                if "No such file or directory" in stderr_text and "boot:" in stderr_text:
+                    error_msg += "\n\n💡 HINT: The server cannot find required world files (tinyworld.wld, tinyworld.mob, etc.)"
+                    error_msg += "\n   These files need to be built from YAML zone files first."
+                    error_msg += "\n\n   To fix this, run:"
+                    error_msg += "\n     cd dm-dist-alfa && make worldfiles"
+                    error_msg += "\n\n   Or run the full build:"
+                    error_msg += "\n     cd dm-dist-alfa && make"
         if last_error:
-            error_msg += f"\nLast connection error: {last_error}"
+            error_msg += f"\n\nLast connection error: {last_error}"
         
         raise RuntimeError(error_msg)
 
@@ -840,10 +884,13 @@ def main():
         print("       python3 integration_test_runner.py [--show-all-output] <server_path> --all <test_dir>")
         print("\nOptions:")
         print("  --show-all-output    Show all command output from the game server")
+        print("\nEnvironment Variables:")
+        print("  DEBUG_OUTPUT=1       Show detailed telnet communication for debugging")
         print("\nExample:")
         print("  python3 integration_test_runner.py ./dmserver tests/integration/shops/bug_3003_nobles_waiter_list.yaml")
         print("  python3 integration_test_runner.py ./dmserver --all tests/integration/")
         print("  python3 integration_test_runner.py --show-all-output ./dmserver --all tests/integration/")
+        print("  DEBUG_OUTPUT=1 python3 integration_test_runner.py ./dmserver tests/integration/basic_connectivity.yaml")
         sys.exit(1)
     
     # Check for --show-all-output flag
