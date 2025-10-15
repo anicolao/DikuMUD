@@ -198,8 +198,14 @@ class ServerManager:
         
         # Check if helper program exists
         if not os.path.exists(helper_path):
-            print(f"    ! Warning: Helper program not found at {helper_path}")
-            print(f"    ! Build it with: cd dm-dist-alfa && make ../tools/create_test_player")
+            print(f"    ⚠️  WARNING: Test player creation helper not found!")
+            print(f"       Path: {helper_path}")
+            print(f"       ")
+            print(f"       Without this helper, the test player file cannot be created,")
+            print(f"       which will cause login to fail with character creation prompts.")
+            print(f"       ")
+            print(f"       To fix: cd dm-dist-alfa && make ../tools/create_test_player")
+            print(f"       ")
             return
         
         # Run helper program with -d parameter to write directly to test_lib
@@ -545,6 +551,23 @@ class TestExecutor:
         found, output = self.client.expect_output(r'>', max_prompts=2, timeout=15)
         if not found:
             print(f"  ✗ FAILED: Could not find initial prompt after login")
+            
+            # Show what we actually received to help debug
+            if output:
+                # Show a preview of what we got
+                preview = output[-500:] if len(output) > 500 else output
+                preview = preview.replace('\n', '\\n').replace('\r', '\\r')
+                print(f"  Last output received (up to 500 chars): {preview}")
+                
+                # Check for common issues
+                if "Did I get that right" in output or "Please type Yes or No" in output:
+                    print(f"\n  💡 HINT: The server is prompting for new character creation.")
+                    print(f"     This means the test player file was not created properly.")
+                    print(f"     Make sure to build the helper: cd dm-dist-alfa && make ../tools/create_test_player")
+            
+            if os.getenv('DEBUG_OUTPUT'):
+                print(f"\n  Full output received:\n{'='*60}\n{output}\n{'='*60}")
+            
             return False
         print(f"  ✓ Connected and in game")
         
