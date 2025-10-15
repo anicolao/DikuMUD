@@ -20,6 +20,106 @@ steps:
 - action: look
   description: Verify starting location in Lesser Helium
 - action: command
+  command: load obj 3000
+  description: Load drink 3000 (barrel)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: barrel
+- action: command
+  command: drop barrel
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge barrel
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3001
+  description: Load drink 3001 (flask)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: flask
+- action: command
+  command: drop flask
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge flask
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3002
+  description: Load drink 3002 (wine)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: wine
+- action: command
+  command: drop wine
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge wine
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3003
+  description: Load drink 3003 (whiskey)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: whiskey
+- action: command
+  command: drop whiskey
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge whiskey
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3004
+  description: Load drink 3004 (local)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: local
+- action: command
+  command: drop local
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge local
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 3020
   description: Load light 3020 (small)
   expected:
@@ -167,6 +267,126 @@ steps:
 - action: command
   command: purge orb
   description: Purge the light
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3030
+  description: Load light_item 3030 (torch)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: torch
+- action: command
+  command: drop torch
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge torch
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3031
+  description: Load light_item 3031 (radium)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the light_item
+  expected:
+  - pattern: radium
+- action: command
+  command: drop radium
+  description: Drop the light_item
+  expected:
+  - pattern: drop
+- action: command
+  command: purge radium
+  description: Purge the light_item
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3032
+  description: Load container 3032 (bag)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: bag
+- action: command
+  command: drop bag
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge bag
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3033
+  description: Load container 3033 (box)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: box
+- action: command
+  command: drop box
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge box
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3034
+  description: Load money 3034 (parchment)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the money
+  expected:
+  - pattern: parchment
+- action: command
+  command: drop parchment
+  description: Drop the money
+  expected:
+  - pattern: drop
+- action: command
+  command: purge parchment
+  description: Purge the money
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3044
+  description: Load container 3044 (staff)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: staff
+- action: command
+  command: drop staff
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge staff
+  description: Purge the container
   expected:
   - pattern: ok\.?|destroy
 - action: command
@@ -1429,10 +1649,91 @@ steps:
   description: Purge the light
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3100
+  description: Load drink 3100 (cup)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: cup
+- action: command
+  command: drop cup
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge cup
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3101
+  description: Load drink 3101 (cup)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: cup
+- action: command
+  command: drop cup
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge cup
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3102
+  description: Load drink 3102 (cup)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: cup
+- action: command
+  command: drop cup
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge cup
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 3138
+  description: Load drink 3138 (waterskin)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: waterskin
+- action: command
+  command: drop waterskin
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge waterskin
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 47 objects in Lesser Helium should be properly configured
+  description: All 62 objects in Lesser Helium should be properly configured
   notes: "This test validates that all usable objects in Lesser Helium can be:\n \
     \ - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (0), armor (6), lights (41), shields (0)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 70\nObjects tested:\
+    \ 62\nObject types: armor (6), container (3), drink (9), light (41), light_item\
+    \ (2), money (1)"

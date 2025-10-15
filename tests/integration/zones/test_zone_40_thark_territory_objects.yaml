@@ -50,6 +50,26 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 4101
+  description: Load key 4101 (rifle)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: rifle
+- action: command
+  command: drop rifle
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge rifle
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 4102
   description: Load weapon 4102 (barbed)
   expected:
@@ -350,6 +370,166 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 4120
+  description: Load treasure 4120 (saddle)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: saddle
+- action: command
+  command: drop saddle
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge saddle
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4121
+  description: Load container 4121 (bridle)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: bridle
+- action: command
+  command: drop bridle
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge bridle
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4122
+  description: Load container 4122 (carrying)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: carrying
+- action: command
+  command: drop carrying
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge carrying
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4123
+  description: Load container 4123 (supply)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: supply
+- action: command
+  command: drop supply
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge supply
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4124
+  description: Load container 4124 (waterskin)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: waterskin
+- action: command
+  command: drop waterskin
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge waterskin
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4125
+  description: Load treasure 4125 (strong)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: strong
+- action: command
+  command: drop strong
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge strong
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4130
+  description: Load container 4130 (totem)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: totem
+- action: command
+  command: drop totem
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge totem
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4131
+  description: Load treasure 4131 (skull)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: skull
+- action: command
+  command: drop skull
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge skull
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 4132
   description: Load armor 4132 (belt)
   expected:
@@ -377,6 +557,26 @@ steps:
 - action: command
   command: purge belt
   description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4133
+  description: Load container 4133 (medicine)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: medicine
+- action: command
+  command: drop medicine
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge medicine
+  description: Purge the container
   expected:
   - pattern: ok\.?|destroy
 - action: command
@@ -410,6 +610,226 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 4137
+  description: Load drink 4137 (barrel)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the drink
+  expected:
+  - pattern: barrel
+- action: command
+  command: drop barrel
+  description: Drop the drink
+  expected:
+  - pattern: drop
+- action: command
+  command: purge barrel
+  description: Purge the drink
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4138
+  description: Load container 4138 (incubator)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: incubator
+- action: command
+  command: drop incubator
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge incubator
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4139
+  description: Load container 4139 (heater)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: heater
+- action: command
+  command: drop heater
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge heater
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4141
+  description: Load treasure 4141 (gemstone)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: gemstone
+- action: command
+  command: drop gemstone
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge gemstone
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4142
+  description: Load container 4142 (scrap)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: scrap
+- action: command
+  command: drop scrap
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge scrap
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4143
+  description: Load treasure 4143 (artifact)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the treasure
+  expected:
+  - pattern: artifact
+- action: command
+  command: drop artifact
+  description: Drop the treasure
+  expected:
+  - pattern: drop
+- action: command
+  command: purge artifact
+  description: Purge the treasure
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4145
+  description: Load container 4145 (banner)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: banner
+- action: command
+  command: drop banner
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge banner
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4146
+  description: Load container 4146 (signal)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: signal
+- action: command
+  command: drop signal
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge signal
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4147
+  description: Load container 4147 (sleeping)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: sleeping
+- action: command
+  command: drop sleeping
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge sleeping
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4148
+  description: Load container 4148 (hide)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: hide
+- action: command
+  command: drop hide
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge hide
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4149
+  description: Load container 4149 (tools)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: tools
+- action: command
+  command: drop tools
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge tools
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 4090
   description: Load weapon 4090 (tarkas)
   expected:
@@ -439,10 +859,31 @@ steps:
   description: Purge the weapon
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4091
+  description: Load container 4091 (white)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: white
+- action: command
+  command: drop white
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge white
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 14 objects in Thark Territory should be properly configured
+  description: All 36 objects in Thark Territory should be properly configured
   notes: "This test validates that all usable objects in Thark Territory can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (7), armor (6), lights (0), shields (1)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 40\nObjects tested:\
+    \ 36\nObject types: armor (6), container (15), drink (1), key (1), shield (1),\
+    \ treasure (5), weapon (7)"

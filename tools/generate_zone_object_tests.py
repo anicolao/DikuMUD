@@ -14,7 +14,14 @@ import sys
 # Item type constants
 ITEM_LIGHT = 1
 ITEM_WEAPON = 5
+ITEM_TREASURE = 8
 ITEM_ARMOR = 9
+ITEM_FOOD = 11
+ITEM_CONTAINER = 12
+ITEM_CONTAINER_LOCKABLE = 15
+ITEM_MONEY = 16
+ITEM_DRINKCON = 17
+ITEM_KEY = 18
 
 # Wear flag constants
 ITEM_TAKE = 1
@@ -113,6 +120,7 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
     
     # Categorize objects
     testable_objects = []
+    skipped_objects = []
     
     for obj in objects:
         type_flag = obj.get('type_flag', 0)
@@ -128,6 +136,18 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         keyword = get_best_keyword(namelist, short_desc, objects)
         if not keyword:
             continue
+        
+        # Check if object is takeable - this is fundamental for most objects
+        if not (wear_flags & ITEM_TAKE):
+            # Track objects that should probably be takeable but aren't
+            if type_flag in [ITEM_FOOD, ITEM_DRINKCON, ITEM_KEY, ITEM_CONTAINER, ITEM_CONTAINER_LOCKABLE, ITEM_LIGHT, ITEM_TREASURE, ITEM_MONEY]:
+                skipped_objects.append({
+                    'vnum': vnum,
+                    'keyword': keyword,
+                    'short_desc': short_desc,
+                    'type_flag': type_flag,
+                    'reason': 'Missing ITEM_TAKE flag'
+                })
         
         # Determine object category and action
         # Check for shield first (before armor) since shields can be type ARMOR
@@ -175,10 +195,57 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
                     'type': 'armor',
                     'wear_location': wear_loc
                 })
+        # Add support for other takeable object types
+        elif (wear_flags & ITEM_TAKE) and type_flag in [ITEM_FOOD, ITEM_DRINKCON, ITEM_KEY, ITEM_CONTAINER, ITEM_CONTAINER_LOCKABLE, ITEM_TREASURE, ITEM_MONEY]:
+            # These objects can be picked up and dropped but don't have specific use commands to test
+            # We'll just verify they can be picked up
+            type_name = {
+                ITEM_FOOD: 'food',
+                ITEM_DRINKCON: 'drink',
+                ITEM_KEY: 'key',
+                ITEM_CONTAINER: 'container',
+                ITEM_CONTAINER_LOCKABLE: 'container',
+                ITEM_TREASURE: 'treasure',
+                ITEM_MONEY: 'money'
+            }.get(type_flag, 'item')
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': None,  # No specific action beyond get/drop
+                'expected_pattern': None,
+                'type': type_name
+            })
+        # Special case for lights that are just takeable but not holdable
+        elif type_flag == ITEM_LIGHT and (wear_flags & ITEM_TAKE):
+            testable_objects.append({
+                'vnum': vnum,
+                'keyword': keyword,
+                'short_desc': short_desc,
+                'action': None,  # Can't hold it, but can pick it up
+                'expected_pattern': None,
+                'type': 'light_item'
+            })
     
     if not testable_objects:
         print(f"  No testable objects found in {zone_name}, skipping")
         return None
+    
+    # Report skipped objects
+    if skipped_objects:
+        print(f"  WARNING: {len(skipped_objects)} objects skipped (missing ITEM_TAKE flag):")
+        for obj in skipped_objects:
+            type_name = {
+                ITEM_FOOD: 'FOOD',
+                ITEM_DRINKCON: 'DRINKCON',
+                ITEM_KEY: 'KEY',
+                ITEM_CONTAINER: 'CONTAINER',
+                ITEM_CONTAINER_LOCKABLE: 'CONTAINER(lockable)',
+                ITEM_LIGHT: 'LIGHT',
+                ITEM_TREASURE: 'TREASURE',
+                ITEM_MONEY: 'MONEY'
+            }.get(obj['type_flag'], f"TYPE_{obj['type_flag']}")
+            print(f"    - vnum {obj['vnum']}: {obj['short_desc']} ({type_name})")
     
     # Use room 1200 (The Chat Room) as starting room for all tests
     # This is a reliable, isolated room that is always lit and has no mob interference
@@ -240,28 +307,29 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
             ]
         })
         
-        # Use the object appropriately
-        # Make pattern more flexible - "ok" with optional period
-        if 'OK' in expected or 'Ok' in expected:
-            expected = expected.replace('OK', r'ok\.?').replace('Ok', r'ok\.?')
-        test['steps'].append({
-            'action': 'command',
-            'command': f'{action} {keyword}',
-            'description': f'{action.capitalize()} the {obj_type}',
-            'expected': [
-                {'pattern': expected}
-            ]
-        })
-        
-        # Remove it
-        test['steps'].append({
-            'action': 'command',
-            'command': f'remove {keyword}',
-            'description': f'Remove the {obj_type}',
-            'expected': [
-                {'pattern': 'stop using|stop|remove'}
-            ]
-        })
+        # Use the object appropriately (if it has a specific action)
+        if action:
+            # Make pattern more flexible - "ok" with optional period
+            if expected and ('OK' in expected or 'Ok' in expected):
+                expected = expected.replace('OK', r'ok\.?').replace('Ok', r'ok\.?')
+            test['steps'].append({
+                'action': 'command',
+                'command': f'{action} {keyword}',
+                'description': f'{action.capitalize()} the {obj_type}',
+                'expected': [
+                    {'pattern': expected}
+                ]
+            })
+            
+            # Remove it (only for objects that were used)
+            test['steps'].append({
+                'action': 'command',
+                'command': f'remove {keyword}',
+                'description': f'Remove the {obj_type}',
+                'expected': [
+                    {'pattern': 'stop using|stop|remove'}
+                ]
+            })
         
         # Drop it
         test['steps'].append({
@@ -284,21 +352,27 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         })
     
     # Add result section
+    # Count object types
+    type_counts = {}
+    for o in testable_objects:
+        obj_type = o["type"]
+        type_counts[obj_type] = type_counts.get(obj_type, 0) + 1
+    
+    type_summary = ', '.join([f'{t} ({c})' for t, c in sorted(type_counts.items())])
+    
     test['result'] = {
         'should_pass': True,
         'description': f'All {len(testable_objects)} objects in {zone_name} should be properly configured',
         'notes': f'This test validates that all usable objects in {zone_name} can be:\n'
                  f'  - Loaded by a wizard\n'
                  f'  - Picked up\n'
-                 f'  - Used appropriately (wielded, worn, or held)\n'
-                 f'  - Removed\n'
+                 f'  - Used appropriately (wielded, worn, held, etc.)\n'
                  f'  - Dropped\n'
                  f'  - Purged\n'
                  f'\n'
-                 f'Object types tested: weapons ({sum(1 for o in testable_objects if o["type"] == "weapon")}), '
-                 f'armor ({sum(1 for o in testable_objects if o["type"] == "armor")}), '
-                 f'lights ({sum(1 for o in testable_objects if o["type"] == "light")}), '
-                 f'shields ({sum(1 for o in testable_objects if o["type"] == "shield")})'
+                 f'Total objects in zone: {len(objects)}\n'
+                 f'Objects tested: {len(testable_objects)}\n'
+                 f'Object types: {type_summary}'
     }
     
     # Write to file
@@ -309,7 +383,15 @@ def generate_test_for_zone(zone_file, zone_name, zone_number, output_dir):
         yaml.dump(test, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
     
     print(f"  Created test: {output_file}")
-    print(f"    {len(testable_objects)} objects to test")
+    print(f"    {len(testable_objects)} objects to test (out of {len(objects)} total objects)")
+    
+    # Calculate coverage
+    coverage = (len(testable_objects) / len(objects) * 100) if objects else 0
+    if coverage < 100:
+        untested_count = len(objects) - len(testable_objects) - len(skipped_objects)
+        if untested_count > 0:
+            print(f"    Coverage: {coverage:.1f}% ({untested_count} objects not tested, not flagged as skipped)")
+    
     return output_file
 
 def main():
@@ -339,6 +421,10 @@ def main():
     print(f"Output directory: {output_dir}")
     
     created = 0
+    total_objects = 0
+    total_tested = 0
+    zones_with_issues = []
+    
     for zone_file, zone_name, zone_number in zones:
         zone_path = os.path.join(zones_dir, zone_file)
         if not os.path.exists(zone_path):
@@ -346,11 +432,46 @@ def main():
             continue
         
         print(f"\nProcessing {zone_name}...")
+        
+        # Count objects in this zone
+        with open(zone_path) as f:
+            data = yaml.safe_load(f)
+            zone_obj_count = len(data.get('objects', []))
+        
         result = generate_test_for_zone(zone_path, zone_name, zone_number, output_dir)
         if result:
             created += 1
+            # Read the generated test to get tested object count
+            with open(result) as f:
+                test_data = yaml.safe_load(f)
+                notes = test_data.get('result', {}).get('notes', '')
+                # Parse "Objects tested: X" from notes
+                import re
+                match = re.search(r'Objects tested: (\d+)', notes)
+                if match:
+                    tested_count = int(match.group(1))
+                    total_tested += tested_count
+                    total_objects += zone_obj_count
+                    
+                    # Track zones that don't have 100% coverage
+                    if tested_count < zone_obj_count:
+                        zones_with_issues.append((zone_name, tested_count, zone_obj_count))
     
-    print(f"\n{created} test files created successfully!")
+    print(f"\n{'='*60}")
+    print(f"Summary:")
+    print(f"  {created} test files created successfully!")
+    print(f"  Total objects across all zones: {total_objects}")
+    print(f"  Total objects tested: {total_tested}")
+    print(f"  Overall coverage: {(total_tested/total_objects*100):.1f}%")
+    
+    if zones_with_issues:
+        print(f"\n⚠️  Zones with incomplete coverage:")
+        for zone_name, tested, total in zones_with_issues:
+            coverage = tested / total * 100 if total > 0 else 0
+            print(f"    - {zone_name}: {tested}/{total} objects ({coverage:.1f}%)")
+    else:
+        print(f"\n✅ All zones have 100% object coverage!")
+    print(f"{'='*60}")
 
 if __name__ == '__main__':
     main()

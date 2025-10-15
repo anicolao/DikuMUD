@@ -1797,7 +1797,7 @@ objects:
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 0
   value1: 4
   value2: 0
@@ -1818,7 +1818,7 @@ objects:
   action_desc: food
   type_flag: 11
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 6
   value2: 0
@@ -1835,7 +1835,7 @@ objects:
   action_desc: food
   type_flag: 11
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 4
   value2: 0
@@ -1852,7 +1852,7 @@ objects:
   action_desc: ''
   type_flag: 17
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 3
   value1: 0
   value2: 0
@@ -1872,7 +1872,7 @@ objects:
   action_desc: ''
   type_flag: 16
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0
@@ -1933,7 +1933,7 @@ objects:
   action_desc: ''
   type_flag: 18
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0
@@ -1977,7 +1977,7 @@ objects:
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0
@@ -1999,7 +1999,7 @@ objects:
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 0
+  wear_flags: 1
   value0: 0
   value1: 0
   value2: 0
@@ -2021,7 +2021,7 @@ objects:
   action_desc: ''
   type_flag: 1
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385
   value0: 0
   value1: 6
   value2: 0

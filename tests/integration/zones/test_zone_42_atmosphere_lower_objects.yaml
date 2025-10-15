@@ -50,6 +50,26 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 4257
+  description: Load key 4257 (experimental)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: experimental
+- action: command
+  command: drop experimental
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge experimental
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 4258
   description: Load armor 4258 (armor)
   expected:
@@ -79,10 +99,30 @@ steps:
   description: Purge the armor
   expected:
   - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4274
+  description: Load key 4274 (integrated)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: integrated
+- action: command
+  command: drop integrated
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge integrated
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 2 objects in Atmosphere Lower should be properly configured
+  description: All 4 objects in Atmosphere Lower should be properly configured
   notes: "This test validates that all usable objects in Atmosphere Lower can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (1), armor (1), lights (0), shields (0)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 26\nObjects tested:\
+    \ 4\nObject types: armor (1), key (2), weapon (1)"

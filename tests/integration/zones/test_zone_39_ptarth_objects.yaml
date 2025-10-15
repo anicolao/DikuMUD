@@ -82,6 +82,6 @@ result:
   should_pass: true
   description: All 2 objects in Ptarth should be properly configured
   notes: "This test validates that all usable objects in Ptarth can be:\n  - Loaded\
-    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, or held)\n\
-    \  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons (1), armor\
-    \ (1), lights (0), shields (0)"
+    \ by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn, held, etc.)\n\
+    \  - Dropped\n  - Purged\n\nTotal objects in zone: 2\nObjects tested: 2\nObject\
+    \ types: armor (1), weapon (1)"

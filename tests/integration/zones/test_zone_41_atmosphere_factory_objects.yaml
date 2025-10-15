@@ -50,6 +50,26 @@ steps:
   expected:
   - pattern: ok\.?|destroy
 - action: command
+  command: load obj 4055
+  description: Load key 4055 (enhanced)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: enhanced
+- action: command
+  command: drop enhanced
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge enhanced
+  description: Purge the key
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
   command: load obj 4056
   description: Load armor 4056 (reinforced)
   expected:
@@ -107,6 +127,46 @@ steps:
 - action: command
   command: purge helmet
   description: Purge the armor
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4058
+  description: Load container 4058 (engineering)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the container
+  expected:
+  - pattern: engineering
+- action: command
+  command: drop engineering
+  description: Drop the container
+  expected:
+  - pattern: drop
+- action: command
+  command: purge engineering
+  description: Purge the container
+  expected:
+  - pattern: ok\.?|destroy
+- action: command
+  command: load obj 4065
+  description: Load key 4065 (compact)
+  expected:
+  - pattern: ok\.?
+- action: command
+  command: get all
+  description: Pick up the key
+  expected:
+  - pattern: compact
+- action: command
+  command: drop compact
+  description: Drop the key
+  expected:
+  - pattern: drop
+- action: command
+  command: purge compact
+  description: Purge the key
   expected:
   - pattern: ok\.?|destroy
 - action: command
@@ -171,8 +231,8 @@ steps:
   - pattern: ok\.?|destroy
 result:
   should_pass: true
-  description: All 5 objects in Atmosphere Factory should be properly configured
+  description: All 8 objects in Atmosphere Factory should be properly configured
   notes: "This test validates that all usable objects in Atmosphere Factory can be:\n\
     \  - Loaded by a wizard\n  - Picked up\n  - Used appropriately (wielded, worn,\
-    \ or held)\n  - Removed\n  - Dropped\n  - Purged\n\nObject types tested: weapons\
-    \ (2), armor (3), lights (0), shields (0)"
+    \ held, etc.)\n  - Dropped\n  - Purged\n\nTotal objects in zone: 26\nObjects tested:\
+    \ 8\nObject types: armor (3), container (1), key (2), weapon (2)"
