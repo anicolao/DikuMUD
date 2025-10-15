@@ -210,11 +210,22 @@ static int wildcard_match_obj(char *search_str, char *namelist, char *short_desc
 void affect_modify(struct char_data *ch, byte loc, byte mod, long bitv, bool add)
 {
 	int maxabil;
+	long bitv_to_apply = bitv;
+
+	/* For quest affects, mask out the vnum data (bits 8-31) to prevent
+	 * conflicts with other AFF_ flags. Quest vnums are packed in bits 8-31
+	 * but should not be applied to affected_by.
+	 * Only apply the actual quest flags (AFF_QUEST, AFF_QUEST_COMPLETE) 
+	 * which are in bits 24-25. */
+	if (bitv & (AFF_QUEST | AFF_QUEST_COMPLETE)) {
+		/* Mask to only keep AFF_QUEST and AFF_QUEST_COMPLETE flags */
+		bitv_to_apply = bitv & (AFF_QUEST | AFF_QUEST_COMPLETE);
+	}
 
 	if (add) {
-		SET_BIT(ch->specials.affected_by, bitv);
+		SET_BIT(ch->specials.affected_by, bitv_to_apply);
 	} else {
-		REMOVE_BIT(ch->specials.affected_by, bitv);
+		REMOVE_BIT(ch->specials.affected_by, bitv_to_apply);
 		mod = -mod;
 	}
 
