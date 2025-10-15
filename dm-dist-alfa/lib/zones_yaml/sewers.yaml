@@ -1324,13 +1324,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 3
+    level: 2
     thac0: 0
-    ac: 0
-    hp_dice: 3d8+60
-    damage_dice: 2d4+1
+    ac: 5
+    hp_dice: 2d8+40
+    damage_dice: 1d6+1
     gold: 350
-    experience: 600
+    experience: 300
     position: 8
     default_position: 8
     sex: 1
