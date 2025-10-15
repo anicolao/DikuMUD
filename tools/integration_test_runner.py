@@ -78,9 +78,25 @@ class ServerManager:
                 missing_files.append(filename)
         
         if missing_files:
-            error_msg = "❌ ERROR: Required world files are missing from lib directory:\n"
+            # Check if files exist in source lib directory
+            lib_missing = []
             for filename in missing_files:
-                error_msg += f"  - {filename}\n"
+                lib_filepath = os.path.join(self.lib_path, filename)
+                if not os.path.exists(lib_filepath):
+                    lib_missing.append(filename)
+            
+            error_msg = "❌ ERROR: Required world files are missing:\n"
+            if lib_missing:
+                error_msg += f"\nMissing from source lib directory ({self.lib_path}):\n"
+                for filename in lib_missing:
+                    error_msg += f"  - {filename}\n"
+            
+            if os.getenv('DEBUG_OUTPUT'):
+                error_msg += f"\nAlso checked test_lib directory: {self.test_lib_path}\n"
+                error_msg += f"Missing from test_lib:\n"
+                for filename in missing_files:
+                    error_msg += f"  - {filename}\n"
+            
             error_msg += "\n💡 These files must be built from YAML zone files before running tests.\n"
             error_msg += "\nTo fix this issue:\n"
             error_msg += "  1. Go to the dm-dist-alfa directory:\n"
@@ -121,6 +137,13 @@ class ServerManager:
         cmd = [self.server_path, '-p', str(port), '-d', 'test_lib']
         if self.spin_mode:
             cmd.append('-spin')  # Enable spin mode for maximum speed
+        
+        if os.getenv('DEBUG_OUTPUT'):
+            print(f"\n***** Starting server with command: {' '.join(cmd)}")
+            print(f"***** Working directory: {server_dir}")
+            print(f"***** Port: {port}")
+            print(f"***** Test lib path: {self.test_lib_path}\n")
+        
         self.process = subprocess.Popen(
             cmd,
             cwd=server_dir,
@@ -245,20 +268,45 @@ class ServerManager:
         
         # Try to get server output if available
         error_msg = f"Server failed to start within {timeout} seconds"
-        if self.process and self.process.poll() is not None:
-            stderr = self.process.stderr.read() if self.process.stderr else b""
-            if stderr:
-                stderr_text = stderr.decode('utf-8', errors='ignore')
-                error_msg += f"\n\nServer stderr output:\n{stderr_text}"
-                
-                # Check for specific known errors and provide helpful hints
-                if "No such file or directory" in stderr_text and "boot:" in stderr_text:
-                    error_msg += "\n\n💡 HINT: The server cannot find required world files (tinyworld.wld, tinyworld.mob, etc.)"
-                    error_msg += "\n   These files need to be built from YAML zone files first."
-                    error_msg += "\n\n   To fix this, run:"
-                    error_msg += "\n     cd dm-dist-alfa && make worldfiles"
-                    error_msg += "\n\n   Or run the full build:"
-                    error_msg += "\n     cd dm-dist-alfa && make"
+        
+        # Try to read stderr even if process is still running
+        stderr_text = ""
+        if self.process:
+            try:
+                # Try to read any available stderr without blocking
+                import select
+                if self.process.stderr:
+                    # Check if there's data available to read
+                    ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
+                    if ready:
+                        stderr = self.process.stderr.read()
+                        if stderr:
+                            stderr_text = stderr.decode('utf-8', errors='ignore')
+                    elif self.process.poll() is not None:
+                        # Process has exited, safe to read all
+                        stderr = self.process.stderr.read()
+                        if stderr:
+                            stderr_text = stderr.decode('utf-8', errors='ignore')
+            except Exception as e:
+                if os.getenv('DEBUG_OUTPUT'):
+                    print(f"Debug: Error reading stderr: {e}")
+        
+        if stderr_text:
+            error_msg += f"\n\n{'='*50}"
+            error_msg += f"\nServer stderr output:"
+            error_msg += f"\n{'='*50}"
+            error_msg += f"\n{stderr_text}"
+            error_msg += f"{'='*50}\n"
+            
+            # Check for specific known errors and provide helpful hints
+            if "No such file or directory" in stderr_text and "boot:" in stderr_text:
+                error_msg += "\n💡 HINT: The server cannot find required world files (tinyworld.wld, tinyworld.mob, etc.)"
+                error_msg += "\n   These files need to be built from YAML zone files first."
+                error_msg += "\n\n   To fix this, run:"
+                error_msg += "\n     cd dm-dist-alfa && make worldfiles"
+                error_msg += "\n\n   Or run the full build:"
+                error_msg += "\n     cd dm-dist-alfa && make"
+        
         if last_error:
             error_msg += f"\n\nLast connection error: {last_error}"
         
