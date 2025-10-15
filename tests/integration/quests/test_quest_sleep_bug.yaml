@@ -1,0 +1,74 @@
+# Integration test for quest sleep bug
+# Reproduces bug where accepting a quest with certain target vnums
+# causes the player to be unable to wake up from sleep
+
+test:
+  id: test_quest_sleep_bug
+  description: "Test that player can wake up after accepting quest 3601 from airship captain"
+  author: Integration Test Framework
+  created: 2025-10-15
+  tags: [quest, bug, sleep, wake]
+
+setup:
+  character:
+    name: SleepTester
+    password: test
+    level: 22  # High level to use god commands
+    class: warrior
+  start_room: 1200  # Chat room - safe starting location
+  gold: 1000
+
+steps:
+  # Step 1: Teleport to room 3049 where airship captain is
+  - action: command
+    command: "goto 3049"
+    description: "Teleport to room 3049 (airship captain location)"
+    expected:
+      - pattern: "."
+        message: "Teleport should succeed"
+  
+  # Step 2: Verify the airship captain is present
+  - action: look
+    description: "Look around to see if captain is here"
+    expected:
+      - pattern: "captain|Captain"
+        message: "Airship captain should be visible"
+  
+  # Step 3: Ask the captain about quest to trigger quest assignment
+  - action: command
+    command: "ask captain quest"
+    description: "Ask airship captain about quest (should assign quest 3601)"
+    expected:
+      - pattern: "."
+        message: "Captain should respond"
+  
+  # Step 4: Check that we received the quest by looking at our affects
+  - action: command
+    command: "score"
+    description: "Check character status"
+    expected:
+      - pattern: "."
+        message: "Score should work"
+  
+  # Step 5: Go to sleep
+  - action: command
+    command: "sleep"
+    description: "Go to sleep"
+    expected:
+      - pattern: "You go to sleep|already.*asleep"
+        message: "Should be able to sleep"
+  
+  # Step 6: Try to wake up - this is where the bug manifests
+  - action: command
+    command: "wake"
+    description: "Try to wake up - should succeed but bug prevents it"
+    expected:
+      - pattern: "You wake.*sit up"
+        message: "Should be able to wake up"
+    fail_on:
+      - pattern: "can't wake up"
+        message: "BUG: Player cannot wake up due to AFF_SLEEP being set by quest bitvector"
+
+result:
+  should_pass: true
+  description: "Player should be able to wake up even after accepting a quest"
