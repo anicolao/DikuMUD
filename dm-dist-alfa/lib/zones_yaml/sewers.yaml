@@ -1216,13 +1216,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 2
+    level: 1
     thac0: 0
-    ac: 7
-    hp_dice: 2d8+30
-    damage_dice: 1d5+1
+    ac: 9
+    hp_dice: 1d8+20
+    damage_dice: 1d4+1
     gold: 150
-    experience: 200
+    experience: 100
     position: 8
     default_position: 8
     sex: 1
@@ -1243,13 +1243,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 2
+    level: 1
     thac0: 0
-    ac: 8
-    hp_dice: 2d8+35
-    damage_dice: 1d5+1
+    ac: 10
+    hp_dice: 1d8+22
+    damage_dice: 1d4+1
     gold: 180
-    experience: 250
+    experience: 120
     position: 8
     default_position: 8
     sex: 2
@@ -1270,13 +1270,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 2
+    level: 1
     thac0: 0
-    ac: 7
-    hp_dice: 2d10+40
-    damage_dice: 1d6+1
+    ac: 9
+    hp_dice: 1d10+25
+    damage_dice: 1d5+1
     gold: 220
-    experience: 350
+    experience: 130
     position: 8
     default_position: 8
     sex: 1
@@ -1297,13 +1297,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 2
+    level: 1
     thac0: 0
-    ac: 9
-    hp_dice: 2d10+50
-    damage_dice: 1d5+2
+    ac: 10
+    hp_dice: 1d10+28
+    damage_dice: 1d4+1
     gold: 250
-    experience: 400
+    experience: 140
     position: 8
     default_position: 8
     sex: 1
@@ -1324,13 +1324,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 3
+    level: 2
     thac0: 0
-    ac: 0
-    hp_dice: 3d8+60
-    damage_dice: 2d4+1
+    ac: 5
+    hp_dice: 2d8+40
+    damage_dice: 1d6+1
     gold: 350
-    experience: 600
+    experience: 300
     position: 8
     default_position: 8
     sex: 1
@@ -1378,13 +1378,13 @@ mobiles:
   alignment: 0
   type: simple
   simple:
-    level: 2
+    level: 1
     thac0: 0
-    ac: 0
-    hp_dice: 2d8+40
-    damage_dice: 1d5+1
+    ac: 8
+    hp_dice: 1d8+24
+    damage_dice: 1d4+1
     gold: 200
-    experience: 300
+    experience: 125
     position: 8
     default_position: 8
     sex: 2
