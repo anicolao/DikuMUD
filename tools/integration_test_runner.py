@@ -159,46 +159,86 @@ class ServerManager:
         
         return port
     
-    def get_server_output(self):
-        """Get any available output from the server process (non-blocking)."""
+    def get_server_output(self, terminate_first=True):
+        """
+        Get output from the server process.
+        
+        Args:
+            terminate_first: If True, terminates the process before reading output.
+                           This ensures we get all output without blocking.
+                           After reading, sets self.process to None.
+        
+        Returns:
+            Tuple of (stdout_data, stderr_data) as strings
+        """
         stdout_data = ""
         stderr_data = ""
         
         if self.process:
             try:
-                import select
-                # Check stdout
-                if self.process.stdout:
-                    ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
-                    if ready:
-                        data = self.process.stdout.read()
-                        if data:
-                            stdout_data = data.decode('utf-8', errors='ignore')
-                
-                # Check stderr
-                if self.process.stderr:
-                    ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
-                    if ready:
-                        data = self.process.stderr.read()
-                        if data:
-                            stderr_data = data.decode('utf-8', errors='ignore')
+                if terminate_first:
+                    # Terminate the process first to ensure we can read all output
+                    try:
+                        # Send SIGTERM to the process group
+                        os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+                        # Use communicate() to read all remaining output with a timeout
+                        stdout, stderr = self.process.communicate(timeout=5)
+                        if stdout:
+                            stdout_data = stdout.decode('utf-8', errors='ignore')
+                        if stderr:
+                            stderr_data = stderr.decode('utf-8', errors='ignore')
+                    except subprocess.TimeoutExpired:
+                        # Force kill if necessary
+                        os.killpg(os.getpgid(self.process.pid), signal.SIGKILL)
+                        stdout, stderr = self.process.communicate()
+                        if stdout:
+                            stdout_data = stdout.decode('utf-8', errors='ignore')
+                        if stderr:
+                            stderr_data = stderr.decode('utf-8', errors='ignore')
+                    except ProcessLookupError:
+                        # Process already dead, try to read any remaining output
+                        try:
+                            stdout, stderr = self.process.communicate(timeout=1)
+                            if stdout:
+                                stdout_data = stdout.decode('utf-8', errors='ignore')
+                            if stderr:
+                                stderr_data = stderr.decode('utf-8', errors='ignore')
+                        except:
+                            pass
+                    
+                    # Mark process as terminated
+                    self.process = None
+                else:
+                    # Non-blocking read - read a limited amount
+                    # This is risky and can still block, so we use a small read size
+                    import select
+                    if self.process.stdout:
+                        ready, _, _ = select.select([self.process.stdout], [], [], 0.1)
+                        if ready:
+                            # Read up to 64KB
+                            data = self.process.stdout.read(65536)
+                            if data:
+                                stdout_data = data.decode('utf-8', errors='ignore')
+                    
+                    if self.process.stderr:
+                        ready, _, _ = select.select([self.process.stderr], [], [], 0.1)
+                        if ready:
+                            # Read up to 64KB
+                            data = self.process.stderr.read(65536)
+                            if data:
+                                stderr_data = data.decode('utf-8', errors='ignore')
             except Exception as e:
                 if os.getenv('DEBUG_OUTPUT'):
                     print(f"Debug: Error reading server output: {e}")
+                # Make sure to clean up process reference on error
+                if terminate_first:
+                    self.process = None
         
         return stdout_data, stderr_data
     
     def stop(self):
         """Stop the server gracefully."""
         if self.process:
-            # Get any remaining output before stopping (if DEBUG_OUTPUT is set)
-            if os.getenv('DEBUG_OUTPUT'):
-                stdout, stderr = self.get_server_output()
-                if stdout:
-                    print(f"\n***** Server stdout (before stop):\n{stdout}")
-                if stderr:
-                    print(f"\n***** Server stderr (before stop):\n{stderr}")
-            
             try:
                 # Send SIGTERM to the process group
                 os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
