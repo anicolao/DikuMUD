@@ -1947,7 +1947,22 @@ char *fread_string(FILE *fl)
 	{
 		if (!fgets(tmp, MAX_STRING_LENGTH, fl))
 		{
-			perror("fread_str");
+			char error_buf[512];
+			long file_pos = ftell(fl);
+			
+			if (feof(fl)) {
+				snprintf(error_buf, sizeof(error_buf), 
+					"fread_string: unexpected EOF at file position %ld", file_pos);
+			} else if (ferror(fl)) {
+				snprintf(error_buf, sizeof(error_buf), 
+					"fread_string: file error at position %ld", file_pos);
+			} else {
+				snprintf(error_buf, sizeof(error_buf), 
+					"fread_string: unknown error at position %ld", file_pos);
+			}
+			
+			slog(error_buf);
+			perror("fread_string");
 			exit(0);
 		}
 
