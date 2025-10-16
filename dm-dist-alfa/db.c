@@ -475,7 +475,8 @@ struct index_data *generate_indices(FILE *fl, int *top)
 			exit(0);
 		}
 	}
-	*top = i - 2;
+	/* i is the count of entries, so last valid index is i-1 */
+	*top = i - 1;
 	return(index);
 }
 
