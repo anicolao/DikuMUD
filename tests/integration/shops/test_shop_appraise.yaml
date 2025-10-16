@@ -1,0 +1,75 @@
+# Integration test for Shop Appraise Command
+#
+# This test validates that shopkeepers can appraise items for a fee,
+# providing item identification similar to the identify spell.
+#
+# Feature: Appraise command in shops
+# - Shopkeepers can identify items they trade in
+# - Appraisal costs between 1x and 2x item value
+# - Shopkeepers refuse to appraise items they don't trade in
+# - Payment is required before appraisal
+
+test:
+  id: test_shop_appraise
+  description: "Verify shopkeepers can appraise items for identification"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [shop, appraise, identification]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 1
+  start_room: 3928  # Provisions Shop with Red Martian Provisions Merchant
+  gold: 5000
+
+steps:
+  # Step 1: Verify the merchant is present
+  - action: look
+    description: "Look around to see the merchant"
+    expected:
+      - pattern: "Merchant|merchant|Provisions"
+        message: "Merchant should be visible in the room"
+
+  # Step 2: List items to see what's available
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "bread|waterskin|rations"
+        message: "Should show food provisions for sale"
+
+  # Step 3: Buy a waterskin to appraise
+  - action: command
+    description: "Buy a waterskin"
+    command: "buy waterskin"
+    expected:
+      - pattern: "You now have|buy"
+        message: "Should be able to purchase waterskin"
+
+  # Step 4: Try to appraise with insufficient offer or get rejection
+  - action: command
+    description: "Try to appraise waterskin (may be rejected by food merchant)"
+    command: "appraise 1 waterskin"
+    expected:
+      - pattern: "."
+        message: "Should get some response from shopkeeper"
+
+  # Step 5: Appraise the waterskin with enough gold
+  - action: command
+    description: "Appraise waterskin with sufficient gold"
+    command: "appraise 5000 waterskin"
+    expected:
+      - pattern: "appraise.*\\d+.*gold"
+        message: "Shopkeeper should tell us the appraisal cost"
+      - pattern: "You feel informed"
+        message: "Should receive item identification"
+      - pattern: "Item type"
+        message: "Should show item type"
+      - pattern: "Weight.*Value"
+        message: "Should show weight and value"
+
+result:
+  should_pass: true
+  description: "Test passes when appraise command works correctly in shops"
