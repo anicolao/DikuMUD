@@ -1644,7 +1644,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		
 		if (quest_complete) {
 			/* Award quest rewards */
-			send_wrapped_text(ch, quest->complete_text, 40);
+			send_wrapped_text(ch, quest->complete_text, 72);
 			grant_quest_reward(ch, quest);
 			
 			/* Remove the quest affect */
@@ -1679,7 +1679,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	affect_to_char(ch, &af);
 	
 	/* Send quest text */
-	send_wrapped_text(ch, quest->quest_text, 40);
+	send_wrapped_text(ch, quest->quest_text, 72);
 	
 	return TRUE;
 }
