@@ -478,7 +478,18 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 3167
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: floor stones fitted section
+    description: 'Upon closer examination, the floor tiles form a distinctive rectangular
+      pattern
+
+      that doesn''t match the rest of the corridor.  The edges of this section are
+
+      slightly raised, and there are faint scrape marks suggesting it has been moved
+
+      before.  A gentle breeze emanates from the cracks between the stones, hinting
+
+      at a passage below.'
 - vnum: 3166
   name: Ancient Southern Corridor
   description: '   The ancient corridor continues south from the junction.  The superior
