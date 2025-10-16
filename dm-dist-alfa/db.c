@@ -654,41 +654,101 @@ void renum_world(void)
 void renum_zone_table(void)
 {
 	int zone, comm;
+	int temp_real;
+	char buf[256];
 
 	for (zone = 0; zone <= top_of_zone_table; zone++)
 		for (comm = 0; zone_table[zone].cmd[comm].command != 'S'; comm++)
 			switch(zone_table[zone].cmd[comm].command)
 			{
 				case 'M':
-					zone_table[zone].cmd[comm].arg1 =
-						real_mobile(zone_table[zone].cmd[comm].arg1);
-					zone_table[zone].cmd[comm].arg3 = 
-						real_room(zone_table[zone].cmd[comm].arg3);
+					temp_real = real_mobile(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Mobile vnum %d does not exist",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
+					
+					temp_real = real_room(zone_table[zone].cmd[comm].arg3);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Room vnum %d does not exist for M command",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg3);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg3 = temp_real;
 				break;
 				case 'O':
-					zone_table[zone].cmd[comm].arg1 = 
-						real_object(zone_table[zone].cmd[comm].arg1);
-					if (zone_table[zone].cmd[comm].arg3 != NOWHERE)
-						zone_table[zone].cmd[comm].arg3 =
-						real_room(zone_table[zone].cmd[comm].arg3);
+					temp_real = real_object(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Object vnum %d does not exist",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
+					
+					if (zone_table[zone].cmd[comm].arg3 != NOWHERE) {
+						temp_real = real_room(zone_table[zone].cmd[comm].arg3);
+						if (temp_real < 0) {
+							snprintf(buf, sizeof(buf), 
+								"ERROR: Zone '%s' (zone %d, cmd %d): Room vnum %d does not exist for O command",
+								zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg3);
+							slog(buf);
+						}
+						zone_table[zone].cmd[comm].arg3 = temp_real;
+					}
 				break;
 				case 'G':
-					zone_table[zone].cmd[comm].arg1 =
-						real_object(zone_table[zone].cmd[comm].arg1);
+					temp_real = real_object(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Object vnum %d does not exist for G command",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
 				break;
 				case 'E':
-					zone_table[zone].cmd[comm].arg1 =
-						real_object(zone_table[zone].cmd[comm].arg1);
+					temp_real = real_object(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Object vnum %d does not exist for E command",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
 				break;
 				case 'P':
-					zone_table[zone].cmd[comm].arg1 =
-						real_object(zone_table[zone].cmd[comm].arg1);
-					zone_table[zone].cmd[comm].arg3 =
-						real_object(zone_table[zone].cmd[comm].arg3);
+					temp_real = real_object(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Object vnum %d does not exist for P command arg1",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
+					
+					temp_real = real_object(zone_table[zone].cmd[comm].arg3);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Object vnum %d does not exist for P command arg3",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg3);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg3 = temp_real;
 				break;					
 				case 'D':
-					zone_table[zone].cmd[comm].arg1 =
-						real_room(zone_table[zone].cmd[comm].arg1);
+					temp_real = real_room(zone_table[zone].cmd[comm].arg1);
+					if (temp_real < 0) {
+						snprintf(buf, sizeof(buf), 
+							"ERROR: Zone '%s' (zone %d, cmd %d): Room vnum %d does not exist for D command",
+							zone_table[zone].name, zone, comm, zone_table[zone].cmd[comm].arg1);
+						slog(buf);
+					}
+					zone_table[zone].cmd[comm].arg1 = temp_real;
 				break;
 			}
 }
@@ -969,7 +1029,21 @@ struct char_data *read_mobile(int nr, int type)
 		return(0);
 	}
 
-	fseek(mob_f, mob_index[nr].pos, 0);
+	/* Bounds check the index */
+	if (nr < 0 || nr > top_of_mobt) {
+		sprintf(buf, "CRITICAL: Cannot read mobile - index %d out of bounds (0-%d)", 
+			nr, top_of_mobt);
+		slog(buf);
+		return(0);
+	}
+
+	/* Safely seek to the mobile's position in the file */
+	if (safe_fseek(mob_f, mob_index[nr].pos, MOB_FILE, mob_index[nr].virtual) != 0) {
+		sprintf(buf, "CRITICAL: Cannot read mobile (V) %d - file seek failed at position %ld", 
+			mob_index[nr].virtual, mob_index[nr].pos);
+		slog(buf);
+		return(0);
+	}
 
 	CREATE(mob, struct char_data, 1);
 	clear_char(mob);
@@ -1184,7 +1258,21 @@ struct obj_data *read_object(int nr, int type)
 		return(0);
 	}
 
-	fseek(obj_f, obj_index[nr].pos, 0);
+	/* Bounds check the index */
+	if (nr < 0 || nr > top_of_objt) {
+		sprintf(buf, "CRITICAL: Cannot read object - index %d out of bounds (0-%d)", 
+			nr, top_of_objt);
+		slog(buf);
+		return(0);
+	}
+
+	/* Safely seek to the object's position in the file */
+	if (safe_fseek(obj_f, obj_index[nr].pos, OBJ_FILE, obj_index[nr].virtual) != 0) {
+		sprintf(buf, "CRITICAL: Cannot read object (V) %d - file seek failed at position %ld", 
+			obj_index[nr].virtual, obj_index[nr].pos);
+		slog(buf);
+		return(0);
+	}
 
 	CREATE(obj, struct obj_data, 1);
 
@@ -1932,6 +2020,62 @@ int compare(struct player_index_element *arg1, struct player_index_element
 *  procs of a (more or less) general utility nature			*
 ********************************************************************** */
 
+/* Safely seek to a position in a file with validation */
+int safe_fseek(FILE *fl, long pos, const char *file_name, int vnum)
+{
+	long current_pos, file_size;
+	char error_buf[512];
+	
+	/* Get current position for reference */
+	current_pos = ftell(fl);
+	
+	/* Seek to end to get file size */
+	if (fseek(fl, 0, SEEK_END) != 0) {
+		snprintf(error_buf, sizeof(error_buf),
+			"safe_fseek: Cannot seek to end of %s (vnum %d, trying to seek to %ld)",
+			file_name, vnum, pos);
+		slog(error_buf);
+		perror("safe_fseek");
+		return -1;
+	}
+	
+	file_size = ftell(fl);
+	
+	/* Validate that the target position is within the file */
+	if (pos < 0 || pos > file_size) {
+		snprintf(error_buf, sizeof(error_buf),
+			"safe_fseek: Invalid seek position in %s (vnum %d): position %ld is beyond file size %ld",
+			file_name, vnum, pos, file_size);
+		slog(error_buf);
+		
+		/* Try to restore original position */
+		if (fseek(fl, current_pos, SEEK_SET) != 0) {
+			snprintf(error_buf, sizeof(error_buf),
+				"safe_fseek: CRITICAL - Cannot restore file position in %s", file_name);
+			slog(error_buf);
+		}
+		return -1;
+	}
+	
+	/* Perform the actual seek */
+	if (fseek(fl, pos, SEEK_SET) != 0) {
+		snprintf(error_buf, sizeof(error_buf),
+			"safe_fseek: Failed to seek to position %ld in %s (vnum %d)",
+			pos, file_name, vnum);
+		slog(error_buf);
+		perror("safe_fseek");
+		
+		/* Try to restore original position */
+		if (fseek(fl, current_pos, SEEK_SET) != 0) {
+			snprintf(error_buf, sizeof(error_buf),
+				"safe_fseek: CRITICAL - Cannot restore file position in %s", file_name);
+			slog(error_buf);
+		}
+		return -1;
+	}
+	
+	return 0;
+}
 
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE *fl)
