@@ -1286,23 +1286,10 @@ struct obj_data *read_object(int nr, int type)
 	obj->description = fread_string(obj_f);
 	obj->action_description = fread_string(obj_f);
 
-	/* Debug: For object 3044 */
-	if(nr == 23) {
-		char log_buf[256];
-		sprintf(log_buf, "DEBUG: After strings, about to read numeric data");
-		slog(log_buf);
-	}
-
 	/* *** numeric data *** */
 
 	fscanf(obj_f, " %d ", &tmp);
 	obj->obj_flags.type_flag = tmp;
-	/* Debug: For object 3044, log the type_flag value */
-	if(nr == 23) {
-		char log_buf[256];
-		sprintf(log_buf, "DEBUG read_object: nr=%d, type_flag=%d", nr, tmp);
-		slog(log_buf);
-	}
 	fscanf(obj_f, " %d ", &tmp);
 	obj->obj_flags.extra_flags = tmp;
 	fscanf(obj_f, " %d ", &tmp);

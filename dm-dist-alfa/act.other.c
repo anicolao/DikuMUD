@@ -619,14 +619,6 @@ void do_use(struct char_data *ch, char *argument, int cmd)
 
 	stick = ch->equipment[HOLD];
 
-  /* Debug: Send object type info to player */
-  {
-    char debug_buf[256];
-    sprintf(debug_buf, "DEBUG: type=%d ITEM_STAFF=%d ITEM_WAND=%d\n\r", 
-            stick->obj_flags.type_flag, ITEM_STAFF, ITEM_WAND);
-    send_to_char(debug_buf, ch);
-  }
-
   if (stick->obj_flags.type_flag == ITEM_STAFF)
   {
 		act("$n taps $p three times on the ground.",TRUE, ch, stick, 0,TO_ROOM);
