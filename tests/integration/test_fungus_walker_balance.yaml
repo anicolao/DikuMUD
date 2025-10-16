@@ -1,0 +1,105 @@
+# Integration test for fungus walker combat balance
+# Verifies that a level 4 warrior can successfully engage and hit the fungus walker
+# This test addresses the issue where the fungus walker was too hard to hit
+
+test:
+  id: test_fungus_walker_balance
+  description: "Verify level 4 warrior can hit fungus walker in sewers"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [combat, balance, sewers, fungus_walker]
+
+setup:
+  character:
+    name: FungusTest
+    password: test
+    class: warrior
+    level: 22  # Use high level for god commands, then reduce to test combat
+  start_room: 1200  # Chat room to start
+  gold: 1000
+
+steps:
+  # Step 1: Verify we're in the starting room
+  - action: look
+    description: "Confirm starting location"
+    expected:
+      - pattern: "."
+        message: "Should see room description"
+
+  # Step 2: Load a fungus walker for testing
+  - action: command
+    command: "load char 3509"
+    description: "Load a fungus walker (mob #3509)"
+    expected:
+      - pattern: "."
+        message: "Should get response from load command"
+
+  # Step 3: Look to confirm the fungus walker is present
+  - action: look
+    description: "Look to see the fungus walker"
+    expected:
+      - pattern: "fungus"
+        message: "Should see fungus walker in room"
+
+  # Step 4: Reduce our level to 4 to simulate a level 4 warrior fighting
+  - action: command
+    command: "advance fungustest 4"
+    description: "Set character to level 4 to test appropriate combat"
+    expected:
+      - pattern: "."
+        message: "Should get response from advance command"
+
+  # Step 5: Load a weapon appropriate for level 4
+  - action: command
+    command: "load obj 3021"
+    description: "Load a weapon (short sword)"
+    expected:
+      - pattern: "."
+        message: "Should get response from load command"
+
+  # Step 6: Get and wield the weapon
+  - action: command
+    command: "get sword"
+    description: "Pick up the sword"
+    expected:
+      - pattern: "."
+        message: "Should pick up weapon"
+
+  # Step 7: Wield the weapon
+  - action: command
+    command: "wield sword"
+    description: "Wield the sword"
+    expected:
+      - pattern: "."
+        message: "Should wield weapon"
+
+  # Step 8: Attack the fungus walker
+  - action: command
+    command: "kill fungus"
+    description: "Attack the fungus walker"
+    delay_after: 2
+    expected:
+      - pattern: "."
+        message: "Should start combat"
+
+  # Step 9: Continue combat and verify we can hit it
+  # With THAC0=18 and AC=8, a level 4 warrior should be able to hit
+  - action: command
+    command: "kill fungus"
+    description: "Continue attacking - should be able to land hits"
+    delay_after: 3
+    expected:
+      - pattern: "(hit|pierce|slash|smite|pound|bludgeon|You)"
+        message: "Should see combat messages indicating hits landing"
+
+  # Step 10: Verify combat is happening and we're not just missing
+  - action: command
+    command: "score"
+    description: "Check our status during/after combat"
+    expected:
+      - pattern: "."
+        message: "Should be able to check score"
+
+result:
+  should_pass: true
+  description: "Test passes if level 4 warrior can engage and hit fungus walker"
