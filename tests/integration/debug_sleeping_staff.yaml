@@ -1,0 +1,60 @@
+# Debug test for sleeping staff
+test:
+  id: test_debug_sleeping_staff
+  description: "Debug sleeping staff properties"
+  author: Debug
+  created: 2025-10-16
+  tags: [debug]
+
+setup:
+  character:
+    name: TestDebug
+    class: magic_user
+    level: 23
+  start_room: 3033
+
+steps:
+  # Load the object and check it
+  - action: command
+    description: "Load object directly"
+    command: "load obj 3044"
+    expected:
+      - pattern: "Ok"
+        message: "Object loaded"
+
+  - action: look
+    description: "Check if staff is in room"
+    expected:
+      - pattern: "staff"
+        message: "Staff should be visible in room"
+
+  - action: command
+    description: "Get the staff"
+    command: "get staff"
+    expected:
+      - pattern: ".*"
+        message: "Get staff"
+
+  - action: inventory
+    description: "Check inventory"
+    expected:
+      - pattern: "sleeping|staff"
+        message: "Staff should be in inventory"
+
+  - action: command
+    description: "Examine the staff"
+    command: "examine staff"
+    expected:
+      - pattern: "oak|staff"
+        message: "Examine output"
+
+  - action: command
+    description: "Try to hold it with 'staff'"
+    command: "hold staff"
+    expected:
+      - pattern: ".*"
+        message: "Hold attempt with 'staff'"
+
+result:
+  should_pass: true
+  description: "Debug test"

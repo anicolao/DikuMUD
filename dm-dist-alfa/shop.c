@@ -113,6 +113,7 @@ void shopping_buy( char *arg, struct char_data *ch,
 	char argm[100], buf[MAX_STRING_LENGTH];
 	struct obj_data *temp1;
 	struct char_data *temp_char;
+	char debug_buf[256];  /* Debug buffer */
 
 	if(!(is_ok(keeper,ch,shop_nr)))
 		return;
@@ -205,7 +206,18 @@ void shopping_buy( char *arg, struct char_data *ch,
 
 	/* Test if producing shop ! */
 	if(shop_producing(temp1,shop_nr))
+	{
+		/* Debug: Check item_number and type before/after read_object */
+		sprintf(debug_buf, "DEBUG BUY: Producing shop - item_number=%d\n\r", 
+		        temp1->item_number);
+		send_to_char(debug_buf, ch);
+		
 		temp1 = read_object(temp1->item_number, REAL);
+		
+		sprintf(debug_buf, "DEBUG BUY: After read_object - type=%d\n\r", 
+		        temp1->obj_flags.type_flag);
+		send_to_char(debug_buf, ch);
+	}
 	else
 		obj_from_char(temp1);
 
