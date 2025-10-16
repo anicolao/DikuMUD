@@ -335,8 +335,8 @@ void check_kill_quest(struct char_data *killer, struct char_data *victim)
 		next_af = af->next;
 		
 		if (af->type == QUEST_KILL) {
-			/* Extract target vnum from bitvector (bits 8-19) */
-			target_vnum = (af->bitvector >> 8) & 0xFFF;
+			/* Extract target vnum from bitvector (bits 0-11) */
+			target_vnum = af->bitvector & 0xFFF;
 			
 			/* Check if victim's vnum matches quest target */
 			if (mob_index[victim->nr].virtual == target_vnum) {

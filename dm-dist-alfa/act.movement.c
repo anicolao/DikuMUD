@@ -50,8 +50,8 @@ void check_explore_quest(struct char_data *ch)
 		next_af = af->next;
 		
 		if (af->type == QUEST_EXPLORE) {
-			/* Extract target vnum from bitvector (bits 8-19) */
-			target_vnum = (af->bitvector >> 8) & 0xFFF;
+			/* Extract target vnum from bitvector (bits 0-11) */
+			target_vnum = af->bitvector & 0xFFF;
 			
 			/* Check if current room vnum matches quest target */
 			if (room_vnum == target_vnum) {
