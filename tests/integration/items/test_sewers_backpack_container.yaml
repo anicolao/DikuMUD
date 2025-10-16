@@ -1,0 +1,114 @@
+# Integration test for sewers backpack container functionality
+#
+# This test validates that the backpack in the sewers (object #3616) functions
+# correctly as a container and can hold items.
+#
+# Bug Description:
+# The backpack found in the sewers has item type 9 (ITEM_ARMOR) instead of
+# type 15 (ITEM_CONTAINER), making it unusable as a container despite being
+# described as a backpack.
+#
+# Expected Behavior:
+# - Backpack should be identified as a container
+# - Backpack should be able to hold items
+# - Backpack should work with "put" and "get" commands
+# - Backpack should show contents with "look in backpack"
+
+test:
+  id: sewers_backpack_container
+  description: "Verify sewers backpack functions as a container"
+  bug_report: "The backpack found in the sewers is 'not a container'"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [item, bug_fix, sewers, backpack, container]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 10  # Higher level to navigate sewers safely
+  start_room: 3162  # Start directly at Ancient Sewer Junction where backpack spawns
+
+steps:
+  # Look around to see the backpack
+  - action: command
+    description: "Look around in Ancient Sewer Junction"
+    command: "look"
+    expected:
+      - pattern: "Ancient Sewer Junction|backpack"
+        message: "Should see the room or backpack"
+
+  # Pick up the backpack
+  - action: command
+    description: "Pick up the backpack"
+    command: "get backpack"
+    expected:
+      - pattern: "You get|You take|Ok"
+        message: "Should be able to pick up the backpack"
+
+  # Check inventory to confirm we have it
+  - action: command
+    description: "Check inventory"
+    command: "inventory"
+    expected:
+      - pattern: "backpack"
+        message: "Backpack should be in inventory"
+
+  # Now test the key functionality: look in the backpack
+  # This will fail if the backpack is not a container
+  - action: command
+    description: "Look in backpack to verify it's a container"
+    command: "look in backpack"
+    expected:
+      - pattern: "backpack|contains|empty|nothing"
+        message: "Backpack should be recognized as a container and show contents"
+    fail_on:
+      - pattern: "not a container|can't do that|impossible"
+        message: "BUG: Backpack should be recognized as a container"
+
+  # Additional test: Try to put something in the backpack
+  # First, check what items are available in this room
+  - action: command
+    description: "Look for items in the room"
+    command: "look"
+
+  # Try to get a small item if available, or create a simple test
+  # For now, let's test with an item that should be in inventory
+  - action: command
+    description: "Try to get a coin or small item"
+    command: "get coin"
+    allow_fail: true
+
+  # Try to put an item in the backpack (if we have one)
+  - action: command
+    description: "Try to put item in backpack"
+    command: "put coin backpack"
+    expected:
+      - pattern: "You put|Ok|don't have|don't see"
+        message: "Should either put item in backpack or report not having item"
+    fail_on:
+      - pattern: "not a container"
+        message: "BUG: Backpack should be recognized as a container"
+
+result:
+  should_pass: true
+  description: "Sewers backpack should function as a container"
+  notes: |
+    This test validates the backpack container functionality:
+    
+    1. Backpack object #3616 must have type 15 (ITEM_CONTAINER)
+    2. Container values should be set appropriately:
+       - Value[0]: Maximum weight (e.g., 15 lbs)
+       - Value[1]: Container flags (0 = no special flags)
+       - Value[2]: Key number (-1 = no lock)
+       - Value[3]: Internal use (0)
+    3. Wear flags should include ITEM_TAKE (1)
+    
+    Current bug: Object has type 9 (ITEM_ARMOR) instead of 15 (ITEM_CONTAINER)
+    Fix: Change line "9 0 1" to "15 0 1" in sewers.obj file for object #3616
+    
+    Technical details:
+    - File: dm-dist-alfa/lib/zones/sewers.obj
+    - Object: #3616 (lines 186-198)
+    - Current type flag: 9 (ITEM_ARMOR)
+    - Correct type flag: 15 (ITEM_CONTAINER)
