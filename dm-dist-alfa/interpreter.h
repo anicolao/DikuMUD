@@ -232,6 +232,7 @@
 #define CMD_REEQUIP     220
 #define CMD_ZONE        221
 #define CMD_FILL        222
+#define CMD_APPRAISE    223
 
 void command_interpreter(struct char_data *ch, char *argument);
 int search_block(char *arg, char **list, bool exact);

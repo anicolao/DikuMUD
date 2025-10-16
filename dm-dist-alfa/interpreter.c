@@ -409,6 +409,7 @@ char *command[]=
 	"reequip",   /* 221 */
 	"zone",      /* 222 */
 	"fill",      /* 223 */
+	"appraise",  /* 224 */
   "\n"
 };
 
@@ -987,6 +988,7 @@ void assign_command_pointers ( void )
 	COMMANDO(219,POSITION_DEAD,do_wizlist,0);
 	COMMANDO(220,POSITION_STANDING,do_not_here,0);
 	COMMANDO(221,POSITION_RESTING,do_zone,0);
+	COMMANDO(223,POSITION_STANDING,do_not_here,0);
 
 }
 

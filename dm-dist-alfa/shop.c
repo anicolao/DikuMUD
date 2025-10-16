@@ -21,6 +21,10 @@
 extern struct str_app_type str_app[];
 extern struct index_data *mob_index;
 
+/* External spell function for identify */
+extern void spell_identify(byte level, struct char_data *ch,
+  struct char_data *victim, struct obj_data *obj);
+
 char *fread_string(FILE *fl);
 
 struct shop_data
@@ -331,6 +335,104 @@ void shopping_value( char *arg, struct char_data *ch,
 	return;
 }
 
+void shopping_appraise( char *arg, struct char_data *ch, 
+	struct char_data *keeper, int shop_nr)
+{
+	char argm[100], buf[MAX_STRING_LENGTH], item_name[100];
+	struct obj_data *temp1;
+	int offered_amount, appraisal_cost;
+	unsigned int seed;
+
+	if(!(is_ok(keeper,ch,shop_nr)))
+		return;
+
+	/* Parse arguments: "appraise <amount> <item>" */
+	arg = one_argument(arg, argm);
+	
+	if(!(*argm))
+	{
+		sprintf(buf,"%s Appraise what? Specify amount and item, like 'appraise 1000 sword'",
+			GET_NAME(ch));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Parse the offered amount */
+	offered_amount = atoi(argm);
+	
+	/* Get the item name */
+	one_argument(arg, item_name);
+	
+	if(!(*item_name))
+	{
+		sprintf(buf,"%s What item do you want me to appraise?",
+			GET_NAME(ch));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Find the item in player's inventory */
+	if(!( temp1 = get_obj_in_list_vis(ch,item_name,ch->carrying)))
+	{
+		sprintf(buf,shop_index[shop_nr].no_such_item2,
+			GET_NAME(ch));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Check if shopkeeper trades in this type of item */
+	if(!(trade_with(temp1,shop_nr)))
+	{
+		sprintf(buf,"%s I lack the expertise to evaluate your fine %s. Try another shop.",
+			GET_NAME(ch), fname(temp1->name));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Calculate appraisal cost based on item value
+	 * Cost is between 1x and 2x the item's value
+	 * Seed random number generator with item_number to make cost consistent
+	 * for the same item but not directly revealing its value
+	 */
+	seed = (unsigned int)temp1->item_number;
+	srand(seed);
+	appraisal_cost = temp1->obj_flags.cost + (rand() % (temp1->obj_flags.cost + 1));
+	
+	/* Check if offered amount is sufficient */
+	if(offered_amount < appraisal_cost)
+	{
+		sprintf(buf,"%s I'd need %d coins to appraise your wonderful %s.",
+			GET_NAME(ch), appraisal_cost, fname(temp1->name));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Check if player has enough gold */
+	if(GET_GOLD(ch) < appraisal_cost && GET_LEVEL(ch)<22)
+	{
+		sprintf(buf,"%s You don't have enough gold for the appraisal!",
+			GET_NAME(ch));
+		do_tell(keeper,buf,19);
+		return;
+	}
+
+	/* Perform the appraisal */
+	sprintf(buf,"%s I'll appraise that for %d gold coins.",
+		GET_NAME(ch), appraisal_cost);
+	do_tell(keeper,buf,19);
+	
+	/* Take the payment (unless god level) */
+	if(GET_LEVEL(ch)<22)
+		GET_GOLD(ch) -= appraisal_cost;
+	
+	GET_GOLD(keeper) += appraisal_cost;
+	
+	/* Call spell_identify to show item details */
+	spell_identify(0, ch, 0, temp1);
+
+	return;
+}
+
 void shopping_list( char *arg, struct char_data *ch,
 	 struct char_data *keeper, int shop_nr)
 {
@@ -447,6 +549,14 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 	 /* List */
 	{
 		shopping_list(arg,ch,keeper,shop_nr);
+		return(TRUE);
+	}
+
+	if((cmd == CMD_APPRAISE) && (ch->in_room == 
+	   real_room(shop_index[shop_nr].in_room)))
+	 /* Appraise */
+	{
+		shopping_appraise(arg,ch,keeper,shop_nr);
 		return(TRUE);
 	}
 
