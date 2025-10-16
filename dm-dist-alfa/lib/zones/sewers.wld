@@ -313,8 +313,8 @@ Ancient Eastern Passage~
    This eastern passage maintains the sophisticated architecture of the ancient
 builders.  The walls are lined with carved panels depicting scenes from a lost
 civilization.  The drainage channels still function here, carrying away any water
-that seeps through the ceiling.  A faint breeze suggests this passage connects
-to the surface somewhere far away.
+that seeps through the ceiling.  A faint breeze seems to come from beneath your
+feet, and the floor tiles here show an unusual pattern.
 ~
 31 9 0
 D3
@@ -326,7 +326,14 @@ D2
 The passage continues south, partially blocked by debris.
 ~
 secret hatch concealed floor~
-1 -1 3167
+3 -1 3167
+E
+floor tiles pattern~
+Upon closer examination, the floor tiles form a distinctive rectangular pattern
+that doesn't match the rest of the corridor.  The edges of this section are
+slightly raised, and there are faint scrape marks suggesting it has been moved
+before.  A gentle breeze emanates from the cracks between the stones.
+~
 S
 #3166
 Ancient Southern Corridor~
@@ -361,7 +368,7 @@ D0
 The concealed hatch leads back up.
 ~
 secret hatch concealed floor~
-1 -1 3165
+3 -1 3165
 D2
 A well-preserved tunnel leads south.
 ~
