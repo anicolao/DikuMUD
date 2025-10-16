@@ -1953,7 +1953,7 @@ objects:
   short_desc: a worn backpack
   long_desc: A worn backpack lies here.
   action_desc: ''
-  type_flag: 12
+  type_flag: 15
   extra_flags: 0
   wear_flags: 1
   value0: 15
