@@ -133,7 +133,7 @@ moves with jerky, uncoordinated motions. It is driven by the fungus to spread
 spores to new hosts, making it a dangerous vector of infection.
 ~
 2 0 0 S
-3 0 0 3d10+90 2d6+2
+3 18 8 3d10+40 2d6+2
 600 1200
 8 8 1
 #3510
