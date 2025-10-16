@@ -1,0 +1,110 @@
+# Integration test for sleeping staff usability
+#
+# This test validates that the sleeping staff (object 3044) sold at the
+# science shop can be used and sold back to the store.
+#
+# Issue: The sleeping staff sold at the science shop in lesser helium
+#        can't be used nor sold back to the store.
+
+test:
+  id: test_sleeping_staff_usability
+  description: "Verify sleeping staff can be used and sold back"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [shop, staff, magic, bug, lesser_helium]
+
+setup:
+  character:
+    name: TestChar
+    class: magic_user
+    level: 22
+  start_room: 3033  # The Scientific Supply Shop
+
+steps:
+  # Step 1: Verify the scientist is present
+  - action: look
+    description: "Look around to see the scientist"
+    expected:
+      - pattern: "Scientist|scientist"
+        message: "Scientist should be visible in the room"
+
+  # Step 2: List available items to confirm sleeping staff is for sale
+  - action: command
+    description: "List items for sale"
+    command: "list"
+    expected:
+      - pattern: "sleeping staff|staff.*sleep"
+        message: "Should show sleeping staff for sale"
+
+  # Step 3: Purchase the sleeping staff
+  - action: command
+    description: "Buy sleeping staff from the scientist"
+    command: "buy staff"
+    expected:
+      - pattern: "You buy|You now have"
+        message: "Should be able to purchase the sleeping staff"
+
+  # Step 4: Verify the staff is in inventory
+  - action: inventory
+    description: "Check that staff is in inventory"
+    expected:
+      - pattern: "sleeping staff|staff"
+        message: "Purchased staff should be in inventory"
+
+  # Step 5: Hold the staff
+  - action: command
+    description: "Hold the sleeping staff"
+    command: "hold staff"
+    expected:
+      - pattern: "OK|Ok"
+        message: "Should be able to hold the sleeping staff"
+
+  # Step 5.5: Check what's held
+  - action: command
+    description: "Check equipment"
+    command: "equipment"
+    expected:
+      - pattern: "staff"
+        message: "Staff should be shown in equipment"
+
+  # Step 6: Use the staff
+  - action: command
+    description: "Use the sleeping staff"
+    command: "use staff"
+    expected:
+      - pattern: "tap.*three times|taps.*three times|powerless"
+        message: "Should be able to use the sleeping staff"
+    fail_on:
+      - pattern: "You do not hold that item"
+        message: "Staff should be holdable and usable"
+
+  # Step 6.5: Check if staff is still held
+  - action: command
+    description: "Check equipment after use"
+    command: "equipment"
+    expected:
+      - pattern: "staff|sleeping"
+        message: "Staff should still be held after use"
+
+  # Step 6.6: Remove the staff before selling
+  - action: command
+    description: "Remove the staff to prepare for selling"
+    command: "remove staff"
+    expected:
+      - pattern: "stop using"
+        message: "Should be able to remove the staff"
+
+  # Step 7: Try to sell the staff back
+  - action: command
+    description: "Sell the sleeping staff back to the scientist"
+    command: "sell staff"
+    expected:
+      - pattern: "You sell|shopkeeper now has|You'll get"
+        message: "Should be able to sell the staff back to the scientist"
+    fail_on:
+      - pattern: "I don't buy such items|don't buy that"
+        message: "Scientist should buy back staffs"
+
+result:
+  should_pass: true
+  description: "Test passes when sleeping staff can be used and sold back"

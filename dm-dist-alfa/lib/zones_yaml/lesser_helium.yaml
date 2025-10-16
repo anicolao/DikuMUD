@@ -3224,7 +3224,7 @@ objects:
   short_desc: a sleeping staff
   long_desc: A long staff with strange properties lies here.
   action_desc: ''
-  type_flag: 12
+  type_flag: 4
   extra_flags: 64
   wear_flags: 16385
   value0: 12
@@ -3234,7 +3234,25 @@ objects:
   weight: 7
   cost: 5000
   rent: 100
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: staff
+    description: 'The staff is made of old oak, and is around five feet long. It
+      fits
+
+      perfectly into your hand. You notice a small symbol etched at the
+
+      base of the staff, it looks like:
+
+
+        ZZZZZ
+
+           Z
+
+          Z
+
+         Z
+
+        ZZZZZ  z   z'
   affects: []
 - vnum: 3050
   namelist: radium crystal
