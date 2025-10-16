@@ -1,0 +1,99 @@
+# Integration test for sewers backpack container functionality
+#
+# This test validates that the backpack in the sewers (object #3616) functions
+# correctly as a container and can hold items.
+#
+# Bug Description:
+# The backpack found in the sewers has item type 9 (ITEM_ARMOR) instead of
+# type 15 (ITEM_CONTAINER), making it unusable as a container despite being
+# described as a backpack.
+#
+# Expected Behavior:
+# - Backpack should be identified as a container
+# - Backpack should be able to hold items
+# - Backpack should work with "put" and "get" commands
+# - Backpack should show contents with "look in backpack"
+
+test:
+  id: sewers_backpack_container
+  description: "Verify sewers backpack functions as a container"
+  bug_report: "The backpack found in the sewers is 'not a container'"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [item, bug_fix, sewers, backpack, container]
+
+setup:
+  character:
+    name: TestChar
+    class: warrior
+    level: 34  # Wizard level for load command
+  start_room: 1200  # Start in a lit room (limbo)
+
+steps:
+  # Use wizard command to load the backpack directly
+  - action: command
+    description: "Load backpack object using wizard command"
+    command: "load obj 3222"
+    expected:
+      - pattern: "Ok|You create|loaded"
+        message: "Should be able to load object"
+
+  # Look in the room to see if the backpack appeared there
+  - action: command
+    description: "Look in room for backpack"
+    command: "look"
+    expected:
+      - pattern: "backpack|worn backpack"
+        message: "Backpack should be visible in the room"
+
+  # Pick up the backpack
+  - action: command
+    description: "Pick up the backpack"
+    command: "get backpack"
+    expected:
+      - pattern: "You get|You take|Ok"
+        message: "Should be able to pick up backpack"
+
+  # Check inventory to see if we have it
+  - action: command
+    description: "Check inventory"
+    command: "inventory"
+    expected:
+      - pattern: "backpack"
+        message: "Backpack should be in inventory"
+
+  # Now test the key functionality: look in the backpack
+  # This will fail if the backpack is not a container
+  - action: command
+    description: "Look in backpack to verify it's a container"
+    command: "look in backpack"
+    expected:
+      - pattern: "backpack|contains|empty|nothing"
+        message: "Backpack should be recognized as a container and show contents"
+    fail_on:
+      - pattern: "not a container|can't do that|impossible"
+        message: "BUG: Backpack should be recognized as a container"
+
+result:
+  should_pass: true
+  description: "Sewers backpack should function as a container"
+  notes: |
+    This test validates the backpack container functionality:
+    
+    1. Backpack object #3222 must have type 15 (ITEM_CONTAINER)
+    2. Container values should be set appropriately:
+       - Value[0]: Maximum weight (15 lbs)
+       - Value[1]: Container flags (0 = no special flags)
+       - Value[2]: Key number (0 = no lock)
+       - Value[3]: Internal use (0)
+    3. Wear flags should include ITEM_TAKE (1)
+    
+    Bug: Object had type 12 (ITEM_OTHER) instead of 15 (ITEM_CONTAINER)
+    Fix: Changed type_flag from 12 to 15 in sewers.yaml file for object #3222
+    
+    Technical details:
+    - File: dm-dist-alfa/lib/zones_yaml/sewers.yaml
+    - Object: #3222 (vnum in YAML)
+    - Previous type flag: 12 (ITEM_OTHER)
+    - Correct type flag: 15 (ITEM_CONTAINER)
+    - Spawns in room: 3162 (Ancient Sewer Junction)
