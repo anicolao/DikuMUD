@@ -12,5 +12,6 @@ lib/tinyworld.obj
 lib/tinyworld.zon
 lib/tinyworld.shp
 lib/tinyworld.qst
+lib/pcobjs.obj
 lib/.worldfiles_built
 .validate-commands-passed
