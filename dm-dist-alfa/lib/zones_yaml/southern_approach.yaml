@@ -2262,7 +2262,7 @@ objects:
   value1: 4
   value2: 0
   value3: 0
-  weight: 20
+  weight: 15
   cost: 800
   rent: 200
   extra_descriptions:

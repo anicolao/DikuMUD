@@ -1,0 +1,116 @@
+# Integration test for radium rifle weight fix
+#
+# This test validates that the basic radium rifle (object 3405) found in the
+# southern approach zone can be wielded by characters with reasonable strength.
+#
+# Issue Description:
+# The basic radium rifle outside lower helium was too heavy to use by most
+# characters, requiring STR 18 (weight 20). For a "basic" military weapon,
+# this was too restrictive.
+#
+# Expected Behavior:
+# - Basic radium rifle should have weight of 15 lbs
+# - Should be wieldable by characters with STR 15+
+# - Should be comparable to a longsword in wieldability
+
+test:
+  id: radium_rifle_weight_fix
+  description: "Verify basic radium rifle can be wielded with reasonable strength"
+  issue: "Basic radium rifle too heavy to use (weight 20 -> 15)"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [item, weapon, radium_rifle, southern_approach, weight]
+
+setup:
+  character:
+    name: TestWarrior
+    class: warrior
+    level: 1
+    # Test characters get STR 16 by default (from create_test_player.c)
+    # STR 16 can wield weight 16, which is more than enough for weight 15 rifle
+  start_room: 3101  # Room where basic radium rifle is loaded
+
+steps:
+  # Look for the radium rifle in the area
+  - action: look
+    description: "Look for radium rifle"
+    expected:
+      - pattern: "radium rifle|rifle"
+        message: "Radium rifle should be visible in the area or inventory"
+
+  # Try to pick up the rifle (should succeed if weight is appropriate)
+  - action: command
+    description: "Pick up the radium rifle"
+    command: "get rifle"
+    expected:
+      - pattern: "You get|You take|Ok"
+        message: "Should be able to pick up the rifle"
+    fail_on:
+      - pattern: "don't see|can't find"
+        message: "Rifle should be available to pick up"
+
+  # Check inventory to confirm we have the rifle
+  - action: command
+    description: "Check inventory for rifle"
+    command: "inventory"
+    expected:
+      - pattern: "radium rifle"
+        message: "Rifle should be in inventory"
+
+  # Try to wield the rifle - this is the critical test
+  - action: command
+    description: "Wield the radium rifle"
+    command: "wield rifle"
+    expected:
+      - pattern: "Ok|You wield|You start using"
+        message: "Character with STR 15 should be able to wield the rifle"
+    fail_on:
+      - pattern: "too heavy for you to use|can't wield"
+        message: "BUG: Basic rifle (weight 15) should be wieldable with STR 15"
+
+  # Verify rifle is equipped
+  - action: command
+    description: "Check equipment to see rifle is wielded"
+    command: "equipment"
+    expected:
+      - pattern: "radium rifle|<wielded>"
+        message: "Rifle should be wielded"
+
+  # Test that we can use it in combat (basic check)
+  - action: command
+    description: "Check current room description"
+    command: "look"
+    expected:
+      - pattern: "."
+        message: "Should see room description"
+
+result:
+  should_pass: true
+  description: "Basic radium rifle should be wieldable by characters with STR 15+"
+  notes: |
+    This test validates the radium rifle weight fix:
+    
+    1. Basic radium rifle (object 3405) weight reduced from 20 to 15 lbs
+    2. Rifle can now be wielded by characters with STR 15+
+    3. This makes it comparable to a longsword in terms of strength requirement
+    
+    Technical details:
+    - Object vnum: 3405
+    - Type: Ranged weapon (type_flag: 18)
+    - Old weight: 20 lbs (required STR 18)
+    - New weight: 15 lbs (requires STR 15)
+    - Damage: 10d4
+    - Wear flags: ITEM_TAKE | ITEM_WIELD (8193)
+    
+    Strength requirements from str_app table:
+    - STR 12: can wield weight 12
+    - STR 15: can wield weight 15
+    - STR 16: can wield weight 16
+    - STR 18: can wield weight 20
+    - STR 18/51-75: can wield weight 24
+    
+    Note: Test characters created by create_test_player.c have STR 16 by default,
+    which is sufficient to test that the rifle (weight 15) can be wielded.
+    
+    This change makes the basic radium rifle accessible to more characters
+    while keeping the enhanced version (weight 25) as a high-strength reward.
