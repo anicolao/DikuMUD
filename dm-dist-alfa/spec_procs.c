@@ -1452,6 +1452,95 @@ int kings_hall(struct char_data *ch, int cmd, char *arg)
 	return(1);
 }
 
+/* 
+ * Send text to a character, automatically wrapping long lines to approximately
+ * max_line_len characters per line (breaking at word boundaries).
+ * This makes quest text and other long messages easier to read.
+ */
+void send_wrapped_text(struct char_data *ch, char *text, int max_line_len)
+{
+	char buf[MAX_STRING_LENGTH];
+	char line[MAX_STRING_LENGTH];
+	int line_pos = 0;
+	int i = 0;
+	int j;
+	int saved_len;
+	
+	if (!text || !*text || !ch)
+		return;
+	
+	/* Process the text character by character */
+	while (text[i]) {
+		/* Handle newlines and carriage returns in the original text */
+		if (text[i] == '\n' || text[i] == '\r') {
+			/* Send current line if it has content */
+			if (line_pos > 0) {
+				line[line_pos] = '\0';
+				snprintf(buf, sizeof(buf), "%s\n\r", line);
+				send_to_char(buf, ch);
+				line_pos = 0;
+			}
+			i++;
+			continue;
+		}
+		
+		/* Skip spaces at the beginning of a line */
+		if (line_pos == 0 && text[i] == ' ') {
+			i++;
+			continue;
+		}
+		
+		/* Add character to current line */
+		line[line_pos++] = text[i];
+		
+		/* Check if we need to wrap */
+		if (line_pos >= max_line_len) {
+			/* Find the last space in the line to break at word boundary */
+			int break_pos = line_pos - 1;
+			while (break_pos > 0 && line[break_pos] != ' ') {
+				break_pos--;
+			}
+			
+			/* If we found a space, break there */
+			if (break_pos > 0) {
+				line[break_pos] = '\0';
+				snprintf(buf, sizeof(buf), "%s\n\r", line);
+				send_to_char(buf, ch);
+				
+				/* Move remaining characters to beginning of next line */
+				saved_len = line_pos - break_pos - 1;
+				for (j = 0; j < saved_len; j++) {
+					line[j] = line[break_pos + 1 + j];
+				}
+				line_pos = saved_len;
+				
+				/* Skip any leading spaces in the saved text */
+				while (line_pos > 0 && line[0] == ' ') {
+					for (j = 0; j < line_pos - 1; j++) {
+						line[j] = line[j + 1];
+					}
+					line_pos--;
+				}
+			} else {
+				/* No space found, just break at max_line_len */
+				line[line_pos] = '\0';
+				snprintf(buf, sizeof(buf), "%s\n\r", line);
+				send_to_char(buf, ch);
+				line_pos = 0;
+			}
+		}
+		
+		i++;
+	}
+	
+	/* Send any remaining text */
+	if (line_pos > 0) {
+		line[line_pos] = '\0';
+		snprintf(buf, sizeof(buf), "%s\n\r", line);
+		send_to_char(buf, ch);
+	}
+}
+
 /* Generic quest giver - handles all quest types in a data-driven way */
 int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
@@ -1555,7 +1644,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		
 		if (quest_complete) {
 			/* Award quest rewards */
-			act(quest->complete_text, FALSE, mob, 0, ch, TO_VICT);
+			send_wrapped_text(ch, quest->complete_text, 72);
 			grant_quest_reward(ch, quest);
 			
 			/* Remove the quest affect */
@@ -1590,7 +1679,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	affect_to_char(ch, &af);
 	
 	/* Send quest text */
-	act(quest->quest_text, FALSE, mob, 0, ch, TO_VICT);
+	send_wrapped_text(ch, quest->quest_text, 72);
 	
 	return TRUE;
 }
