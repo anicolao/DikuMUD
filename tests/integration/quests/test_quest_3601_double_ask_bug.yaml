@@ -1,0 +1,60 @@
+# Integration test for airship captain quest double-ask bug
+# This test reproduces the bug where asking for quest 3601 twice in a row
+# grants rewards immediately without completing the quest objective
+
+test:
+  id: quest_3601_double_ask_bug
+  description: "Test that asking for quest 3601 twice should not grant rewards without completion"
+  author: Integration Test Framework
+  created: 2025-10-16
+  tags: [quest, bug, airship_captain]
+
+setup:
+  character:
+    name: QuestBugTester
+    password: test
+    level: 22  # High level to use god commands
+    class: warrior
+  start_room: 1200  # Chat room - safe starting location
+  gold: 1000
+
+steps:
+  # Step 1: Teleport to room 3049 where airship captain mob 3006 spawns
+  - action: command
+    command: "goto 3049"
+    description: "Teleport to room 3049 (airship captain spawn location)"
+    expected:
+      - pattern: "."
+        message: "Teleport should succeed"
+  
+  # Step 2: Verify we're in the right room
+  - action: look
+    description: "Look around to verify location"
+    expected:
+      - pattern: "Channel Edge|captain"
+        message: "Should be at Channel Edge or see the captain"
+  
+  # Step 3: First ask - should assign the quest
+  - action: command
+    command: "ask captain quest"
+    description: "Ask airship captain about quest (first time - should assign quest)"
+    expected:
+      - pattern: "Helium|spy|quest|task|disrupt|preparations|operatives"
+        message: "Captain should give quest text about disrupting Zodanga"
+  
+  # Step 4: Second ask - this is where the bug manifests
+  # BUG: Currently this grants rewards immediately
+  # FIX: Should say "you already have a task from me"
+  - action: command
+    command: "ask captain quest"
+    description: "Ask airship captain about quest again (second time)"
+    fail_on:
+      - pattern: "You gain.*experience|You receive.*gold|Well done|actions have set back"
+        message: "BUG: Should NOT grant rewards without completing the quest objective!"
+    expected:
+      - pattern: "already have a task|already have.*quest|Complete it first"
+        message: "Captain should tell us we already have the quest"
+
+result:
+  should_pass: true
+  description: "Asking for a quest twice should not grant rewards without completing the objective"

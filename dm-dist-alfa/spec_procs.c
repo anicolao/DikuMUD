@@ -1630,8 +1630,8 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		/* Check if quest is marked as complete */
 		for (af = ch->affected; af; af = af->next) {
 			if (af->type == quest->quest_type) {
-				/* Extract giver vnum from bitvector (bits 20-31) */
-				giver_vnum = (af->bitvector >> 20) & 0xFFF;
+				/* Extract giver vnum from bitvector (bits 12-23) */
+				giver_vnum = (af->bitvector >> 12) & 0xFFF;
 				
 				/* Make sure this is the right quest giver */
 				if (giver_vnum == quest->giver_vnum && 
@@ -1663,9 +1663,9 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	/* Assign quest affect 
 	 * Note: modifier and location fields are byte-sized (0-255), insufficient for vnums.
 	 * We pack both target_vnum and giver_vnum into the bitvector field:
-	 * - Bits 0-7: Reserved for AFF_QUEST and AFF_QUEST_COMPLETE flags
-	 * - Bits 8-19: target_vnum (12 bits, supports vnums 0-4095)
-	 * - Bits 20-31: giver_vnum (12 bits, supports vnums 0-4095)
+	 * - Bits 0-11: target_vnum (12 bits, supports vnums 0-4095)
+	 * - Bits 12-23: giver_vnum (12 bits, supports vnums 0-4095)
+	 * - Bits 24-25: AFF_QUEST and AFF_QUEST_COMPLETE flags
 	 * The quest type is stored in 'type' field for has_quest_type() checks.
 	 */
 	af.type = quest->quest_type;
@@ -1673,8 +1673,8 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	af.modifier = 0;  /* Not used for quests */
 	af.location = 0;  /* Not used for quests */
 	af.bitvector = AFF_QUEST | 
-	               ((quest->target_vnum & 0xFFF) << 8) |
-	               ((quest->giver_vnum & 0xFFF) << 20);
+	               (quest->target_vnum & 0xFFF) |
+	               ((quest->giver_vnum & 0xFFF) << 12);
 	
 	affect_to_char(ch, &af);
 	

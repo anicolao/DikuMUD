@@ -593,8 +593,8 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 				continue;
 			
 			/* Extract giver and target vnums from bitvector */
-			target_vnum = (af->bitvector >> 8) & 0xFFF;  /* Bits 8-19 */
-			giver_vnum = (af->bitvector >> 20) & 0xFFF;  /* Bits 20-31 */
+			target_vnum = af->bitvector & 0xFFF;  /* Bits 0-11 */
+			giver_vnum = (af->bitvector >> 12) & 0xFFF;  /* Bits 12-23 */
 			
 			/* Look up quest data */
 			quest = find_quest_by_giver(giver_vnum);
