@@ -50,7 +50,7 @@ lib/tinyworld.shp: lib/.worldfiles_built
 lib/tinyworld.qst: lib/.worldfiles_built
 
 # Main build targets
-all: validate-commands delplay dmserver worldfiles test
+all: validate-commands delplay dmserver zone_layout_validator worldfiles test
 
 worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst
 
@@ -91,6 +91,11 @@ dmserver : changes.o
 	$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 delplay: delplay.o
+
+zone_layout_validator: zone_layout_validator.o db.o handler.o utility.o constants.o
+	$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+zone_layout_validator.o: zone_layout_validator.c structs.h db.h utils.h
 
 comm.o : comm.c structs.h utils.h comm.h interpreter.h handler.h db.h
 act.comm.o : act.comm.c structs.h utils.h comm.h interpreter.h handler.h \
@@ -149,5 +154,5 @@ quest.o : quest.c structs.h utils.h comm.h db.h handler.h spells.h quest.h
 delplay.o : delplay.c structs.h
 
 clean:
-	rm -f *.o dmserver delplay lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built .validate-commands-passed
+	rm -f *.o dmserver delplay zone_layout_validator lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built .validate-commands-passed
 	rm -rf integration_test_outputs integration_test_failures
