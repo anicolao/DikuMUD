@@ -65,9 +65,8 @@ rooms:
 
     enemies, captured weapons, and torn standards. Several Thark guards stand
 
-    watch, their massive forms blocking most of the light from the plaza. A passage
-
-    to the east leads to the northern gate.'
+    watch, their massive forms blocking most of the light from the plaza. Stairs
+    descend east to the northern gate.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -78,8 +77,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4002
-  - direction: 1
-    description: A passage leads to the northern gate.
+  - direction: 5
+    description: Stairs descend east to the northern gate.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -179,7 +178,7 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4003
   extra_descriptions: []
 - vnum: 4005
   name: The Incubator Chamber
@@ -465,12 +464,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4013
-  - direction: 2
-    description: You see the second warrior compound to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4015
+
   extra_descriptions: []
 - vnum: 4015
   name: Second Warrior Compound Entrance
@@ -991,8 +985,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 1
-    description: A ruined plaza lies to the east.
+  - direction: 5
+    description: Steps descend to the ruined plaza below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1026,8 +1020,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4035
-  - direction: 3
-    description: The old marketplace is to the west.
+  - direction: 4
+    description: Steps lead up to the old marketplace.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1047,8 +1041,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 2
-    description: A ruined plaza is to the south.
+  - direction: 3
+    description: The ruined plaza is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1082,8 +1076,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4035
-  - direction: 2
-    description: A collapsed mansion lies to the south.
+  - direction: 5
+    description: Steps descend to a collapsed mansion below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1105,14 +1099,14 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The residential district is to the north.
+  - direction: 4
+    description: Steps lead up to the residential district.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4036
-  - direction: 1
-    description: More ruins lie to the east.
+  - direction: 5
+    description: Steps descend deeper into the ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1132,8 +1126,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 3
-    description: The collapsed mansion is to the west.
+  - direction: 4
+    description: Steps lead up to the collapsed mansion.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1407,7 +1401,7 @@ rooms:
 
     through this gate at a moment''s notice. The air here feels tense, watchful.
 
-    A passage south leads toward the throne room area.'
+    Stairs lead up to the council antechamber.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -1418,8 +1412,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4049
-  - direction: 2
-    description: A passage leads to the council antechamber.
+  - direction: 4
+    description: Stairs lead up to the council antechamber.
     keywords: ''
     door_flag: 0
     key_vnum: -1
