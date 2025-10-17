@@ -110,8 +110,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3700
-  - direction: 3
-    description: The route curves west.
+  - direction: 5
+    description: A dangerous path descends westward.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -124,18 +124,12 @@ rooms:
   room_flags: 0
   sector_type: 4
   exits:
-  - direction: 1
-    description: The safer route lies east.
+  - direction: 4
+    description: The path ascends back east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3710
-  - direction: 3
-    description: Continue west carefully.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3712
   extra_descriptions: []
 - vnum: 3712
   name: Ancient Ruins
@@ -144,18 +138,32 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: Back to the wilderness east.
+  - direction: 0
+    description: North through the plaza.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3711
-  - direction: 3
-    description: Through the ruins westward.
+    to_room: 3713
+  extra_descriptions: []
+- vnum: 3713
+  name: Ruined Plaza
+  description: "   You stand in what was once a grand plaza in the ancient city. Broken\n    statues and toppled monuments lie scattered across the cracked pavement. The\n    ruins extend in all directions, a testament to a once-great civilization now\n    lost to time."
+  zone: 38
+  room_flags: 0
+  sector_type: 1
+  exits:
+  - direction: 0
+    description: North to the wilderness.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3720
+  - direction: 2
+    description: South to deeper ruins.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3712
   extra_descriptions: []
 - vnum: 3720
   name: Western Wilderness Plains
@@ -177,11 +185,11 @@ rooms:
     key_vnum: -1
     to_room: 3700
   - direction: 2
-    description: Through ruins to the south.
+    description: South through ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3712
+    to_room: 3713
   extra_descriptions: []
 - vnum: 3721
   name: Traveler's Rest
