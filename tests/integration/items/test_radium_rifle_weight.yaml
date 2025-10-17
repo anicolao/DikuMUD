@@ -96,7 +96,7 @@ result:
     
     Technical details:
     - Object vnum: 3405
-    - Type: Ranged weapon (type_flag: 18)
+    - Type: Ranged weapon (type_flag: 6 - ITEM_FIREWEAPON)
     - Old weight: 20 lbs (required STR 18)
     - New weight: 15 lbs (requires STR 15)
     - Damage: 10d4

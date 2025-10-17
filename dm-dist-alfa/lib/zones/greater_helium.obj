@@ -151,7 +151,7 @@ chemicals rare~
 rare chemicals~
 A vial of rare chemicals sits carefully sealed here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 5 100 33
 #3541
@@ -159,7 +159,7 @@ compound scientific~
 scientific compound~
 A flask of scientific compound is here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 5 120 40
 #3542
@@ -375,7 +375,7 @@ healing salve~
 healing salve~
 A jar of Martian healing salve sits here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 2 40 13
 #3603
@@ -383,7 +383,7 @@ antidote poison~
 poison antidote~
 A vial of poison antidote is carefully sealed here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 3 80 27
 #3610

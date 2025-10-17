@@ -115,7 +115,7 @@ vial poison~
 a vial of poison~
 A small vial containing poison lies here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 2 50 17
 #3865
@@ -123,7 +123,7 @@ antidote herbal~
 herbal antidote~
 A pouch of herbal antidote lies here.~
 ~
-10 0 8193
+10 0 1
 2 1 2 2
 2 40 13
 #3866
