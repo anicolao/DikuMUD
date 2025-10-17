@@ -151,17 +151,12 @@ int validate_zone_layout(int zone_num)
 		coords[room].room_vnum = world[room].number;
 	}
 	
-	/* Find first room in zone */
+	/* Find first room in zone and count total rooms */
 	for (room = 0; room <= top_of_world; room++) {
 		if (world[room].zone == zone_num) {
-			start_room = room;
-			rooms_in_zone++;
-		}
-	}
-	
-	/* Count total rooms in zone */
-	for (room = start_room + 1; room <= top_of_world; room++) {
-		if (world[room].zone == zone_num) {
+			if (start_room == -1) {
+				start_room = room;
+			}
 			rooms_in_zone++;
 		}
 	}
@@ -192,7 +187,8 @@ int validate_zone_layout(int zone_num)
 			if (world[room].dir_option[dir] == NULL)
 				continue;
 			
-			target_room = real_room(world[room].dir_option[dir]->to_room);
+			/* Note: to_room is already a real room index after boot_db, not a virtual number */
+			target_room = world[room].dir_option[dir]->to_room;
 			
 			if (target_room < 0 || target_room > top_of_world)
 				continue;
