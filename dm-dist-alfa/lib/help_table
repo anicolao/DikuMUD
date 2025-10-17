@@ -266,8 +266,37 @@ Or you can order all the people who're charmed by you, like this:
 
    order followers say We worship you, leader!!
 #
-BUY SELL
+BUY SELL LIST VALUE APPRAISE
 Commands for the shops - very useful too !
+
+BUY <item>   - Purchase an item from the shopkeeper
+SELL <item>  - Sell an item to the shopkeeper
+LIST         - See what items are for sale
+VALUE <item> - Find out how much a shopkeeper will pay for your item
+APPRAISE <amount> <item> - Have the shopkeeper identify an item for a fee
+
+For more information, see: SHOPS
+#
+APPRAISE
+Usage: APPRAISE <amount> <item>
+
+Have a shopkeeper identify an item's properties for a fee. The shopkeeper will
+only appraise items that they would normally buy. The appraisal cost ranges
+from the item's value up to twice its value, with the exact cost determined by
+the item itself.
+
+If you offer enough coins, the shopkeeper will take payment and reveal all the
+item's properties (weight, value, special abilities, and enchantments). If your
+offer isn't sufficient, they'll tell you how much they need.
+
+Examples:
+  > appraise 1000 sword
+  > appraise 5000 helmet
+
+Note: Each shopkeeper only appraises items they trade in. A baker won't appraise
+weapons, and an armorer won't appraise food!
+
+See also: BUY, SELL, LIST, VALUE, SHOPS
 #
 WEATHER
 If you're uncertain whether the sun is shining or the rain is pouring down.
@@ -289,8 +318,11 @@ high quality!
 murdering the keeper may appear tempting - but beware: The shopkeepers are 
 often rugged, capable men; roughened by years of trading and, indeed, surviving
 in a world where the only safe prospect is death in the end.
+   Shopkeepers can also appraise items for you, identifying their properties
+much like a scroll of identify would. However, this service comes at a price -
+the appraisal fee ranges from the item's value up to twice its value.
 
-See also: BUY, SELL, LIST, VALUE
+See also: BUY, SELL, LIST, VALUE, APPRAISE
 #
 SOCIAL ACTIONS
 Commands mainly for social interaction:
