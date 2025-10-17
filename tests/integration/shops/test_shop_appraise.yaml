@@ -40,26 +40,26 @@ steps:
       - pattern: "bread|waterskin|rations"
         message: "Should show food provisions for sale"
 
-  # Step 3: Buy a waterskin to appraise
+  # Step 3: Buy bread (a food item the merchant trades in)
   - action: command
-    description: "Buy a waterskin"
-    command: "buy waterskin"
+    description: "Buy bread"
+    command: "buy bread"
     expected:
       - pattern: "You now have|buy"
-        message: "Should be able to purchase waterskin"
+        message: "Should be able to purchase bread"
 
-  # Step 4: Try to appraise with insufficient offer or get rejection
+  # Step 4: Try to appraise with insufficient offer
   - action: command
-    description: "Try to appraise waterskin (may be rejected by food merchant)"
-    command: "appraise 1 waterskin"
+    description: "Try to appraise bread with too little money"
+    command: "appraise 1 bread"
     expected:
-      - pattern: "."
-        message: "Should get some response from shopkeeper"
+      - pattern: "need.*\\d+.*coins.*appraise"
+        message: "Shopkeeper should tell us the actual appraisal cost"
 
-  # Step 5: Appraise the waterskin with enough gold
+  # Step 5: Appraise the bread with enough gold
   - action: command
-    description: "Appraise waterskin with sufficient gold"
-    command: "appraise 5000 waterskin"
+    description: "Appraise bread with sufficient gold"
+    command: "appraise 5000 bread"
     expected:
       - pattern: "appraise.*\\d+.*gold"
         message: "Shopkeeper should tell us the appraisal cost"
