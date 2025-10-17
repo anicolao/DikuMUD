@@ -29,3 +29,23 @@ This repository contains the original DikuMUD Alfa and Gamma releases. DikuMUD w
 Please note the LGPL additions to licensing which you'll find in the docs/original/license.doc document.
 
 Original Alfa release uploaded by Michael Seifert on 2020-02-03 20:02
+
+## Development Tools
+
+### Zone Layout Validator
+
+The zone_layout_validator tool helps ensure spatial consistency in zone designs by:
+- Walking through all rooms using breadth-first search
+- Assigning (x, y, z) coordinates based on exit directions
+- Detecting rooms with inconsistent coordinates
+- Identifying overlapping rooms in the spatial layout
+
+**Usage:**
+```bash
+cd dm-dist-alfa
+make zone_layout_validator
+./zone_layout_validator           # Validate all zones
+./zone_layout_validator <zone>    # Validate specific zone
+```
+
+See `dm-dist-alfa/doc/zone_layout_validator.doc` for detailed documentation.

@@ -1,4 +1,19 @@
-/* Zone Layout Validator - validates spatial consistency of zones */
+/* ************************************************************************
+*  Zone Layout Validator                                                  *
+*                                                                          *
+*  This tool validates the spatial consistency of zone layouts by:        *
+*  1. Walking all rooms in a zone using breadth-first search (BFS)        *
+*  2. Assigning (x, y, z) coordinates based on exit directions            *
+*  3. Detecting rooms with inconsistent coordinates (same room reached    *
+*     via different paths that would assign different coordinates)        *
+*  4. Detecting rooms that overlap (different rooms at same coordinates)  *
+*                                                                          *
+*  Usage: ./zone_layout_validator [zone_index]                            *
+*         (omit zone_index to validate all zones)                         *
+*                                                                          *
+*  See doc/zone_layout_validator.doc for more information                 *
+************************************************************************* */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

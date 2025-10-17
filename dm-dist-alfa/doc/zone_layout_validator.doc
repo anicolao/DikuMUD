@@ -1,0 +1,133 @@
+ZONE LAYOUT VALIDATOR
+=====================
+
+The zone_layout_validator is a tool for validating the spatial consistency
+of zone layouts in DikuMUD.
+
+
+PURPOSE
+-------
+
+The validator walks through all rooms in a zone using a breadth-first search
+(BFS) algorithm, assigning (x, y, z) coordinates to each room based on the
+exits (North/South/East/West/Up/Down). It then checks for spatial
+inconsistencies:
+
+1. Rooms that would be assigned multiple different coordinates if reached
+   by different paths (indicating contradictory exit directions)
+
+2. Multiple rooms that occupy the same coordinates (indicating overlapping
+   rooms in the spatial layout)
+
+3. Rooms that are unreachable from the starting room (isolated rooms)
+
+
+USAGE
+-----
+
+To validate a specific zone (by zone index):
+    ./zone_layout_validator <zone_index>
+
+To validate all zones:
+    ./zone_layout_validator
+
+
+BUILDING
+--------
+
+The validator is built automatically as part of the main build:
+    make
+
+Or build it specifically:
+    make zone_layout_validator
+
+
+HOW IT WORKS
+------------
+
+The validator uses a breadth-first search starting from the first room in
+a zone. For each room, it:
+
+1. Assigns coordinates based on the exit direction taken to reach it:
+   - North: y+1
+   - South: y-1
+   - East: x+1
+   - West: x-1
+   - Up: z+1
+   - Down: z-1
+
+2. When a room is encountered that was already visited, it checks if the
+   new coordinates match the previously assigned coordinates. If not, this
+   indicates an inconsistency in the zone layout.
+
+3. After BFS completes, it checks all rooms to see if any two rooms share
+   the same coordinates, which would indicate overlapping rooms.
+
+
+INTERPRETING RESULTS
+--------------------
+
+ERROR: Room has inconsistent coordinates
+    This means a room can be reached by two different paths that would
+    assign different coordinates. This typically indicates a maze-like
+    structure where the exits don't form a consistent spatial layout.
+    
+    Example: If going North then East puts you in the same room as going
+    East then North, that's consistent. But if going North then East puts
+    you in a different room than going East, that's inconsistent.
+
+ERROR: Rooms overlap at coordinates
+    This means two different rooms would occupy the same position in the
+    coordinate system. This often happens in zones with teleports, magical
+    connections, or intentionally overlapping spaces.
+
+WARNING: Room is unreachable from start room
+    This means the room is isolated and cannot be reached by following
+    exits from the starting room. This could indicate:
+    - An error in the zone design
+    - An intentional separate area within the zone
+    - A room only accessible via teleport or special means
+
+
+EXPECTED ERRORS
+---------------
+
+Some zone designs intentionally create spatial inconsistencies:
+
+- Mazes and labyrinths often have non-Euclidean layouts
+- Magical areas may have impossible geometry
+- Multi-level structures may have complex interconnections
+
+In these cases, the "errors" reported by the validator are expected and
+part of the zone design. The validator helps identify these areas so
+builders can verify they are intentional.
+
+
+EXAMPLES
+--------
+
+Valid layout (square):
+    Room A (0,0) - North -> Room B (0,1)
+    Room B (0,1) - East  -> Room C (1,1)
+    Room C (1,1) - South -> Room D (1,0)
+    Room D (1,0) - West  -> Room A (0,0)
+    
+    This forms a consistent square with no conflicts.
+
+Invalid layout (inconsistent):
+    Room A (0,0) - North -> Room B (0,1)
+    Room B (0,1) - East  -> Room C (1,1)
+    Room C (1,1) - East  -> Room D (2,1)
+    Room D (2,1) - West  -> Room A (???)
+    
+    Going West from D should put A at (1,1), but A is at (0,0).
+    This creates a coordinate conflict.
+
+
+SEE ALSO
+--------
+
+- doc/database.doc - Zone and room file formats
+- doc/building.doc - Guide to building zones
+- validate_shops.c - Shop validation tool
+- tools/validate_world.py - World data validation tool
