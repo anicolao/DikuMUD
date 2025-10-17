@@ -2152,7 +2152,7 @@ objects:
   short_desc: an enhanced factory radium rifle
   long_desc: A high-powered radium rifle lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 14
@@ -2405,7 +2405,7 @@ objects:
   short_desc: a compact radium pistol
   long_desc: A compact but powerful radium pistol lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 10

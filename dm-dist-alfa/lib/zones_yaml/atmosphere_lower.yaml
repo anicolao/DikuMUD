@@ -2336,7 +2336,7 @@ objects:
   short_desc: an experimental radium rifle
   long_desc: A prototype radium weapon of advanced design lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 18
@@ -2771,7 +2771,7 @@ objects:
   short_desc: an integrated energy weapon
   long_desc: An experimental weapon integrated with cybernetics lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 16
