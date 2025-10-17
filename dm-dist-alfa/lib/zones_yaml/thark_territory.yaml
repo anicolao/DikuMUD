@@ -333,7 +333,7 @@ rooms:
 
     you can hear the sounds of warriors within - sharpening blades, repairing
 
-    harnesses, and speaking in their guttural language.'
+    harnesses, and speaking in their guttural language. Steps descend to lower compounds.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -350,8 +350,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4000
-  - direction: 2
-    description: More compounds lie to the south.
+  - direction: 5
+    description: Steps descend to the lower warrior compounds.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -481,13 +481,13 @@ rooms:
 
     symbols of Thark authority. Inside, you can see the forms of massive green
 
-    Martians moving about their business.'
+    Martians moving about their business. Steps lead up to the first compound.'
   zone: 40
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The first compound is to the north.
+  - direction: 4
+    description: Steps lead up to the first compound.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -933,13 +933,13 @@ rooms:
 
     as it fell centuries or millennia ago. Small desert creatures have made
 
-    homes in the crevices.'
+    homes in the crevices. The ground slopes down to the north into deeper ruins.'
   zone: 40
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The northern ruins lie ahead.
+  - direction: 5
+    description: The ground slopes down into the northern ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -983,7 +983,7 @@ rooms:
 
     useful. The wind whistles through the broken structures, creating an eerie
 
-    moan.'
+    moan. The ground slopes up to the south.'
   zone: 40
   room_flags: 0
   sector_type: 2
@@ -994,8 +994,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4034
-  - direction: 2
-    description: The collapsed colonnade is to the south.
+  - direction: 4
+    description: The ground slopes up to the colonnade.
     keywords: ''
     door_flag: 0
     key_vnum: -1
