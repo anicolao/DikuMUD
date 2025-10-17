@@ -23,7 +23,7 @@ rooms:
   room_flags: 9
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 4
     description: The opening leads back up to the waste disposal area.
     keywords: ''
     door_flag: 0

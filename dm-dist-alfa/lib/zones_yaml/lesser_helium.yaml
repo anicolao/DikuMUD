@@ -251,8 +251,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: You see the main street.
+  - direction: 5
+    description: Stairs lead down to the main street.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -284,8 +284,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: You see the main street.
+  - direction: 5
+    description: Stairs lead down to the main street.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -305,8 +305,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: You see the main concourse.
+  - direction: 5
+    description: Stairs lead down to the main concourse.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -361,15 +361,16 @@ rooms:
   description: '   You are on the main concourse of Lesser Helium.  South of here
     is the entrance
 
-    to the Armory, and the provisions merchant is to the north.  East of here is the
+    to the Armory, and stairs lead up to the provisions merchant to the north.  East
+    of here is the
 
     market plaza.'
   zone: 30
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: You see the provisions merchant.
+  - direction: 4
+    description: Stairs lead up to the provisions merchant.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -400,10 +401,10 @@ rooms:
     A magnificent statue commemorating the unification of the Twin Cities stands in
     the
 
-    middle of the plaza.  Roads lead in every direction, north to the temple plaza,
-    south
+    middle of the plaza.  Roads lead in every direction: north to the temple plaza,
 
-    to the common plaza, east and westbound is the main concourse.'
+    south (down) to the common plaza in the lower district, east and westbound is
+    the main concourse.'
   zone: 30
   room_flags: 0
   sector_type: 1
@@ -420,10 +421,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3015
-  - direction: 2
-    description: You see the common plaza.
+  - direction: 5
+    description: Steps descend to the common plaza in the lower district.
     keywords: ''
     door_flag: 0
+    key_vnum: -1
+    to_room: 3025
+  - direction: 3
+    description: You see the main concourse.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3013
     key_vnum: -1
     to_room: 3025
   - direction: 3
@@ -440,17 +449,18 @@ rooms:
       Earth and Helium that secured Mars'' future.  It is carved from scarlet marble.'
 - vnum: 3015
   name: The Main Concourse
-  description: '   You are on the main concourse.  To the north is the general merchant,
+  description: '   You are on the main concourse.  Stairs lead up to the general merchant
 
-    and the concourse continues east.  To the west you see the market plaza and to
+    to the north, and the concourse continues east.  To the west you see the market
+    plaza and to
 
     the south is the jeweler''s shop.'
   zone: 30
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: You see the general merchant.
+  - direction: 4
+    description: Stairs lead up to the general merchant.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -476,8 +486,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3016
   name: The Main Concourse
-  description: '   The main concourse continues here, to the north is the weapon smith
-    and to the
+  description: '   The main concourse continues here, stairs lead up to the weapon smith
+    to the north and to the
 
     south is the Warriors Guild.  To the east is the city''s east gate and to the
     west
@@ -487,8 +497,8 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: You see the weapon smith.
+  - direction: 4
+    description: Stairs lead up to the weapon smith.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -708,18 +718,16 @@ rooms:
   description: '   The common plaza where citizens gather and converse.  To the west
     is the lower
 
-    quarter and to the east is a shadowy alley.  To the north, this plaza connects
-    to
+    quarter and to the east is a shadowy alley.  Steps lead up to the market plaza
+    above.
 
-    the market plaza.  From the south you notice an unpleasant smell from the waste
-
-    disposal area.'
+    From the south you notice an unpleasant smell from the waste disposal area.'
   zone: 30
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: You see the market plaza.
+  - direction: 4
+    description: Steps lead up to the market plaza.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -886,17 +894,23 @@ rooms:
 
     apts, and other Martian beasts available as companions.  A sign carved in stone
 
-    hangs on the wall.'
+    hangs on the wall.  An entrance to the holding pens is in the back.'
   zone: 30
   room_flags: 8
   sector_type: 0
   exits:
   - direction: 2
-    description: You see the Alley.
+    description: The alley is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3045
+  - direction: 3
+    description: The holding pens are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3032
   extra_descriptions:
   - keywords: sign
     description: "The sign reads:\n\n  Use 'List' to see available beasts.\n  Use\
@@ -913,7 +927,13 @@ rooms:
   zone: 30
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 1
+    description: The calot shop is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3031
   extra_descriptions: []
 - vnum: 3033
   name: The Scientific Supply Shop
@@ -1150,9 +1170,7 @@ rooms:
   description: '   You are walking along Wall Road next to the western defensive wall.  The
     road
 
-    continues north and south.  A narrow alley leads east into the lower quarter.
-
-    Ancient script is carved into the wall here.'
+    continues north and south.  Ancient script is carved into the wall here.'
   zone: 30
   room_flags: 0
   sector_type: 1
@@ -1163,12 +1181,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3042
-  - direction: 1
-    description: The alley leads east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3044
   - direction: 2
     description: The road continues further south.
     keywords: ''
@@ -1188,8 +1200,7 @@ rooms:
       Barsoomian construction techniques.  It rises far too high to climb.'
 - vnum: 3044
   name: Lower Quarter Alley
-  description: '   You are in a narrow alley in the lower quarter, leading east and
-    west.  The
+  description: '   You are in a narrow alley in the lower quarter, leading east.  The
 
     leather worker''s shop is to the north.'
   zone: 30
@@ -1208,31 +1219,30 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3024
-  - direction: 3
-    description: The alley leads west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3043
   extra_descriptions: []
 - vnum: 3045
   name: Alley at Channel Edge
-  description: '   You are standing in an alley which continues east and west.  South
-    of here
+  description: '   You are standing in an alley which continues east and west.  Steps descend
 
-    you see the edge of the ancient dried channel.'
+    south to the edge of the ancient dried channel.  To the north is a shop.'
   zone: 30
   room_flags: 0
   sector_type: 1
   exits:
+  - direction: 0
+    description: The calot shop is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3031
   - direction: 1
     description: The alley leads east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3046
-  - direction: 2
-    description: You see the channel edge.
+  - direction: 5
+    description: Steps descend to the channel edge.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1324,8 +1334,8 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: You see the Alley.
+  - direction: 4
+    description: Steps lead back up to the alley.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1493,7 +1503,9 @@ rooms:
 
     A huge altar carved from scarlet marble stands before you, and behind it is a
 
-    magnificent statue depicting the Jeddak of Helium in full ceremonial regalia.'
+    magnificent statue depicting the Jeddak of Helium in full ceremonial regalia.
+
+    A concealed door is barely visible in the wall.'
   zone: 30
   room_flags: 8
   sector_type: 0
@@ -1504,6 +1516,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3001
+  - direction: 0
+    description: A concealed door to the temple vault.
+    keywords: concealed door hidden
+    door_flag: 1
+    key_vnum: 3134
+    to_room: 3055
   extra_descriptions:
   - keywords: altar
     description: 'The altar is more than ten feet long, carved from a single massive
@@ -1528,7 +1546,13 @@ rooms:
   zone: 30
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: The concealed door leads back to the altar.
+    keywords: concealed door hidden
+    door_flag: 1
+    key_vnum: 3134
+    to_room: 3054
   extra_descriptions: []
 mobiles:
 - vnum: 3000
