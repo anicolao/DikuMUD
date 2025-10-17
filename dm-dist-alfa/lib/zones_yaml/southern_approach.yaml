@@ -2255,7 +2255,7 @@ objects:
   short_desc: a basic radium rifle
   long_desc: A standard radium rifle lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 10
@@ -2599,7 +2599,7 @@ objects:
   short_desc: an enhanced radium rifle
   long_desc: A superior radium rifle lies here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 12

@@ -404,7 +404,7 @@ objects:
   action_desc: ''
   type_flag: 17
   extra_flags: 0
-  wear_flags: 8193
+  wear_flags: 1
   value0: 10
   value1: 10
   value2: 0

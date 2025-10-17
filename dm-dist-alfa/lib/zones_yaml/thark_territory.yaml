@@ -2728,7 +2728,7 @@ objects:
   short_desc: a Thark radium rifle
   long_desc: A massive radium rifle sized for green Martians is here.
   action_desc: ''
-  type_flag: 18
+  type_flag: 6
   extra_flags: 0
   wear_flags: 8193
   value0: 15

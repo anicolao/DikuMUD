@@ -213,6 +213,17 @@ class WorldValidator:
             affects = obj.get('affects', [])
             if len(affects) > 2:
                 self.error(f"{zone_name}: Object {vnum} has more than 2 affects")
+            
+            # Validate wieldable objects are weapons
+            # ITEM_WIELD = 8192 (bit 13)
+            wear_flags = obj.get('wear_flags', 0)
+            type_flag = obj.get('type_flag', 0)
+            
+            # Check if object has ITEM_WIELD flag (wear_flags & 8192)
+            if wear_flags & 8192:
+                # ITEM_WEAPON = 5, ITEM_FIREWEAPON = 6
+                if type_flag not in [5, 6]:
+                    self.error(f"{zone_name}: Object {vnum} ({short_desc}) is wieldable (wear_flags={wear_flags}) but not a weapon type (type_flag={type_flag}, should be 5 for ITEM_WEAPON or 6 for ITEM_FIREWEAPON)")
         
         # Validate shops
         shops = data.get('shops', [])

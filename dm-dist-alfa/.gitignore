@@ -5,7 +5,7 @@ dmserver
 lib/players
 lib/board.messages
 syntax_check
-# Assembled world files (generated from lib/zones/*)
+# Assembled world files (generated from lib/zones_yaml/*)
 lib/tinyworld.wld
 lib/tinyworld.mob
 lib/tinyworld.obj
@@ -15,3 +15,10 @@ lib/tinyworld.qst
 lib/pcobjs.obj
 lib/.worldfiles_built
 .validate-commands-passed
+# Legacy zone files (generated from YAML, should not be checked in)
+lib/zones/*.mob
+lib/zones/*.obj
+lib/zones/*.wld
+lib/zones/*.zon
+lib/zones/*.shp
+lib/zones/*.qst
