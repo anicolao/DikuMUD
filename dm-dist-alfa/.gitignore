@@ -1,5 +1,6 @@
 delplay
 dmserver
+zone_layout_validator
 *.o
 .direnv
 lib/players
