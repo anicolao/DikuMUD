@@ -18,7 +18,9 @@ rooms:
 
     arms raised in a gesture of defiance. Green Martian warriors mill about,
 
-    their fifteen-foot frames casting long shadows in the reddish sunlight.'
+    their fifteen-foot frames casting long shadows in the reddish sunlight. A
+
+    tall watchtower rises above the plaza.'
   zone: 40
   room_flags: 0
   sector_type: 1
@@ -41,8 +43,14 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4007
+  - direction: 4
+    description: Stairs lead up to the central watchtower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4045
   - direction: 3
-    description: You see the ancient ruins stretching westward.
+    description: Steps descend westward into the ancient ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -57,7 +65,9 @@ rooms:
 
     enemies, captured weapons, and torn standards. Several Thark guards stand
 
-    watch, their massive forms blocking most of the light from the plaza.'
+    watch, their massive forms blocking most of the light from the plaza. A passage
+
+    to the east leads to the northern gate.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -68,6 +78,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4002
+  - direction: 1
+    description: A passage leads to the northern gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4048
   - direction: 2
     description: The plaza is to the south.
     keywords: ''
@@ -116,11 +132,17 @@ rooms:
 
     cities. Tars Tarkas himself stands here, a towering figure of green muscle
 
-    and battle scars.'
+    and battle scars. A doorway to the east leads to the sacred Incubator.'
   zone: 40
   room_flags: 12
   sector_type: 0
   exits:
+  - direction: 1
+    description: The sacred Incubator entrance is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4004
   - direction: 2
     description: The Council Hall lies to the south.
     keywords: ''
@@ -152,8 +174,8 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4005
-  - direction: 2
-    description: The plaza is to the south.
+  - direction: 3
+    description: The Jeddak's throne room is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -282,7 +304,7 @@ rooms:
 
     use, as Tharks believe wounds are badges of honor. The air smells of sweat,
 
-    leather, and blood.'
+    leather, and blood. A passage leads south toward the southern gate.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -293,6 +315,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4008
+  - direction: 2
+    description: A passage leads to the southern gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4046
   extra_descriptions: []
 - vnum: 4010
   name: First Warrior Compound Entrance
@@ -1160,12 +1188,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4041
-  - direction: 0
-    description: You can see the main plaza to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4000
   extra_descriptions: []
 - vnum: 4041
   name: Southern Guard Tower
@@ -1293,7 +1315,7 @@ rooms:
 
     hunting grounds. The view is breathtaking - the entire dead sea bottom laid
 
-    out like a map.'
+    out like a map. Stairs descend to the plaza below.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -1304,6 +1326,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4044
+  - direction: 5
+    description: Stairs descend to the main plaza.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
   extra_descriptions: []
 - vnum: 4046
   name: Southern Gate - Interior
@@ -1316,17 +1344,17 @@ rooms:
 
     with heavy wooden beams and metal bars. Guards are always present here,
 
-    checking anyone who enters or leaves.'
+    checking anyone who enters or leaves. A passage north leads to the arena area.'
   zone: 40
   room_flags: 8
   sector_type: 0
   exits:
   - direction: 0
-    description: The main plaza is to the north.
+    description: A passage leads north to the arena preparation chamber.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4009
   - direction: 2
     description: The gate leads outside the city.
     keywords: ''
@@ -1374,7 +1402,9 @@ rooms:
 
     war. Weapon racks line the walls, and Thark warriors are always ready to sortie
 
-    through this gate at a moment''s notice. The air here feels tense, watchful.'
+    through this gate at a moment''s notice. The air here feels tense, watchful.
+
+    A passage south leads toward the throne room area.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -1386,11 +1416,11 @@ rooms:
     key_vnum: -1
     to_room: 4049
   - direction: 2
-    description: The main plaza is to the south.
+    description: A passage leads to the council antechamber.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4001
   extra_descriptions: []
 - vnum: 4049
   name: Northern Gate - Exterior
