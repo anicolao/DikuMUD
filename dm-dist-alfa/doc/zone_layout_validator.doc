@@ -19,7 +19,11 @@ inconsistencies:
 2. Multiple rooms that occupy the same coordinates (indicating overlapping
    rooms in the spatial layout)
 
-3. Rooms that are unreachable from the starting room (isolated rooms)
+3. One-way gates where an exit from room A to room B exists, but the
+   reverse exit doesn't lead back to room A (checked both within zones
+   and across zone boundaries)
+
+4. Rooms that are unreachable from the starting room (isolated rooms)
 
 
 USAGE
@@ -80,6 +84,18 @@ ERROR: Rooms overlap at coordinates
     This means two different rooms would occupy the same position in the
     coordinate system. This often happens in zones with teleports, magical
     connections, or intentionally overlapping spaces.
+
+WARNING: Room has a one-way gate
+    This means an exit from one room to another exists, but the reverse
+    exit doesn't lead back to the original room. For example, if you can
+    go north from room A to room B, but going south from room B doesn't
+    take you back to room A (or there is no south exit at all).
+    
+    One-way gates are checked both within zones and across zone boundaries.
+    They often indicate:
+    - Intentional one-way passages (trap doors, slides, etc.)
+    - Teleports or magical transport
+    - Errors in zone design where the reverse exit was forgotten
 
 WARNING: Room is unreachable from start room
     This means the room is isolated and cannot be reached by following

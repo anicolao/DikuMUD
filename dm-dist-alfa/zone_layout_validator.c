@@ -7,6 +7,7 @@
 *  3. Detecting rooms with inconsistent coordinates (same room reached    *
 *     via different paths that would assign different coordinates)        *
 *  4. Detecting rooms that overlap (different rooms at same coordinates)  *
+*  5. Detecting one-way gates (exits that don't have reverse connections) *
 *                                                                          *
 *  Usage: ./zone_layout_validator [zone_index]                            *
 *         (omit zone_index to validate all zones)                         *
@@ -245,6 +246,50 @@ int validate_zone_layout(int zone_num)
 					       coords[target_room].z);
 					errors++;
 				}
+			}
+		}
+	}
+	
+	/* Check for one-way gates within the zone and to adjacent zones */
+	for (room = 0; room <= top_of_world; room++) {
+		if (world[room].zone != zone_num)
+			continue;
+		
+		/* Check all directions from this room */
+		for (dir = 0; dir < 6; dir++) {
+			if (world[room].dir_option[dir] == NULL)
+				continue;
+			
+			target_room = world[room].dir_option[dir]->to_room;
+			
+			if (target_room < 0 || target_room > top_of_world)
+				continue;
+			
+			/* Check if the reverse direction exists and points back */
+			int reverse_dir = opposite_dir[dir];
+			int has_reverse = 0;
+			
+			if (world[target_room].dir_option[reverse_dir] != NULL) {
+				int reverse_target = world[target_room].dir_option[reverse_dir]->to_room;
+				if (reverse_target == room) {
+					has_reverse = 1;
+				}
+			}
+			
+			if (!has_reverse) {
+				/* One-way gate detected */
+				const char *dir_name = 
+					dir == NORTH ? "north" :
+					dir == EAST ? "east" :
+					dir == SOUTH ? "south" :
+					dir == WEST ? "west" :
+					dir == UP ? "up" : "down";
+				
+				printf("WARNING: Room %d (vnum %d) has a one-way gate %s to room %d (vnum %d)\n",
+				       room, world[room].number,
+				       dir_name,
+				       target_room, world[target_room].number);
+				warnings++;
 			}
 		}
 	}
