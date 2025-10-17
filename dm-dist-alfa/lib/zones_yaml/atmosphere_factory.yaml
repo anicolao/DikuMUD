@@ -470,8 +470,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A catwalk leads south.
+  - direction: 5
+    description: Steps lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -514,12 +514,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4118
-  - direction: 2
-    description: Another catwalk leads south.
+  - direction: 5
+    description: Steps descend further.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4119
+  - direction: 4
+    description: A passage ascends.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4128
   extra_descriptions:
   - keywords: below floor
     description: 'The factory floor far below is a maze of machinery, pipes, and tanks. Steam vents
@@ -966,8 +972,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The door leads back to the entrance.
+  - direction: 4
+    description: Stairs ascend.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -1084,6 +1090,12 @@ rooms:
     door_flag: 2
     key_vnum: 4053
     to_room: 4150
+  - direction: 1
+    description: A door leads to the directors office.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4075
   extra_descriptions:
   - keywords: trapdoor
     description: 'This heavy metal trapdoor is concealed in the floor, almost invisible unless you know where
@@ -1116,6 +1128,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4069
+  - direction: 3
+    description: The door leads back to the administrative corridor.
+    keywords: door
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4074
   extra_descriptions:
   - keywords: signs evacuation
     description: 'Emergency evacuation signs point the way to safety, with distance markers and warnings
@@ -1338,8 +1356,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A passage leads south.
+  - direction: 5
+    description: Stairs descend to offices.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1475,7 +1493,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 1
+    description: The passage continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4147
   extra_descriptions: []
 - vnum: 4147
   name: Escape Route Junction
@@ -1518,6 +1542,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4146
+  - direction: 3
+    description: The passage continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4146
   extra_descriptions: []
 - vnum: 4148
   name: Surface Emergency Exit
@@ -1538,6 +1568,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
+  - direction: 1
+    description: The passage continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4149
   extra_descriptions: []
 - vnum: 4149
   name: Emergency Shelter
@@ -1558,6 +1594,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
+  - direction: 3
+    description: The passage continues west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4148
   extra_descriptions:
   - keywords: supplies equipment
     description: 'The shelter is well-stocked with food, water, medical supplies, and equipment. Bunks line

@@ -834,6 +834,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4181
+  - direction: 5
+    description: A passage leads down to deeper sections.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4189
   extra_descriptions:
   - keywords: tanks hybrids creatures
     description: 'The hybrid creatures are disturbing to behold. Some combine features logically, creating
@@ -994,6 +1000,12 @@ rooms:
     door_flag: 2
     key_vnum: 4254
     to_room: 4188
+  - direction: 4
+    description: A passage leads back up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4182
   extra_descriptions:
   - keywords: growth organism infection
     description: 'The organic growth covers everything, pulsing with unnatural life. It seems almost aware,
@@ -1162,6 +1174,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4197
+  - direction: 1
+    description: The passage continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4195
   extra_descriptions:
   - keywords: controls systems ancient
     description: 'The control panels use a mix of crystal displays and mechanical interfaces. Without knowing
@@ -1196,6 +1214,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4196
+  - direction: 3
+    description: The passage continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4194
   extra_descriptions:
   - keywords: darkness stairs depth
     description: 'Looking down, the darkness seems absolute. The stairs continue far beyond the range of
