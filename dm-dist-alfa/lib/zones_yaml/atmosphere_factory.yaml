@@ -625,13 +625,7 @@ rooms:
   sector_type: 0
   exits:
   - direction: 0
-    description: The catwalk extends north to the junction.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4117
-  - direction: 1
-    description: The catwalk continues east.
+    description: The catwalk extends north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -679,6 +673,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4130
+  - direction: 1
+    description: The passage leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4054
+  - direction: 2
+    description: The passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4059
   extra_descriptions: []
 - vnum: 4054
   name: Distribution Manifold - Control Room
@@ -694,14 +700,14 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: A door leads to the manifold chamber.
+  - direction: 5
+    description: The passage leads down.
     keywords: door heavy
     door_flag: 2
     key_vnum: -1
     to_room: 4126
-  - direction: 2
-    description: Another door leads to pressure monitoring.
+  - direction: 5
+    description: The passage leads down.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -743,8 +749,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The heavy door leads back to the control room.
+  - direction: 5
+    description: The passage leads down.
     keywords: door heavy
     door_flag: 2
     key_vnum: -1
@@ -777,8 +783,8 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4125
-  - direction: 1
-    description: A door leads to emergency systems.
+  - direction: 5
+    description: The passage leads down.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -794,17 +800,23 @@ rooms:
 
     strength or mechanical assistance to operate. Instructions carved in stone detail
 
-    emergency procedures.'
+    emergency procedures. Stairs descend to a restricted access corridor.'
   zone: 41
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The door leads to the monitoring station.
+  - direction: 5
+    description: The passage leads down.
     keywords: door
     door_flag: 1
     key_vnum: -1
     to_room: 4127
+  - direction: 5
+    description: Stairs descend to a restricted corridor.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4059
   extra_descriptions:
   - keywords: valves emergency
     description: 'These enormous valves can isolate sections of the factory, preventing
@@ -821,7 +833,8 @@ rooms:
     and related systems. Security here is extremely tight, and only authorized personnel
     are
 
-    permitted beyond this point. Warning signs caution about radiation hazards ahead.'
+    permitted beyond this point. Warning signs caution about radiation hazards ahead.
+    Stairs lead up to the emergency valve chamber.'
   zone: 41
   room_flags: 8
   sector_type: 0
@@ -838,6 +851,12 @@ rooms:
     door_flag: 2
     key_vnum: 4050
     to_room: 4135
+  - direction: 4
+    description: Stairs lead up to the emergency valve chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4057
   extra_descriptions:
   - keywords: signs warnings
     description: 'The warning signs use stark symbols and text: radiation hazard,
@@ -999,7 +1018,7 @@ rooms:
     details of operating this critical facility. The atmosphere is more bureaucratic
     and less
 
-    industrial than other areas.'
+    industrial than other areas. Stairs lead up to the emergency escape route.'
   zone: 41
   room_flags: 8
   sector_type: 0
@@ -1012,6 +1031,12 @@ rooms:
     to_room: 4141
   - direction: 2
     description: The corridor continues to more offices.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4142
+  - direction: 4
+    description: Stairs lead up to the emergency escape route.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1183,7 +1208,9 @@ rooms:
 
     normally unused but maintained in case of catastrophic emergency. Emergency lighting
 
-    provides minimal illumination, and air filtration systems ensure it remains breathable.'
+    provides minimal illumination, and air filtration systems ensure it remains breathable.
+
+    Stairs descend to the administrative section.'
   zone: 41
   room_flags: 8
   sector_type: 0
@@ -1194,6 +1221,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
+  - direction: 5
+    description: Stairs descend to the administrative section.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4069
   extra_descriptions:
   - keywords: signs evacuation
     description: 'Emergency evacuation signs point the way to safety, with distance
@@ -1213,7 +1246,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4055
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4056
   extra_descriptions: []
 - vnum: 4126
   name: Unfinished Chamber 4126
@@ -1225,7 +1270,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4054
   extra_descriptions: []
 - vnum: 4127
   name: Unfinished Chamber 4127
@@ -1237,7 +1288,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4054
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4057
   extra_descriptions: []
 - vnum: 4128
   name: Unfinished Chamber 4128
@@ -1249,7 +1312,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The passage leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4056
   extra_descriptions: []
 - vnum: 4130
   name: Unfinished Chamber 4130
@@ -1261,7 +1330,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4064
   extra_descriptions: []
 - vnum: 4135
   name: Unfinished Chamber 4135
@@ -1273,7 +1348,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4059
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4065
   extra_descriptions: []
 - vnum: 4136
   name: Unfinished Chamber 4136
@@ -1285,7 +1372,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4064
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4066
   extra_descriptions: []
 - vnum: 4137
   name: Unfinished Chamber 4137
@@ -1297,7 +1396,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4065
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4067
   extra_descriptions: []
 - vnum: 4138
   name: Unfinished Chamber 4138
@@ -1309,7 +1420,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4066
   extra_descriptions: []
 - vnum: 4140
   name: Unfinished Chamber 4140
@@ -1321,7 +1438,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4070
+  - direction: 1
+    description: A passage leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4071
   extra_descriptions: []
 - vnum: 4141
   name: Unfinished Chamber 4141
@@ -1333,7 +1462,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 3
+    description: A passage leads west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4069
   extra_descriptions: []
 - vnum: 4142
   name: Unfinished Chamber 4142
@@ -1345,7 +1480,25 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4069
+  - direction: 1
+    description: A passage leads east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4072
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4073
   extra_descriptions: []
 - vnum: 4143
   name: Unfinished Chamber 4143
@@ -1357,7 +1510,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 3
+    description: A passage leads west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4071
   extra_descriptions: []
 - vnum: 4144
   name: Unfinished Chamber 4144
@@ -1369,7 +1528,19 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4071
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4074
   extra_descriptions: []
 - vnum: 4145
   name: Unfinished Chamber 4145
@@ -1381,7 +1552,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: A passage leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4073
   extra_descriptions: []
 - vnum: 4146
   name: Unfinished Chamber 4146
@@ -1422,6 +1599,18 @@ rooms:
     to_room: 4149
   - direction: 3
     description: The route extends back west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4146
+  - direction: 3
+    description: The passage leads west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4075
+  - direction: 1
+    description: The passage leads east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
