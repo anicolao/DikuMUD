@@ -1006,6 +1006,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4182
+  - direction: 5
+    description: A concealed maintenance shaft descends to the deep core.
+    keywords: shaft maintenance
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4190
   extra_descriptions:
   - keywords: growth organism infection
     description: 'The organic growth covers everything, pulsing with unnatural life. It seems almost aware,
@@ -1040,6 +1046,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4195
+  - direction: 4
+    description: A maintenance shaft leads back up to the bio-research level.
+    keywords: shaft
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4189
   extra_descriptions:
   - keywords: machinery ancient primitive
     description: 'This machinery predates even the factory above. It''s the work of the oldest Martian
