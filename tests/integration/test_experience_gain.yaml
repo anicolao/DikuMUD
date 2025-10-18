@@ -16,6 +16,9 @@ setup:
     level: 22 # Level 22 to use god commands and maximize combat ability
   start_room: 1200 # room with no exits
   gold: 100
+  test_extensions:
+    - zone_file: zone_1200.yaml
+      extension_file: test_data/hammer_object.yml
 
 steps:
   # Step 1: Verify we're in the temple
@@ -25,31 +28,23 @@ steps:
       - pattern: "Chat|chat"
         message: "Should be in chat room"
 
-  # Step 2: Load a powerful weapon to ensure we can hit and kill quickly
+  # Step 2: Get Thor's Hammer (now loaded in the room)
   - action: command
-    command: "load obj 4501"
-    description: "Load a Kaolian ceremonial blade (5d4+3 damage)"
-    expected:
-      - pattern: "."
-        message: "Should get some response from load command"
-
-  # Step 3: Get the weapon
-  - action: command
-    command: "get blade"
-    description: "Pick up the ceremonial blade"
+    command: "get hammer"
+    description: "Pick up Thor's Hammer"
     expected:
       - pattern: "."
         message: "Should pick up the weapon"
 
-  # Step 4: Wield the weapon
+  # Step 3: Wield the weapon
   - action: command
-    command: "wield blade"
-    description: "Wield the powerful blade"
+    command: "wield hammer"
+    description: "Wield Thor's Hammer"
     expected:
       - pattern: "."
         message: "Should wield the weapon"
 
-  # Step 5: Load a weak mobile to kill
+  # Step 4: Load a weak mobile to kill
   - action: command
     command: "load char 3062"
     description: "Load a weak calot for testing"
@@ -57,27 +52,18 @@ steps:
       - pattern: "."
         message: "Should get some response from load command"
 
-  # Step 6: Look to see what we loaded
+  # Step 5: Look to see what we loaded
   - action: look
     description: "Look to see the loaded mobile"
     expected:
       - pattern: "."
         message: "Should see something"
 
-  # Step 7: Kill the mobile with the powerful weapon
-  # With the Kaolian ceremonial blade (5d4+3 damage), we should kill quickly
+  # Step 6: Kill the mobile with Thor's Hammer
+  # With Thor's Hammer (1d4+200 damage), we should kill instantly
   - action: command
     command: "kill calot"
-    description: "Attack the calot with powerful weapon"
-    delay_after: 3
-    expected:
-      - pattern: "."
-        message: "Should start combat"
-
-  # Step 8: Finish the kill and check for experience message
-  - action: command
-    command: "kill calot"
-    description: "Finish the kill (if not already dead)"
+    description: "Attack the calot with Thor's Hammer"
     delay_after: 3
     expected:
       - pattern: "You gained [0-9]+ experience\\."
