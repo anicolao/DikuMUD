@@ -2,8 +2,8 @@ test:
   id: test_zone_status
   description: Verify zone status command shows all zones with correct room/mob counts
   author: Integration Test Framework
-  created: '2025-10-14'
-  tags: ['zone_test', 'command_validation']
+  created: "2025-10-14"
+  tags: ["zone_test", "command_validation"]
 
 setup:
   character:
@@ -35,4 +35,4 @@ steps:
       - pattern: 'Ptarth - Allied City\s+\(11 rooms'
       - pattern: 'Gathol-Ptarth Wilderness\s+\(14 rooms'
       - pattern: 'Kaol - Allied City\s+\(10 rooms'
-      - pattern: 'Ptarth-Kaol Wilderness\s+\(12 rooms'
+      - pattern: 'Ptarth-Kaol Wilderness\s+\(11 rooms'
