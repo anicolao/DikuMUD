@@ -1001,9 +1001,9 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 	                         /* First command is command[0]           */
 	extern struct command_info cmd_info[];
 	                         /* cmd_info[1] ~~ commando[0]            */
-	extern int top_of_helpt;
-	extern struct help_index_element *help_index;
-	extern FILE *help_fl;
+	extern int top_of_wizhelpt;
+	extern struct help_index_element *wizhelp_index;
+	extern FILE *wizhelp_fl;
 
 	if (IS_NPC(ch))
 		return;
@@ -1014,9 +1014,9 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 	/* If argument provided, search for help on that wizard command */
 	if (*argument)
 	{
-		if (!help_index)
+		if (!wizhelp_index)
 		{
-			send_to_char("No help available.\n\r", ch);
+			send_to_char("No wizard help available.\n\r", ch);
 			return;
 		}
 
@@ -1026,22 +1026,22 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 		for (i = 0; search_arg[i]; i++)
 			search_arg[i] = LOWER(search_arg[i]);
 
-		/* Binary search through help index */
+		/* Binary search through wizard help index */
 		bot = 0;
-		top = top_of_helpt;
+		top = top_of_wizhelpt;
 
 		for (;;)
 		{
 			mid = (bot + top) / 2;
 			minlen = strlen(search_arg);
 
-			if (!(chk = strncmp(search_arg, help_index[mid].keyword, minlen)))
+			if (!(chk = strncmp(search_arg, wizhelp_index[mid].keyword, minlen)))
 			{
-				fseek(help_fl, help_index[mid].pos, 0);
+				fseek(wizhelp_fl, wizhelp_index[mid].pos, 0);
 				*buffer = '\0';
 				for (;;)
 				{
-					fgets(buf, 80, help_fl);
+					fgets(buf, 80, wizhelp_fl);
 					if (*buf == '#')
 						break;
 					strcat(buffer, buf);
