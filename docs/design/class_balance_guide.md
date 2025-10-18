@@ -1,8 +1,8 @@
-# DikuMUD Class Balance Guide
+# Barsoom Class Balance Guide
 
 ## Purpose
 
-This document provides comprehensive statistical reference data for all four character classes in DikuMUD. Use these charts when designing monsters and encounters to ensure proper balance between challenge and character capabilities.
+This document provides comprehensive statistical reference data for all four character classes in the Barsoom MUD. Use these charts when designing creatures and encounters to ensure proper balance between challenge and character capabilities. The guide is themed for Edgar Rice Burroughs' Mars setting but maintains the underlying DikuMUD mechanics.
 
 ## Table of Contents
 
@@ -23,9 +23,9 @@ Hit points are gained at each level based on class and Constitution modifier. Th
 
 | Class | HP Dice Roll | Average HP/Level | HP Range/Level |
 |-------|--------------|------------------|----------------|
-| Magic User | 3-8 | 5.5 | 3-8 |
-| Cleric | 5-10 | 7.5 | 5-10 |
-| Thief | 7-13 | 10 | 7-13 |
+| Scientist | 3-8 | 5.5 | 3-8 |
+| Noble | 5-10 | 7.5 | 5-10 |
+| Assassin | 7-13 | 10 | 7-13 |
 | Warrior | 10-15 | 12.5 | 10-15 |
 
 **Note**: Constitution bonus/penalty is added to each roll (see [Constitution Modifier](#constitution-modifier))
@@ -34,8 +34,8 @@ Hit points are gained at each level based on class and Constitution modifier. Th
 
 These values assume average dice rolls plus a Constitution of 14 (+0 HP modifier). For characters with different Constitution scores, adjust by the CON modifier multiplied by level.
 
-| Level | Magic User | Cleric | Thief | Warrior |
-|-------|------------|--------|-------|---------|
+| Level | Scientist | Noble | Assassin | Warrior |
+|-------|-----------|-------|----------|---------|
 | 1 | 8 | 8 | 8 | 8 |
 | 2 | 14 | 16 | 18 | 21 |
 | 3 | 20 | 24 | 28 | 34 |
@@ -158,8 +158,8 @@ Damage = Weapon Dice + Strength Modifier + Damage Roll Bonus + Magic Bonuses
 
 Average damage per hit including typical Strength (16, +1 damage) and equipment bonuses:
 
-| Level | Magic User | Cleric | Thief | Warrior |
-|-------|------------|--------|-------|---------|
+| Level | Scientist | Noble | Assassin | Warrior |
+|-------|-----------|-------|----------|---------|
 | 1-3 | 3-4 | 4-5 | 4-5 | 5-7 |
 | 4-6 | 4-6 | 5-7 | 6-8 | 8-11 |
 | 7-9 | 5-7 | 6-9 | 7-10 | 10-14 |
@@ -168,9 +168,9 @@ Average damage per hit including typical Strength (16, +1 damage) and equipment 
 | 18-20 | 8-13 | 10-15 | 13-19 | 16-24 |
 
 **Notes:**
-- Magic Users typically use daggers or staves (limited weapon selection)
-- Clerics cannot use edged weapons (limited to blunt weapons)
-- Thieves have access to most weapons but excel with daggers (backstab)
+- Scientists typically use light weapons and radium pistols (limited to ranged/light weapons)
+- Nobles can use any weapon but favor ornate long swords and pistols
+- Assassins excel with short swords and throwing knives (backstab specialists)
 - Warriors have access to all weapons and highest damage potential
 
 ### Strength Damage Modifier
@@ -189,9 +189,9 @@ Average damage per hit including typical Strength (16, +1 damage) and equipment 
 | 18/91-00 | +5-6 |
 | 19-25 | +7-14 |
 
-### Backstab Damage (Thieves Only)
+### Backstab Damage (Assassins Only)
 
-When a thief successfully backstabs, damage is multiplied:
+When an assassin successfully backstabs, damage is multiplied:
 
 | Level | Backstab Multiplier |
 |-------|---------------------|
@@ -202,7 +202,7 @@ When a thief successfully backstabs, damage is multiplied:
 
 **Backstab Damage Formula**: `(Base Damage + Modifiers) × Multiplier`
 
-**Example**: Level 10 thief with short sword (1d6) and 16 STR:
+**Example**: Level 10 assassin with short sword (1d6) and 16 STR:
 - Normal hit: 1d6 + 1 (STR) = 2-7 damage (avg 4.5)
 - Backstab: (1d6 + 1) × 4 = 8-28 damage (avg 18)
 
@@ -214,8 +214,8 @@ THAC0 (To Hit Armor Class 0) determines hit chance. **Lower THAC0 is better**.
 
 ### THAC0 by Class and Level
 
-| Level | Magic User | Cleric | Thief | Warrior |
-|-------|------------|--------|-------|---------|
+| Level | Scientist | Noble | Assassin | Warrior |
+|-------|-----------|-------|----------|---------|
 | 1-3 | 20 | 20 | 20/20/19 | 20/19/18 |
 | 4-6 | 19 | 18 | 19/18/18 | 17/16/15 |
 | 7-9 | 19 | 18 | 17/17/16 | 14/13/12 |
@@ -255,84 +255,85 @@ Hit if: 1d20 + Bonuses ≥ THAC0 - Target AC
 
 ## Class-Specific Considerations
 
-### Magic User
+### Scientist
 
 **Strengths:**
-- Powerful offensive spells at higher levels
-- Area effect damage (fireballs, lightning bolts)
-- Utility spells (invisibility, teleport, fly)
+- Advanced technology and inventions
+- Healing and surgical abilities
+- Ranged weapons (radium pistols, rifles)
+- Problem-solving and knowledge
 
 **Weaknesses:**
 - Lowest hit points
 - Worst THAC0 progression
-- Limited armor options (no armor or very light)
-- Limited weapon selection (daggers, staves, darts)
+- Limited armor options (light harness only)
+- Limited weapon selection (light weapons, pistols)
 - Vulnerable in melee combat
 
 **Combat Role:**
-- Ranged spell damage dealer
-- Crowd control
-- Support/utility
-- Avoid melee at all costs
+- Ranged damage with technology
+- Support/healing
+- Utility and problem-solving
+- Avoid close combat
 
-**Monster Balancing:**
-- Should be 1-2 levels higher than party to threaten Magic Users
-- Flying/ranged monsters are particularly dangerous
-- Magic-resistant creatures are natural counters
+**Creature Balancing:**
+- Should be 1-2 levels higher than party to threaten Scientists
+- Fast melee creatures are particularly dangerous
 - Consider low HP when designing encounter damage
+- Scientists excel against technology-vulnerable enemies
 
-### Cleric
+### Noble
 
 **Strengths:**
-- Healing spells (critical for party survival)
-- Good defensive spells (armor, sanctuary, bless)
-- Moderate hit points
-- Decent THAC0
-- Can wear heavy armor
+- Leadership and inspiration abilities
+- Social skills and diplomacy
+- Moderate combat capability
+- Good hit points
+- Can wear quality armor and use all weapons
 
 **Weaknesses:**
-- Limited to blunt weapons (no swords/daggers)
-- Fewer offensive spells than Magic Users
+- Not specialized in any single combat role
 - Moderate damage output
+- Abilities depend on allies and followers
 
 **Combat Role:**
-- Support healer
-- Secondary tank
-- Crowd control (hold person)
-- Undead specialist (turn undead)
+- Party leader and coordinator
+- Secondary combatant
+- Morale booster
+- Diplomat and negotiator
 
-**Monster Balancing:**
-- More durable than Magic Users but less than Warriors
-- Undead should be challenging for Clerics to make "turn undead" valuable
-- Extended fights favor Clerics due to healing
+**Creature Balancing:**
+- More durable than Scientists but less than Warriors
+- Extended fights can favor Nobles due to leadership bonuses
 - Consider medium HP when designing encounters
+- Social encounters can bypass combat entirely
 
-### Thief
+### Assassin
 
 **Strengths:**
 - Backstab ability (massive burst damage)
-- Skills: hide, sneak, pick locks, steal, detect traps
+- Skills: hide, sneak, pick locks, poison, disguise
 - Good hit points (third best)
-- Good damage with backstab
+- High damage with backstab
 - Access to most weapons
 
 **Weaknesses:**
 - Moderate THAC0
-- Limited to leather armor (affects AC)
+- Limited to light armor (affects AC)
 - Backstab requires surprise/positioning
 - Vulnerable in sustained melee
 
 **Combat Role:**
 - Burst damage dealer (backstab)
-- Utility (locks, traps, scouting)
-- Flanker/ambusher
-- Scout/detector
+- Stealth and infiltration
+- Ambusher and scout
+- Trap detection
 
-**Monster Balancing:**
-- High-AC monsters reduce backstab effectiveness
-- Alert enemies that can't be surprised counter Thieves
-- Consider backstab multiplier when designing monster HP
-- Thieves excel against single targets, struggle with groups
+**Creature Balancing:**
+- High-AC creatures reduce backstab effectiveness
+- Alert enemies that can't be surprised counter Assassins
+- Consider backstab multiplier when designing creature HP
+- Assassins excel against single targets, struggle with groups
 
 ### Warrior
 
@@ -356,28 +357,28 @@ Hit if: 1d20 + Bonuses ≥ THAC0 - Target AC
 - Frontline combatant
 - Absorb damage for party
 
-**Monster Balancing:**
+**Creature Balancing:**
 - Should require Warriors to engage in melee
-- High-damage monsters test Warrior durability
-- Magic attacks are Warrior weakness
+- High-damage creatures test Warrior durability
+- Ranged and technical threats are Warrior weaknesses
 - Consider high HP when designing encounters
 - Extended fights favor Warriors due to durability
 
 ---
 
-## Using This Guide for Monster Design
+## Using This Guide for Creature Design
 
-### Balancing Single Monster Encounters
+### Balancing Single Creature Encounters
 
 **Design Philosophy**: Encounters should allow players to fight 2-3 battles in a row as a solo character, or 3-5 battles in a party of 2, without requiring rest. This means individual encounters should consume roughly 25-35% of the party's resources.
 
-**For Standard Encounter (1 monster vs 1 PC, same level):**
+**For Standard Encounter (1 creature vs 1 PC, same level):**
 
-| Monster vs | HP Range | AC Range | Damage/Round | THAC0 |
-|------------|----------|----------|--------------|-------|
-| Magic User | 15-25 | 60-80 | 3-5 | 20-18 |
-| Cleric | 20-35 | 50-70 | 4-7 | 20-18 |
-| Thief | 25-40 | 50-70 | 5-8 | 20-18 |
+| Creature vs | HP Range | AC Range | Damage/Round | THAC0 |
+|-------------|----------|----------|--------------|-------|
+| Scientist | 15-25 | 60-80 | 3-5 | 20-18 |
+| Noble | 20-35 | 50-70 | 4-7 | 20-18 |
+| Assassin | 25-40 | 50-70 | 5-8 | 20-18 |
 | Warrior | 30-50 | 40-60 | 6-10 | 20-18 |
 
 **Resource Consumption Guidelines:**
@@ -396,10 +397,10 @@ Hit if: 1d20 + Bonuses ≥ THAC0 - Target AC
 - Best AC: ~50-60
 - Party THAC0: 16-19
 
-**Equivalent Monster Force Options for 2-Person Party:**
-- One standard monster: 25-35 HP, AC 50-60, 4-6 damage/round
-- Two weak monsters: 15-20 HP each, AC 60-70, 3-4 damage/round each
-- Three very weak monsters: 10-12 HP each, AC 70-80, 2-3 damage/round each
+**Equivalent Creature Force Options for 2-Person Party:**
+- One standard creature: 25-35 HP, AC 50-60, 4-6 damage/round
+- Two weak creatures: 15-20 HP each, AC 60-70, 3-4 damage/round each
+- Three very weak creatures: 10-12 HP each, AC 70-80, 2-3 damage/round each
 
 **Party of 4 (1 of each class, level 5):**
 - Combined HP: ~150-180
@@ -407,28 +408,28 @@ Hit if: 1d20 + Bonuses ≥ THAC0 - Target AC
 - Tank AC: ~40-60
 - Party THAC0: 16-20
 
-**Equivalent Monster Force Options for 4-Person Party:**
-- One moderate monster: 40-60 HP, AC 40-50, 8-12 damage/round
-- Two standard monsters: 25-35 HP each, AC 50-60, 5-7 damage/round each
-- Four weak monsters: 15-20 HP each, AC 60-70, 3-5 damage/round each
+**Equivalent Creature Force Options for 4-Person Party:**
+- One moderate creature: 40-60 HP, AC 40-50, 8-12 damage/round
+- Two standard creatures: 25-35 HP each, AC 50-60, 5-7 damage/round each
+- Four weak creatures: 15-20 HP each, AC 60-70, 3-5 damage/round each
 
 ### Special Considerations
 
-1. **Magic Resistance**: Reduces Magic User effectiveness, increase for caster-heavy parties
-2. **Regeneration**: Effectively multiplies monster HP, requires burst damage
-3. **Multiple Attacks**: Increases effective damage, dangerous to low-AC characters
-4. **Special Abilities**: Worth 1-2 levels of power (paralysis, poison, drain)
+1. **Technology Resistance**: Reduces Scientist effectiveness, increase for technology-heavy parties
+2. **Regeneration**: Effectively multiplies creature HP, requires burst damage
+3. **Multiple Attacks**: Increases effective damage, dangerous to low-AC characters (e.g., green martians' four arms)
+4. **Special Abilities**: Worth 1-2 levels of power (paralysis, poison, blood drain)
 5. **Immunities**: Worth 1-3 levels depending on party composition
 
 ### Level Ranges and Appropriate Challenges
 
-| Character Level | Recommended Monster Level | Notes |
-|----------------|---------------------------|-------|
-| 1-3 | 1-4 | Learning phase, avoid instant death |
+| Character Level | Recommended Creature Level | Notes |
+|----------------|----------------------------|-------|
+| 1-3 | 1-4 | Learning Barsoom, avoid instant death |
 | 4-7 | 3-8 | Players learning tactics |
 | 8-12 | 6-14 | Competent adventurers |
 | 13-17 | 10-19 | Experienced heroes |
-| 18-20 | 15-20+ | Epic challenges |
+| 18-20 | 15-20+ | Epic challenges (white apes, jeddaks) |
 
 ---
 
@@ -456,75 +457,75 @@ When affected by Sanctuary spell:
 
 ### Experience Point Guidelines
 
-Standard XP awards are based on monster level:
+Standard XP awards are based on creature level:
 
-| Monster Level | Base XP | XP Range |
-|--------------|---------|----------|
-| 1-3 | 100-500 | Easy encounters |
-| 4-6 | 500-2000 | Moderate encounters |
-| 7-10 | 2000-8000 | Challenging encounters |
-| 11-15 | 8000-32000 | Hard encounters |
-| 16-20 | 32000-100000 | Epic encounters |
+| Creature Level | Base XP | XP Range |
+|----------------|---------|----------|
+| 1-3 | 100-500 | Easy encounters (calots, wild thoats) |
+| 4-6 | 500-2000 | Moderate encounters (banths, green martian scouts) |
+| 7-10 | 2000-8000 | Challenging encounters (plant men, white apes) |
+| 11-15 | 8000-32000 | Hard encounters (great white apes, jeds) |
+| 16-20 | 32000-100000 | Epic encounters (jeddaks, ancient horrors) |
 
 Modify based on:
 - Special abilities: +10-50%
-- Magic resistance: +20-40%
+- Technology resistance: +20-40%
 - Regeneration: +30-60%
-- Multiple attacks: +20-40% per extra attack
+- Multiple attacks: +20-40% per extra attack (e.g., green martians' four arms)
 
 ---
 
 ## Practical Examples
 
-### Example 1: Designing a Level 5 Orc Warrior (Standard Encounter)
+### Example 1: Designing a Level 5 Green Martian Warrior (Standard Encounter)
 
-**Target**: Standard challenge for a level 5 party (consumable as part of dungeon crawl)
+**Target**: Standard challenge for a level 5 party (consumable as part of wilderness exploration)
 
 **Party Stats (Level 5 average):**
-- Magic User: 32 HP, AC 70, 5 damage/round, THAC0 19
-- Cleric: 40 HP, AC 60, 7 damage/round, THAC0 18
-- Thief: 48 HP, AC 60, 8 damage/round, THAC0 19
+- Scientist: 32 HP, AC 70, 5 damage/round, THAC0 19
+- Noble: 40 HP, AC 60, 7 damage/round, THAC0 18
+- Assassin: 48 HP, AC 60, 8 damage/round, THAC0 19
 - Warrior: 60 HP, AC 50, 11 damage/round, THAC0 16
 
-**Orc Warrior Design:**
+**Green Martian Scout Design:**
 - **Hit Points**: 30 (roughly half of weakest party member)
-- **Armor Class**: 60 (leather + shield, easier to hit)
-- **Damage**: 1d6+1 (short sword + moderate strength), average 4.5/round
-- **THAC0**: 18 (standard for level 5 monster)
-- **Special**: None (basic monster)
+- **Armor Class**: 60 (leather harness, easier to hit)
+- **Damage**: 1d6+1 (spear + moderate strength), average 4.5/round
+- **THAC0**: 18 (standard for level 5 creature)
+- **Special**: Four-armed (can wield multiple weapons), excellent marksman
 
 **Combat Analysis:**
-- Warrior can kill orc in ~3 rounds (30 HP / 11 damage = 3 rounds)
+- Warrior can kill green martian in ~3 rounds (30 HP / 11 damage = 3 rounds)
 - Party can kill in 1-2 rounds if focused (30 HP / 31 combined damage)
-- Orc can damage Magic User for ~14 HP over 3 rounds (3 × 4.5)
-- Party takes minimal casualties, can fight 3-4 more orcs before rest
+- Green martian can damage Scientist for ~14 HP over 3 rounds (3 × 4.5)
+- Party takes minimal casualties, can fight 3-4 more green martians before rest
 
-**Verdict**: Balanced for dungeon with 3-4 orc encounters, party continues after each fight
+**Verdict**: Balanced for wilderness area with 3-4 green martian encounters, party continues after each fight
 
-### Example 2: Designing a Level 10 Red Dragon (Boss Encounter)
+### Example 2: Designing a Level 10 Great White Ape (Boss Encounter)
 
-**Target**: Epic boss for level 10 party at end of dungeon (should consume most resources)
+**Target**: Epic boss for level 10 party at end of ancient ruins (should consume most resources)
 
 **Party Stats (Level 10 average):**
-- Magic User: 61 HP, AC 40, 8 damage/round, THAC0 18
-- Cleric: 79 HP, AC 30, 10 damage/round, THAC0 16
-- Thief: 98 HP, AC 40, 12 damage/round (24 with backstab), THAC0 16
+- Scientist: 61 HP, AC 40, 8 damage/round, THAC0 18
+- Noble: 79 HP, AC 30, 10 damage/round, THAC0 16
+- Assassin: 98 HP, AC 40, 12 damage/round (24 with backstab), THAC0 16
 - Warrior: 123 HP, AC 20, 15 damage/round, THAC0 11
 
-**Red Dragon Design (Revised):**
+**Great White Ape Alpha Design (Revised):**
 - **Hit Points**: 180 (roughly half of party total HP)
-- **Armor Class**: 10 (natural dragon scales, but not invulnerable)
-- **Damage**: 2d8+4 (bite + claws), average 13/round
+- **Armor Class**: 10 (thick hide and muscle)
+- **Damage**: 2d8+4 (massive claws + bite), average 13/round
 - **THAC0**: 12 (dangerous but not overwhelming)
-- **Special**: Fire breath 6d6 (average 21 damage, area effect, once per combat)
+- **Special**: Crushing embrace 6d6 (average 21 damage, grapple attack, once per combat if it grabs someone)
 
 **Combat Analysis:**
-- Dragon deals ~13 damage/round, threatens Magic User but not instant kill
-- Fire breath is significant threat (21 damage) but not party wipe
+- Ape deals ~13 damage/round, threatens Scientist but not instant kill
+- Crushing embrace is significant threat (21 damage) but not party wipe
 - Party deals ~45 damage/round combined
-- Dragon survives ~4 rounds (180 HP / 45 damage)
-- Party takes ~52-73 HP damage during fight (mix of melee and breath)
-- Magic User and Cleric will need healing after
+- Ape survives ~4 rounds (180 HP / 45 damage)
+- Party takes ~52-73 HP damage during fight (mix of melee and grapple)
+- Scientist and Noble will need healing after
 - Party can continue to explore but needs short rest
 
 **Verdict**: Epic boss that's challenging and memorable but doesn't require perfect execution
@@ -535,56 +536,56 @@ Modify based on:
 
 **Warrior Stats:**
 - HP: 98
-- AC: 40 (chain mail + some magic items)
+- AC: 40 (metal harness + some technology)
 - Damage: 12 (long sword + strength)
 - THAC0: 13
 - Special: Good armor, high HP, no healing
 
-**Monster Options:**
+**Creature Options:**
 
-**Option A - Goblin Scout (Standard encounter):**
+**Option A - Wild Calot (Standard encounter):**
 - HP: 20 (Warrior kills in 2 rounds)
-- AC: 70 (easy to hit)
-- Damage: 3 (dagger)
+- AC: 70 (fast but easy to hit)
+- Damage: 3 (bite)
 - THAC0: 18
 - **Analysis**: Warrior takes ~4-6 damage, can fight 5-6 in a row before rest
-- **Result**: Good for dungeon trash mobs
+- **Result**: Good for wilderness encounters
 
-**Option B - Orc Soldier (Moderate encounter):**
+**Option B - Banth (Moderate encounter):**
 - HP: 35 (Warrior kills in 3 rounds)
-- AC: 60 (leather armor)
-- Damage: 5 (spear)
+- AC: 60 (tough hide)
+- Damage: 5 (claws and teeth)
 - THAC0: 17
 - **Analysis**: Warrior takes ~12-15 damage, can fight 3-4 in a row before rest
-- **Result**: Good for dungeon normal encounters
+- **Result**: Good for wilderness predator encounters
 
-**Option C - Ogre Guard (Challenging encounter):**
+**Option C - Plant Man (Challenging encounter):**
 - HP: 60 (Warrior kills in 5 rounds)
-- AC: 50 (thick hide)
-- Damage: 8 (club + high strength)
+- AC: 50 (thick vegetable hide)
+- Damage: 8 (tentacles + blood drain)
 - THAC0: 16
 - **Analysis**: Warrior takes ~35-40 damage, can fight 1-2 before needing rest
-- **Result**: Good for mini-boss or dangerous room
+- **Result**: Good for mini-boss or dangerous area
 
-**Solo Magic User Option - Zombie:**
-- HP: 25 (easy to kill with magic)
+**Solo Scientist Option - Reanimated Corpse:**
+- HP: 25 (easy to kill with technology)
 - AC: 80 (slow, easy to hit)
 - Damage: 4 (claws)
 - THAC0: 18
-- Special: Immune to sleep/charm (appropriate for undead)
-- **Analysis**: Magic User can kill with spells in 1-2 rounds, takes minimal damage
-- **Result**: Solo player can handle 3-4 zombies before needing rest
+- Special: Immune to certain effects (failed surgical experiment)
+- **Analysis**: Scientist can kill with ranged weapons in 1-2 rounds, takes minimal damage
+- **Result**: Solo player can handle 3-4 corpses before needing rest
 
 ---
 
 ## Conclusion
 
-This guide provides the statistical foundation for balancing monsters against player characters. Remember:
+This guide provides the statistical foundation for balancing creatures against player characters on Barsoom. Remember:
 
-1. **Magic Users** are glass cannons - fragile but powerful
-2. **Clerics** are support tanks - durable healers
-3. **Thieves** are burst damage - high single-target damage
-4. **Warriors** are sustained damage tanks - reliable frontline
+1. **Scientists** are glass cannons - fragile but technologically powerful
+2. **Nobles** are versatile leaders - moderate combat with social power
+3. **Assassins** are burst damage - high single-target damage from stealth
+4. **Warriors** are sustained damage tanks - reliable frontline combatants
 
 ### Encounter Design Philosophy
 
@@ -606,13 +607,16 @@ This guide provides the statistical foundation for balancing monsters against pl
 
 When designing encounters:
 - Consider party composition and sustainability
-- Mix encounter difficulty within dungeons
+- Mix encounter difficulty within areas (ruins, wilderness, cities)
 - Provide rest opportunities between major sections
 - Test encounters with expected character stats
-- Remember that player tactics and equipment can significantly affect outcomes
+- Remember that player tactics and technology can significantly affect outcomes
 - Avoid "single encounter = forced rest" design unless it's a major boss
+- Use Barsoom-appropriate creatures for each area (calots in cities, banths in wilderness, etc.)
 
 For questions or updates to this guide, consult the game masters or review the source code in:
 - `dm-dist-alfa/limits.c` (HP advancement)
 - `dm-dist-alfa/fight.c` (combat mechanics)
 - `dm-dist-alfa/constants.c` (THAC0, modifiers, tables)
+- `barsoom/CLASSES.md` (class descriptions)
+- `barsoom/summaries/CREATURES.md` (creature reference)
