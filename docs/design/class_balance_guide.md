@@ -465,6 +465,97 @@ Modify based on:
 
 ---
 
+## Practical Examples
+
+### Example 1: Designing a Level 5 Orc Warrior
+
+**Target**: Challenge for a level 5 party
+
+**Party Stats (Level 5 average):**
+- Magic User: 32 HP, AC 70, 5 damage/round, THAC0 19
+- Cleric: 40 HP, AC 60, 7 damage/round, THAC0 18
+- Thief: 48 HP, AC 60, 8 damage/round, THAC0 19
+- Warrior: 60 HP, AC 50, 11 damage/round, THAC0 16
+
+**Orc Warrior Design:**
+- **Hit Points**: 55 (average between Cleric and Thief)
+- **Armor Class**: 50 (chain mail + shield)
+- **Damage**: 1d8+2 (long sword + strength), average 6.5/round
+- **THAC0**: 16 (slightly better than party average)
+- **Special**: None (basic monster)
+
+**Combat Analysis:**
+- Can withstand ~8 rounds vs Warrior (55 HP / 11 damage = 5 rounds)
+- Can kill Magic User in ~5 rounds (32 HP / 6.5 damage = 5 rounds)
+- Party needs ~2-3 rounds to kill if focused
+
+**Verdict**: Balanced for group encounter with 2-3 orcs
+
+### Example 2: Designing a Level 10 Red Dragon (Boss Monster)
+
+**Target**: Deadly challenge for level 10 party
+
+**Party Stats (Level 10 average):**
+- Magic User: 61 HP, AC 40, 8 damage/round, THAC0 18
+- Cleric: 79 HP, AC 30, 10 damage/round, THAC0 16
+- Thief: 98 HP, AC 40, 12 damage/round (24 with backstab), THAC0 16
+- Warrior: 123 HP, AC 20, 15 damage/round, THAC0 11
+
+**Red Dragon Design:**
+- **Hit Points**: 300 (epic durability, ~2x party HP)
+- **Armor Class**: 0 (natural dragon scales)
+- **Damage**: 3d8+8 (bite + claws), average 21.5/round
+- **THAC0**: 10 (deadly accuracy)
+- **Special**: Fire breath 8d6+20 (average 48 damage, area effect)
+
+**Combat Analysis:**
+- Dragon can kill Magic User in 2-3 rounds (61 HP / 21.5 = 3 rounds)
+- Dragon can kill Warrior in 5-6 rounds (123 HP / 21.5 = 6 rounds)
+- Fire breath can threaten entire party
+- Party needs ~7-8 rounds focused fire (300 HP / 45 total damage = 7 rounds)
+- Thief backstab critical for success (can do ~100 damage)
+
+**Verdict**: Deadly boss requiring strategy, positioning, and probably healing/resurrection
+
+### Example 3: Balancing for Solo Magic User
+
+**Scenario**: Level 8 Magic User needs solo content
+
+**Magic User Stats:**
+- HP: 49
+- AC: 60 (robes + dexterity)
+- Damage: 6 (staff or dagger)
+- THAC0: 19
+- Special: Has lightning bolt (8d6 damage, ~28 average)
+
+**Monster Options:**
+
+**Option A - Goblin Mage (rival caster):**
+- HP: 35 (vulnerable to burst)
+- AC: 70 (light armor)
+- Damage: 4 (dagger)
+- THAC0: 19
+- Special: Magic missile (guaranteed hit, 3d4+3 damage)
+- **Result**: Fair duel, skill-based
+
+**Option B - Stone Golem (anti-mage):**
+- HP: 80 (very durable)
+- AC: 30 (stone skin)
+- Damage: 12 (crushing fists)
+- THAC0: 16
+- Special: Magic resistance 75%
+- **Result**: Hard counter, requires non-magical strategy
+
+**Option C - Stirge Swarm (many weak enemies):**
+- HP: 8 each (vulnerable)
+- AC: 70 (small and quick)
+- Damage: 3 each (blood drain)
+- THAC0: 18
+- Count: 6 stirges
+- **Result**: Tests area spells and resource management
+
+---
+
 ## Conclusion
 
 This guide provides the statistical foundation for balancing monsters against player characters. Remember:
