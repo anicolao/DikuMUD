@@ -1020,11 +1020,11 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 			return;
 		}
 
-		/* Prepare search argument - convert to uppercase for matching */
+		/* Prepare search argument - convert to lowercase for matching */
 		strncpy(search_arg, argument, MAX_INPUT_LENGTH - 1);
 		search_arg[MAX_INPUT_LENGTH - 1] = '\0';
 		for (i = 0; search_arg[i]; i++)
-			search_arg[i] = UPPER(search_arg[i]);
+			search_arg[i] = LOWER(search_arg[i]);
 
 		/* Binary search through help index */
 		bot = 0;
