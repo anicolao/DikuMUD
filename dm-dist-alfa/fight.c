@@ -16,6 +16,7 @@
 #include "db.h"
 #include "spells.h"
 #include "quest.h"
+#include "limits.h"
 
 /* Structures */
 
@@ -29,6 +30,7 @@ extern struct room_data *world;
 extern struct message_list fight_messages[MAX_MESSAGES];
 extern struct obj_data  *object_list;
 extern struct index_data *mob_index;
+extern const struct title_type titles[4][25];
 
 /* External procedures */
 extern void slog(char *msg);
@@ -310,7 +312,46 @@ void raw_kill(struct char_data *ch)
 
 void die(struct char_data *ch)
 {
-	gain_exp(ch, -(GET_EXP(ch)/2));
+	int exp_loss;
+	int half_total_exp;
+	int exp_this_level;
+	
+	/* For NPCs, use the old logic (half total experience) */
+	if (IS_NPC(ch)) {
+		gain_exp(ch, -(GET_EXP(ch)/2));
+		raw_kill(ch);
+		return;
+	}
+	
+	/* For players, lose the lesser of:
+	 * 1. Half of total experience
+	 * 2. All progress towards the next level (at most one level's worth)
+	 */
+	half_total_exp = GET_EXP(ch) / 2;
+	
+	/* Calculate experience earned this level */
+	if (GET_LEVEL(ch) > 0 && GET_LEVEL(ch) < 25) {
+		/* Experience needed to reach current level */
+		int current_level_exp = titles[GET_CLASS(ch)-1][GET_LEVEL(ch)].exp;
+		/* Experience progress this level */
+		exp_this_level = GET_EXP(ch) - current_level_exp;
+		/* Ensure we don't go negative */
+		if (exp_this_level < 0) {
+			exp_this_level = 0;
+		}
+	} else {
+		/* At level 0 or max level, just use half */
+		exp_this_level = half_total_exp;
+	}
+	
+	/* Lose the lesser of the two */
+	if (half_total_exp < exp_this_level) {
+		exp_loss = half_total_exp;
+	} else {
+		exp_loss = exp_this_level;
+	}
+	
+	gain_exp(ch, -exp_loss);
 	raw_kill(ch);
 }
 
