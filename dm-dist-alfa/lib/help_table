@@ -1386,6 +1386,9 @@ Examples:
 
 See also: GOTO, AT, WIZ
 #
+TRANSFER
+See: TRANS
+#
 GOTO
 Wizard command (Level 21+)
 
@@ -1408,6 +1411,58 @@ This command exists only to prevent accidental shutdowns. It does nothing.
 If you want to shutdown the game, use the 'shutdown' command instead.
 
 See also: SHUTDOWN, QUI
+#
+SET
+Wizard command (Level 23+)
+
+Usage: set <name> skill '<skill>' <learned> <recognized>
+       set <name> value <field> <value>
+
+The set command allows you to modify a character's skills and attributes. 
+This is a powerful command that should be used carefully as it can fundamentally
+change a character's capabilities.
+
+Skills that can be set include all spells and abilities like armor, teleport,
+bless, blindness, burning hands, charm person, sneak, hide, steal, backstab,
+kick, bash, rescue, etc.
+
+Fields that can be set include: age, sex, class, level, height, weight, str,
+stradd, int, wis, dex, con, gold, exp, flux, hit, move, sessions, alignment,
+thirst, drunk, full.
+
+Examples:
+  > set redferne skill 'magic missile' 95 95
+  > set bob value level 10
+  > set alice value gold 5000
+  > set thrak value str 18
+
+Without arguments, shows all available skills and fields.
+
+See also: ADVANCE, STAT, WIZ
+#
+SHUTDOWN
+Wizard command (Level 24+)
+
+Usage: shutdown
+       shutdown reboot
+
+Shuts down the game server. This is the most powerful command and should be
+used with extreme caution. All players will be disconnected and the game will
+stop running.
+
+If used with 'reboot' argument, the server will attempt to restart automatically
+after shutdown (if configured to do so).
+
+Examples:
+  > shutdown
+  (Shuts down the server completely)
+  > shutdown reboot
+  (Shuts down and attempts to restart the server)
+
+Note: Always warn players before shutting down to give them time to save and
+reach a safe location.
+
+See also: SHUTDOW, WIZLOCK, WIZ
 #
 AT
 Wizard command (Level 21+)
