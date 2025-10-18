@@ -7,15 +7,18 @@ zone:
 rooms:
 - vnum: 4100
   name: The Grand Entrance Hall
-  description: '   You stand within the enormous entrance hall of the Atmosphere Factory. The ceiling
+  description: '   You stand within the enormous entrance hall of the Atmosphere Factory.
+    The ceiling
 
-    soars hundreds of feet overhead, supported by massive pillars of gleaming metal that
+    soars hundreds of feet overhead, supported by massive pillars of gleaming metal
+    that
 
     seem to have no corrosion despite their obvious age. The constant thrum of machinery
 
     fills the air, a deep vibration you can feel in your bones. Ancient Martian glyphs
 
-    cover the walls, and the scale of everything suggests this place was built by beings
+    cover the walls, and the scale of everything suggests this place was built by
+    beings
 
     who thought in terms of eternity.'
   zone: 41
@@ -36,24 +39,32 @@ rooms:
     to_room: 4101
   extra_descriptions:
   - keywords: pillars columns
-    description: 'These enormous metal pillars support the ceiling with no visible joints or welds.
+    description: 'These enormous metal pillars support the ceiling with no visible
+      joints or welds.
 
-      The metal itself seems to glow faintly with an inner light, perhaps from the radium
+      The metal itself seems to glow faintly with an inner light, perhaps from the
+      radium
 
       power that drives the factory.'
   - keywords: glyphs carvings writing
-    description: 'The ancient glyphs tell the story of the factory''s construction. Though worn by ages,
+    description: 'The ancient glyphs tell the story of the factory''s construction.
+      Though worn by ages,
 
-      you can make out images of the ancient Martians who built this place, their desperation
+      you can make out images of the ancient Martians who built this place, their
+      desperation
 
-      as their atmosphere leaked away into space, and their triumph in creating this solution.'
+      as their atmosphere leaked away into space, and their triumph in creating this
+      solution.'
 - vnum: 4101
   name: Security Checkpoint
-  description: '   This checkpoint controls entry to the working areas of the factory. Guard stations
+  description: '   This checkpoint controls entry to the working areas of the factory.
+    Guard stations
 
-    flank the corridor, and sophisticated detection equipment - some of it clearly ancient
+    flank the corridor, and sophisticated detection equipment - some of it clearly
+    ancient
 
-    Martian technology beyond modern understanding - monitors all who pass through. Armed
+    Martian technology beyond modern understanding - monitors all who pass through.
+    Armed
 
     guards watch with alert eyes, ready to challenge anyone who doesn''t belong.'
   zone: 41
@@ -81,7 +92,8 @@ rooms:
   extra_descriptions: []
 - vnum: 4102
   name: Main Corridor - North
-  description: '   This broad corridor runs through the factory, wide enough for six people to walk
+  description: '   This broad corridor runs through the factory, wide enough for six
+    people to walk
 
     abreast. The walls are lined with pipes and conduits, all humming with power or
 
@@ -119,11 +131,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4103
   name: Guard Station
-  description: '   This well-equipped guard station houses the factory''s security forces. Weapon racks
+  description: '   This well-equipped guard station houses the factory''s security
+    forces. Weapon racks
 
-    line the walls, holding both traditional swords and modern radium rifles. A duty roster
+    line the walls, holding both traditional swords and modern radium rifles. A duty
+    roster
 
-    and maps of the factory complex cover one wall, and several guards are present at all
+    and maps of the factory complex cover one wall, and several guards are present
+    at all
 
     times, ready to respond to any threat.'
   zone: 41
@@ -139,7 +154,8 @@ rooms:
   extra_descriptions: []
 - vnum: 4104
   name: Guard Armory
-  description: '   This secure room stores additional weapons and armor for the factory guards. Heavy
+  description: '   This secure room stores additional weapons and armor for the factory
+    guards. Heavy
 
     metal doors protect the contents, and an inventory system tracks every item. The
 
@@ -157,11 +173,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4105
   name: Engineering Quarters - Entrance
-  description: '   This is the entrance to the living quarters for the engineers who maintain the
+  description: '   This is the entrance to the living quarters for the engineers who
+    maintain the
 
     factory. The contrast between the industrial factory proper and these more comfortable
 
-    spaces is stark. Comfortable furnishings, personal belongings, and the smell of cooking
+    spaces is stark. Comfortable furnishings, personal belongings, and the smell of
+    cooking
 
     create a more homey atmosphere.'
   zone: 41
@@ -189,9 +207,11 @@ rooms:
   extra_descriptions: []
 - vnum: 4106
   name: Engineers' Dormitory
-  description: '   This large room houses bunks for the engineering staff. Each bunk area has personal
+  description: '   This large room houses bunks for the engineering staff. Each bunk
+    area has personal
 
-    storage and some decoration reflecting the personality of its occupant. Books on
+    storage and some decoration reflecting the personality of its occupant. Books
+    on
 
     engineering and ancient Martian technology lie on small tables. Despite the austere
 
@@ -215,7 +235,8 @@ rooms:
   extra_descriptions: []
 - vnum: 4107
   name: Mess Hall
-  description: '   The factory''s mess hall provides meals for both engineers and guards. Long tables
+  description: '   The factory''s mess hall provides meals for both engineers and
+    guards. Long tables
 
     fill the room, and a kitchen area produces simple but adequate food. A large window
 
@@ -241,9 +262,11 @@ rooms:
   extra_descriptions: []
 - vnum: 4108
   name: Recreation Room
-  description: '   This room provides rare leisure space for the factory workers. A few games, some
+  description: '   This room provides rare leisure space for the factory workers.
+    A few games, some
 
-    books, and comfortable chairs offer respite from the demanding work. A board on the
+    books, and comfortable chairs offer respite from the demanding work. A board on
+    the
 
     wall displays the work rotation schedule and important notices.'
   zone: 41
@@ -265,9 +288,11 @@ rooms:
   extra_descriptions: []
 - vnum: 4109
   name: Technical Library
-  description: '   This invaluable collection contains manuals, diagrams, and notes about the factory''s
+  description: '   This invaluable collection contains manuals, diagrams, and notes
+    about the factory''s
 
-    systems. Some volumes are ancient, written by the original builders. Others are modern
+    systems. Some volumes are ancient, written by the original builders. Others are
+    modern
 
     additions, recording the discoveries and repairs of countless generations of engineers.
 
@@ -284,18 +309,23 @@ rooms:
     to_room: 4108
   extra_descriptions:
   - keywords: manuals books volumes
-    description: 'The ancient manuals use a technical language that even modern scholars struggle to fully
+    description: 'The ancient manuals use a technical language that even modern scholars
+      struggle to fully
 
-      understand. But through careful study and trial and error, engineers have learned enough
+      understand. But through careful study and trial and error, engineers have learned
+      enough
 
-      to keep the factory running. Each successful repair is meticulously documented for future
+      to keep the factory running. Each successful repair is meticulously documented
+      for future
 
       generations.'
 - vnum: 4110
   name: Main Corridor - Central
-  description: '   The main corridor continues its path through the factory complex. Here, the sound of
+  description: '   The main corridor continues its path through the factory complex.
+    Here, the sound of
 
-    machinery grows louder as you approach the primary processing areas. The temperature is
+    machinery grows louder as you approach the primary processing areas. The temperature
+    is
 
     noticeably warmer, and the air carries a sharp, clean scent - perhaps oxygen being
 
@@ -331,11 +361,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4111
   name: Chief Engineer's Office
-  description: '   This office belongs to Vor Daj, the chief engineer of the factory. Technical diagrams
+  description: '   This office belongs to Vor Daj, the chief engineer of the factory.
+    Technical diagrams
 
-    cover every wall, and a large desk is buried under reports, calculations, and ancient
+    cover every wall, and a large desk is buried under reports, calculations, and
+    ancient
 
-    texts. The office is cluttered but organized in its own way - everything has a purpose
+    texts. The office is cluttered but organized in its own way - everything has a
+    purpose
 
     and a place. A window overlooks one of the main pump chambers.'
   zone: 41
@@ -362,20 +395,26 @@ rooms:
     to_room: 4140
   extra_descriptions:
   - keywords: diagrams plans schematics
-    description: 'These are the chief engineer''s working diagrams of the factory systems. Some sections
+    description: 'These are the chief engineer''s working diagrams of the factory
+      systems. Some sections
 
-      are well understood, with detailed annotations. Others are marked with questions and
+      are well understood, with detailed annotations. Others are marked with questions
+      and
 
-      speculation - even after generations of study, not all of the ancient technology is
+      speculation - even after generations of study, not all of the ancient technology
+      is
 
       fully comprehended.'
 - vnum: 4112
   name: Engineering Workshop
-  description: '   This well-equipped workshop allows engineers to fabricate parts and repair equipment.
+  description: '   This well-equipped workshop allows engineers to fabricate parts
+    and repair equipment.
 
-    Work benches are covered with tools both ancient and modern. Some of the tools are clearly
+    Work benches are covered with tools both ancient and modern. Some of the tools
+    are clearly
 
-    of ancient Martian design, their functions only partially understood but invaluable for
+    of ancient Martian design, their functions only partially understood but invaluable
+    for
 
     working with the factory''s systems.'
   zone: 41
@@ -397,11 +436,13 @@ rooms:
   extra_descriptions: []
 - vnum: 4113
   name: Equipment Storage
-  description: '   Spare parts, tools, and materials fill this storage room. Some items are modern
+  description: '   Spare parts, tools, and materials fill this storage room. Some
+    items are modern
 
     fabrications, while others are irreplaceable components salvaged from broken systems
 
-    or discovered in hidden storage caches within the factory. An inventory system attempts
+    or discovered in hidden storage caches within the factory. An inventory system
+    attempts
 
     to track the contents.'
   zone: 41
@@ -417,20 +458,23 @@ rooms:
   extra_descriptions: []
 - vnum: 4115
   name: Primary Processing Hall - Entrance
-  description: '   You enter the primary processing hall and are immediately overwhelmed by the scale.
+  description: '   You enter the primary processing hall and are immediately overwhelmed
+    by the scale.
 
-    The chamber is vast enough to hold a small city, and it''s filled with machinery of
+    The chamber is vast enough to hold a small city, and it''s filled with machinery
+    of
 
     impossible complexity. Huge cylindrical tanks reach from floor to ceiling, connected
 
-    by a maze of pipes and conduits. The machinery operates with a steady, powerful rhythm,
+    by a maze of pipes and conduits. The machinery operates with a steady, powerful
+    rhythm,
 
     and the air tingles with energy.'
   zone: 41
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The processing hall extends eastward.
     keywords: ''
     door_flag: 0
@@ -450,52 +494,63 @@ rooms:
     to_room: 4110
   extra_descriptions:
   - keywords: machinery equipment tanks
-    description: 'The machines are clearly ancient but operate with flawless precision. The metal they''re
+    description: 'The machines are clearly ancient but operate with flawless precision.
+      The metal they''re
 
-      constructed from never corrodes, and the moving parts show no signs of wear despite
+      constructed from never corrodes, and the moving parts show no signs of wear
+      despite
 
-      operating continuously for countless centuries. This is technology far beyond anything
+      operating continuously for countless centuries. This is technology far beyond
+      anything
 
       modern Mars can produce.'
 - vnum: 4116
   name: Processing Hall - East Section
-  description: '   This section of the processing hall contains some of the chemical treatment systems.
+  description: '   This section of the processing hall contains some of the chemical
+    treatment systems.
 
-    Huge tanks contain mysterious liquids that bubble and steam, their exact purpose known
+    Huge tanks contain mysterious liquids that bubble and steam, their exact purpose
+    known
 
-    only to the senior engineers. The air here is sharp with chemical scents, though not
+    only to the senior engineers. The air here is sharp with chemical scents, though
+    not
 
     unpleasant - more like the smell after a lightning storm.'
   zone: 41
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
+  - direction: 2
     description: Steps lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4118
-  - direction: 3
-    description: The processing hall extends west.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4115
   extra_descriptions:
   - keywords: tanks vats containers
-    description: 'These enormous tanks process atmospheric gases through stages of refinement. The exact
+    description: 'These enormous tanks process atmospheric gases through stages of
+      refinement. The exact
 
-      chemistry is only partially understood, but the result is pure, breathable oxygen that
+      chemistry is only partially understood, but the result is pure, breathable oxygen
+      that
 
       sustains all life on Mars.'
 - vnum: 4117
   name: Catwalk Junction
-  description: '   Metal catwalks crisscross through the machinery at this junction, allowing access
+  description: '   Metal catwalks crisscross through the machinery at this junction,
+    allowing access
 
-    to various systems for maintenance. Far below, you can see the factory floor with its
+    to various systems for maintenance. Far below, you can see the factory floor with
+    its
 
-    maze of pipes and machinery. The sound of the machinery is deafening here, and the
+    maze of pipes and machinery. The sound of the machinery is deafening here, and
+    the
 
     catwalk vibrates with the power of the systems.'
   zone: 41
@@ -508,7 +563,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4115
-  - direction: 1
+  - direction: 5
     description: The catwalk extends east.
     keywords: ''
     door_flag: 0
@@ -528,18 +583,23 @@ rooms:
     to_room: 4128
   extra_descriptions:
   - keywords: below floor
-    description: 'The factory floor far below is a maze of machinery, pipes, and tanks. Steam vents
+    description: 'The factory floor far below is a maze of machinery, pipes, and tanks.
+      Steam vents
 
-      periodically, and you can see engineers moving among the equipment like tiny figures
+      periodically, and you can see engineers moving among the equipment like tiny
+      figures
 
       in a mechanical landscape of giants.'
 - vnum: 4118
   name: East Catwalk
-  description: '   This catwalk provides access to the eastern processing systems. Control panels are
+  description: '   This catwalk provides access to the eastern processing systems.
+    Control panels are
 
-    mounted at intervals, allowing engineers to monitor and adjust the machinery. Warning
+    mounted at intervals, allowing engineers to monitor and adjust the machinery.
+    Warning
 
-    signs in ancient Martian caution about various dangers - high pressure, extreme heat,
+    signs in ancient Martian caution about various dangers - high pressure, extreme
+    heat,
 
     and radiation hazards.'
   zone: 41
@@ -552,26 +612,36 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4119
-  - direction: 3
-    description: The catwalk leads to the junction.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4117
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4116
   extra_descriptions:
   - keywords: panels controls
-    description: 'These control panels use a mix of ancient technology and modern additions. Glowing
+    description: 'These control panels use a mix of ancient technology and modern
+      additions. Glowing
 
-      crystals display information in ways that engineers have learned to interpret, while
+      crystals display information in ways that engineers have learned to interpret,
+      while
 
       hand-written labels in modern Martian script identify various functions.'
 - vnum: 4119
   name: South Catwalk
-  description: '   From this catwalk, you have a view of the massive pump systems that move processed
+  description: '   From this catwalk, you have a view of the massive pump systems
+    that move processed
 
     gases through the factory. The pumps are enormous, their pistons moving with ponderous
 
-    power. The rhythm of their operation is hypnotic, and you can feel each stroke vibrate
+    power. The rhythm of their operation is hypnotic, and you can feel each stroke
+    vibrate
 
     through the catwalk.'
   zone: 41
@@ -584,20 +654,31 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4118
+  - direction: 4
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4117
   extra_descriptions:
   - keywords: pumps pistons machinery
-    description: 'These pumps move incomprehensible volumes of gas through the factory''s systems. Each
+    description: 'These pumps move incomprehensible volumes of gas through the factory''s
+      systems. Each
 
-      pump is the size of a building, and they operate with perfect synchronization. The
+      pump is the size of a building, and they operate with perfect synchronization.
+      The
 
       power source that drives them is one of the factory''s great mysteries.'
 - vnum: 4120
   name: Main Corridor - South
-  description: '   The corridor continues its path southward. Here, directional signs point toward the
+  description: '   The corridor continues its path southward. Here, directional signs
+    point toward the
 
-    oxygen distribution systems and the radium power core - the heart of the factory. The
+    oxygen distribution systems and the radium power core - the heart of the factory.
+    The
 
-    temperature is higher here, and the air feels charged with energy. Access to the most
+    temperature is higher here, and the air feels charged with energy. Access to the
+    most
 
     sensitive areas is restricted.'
   zone: 41
@@ -610,7 +691,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4110
-  - direction: 1
+  - direction: 5
     description: A door leads to the distribution manifold.
     keywords: door
     door_flag: 1
@@ -637,7 +718,8 @@ rooms:
   extra_descriptions: []
 - vnum: 4054
   name: Distribution Manifold - Control Room
-  description: '   This control room oversees the oxygen distribution systems. Complex instrumentation
+  description: '   This control room oversees the oxygen distribution systems. Complex
+    instrumentation
 
     monitors the flow of processed oxygen to all of Mars. Map boards show the distribution
 
@@ -648,42 +730,49 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
+  - direction: 1
     description: The passage leads down.
     keywords: door heavy
     door_flag: 2
     key_vnum: -1
     to_room: 4126
-  - direction: 5
-    description: The passage leads down.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4127
   - direction: 3
     description: The door leads to the corridor.
     keywords: door
     door_flag: 1
     key_vnum: -1
     to_room: 4120
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4055
   extra_descriptions:
   - keywords: maps boards displays
-    description: 'These boards show Mars as a whole, with lines indicating oxygen distribution. The lines
+    description: 'These boards show Mars as a whole, with lines indicating oxygen
+      distribution. The lines
 
-      don''t follow any known transportation network - the oxygen seems to simply appear where
+      don''t follow any known transportation network - the oxygen seems to simply
+      appear where
 
-      it''s needed, suggesting the ancient builders developed some form of teleportation or
+      it''s needed, suggesting the ancient builders developed some form of teleportation
+      or
 
       matter transmission technology.'
 - vnum: 4055
   name: Distribution Manifold Chamber
-  description: '   This chamber contains the actual distribution manifold - a massive spherical structure
+  description: '   This chamber contains the actual distribution manifold - a massive
+    spherical structure
 
-    of unknown metal, covered in glowing conduits and pulsing with energy. Processed oxygen
+    of unknown metal, covered in glowing conduits and pulsing with energy. Processed
+    oxygen
 
-    enters the manifold and somehow is distributed across all of Mars. The technology involved
+    enters the manifold and somehow is distributed across all of Mars. The technology
+    involved
 
-    is completely beyond modern understanding, but as long as oxygen enters the manifold, it
+    is completely beyond modern understanding, but as long as oxygen enters the manifold,
+    it
 
     continues to function.'
   zone: 41
@@ -696,18 +785,28 @@ rooms:
     door_flag: 2
     key_vnum: -1
     to_room: 4125
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4054
   extra_descriptions:
   - keywords: manifold sphere
-    description: 'The manifold is perfectly spherical and appears seamless. It pulses with a soft blue light,
+    description: 'The manifold is perfectly spherical and appears seamless. It pulses
+      with a soft blue light,
 
-      and you can hear a high-pitched hum emanating from it. Instruments show enormous energy
+      and you can hear a high-pitched hum emanating from it. Instruments show enormous
+      energy
 
       flows, but where that energy comes from or goes to remains a mystery.'
 - vnum: 4056
   name: Pressure Monitoring Station
-  description: '   This station monitors the pressure of gases throughout the factory systems. Numerous
+  description: '   This station monitors the pressure of gases throughout the factory
+    systems. Numerous
 
-    gauges and readouts show pressures in different sections, and engineers constantly adjust
+    gauges and readouts show pressures in different sections, and engineers constantly
+    adjust
 
     valves to maintain optimal flow. A breach or failure in pressure could be catastrophic.'
   zone: 41
@@ -729,9 +828,11 @@ rooms:
   extra_descriptions: []
 - vnum: 4057
   name: Emergency Valve Chamber
-  description: '   This chamber houses massive emergency valves that can shut down different sections
+  description: '   This chamber houses massive emergency valves that can shut down
+    different sections
 
-    of the factory in case of failure or breach. The valves are enormous, requiring great
+    of the factory in case of failure or breach. The valves are enormous, requiring
+    great
 
     strength or mechanical assistance to operate. Instructions carved in stone detail
 
@@ -740,32 +841,30 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads down.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4127
-  - direction: 5
-    description: Stairs descend to a restricted corridor.
+  - direction: 1
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4059
+    to_room: 4127
   extra_descriptions:
   - keywords: valves emergency
-    description: 'These enormous valves can isolate sections of the factory, preventing a local failure
+    description: 'These enormous valves can isolate sections of the factory, preventing
+      a local failure
 
       from becoming a global catastrophe. The valves are purely mechanical - no electronics
 
       or complex systems - ensuring they''ll function even if all else fails.'
 - vnum: 4059
   name: Restricted Access Corridor
-  description: '   This corridor leads to the most restricted areas of the factory - the radium power core
+  description: '   This corridor leads to the most restricted areas of the factory
+    - the radium power core
 
-    and related systems. Security here is extremely tight, and only authorized personnel are
+    and related systems. Security here is extremely tight, and only authorized personnel
+    are
 
-    permitted beyond this point. Warning signs caution about radiation hazards ahead. Stairs lead up to the emergency valve chamber.'
+    permitted beyond this point. Warning signs caution about radiation hazards ahead.
+    Stairs lead up to the emergency valve chamber.'
   zone: 41
   room_flags: 8
   sector_type: 0
@@ -794,54 +893,77 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4057
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4064
   extra_descriptions:
   - keywords: signs warnings
-    description: 'The warning signs use stark symbols and text: radiation hazard, extreme danger, authorized
+    description: 'The warning signs use stark symbols and text: radiation hazard,
+      extreme danger, authorized
 
-      personnel only. The messages are repeated in multiple languages and scripts, including
+      personnel only. The messages are repeated in multiple languages and scripts,
+      including
 
       ancient Martian. Even someone who couldn''t read would understand the danger.'
 - vnum: 4064
   name: Power Core - Outer Chamber
-  description: '   You enter the outer chamber of the power core. The temperature is noticeably higher here,
+  description: '   You enter the outer chamber of the power core. The temperature
+    is noticeably higher here,
 
-    and the air has a metallic tang. Shielding materials line the walls - thick metal plates
+    and the air has a metallic tang. Shielding materials line the walls - thick metal
+    plates
 
-    that absorb dangerous radiation. Through a viewing window, you can see the inner core chamber
+    that absorb dangerous radiation. Through a viewing window, you can see the inner
+    core chamber
 
     where the radium power source drives the entire factory.'
   zone: 41
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The secured door leads back to the corridor.
-    keywords: door secured
-    door_flag: 2
-    key_vnum: 4050
-    to_room: 4130
   - direction: 2
     description: A radiation-shielded door leads to the core chamber itself.
     keywords: door shielded
     door_flag: 2
     key_vnum: 4051
     to_room: 4136
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4059
+  - direction: 2
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4130
   extra_descriptions:
   - keywords: window view
-    description: 'Through the thick viewing window, you can see the inner core - a chamber filled with a soft
+    description: 'Through the thick viewing window, you can see the inner core - a
+      chamber filled with a soft
 
-      blue glow. The radium fuel elements are visible, safely contained but radiating enormous
+      blue glow. The radium fuel elements are visible, safely contained but radiating
+      enormous
 
       power. The core has been operating continuously for uncounted millennia.'
 - vnum: 4065
   name: Radium Power Core Chamber
-  description: '   You are in the heart of the factory - the radium power core chamber. The walls are lined
+  description: '   You are in the heart of the factory - the radium power core chamber.
+    The walls are lined
 
-    with thick shielding, but even so, you can feel the energy radiating from the central core.
+    with thick shielding, but even so, you can feel the energy radiating from the
+    central core.
 
-    The radium fuel elements glow with their characteristic blue light, contained in a structure
+    The radium fuel elements glow with their characteristic blue light, contained
+    in a structure
 
-    of impossible engineering. This is the power source that has sustained Mars for ages, and
+    of impossible engineering. This is the power source that has sustained Mars for
+    ages, and
 
     will continue to do so as long as the radium lasts - which might be forever.'
   zone: 41
@@ -862,20 +984,26 @@ rooms:
     to_room: 4137
   extra_descriptions:
   - keywords: core radium fuel
-    description: 'The radium core is contained in a structure that uses principles modern science doesn''t fully
+    description: 'The radium core is contained in a structure that uses principles
+      modern science doesn''t fully
 
-      understand. The radium provides perpetual power, its radioactive decay generating energy that
+      understand. The radium provides perpetual power, its radioactive decay generating
+      energy that
 
-      drives the entire factory. The containment is perfect - no leakage, no deterioration, eternal
+      drives the entire factory. The containment is perfect - no leakage, no deterioration,
+      eternal
 
       operation.'
 - vnum: 4066
   name: Core Monitoring Station
-  description: '   This station monitors the power core''s operation. Readouts show energy output, radiation
+  description: '   This station monitors the power core''s operation. Readouts show
+    energy output, radiation
 
-    levels, and system status. Engineers here ensure the core operates safely and optimally,
+    levels, and system status. Engineers here ensure the core operates safely and
+    optimally,
 
-    though the ancient systems are so well-designed that intervention is rarely needed. Still,
+    though the ancient systems are so well-designed that intervention is rarely needed.
+    Still,
 
     vigilance must be maintained.'
   zone: 41
@@ -897,11 +1025,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4067
   name: Coolant System Control
-  description: '   This room controls the coolant systems that prevent the core from overheating. Pumps
+  description: '   This room controls the coolant systems that prevent the core from
+    overheating. Pumps
 
-    circulate coolant through heat exchangers, carrying away excess heat. The coolant itself
+    circulate coolant through heat exchangers, carrying away excess heat. The coolant
+    itself
 
-    is a substance unknown to modern chemistry - it never boils, never freezes, and never
+    is a substance unknown to modern chemistry - it never boils, never freezes, and
+    never
 
     degrades. More lost technology from the ancient builders.'
   zone: 41
@@ -916,18 +1047,24 @@ rooms:
     to_room: 4137
   extra_descriptions:
   - keywords: coolant liquid
-    description: 'The coolant is a silvery liquid that flows through transparent tubes. It glows faintly,
+    description: 'The coolant is a silvery liquid that flows through transparent tubes.
+      It glows faintly,
 
-      absorbing heat from the core and transferring it to heat exchangers where it''s safely
+      absorbing heat from the core and transferring it to heat exchangers where it''s
+      safely
 
-      dissipated. The coolant appears to be self-circulating, requiring no external power.'
+      dissipated. The coolant appears to be self-circulating, requiring no external
+      power.'
 - vnum: 4069
   name: Administrative Section - Entrance
-  description: '   This section houses the factory''s administrative offices. Here, records are kept of
+  description: '   This section houses the factory''s administrative offices. Here,
+    records are kept of
 
-    production levels, maintenance schedules, personnel assignments, and the countless other
+    production levels, maintenance schedules, personnel assignments, and the countless
+    other
 
-    details of operating this critical facility. The atmosphere is more bureaucratic and less
+    details of operating this critical facility. The atmosphere is more bureaucratic
+    and less
 
     industrial than other areas. Stairs lead up to the emergency escape route.'
   zone: 41
@@ -947,25 +1084,28 @@ rooms:
     key_vnum: -1
     to_room: 4142
   - direction: 4
-    description: Stairs lead up to the emergency escape route.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4142
-  - direction: 4
     description: Stairs lead up to the main corridor.
     keywords: stairs
     door_flag: 0
     key_vnum: -1
     to_room: 4106
+  - direction: 0
+    description: The emergency escape route leads north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4075
   extra_descriptions: []
 - vnum: 4070
   name: Records Office
-  description: '   This office maintains the factory''s operational records. Shelves hold countless volumes
+  description: '   This office maintains the factory''s operational records. Shelves
+    hold countless volumes
 
-    documenting production, maintenance, repairs, and incidents dating back centuries. More
+    documenting production, maintenance, repairs, and incidents dating back centuries.
+    More
 
-    recent records are kept on modern data tablets, but the old paper records are irreplaceable
+    recent records are kept on modern data tablets, but the old paper records are
+    irreplaceable
 
     historical documents.'
   zone: 41
@@ -980,23 +1120,28 @@ rooms:
     to_room: 4140
   extra_descriptions:
   - keywords: records books documents
-    description: 'These records tell the story of the factory''s operation over many lifetimes. You can trace
+    description: 'These records tell the story of the factory''s operation over many
+      lifetimes. You can trace
 
-      the gradual loss of understanding of the ancient systems, the desperate experiments to keep
+      the gradual loss of understanding of the ancient systems, the desperate experiments
+      to keep
 
       things running, and the hard-won knowledge that allowed Mars to survive.'
 - vnum: 4071
   name: Administrative Corridor
-  description: '   This corridor connects various administrative offices. It''s quieter here than in the
+  description: '   This corridor connects various administrative offices. It''s quieter
+    here than in the
 
-    industrial sections, though the omnipresent thrum of machinery still vibrates through the
+    industrial sections, though the omnipresent thrum of machinery still vibrates
+    through the
 
-    floor. Office doors line the corridor, each labeled with various administrative functions.'
+    floor. Office doors line the corridor, each labeled with various administrative
+    functions.'
   zone: 41
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 1
     description: The corridor leads to the administrative entrance.
     keywords: ''
     door_flag: 0
@@ -1017,11 +1162,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4072
   name: Personnel Office
-  description: '   This office manages the factory''s personnel - assignments, rotations, evaluations, and
+  description: '   This office manages the factory''s personnel - assignments, rotations,
+    evaluations, and
 
-    the training of new engineers. Work at the factory is prestigious but demanding, and only
+    the training of new engineers. Work at the factory is prestigious but demanding,
+    and only
 
-    the best engineers are selected for service here. The lives of all Mars depend on their
+    the best engineers are selected for service here. The lives of all Mars depend
+    on their
 
     skill and dedication.'
   zone: 41
@@ -1037,11 +1185,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4073
   name: Security Administration
-  description: '   This office manages the factory''s security operations. Maps show the security perimeter,
+  description: '   This office manages the factory''s security operations. Maps show
+    the security perimeter,
 
-    patrol routes, and defensive positions. Intelligence reports warn of potential threats -
+    patrol routes, and defensive positions. Intelligence reports warn of potential
+    threats -
 
-    Zodangan spies, green Martian raiders, and other dangers. The security forces are always
+    Zodangan spies, green Martian raiders, and other dangers. The security forces
+    are always
 
     on alert.'
   zone: 41
@@ -1062,18 +1213,23 @@ rooms:
     to_room: 4145
   extra_descriptions:
   - keywords: maps intelligence reports
-    description: 'The security reports make sobering reading. Multiple attempts at sabotage have been foiled,
+    description: 'The security reports make sobering reading. Multiple attempts at
+      sabotage have been foiled,
 
-      and constant vigilance is required. Zodanga in particular would love to gain control of the
+      and constant vigilance is required. Zodanga in particular would love to gain
+      control of the
 
       factory, giving them leverage over all Mars.'
 - vnum: 4074
   name: Restricted Storage
-  description: '   This secure storage area contains sensitive materials and equipment. Heavy security doors
+  description: '   This secure storage area contains sensitive materials and equipment.
+    Heavy security doors
 
-    and guards protect the contents. Some of the items here are ancient artifacts found during
+    and guards protect the contents. Some of the items here are ancient artifacts
+    found during
 
-    factory maintenance, others are classified research materials. Access is strictly limited.'
+    factory maintenance, others are classified research materials. Access is strictly
+    limited.'
   zone: 41
   room_flags: 8
   sector_type: 0
@@ -1098,14 +1254,17 @@ rooms:
     to_room: 4075
   extra_descriptions:
   - keywords: trapdoor
-    description: 'This heavy metal trapdoor is concealed in the floor, almost invisible unless you know where
+    description: 'This heavy metal trapdoor is concealed in the floor, almost invisible
+      unless you know where
 
-      to look. It''s marked with ancient warnings in several languages. The trapdoor leads down to
+      to look. It''s marked with ancient warnings in several languages. The trapdoor
+      leads down to
 
       the abandoned lower levels - areas that were sealed off long ago.'
 - vnum: 4075
   name: Emergency Escape Route
-  description: '   This corridor serves as an emergency evacuation route from the restricted areas. It''s
+  description: '   This corridor serves as an emergency evacuation route from the
+    restricted areas. It''s
 
     normally unused but maintained in case of catastrophic emergency. Emergency lighting
 
@@ -1122,23 +1281,25 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
-  - direction: 5
+  - direction: 2
     description: Stairs descend to the administrative section.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4069
   - direction: 3
-    description: The door leads back to the administrative corridor.
-    keywords: door
-    door_flag: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4074
   extra_descriptions:
   - keywords: signs evacuation
-    description: 'Emergency evacuation signs point the way to safety, with distance markers and warnings
+    description: 'Emergency evacuation signs point the way to safety, with distance
+      markers and warnings
 
-      about hazards. The signs are in multiple languages, ensuring anyone fleeing could follow
+      about hazards. The signs are in multiple languages, ensuring anyone fleeing
+      could follow
 
       them to safety.'
 - vnum: 4125
@@ -1159,17 +1320,17 @@ rooms:
     key_vnum: -1
     to_room: 4055
   - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4056
-  - direction: 3
-    description: A passage leads west.
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4120
+  - direction: 4
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4056
   extra_descriptions: []
 - vnum: 4126
   name: Unfinished Chamber 4126
@@ -1182,8 +1343,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The passage leads up.
+  - direction: 3
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1200,14 +1361,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4054
-  - direction: 4
-    description: The passage leads up.
+  - direction: 3
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1230,6 +1385,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4056
+  - direction: 5
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4117
   extra_descriptions: []
 - vnum: 4130
   name: Unfinished Chamber 4130
@@ -1362,7 +1523,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4070
-  - direction: 1
+  - direction: 3
     description: A passage leads east.
     keywords: ''
     door_flag: 0
@@ -1374,6 +1535,12 @@ rooms:
     door_flag: 2
     key_vnum: -1
     to_room: 4111
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4071
   extra_descriptions: []
 - vnum: 4141
   name: Unfinished Chamber 4141
@@ -1482,6 +1649,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4073
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4146
   extra_descriptions: []
 - vnum: 4146
   name: Unfinished Chamber 4146
@@ -1500,12 +1673,20 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4145
   extra_descriptions: []
 - vnum: 4147
   name: Escape Route Junction
-  description: '   The escape route branches here. One path leads to surface exits, while another leads
+  description: '   The escape route branches here. One path leads to surface exits,
+    while another leads
 
-    to secure bunkers where factory personnel could shelter during attacks. The routes are
+    to secure bunkers where factory personnel could shelter during attacks. The routes
+    are
 
     clearly marked, and emergency supply caches are visible.'
   zone: 41
@@ -1531,31 +1712,28 @@ rooms:
     key_vnum: -1
     to_room: 4146
   - direction: 3
-    description: The passage leads west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4075
-  - direction: 1
-    description: The passage leads east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4146
-  - direction: 3
     description: The passage continues west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4146
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4075
   extra_descriptions: []
 - vnum: 4148
   name: Surface Emergency Exit
-  description: '   This exit leads to the surface, emerging at a point well away from the main factory
+  description: '   This exit leads to the surface, emerging at a point well away from
+    the main factory
 
-    complex. In an emergency, evacuating personnel would use this exit to escape danger. The
+    complex. In an emergency, evacuating personnel would use this exit to escape danger.
+    The
 
-    door is heavily reinforced and secured from the inside, preventing unauthorized entry
+    door is heavily reinforced and secured from the inside, preventing unauthorized
+    entry
 
     from outside.'
   zone: 41
@@ -1577,11 +1755,14 @@ rooms:
   extra_descriptions: []
 - vnum: 4149
   name: Emergency Shelter
-  description: '   This underground shelter could house factory personnel for extended periods during a
+  description: '   This underground shelter could house factory personnel for extended
+    periods during a
 
-    siege or other crisis. Supplies, water, and air filtration systems are stored here, along
+    siege or other crisis. Supplies, water, and air filtration systems are stored
+    here, along
 
-    with communications equipment to call for rescue. The shelter represents a last resort for
+    with communications equipment to call for rescue. The shelter represents a last
+    resort for
 
     protecting the factory''s essential personnel.'
   zone: 41
@@ -1602,9 +1783,11 @@ rooms:
     to_room: 4148
   extra_descriptions:
   - keywords: supplies equipment
-    description: 'The shelter is well-stocked with food, water, medical supplies, and equipment. Bunks line
+    description: 'The shelter is well-stocked with food, water, medical supplies,
+      and equipment. Bunks line
 
-      the walls, and a small armory provides weapons for defense. This shelter could sustain
+      the walls, and a small armory provides weapons for defense. This shelter could
+      sustain
 
       several dozen people for months if necessary.'
 mobiles:
@@ -1612,13 +1795,17 @@ mobiles:
   namelist: guard factory security elite
   short_desc: an elite factory guard
   long_desc: An elite factory guard stands vigilant here, protecting the facility.
-  detailed_desc: 'This red Martian warrior wears enhanced armor bearing the factory''s insignia - a stylized
+  detailed_desc: 'This red Martian warrior wears enhanced armor bearing the factory''s
+    insignia - a stylized
 
-    representation of Mars surrounded by atmosphere. His equipment is top quality, including
+    representation of Mars surrounded by atmosphere. His equipment is top quality,
+    including
 
-    both a longsword and radium rifle. His eyes are alert and professional, constantly scanning
+    both a longsword and radium rifle. His eyes are alert and professional, constantly
+    scanning
 
-    for threats. He''s been trained to recognize saboteurs, spies, and any danger to the factory.
+    for threats. He''s been trained to recognize saboteurs, spies, and any danger
+    to the factory.
 
     The guards here are the best - they have to be, as all Mars depends on them.'
   action_flags: 2
@@ -1640,13 +1827,17 @@ mobiles:
   namelist: commander security captain elite
   short_desc: the security commander
   long_desc: The security commander oversees factory defenses with stern efficiency.
-  detailed_desc: 'This veteran warrior commands the factory''s security forces. His scarlet and gold harness
+  detailed_desc: 'This veteran warrior commands the factory''s security forces. His
+    scarlet and gold harness
 
-    is decorated with service medals and the factory insignia. Years of defending this critical
+    is decorated with service medals and the factory insignia. Years of defending
+    this critical
 
-    facility have made him both skilled and perpetually vigilant. He trusts no one completely
+    facility have made him both skilled and perpetually vigilant. He trusts no one
+    completely
 
-    and maintains constant security protocols. His authority is absolute in security matters,
+    and maintains constant security protocols. His authority is absolute in security
+    matters,
 
     and he takes his responsibility to protect Mars very seriously.'
   action_flags: 2
@@ -1668,13 +1859,17 @@ mobiles:
   namelist: engineer factory senior experienced
   short_desc: a senior engineer
   long_desc: A senior engineer works here, maintaining the ancient systems.
-  detailed_desc: 'This experienced red Martian engineer has served at the factory for decades. His harness
+  detailed_desc: 'This experienced red Martian engineer has served at the factory
+    for decades. His harness
 
-    is covered with tool pouches, and his hands show the stains and scars of working with
+    is covered with tool pouches, and his hands show the stains and scars of working
+    with
 
-    machinery and chemicals. He knows the factory systems intimately, though even he admits
+    machinery and chemicals. He knows the factory systems intimately, though even
+    he admits
 
-    there are aspects of the ancient technology beyond full understanding. He''s dedicated to
+    there are aspects of the ancient technology beyond full understanding. He''s dedicated
+    to
 
     keeping Mars alive and takes great pride in his work.'
   action_flags: 22
@@ -1685,13 +1880,17 @@ mobiles:
   namelist: engineer junior apprentice
   short_desc: a junior engineer
   long_desc: A junior engineer studies the systems here, learning from experience.
-  detailed_desc: 'This younger engineer is still learning the complexities of the factory systems. He wears
+  detailed_desc: 'This younger engineer is still learning the complexities of the
+    factory systems. He wears
 
-    a standard engineer''s harness and carries reference manuals, frequently consulting them
+    a standard engineer''s harness and carries reference manuals, frequently consulting
+    them
 
-    when working on unfamiliar equipment. He''s eager but cautious, knowing that a mistake
+    when working on unfamiliar equipment. He''s eager but cautious, knowing that a
+    mistake
 
-    could have catastrophic consequences. Under the guidance of senior engineers, he''s gaining
+    could have catastrophic consequences. Under the guidance of senior engineers,
+    he''s gaining
 
     the knowledge needed to help sustain Mars.'
   action_flags: 22
@@ -1701,16 +1900,21 @@ mobiles:
 - vnum: 4104
   namelist: daj vor chief engineer master
   short_desc: Vor Daj the Chief Engineer
-  long_desc: Vor Daj, Chief Engineer of the factory, stands here surrounded by technical documents.
-  detailed_desc: 'This elderly red Martian is perhaps the most knowledgeable person on Mars regarding the
+  long_desc: Vor Daj, Chief Engineer of the factory, stands here surrounded by technical
+    documents.
+  detailed_desc: 'This elderly red Martian is perhaps the most knowledgeable person
+    on Mars regarding the
 
-    factory''s systems. His deeply lined face shows the burden of responsibility he carries -
+    factory''s systems. His deeply lined face shows the burden of responsibility he
+    carries -
 
-    all Mars depends on his expertise. He''s been chief engineer for over a century, and his
+    all Mars depends on his expertise. He''s been chief engineer for over a century,
+    and his
 
     understanding of the ancient technology borders on the mystical. He wears a decorated
 
-    engineer''s harness and carries tools that have been passed down through generations of
+    engineer''s harness and carries tools that have been passed down through generations
+    of
 
     chief engineers. Despite his age, his mind is sharp and his dedication absolute.'
   action_flags: 22
@@ -1721,15 +1925,20 @@ mobiles:
   namelist: tavia mechanic master female
   short_desc: Master Mechanic Tavia
   long_desc: Tavia, a skilled master mechanic, works on equipment here.
-  detailed_desc: 'This capable female red Martian engineer is renowned for her mechanical skills. She can
+  detailed_desc: 'This capable female red Martian engineer is renowned for her mechanical
+    skills. She can
 
-    diagnose problems by sound alone and repairs equipment that others have given up on. Her
+    diagnose problems by sound alone and repairs equipment that others have given
+    up on. Her
 
-    harness is well-worn from constant use, and she always has the right tool for any job.
+    harness is well-worn from constant use, and she always has the right tool for
+    any job.
 
-    She''s pragmatic and no-nonsense, with little patience for bureaucracy or politics. Her
+    She''s pragmatic and no-nonsense, with little patience for bureaucracy or politics.
+    Her
 
-    loyalty is to the factory and its mission, not to individuals. She''s suspicious of outsiders
+    loyalty is to the factory and its mission, not to individuals. She''s suspicious
+    of outsiders
 
     but will grudgingly respect competence when she sees it.'
   action_flags: 22
@@ -1740,15 +1949,20 @@ mobiles:
   namelist: or jat security commander officer
   short_desc: Security Commander Jat Or
   long_desc: Commander Jat Or oversees security operations with military precision.
-  detailed_desc: 'This military officer transferred to factory security after distinguished service in Helium''s
+  detailed_desc: 'This military officer transferred to factory security after distinguished
+    service in Helium''s
 
-    forces. He''s paranoid about sabotage and maintains constant vigilance against all threats.
+    forces. He''s paranoid about sabotage and maintains constant vigilance against
+    all threats.
 
-    His scarlet and gold harness bears both military honors and the factory security insignia.
+    His scarlet and gold harness bears both military honors and the factory security
+    insignia.
 
-    He drills his guards constantly and personally investigates anything suspicious. His methods
+    He drills his guards constantly and personally investigates anything suspicious.
+    His methods
 
-    are sometimes harsh, but he''s proven effective at stopping several sabotage attempts. He
+    are sometimes harsh, but he''s proven effective at stopping several sabotage attempts.
+    He
 
     will test newcomers'' loyalty before trusting them.'
   action_flags: 2
@@ -1769,18 +1983,25 @@ mobiles:
 - vnum: 4107
   namelist: kantos old ancient engineer
   short_desc: Old Man Kantos
-  long_desc: Ancient Kantos, an engineer of incredible age, rests here with stories to tell.
-  detailed_desc: 'This incredibly ancient red Martian has served at the factory for nearly a thousand years.
+  long_desc: Ancient Kantos, an engineer of incredible age, rests here with stories
+    to tell.
+  detailed_desc: 'This incredibly ancient red Martian has served at the factory for
+    nearly a thousand years.
 
-    His weathered face is lined with age, but his eyes still hold intelligence and memory. He''s
+    His weathered face is lined with age, but his eyes still hold intelligence and
+    memory. He''s
 
-    seen countless engineers come and go, and he remembers techniques and knowledge that others
+    seen countless engineers come and go, and he remembers techniques and knowledge
+    that others
 
-    have forgotten. He''s too old for heavy work now, but the younger engineers seek his counsel,
+    have forgotten. He''s too old for heavy work now, but the younger engineers seek
+    his counsel,
 
-    and he gladly shares his vast experience. He tells stories of the factory''s history and the
+    and he gladly shares his vast experience. He tells stories of the factory''s history
+    and the
 
-    ancient Martians who built it, keeping alive knowledge that might otherwise be lost.'
+    ancient Martians who built it, keeping alive knowledge that might otherwise be
+    lost.'
   action_flags: 22
   affection_flags: 2
   alignment: 2
@@ -1789,15 +2010,20 @@ mobiles:
   namelist: spy zodangan infiltrator agent
   short_desc: a Zodangan spy
   long_desc: A figure trying to look like a factory worker lurks here suspiciously.
-  detailed_desc: 'This red Martian is actually a Zodangan agent sent to infiltrate and sabotage the factory.
+  detailed_desc: 'This red Martian is actually a Zodangan agent sent to infiltrate
+    and sabotage the factory.
 
-    His disguise as a factory worker is good but not perfect - something about his manner is
+    His disguise as a factory worker is good but not perfect - something about his
+    manner is
 
-    wrong to those who know what to look for. He carries tools that look legitimate but are
+    wrong to those who know what to look for. He carries tools that look legitimate
+    but are
 
-    actually designed for sabotage. If discovered, he''ll fight desperately to escape or complete
+    actually designed for sabotage. If discovered, he''ll fight desperately to escape
+    or complete
 
-    his mission. Zodanga would love to control the factory and gain leverage over all Mars.'
+    his mission. Zodanga would love to control the factory and gain leverage over
+    all Mars.'
   action_flags: 2
   affection_flags: 128
   alignment: 800
@@ -1817,13 +2043,17 @@ mobiles:
   namelist: warrior rogue mercenary saboteur
   short_desc: a rogue warrior
   long_desc: A dangerous-looking mercenary warrior lurks here with hostile intent.
-  detailed_desc: 'This mercenary has been hired by enemies of Helium to disrupt the factory. He''s a skilled
+  detailed_desc: 'This mercenary has been hired by enemies of Helium to disrupt the
+    factory. He''s a skilled
 
-    fighter who cares only about his payment, not the catastrophic consequences of his actions.
+    fighter who cares only about his payment, not the catastrophic consequences of
+    his actions.
 
-    His harness is dark-colored to avoid detection, and he carries weapons designed for both
+    His harness is dark-colored to avoid detection, and he carries weapons designed
+    for both
 
-    combat and sabotage. He''ll attack anyone who threatens to expose him, and he''s dangerous
+    combat and sabotage. He''ll attack anyone who threatens to expose him, and he''s
+    dangerous
 
     enough to be a serious threat.'
   action_flags: 2
@@ -1845,11 +2075,14 @@ mobiles:
   namelist: assassin professional killer agent
   short_desc: a professional assassin
   long_desc: A deadly assassin moves through the shadows here.
-  detailed_desc: 'This highly skilled assassin has been sent to kill key factory personnel or plant destructive
+  detailed_desc: 'This highly skilled assassin has been sent to kill key factory personnel
+    or plant destructive
 
-    devices. His combat abilities are exceptional, and he uses stealth and surprise to maximum
+    devices. His combat abilities are exceptional, and he uses stealth and surprise
+    to maximum
 
-    advantage. His dark harness blends with shadows, and his weapons are designed for silent
+    advantage. His dark harness blends with shadows, and his weapons are designed
+    for silent
 
     kills. He represents one of the most serious threats the factory faces - a professional
 
@@ -1873,13 +2106,16 @@ mobiles:
   namelist: guard patrol factory security
   short_desc: a factory patrol guard
   long_desc: A factory guard patrols here, maintaining security.
-  detailed_desc: 'This guard patrols the factory corridors and chambers, watching for intruders, fires, or
+  detailed_desc: 'This guard patrols the factory corridors and chambers, watching
+    for intruders, fires, or
 
-    equipment malfunctions. He wears reinforced armor and carries both sword and rifle. He''s
+    equipment malfunctions. He wears reinforced armor and carries both sword and rifle.
+    He''s
 
     been trained to respond to various emergencies and knows the factory layout intimately.
 
-    While not as elite as the command guards, he''s still a competent and dedicated defender
+    While not as elite as the command guards, he''s still a competent and dedicated
+    defender
 
     of Mars'' most critical facility.'
   action_flags: 2
@@ -1901,13 +2137,17 @@ mobiles:
   namelist: technician factory specialist
   short_desc: a factory technician
   long_desc: A specialized technician works on delicate equipment here.
-  detailed_desc: 'This red Martian technician specializes in the most delicate and complex factory systems.
+  detailed_desc: 'This red Martian technician specializes in the most delicate and
+    complex factory systems.
 
-    He wears precision tools and magnification lenses, working on components that require
+    He wears precision tools and magnification lenses, working on components that
+    require
 
-    extreme care. He''s less physically capable than the field engineers but possesses knowledge
+    extreme care. He''s less physically capable than the field engineers but possesses
+    knowledge
 
-    of specific systems that makes him invaluable. He''s completely focused on his work and
+    of specific systems that makes him invaluable. He''s completely focused on his
+    work and
 
     can be startled by unexpected interruptions.'
   action_flags: 22
@@ -1918,13 +2158,17 @@ mobiles:
   namelist: operator control systems
   short_desc: a systems operator
   long_desc: A control systems operator monitors displays here.
-  detailed_desc: 'This engineer''s role is to monitor the factory''s control systems and alert others to
+  detailed_desc: 'This engineer''s role is to monitor the factory''s control systems
+    and alert others to
 
-    problems. He sits at control stations, watching readouts and gauges that display the
+    problems. He sits at control stations, watching readouts and gauges that display
+    the
 
-    factory''s status. He''s trained to recognize abnormal patterns and knows the emergency
+    factory''s status. He''s trained to recognize abnormal patterns and knows the
+    emergency
 
-    procedures for various failures. While not as physically active as field engineers, his
+    procedures for various failures. While not as physically active as field engineers,
+    his
 
     monitoring prevents small problems from becoming catastrophes.'
   action_flags: 22
@@ -1935,13 +2179,17 @@ mobiles:
   namelist: maintenance worker factory crew
   short_desc: a maintenance worker
   long_desc: A maintenance worker performs routine upkeep here.
-  detailed_desc: 'This red Martian performs the essential but unglamorous work of keeping the factory clean
+  detailed_desc: 'This red Martian performs the essential but unglamorous work of
+    keeping the factory clean
 
-    and maintained. He repairs minor damage, lubricates moving parts, cleans filters, and
+    and maintained. He repairs minor damage, lubricates moving parts, cleans filters,
+    and
 
-    handles countless other tasks that keep the ancient systems running smoothly. While not
+    handles countless other tasks that keep the ancient systems running smoothly.
+    While not
 
-    as skilled as the engineers, his work is important, and he takes pride in keeping his
+    as skilled as the engineers, his work is important, and he takes pride in keeping
+    his
 
     sections in perfect condition.'
   action_flags: 22
@@ -1952,13 +2200,17 @@ mobiles:
   namelist: clerk administrator records
   short_desc: a factory clerk
   long_desc: An administrative clerk manages records and paperwork here.
-  detailed_desc: 'This civilian administrator handles the endless paperwork required to operate the factory.
+  detailed_desc: 'This civilian administrator handles the endless paperwork required
+    to operate the factory.
 
-    He tracks production, manages schedules, files reports, and maintains the historical records
+    He tracks production, manages schedules, files reports, and maintains the historical
+    records
 
-    that document the factory''s operation. He''s not a warrior or engineer, but his organizational
+    that document the factory''s operation. He''s not a warrior or engineer, but his
+    organizational
 
-    skills keep the factory running efficiently. He knows where every document is filed and can
+    skills keep the factory running efficiently. He knows where every document is
+    filed and can
 
     retrieve information instantly when needed.'
   action_flags: 22
@@ -1969,13 +2221,17 @@ mobiles:
   namelist: inspector quality control
   short_desc: a quality control inspector
   long_desc: A quality inspector examines output here carefully.
-  detailed_desc: 'This engineer''s responsibility is to monitor the quality of the factory''s oxygen output.
+  detailed_desc: 'This engineer''s responsibility is to monitor the quality of the
+    factory''s oxygen output.
 
-    He uses sophisticated instruments to analyze gas samples, ensuring the atmosphere being
+    He uses sophisticated instruments to analyze gas samples, ensuring the atmosphere
+    being
 
-    produced meets exacting standards. His work requires meticulous attention to detail and
+    produced meets exacting standards. His work requires meticulous attention to detail
+    and
 
-    deep knowledge of atmospheric chemistry. Any deviation from standards must be reported
+    deep knowledge of atmospheric chemistry. Any deviation from standards must be
+    reported
 
     immediately and corrected.'
   action_flags: 22
@@ -1986,15 +2242,20 @@ mobiles:
   namelist: scientist researcher analyst
   short_desc: a factory scientist
   long_desc: A research scientist studies the ancient technology here.
-  detailed_desc: 'This brilliant red Martian dedicates his life to understanding the factory''s ancient systems.
+  detailed_desc: 'This brilliant red Martian dedicates his life to understanding the
+    factory''s ancient systems.
 
-    Unlike the practical engineers who keep things running, he seeks to truly comprehend the
+    Unlike the practical engineers who keep things running, he seeks to truly comprehend
+    the
 
-    principles behind the technology. His research has led to insights that improved maintenance
+    principles behind the technology. His research has led to insights that improved
+    maintenance
 
-    procedures and prevented failures. He wears scholar''s robes over an engineer''s harness,
+    procedures and prevented failures. He wears scholar''s robes over an engineer''s
+    harness,
 
-    symbolizing his dual role. His discoveries are carefully documented for future generations.'
+    symbolizing his dual role. His discoveries are carefully documented for future
+    generations.'
   action_flags: 22
   affection_flags: 2
   alignment: 2
@@ -2003,13 +2264,17 @@ mobiles:
   namelist: medic factory doctor physician
   short_desc: a factory medic
   long_desc: A medical professional tends to injured workers here.
-  detailed_desc: 'This trained physician provides medical care for factory personnel. The work here is
+  detailed_desc: 'This trained physician provides medical care for factory personnel.
+    The work here is
 
-    dangerous - burns, radiation exposure, crushing injuries, and chemical exposure all occur
+    dangerous - burns, radiation exposure, crushing injuries, and chemical exposure
+    all occur
 
-    despite safety precautions. He maintains a small infirmary and knows how to treat the
+    despite safety precautions. He maintains a small infirmary and knows how to treat
+    the
 
-    unique injuries that can result from working with ancient technology. His knowledge has
+    unique injuries that can result from working with ancient technology. His knowledge
+    has
 
     saved countless lives over his years of service.'
   action_flags: 22
@@ -2020,13 +2285,17 @@ mobiles:
   namelist: cook factory kitchen staff
   short_desc: a factory cook
   long_desc: A cook prepares meals for the factory workers.
-  detailed_desc: 'This red Martian manages the factory''s kitchen, preparing meals for the workers who cannot
+  detailed_desc: 'This red Martian manages the factory''s kitchen, preparing meals
+    for the workers who cannot
 
-    leave their posts for long. He''s adapted to working with limited resources and creates
+    leave their posts for long. He''s adapted to working with limited resources and
+    creates
 
-    surprisingly good meals from basic ingredients. He knows everyone who works at the factory
+    surprisingly good meals from basic ingredients. He knows everyone who works at
+    the factory
 
-    and hears all the gossip, making him an excellent source of information. He takes pride
+    and hears all the gossip, making him an excellent source of information. He takes
+    pride
 
     in keeping workers well-fed and maintaining morale.'
   action_flags: 22
@@ -2037,15 +2306,20 @@ mobiles:
   namelist: guardian mechanical automated
   short_desc: an automated guardian
   long_desc: A mechanical guardian stands motionless here, protecting this area.
-  detailed_desc: 'This is one of the factory''s automated defensive systems, built by the ancient Martians.
+  detailed_desc: 'This is one of the factory''s automated defensive systems, built
+    by the ancient Martians.
 
-    The guardian appears to be a mechanical construct, vaguely humanoid but clearly not alive.
+    The guardian appears to be a mechanical construct, vaguely humanoid but clearly
+    not alive.
 
-    It stands motionless until unauthorized persons enter restricted areas, then activates with
+    It stands motionless until unauthorized persons enter restricted areas, then activates
+    with
 
-    frightening speed. Its metal body is incredibly strong, and it''s armed with both physical
+    frightening speed. Its metal body is incredibly strong, and it''s armed with both
+    physical
 
-    weapons and energy beams. The guardians are nearly indestructible and follow their ancient
+    weapons and energy beams. The guardians are nearly indestructible and follow their
+    ancient
 
     programming without mercy or hesitation.'
   action_flags: 2
@@ -2081,9 +2355,11 @@ objects:
   rent: 0
   extra_descriptions:
   - keywords: key
-    description: 'This security key grants access to high-security areas of the factory. It''s marked with
+    description: 'This security key grants access to high-security areas of the factory.
+      It''s marked with
 
-      a red color code and the factory insignia. Only senior personnel are issued these keys.'
+      a red color code and the factory insignia. Only senior personnel are issued
+      these keys.'
   affects: []
 - vnum: 4051
   namelist: key core blue
@@ -2102,9 +2378,11 @@ objects:
   rent: 0
   extra_descriptions:
   - keywords: key
-    description: 'This key grants access to the radium power core chambers. It''s marked with radiation
+    description: 'This key grants access to the radium power core chambers. It''s
+      marked with radiation
 
-      hazard symbols and is issued only to authorized personnel who must access the core for
+      hazard symbols and is issued only to authorized personnel who must access the
+      core for
 
       maintenance or monitoring.'
   affects: []
@@ -2125,7 +2403,8 @@ objects:
   rent: 0
   extra_descriptions:
   - keywords: key
-    description: 'This key opens administrative and restricted storage areas. It''s marked with green
+    description: 'This key opens administrative and restricted storage areas. It''s
+      marked with green
 
       color coding and administrative symbols.'
   affects: []
@@ -2146,9 +2425,11 @@ objects:
   rent: 0
   extra_descriptions:
   - keywords: key
-    description: 'This key opens maintenance access points including the hidden trapdoors to the lower
+    description: 'This key opens maintenance access points including the hidden trapdoors
+      to the lower
 
-      levels. It''s an old key, suggesting these passages have been sealed for a long time.'
+      levels. It''s an old key, suggesting these passages have been sealed for a long
+      time.'
   affects: []
 - vnum: 4054
   namelist: sword factory guard elite
@@ -2167,9 +2448,11 @@ objects:
   rent: 225
   extra_descriptions:
   - keywords: sword longsword
-    description: 'This superior longsword is issued to factory guards. The blade is engraved with the
+    description: 'This superior longsword is issued to factory guards. The blade is
+      engraved with the
 
-      factory''s insignia - Mars surrounded by atmosphere. It''s perfectly balanced and
+      factory''s insignia - Mars surrounded by atmosphere. It''s perfectly balanced
+      and
 
       maintained to exacting standards.'
   affects: []
@@ -2190,9 +2473,11 @@ objects:
   rent: 350
   extra_descriptions:
   - keywords: rifle weapon
-    description: 'This enhanced radium rifle is superior to standard military issue. Factory guards need
+    description: 'This enhanced radium rifle is superior to standard military issue.
+      Factory guards need
 
-      the best equipment, and this weapon reflects that. It''s more accurate and powerful than
+      the best equipment, and this weapon reflects that. It''s more accurate and powerful
+      than
 
       common rifles, with improved energy cells.'
   affects: []
@@ -2213,9 +2498,11 @@ objects:
   rent: 175
   extra_descriptions:
   - keywords: armor harness
-    description: 'This reinforced harness provides excellent protection while maintaining mobility. It''s
+    description: 'This reinforced harness provides excellent protection while maintaining
+      mobility. It''s
 
-      marked with the factory''s insignia and includes additional plating at vital points.
+      marked with the factory''s insignia and includes additional plating at vital
+      points.
 
       Factory guards wear the best armor available.'
   affects: []
@@ -2236,9 +2523,11 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: helmet
-    description: 'This helmet provides good head protection and includes a face guard that can be lowered.
+    description: 'This helmet provides good head protection and includes a face guard
+      that can be lowered.
 
-      The factory insignia is prominently displayed, marking the wearer as a factory defender.'
+      The factory insignia is prominently displayed, marking the wearer as a factory
+      defender.'
   affects: []
 - vnum: 4058
   namelist: tools engineering set
@@ -2257,9 +2546,11 @@ objects:
   rent: 150
   extra_descriptions:
   - keywords: tools set
-    description: 'This set contains the tools needed for factory maintenance work - wrenches, drivers,
+    description: 'This set contains the tools needed for factory maintenance work
+      - wrenches, drivers,
 
-      probes, and specialized implements for working with ancient Martian technology. Some of
+      probes, and specialized implements for working with ancient Martian technology.
+      Some of
 
       the tools themselves are of ancient design, irreplaceable if lost.'
   affects: []
@@ -2280,11 +2571,14 @@ objects:
   rent: 375
   extra_descriptions:
   - keywords: manual book
-    description: 'This is one of the original technical manuals created by the ancient Martians who built
+    description: 'This is one of the original technical manuals created by the ancient
+      Martians who built
 
-      the factory. While much of the language is archaic and difficult to understand, it contains
+      the factory. While much of the language is archaic and difficult to understand,
+      it contains
 
-      invaluable information about the factory''s systems. Scholars and engineers study these
+      invaluable information about the factory''s systems. Scholars and engineers
+      study these
 
       texts constantly, and each one is precious beyond price.'
   affects: []
@@ -2305,9 +2599,11 @@ objects:
   rent: 75
   extra_descriptions:
   - keywords: manual notes
-    description: 'This modern manual compiles the knowledge gained by generations of factory engineers.
+    description: 'This modern manual compiles the knowledge gained by generations
+      of factory engineers.
 
-      It''s filled with handwritten notes, diagrams, and troubleshooting procedures. While not
+      It''s filled with handwritten notes, diagrams, and troubleshooting procedures.
+      While not
 
       as authoritative as the ancient texts, it''s more practical for day-to-day operations.'
   affects: []
@@ -2328,7 +2624,8 @@ objects:
   rent: 50
   extra_descriptions:
   - keywords: badge id
-    description: 'This badge identifies the wearer as authorized factory personnel. It includes a
+    description: 'This badge identifies the wearer as authorized factory personnel.
+      It includes a
 
       photograph, name, and security clearance level. Guards check these badges frequently,
 
@@ -2351,7 +2648,8 @@ objects:
   rent: 40
   extra_descriptions:
   - keywords: bottle sample
-    description: 'This sealed bottle contains a sample of the factory''s oxygen output for testing. The
+    description: 'This sealed bottle contains a sample of the factory''s oxygen output
+      for testing. The
 
       gas is pure and breathable, though concentrated beyond normal atmospheric levels.'
   affects: []
@@ -2372,11 +2670,14 @@ objects:
   rent: 200
   extra_descriptions:
   - keywords: scanner device
-    description: 'This device can scan factory equipment and provide diagnostic information about its
+    description: 'This device can scan factory equipment and provide diagnostic information
+      about its
 
-      condition and operation. It combines ancient Martian sensor technology with modern
+      condition and operation. It combines ancient Martian sensor technology with
+      modern
 
-      readout displays. Engineers use these scanners to detect problems before they become
+      readout displays. Engineers use these scanners to detect problems before they
+      become
 
       critical failures.'
   affects: []
@@ -2397,11 +2698,14 @@ objects:
   rent: 225
   extra_descriptions:
   - keywords: suit protective
-    description: 'This suit provides protection against the radiation in the power core areas. It''s made
+    description: 'This suit provides protection against the radiation in the power
+      core areas. It''s made
 
-      from materials that block most radiation while remaining flexible enough for work. The
+      from materials that block most radiation while remaining flexible enough for
+      work. The
 
-      suit includes a helmet with filtered air supply. Even with the suit, exposure time in
+      suit includes a helmet with filtered air supply. Even with the suit, exposure
+      time in
 
       the core is strictly limited.'
   affects: []
@@ -2422,9 +2726,11 @@ objects:
   rent: 175
   extra_descriptions:
   - keywords: pistol weapon
-    description: 'This compact radium pistol is designed for close quarters combat in the factory''s
+    description: 'This compact radium pistol is designed for close quarters combat
+      in the factory''s
 
-      corridors and chambers. It''s less powerful than a rifle but easier to maneuver in
+      corridors and chambers. It''s less powerful than a rifle but easier to maneuver
+      in
 
       tight spaces. Officers and special personnel often carry these as sidearms.'
   affects: []
@@ -2445,7 +2751,8 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: dagger blade
-    description: 'This dagger is standard issue for factory security personnel. It''s designed for both
+    description: 'This dagger is standard issue for factory security personnel. It''s
+      designed for both
 
       combat and utility work, with a strong blade that can serve as a tool when needed.'
   affects: []
@@ -2466,9 +2773,11 @@ objects:
   rent: 125
   extra_descriptions:
   - keywords: vial medicine antidote
-    description: 'This alchemical preparation can counteract some effects of radiation poisoning. It''s
+    description: 'This alchemical preparation can counteract some effects of radiation
+      poisoning. It''s
 
-      kept in stock for core workers who may receive dangerous doses. The medicine is expensive
+      kept in stock for core workers who may receive dangerous doses. The medicine
+      is expensive
 
       and difficult to produce, but essential for protecting core maintenance personnel.'
   affects: []
@@ -2489,9 +2798,11 @@ objects:
   rent: 40
   extra_descriptions:
   - keywords: gloves
-    description: 'These heavy gloves protect hands from heat, cold, electricity, and chemicals. They''re
+    description: 'These heavy gloves protect hands from heat, cold, electricity, and
+      chemicals. They''re
 
-      essential equipment for engineers working with the factory''s various systems. The
+      essential equipment for engineers working with the factory''s various systems.
+      The
 
       insulation is remarkable, allowing work in extreme conditions.'
   affects: []
@@ -2512,9 +2823,11 @@ objects:
   rent: 25
   extra_descriptions:
   - keywords: goggles
-    description: 'These goggles protect eyes from chemical splashes, flying debris, and harmful radiation.
+    description: 'These goggles protect eyes from chemical splashes, flying debris,
+      and harmful radiation.
 
-      They''re required equipment in many factory areas. The lenses are made from a material
+      They''re required equipment in many factory areas. The lenses are made from
+      a material
 
       that doesn''t scratch or fog, another bit of ancient technology.'
   affects: []
@@ -2535,11 +2848,14 @@ objects:
   rent: 65
   extra_descriptions:
   - keywords: lamp light
-    description: 'This lamp uses a tiny radium element to provide steady, reliable light. Unlike oil or
+    description: 'This lamp uses a tiny radium element to provide steady, reliable
+      light. Unlike oil or
 
-      electric lamps, it never needs fuel or recharging - it will glow steadily for centuries.
+      electric lamps, it never needs fuel or recharging - it will glow steadily for
+      centuries.
 
-      The light is slightly blue-tinged but more than adequate for working in dark areas.'
+      The light is slightly blue-tinged but more than adequate for working in dark
+      areas.'
   affects: []
 - vnum: 4071
   namelist: artifact ancient component
@@ -2558,9 +2874,11 @@ objects:
   rent: 500
   extra_descriptions:
   - keywords: artifact component
-    description: 'This is a component from the factory''s ancient systems - purpose unknown but clearly
+    description: 'This is a component from the factory''s ancient systems - purpose
+      unknown but clearly
 
-      important. It''s made from materials unknown to modern science and displays properties
+      important. It''s made from materials unknown to modern science and displays
+      properties
 
       that seem impossible. Scholars would pay highly for such artifacts to study.'
   affects: []
@@ -2581,9 +2899,11 @@ objects:
   rent: 300
   extra_descriptions:
   - keywords: crystal
-    description: 'This crystal is used in some of the factory''s energy systems. It glows with an inner
+    description: 'This crystal is used in some of the factory''s energy systems. It
+      glows with an inner
 
-      light and feels warm to the touch. The crystal can focus and direct energy flows in
+      light and feels warm to the touch. The crystal can focus and direct energy flows
+      in
 
       ways that modern technology cannot duplicate. These crystals are found in various
 
@@ -2606,11 +2926,14 @@ objects:
   rent: 250
   extra_descriptions:
   - keywords: schematic blueprint
-    description: 'This is an original blueprint created by the ancient Martians, showing the design of
+    description: 'This is an original blueprint created by the ancient Martians, showing
+      the design of
 
-      some factory system. Even experts struggle to fully understand these schematics, as
+      some factory system. Even experts struggle to fully understand these schematics,
+      as
 
-      they assume knowledge of principles modern science doesn''t possess. Still, they''re
+      they assume knowledge of principles modern science doesn''t possess. Still,
+      they''re
 
       invaluable for maintenance and repair work.'
   affects: []
@@ -2631,9 +2954,11 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: communicator radio
-    description: 'This radio allows communication throughout the factory complex. It''s essential for
+    description: 'This radio allows communication throughout the factory complex.
+      It''s essential for
 
-      coordinating operations and responding to emergencies. The radios use technology that
+      coordinating operations and responding to emergencies. The radios use technology
+      that
 
       works despite the interference from the factory''s powerful systems.'
   affects: []
@@ -2654,9 +2979,11 @@ objects:
   rent: 20
   extra_descriptions:
   - keywords: rations package
-    description: 'These rations are designed to provide complete nutrition for factory workers who can''t
+    description: 'These rations are designed to provide complete nutrition for factory
+      workers who can''t
 
-      leave their posts for regular meals. They''re not particularly tasty but are filling
+      leave their posts for regular meals. They''re not particularly tasty but are
+      filling
 
       and nutritious. Workers joke that the rations are as indestructible as the factory
 
