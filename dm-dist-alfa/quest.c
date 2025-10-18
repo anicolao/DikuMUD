@@ -38,6 +38,27 @@ struct quest_data *find_quest_by_giver(int giver_vnum)
 	return NULL;
 }
 
+/* Find an available quest for a character from a specific giver
+ * This function looks through all quests from the giver and returns
+ * the first one that the player doesn't already have active.
+ * This allows NPCs to offer multiple different quests.
+ */
+struct quest_data *find_available_quest(struct char_data *ch, int giver_vnum)
+{
+	int i;
+	
+	for (i = 0; i < top_of_quest_table; i++) {
+		if (quest_index[i].giver_vnum == giver_vnum) {
+			/* Check if player already has this quest type */
+			if (!has_quest_type(ch, quest_index[i].quest_type)) {
+				return &quest_index[i];
+			}
+		}
+	}
+	
+	return NULL;
+}
+
 /* Check if character has a quest of specific type */
 int has_quest_type(struct char_data *ch, int quest_type)
 {
