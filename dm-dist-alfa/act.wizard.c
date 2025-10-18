@@ -1537,4 +1537,221 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
 	}
 }
 
+void do_locate(struct char_data *ch, char *argument, int cmd)
+{
+	struct char_data *i;
+	struct obj_data *k;
+	char type[MAX_INPUT_LENGTH], name[MAX_INPUT_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	int number, found = 0;
+
+	extern struct char_data *character_list;
+	extern struct obj_data *object_list;
+	extern struct index_data *mob_index;
+	extern struct index_data *obj_index;
+	extern int top_of_mobt;
+	extern int top_of_objt;
+
+	if (IS_NPC(ch))
+		return;
+
+	argument_interpreter(argument, type, name);
+
+	if (!*type)
+	{
+		send_to_char("Syntax:\n\r", ch);
+		send_to_char("  locate char <vnum>     - Find a mob by virtual number\n\r", ch);
+		send_to_char("  locate obj <vnum>      - Find an object by virtual number\n\r", ch);
+		send_to_char("  locate <keywords>      - Find mobs or objects by keywords\n\r", ch);
+		return;
+	}
+
+	/* Check if first argument is "char" or "obj" */
+	if (is_abbrev(type, "char"))
+	{
+		if (!*name || !isdigit(*name))
+		{
+			send_to_char("You must specify a virtual number.\n\r", ch);
+			return;
+		}
+
+		number = atoi(name);
+		
+		/* Search for all instances of this mob */
+		for (i = character_list; i; i = i->next)
+		{
+			if (IS_NPC(i) && mob_index[i->nr].virtual == number)
+			{
+				found++;
+				snprintf(buf, sizeof(buf), "%3d. %-25s - [%5d] %s\n\r",
+					found,
+					GET_NAME(i),
+					world[i->in_room].number,
+					world[i->in_room].name);
+				send_to_char(buf, ch);
+			}
+		}
+
+		if (!found)
+			send_to_char("No mobiles found with that virtual number.\n\r", ch);
+		else
+		{
+			snprintf(buf, sizeof(buf), "\n\rTotal found: %d\n\r", found);
+			send_to_char(buf, ch);
+		}
+	}
+	else if (is_abbrev(type, "obj"))
+	{
+		if (!*name || !isdigit(*name))
+		{
+			send_to_char("You must specify a virtual number.\n\r", ch);
+			return;
+		}
+
+		number = atoi(name);
+		
+		/* Search for all instances of this object */
+		for (k = object_list; k; k = k->next)
+		{
+			if (obj_index[k->item_number].virtual == number)
+			{
+				found++;
+				if (k->in_room != NOWHERE)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - [%5d] %s\n\r",
+						found,
+						k->short_description,
+						world[k->in_room].number,
+						world[k->in_room].name);
+					send_to_char(buf, ch);
+				}
+				else if (k->carried_by)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - carried by %s\n\r",
+						found,
+						k->short_description,
+						GET_NAME(k->carried_by));
+					send_to_char(buf, ch);
+				}
+				else if (k->in_obj)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - in %s\n\r",
+						found,
+						k->short_description,
+						k->in_obj->short_description);
+					send_to_char(buf, ch);
+				}
+				else
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - (unknown location)\n\r",
+						found,
+						k->short_description);
+					send_to_char(buf, ch);
+				}
+			}
+		}
+
+		if (!found)
+			send_to_char("No objects found with that virtual number.\n\r", ch);
+		else
+		{
+			snprintf(buf, sizeof(buf), "\n\rTotal found: %d\n\r", found);
+			send_to_char(buf, ch);
+		}
+	}
+	else
+	{
+		/* Keyword search - search both mobs and objects */
+		/* Use the original argument for keyword search */
+		char *keywords = argument;
+		
+		/* Skip leading spaces */
+		while (*keywords && *keywords == ' ')
+			keywords++;
+
+		if (!*keywords)
+		{
+			send_to_char("You must specify keywords to search for.\n\r", ch);
+			return;
+		}
+
+		send_to_char("Searching for mobiles...\n\r", ch);
+		
+		/* Search mobiles */
+		for (i = character_list; i; i = i->next)
+		{
+			if (IS_NPC(i) && isname(keywords, i->player.name))
+			{
+				found++;
+				snprintf(buf, sizeof(buf), "%3d. %-25s - [%5d] %s\n\r",
+					found,
+					GET_NAME(i),
+					world[i->in_room].number,
+					world[i->in_room].name);
+				send_to_char(buf, ch);
+			}
+		}
+
+		if (!found)
+			send_to_char("No mobiles found.\n\r", ch);
+		else
+		{
+			snprintf(buf, sizeof(buf), "Mobiles found: %d\n\r", found);
+			send_to_char(buf, ch);
+		}
+
+		/* Search objects */
+		send_to_char("\n\rSearching for objects...\n\r", ch);
+		found = 0;
+		
+		for (k = object_list; k; k = k->next)
+		{
+			if (isname(keywords, k->name))
+			{
+				found++;
+				if (k->in_room != NOWHERE)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - [%5d] %s\n\r",
+						found,
+						k->short_description,
+						world[k->in_room].number,
+						world[k->in_room].name);
+					send_to_char(buf, ch);
+				}
+				else if (k->carried_by)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - carried by %s\n\r",
+						found,
+						k->short_description,
+						GET_NAME(k->carried_by));
+					send_to_char(buf, ch);
+				}
+				else if (k->in_obj)
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - in %s\n\r",
+						found,
+						k->short_description,
+						k->in_obj->short_description);
+					send_to_char(buf, ch);
+				}
+				else
+				{
+					snprintf(buf, sizeof(buf), "%3d. %-25s - (unknown location)\n\r",
+						found,
+						k->short_description);
+					send_to_char(buf, ch);
+				}
+			}
+		}
+
+		if (!found)
+			send_to_char("No objects found.\n\r", ch);
+		else
+		{
+			snprintf(buf, sizeof(buf), "Objects found: %d\n\r", found);
+			send_to_char(buf, ch);
+		}
+	}
+}
+
 
