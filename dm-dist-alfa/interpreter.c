@@ -169,6 +169,7 @@ void do_wiz(struct char_data *ch, char *argument, int cmd);
 void do_action(struct char_data *ch, char *arg, int cmd);
 void do_practice(struct char_data *ch, char *arg, int cmd);
 void do_zone(struct char_data *ch, char *arg, int cmd);
+void do_locate(struct char_data *ch, char *arg, int cmd);
 
 
 const char *make_salt(const char *lsalt) {
@@ -410,6 +411,7 @@ char *command[]=
 	"zone",      /* 222 */
 	"fill",      /* 223 */
 	"appraise",  /* 224 */
+	"locate",    /* 225 */
   "\n"
 };
 
@@ -989,6 +991,7 @@ void assign_command_pointers ( void )
 	COMMANDO(220,POSITION_STANDING,do_not_here,0);
 	COMMANDO(221,POSITION_RESTING,do_zone,0);
 	COMMANDO(223,POSITION_STANDING,do_not_here,0);
+	COMMANDO(224,POSITION_DEAD,do_locate,22);
 
 }
 
