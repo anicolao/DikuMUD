@@ -799,10 +799,17 @@ class TestExecutor:
         # Execute steps
         all_passed = True
         for i, step in enumerate(test_def.get('steps', []), 1):
-            print(f"  Step {i}: {step.get('description', step['action'])}")
-            if not self._execute_step(step):
-                all_passed = False
-                break
+            # Check if this is a loop construct
+            if 'loop' in step:
+                print(f"  Step {i}: Loop construct")
+                if not self._execute_loop(step['loop'], i):
+                    all_passed = False
+                    break
+            else:
+                print(f"  Step {i}: {step.get('description', step['action'])}")
+                if not self._execute_step(step):
+                    all_passed = False
+                    break
         
         # Cleanup
         if 'cleanup' in test_def:
@@ -817,6 +824,89 @@ class TestExecutor:
         # Starting room and gold would need to be set via game commands
         # which we skip for simplicity in this implementation
         pass
+    
+    def _execute_loop(self, loop_def: Dict[str, Any], base_step_num: int) -> bool:
+        """
+        Execute a loop construct.
+        
+        Loops allow repeating a set of steps with different variable values.
+        
+        Example:
+            loop:
+              variable: mobno
+              values: [3006, 3007, 3008]
+              steps:
+                - action: command
+                  command: "locate char ${mobno}"
+                  ...
+        
+        Args:
+            loop_def: Loop definition containing variable, values, and steps
+            base_step_num: Base step number for nested step numbering
+            
+        Returns:
+            True if all iterations passed, False otherwise
+        """
+        variable = loop_def.get('variable', 'item')
+        values = loop_def.get('values', [])
+        steps = loop_def.get('steps', [])
+        
+        if not values:
+            print(f"    ! Loop has no values to iterate")
+            return False
+        
+        if not steps:
+            print(f"    ! Loop has no steps to execute")
+            return False
+        
+        all_passed = True
+        for idx, value in enumerate(values, 1):
+            print(f"    Iteration {idx}/{len(values)}: {variable}={value}")
+            
+            # Execute each step in the loop with variable substitution
+            for step_idx, step in enumerate(steps, 1):
+                # Create a copy of the step with variable substitution
+                substituted_step = self._substitute_variables(step, {variable: str(value)})
+                
+                # Don't print step number to avoid clutter, just description
+                desc = substituted_step.get('description', substituted_step.get('action', ''))
+                if desc:
+                    print(f"      {desc}")
+                
+                if not self._execute_step(substituted_step):
+                    all_passed = False
+                    # Continue with remaining iterations even if one fails
+                    # This allows us to see which specific values fail
+                    break
+        
+        return all_passed
+    
+    def _substitute_variables(self, obj: Any, variables: Dict[str, str]) -> Any:
+        """
+        Recursively substitute variables in an object (dict, list, or string).
+        
+        Variables are substituted using ${varname} syntax.
+        
+        Args:
+            obj: Object to perform substitution on
+            variables: Dictionary of variable name -> value mappings
+            
+        Returns:
+            New object with variables substituted
+        """
+        if isinstance(obj, dict):
+            return {k: self._substitute_variables(v, variables) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [self._substitute_variables(item, variables) for item in obj]
+        elif isinstance(obj, str):
+            result = obj
+            for var_name, var_value in variables.items():
+                # Support both ${var} and $var syntax
+                result = result.replace(f"${{{var_name}}}", var_value)
+                result = result.replace(f"${var_name}", var_value)
+            return result
+        else:
+            return obj
     
     def _execute_step(self, step: Dict[str, Any]) -> bool:
         """
