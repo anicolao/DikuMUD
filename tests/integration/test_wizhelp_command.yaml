@@ -26,6 +26,8 @@ steps:
         message: "Should show wizard commands header"
       - pattern: "echo|force|goto"
         message: "Should list some wizard commands"
+      - pattern: "locate"
+        message: "Should list locate command"
       - pattern: "wizhelp <command>"
         message: "Should show usage hint"
 
@@ -70,6 +72,19 @@ steps:
     expected:
       - pattern: "no help|not found"
         message: "Should indicate help is not available for invalid commands"
+
+  - action: command
+    command: "wizhelp locate"
+    description: "Get help on the locate command"
+    expected:
+      - pattern: "LOCATE|locate"
+        message: "Should show locate command help"
+      - pattern: "Wizard command"
+        message: "Should indicate it's a wizard command"
+      - pattern: "Level 22"
+        message: "Should show the level requirement"
+      - pattern: "locate char.*vnum|locate obj.*vnum"
+        message: "Should show the usage syntax"
 
 result:
   should_pass: true

@@ -357,6 +357,47 @@ load <type> <number>
 Where <type> is either 'obj' or 'char', and number is the number of the object
 or character you wish to create.
 #
+LOCATE
+Wizard command (Level 22+)
+
+Usage: locate char <vnum>
+       locate obj <vnum>
+       locate <keywords>
+
+Finds all instances of mobs or objects in the game world. You can search by
+virtual number (vnum) for exact matches, or by keywords to find all matching
+entities.
+
+When searching by vnum:
+  - locate char <vnum>  : Finds all instances of a mob with that virtual number
+  - locate obj <vnum>   : Finds all instances of an object with that vnum
+
+When searching by keywords:
+  - locate <keywords>   : Searches for both mobs and objects matching keywords
+
+The output shows the location of each found entity:
+  - Room number and name for items in rooms
+  - Carrier name for items being carried by characters
+  - Container name for items inside other objects
+
+Examples:
+  > locate char 3000
+  (Shows all instances of mob vnum 3000 with their room locations)
+
+  > locate obj 3099
+  (Shows all instances of object vnum 3099 and where they are)
+
+  > locate scientist
+  (Searches for all mobs and objects with "scientist" in their keywords)
+
+This is useful for:
+  - Debugging zone resets and finding where specific entities load
+  - Locating missing quest items or NPCs
+  - Verifying that objects and mobs are loaded correctly
+  - World building and testing
+
+See also: LOAD, PURGE, STAT, GOTO
+#
 PURGE
 A way to make the world a little cleaner.
 Usage:
