@@ -11,7 +11,7 @@ setup:
   character:
     name: MultiQuestTest
     password: test
-    level: 20
+    level: 23
     class: warrior
   start_room: 3001  # Temple area
   gold: 1000

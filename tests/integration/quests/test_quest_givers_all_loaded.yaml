@@ -37,63 +37,63 @@ steps:
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3008 - Temple Priest (Quest 3003)
+  # Quest giver mob 3008 - Red Martian Beast-Handler (Quest 3003)
   - action: command
     command: "locate char 3008"
-    description: "Verify mob 3008 (Temple Priest) is loaded - gives Quest 3003"
+    description: "Verify mob 3008 (Red Martian Beast-Handler) is loaded - gives Quest 3003"
     expected:
-      - pattern: "priest|Priest"
-        message: "Should find Temple Priest"
+      - pattern: "beast-handler|Beast-Handler|handler|Handler|trainer|Trainer"
+        message: "Should find Red Martian Beast-Handler"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3780 - Jetan Master (Quest 3781)
+  # Quest giver mob 3780 - Gahan, Jed of Gathol (Quest 3781)
   - action: command
     command: "locate char 3780"
-    description: "Verify mob 3780 (Jetan Master) is loaded - gives Quest 3781"
+    description: "Verify mob 3780 (Gahan, Jed of Gathol) is loaded - gives Quest 3781"
     expected:
-      - pattern: "Jetan|jetan|master|Master"
-        message: "Should find Jetan Master"
+      - pattern: "gahan|Gahan|gathol|Gathol"
+        message: "Should find Gahan, Jed of Gathol"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3781 - Diplomat (Quest 3782)
+  # Quest giver mob 3781 - Palace Guard (Quest 3782)
   - action: command
     command: "locate char 3781"
-    description: "Verify mob 3781 (Diplomat) is loaded - gives Quest 3782"
+    description: "Verify mob 3781 (Palace Guard) is loaded - gives Quest 3782"
     expected:
-      - pattern: "diplomat|Diplomat"
-        message: "Should find Diplomat"
+      - pattern: "guard|Guard|palace|Palace"
+        message: "Should find Palace Guard"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3903 - Scholar (Quest 3902)
+  # Quest giver mob 3903 - Master Weaponsmith (Quest 3902)
   - action: command
     command: "locate char 3903"
-    description: "Verify mob 3903 (Scholar) is loaded - gives Quest 3902"
+    description: "Verify mob 3903 (Master Weaponsmith) is loaded - gives Quest 3902"
     expected:
-      - pattern: "scholar|Scholar"
-        message: "Should find Scholar"
+      - pattern: "weaponsmith|Weaponsmith|master|Master"
+        message: "Should find Master Weaponsmith"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3904 - Guard Commander (Quest 3903)
+  # Quest giver mob 3904 - Master Armorer (Quest 3903)
   - action: command
     command: "locate char 3904"
-    description: "Verify mob 3904 (Guard Commander) is loaded - gives Quest 3903"
+    description: "Verify mob 3904 (Master Armorer) is loaded - gives Quest 3903"
     expected:
-      - pattern: "guard|Guard|commander|Commander"
-        message: "Should find Guard Commander"
+      - pattern: "armorer|Armorer|master|Master"
+        message: "Should find Master Armorer"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 3925 - Noble Warrior (Quest 3901)
+  # Quest giver mob 3925 - Military Officer (Quest 3901)
   - action: command
     command: "locate char 3925"
-    description: "Verify mob 3925 (Noble Warrior) is loaded - gives Quest 3901"
+    description: "Verify mob 3925 (Military Officer) is loaded - gives Quest 3901"
     expected:
-      - pattern: "noble|Noble|warrior|Warrior"
-        message: "Should find Noble Warrior"
+      - pattern: "officer|Officer|military|Military"
+        message: "Should find Military Officer"
       - pattern: "\\[.*3.*\\]|room"
         message: "Should show room location"
 
@@ -102,7 +102,7 @@ steps:
     command: "locate char 4050"
     description: "Verify mob 4050 (Tars Tarkas) is loaded - gives Quest 4002"
     expected:
-      - pattern: "Tars|Tarkas"
+      - pattern: "tars|Tars|tarkas|Tarkas"
         message: "Should find Tars Tarkas"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
@@ -112,7 +112,7 @@ steps:
     command: "locate char 4051"
     description: "Verify mob 4051 (Sola) is loaded - gives Quest 4001"
     expected:
-      - pattern: "Sola|sola"
+      - pattern: "sola|Sola"
         message: "Should find Sola"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
@@ -122,7 +122,7 @@ steps:
     command: "locate char 4202"
     description: "Verify mob 4202 (Ras Thavas) is loaded - gives Quest 4205"
     expected:
-      - pattern: "Ras|Thavas"
+      - pattern: "thavas|Thavas|ras|Ras"
         message: "Should find Ras Thavas"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
@@ -132,28 +132,28 @@ steps:
     command: "locate char 4203"
     description: "Verify mob 4203 (Vad Varo) is loaded - gives Quest 4202"
     expected:
-      - pattern: "Vad|Varo"
+      - pattern: "varo|Varo|vad|Vad"
         message: "Should find Vad Varo"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4212 - Ancient Consciousness (Quest 4204)
+  # Quest giver mob 4212 - The First Engineer (Quest 4204)
   - action: command
     command: "locate char 4212"
-    description: "Verify mob 4212 (Ancient Consciousness) is loaded - gives Quest 4204"
+    description: "Verify mob 4212 (The First Engineer) is loaded - gives Quest 4204"
     expected:
-      - pattern: "consciousness|Consciousness|Ancient|ancient"
-        message: "Should find Ancient Consciousness"
+      - pattern: "engineer|Engineer|first|First|consciousness|Consciousness"
+        message: "Should find The First Engineer"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4214 - Power Technician (Quest 4203)
+  # Quest giver mob 4214 - Power Systems Technician (Quest 4203)
   - action: command
     command: "locate char 4214"
-    description: "Verify mob 4214 (Power Technician) is loaded - gives Quest 4203"
+    description: "Verify mob 4214 (Power Systems Technician) is loaded - gives Quest 4203"
     expected:
       - pattern: "technician|Technician|power|Power"
-        message: "Should find Power Technician"
+        message: "Should find Power Systems Technician"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
@@ -162,48 +162,48 @@ steps:
     command: "locate char 4215"
     description: "Verify mob 4215 (Biological Researcher) is loaded - gives Quest 4201"
     expected:
-      - pattern: "researcher|Researcher|biological|Biological"
+      - pattern: "researcher|Researcher|biological|Biological|scientist|Scientist"
         message: "Should find Biological Researcher"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4300 - Noble (Quest 4301)
+  # Quest giver mob 4300 - Thuvia, Princess of Ptarth (Quest 4301)
   - action: command
     command: "locate char 4300"
-    description: "Verify mob 4300 (Noble) is loaded - gives Quest 4301"
+    description: "Verify mob 4300 (Thuvia, Princess of Ptarth) is loaded - gives Quest 4301"
     expected:
-      - pattern: "noble|Noble"
-        message: "Should find Noble"
+      - pattern: "thuvia|Thuvia|princess|Princess"
+        message: "Should find Thuvia, Princess of Ptarth"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4301 - Ambassador (Quest 4302)
+  # Quest giver mob 4301 - Thuvan Dihn, Jeddak of Ptarth (Quest 4302)
   - action: command
     command: "locate char 4301"
-    description: "Verify mob 4301 (Ambassador) is loaded - gives Quest 4302"
+    description: "Verify mob 4301 (Thuvan Dihn, Jeddak of Ptarth) is loaded - gives Quest 4302"
     expected:
-      - pattern: "ambassador|Ambassador"
-        message: "Should find Ambassador"
+      - pattern: "thuvan|Thuvan|dihn|Dihn"
+        message: "Should find Thuvan Dihn"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4500 - Military Commander (Quest 4501)
+  # Quest giver mob 4500 - Kulan Tith, Jeddak of Kaol (Quest 4501)
   - action: command
     command: "locate char 4500"
-    description: "Verify mob 4500 (Military Commander) is loaded - gives Quest 4501"
+    description: "Verify mob 4500 (Kulan Tith, Jeddak of Kaol) is loaded - gives Quest 4501"
     expected:
-      - pattern: "commander|Commander|military|Military"
-        message: "Should find Military Commander"
+      - pattern: "kulan|Kulan|tith|Tith"
+        message: "Should find Kulan Tith"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
-  # Quest giver mob 4501 - Training Master (Quest 4502)
+  # Quest giver mob 4501 - Palace Guard (Quest 4502)
   - action: command
     command: "locate char 4501"
-    description: "Verify mob 4501 (Training Master) is loaded - gives Quest 4502"
+    description: "Verify mob 4501 (Palace Guard) is loaded - gives Quest 4502"
     expected:
-      - pattern: "training|Training|master|Master"
-        message: "Should find Training Master"
+      - pattern: "guard|Guard|palace|Palace"
+        message: "Should find Palace Guard"
       - pattern: "\\[.*4.*\\]|room"
         message: "Should show room location"
 
