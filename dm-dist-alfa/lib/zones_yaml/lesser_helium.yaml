@@ -4527,6 +4527,12 @@ resets:
   arg3: 16
 - command: M
   if_flag: 0
+  arg1: 3007
+  arg2: 1
+  arg3: 3021
+  comment: Quest giver for quests 3001, 3002, 3602
+- command: M
+  if_flag: 0
   arg1: 3060
   arg2: 10
   arg3: 3004

@@ -1,0 +1,244 @@
+# Integration test to verify all quest-giving mobs are loaded at startup
+# This ensures that all quests are accessible to players
+test:
+  id: quest_givers_all_loaded
+  description: "Verify all quest-giving mobs are loaded in the game at startup"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [quest, quest_givers, world_integrity]
+
+setup:
+  character:
+    name: QuestGiverCheck
+    password: test
+    level: 23  # High level wizard for locate command
+    class: warrior
+  start_room: 3001  # Temple area
+  gold: 1000
+
+steps:
+  # Quest giver mob 3006 - Red Martian Airship Captain (Quest 3601)
+  - action: command
+    command: "locate char 3006"
+    description: "Verify mob 3006 (Red Martian Airship Captain) is loaded - gives Quest 3601"
+    expected:
+      - pattern: "captain|Captain|airship|Airship"
+        message: "Should find Red Martian Airship Captain"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3007 - Red Martian Warrior (Quests 3001, 3002, 3602)
+  - action: command
+    command: "locate char 3007"
+    description: "Verify mob 3007 (Red Martian Warrior) is loaded - gives Quests 3001, 3002, 3602"
+    expected:
+      - pattern: "warrior|Warrior|Red Martian"
+        message: "Should find Red Martian Warrior"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3008 - Red Martian Beast-Handler (Quest 3003)
+  - action: command
+    command: "locate char 3008"
+    description: "Verify mob 3008 (Red Martian Beast-Handler) is loaded - gives Quest 3003"
+    expected:
+      - pattern: "beast-handler|Beast-Handler|handler|Handler|trainer|Trainer"
+        message: "Should find Red Martian Beast-Handler"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3780 - Gahan, Jed of Gathol (Quest 3781)
+  - action: command
+    command: "locate char 3780"
+    description: "Verify mob 3780 (Gahan, Jed of Gathol) is loaded - gives Quest 3781"
+    expected:
+      - pattern: "gahan|Gahan|gathol|Gathol"
+        message: "Should find Gahan, Jed of Gathol"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3781 - Palace Guard (Quest 3782)
+  - action: command
+    command: "locate char 3781"
+    description: "Verify mob 3781 (Palace Guard) is loaded - gives Quest 3782"
+    expected:
+      - pattern: "guard|Guard|palace|Palace"
+        message: "Should find Palace Guard"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3903 - Master Weaponsmith (Quest 3902)
+  - action: command
+    command: "locate char 3903"
+    description: "Verify mob 3903 (Master Weaponsmith) is loaded - gives Quest 3902"
+    expected:
+      - pattern: "weaponsmith|Weaponsmith|master|Master"
+        message: "Should find Master Weaponsmith"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3904 - Master Armorer (Quest 3903)
+  - action: command
+    command: "locate char 3904"
+    description: "Verify mob 3904 (Master Armorer) is loaded - gives Quest 3903"
+    expected:
+      - pattern: "armorer|Armorer|master|Master"
+        message: "Should find Master Armorer"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 3925 - Military Officer (Quest 3901)
+  - action: command
+    command: "locate char 3925"
+    description: "Verify mob 3925 (Military Officer) is loaded - gives Quest 3901"
+    expected:
+      - pattern: "officer|Officer|military|Military"
+        message: "Should find Military Officer"
+      - pattern: "\\[.*3.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4050 - Tars Tarkas (Quest 4002)
+  - action: command
+    command: "locate char 4050"
+    description: "Verify mob 4050 (Tars Tarkas) is loaded - gives Quest 4002"
+    expected:
+      - pattern: "tars|Tars|tarkas|Tarkas"
+        message: "Should find Tars Tarkas"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4051 - Sola (Quest 4001)
+  - action: command
+    command: "locate char 4051"
+    description: "Verify mob 4051 (Sola) is loaded - gives Quest 4001"
+    expected:
+      - pattern: "sola|Sola"
+        message: "Should find Sola"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4202 - Ras Thavas (Quest 4205)
+  - action: command
+    command: "locate char 4202"
+    description: "Verify mob 4202 (Ras Thavas) is loaded - gives Quest 4205"
+    expected:
+      - pattern: "thavas|Thavas|ras|Ras"
+        message: "Should find Ras Thavas"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4203 - Vad Varo (Quest 4202)
+  - action: command
+    command: "locate char 4203"
+    description: "Verify mob 4203 (Vad Varo) is loaded - gives Quest 4202"
+    expected:
+      - pattern: "varo|Varo|vad|Vad"
+        message: "Should find Vad Varo"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4212 - The First Engineer (Quest 4204)
+  - action: command
+    command: "locate char 4212"
+    description: "Verify mob 4212 (The First Engineer) is loaded - gives Quest 4204"
+    expected:
+      - pattern: "engineer|Engineer|first|First|consciousness|Consciousness"
+        message: "Should find The First Engineer"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4214 - Power Systems Technician (Quest 4203)
+  - action: command
+    command: "locate char 4214"
+    description: "Verify mob 4214 (Power Systems Technician) is loaded - gives Quest 4203"
+    expected:
+      - pattern: "technician|Technician|power|Power"
+        message: "Should find Power Systems Technician"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4215 - Biological Researcher (Quest 4201)
+  - action: command
+    command: "locate char 4215"
+    description: "Verify mob 4215 (Biological Researcher) is loaded - gives Quest 4201"
+    expected:
+      - pattern: "researcher|Researcher|biological|Biological|scientist|Scientist"
+        message: "Should find Biological Researcher"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4300 - Thuvia, Princess of Ptarth (Quest 4301)
+  - action: command
+    command: "locate char 4300"
+    description: "Verify mob 4300 (Thuvia, Princess of Ptarth) is loaded - gives Quest 4301"
+    expected:
+      - pattern: "thuvia|Thuvia|princess|Princess"
+        message: "Should find Thuvia, Princess of Ptarth"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4301 - Thuvan Dihn, Jeddak of Ptarth (Quest 4302)
+  - action: command
+    command: "locate char 4301"
+    description: "Verify mob 4301 (Thuvan Dihn, Jeddak of Ptarth) is loaded - gives Quest 4302"
+    expected:
+      - pattern: "thuvan|Thuvan|dihn|Dihn"
+        message: "Should find Thuvan Dihn"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4500 - Kulan Tith, Jeddak of Kaol (Quest 4501)
+  - action: command
+    command: "locate char 4500"
+    description: "Verify mob 4500 (Kulan Tith, Jeddak of Kaol) is loaded - gives Quest 4501"
+    expected:
+      - pattern: "kulan|Kulan|tith|Tith"
+        message: "Should find Kulan Tith"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+  # Quest giver mob 4501 - Palace Guard (Quest 4502)
+  - action: command
+    command: "locate char 4501"
+    description: "Verify mob 4501 (Palace Guard) is loaded - gives Quest 4502"
+    expected:
+      - pattern: "guard|Guard|palace|Palace"
+        message: "Should find Palace Guard"
+      - pattern: "\\[.*4.*\\]|room"
+        message: "Should show room location"
+
+result:
+  should_pass: true
+  description: |
+    This test verifies that all 19 quest-giving mobs in the game are properly
+    loaded and accessible to players at game startup. Each quest giver is
+    checked using the wizard 'locate char <vnum>' command.
+    
+    Quest Givers Checked:
+    - 3006: Helium Spy (1 quest)
+    - 3007: Red Martian Warrior (3 quests) 
+    - 3008: Temple Priest (1 quest)
+    - 3780: Jetan Master (1 quest)
+    - 3781: Diplomat (1 quest)
+    - 3903: Scholar (1 quest)
+    - 3904: Guard Commander (1 quest)
+    - 3925: Noble Warrior (1 quest)
+    - 4050: Tars Tarkas (1 quest)
+    - 4051: Sola (1 quest)
+    - 4202: Ras Thavas (1 quest)
+    - 4203: Vad Varo (1 quest)
+    - 4212: Ancient Consciousness (1 quest)
+    - 4214: Power Technician (1 quest)
+    - 4215: Biological Researcher (1 quest)
+    - 4300: Noble (1 quest)
+    - 4301: Ambassador (1 quest)
+    - 4500: Military Commander (1 quest)
+    - 4501: Training Master (1 quest)
+    
+    Total: 21 quests across 19 quest-giving mobs
+  notes: |
+    This test addresses the problem statement requirement (b): verifying that
+    every mob that is supposed to offer a quest is loaded at startup.
+    
+    If any quest giver is not loaded, the test will fail, indicating that
+    players cannot access that quest in the game.
