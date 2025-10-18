@@ -48,6 +48,7 @@ class ServerManager:
         self.process = None
         self.port = None
         self.spin_mode = spin_mode  # Enable spin mode for faster testing
+        self.test_extensions = None  # Test-specific zone extensions
         # Background output capture
         self.stdout_data = []
         self.stderr_data = []
@@ -95,6 +96,102 @@ class ServerManager:
         pcobjs_path = os.path.join(self.test_lib_path, 'pcobjs.obj')
         if not os.path.exists(pcobjs_path):
             open(pcobjs_path, 'wb').close()
+        
+        # Apply test extensions if specified
+        if self.test_extensions:
+            self._apply_test_extensions(self.test_extensions)
+    
+    def _apply_test_extensions(self, test_extensions):
+        """Apply test-specific extensions to zone files.
+        
+        This method:
+        1. Copies zones_yaml directory to test_lib if not present
+        2. Merges extension YAML files into specified zone files
+        3. Rebuilds world files from modified YAML
+        
+        Args:
+            test_extensions: List of dicts with 'zone_file' and 'extension_file' keys
+        """
+        import subprocess
+        
+        # Copy zones_yaml directory to test_lib if not present
+        zones_yaml_src = os.path.join(os.path.dirname(self.lib_path), 'lib', 'zones_yaml')
+        zones_yaml_dest = os.path.join(self.test_lib_path, 'zones_yaml')
+        
+        if not os.path.exists(zones_yaml_dest):
+            import shutil
+            shutil.copytree(zones_yaml_src, zones_yaml_dest)
+        
+        # Apply each extension
+        for ext in test_extensions:
+            zone_file = ext['zone_file']
+            extension_file = ext['extension_file']
+            
+            # Load the zone YAML
+            zone_yaml_path = os.path.join(zones_yaml_dest, zone_file)
+            with open(zone_yaml_path, 'r') as f:
+                zone_data = yaml.safe_load(f)
+            
+            # Load the extension YAML
+            with open(extension_file, 'r') as f:
+                extension_data = yaml.safe_load(f)
+            
+            # Merge extension objects into zone
+            if isinstance(extension_data, list):
+                # Extension file contains a list of objects
+                if 'objects' not in zone_data:
+                    zone_data['objects'] = []
+                zone_data['objects'].extend(extension_data)
+            
+            # Also need to add a reset command to load the object into the room
+            # Add reset to put Thor's Hammer in room 1200
+            if 'resets' not in zone_data:
+                zone_data['resets'] = []
+            
+            # Find the object vnum from the extension
+            for obj in extension_data:
+                if 'vnum' in obj:
+                    # Add a reset command to load this object into room 1200
+                    zone_data['resets'].append({
+                        'command': 'O',
+                        'if_flag': 0,
+                        'arg1': obj['vnum'],
+                        'arg2': 1,  # max_existing
+                        'arg3': 1200  # room vnum
+                    })
+            
+            # Write modified zone YAML
+            with open(zone_yaml_path, 'w') as f:
+                yaml.dump(zone_data, f, default_flow_style=False, sort_keys=False)
+        
+        # Rebuild world files from modified YAML
+        server_dir = os.path.dirname(self.server_path)
+        tools_dir = os.path.join(server_dir, '..', 'tools')
+        world_builder = os.path.join(tools_dir, 'world_builder.py')
+        
+        # Get list of all zone files in correct order (same as makefile)
+        zone_order = ['limbo', 'system', 'zone_1200', 'lesser_helium', 'southern_approach',
+                     'sewers', 'dead_sea_bottom_channel', 'zodanga', 'zodanga_wilderness',
+                     'dead_sea_wilderness', 'gathol', 'greater_helium', 'thark_territory',
+                     'atmosphere_factory', 'atmosphere_lower', 'ptarth', 'gathol_ptarth_wilderness',
+                     'kaol', 'ptarth_kaol_wilderness']
+        
+        zone_files = [os.path.join(zones_yaml_dest, f'{zone}.yaml') for zone in zone_order]
+        
+        # Build world files
+        cmd = ['python3', world_builder, 'build-all', self.test_lib_path] + zone_files
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        
+        if result.returncode != 0:
+            raise RuntimeError(f"Failed to rebuild world files: {result.stderr}")
+    
+    def set_test_extensions(self, test_extensions):
+        """Set test extensions to be applied when creating test_lib.
+        
+        Args:
+            test_extensions: List of dicts with 'zone_file' and 'extension_file' keys
+        """
+        self.test_extensions = test_extensions
     
     def _check_world_files(self):
         """Check that required world files exist before starting the server."""
@@ -975,6 +1072,20 @@ class TestRunner:
             char_name = 'TestChar'
         if not char_pass:
             char_pass = 'test'
+        
+        # Check for test extensions (e.g., test-specific objects to load)
+        if 'setup' in test_def and 'test_extensions' in test_def['setup']:
+            test_extensions = []
+            for ext in test_def['setup']['test_extensions']:
+                # Resolve extension file path relative to test file
+                ext_file = ext.get('extension_file')
+                if ext_file and not os.path.isabs(ext_file):
+                    ext_file = os.path.join(os.path.dirname(test_file), ext_file)
+                test_extensions.append({
+                    'zone_file': ext.get('zone_file'),
+                    'extension_file': ext_file
+                })
+            self.server_manager.set_test_extensions(test_extensions)
         
         try:
             self.server_manager.create_test_player(char_name, char_pass, start_room, char_level)

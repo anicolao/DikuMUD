@@ -1,0 +1,29 @@
+# Test-only weapon: Thor's Hammer
+# This file should NEVER be loaded in production!
+# It contains an impossibly powerful weapon for testing purposes only.
+# The test framework concatenates this to zone_1200.yaml during testing.
+
+# Thor's Hammer - Impossibly powerful weapon for reliable test kills
+- vnum: 12001
+  namelist: hammer thor thors mighty
+  short_desc: Thor's Hammer
+  long_desc: An impossibly massive hammer radiates divine power.
+  action_desc: crush
+  type_flag: 5
+  extra_flags: 1
+  wear_flags: 8193
+  value0: 3
+  value1: 1
+  value2: 4
+  value3: 200
+  weight: 8
+  cost: 999999
+  rent: 99999
+  extra_descriptions:
+  - keywords: hammer thor
+    description: "This is the legendary hammer of Thor, god of thunder. Its power is\n    beyond mortal comprehension. One strike can fell any creature."
+  affects:
+  - location: 18
+    modifier: 50
+  - location: 19
+    modifier: 50
