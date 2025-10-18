@@ -107,6 +107,7 @@ No automated tests exist. Testing requires:
 ## When Making Changes
 
 - Understand the historical context
+- **Always run `make all` in `dm-dist-alfa/` directory before committing changes** to ensure no regressions are introduced
 - Test thoroughly through actual gameplay
 - Document any modern security fixes clearly
 - Preserve the original DikuMUD experience

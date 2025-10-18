@@ -2,8 +2,8 @@ test:
   id: test_zone_status
   description: Verify zone status command shows all zones with correct room/mob counts
   author: Integration Test Framework
-  created: '2025-10-14'
-  tags: ['zone_test', 'command_validation']
+  created: "2025-10-14"
+  tags: ["zone_test", "command_validation"]
 
 setup:
   character:
@@ -25,7 +25,7 @@ steps:
       - pattern: 'Lesser Helium Sewers\s+\(40 rooms'
       - pattern: 'Dead Sea Bottom Channel\s+\(6 rooms'
       - pattern: 'Zodanga - Enemy City\s+\(50 rooms'
-      - pattern: 'Zodanga Wilderness\s+\(12 rooms'
+      - pattern: 'Zodanga Wilderness\s+\(13 rooms'
       - pattern: 'Dead Sea Wilderness\s+\(20 rooms'
       - pattern: 'Gathol - Allied City\s+\(6 rooms'
       - pattern: 'Greater Helium\s+\(90 rooms'

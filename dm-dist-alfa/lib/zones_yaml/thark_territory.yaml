@@ -18,7 +18,9 @@ rooms:
 
     arms raised in a gesture of defiance. Green Martian warriors mill about,
 
-    their fifteen-foot frames casting long shadows in the reddish sunlight.'
+    their fifteen-foot frames casting long shadows in the reddish sunlight. A
+
+    tall watchtower rises above the plaza.'
   zone: 40
   room_flags: 0
   sector_type: 1
@@ -41,8 +43,14 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4007
+  - direction: 4
+    description: Stairs lead up to the central watchtower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4045
   - direction: 3
-    description: You see the ancient ruins stretching westward.
+    description: Steps descend westward into the ancient ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -57,7 +65,8 @@ rooms:
 
     enemies, captured weapons, and torn standards. Several Thark guards stand
 
-    watch, their massive forms blocking most of the light from the plaza.'
+    watch, their massive forms blocking most of the light from the plaza. Stairs
+    descend east to the northern gate.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -68,6 +77,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4002
+  - direction: 5
+    description: Stairs descend east to the northern gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4048
   - direction: 2
     description: The plaza is to the south.
     keywords: ''
@@ -116,11 +131,17 @@ rooms:
 
     cities. Tars Tarkas himself stands here, a towering figure of green muscle
 
-    and battle scars.'
+    and battle scars. A doorway to the east leads to the sacred Incubator.'
   zone: 40
   room_flags: 12
   sector_type: 0
   exits:
+  - direction: 1
+    description: The sacred Incubator entrance is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4004
   - direction: 2
     description: The Council Hall lies to the south.
     keywords: ''
@@ -152,12 +173,12 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4005
-  - direction: 2
-    description: The plaza is to the south.
+  - direction: 3
+    description: The Jeddak's throne room is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4003
   extra_descriptions: []
 - vnum: 4005
   name: The Incubator Chamber
@@ -282,7 +303,7 @@ rooms:
 
     use, as Tharks believe wounds are badges of honor. The air smells of sweat,
 
-    leather, and blood.'
+    leather, and blood. A passage leads south toward the southern gate.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -293,6 +314,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4008
+  - direction: 2
+    description: A passage leads to the southern gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4046
   extra_descriptions: []
 - vnum: 4010
   name: First Warrior Compound Entrance
@@ -305,7 +332,7 @@ rooms:
 
     you can hear the sounds of warriors within - sharpening blades, repairing
 
-    harnesses, and speaking in their guttural language.'
+    harnesses, and speaking in their guttural language. Steps descend to lower compounds.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -322,8 +349,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4000
-  - direction: 2
-    description: More compounds lie to the south.
+  - direction: 5
+    description: Steps descend to the lower warrior compounds.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -437,12 +464,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4013
-  - direction: 2
-    description: You see the second warrior compound to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4015
+
   extra_descriptions: []
 - vnum: 4015
   name: Second Warrior Compound Entrance
@@ -453,19 +475,20 @@ rooms:
 
     symbols of Thark authority. Inside, you can see the forms of massive green
 
-    Martians moving about their business.'
+    Martians moving about their business. Steps lead up to the first compound and
+    down to the living quarters.'
   zone: 40
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The first compound is to the north.
+  - direction: 4
+    description: Steps lead up to the first compound.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4010
-  - direction: 1
-    description: The living quarters are to the east.
+  - direction: 5
+    description: Steps descend to the chieftain living quarters.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -488,7 +511,7 @@ rooms:
 
     battle trophies. These warriors have earned their place through countless
 
-    battles and displays of leadership.'
+    battles and displays of leadership. Steps lead up to the compound entrance.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -499,10 +522,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4017
-  - direction: 3
-    description: The compound entrance is to the west.
+  - direction: 4
+    description: Steps lead up to the compound entrance.
     keywords: ''
     door_flag: 0
+    key_vnum: -1
+    to_room: 4015
     key_vnum: -1
     to_room: 4015
   extra_descriptions: []
@@ -905,13 +930,13 @@ rooms:
 
     as it fell centuries or millennia ago. Small desert creatures have made
 
-    homes in the crevices.'
+    homes in the crevices. The ground slopes down to the north into deeper ruins.'
   zone: 40
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The northern ruins lie ahead.
+  - direction: 5
+    description: The ground slopes down into the northern ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -955,19 +980,19 @@ rooms:
 
     useful. The wind whistles through the broken structures, creating an eerie
 
-    moan.'
+    moan. The ground slopes up to the south.'
   zone: 40
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 1
-    description: A ruined plaza lies to the east.
+  - direction: 5
+    description: Steps descend to the ruined plaza below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4034
-  - direction: 2
-    description: The collapsed colonnade is to the south.
+  - direction: 4
+    description: The ground slopes up to the colonnade.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -995,8 +1020,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4035
-  - direction: 3
-    description: The old marketplace is to the west.
+  - direction: 4
+    description: Steps lead up to the old marketplace.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1016,8 +1041,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 2
-    description: A ruined plaza is to the south.
+  - direction: 3
+    description: The ruined plaza is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1051,8 +1076,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4035
-  - direction: 2
-    description: A collapsed mansion lies to the south.
+  - direction: 5
+    description: Steps descend to a collapsed mansion below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1074,14 +1099,14 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The residential district is to the north.
+  - direction: 4
+    description: Steps lead up to the residential district.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4036
-  - direction: 1
-    description: More ruins lie to the east.
+  - direction: 5
+    description: Steps descend deeper into the ruins.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1101,8 +1126,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 3
-    description: The collapsed mansion is to the west.
+  - direction: 4
+    description: Steps lead up to the collapsed mansion.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1160,12 +1185,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4041
-  - direction: 0
-    description: You can see the main plaza to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4000
   extra_descriptions: []
 - vnum: 4041
   name: Southern Guard Tower
@@ -1293,7 +1312,7 @@ rooms:
 
     hunting grounds. The view is breathtaking - the entire dead sea bottom laid
 
-    out like a map.'
+    out like a map. Stairs descend to the plaza below.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -1304,6 +1323,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4044
+  - direction: 5
+    description: Stairs descend to the main plaza.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4000
   extra_descriptions: []
 - vnum: 4046
   name: Southern Gate - Interior
@@ -1316,17 +1341,17 @@ rooms:
 
     with heavy wooden beams and metal bars. Guards are always present here,
 
-    checking anyone who enters or leaves.'
+    checking anyone who enters or leaves. A passage north leads to the arena area.'
   zone: 40
   room_flags: 8
   sector_type: 0
   exits:
   - direction: 0
-    description: The main plaza is to the north.
+    description: A passage leads north to the arena preparation chamber.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4009
   - direction: 2
     description: The gate leads outside the city.
     keywords: ''
@@ -1374,7 +1399,9 @@ rooms:
 
     war. Weapon racks line the walls, and Thark warriors are always ready to sortie
 
-    through this gate at a moment''s notice. The air here feels tense, watchful.'
+    through this gate at a moment''s notice. The air here feels tense, watchful.
+
+    Stairs lead up to the council antechamber.'
   zone: 40
   room_flags: 8
   sector_type: 0
@@ -1385,12 +1412,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4049
-  - direction: 2
-    description: The main plaza is to the south.
+  - direction: 4
+    description: Stairs lead up to the council antechamber.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4000
+    to_room: 4001
   extra_descriptions: []
 - vnum: 4049
   name: Northern Gate - Exterior

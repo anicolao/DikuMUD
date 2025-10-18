@@ -37,6 +37,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: -1
+  - direction: 5
+    description: Stairs lead down to the waste processing level.
+    keywords: stairs
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4180
   extra_descriptions:
   - keywords: trapdoor above
     description: 'The trapdoor is far overhead, beyond reach. You''ll need to find
@@ -141,8 +147,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4151
-  - direction: 2
-    description: A new door blocks further progress.
+  - direction: 5
+    description: A shaft drops down to a lower level.
     keywords: door metal
     door_flag: 1
     key_vnum: 4250
@@ -170,8 +176,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4152
-  - direction: 1
-    description: An active tunnel leads east, showing signs of recent use.
+  - direction: 5
+    description: A ramp slopes down to the lower section.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -199,14 +205,14 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The passage leads to what sounds like a laboratory.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4160
-  - direction: 3
-    description: The junction lies to the west.
+  - direction: 4
+    description: A ramp slopes back up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -300,12 +306,18 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4165
-  - direction: 3
+  - direction: 4
     description: The restored passage leads back west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4155
+  - direction: 4
+    description: A shaft leads up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4153
   extra_descriptions:
   - keywords: equipment apparatus devices
     description: 'This equipment is sophisticated and clearly expensive. Whoever is
@@ -385,8 +397,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A door leads to the surgical suite.
+  - direction: 5
+    description: A passage slopes down.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -498,13 +510,13 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The door leads to the east wing.
+  - direction: 4
+    description: A passage slopes back up.
     keywords: door
     door_flag: 1
     key_vnum: -1
     to_room: 4162
-  - direction: 2
+  - direction: 5
     description: A door leads to recovery chambers.
     keywords: door
     door_flag: 1
@@ -539,8 +551,8 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4165
-  - direction: 1
-    description: Another door leads to a recovery area.
+  - direction: 5
+    description: Steps lead down.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -573,7 +585,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 4
     description: The door leads to the surgical suite.
     keywords: door
     door_flag: 1
@@ -585,8 +597,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4170
-  - direction: 3
-    description: The door leads to the medical bay.
+  - direction: 4
+    description: Steps lead back up.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -857,6 +869,12 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4185
+  - direction: 4
+    description: Stairs lead up to the entry hall.
+    keywords: stairs
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4150
   extra_descriptions:
   - keywords: tanks vats growth
     description: 'The tanks contain growing tissues and organs, some recognizable,
@@ -941,6 +959,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4181
+  - direction: 5
+    description: A passage leads down to deeper sections.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4189
   extra_descriptions:
   - keywords: tanks hybrids creatures
     description: 'The hybrid creatures are disturbing to behold. Some combine features
@@ -1087,7 +1111,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 2
     description: A sealed door leads to the infection chamber - sealed for good reason.
     keywords: door sealed
     door_flag: 2
@@ -1124,12 +1148,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
+  - direction: 0
     description: The sealed door leads back to quarantine - get out while you can.
     keywords: door sealed
     door_flag: 2
     key_vnum: 4254
     to_room: 4188
+  - direction: 4
+    description: A passage leads back up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4182
+  - direction: 5
+    description: A concealed maintenance shaft descends to the deep core.
+    keywords: shaft maintenance
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4190
   extra_descriptions:
   - keywords: growth organism infection
     description: 'The organic growth covers everything, pulsing with unnatural life.
@@ -1170,6 +1206,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4195
+  - direction: 4
+    description: A maintenance shaft leads back up to the bio-research level.
+    keywords: shaft
+    door_flag: 1
+    key_vnum: -1
+    to_room: 4189
   extra_descriptions:
   - keywords: machinery ancient primitive
     description: 'This machinery predates even the factory above. It''s the work of
@@ -1283,7 +1325,7 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4192
-  - direction: 2
+  - direction: 5
     description: A corridor leads to a chamber with active systems.
     keywords: ''
     door_flag: 0
@@ -1317,7 +1359,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 4
     description: The corridor leads to the engineer's chamber.
     keywords: ''
     door_flag: 0
@@ -1329,6 +1371,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4197
+  - direction: 1
+    description: The passage continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4195
   extra_descriptions:
   - keywords: controls systems ancient
     description: 'The control panels use a mix of crystal displays and mechanical
@@ -1369,6 +1417,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4196
+  - direction: 3
+    description: The passage continues.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4194
   extra_descriptions:
   - keywords: darkness stairs depth
     description: 'Looking down, the darkness seems absolute. The stairs continue far
@@ -1397,7 +1451,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
+  - direction: 5
     description: A passage leads to the research nexus.
     keywords: ''
     door_flag: 0
@@ -1451,7 +1505,7 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4198
-  - direction: 3
+  - direction: 4
     description: A passage leads back to the foundation level.
     keywords: ''
     door_flag: 0

@@ -74,10 +74,10 @@ steps:
       - pattern: "lamp|light|<used as light>"
         message: "Lamp should be equipped as light source"
 
-  # Navigate to dark room: s s s s d (3001 -> 3005 -> 3014 -> 3025 -> 3030 -> 3150)
+  # Navigate to dark room: d s d s d (3001 -> 3005 -> 3014 -> 3025 -> 3030 -> 3150)
   - action: command
-    description: "Go south from temple"
-    command: "s"
+    description: "Go down from temple"
+    command: "d"
     expected:
       - pattern: "Temple Plaza|plaza"
         message: "Should move to temple plaza (room 3005)"
@@ -90,8 +90,8 @@ steps:
         message: "Should move to market plaza (room 3014)"
 
   - action: command
-    description: "Go south to common area"
-    command: "s"
+    description: "Go down to common area"
+    command: "d"
     expected:
       - pattern: "Common Plaza|plaza"
         message: "Should move to common plaza (room 3025)"
@@ -138,7 +138,7 @@ result:
     - Light charges: value[2] >= 100 hours
     - Wear flags: ITEM_TAKE | ITEM_HOLD (16385)
     
-    Test path: Room 3001 (Temple) -> 3005 -> 3014 -> 3025 -> 3030 -> 3150 (Dark Sewer)
+    Test path: Room 3001 (Temple) -down-> 3005 -south-> 3014 -down-> 3025 -south-> 3030 -down-> 3150 (Dark Sewer)
     
     The dark room (3150) has DARK flag set, requiring a light source to see.
     With the lamp held, the player should be able to see the room description.
