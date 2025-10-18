@@ -18,7 +18,7 @@ setup:
   gold: 100
   test_extensions:
     - zone_file: zone_1200.yaml
-      extension_file: items/hammer.yaml
+      extension_file: test_data/hammer_object.yml
 
 steps:
   # Step 1: Verify we're in the temple
@@ -64,7 +64,7 @@ steps:
   - action: command
     command: "kill calot"
     description: "Attack the calot with Thor's Hammer"
-    delay_after: 2
+    delay_after: 3
     expected:
       - pattern: "You gained [0-9]+ experience\\."
         message: "Should see experience gain message with actual amount"
