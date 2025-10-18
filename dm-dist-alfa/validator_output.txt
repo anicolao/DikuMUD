@@ -1,0 +1,543 @@
+DikuMUD Zone Layout Validator
+
+Validating all zones
+
+=== Zone 0 Layout Validation ===
+Starting from room 0 (vnum 0)
+Total rooms in zone: 3
+
+WARNING: Room 0 (vnum 0) has a one-way gate up to room 6 (vnum 3001)
+WARNING: Room 1 (vnum 1) is unreachable from start room!
+WARNING: Room 2 (vnum 2) is unreachable from start room!
+
+=== Summary ===
+Errors: 0
+Warnings: 3
+
+=== Zone 2 Layout Validation ===
+Starting from room 3 (vnum 1200)
+Total rooms in zone: 3
+
+WARNING: Room 4 (vnum 1201) is unreachable from start room!
+WARNING: Room 5 (vnum 1202) is unreachable from start room!
+
+=== Summary ===
+Errors: 0
+Warnings: 2
+
+=== Zone 3 Layout Validation ===
+Starting from room 6 (vnum 3001)
+Total rooms in zone: 51
+
+
+=== Summary ===
+Errors: 0
+Warnings: 0
+
+=== Zone 4 Layout Validation ===
+Starting from room 57 (vnum 3100)
+Total rooms in zone: 50
+
+ERROR: Room 64 (vnum 3107) has inconsistent coordinates!
+       From room 65 (vnum 3108) going east: would be (0,-4,0)
+       But already assigned: (0,-5,0)
+ERROR: Room 68 (vnum 3111) has inconsistent coordinates!
+       From room 67 (vnum 3110) going west: would be (-1,-6,0)
+       But already assigned: (-1,-5,0)
+ERROR: Room 67 (vnum 3110) has inconsistent coordinates!
+       From room 68 (vnum 3111) going east: would be (0,-5,0)
+       But already assigned: (0,-6,0)
+ERROR: Room 71 (vnum 3114) has inconsistent coordinates!
+       From room 70 (vnum 3113) going west: would be (-1,-7,0)
+       But already assigned: (-1,-6,0)
+ERROR: Room 70 (vnum 3113) has inconsistent coordinates!
+       From room 71 (vnum 3114) going east: would be (0,-6,0)
+       But already assigned: (0,-7,0)
+ERROR: Room 75 (vnum 3118) has inconsistent coordinates!
+       From room 74 (vnum 3117) going west: would be (-1,-8,0)
+       But already assigned: (-1,-7,0)
+ERROR: Room 74 (vnum 3117) has inconsistent coordinates!
+       From room 75 (vnum 3118) going east: would be (0,-7,0)
+       But already assigned: (0,-8,0)
+ERROR: Room 79 (vnum 3122) has inconsistent coordinates!
+       From room 78 (vnum 3121) going west: would be (-1,-9,0)
+       But already assigned: (-1,-8,0)
+ERROR: Room 78 (vnum 3121) has inconsistent coordinates!
+       From room 79 (vnum 3122) going east: would be (0,-8,0)
+       But already assigned: (0,-9,0)
+ERROR: Room 83 (vnum 3126) has inconsistent coordinates!
+       From room 82 (vnum 3125) going west: would be (-1,-10,0)
+       But already assigned: (-1,-9,0)
+ERROR: Room 82 (vnum 3125) has inconsistent coordinates!
+       From room 83 (vnum 3126) going east: would be (0,-9,0)
+       But already assigned: (0,-10,0)
+ERROR: Room 87 (vnum 3130) has inconsistent coordinates!
+       From room 86 (vnum 3129) going west: would be (-1,-11,0)
+       But already assigned: (-1,-10,0)
+ERROR: Room 86 (vnum 3129) has inconsistent coordinates!
+       From room 87 (vnum 3130) going east: would be (0,-10,0)
+       But already assigned: (0,-11,0)
+ERROR: Room 91 (vnum 3134) has inconsistent coordinates!
+       From room 90 (vnum 3133) going west: would be (-1,-12,0)
+       But already assigned: (-1,-11,0)
+ERROR: Room 90 (vnum 3133) has inconsistent coordinates!
+       From room 91 (vnum 3134) going east: would be (0,-11,0)
+       But already assigned: (0,-12,0)
+ERROR: Room 94 (vnum 3137) has inconsistent coordinates!
+       From room 93 (vnum 3136) going south: would be (1,-13,0)
+       But already assigned: (0,-13,0)
+ERROR: Room 94 (vnum 3137) has inconsistent coordinates!
+       From room 95 (vnum 3138) going east: would be (0,-12,0)
+       But already assigned: (0,-13,0)
+ERROR: Room 99 (vnum 3142) has inconsistent coordinates!
+       From room 97 (vnum 3140) going east: would be (1,-14,0)
+       But already assigned: (2,-13,0)
+ERROR: Room 98 (vnum 3141) has inconsistent coordinates!
+       From room 97 (vnum 3140) going west: would be (-1,-14,0)
+       But already assigned: (-1,-13,0)
+ERROR: Room 97 (vnum 3140) has inconsistent coordinates!
+       From room 98 (vnum 3141) going east: would be (0,-13,0)
+       But already assigned: (0,-14,0)
+ERROR: Room 97 (vnum 3140) has inconsistent coordinates!
+       From room 99 (vnum 3142) going west: would be (1,-13,0)
+       But already assigned: (0,-14,0)
+ERROR: Room 102 (vnum 3145) has inconsistent coordinates!
+       From room 100 (vnum 3143) going east: would be (1,-15,0)
+       But already assigned: (2,-14,0)
+ERROR: Room 101 (vnum 3144) has inconsistent coordinates!
+       From room 100 (vnum 3143) going west: would be (-1,-15,0)
+       But already assigned: (-1,-14,0)
+ERROR: Room 100 (vnum 3143) has inconsistent coordinates!
+       From room 101 (vnum 3144) going east: would be (0,-14,0)
+       But already assigned: (0,-15,0)
+ERROR: Room 100 (vnum 3143) has inconsistent coordinates!
+       From room 102 (vnum 3145) going west: would be (1,-14,0)
+       But already assigned: (0,-15,0)
+ERROR: Room 104 (vnum 3147) has inconsistent coordinates!
+       From room 103 (vnum 3146) going east: would be (0,-15,0)
+       But already assigned: (2,-15,0)
+ERROR: Room 103 (vnum 3146) has inconsistent coordinates!
+       From room 104 (vnum 3147) going west: would be (1,-15,0)
+       But already assigned: (-1,-15,0)
+ERROR: Room 106 (vnum 3149) has inconsistent coordinates!
+       From room 105 (vnum 3148) going east: would be (0,-16,0)
+       But already assigned: (2,-16,0)
+ERROR: Room 105 (vnum 3148) has inconsistent coordinates!
+       From room 106 (vnum 3149) going west: would be (1,-16,0)
+       But already assigned: (-1,-16,0)
+WARNING: Room 61 (vnum 3104) has a one-way gate west to room 65 (vnum 3108)
+WARNING: Room 65 (vnum 3108) has a one-way gate east to room 64 (vnum 3107)
+WARNING: Room 93 (vnum 3136) has a one-way gate south to room 94 (vnum 3137)
+WARNING: Room 93 (vnum 3136) has a one-way gate west to room 90 (vnum 3133)
+WARNING: Room 95 (vnum 3138) has a one-way gate east to room 94 (vnum 3137)
+
+=== Summary ===
+Errors: 29
+Warnings: 5
+
+=== Zone 5 Layout Validation ===
+Starting from room 107 (vnum 3150)
+Total rooms in zone: 40
+
+
+=== Summary ===
+Errors: 0
+Warnings: 0
+
+=== Zone 6 Layout Validation ===
+Starting from room 147 (vnum 3200)
+Total rooms in zone: 6
+
+
+=== Summary ===
+Errors: 0
+Warnings: 0
+
+=== Zone 7 Layout Validation ===
+Starting from room 153 (vnum 3600)
+Total rooms in zone: 50
+
+ERROR: Room 186 (vnum 3633) has inconsistent coordinates!
+       From room 188 (vnum 3635) going south: would be (2,4,0)
+       But already assigned: (-1,1,-1)
+WARNING: Room 162 (vnum 3609) has a one-way gate west to room 158 (vnum 3605)
+WARNING: Room 181 (vnum 3628) has a one-way gate south to room 173 (vnum 3620)
+WARNING: Room 188 (vnum 3635) has a one-way gate south to room 186 (vnum 3633)
+WARNING: Room 189 (vnum 3636) has a one-way gate south to room 183 (vnum 3630)
+WARNING: Room 191 (vnum 3638) has a one-way gate east to room 189 (vnum 3636)
+WARNING: Room 192 (vnum 3639) has a one-way gate south to room 189 (vnum 3636)
+WARNING: Room 193 (vnum 3640) has a one-way gate west to room 153 (vnum 3600)
+WARNING: Room 194 (vnum 3641) has a one-way gate east to room 153 (vnum 3600)
+WARNING: Room 195 (vnum 3642) has a one-way gate south to room 153 (vnum 3600)
+WARNING: Room 196 (vnum 3643) has a one-way gate down to room 153 (vnum 3600)
+WARNING: Room 197 (vnum 3644) has a one-way gate north to room 153 (vnum 3600)
+WARNING: Room 198 (vnum 3645) has a one-way gate east to room 153 (vnum 3600)
+WARNING: Room 201 (vnum 3648) has a one-way gate east to room 200 (vnum 3647)
+WARNING: Room 202 (vnum 3649) has a one-way gate south to room 158 (vnum 3605)
+ERROR: Rooms 165 (vnum 3612) and 171 (vnum 3618) overlap at coordinates (2,0,0)!
+ERROR: Rooms 166 (vnum 3613) and 174 (vnum 3621) overlap at coordinates (1,-1,0)!
+ERROR: Rooms 167 (vnum 3614) and 168 (vnum 3615) overlap at coordinates (2,1,0)!
+ERROR: Rooms 169 (vnum 3616) and 177 (vnum 3624) overlap at coordinates (2,-1,0)!
+ERROR: Rooms 176 (vnum 3623) and 185 (vnum 3632) overlap at coordinates (-1,-1,0)!
+ERROR: Rooms 178 (vnum 3625) and 179 (vnum 3626) overlap at coordinates (1,-2,0)!
+WARNING: Room 162 (vnum 3609) is unreachable from start room!
+WARNING: Room 181 (vnum 3628) is unreachable from start room!
+WARNING: Room 182 (vnum 3629) is unreachable from start room!
+WARNING: Room 189 (vnum 3636) is unreachable from start room!
+WARNING: Room 190 (vnum 3637) is unreachable from start room!
+WARNING: Room 191 (vnum 3638) is unreachable from start room!
+WARNING: Room 192 (vnum 3639) is unreachable from start room!
+WARNING: Room 193 (vnum 3640) is unreachable from start room!
+WARNING: Room 194 (vnum 3641) is unreachable from start room!
+WARNING: Room 195 (vnum 3642) is unreachable from start room!
+WARNING: Room 196 (vnum 3643) is unreachable from start room!
+WARNING: Room 197 (vnum 3644) is unreachable from start room!
+WARNING: Room 198 (vnum 3645) is unreachable from start room!
+WARNING: Room 199 (vnum 3646) is unreachable from start room!
+WARNING: Room 200 (vnum 3647) is unreachable from start room!
+WARNING: Room 201 (vnum 3648) is unreachable from start room!
+WARNING: Room 202 (vnum 3649) is unreachable from start room!
+
+=== Summary ===
+Errors: 7
+Warnings: 31
+
+=== Zone 8 Layout Validation ===
+Starting from room 203 (vnum 3650)
+Total rooms in zone: 13
+
+WARNING: Room 214 (vnum 3729) has a one-way gate west to room 241 (vnum 3789)
+
+=== Summary ===
+Errors: 0
+Warnings: 1
+
+=== Zone 9 Layout Validation ===
+Starting from room 216 (vnum 3750)
+Total rooms in zone: 20
+
+ERROR: Room 218 (vnum 3752) has inconsistent coordinates!
+       From room 224 (vnum 3763) going up: would be (-1,0,0)
+       But already assigned: (-2,0,0)
+ERROR: Room 224 (vnum 3763) has inconsistent coordinates!
+       From room 226 (vnum 3765) going north: would be (-2,1,-1)
+       But already assigned: (-1,0,-1)
+ERROR: Room 228 (vnum 3767) has inconsistent coordinates!
+       From room 226 (vnum 3765) going west: would be (-3,0,-1)
+       But already assigned: (-2,0,-1)
+ERROR: Room 225 (vnum 3764) has inconsistent coordinates!
+       From room 228 (vnum 3767) going north: would be (-2,1,-1)
+       But already assigned: (-1,1,-1)
+ERROR: Room 230 (vnum 3770) has inconsistent coordinates!
+       From room 220 (vnum 3754) going down: would be (-4,0,-1)
+       But already assigned: (-3,0,-1)
+ERROR: Room 220 (vnum 3754) has inconsistent coordinates!
+       From room 230 (vnum 3770) going up: would be (-3,0,0)
+       But already assigned: (-4,0,0)
+WARNING: Room 224 (vnum 3763) has a one-way gate west to room 228 (vnum 3767)
+WARNING: Room 224 (vnum 3763) has a one-way gate up to room 218 (vnum 3752)
+WARNING: Room 226 (vnum 3765) has a one-way gate north to room 224 (vnum 3763)
+WARNING: Room 226 (vnum 3765) has a one-way gate west to room 228 (vnum 3767)
+WARNING: Room 228 (vnum 3767) has a one-way gate north to room 225 (vnum 3764)
+WARNING: Room 228 (vnum 3767) has a one-way gate south to room 229 (vnum 3768)
+WARNING: Room 229 (vnum 3768) has a one-way gate east to room 227 (vnum 3766)
+WARNING: Room 230 (vnum 3770) has a one-way gate west to room 152 (vnum 3205)
+WARNING: Room 231 (vnum 3775) has a one-way gate south to room 224 (vnum 3763)
+WARNING: Room 232 (vnum 3776) has a one-way gate west to room 222 (vnum 3761)
+WARNING: Room 233 (vnum 3777) has a one-way gate east to room 223 (vnum 3762)
+WARNING: Room 234 (vnum 3778) has a one-way gate north to room 225 (vnum 3764)
+WARNING: Room 235 (vnum 3779) has a one-way gate south to room 227 (vnum 3766)
+ERROR: Rooms 226 (vnum 3765) and 228 (vnum 3767) overlap at coordinates (-2,0,-1)!
+WARNING: Room 231 (vnum 3775) is unreachable from start room!
+WARNING: Room 232 (vnum 3776) is unreachable from start room!
+WARNING: Room 233 (vnum 3777) is unreachable from start room!
+WARNING: Room 234 (vnum 3778) is unreachable from start room!
+WARNING: Room 235 (vnum 3779) is unreachable from start room!
+
+=== Summary ===
+Errors: 7
+Warnings: 18
+
+=== Zone 10 Layout Validation ===
+Starting from room 236 (vnum 3780)
+Total rooms in zone: 6
+
+WARNING: Room 241 (vnum 3789) has a one-way gate west to room 214 (vnum 3729)
+
+=== Summary ===
+Errors: 0
+Warnings: 1
+
+=== Zone 11 Layout Validation ===
+Starting from room 242 (vnum 3900)
+Total rooms in zone: 90
+
+WARNING: Room 268 (vnum 3933) has a one-way gate south to room 265 (vnum 3930)
+WARNING: Room 279 (vnum 3947) has a one-way gate east to room 276 (vnum 3944)
+WARNING: Room 284 (vnum 3952) has a one-way gate north to room 255 (vnum 3920)
+WARNING: Room 287 (vnum 3955) has a one-way gate east to room 286 (vnum 3954)
+WARNING: Room 290 (vnum 3958) has a one-way gate north to room 258 (vnum 3923)
+WARNING: Room 294 (vnum 3962) has a one-way gate north to room 256 (vnum 3921)
+WARNING: Room 296 (vnum 3964) has a one-way gate south to room 242 (vnum 3900)
+WARNING: Room 301 (vnum 3969) has a one-way gate east to room 243 (vnum 3901)
+WARNING: Room 301 (vnum 3969) has a one-way gate south to room 242 (vnum 3900)
+WARNING: Room 303 (vnum 3971) has a one-way gate down to room 265 (vnum 3930)
+WARNING: Room 304 (vnum 3972) has a one-way gate south to room 246 (vnum 3904)
+WARNING: Room 305 (vnum 3973) has a one-way gate south to room 245 (vnum 3903)
+WARNING: Room 306 (vnum 3974) has a one-way gate east to room 247 (vnum 3905)
+WARNING: Room 307 (vnum 3975) has a one-way gate south to room 244 (vnum 3902)
+WARNING: Room 308 (vnum 3976) has a one-way gate west to room 243 (vnum 3901)
+WARNING: Room 309 (vnum 3977) has a one-way gate up to room 245 (vnum 3903)
+WARNING: Room 310 (vnum 3978) has a one-way gate up to room 247 (vnum 3905)
+WARNING: Room 311 (vnum 3979) has a one-way gate down to room 242 (vnum 3900)
+WARNING: Room 312 (vnum 3980) has a one-way gate down to room 282 (vnum 3950)
+WARNING: Room 313 (vnum 3981) has a one-way gate down to room 280 (vnum 3948)
+WARNING: Room 314 (vnum 3982) has a one-way gate down to room 288 (vnum 3956)
+WARNING: Room 315 (vnum 3983) has a one-way gate east to room 249 (vnum 3911)
+WARNING: Room 316 (vnum 3984) has a one-way gate south to room 249 (vnum 3911)
+WARNING: Room 317 (vnum 3985) has a one-way gate east to room 258 (vnum 3923)
+WARNING: Room 318 (vnum 3986) has a one-way gate north to room 260 (vnum 3925)
+WARNING: Room 319 (vnum 3987) has a one-way gate south to room 276 (vnum 3944)
+WARNING: Room 320 (vnum 3988) has a one-way gate north to room 270 (vnum 3935)
+WARNING: Room 321 (vnum 3989) has a one-way gate west to room 269 (vnum 3934)
+WARNING: Room 322 (vnum 3990) has a one-way gate east to room 276 (vnum 3944)
+WARNING: Room 323 (vnum 3991) has a one-way gate west to room 255 (vnum 3920)
+WARNING: Room 324 (vnum 3992) has a one-way gate east to room 242 (vnum 3900)
+WARNING: Room 325 (vnum 3993) has a one-way gate south to room 324 (vnum 3992)
+WARNING: Room 327 (vnum 3995) has a one-way gate west to room 242 (vnum 3900)
+WARNING: Room 328 (vnum 3996) has a one-way gate south to room 265 (vnum 3930)
+WARNING: Room 329 (vnum 3997) has a one-way gate east to room 246 (vnum 3904)
+WARNING: Room 330 (vnum 3998) has a one-way gate south to room 250 (vnum 3912)
+WARNING: Room 331 (vnum 3999) has a one-way gate west to room 250 (vnum 3912)
+ERROR: Rooms 250 (vnum 3912) and 256 (vnum 3921) overlap at coordinates (1,-1,0)!
+ERROR: Rooms 251 (vnum 3913) and 254 (vnum 3916) overlap at coordinates (2,-1,0)!
+ERROR: Rooms 251 (vnum 3913) and 259 (vnum 3924) overlap at coordinates (2,-1,0)!
+ERROR: Rooms 252 (vnum 3914) and 260 (vnum 3925) overlap at coordinates (1,-2,0)!
+ERROR: Rooms 252 (vnum 3914) and 261 (vnum 3926) overlap at coordinates (1,-2,0)!
+ERROR: Rooms 254 (vnum 3916) and 259 (vnum 3924) overlap at coordinates (2,-1,0)!
+ERROR: Rooms 255 (vnum 3920) and 274 (vnum 3942) overlap at coordinates (0,-1,0)!
+ERROR: Rooms 258 (vnum 3923) and 273 (vnum 3941) overlap at coordinates (-1,-1,0)!
+ERROR: Rooms 260 (vnum 3925) and 261 (vnum 3926) overlap at coordinates (1,-2,0)!
+ERROR: Rooms 263 (vnum 3928) and 272 (vnum 3940) overlap at coordinates (-1,0,0)!
+ERROR: Rooms 264 (vnum 3929) and 275 (vnum 3943) overlap at coordinates (-1,-2,0)!
+WARNING: Room 265 (vnum 3930) is unreachable from start room!
+WARNING: Room 266 (vnum 3931) is unreachable from start room!
+WARNING: Room 267 (vnum 3932) is unreachable from start room!
+WARNING: Room 268 (vnum 3933) is unreachable from start room!
+WARNING: Room 269 (vnum 3934) is unreachable from start room!
+WARNING: Room 270 (vnum 3935) is unreachable from start room!
+WARNING: Room 271 (vnum 3936) is unreachable from start room!
+WARNING: Room 276 (vnum 3944) is unreachable from start room!
+WARNING: Room 277 (vnum 3945) is unreachable from start room!
+WARNING: Room 278 (vnum 3946) is unreachable from start room!
+WARNING: Room 279 (vnum 3947) is unreachable from start room!
+WARNING: Room 284 (vnum 3952) is unreachable from start room!
+WARNING: Room 285 (vnum 3953) is unreachable from start room!
+WARNING: Room 286 (vnum 3954) is unreachable from start room!
+WARNING: Room 287 (vnum 3955) is unreachable from start room!
+WARNING: Room 288 (vnum 3956) is unreachable from start room!
+WARNING: Room 289 (vnum 3957) is unreachable from start room!
+WARNING: Room 290 (vnum 3958) is unreachable from start room!
+WARNING: Room 291 (vnum 3959) is unreachable from start room!
+WARNING: Room 292 (vnum 3960) is unreachable from start room!
+WARNING: Room 293 (vnum 3961) is unreachable from start room!
+WARNING: Room 294 (vnum 3962) is unreachable from start room!
+WARNING: Room 295 (vnum 3963) is unreachable from start room!
+WARNING: Room 296 (vnum 3964) is unreachable from start room!
+WARNING: Room 297 (vnum 3965) is unreachable from start room!
+WARNING: Room 298 (vnum 3966) is unreachable from start room!
+WARNING: Room 299 (vnum 3967) is unreachable from start room!
+WARNING: Room 300 (vnum 3968) is unreachable from start room!
+WARNING: Room 301 (vnum 3969) is unreachable from start room!
+WARNING: Room 302 (vnum 3970) is unreachable from start room!
+WARNING: Room 303 (vnum 3971) is unreachable from start room!
+WARNING: Room 304 (vnum 3972) is unreachable from start room!
+WARNING: Room 305 (vnum 3973) is unreachable from start room!
+WARNING: Room 306 (vnum 3974) is unreachable from start room!
+WARNING: Room 307 (vnum 3975) is unreachable from start room!
+WARNING: Room 308 (vnum 3976) is unreachable from start room!
+WARNING: Room 309 (vnum 3977) is unreachable from start room!
+WARNING: Room 310 (vnum 3978) is unreachable from start room!
+WARNING: Room 311 (vnum 3979) is unreachable from start room!
+WARNING: Room 312 (vnum 3980) is unreachable from start room!
+WARNING: Room 313 (vnum 3981) is unreachable from start room!
+WARNING: Room 314 (vnum 3982) is unreachable from start room!
+WARNING: Room 315 (vnum 3983) is unreachable from start room!
+WARNING: Room 316 (vnum 3984) is unreachable from start room!
+WARNING: Room 317 (vnum 3985) is unreachable from start room!
+WARNING: Room 318 (vnum 3986) is unreachable from start room!
+WARNING: Room 319 (vnum 3987) is unreachable from start room!
+WARNING: Room 320 (vnum 3988) is unreachable from start room!
+WARNING: Room 321 (vnum 3989) is unreachable from start room!
+WARNING: Room 322 (vnum 3990) is unreachable from start room!
+WARNING: Room 323 (vnum 3991) is unreachable from start room!
+WARNING: Room 324 (vnum 3992) is unreachable from start room!
+WARNING: Room 325 (vnum 3993) is unreachable from start room!
+WARNING: Room 326 (vnum 3994) is unreachable from start room!
+WARNING: Room 327 (vnum 3995) is unreachable from start room!
+WARNING: Room 328 (vnum 3996) is unreachable from start room!
+WARNING: Room 329 (vnum 3997) is unreachable from start room!
+WARNING: Room 330 (vnum 3998) is unreachable from start room!
+WARNING: Room 331 (vnum 3999) is unreachable from start room!
+
+=== Summary ===
+Errors: 11
+Warnings: 96
+
+=== Zone 12 Layout Validation ===
+Starting from room 332 (vnum 4000)
+Total rooms in zone: 50
+
+
+=== Summary ===
+Errors: 0
+Warnings: 0
+
+=== Zone 13 Layout Validation ===
+Starting from room 382 (vnum 4054)
+Total rooms in zone: 55
+
+ERROR: Room 418 (vnum 4125) has inconsistent coordinates!
+       From room 417 (vnum 4120) going down: would be (-1,0,-1)
+       But already assigned: (1,0,-1)
+ERROR: Room 417 (vnum 4120) has inconsistent coordinates!
+       From room 418 (vnum 4125) going up: would be (1,0,0)
+       But already assigned: (-1,0,0)
+ERROR: Room 393 (vnum 4071) has inconsistent coordinates!
+       From room 427 (vnum 4140) going west: would be (-3,1,-1)
+       But already assigned: (-1,1,-1)
+ERROR: Room 417 (vnum 4120) has inconsistent coordinates!
+       From room 422 (vnum 4130) going north: would be (0,1,0)
+       But already assigned: (-1,0,0)
+ERROR: Room 396 (vnum 4074) has inconsistent coordinates!
+       From room 397 (vnum 4075) going west: would be (0,3,-1)
+       But already assigned: (-1,-1,-1)
+ERROR: Room 397 (vnum 4075) has inconsistent coordinates!
+       From room 396 (vnum 4074) going east: would be (0,-1,-1)
+       But already assigned: (1,3,-1)
+ERROR: Room 436 (vnum 4149) has inconsistent coordinates!
+       From room 435 (vnum 4148) going east: would be (4,3,-1)
+       But already assigned: (2,2,-1)
+ERROR: Room 435 (vnum 4148) has inconsistent coordinates!
+       From room 436 (vnum 4149) going west: would be (1,2,-1)
+       But already assigned: (3,3,-1)
+ERROR: Room 434 (vnum 4147) has inconsistent coordinates!
+       From room 433 (vnum 4146) going east: would be (3,-1,-1)
+       But already assigned: (2,3,-1)
+WARNING: Room 383 (vnum 4055) has a one-way gate down to room 418 (vnum 4125)
+WARNING: Room 396 (vnum 4074) has a one-way gate down to room 437 (vnum 4150)
+WARNING: Room 419 (vnum 4126) has a one-way gate west to room 382 (vnum 4054)
+WARNING: Room 422 (vnum 4130) has a one-way gate north to room 417 (vnum 4120)
+WARNING: Room 427 (vnum 4140) has a one-way gate east to room 393 (vnum 4071)
+WARNING: Room 427 (vnum 4140) has a one-way gate west to room 393 (vnum 4071)
+WARNING: Room 433 (vnum 4146) has a one-way gate east to room 434 (vnum 4147)
+ERROR: Rooms 382 (vnum 4054) and 406 (vnum 4108) overlap at coordinates (0,0,0)!
+ERROR: Rooms 382 (vnum 4054) and 414 (vnum 4117) overlap at coordinates (0,0,0)!
+ERROR: Rooms 382 (vnum 4054) and 422 (vnum 4130) overlap at coordinates (0,0,0)!
+ERROR: Rooms 383 (vnum 4055) and 407 (vnum 4109) overlap at coordinates (1,0,0)!
+ERROR: Rooms 383 (vnum 4055) and 415 (vnum 4118) overlap at coordinates (1,0,0)!
+ERROR: Rooms 395 (vnum 4073) and 418 (vnum 4125) overlap at coordinates (1,0,-1)!
+ERROR: Rooms 405 (vnum 4107) and 412 (vnum 4115) overlap at coordinates (0,1,0)!
+ERROR: Rooms 406 (vnum 4108) and 414 (vnum 4117) overlap at coordinates (0,0,0)!
+ERROR: Rooms 406 (vnum 4108) and 422 (vnum 4130) overlap at coordinates (0,0,0)!
+ERROR: Rooms 407 (vnum 4109) and 415 (vnum 4118) overlap at coordinates (1,0,0)!
+ERROR: Rooms 411 (vnum 4113) and 417 (vnum 4120) overlap at coordinates (-1,0,0)!
+ERROR: Rooms 414 (vnum 4117) and 422 (vnum 4130) overlap at coordinates (0,0,0)!
+ERROR: Rooms 428 (vnum 4141) and 436 (vnum 4149) overlap at coordinates (2,2,-1)!
+WARNING: Room 419 (vnum 4126) is unreachable from start room!
+
+=== Summary ===
+Errors: 22
+Warnings: 8
+
+=== Zone 14 Layout Validation ===
+Starting from room 437 (vnum 4150)
+Total rooms in zone: 40
+
+ERROR: Room 445 (vnum 4160) has inconsistent coordinates!
+       From room 442 (vnum 4155) going down: would be (2,-1,-2)
+       But already assigned: (1,-1,-1)
+ERROR: Room 465 (vnum 4188) has inconsistent coordinates!
+       From room 466 (vnum 4189) going north: would be (2,1,-2)
+       But already assigned: (2,-1,-1)
+ERROR: Room 466 (vnum 4189) has inconsistent coordinates!
+       From room 465 (vnum 4188) going south: would be (2,-2,-1)
+       But already assigned: (2,0,-2)
+ERROR: Room 452 (vnum 4169) has inconsistent coordinates!
+       From room 450 (vnum 4167) going down: would be (3,-1,-3)
+       But already assigned: (1,-3,-2)
+ERROR: Room 470 (vnum 4193) has inconsistent coordinates!
+       From room 471 (vnum 4194) going up: would be (1,-1,-2)
+       But already assigned: (4,-1,-3)
+ERROR: Room 474 (vnum 4197) has inconsistent coordinates!
+       From room 473 (vnum 4196) going down: would be (2,-1,-5)
+       But already assigned: (1,-2,-3)
+ERROR: Room 471 (vnum 4194) has inconsistent coordinates!
+       From room 470 (vnum 4193) going down: would be (4,-1,-4)
+       But already assigned: (1,-1,-3)
+ERROR: Room 473 (vnum 4196) has inconsistent coordinates!
+       From room 474 (vnum 4197) going up: would be (1,-2,-2)
+       But already assigned: (2,-1,-4)
+WARNING: Room 442 (vnum 4155) has a one-way gate down to room 445 (vnum 4160)
+WARNING: Room 450 (vnum 4167) has a one-way gate down to room 452 (vnum 4169)
+ERROR: Rooms 442 (vnum 4155) and 446 (vnum 4161) overlap at coordinates (2,-1,-1)!
+ERROR: Rooms 442 (vnum 4155) and 464 (vnum 4187) overlap at coordinates (2,-1,-1)!
+ERROR: Rooms 442 (vnum 4155) and 465 (vnum 4188) overlap at coordinates (2,-1,-1)!
+ERROR: Rooms 445 (vnum 4160) and 463 (vnum 4186) overlap at coordinates (1,-1,-1)!
+ERROR: Rooms 446 (vnum 4161) and 464 (vnum 4187) overlap at coordinates (2,-1,-1)!
+ERROR: Rooms 446 (vnum 4161) and 465 (vnum 4188) overlap at coordinates (2,-1,-1)!
+ERROR: Rooms 464 (vnum 4187) and 465 (vnum 4188) overlap at coordinates (2,-1,-1)!
+
+=== Summary ===
+Errors: 15
+Warnings: 2
+
+=== Zone 15 Layout Validation ===
+Starting from room 477 (vnum 4300)
+Total rooms in zone: 11
+
+WARNING: Room 484 (vnum 4320) has a one-way gate south to room 477 (vnum 4300)
+WARNING: Room 486 (vnum 4398) has a one-way gate north to room 512 (vnum 4600)
+WARNING: Room 487 (vnum 4399) has a one-way gate south to room 488 (vnum 4400)
+WARNING: Room 484 (vnum 4320) is unreachable from start room!
+
+=== Summary ===
+Errors: 0
+Warnings: 4
+
+=== Zone 16 Layout Validation ===
+Starting from room 488 (vnum 4400)
+Total rooms in zone: 14
+
+WARNING: Room 488 (vnum 4400) has a one-way gate south to room 241 (vnum 3789)
+WARNING: Room 501 (vnum 4499) has a one-way gate north to room 487 (vnum 4399)
+
+=== Summary ===
+Errors: 0
+Warnings: 2
+
+=== Zone 17 Layout Validation ===
+Starting from room 502 (vnum 4500)
+Total rooms in zone: 10
+
+WARNING: Room 510 (vnum 4530) has a one-way gate south to room 509 (vnum 4520)
+WARNING: Room 510 (vnum 4530) is unreachable from start room!
+
+=== Summary ===
+Errors: 0
+Warnings: 2
+
+=== Zone 18 Layout Validation ===
+Starting from room 512 (vnum 4600)
+Total rooms in zone: 12
+
+WARNING: Room 512 (vnum 4600) has a one-way gate south to room 487 (vnum 4399)
+
+=== Summary ===
+Errors: 0
+Warnings: 1
+
+=== Overall Summary ===
+Total errors across all zones: 91
+
+Validation FAILED - please fix errors above.
