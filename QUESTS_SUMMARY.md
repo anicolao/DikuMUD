@@ -435,45 +435,105 @@ Undertake the most dangerous missions:
 
 ## Potential Level Adjustments
 
-Based on review against the character leveling guide ([docs/design/class_balance_guide.md](docs/design/class_balance_guide.md)), the following quests may need level adjustments:
+Based on review against the character leveling guide ([docs/design/class_balance_guide.md](docs/design/class_balance_guide.md)) and actual XP requirements per level, the following observations and recommendations are made:
+
+### XP Requirements for Reference
+From the game code (constants.c), here are the XP requirements for key levels:
+- Level 2: 1-2,500 XP (varies by class)
+- Level 3: 2,500-5,000 XP  
+- Level 4: 5,000-10,000 XP
+- Level 5: 10,000-20,000 XP
+- Level 10: 135,000-250,000 XP
+- Level 15: 1,500,000-1,875,000 XP
+- Level 20: 3,750,000-7,000,000+ XP
+
+### Quest Balance Analysis
+
+**Low-Level Quests (1-5): Well Balanced**
+- Quest 3001 (200 XP) provides ~8% progress toward level 3 - appropriate for first combat quest
+- Quest 3002 (250 XP) provides ~10% progress toward level 3 - good exploration reward
+- Quest 3003 (300 XP) provides ~6% progress toward level 4 - reasonable for delivery quest
+- **Status:** These quests provide meaningful progress without trivializing early leveling
+
+**Mid-Level Quest Gap (Levels 6-10)**
+- **Issue:** Large XP gap between Quest 3003 (300 XP, level 3-10) and next available quests (1,200+ XP, level 10+)
+- **Impact:** Characters level 6-9 have limited quest content
+- **Recommendation:** Consider adding 1-2 intermediate quests in Lesser Helium or Thark Territory
+  - Suggested: Level 6-8 quest with 600-800 XP reward
+  - Suggested: Level 8-10 quest with 1,000-1,200 XP reward
 
 ### Quest 4001: Sola's White Ape Tooth
-**Current Level:** 10-15  
-**Issue:** Reward (500 XP) is low for the level range and challenge
-**Recommendation:** Either increase reward to 1,000-1,200 XP or adjust level to 8-12
-**Reasoning:** White apes are significant threats (see class balance guide). The reward should reflect this challenge.
+**Current:** Level 10-15, 500 XP  
+**Analysis:** At level 10, requires ~135,000 XP for next level. Quest provides 0.37% of level progress.
+**Issue:** Very low XP reward considering white apes are dangerous enemies (level 7-10 creatures per class balance guide)
+**Recommendation:** **Increase XP to 1,000-1,500** to better reflect the challenge
+**Reasoning:** This is the first Thark Territory quest and involves combat with dangerous creatures. Current reward undervalues the risk and effort.
 
-### Quest 4204: Archive Chamber Exploration
-**Current Level:** 11-13  
-**Issue:** Reward (3,000 XP) is very high, comparable to level 18-20 quests
-**Recommendation:** This quest seems appropriately leveled given the long duration and deep exploration required
-**Status:** No change needed - high reward justified by danger and difficulty
+### Quest 4204: Archive Chamber Exploration  
+**Current:** Level 11-13, 3,000 XP
+**Analysis:** At level 12, requires ~375,000 XP for next level. Quest provides 0.8% of level progress.
+**Status:** **Appropriately rewarded** for deep dungeon exploration with 4-hour time limit
+**Reasoning:** Long duration and dangerous location justify high XP. No change needed.
 
 ### Quest 4205: Ras Thavas's Data Crystal
-**Current Level:** 12-14  
-**Issue:** Highest XP reward (3,500 XP) of any quest, typically reserved for level 18-20
-**Recommendation:** Consider adjusting level range to 14-16 or keeping current if Ras Thavas is truly end-game content
-**Reasoning:** Reward exceeds even Zodanga and Kaol quests which are explicitly high-level zones
+**Current:** Level 12-14, 3,500 XP  
+**Analysis:** Highest XP quest reward, at level 13 provides 0.31% of level progress.
+**Status:** **Appropriate for difficulty and lore significance**
+**Reasoning:** Ras Thavas is a major Barsoom character. High reward justified by narrative importance and danger. However, consider if level range should be 13-15 to better match other high-reward quests.
 
-### Quest 3901: Arena Challenge
-**Current Level:** 12-18  
-**Issue:** Reward (1,500 XP) seems low for level 18 characters
-**Recommendation:** Adjust level range to 12-15 to better match reward scale
-**Reasoning:** According to class balance guide, level 15+ characters should earn 2,000+ XP per challenging encounter
+### High-Level Quests (16-20): Generally Well Balanced
+Most high-level quests provide 2,000-3,200 XP:
+- Quest 3601 (3,200 XP): 0.09% of level 19 progress - appropriate for dangerous Zodanga mission
+- Quest 4301 (2,500 XP): 0.07% of level 18 progress - reasonable for banth hunting
+- Quest 4501 (3,000 XP): 0.08% of level 19 progress - good reward for military challenge
 
-### Lesser Helium Quest Progression
-**Current:** Three quests covering levels 1-10 with minimal XP progression (200, 250, 300)
-**Observation:** Good starter progression, but gap between Quest 3003 (300 XP) and next available quests (1,200+ XP) is large
-**Recommendation:** Consider adding 1-2 intermediate quests (level 6-10, 500-800 XP) to smooth progression
+**Status:** High-level quest rewards are appropriately scaled. At these levels, XP primarily comes from creature kills, with quests providing supplementary rewards.
 
-### Atmosphere Factory Quest Cluster
-**Current:** Five quests in Zone 42, levels 8-14, rewards 1,500-3,500 XP
-**Observation:** Excellent quest density for mid-level characters
-**Status:** Well-balanced zone for extended adventuring
+### Quest 3902: Scholar's Artifact
+**Current:** Level 14-18, 1,800 XP
+**Analysis:** At level 16, provides 0.1% of level progress
+**Issue:** Slightly underrewarded for the level range  
+**Recommendation:** Consider increasing to 2,200-2,500 XP to better match level 14-18 difficulty
+**Reasoning:** Greater Helium artifact retrieval should be comparable to other mid-level retrieval quests
 
-### High-Level Quest Availability
-**Current:** Good distribution of level 16-20 quests across four zones (Zodanga, Gathol, Ptarth, Kaol)
-**Status:** Adequate for end-game content
+### Quest 3781: Jetan Tournament  
+**Current:** Level 15-20, 2,000 XP
+**Analysis:** At level 17, provides 0.08% of level progress
+**Status:** **Adequately rewarded** for the challenge
+**Reasoning:** Combat quest in allied city, reward is reasonable for difficulty level
+
+### Atmosphere Factory Quest Cluster (Quests 4201-4205)
+**Status:** **Excellent balance and progression**
+- Five quests covering levels 10-14
+- Progressive XP rewards: 1,500 → 2,000 → 2,500 → 3,000 → 3,500
+- Creates natural quest chain encouraging zone exploration
+- **No changes needed** - this is a model for quest design
+
+### Lesser Helium Starter Quests (Quests 3001-3003)
+**Status:** **Well designed for new players**
+- Three quests with clear progression (200 → 250 → 300 XP)
+- Cover all basic quest types (KILL, EXPLORE, DELIVERY)
+- Appropriate difficulty and rewards for levels 1-10
+- **No changes needed** - good introduction to quest system
+
+### Summary of Recommendations
+
+**High Priority:**
+1. **Quest 4001** (Sola's White Ape): Increase XP from 500 to 1,200-1,500
+2. Add 1-2 intermediate quests for levels 6-10 (600-1,200 XP range)
+
+**Medium Priority:**
+3. **Quest 3902** (Scholar's Artifact): Consider increasing XP from 1,800 to 2,200-2,500
+
+**Low Priority:**  
+4. **Quest 4205** (Data Crystal): Consider adjusting level range from 12-14 to 13-15
+5. **Quest 3901** (Arena Challenge): Consider narrowing level range from 12-18 to 12-15
+
+**Well Balanced - No Changes Needed:**
+- All Lesser Helium starter quests (3001-3003)
+- All Atmosphere Factory quests (4201-4205)
+- Most high-level quests (16-20)
+- Quest chains in Gathol, Ptarth, and Kaol
 
 ---
 
