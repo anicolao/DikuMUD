@@ -1,0 +1,90 @@
+# Negative test to verify regular players cannot access wizard command help
+# This ensures wizard commands are not exposed to non-wizards
+
+test:
+  id: test_wizhelp_security
+  description: "Verify regular players cannot access wizard command help via help command"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [wizard, help, security, negative_test]
+
+setup:
+  character:
+    name: RegularUser
+    password: test
+    class: warrior
+    level: 1  # Regular non-wizard player
+  start_room: 3001  # Temple
+  gold: 100
+
+steps:
+  # Test that regular help command does not expose wizard commands
+  # Using commands that are unique to wizards with no other help entries
+  - action: command
+    command: "help wizlock"
+    description: "Try to get help on wizlock (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for wizard commands to regular players"
+
+  - action: command
+    command: "help snoop"
+    description: "Try to get help on snoop (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for snoop command to regular players"
+
+  - action: command
+    command: "help transfer"
+    description: "Try to get help on transfer (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for transfer command to regular players"
+
+  - action: command
+    command: "help reroll"
+    description: "Try to get help on reroll (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for reroll command to regular players"
+
+  - action: command
+    command: "help notell"
+    description: "Try to get help on notell (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for notell command to regular players"
+
+  - action: command
+    command: "help noemote"
+    description: "Try to get help on noemote (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for noemote command to regular players"
+
+  - action: command
+    command: "help freeze"
+    description: "Try to get help on freeze (wizard-only command)"
+    expected:
+      - pattern: "There is no help on that word"
+        message: "Should not provide help for freeze command to regular players"
+
+  # Verify that regular help commands still work
+  - action: command
+    command: "help look"
+    description: "Verify regular help still works"
+    expected:
+      - pattern: "LOOK|look|studying|surroundings"
+        message: "Regular help commands should still work"
+
+result:
+  should_pass: true
+  description: "Regular players should not be able to access wizard command help"
+  notes: |
+    This test validates security by ensuring wizard commands are not exposed
+    to regular players through the help system. All wizard command help has
+    been moved to a separate lib/wizhelp file that is only accessible via
+    the wizhelp command (which requires wizard privileges).
+    
+    This prevents regular players from learning about wizard commands and
+    their capabilities.

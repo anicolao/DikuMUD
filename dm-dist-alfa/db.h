@@ -23,6 +23,7 @@
 #define MESS_FILE         "messages"      /* damage message             */
 #define SOCMESS_FILE      "actions"       /* messgs for social acts     */
 #define HELP_KWRD_FILE    "help_table"    /* for HELP <keywrd>          */
+#define WIZHELP_FILE      "wizhelp"       /* for WIZHELP <keywrd>       */
 #define HELP_PAGE_FILE    "help"          /* for HELP <CR>              */
 #define INFO_FILE         "info"          /* for INFO                   */
 #define WIZLIST_FILE      "wizlist"       /* for WIZLIST                */

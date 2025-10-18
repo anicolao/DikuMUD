@@ -995,16 +995,75 @@ void do_help(struct char_data *ch, char *argument, int cmd)
 
 void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 {
-	char buf[MAX_STRING_LENGTH];
-	int no, i;
+	char buf[MAX_STRING_LENGTH], buffer[MAX_STRING_LENGTH], search_arg[MAX_INPUT_LENGTH];
+	int no, i, chk, bot, top, mid, minlen;
 	extern char *command[];	 /* The list of commands (interpreter.c)	*/
 	                         /* First command is command[0]           */
 	extern struct command_info cmd_info[];
 	                         /* cmd_info[1] ~~ commando[0]            */
+	extern int top_of_wizhelpt;
+	extern struct help_index_element *wizhelp_index;
+	extern FILE *wizhelp_fl;
 
 	if (IS_NPC(ch))
 		return;
 
+	/* Skip leading whitespace in argument */
+	for(;isspace(*argument); argument++)  ;
+
+	/* If argument provided, search for help on that wizard command */
+	if (*argument)
+	{
+		if (!wizhelp_index)
+		{
+			send_to_char("No wizard help available.\n\r", ch);
+			return;
+		}
+
+		/* Prepare search argument - convert to lowercase for matching */
+		strncpy(search_arg, argument, MAX_INPUT_LENGTH - 1);
+		search_arg[MAX_INPUT_LENGTH - 1] = '\0';
+		for (i = 0; search_arg[i]; i++)
+			search_arg[i] = LOWER(search_arg[i]);
+
+		/* Binary search through wizard help index */
+		bot = 0;
+		top = top_of_wizhelpt;
+
+		for (;;)
+		{
+			mid = (bot + top) / 2;
+			minlen = strlen(search_arg);
+
+			if (!(chk = strncmp(search_arg, wizhelp_index[mid].keyword, minlen)))
+			{
+				fseek(wizhelp_fl, wizhelp_index[mid].pos, 0);
+				*buffer = '\0';
+				for (;;)
+				{
+					fgets(buf, 80, wizhelp_fl);
+					if (*buf == '#')
+						break;
+					strcat(buffer, buf);
+					strcat(buffer, "\r");
+				}
+				page_string(ch->desc, buffer, 1);
+				return;
+			}
+			else if (bot >= top)
+			{
+				send_to_char("There is no help on that wizard command.\n\r", ch);
+				return;
+			}
+			else if (chk > 0)
+				bot = ++mid;
+			else
+				top = --mid;
+		}
+		return;
+	}
+
+	/* No argument - list all available wizard commands */
 	send_to_char("The following privileged comands are available:\n\r\n\r", ch);
 
 	*buf = '\0';
@@ -1020,6 +1079,7 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 			no++;
 		}
 	strcat(buf, "\n\r");
+	send_to_char("\n\rType 'wizhelp <command>' for help on a specific wizard command.\n\r", ch);
 	page_string(ch->desc, buf, 1);
 }
 

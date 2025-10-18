@@ -46,15 +46,18 @@ char wizlist[MAX_STRING_LENGTH];      /* the wizlist                     */
 
 FILE *mob_f,                          /* file containing mob prototypes  */
      *obj_f,                          /* obj prototypes                  */
-     *help_fl;                        /* file for help texts (HELP <kwd>)*/
+     *help_fl,                        /* file for help texts (HELP <kwd>)*/
+     *wizhelp_fl;                     /* file for wizard help texts (WIZHELP <kwd>)*/
 
 struct index_data *mob_index;         /* index table for mobile file     */
 struct index_data *obj_index;         /* index table for object file     */
 struct help_index_element *help_index = 0;
+struct help_index_element *wizhelp_index = 0;
 
 int top_of_mobt = 0;                  /* top of mobile index table       */
 int top_of_objt = 0;                  /* top of object index table       */
 int top_of_helpt;                     /* top of help index table         */
+int top_of_wizhelpt;                  /* top of wizard help index table  */
 
 struct time_info_data time_info;	/* the infomation about the time   */
 struct weather_data weather_info;	/* the infomation about the weather */
@@ -145,6 +148,11 @@ void boot_db(void)
 		slog("   Could not open help file.");
 	else 
 		help_index = build_help_index(help_fl, &top_of_helpt);
+
+	if (!(wizhelp_fl = fopen(WIZHELP_FILE, "r")))
+		slog("   Could not open wizard help file.");
+	else 
+		wizhelp_index = build_help_index(wizhelp_fl, &top_of_wizhelpt);
 
 
 	slog("Loading zone table.");

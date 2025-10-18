@@ -84,31 +84,6 @@ SAVE
 Save your persona. This includes experience points, strength, gold, etc. Any
 equipment you may have gathered is NOT saved.
 #
-STRING
-For changing the text-strings associated with objects and characters. The
-format is:
-
-string <type> <name> <field> [<string> | <keyword>]
-
-Type is either 'obj' or 'char'.
-Field is one of the following(the names may be abbreviated):
-Name                  (the call-name of an obj/char - kill giant)
-Short                 (for inventory lists (obj's) and actions (char's))
-Long                  (for when obj/character is seen in room)
-Title                 (for players)
-Description           (For look at. For obj's, must be followed by a keyword)
-Delete-description    (only for obj's. Must be followed by keyword)
-
-Where a string is expected as the last argument, a newline will make you enter
-a string mode, and the game will prompt you for new lines to the string until
-you exceed the maximum length for the string or you end a line with a '@'.
-#
-LOAD
-For loading new objects or characters from the database. The format is:
-load <type> <number>
-Where <type> is either 'obj' or 'char', and number is the number of the object
-or character you wish to create.
-#
 INVENTORY
 If you're uncertain about what you're carrying, or simply want to check
 that no thieves have got to your backpack.
@@ -242,19 +217,6 @@ Example : drop bottle
 
 See also: GET
 #
-PURGE
-A way to make the world a little cleaner.
-Usage:
-  purge                         To empty a room of monsters and objects.
-  purge <character>             To remove a living thing. Kicks out a player.
-  purge <object>                Figure this one out yourself.
-#
-STAT
-If you're interested in a person and want to find out about his/her/its
-skills, strength, flux, hitpoints etc.
-   In addition, 'stat room' will give you useful information about the room
-you're in.
-#
 ORDER
 In bars etc you can order things.
 
@@ -336,9 +298,6 @@ shake,  shiver,  shrug,  sigh, sing,  slap, smirk,  smile, snap, snarl, sneeze,
 snicker,  sniff,  snore, snuggle,  spank,  spit,  squeeze, stare, steam, strut,
 sulk,  tackle,  taunt,  thank,  think,  twiddle,  wave, whine, whistle, wiggle,
 wink, worship, yodel
-#
-WIZ
-A listing of the commands for immortals (should be unavailable for mortals  :)
 #
 COMMANDS
 A mechanical listing (the code already exists) of the known verbs.
@@ -515,9 +474,6 @@ Mortals can only "where" monsters or players, and only from their own
 zone.
 
 Immortals may type 'where' without arguments to see where everybody is.
-#
-USERS
-Tells you who's logged on to the game, and where they are playing from.
 #
 LEVELS
 Lists the levels of your class. 
@@ -1204,23 +1160,6 @@ SPELL SPELLS
           (15) Clone               (15) Harm
           (15) Fireball            (15) -
 #
-ADVANCE
-To advance a player to a level higher than his present. Default is to advance
-him one level. A level 0 player (Man/Woman) is always only advanced by one
-level.
-#
-WIZHELP
-List the privileged commands available to you. Can only be used by immortals.
-#
-NOSHOUT
-Prevents you from (or allows you to) hearing shouts, if used with no arguments.
-Can be used with the name of a player, to prevent him/her from hearing shouts,
-as well as from shouting. Can only be used by certain more powerful beings.
-#
-RESTORE
-If used on a mortal, this command will reset that players flux and hit points.
-If used on an Immortal various values will be reset to their proper values.
-#
 LINK
 
 A lot of players have problems with their links to the game. This could be
@@ -1336,4 +1275,5 @@ Examples:
     Level Range: 3-6
 
 See also: WHERE, LEVELS
+#~
 #~

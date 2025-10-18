@@ -1,0 +1,87 @@
+# Test for wizhelp command functionality
+# This test validates that wizhelp shows list of commands and can display help for specific commands
+
+test:
+  id: test_wizhelp_command
+  description: "Verify wizhelp command lists wizard commands and shows help for specific commands"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [wizard, help, command, feature_test]
+
+setup:
+  character:
+    name: WizTest
+    password: test
+    class: warrior
+    level: 23  # High level wizard
+  start_room: 3001  # Temple
+  gold: 1000
+
+steps:
+  - action: command
+    command: "wizhelp"
+    description: "List all available wizard commands"
+    expected:
+      - pattern: "privileged comands|wizard commands"
+        message: "Should show wizard commands header"
+      - pattern: "echo|force|goto"
+        message: "Should list some wizard commands"
+      - pattern: "wizhelp <command>"
+        message: "Should show usage hint"
+
+  - action: command
+    command: "wizhelp force"
+    description: "Get help on the force command"
+    expected:
+      - pattern: "FORCE|force"
+        message: "Should show force command help"
+      - pattern: "Wizard command"
+        message: "Should indicate it's a wizard command"
+      - pattern: "Level 22"
+        message: "Should show the level requirement"
+      - pattern: "force.*victim.*command"
+        message: "Should show the usage syntax"
+
+  - action: command
+    command: "wizhelp goto"
+    description: "Get help on the goto command"
+    expected:
+      - pattern: "GOTO|goto"
+        message: "Should show goto command help"
+      - pattern: "Wizard command"
+        message: "Should indicate it's a wizard command"
+      - pattern: "Level 21"
+        message: "Should show the level requirement"
+
+  - action: command
+    command: "wizhelp echo"
+    description: "Get help on the echo command"
+    expected:
+      - pattern: "ECHO|echo"
+        message: "Should show echo command help"
+      - pattern: "Wizard command"
+        message: "Should indicate it's a wizard command"
+      - pattern: "message"
+        message: "Should describe echo functionality"
+
+  - action: command
+    command: "wizhelp invalidcommand"
+    description: "Try to get help on a non-existent command"
+    expected:
+      - pattern: "no help|not found"
+        message: "Should indicate help is not available for invalid commands"
+
+result:
+  should_pass: true
+  description: "Wizhelp should list wizard commands and provide help for specific commands"
+  notes: |
+    This test validates the enhanced wizhelp command functionality:
+    
+    1. wizhelp (no args) - Lists all available wizard commands
+    2. wizhelp <command> - Shows detailed help for a specific wizard command
+    3. wizhelp <invalid> - Handles invalid command gracefully
+    
+    The test uses a level 23 character to ensure access to most wizard commands.
+    
+    Pattern matching is flexible to account for variations in server output
+    formatting while ensuring the core functionality works.

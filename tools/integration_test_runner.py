@@ -88,6 +88,13 @@ class ServerManager:
         
         # Copy lib directory to test_lib
         shutil.copytree(self.lib_path, self.test_lib_path)
+        
+        # Create empty pcobjs.obj file if it doesn't exist
+        # This file stores player objects at inns and is modified during gameplay
+        # It's in .gitignore but required for the game to start
+        pcobjs_path = os.path.join(self.test_lib_path, 'pcobjs.obj')
+        if not os.path.exists(pcobjs_path):
+            open(pcobjs_path, 'wb').close()
     
     def _check_world_files(self):
         """Check that required world files exist before starting the server."""
