@@ -46,6 +46,7 @@ Design documents for major features and systems:
 - File format specifications (YAML schema, file formats)
 - Object flags review
 - Spec procedure fixes
+- **Class balance guide** - Statistical reference for all character classes (HP, AC, damage, THAC0)
 
 ### `milestones/`
 Project milestone tracking and completion guides:
