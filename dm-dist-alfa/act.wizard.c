@@ -1557,7 +1557,7 @@ void do_locate(struct char_data *ch, char *argument, int cmd)
 
 	argument_interpreter(argument, type, name);
 
-	if (!*type || !*name)
+	if (!*type)
 	{
 		send_to_char("Syntax:\n\r", ch);
 		send_to_char("  locate char <vnum>     - Find a mob by virtual number\n\r", ch);
@@ -1569,7 +1569,7 @@ void do_locate(struct char_data *ch, char *argument, int cmd)
 	/* Check if first argument is "char" or "obj" */
 	if (is_abbrev(type, "char"))
 	{
-		if (!isdigit(*name))
+		if (!*name || !isdigit(*name))
 		{
 			send_to_char("You must specify a virtual number.\n\r", ch);
 			return;
@@ -1602,7 +1602,7 @@ void do_locate(struct char_data *ch, char *argument, int cmd)
 	}
 	else if (is_abbrev(type, "obj"))
 	{
-		if (!isdigit(*name))
+		if (!*name || !isdigit(*name))
 		{
 			send_to_char("You must specify a virtual number.\n\r", ch);
 			return;
@@ -1662,10 +1662,18 @@ void do_locate(struct char_data *ch, char *argument, int cmd)
 	else
 	{
 		/* Keyword search - search both mobs and objects */
-		/* First argument becomes the keyword */
-		char keywords[MAX_INPUT_LENGTH];
+		/* Use the original argument for keyword search */
+		char *keywords = argument;
 		
-		snprintf(keywords, sizeof(keywords), "%s %s", type, name);
+		/* Skip leading spaces */
+		while (*keywords && *keywords == ' ')
+			keywords++;
+
+		if (!*keywords)
+		{
+			send_to_char("You must specify keywords to search for.\n\r", ch);
+			return;
+		}
 
 		send_to_char("Searching for mobiles...\n\r", ch);
 		

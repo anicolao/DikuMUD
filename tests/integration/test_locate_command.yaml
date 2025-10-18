@@ -1,0 +1,102 @@
+# Test for locate command functionality
+# This test validates that locate can find mobs and objects by vnum and keywords
+
+test:
+  id: test_locate_command
+  description: "Verify locate command can find mobs and objects by vnum and keywords"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [wizard, locate, command, feature_test]
+
+setup:
+  character:
+    name: LocTest
+    password: test
+    class: warrior
+    level: 23  # High level wizard (22+ required)
+  start_room: 3001  # Temple
+  gold: 1000
+
+steps:
+  - action: command
+    command: "locate"
+    description: "Show usage when no arguments provided"
+    expected:
+      - pattern: "Syntax"
+        message: "Should show usage syntax"
+      - pattern: "locate char.*vnum|locate obj.*vnum"
+        message: "Should explain vnum search syntax"
+      - pattern: "locate.*keywords"
+        message: "Should explain keyword search syntax"
+
+  - action: command
+    command: "locate char 3000"
+    description: "Find scientist by vnum (mob)"
+    expected:
+      - pattern: "scientist|Scientist"
+        message: "Should find scientist mob"
+      - pattern: "\\[.*3.*\\]"
+        message: "Should show room number"
+      - pattern: "Total found|found:"
+        message: "Should show total count"
+
+  - action: command
+    command: "locate obj 3099"
+    description: "Find copper lamp by vnum (object)"
+    expected:
+      - pattern: "lamp|Lamp"
+        message: "Should find lamp object"
+      - pattern: "\\[.*3.*\\]|carried by|in "
+        message: "Should show location (room number or carrier)"
+
+  - action: command
+    command: "locate scientist"
+    description: "Find scientist by keyword"
+    expected:
+      - pattern: "Searching for mobiles"
+        message: "Should search mobiles"
+      - pattern: "Searching for objects"
+        message: "Should search objects"
+      - pattern: "scientist|Scientist"
+        message: "Should find scientist entities"
+
+  - action: command
+    command: "locate lamp"
+    description: "Find lamp by keyword"
+    expected:
+      - pattern: "Searching for mobiles"
+        message: "Should search mobiles"
+      - pattern: "Searching for objects"
+        message: "Should search objects"
+      - pattern: "lamp|Lamp"
+        message: "Should find lamp entities"
+
+  - action: command
+    command: "locate obj 99999"
+    description: "Try to locate non-existent object vnum"
+    expected:
+      - pattern: "No objects found|not found"
+        message: "Should indicate no objects found"
+
+  - action: command
+    command: "locate char 99999"
+    description: "Try to locate non-existent mob vnum"
+    expected:
+      - pattern: "No mobiles found|not found"
+        message: "Should indicate no mobiles found"
+
+result:
+  should_pass: true
+  description: "Locate command should find mobs and objects by vnum and keywords"
+  notes: |
+    This test validates the locate command functionality:
+    
+    1. locate (no args) - Shows usage syntax
+    2. locate char <vnum> - Finds all instances of a mob by virtual number
+    3. locate obj <vnum> - Finds all instances of an object by virtual number
+    4. locate <keywords> - Finds mobs and objects matching keywords
+    
+    The test uses a level 23 character to ensure access to the locate command (requires level 22+).
+    
+    Pattern matching is flexible to account for variations in server output
+    formatting while ensuring the core functionality works.
