@@ -623,7 +623,7 @@ rooms:
 
     is the main concourse.'
   zone: 30
-  room_flags: 8
+  room_flags: 12
   sector_type: 0
   exits:
   - direction: 0
