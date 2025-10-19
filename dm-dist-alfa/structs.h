@@ -19,7 +19,7 @@ typedef char byte;
 #define WAIT_SEC       4
 #define WAIT_ROUND     4
 
-#define MAX_STRING_LENGTH   4096
+#define MAX_STRING_LENGTH   (4096*4)
 #define MAX_INPUT_LENGTH      80
 #define MAX_MESSAGES          60
 #define MAX_ITEMS            153
