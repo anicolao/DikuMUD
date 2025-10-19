@@ -103,6 +103,9 @@ void grant_quest_reward(struct char_data *ch, struct quest_data *quest)
 			send_to_char(buf, ch);
 		}
 	}
+	
+	/* Mark quest as completed (player has received reward) */
+	set_quest_completed(ch, quest->qnum);
 }
 
 /* Boot quests from file */
@@ -214,4 +217,40 @@ void assign_quest_givers(void)
 	
 	snprintf(buf, sizeof(buf), "   %d quest givers assigned", assigned);
 	slog(buf);
+}
+
+/* Set a quest as completed (player has received reward) 
+ * Maps quest numbers to bit positions in the completion bitfields.
+ * Since quest numbers are in the 3000-4500 range, we use the quest number
+ * directly as the bit position modulo 128 for simplicity and consistency.
+ */
+void set_quest_completed(struct char_data *ch, int quest_num)
+{
+	int bit_pos = quest_num % 128;
+	
+	if (IS_NPC(ch))
+		return;
+	
+	/* Store in the player data, which gets saved to char_file_u */
+	if (bit_pos < 64) {
+		ch->player.quests_completed_low |= (1ULL << bit_pos);
+	} else {
+		ch->player.quests_completed_high |= (1ULL << (bit_pos - 64));
+	}
+}
+
+/* Check if a quest has been completed (player has received reward) */
+int is_quest_completed(struct char_data *ch, int quest_num)
+{
+	int bit_pos = quest_num % 128;
+	
+	if (IS_NPC(ch))
+		return 0;
+	
+	/* Check in the player data */
+	if (bit_pos < 64) {
+		return (ch->player.quests_completed_low & (1ULL << bit_pos)) != 0;
+	} else {
+		return (ch->player.quests_completed_high & (1ULL << (bit_pos - 64))) != 0;
+	}
 }

@@ -18,4 +18,8 @@ struct quest_data *find_available_quest(struct char_data *ch, int giver_vnum);
 void grant_quest_reward(struct char_data *ch, struct quest_data *quest);
 int has_quest_type(struct char_data *ch, int quest_type);
 
+/* Quest completion tracking functions */
+void set_quest_completed(struct char_data *ch, int quest_num);
+int is_quest_completed(struct char_data *ch, int quest_num);
+
 #endif /* _QUEST_H_ */

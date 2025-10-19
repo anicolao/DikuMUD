@@ -1807,6 +1807,10 @@ void store_to_char(struct char_file_u *st, struct char_data *ch)
 	for(i = 0; i <= 2; i++)
 	  GET_COND(ch, i) = st->conditions[i];
 
+	/* Load quest completion tracking */
+	ch->player.quests_completed_low = st->quests_completed_low;
+	ch->player.quests_completed_high = st->quests_completed_high;
+
 	/* Add all spell effects */
 	for(i=0; i < MAX_AFFECT; i++) {
 		if (st->affected[i].type)
@@ -1909,6 +1913,10 @@ void char_to_store(struct char_data *ch, struct char_file_u *st)
 
 	for(i = 0; i <= 2; i++)
 	  st->conditions[i] = GET_COND(ch, i);
+
+	/* Save quest completion tracking */
+	st->quests_completed_low = ch->player.quests_completed_low;
+	st->quests_completed_high = ch->player.quests_completed_high;
 
 	for(af = ch->affected, i = 0; i<MAX_AFFECT; i++) {
 		if (af) {
