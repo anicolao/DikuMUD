@@ -2,6 +2,24 @@
 
 This document lists one-way exits that are intentionally designed into the game world and should not be "fixed" by adding reverse connections.
 
+## Summary
+
+As of the latest validation run, there are **61 intentional one-way exits** remaining in the world. These have been reviewed and determined to serve important gameplay purposes:
+
+- **1** Limbo/starting area connection
+- **11** Secret passages, hidden doors, and concealed areas  
+- **4** One-way falls, drops, and slides
+- **1** Magical teleport/trap
+- **44** Complex topology cases (non-grid city layouts, mazes, checkpoints, multi-entry hubs)
+
+All other one-way exits (33 simple missing reverse exits) have been fixed by adding the appropriate return connections.
+
+### Recent Fixes
+
+- Fixed 33 rooms with simple missing reverse exits across multiple zones
+- Fixed Scientific Supplies Shop (room 3933) navigation by rerouting its connection to the plaza
+- Added comprehensive documentation for all intentional one-way exits
+
 ## Limbo Area
 
 **Room 0 (Limbo) → Room 3001 (Temple)**
@@ -178,3 +196,83 @@ When evaluating whether a one-way exit should be fixed or documented:
 ## Validation
 
 These one-way exits have been reviewed and determined to be intentional features of the world design. They should not generate warnings in future zone layout validation runs.
+
+## Complete List of Intentional One-Way Exits
+
+The following table lists all 61 intentional one-way exits as of the latest validation:
+
+| From Room | To Room | Direction | Category | Reason |
+|-----------|---------|-----------|----------|--------|
+| 0 | 3001 | up | Limbo | Starting area - no return |
+| 3055 | 3054 | south | Secret | Temple vault with concealed door |
+| 3136 | 3137 | south | Complex | Security checkpoint with multiple entry points |
+| 3628 | 3620 | south | Complex | City street non-grid layout |
+| 3635 | 3633 | south | Secret | Hidden intelligence archive |
+| 3636 | 3630 | south | Fall | One-way drop from training academy |
+| 3640 | 3600 | west | Complex | Eastern gate to main plaza |
+| 3641 | 3600 | east | Complex | Western gate to main plaza |
+| 3642 | 3600 | south | Complex | Northern gate to main plaza |
+| 3644 | 3600 | north | Complex | Arena to main plaza |
+| 3645 | 3600 | east | Fall | Observatory deck drop |
+| 3649 | 3605 | south | Complex | Treasury to palace chambers |
+| 3763 | 3767 | west | Maze | Dead Sea Wilderness - intentional non-Euclidean |
+| 3763 | 3752 | up | Maze | Dead Sea Wilderness - vertical maze |
+| 3765 | 3763 | north | Maze | Dead Sea Wilderness - underwater currents |
+| 3765 | 3767 | west | Maze | Dead Sea Wilderness - maze structure |
+| 3767 | 3764 | north | Maze | Dead Sea Wilderness - cavern connections |
+| 3767 | 3768 | south | Fall | One-way fall into cavern |
+| 3768 | 3766 | east | Fall | Continuing cavern fall/slide |
+| 3770 | 3205 | west | Terrain | Cross-zone underwater current |
+| 3775 | 3763 | south | Fall | Elevated overlook drop |
+| 3776 | 3761 | west | Maze | Dead Sea Wilderness - maze path |
+| 3777 | 3762 | east | Maze | Dead Sea Wilderness - maze path |
+| 3778 | 3764 | north | Maze | Dead Sea Wilderness - maze path |
+| 3779 | 3766 | south | Maze | Dead Sea Wilderness - maze path |
+| 3952 | 3920 | north | Complex | Greater Helium - non-grid street layout |
+| 3955 | 3954 | east | Secret | Hidden treasury |
+| 3958 | 3923 | north | Complex | Greater Helium - market district layout |
+| 3962 | 3921 | north | Complex | Greater Helium - plaza connections |
+| 3964 | 3900 | south | Complex | Greater Helium - district routing |
+| 3969 | 3900 | south | Complex | Greater Helium - northern plaza to grand plaza |
+| 3975 | 3902 | south | Complex | Greater Helium - palace connections |
+| 3987 | 3944 | south | Complex | Greater Helium - residential district |
+| 3989 | 3934 | west | Complex | Greater Helium - street layout |
+| 3990 | 3944 | east | Complex | Greater Helium - bath house connections |
+| 3991 | 3920 | west | Complex | Greater Helium - market access |
+| 3992 | 3900 | east | Complex | Greater Helium - administration to plaza |
+| 3995 | 3900 | west | Complex | Greater Helium - approach to plaza |
+| 3996 | 3930 | south | Complex | Greater Helium - academy connections |
+| 3997 | 3904 | east | Complex | Greater Helium - library access |
+| 3998 | 3912 | south | Complex | Greater Helium - temple district |
+| 3999 | 3912 | west | Complex | Greater Helium - temple district |
+| 4055 | 4125 | down | Industrial | Factory vertical access/maintenance shaft |
+| 4064 | 4130 | south | Industrial | Factory unfinished chamber access |
+| 4074 | 4150 | down | Teleport | Magical transport or trap mechanism |
+| 4118 | 4117 | up | Industrial | Factory catwalk system |
+| 4120 | 4125 | down | Industrial | Factory corridor to unfinished area |
+| 4126 | 4054 | west | Industrial | Factory maintenance access |
+| 4128 | 4056 | up | Industrial | Factory vertical maintenance |
+| 4130 | 4120 | north | Industrial | Factory chamber connections |
+| 4136 | 4064 | north | Industrial | Factory unfinished area routing |
+| 4140 | 4071 | west | Industrial | Factory corridor system |
+| 4146 | 4147 | east | Industrial | Factory unfinished chambers |
+| 4155 | 4160 | down | Secret | Hidden service passage |
+| 4167 | 4169 | down | Industrial | Factory maintenance descent |
+| 4320 | 4300 | south | Terrain | Thark territory - tribal paths |
+| 4398 | 4600 | north | Travel | Inter-city wilderness route |
+| 4399 | 4400 | south | Travel | City to wilderness transition |
+| 4400 | 3789 | south | Travel | Major inter-city travel route |
+| 4499 | 4399 | north | Travel | Wilderness approach to city |
+| 4600 | 4399 | south | Travel | Wilderness return route |
+
+### Category Definitions
+
+- **Limbo**: Starting/void areas not meant to be re-entered
+- **Secret**: Hidden passages, concealed doors, secret areas
+- **Fall**: One-way drops, falls, slides
+- **Teleport**: Magical transport, traps, teleport mechanisms  
+- **Maze**: Intentionally non-Euclidean maze areas
+- **Complex**: Realistic non-grid city layouts, multi-entry hubs, organic architecture
+- **Industrial**: Factory facilities with asymmetric maintenance/service access
+- **Terrain**: Geographic features like currents, cliffs, terrain transitions
+- **Travel**: Inter-city and wilderness travel routes with asymmetric approaches
