@@ -2332,6 +2332,10 @@ resets:
   if_flag: 1
   arg1: 3216
   arg2: 100
+- command: G
+  if_flag: 1
+  arg1: 3215
+  arg2: 100
 - command: M
   if_flag: 0
   arg1: 3500
@@ -2411,6 +2415,10 @@ resets:
   arg1: 3502
   arg2: 2
   arg3: 3163
+- command: G
+  if_flag: 1
+  arg1: 3215
+  arg2: 100
 - command: M
   if_flag: 0
   arg1: 3507

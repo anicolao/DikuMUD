@@ -52,16 +52,15 @@ This document provides a comprehensive overview of all available quests in the B
 - **Rewards:** 250 XP, 100 gold, provisions (Object #3001)
 - **Description:** "I need someone to make a patrol through the market plaza and report back on the activity there. Simply make your way to the market plaza and return to me."
 
-#### Quest 3003: "Temple Offerings"
-- **Type:** DELIVERY
+#### Quest 3003: "Calot Feeding"
+- **Type:** RETRIEVAL
 - **Level:** 3-10
-- **Quest Giver:** Temple Priest (Mob #3008)
-- **Objective:** Deliver blessed wine to complete morning ritual
-- **Target:** High Priest (Mob #3021)
-- **Item:** Blessed Wine (Object #3002)
+- **Quest Giver:** Red Martian Beast-Handler (Mob #3008)
+- **Objective:** Retrieve dried meat from carrion birds in the sewers
+- **Item:** Dried Meat (Object #3215)
 - **Duration:** 2 real hours (96 MUD hours)
 - **Rewards:** 300 XP, 75 gold, healing item (Object #3003)
-- **Description:** "The morning blessing ceremony requires a sacred offering. Please take this blessed wine and bring it to complete the ritual."
+- **Description:** "My calots are hungry, and I need fresh meat to keep them strong and healthy. The carrion birds in the sewers beneath the city often have dried meat in their nests. If you could venture down there and bring me back some dried meat, I would be most grateful."
 
 ---
 
@@ -291,7 +290,7 @@ This document provides a comprehensive overview of all available quests in the B
 
 ### Level 1-10 (Novice)
 - **Quest 3002** (Lesser Helium): Market Patrol - 250 XP
-- **Quest 3003** (Lesser Helium): Temple Offerings - 300 XP
+- **Quest 3003** (Lesser Helium): Calot Feeding - 300 XP
 
 ### Level 10-15 (Intermediate)
 - **Quest 4001** (Thark Territory): Sola's White Ape Tooth - 500 XP
@@ -333,7 +332,7 @@ In delivery quests, the quest giver provides you with an item that must be deliv
 - Some delivery targets may be in dangerous zones
 - Plan your route before accepting the quest
 
-**Example:** Quest 3003 - Temple Offerings (deliver blessed wine to high priest)
+**Example:** Quest 3782 - Diplomatic Mission (deliver sealed message to Greater Helium)
 
 ### RETRIEVAL Quests
 Retrieval quests require you to find a specific item in the world and return it to the quest giver. The item may be found on defeated enemies, in hidden locations, or obtained from other NPCs.
@@ -343,7 +342,7 @@ Retrieval quests require you to find a specific item in the world and return it 
 - You may need to defeat multiple enemies to find the item
 - Return to the quest giver with the item in your inventory
 
-**Example:** Quest 4001 - Sola's White Ape Tooth (find white ape tooth in ruins)
+**Example:** Quest 3003 - Calot Feeding (retrieve dried meat from carrion birds in sewers)
 
 ### KILL Quests
 Kill quests require you to defeat a specific enemy or creature. The quest automatically completes when you kill the target, and you must return to the quest giver for your reward.
@@ -378,7 +377,7 @@ Start with Lesser Helium quests to learn the basics:
 
 **Levels 5-10: Building Skills**
 Continue in Lesser Helium and explore nearby zones:
-1. Quest 3003 (Temple Offerings) - Learn delivery mechanics
+1. Quest 3003 (Calot Feeding) - Learn retrieval mechanics and sewer exploration
 2. Quest 4001 (Sola's White Ape Tooth) - Venture into Thark Territory
 
 **Levels 10-15: Expanding Horizons**
@@ -422,7 +421,7 @@ Undertake the most dangerous missions:
 - Atmosphere Factory quests are thematically appropriate
 
 **Nobles:**
-- Excel at DELIVERY and EXPLORE quests (3002, 3003, 3903, 3782, 4302)
+- Excel at DELIVERY and EXPLORE quests (3002, 3903, 3782, 4302)
 - Leadership abilities help with difficult encounters
 - Inter-city diplomatic missions suit the class
 
@@ -452,7 +451,7 @@ From the game code (constants.c), here are the XP requirements for key levels:
 **Low-Level Quests (1-5): Well Balanced**
 - Quest 3001 (200 XP) provides ~8% progress toward level 3 - appropriate for first combat quest
 - Quest 3002 (250 XP) provides ~10% progress toward level 3 - good exploration reward
-- Quest 3003 (300 XP) provides ~6% progress toward level 4 - reasonable for delivery quest
+- Quest 3003 (300 XP) provides ~6% progress toward level 4 - reasonable for retrieval quest
 - **Status:** These quests provide meaningful progress without trivializing early leveling
 
 **Mid-Level Quest Gap (Levels 6-10)**
