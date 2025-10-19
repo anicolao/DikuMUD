@@ -4,13 +4,13 @@ This document lists one-way exits that are intentionally designed into the game 
 
 ## Summary
 
-As of the latest validation run, there are **53 intentional one-way exits** remaining in the world. These have been reviewed and determined to serve important gameplay purposes:
+As of the latest validation run, there are **50 intentional one-way exits** remaining in the world. These have been reviewed and determined to serve important gameplay purposes:
 
 - **1** Limbo/starting area connection
 - **11** Secret passages, hidden doors, and concealed areas  
 - **3** One-way falls, drops, and slides
 - **1** Magical teleport/trap
-- **37** Complex topology cases (non-grid city layouts, mazes, checkpoints, multi-entry hubs)
+- **34** Complex topology cases (non-grid city layouts, mazes, checkpoints, multi-entry hubs)
 
 All other one-way exits have been fixed by adding the appropriate return connections.
 
@@ -24,6 +24,9 @@ All other one-way exits have been fixed by adding the appropriate return connect
 - Fixed Training Academy cluster (3636-3639) with up/down stairs to Espionage Quarter
 - Fixed Greater Helium unreachable rooms (3930-3936) by connecting Western Thoroughfare to Scientific Academy Plaza
 - Fixed Atmosphere Factory room 4136 by correcting duplicate exits in room 4064
+- Fixed Ptarth Airship Docks (4320) by making it accessible via up/down from Plaza (4300)
+- Fixed Ptarth-Kaol wilderness connection by correcting room 4600 to connect to Northern Gate (4398) instead of Southern Gate (4399)
+- Fixed Ptarth Southern Gate (4399) to connect to wilderness approach room (4499) instead of skipping to Gathol approach (4400)
 - Added comprehensive documentation for all intentional one-way exits
 
 ## Limbo Area
@@ -115,21 +118,7 @@ Industrial facility with restricted access corridors, unfinished chambers, maint
 - Maintenance passages and emergency routes create asymmetric pathways
 - Ventilation systems and service corridors with one-way access
 
-### Thark Territory (Room 4320)
-
-**Room 4320 → Room 4300**
-- Direction: south
-- Reason: Part of Thark tribal territory navigation. May represent terrain features or tribal customs.
-
-### Inter-City Wilderness Connections (Rooms 4398-4600)
-
-**Room 4398 → Room 4600**
-- Direction: north
-- Reason: Wilderness travel route between Ptarth and Kaol regions. Different approach/departure paths.
-
-**Room 4399 → Room 4400**
-- Direction: south
-- Reason: Ptarth city to wilderness transition with asymmetric routing.
+### Inter-City Wilderness Connections
 
 **Room 4400 → Room 3789 (Gathol)**
 - Direction: south
@@ -215,12 +204,7 @@ The following table lists all 53 intentional one-way exits as of the latest vali
 | 4146 | 4147 | east | Industrial | Factory unfinished chambers |
 | 4155 | 4160 | down | Secret | Hidden service passage |
 | 4167 | 4169 | down | Industrial | Factory maintenance descent |
-| 4320 | 4300 | south | Terrain | Thark territory - tribal paths |
-| 4398 | 4600 | north | Travel | Inter-city wilderness route |
-| 4399 | 4400 | south | Travel | City to wilderness transition |
 | 4400 | 3789 | south | Travel | Major inter-city travel route |
-| 4499 | 4399 | north | Travel | Wilderness approach to city |
-| 4600 | 4399 | south | Travel | Wilderness return route |
 
 ### Category Definitions
 
