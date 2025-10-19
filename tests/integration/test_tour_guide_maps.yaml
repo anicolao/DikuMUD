@@ -26,6 +26,14 @@ steps:
       - pattern: "Tour Guide|tour guide"
         message: "Tour Guide should be present in room 3001"
 
+  # Wait a moment for zone reset and shop initialization
+  - action: command
+    description: "Wait for shop to initialize"
+    command: "look"
+    expected:
+      - pattern: "."
+        message: "Just waiting"
+
   # Test list command to see maps
   - action: command
     description: "List available items from tour guide"
