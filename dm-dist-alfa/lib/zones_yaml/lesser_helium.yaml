@@ -2862,6 +2862,35 @@ mobiles:
     position: 8
     default_position: 8
     sex: 1
+- vnum: 3110
+  namelist: guide tour red martian helper
+  short_desc: the Tour Guide
+  long_desc: A friendly Red Martian tour guide stands here, ready to help visitors.
+  detailed_desc: 'This helpful red Martian has copper-red skin and an engaging smile.
+    She wears
+
+    a bright harness marked with the emblem of Helium''s Visitor Services.
+    Her
+
+    friendly demeanor and patient manner make new arrivals feel welcome.
+    She
+
+    carries detailed maps of the city and knows all the important locations.'
+  action_flags: 2
+  affection_flags: 0
+  alignment: 1000
+  type: simple
+  simple:
+    level: 20
+    thac0: 5
+    ac: 5
+    hp_dice: 1d1+20000
+    damage_dice: 1d6+8
+    gold: 5000
+    experience: 50000
+    position: 8
+    default_position: 8
+    sex: 2
 objects:
 - vnum: 3000
   namelist: water barrel
@@ -4076,6 +4105,43 @@ objects:
     description: A sturdy leather waterskin for carrying water on journeys across
       the dead sea bottoms.
   affects: []
+- vnum: 3139
+  namelist: map helium city guide
+  short_desc: a map of Lesser Helium
+  long_desc: A detailed map of Lesser Helium lies here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 0
+  rent: 1
+  extra_descriptions:
+  - keywords: map guide
+    description: "This detailed map shows the layout of Lesser Helium:\n\n=== GUILDMASTERS\
+      \ ===\n  - Warriors Guild: South from Market Plaza, enter Warriors Guild\n \
+      \ - Scientific Academy: West from Market Plaza, south at Main Concourse\n  -\
+      \ Assassins Guild: Down from Market Plaza to Common Plaza, east to Shadowy Alley,\
+      \ south\n  - Noble's Guild: West from Temple Plaza\n\n=== SHOPS ===\n  - Provisions\
+      \ Merchant: West then north (up) from Market Plaza\n  - General Merchant: East\
+      \ then north (up) from Market Plaza\n  - Weapon Smith: East twice then north\
+      \ (up) from Market Plaza\n  - Armory: West from Market Plaza then south\n  -\
+      \ Jeweler's Shop: East from Market Plaza then south\n  - Leather Worker: Down\
+      \ from Market Plaza, west twice, north\n  - Calot Shop (Pets): Down from Market\
+      \ Plaza, east twice, north\n  - Scientific Supplies: West twice from Market\
+      \ Plaza, north\n  - Traveler's Rest Inn: North from Market Plaza, east\n  -\
+      \ Noble's Guild Bar: North from Market Plaza, west, north, west\n\n=== QUESTS\
+      \ ===\n  - Market Plaza Exploration: Ask the Red Martian Mercenary in the Shadowy\
+      \ Alley\n    (Down from Market Plaza, east to Shadowy Alley)\n  - Additional\
+      \ quests available at the Warriors Guild\n\n=== KEY LOCATIONS ===\n  - Temple\
+      \ Plaza: North from Market Plaza\n  - Market Plaza: Center of the city\n  -\
+      \ Common Plaza: Down from Market Plaza\n  - West Gate: West twice from Market\
+      \ Plaza, then west\n  - East Gate: East twice from Market Plaza, then east\n"
+  affects: []
 resets:
 - command: O
   if_flag: 0
@@ -4107,6 +4173,17 @@ resets:
   arg1: 3321
   arg2: 2
   arg3: 3055
+- command: M
+  if_flag: 0
+  arg1: 3110
+  arg2: 1
+  arg3: 3001
+  comment: Tour guide in Temple of Jeddak (first room)
+- command: G
+  if_flag: 1
+  arg1: 3139
+  arg2: 500
+  comment: Give tour guide maps to sell
 - command: M
   if_flag: 0
   arg1: 3000
@@ -5042,6 +5119,29 @@ shops:
   close1: 28
   open2: 0
   close2: 0
+- vnum: 22
+  producing:
+  - 3139
+  profit_buy: 1.0
+  profit_sell: 1.0
+  buy_types: []
+  messages:
+    no_such_item1: '%s I only have maps available. Use ''list'' to see what I offer.'
+    no_such_item2: '%s I don''t buy anything, I just provide maps to visitors.'
+    do_not_buy: '%s I don''t buy anything, I just provide maps to visitors.'
+    missing_cash1: '%s I don''t buy anything, I just provide maps to visitors.'
+    missing_cash2: '%s The map is free for all visitors to Lesser Helium!'
+    message_buy: '%s Here''s your map - completely free! Welcome to Lesser Helium!'
+    message_sell: '%s I don''t buy anything, I just provide maps to visitors.'
+  temper1: 0
+  temper2: 0
+  keeper: 3110
+  with_who: 0
+  in_room: 3001
+  open1: 0
+  close1: 28
+  open2: 0
+  close2: 0
 quests:
 - qnum: 3001
   giver: 3007
@@ -5059,7 +5159,9 @@ quests:
     when you've succeeded, and I'll see you're properly equipped.'
   complete_text: The warrior nods with approval as you report your success. 'Well
     done! You've proven you have the makings of a defender of Helium. Take this equipment
-    - it will serve you well in the battles ahead.'
+    - it will serve you well in the battles ahead. If you seek to serve the city further,
+    the temple priests often need assistance with sacred duties. Speak with the temple
+    priest about their offerings ceremony.'
   fail_text: The warrior shakes his head. 'The ulsio still infest our sewers. Come
     back when you're ready to face them.'
 - qnum: 3002
@@ -5076,7 +5178,9 @@ quests:
     through the market plaza and report back on the activity there. Simply make your
     way to the market plaza and return to me.'
   complete_text: The mercenary nods as you report your patrol findings. 'Good work.
-    Vigilance keeps Helium safe. Here is your compensation.'
+    Vigilance keeps Helium safe. Here is your compensation. If you're looking for more
+    dangerous work, talk to the Red Martian Warrior at the Warriors Guild entrance - he
+    has tasks that involve clearing out the ulsio vermin in our sewers.'
   fail_text: The mercenary looks disappointed. 'I still need that patrol completed.'
 - qnum: 3003
   giver: 3008

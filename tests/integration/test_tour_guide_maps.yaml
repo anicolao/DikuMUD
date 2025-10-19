@@ -1,0 +1,88 @@
+# Integration test for the tour guide and map system in Lesser Helium
+#
+# This test validates that the tour guide in the Temple of the Jeddak (room 3001)
+# provides free maps to visitors with information about key locations.
+
+test:
+  id: test_tour_guide_maps
+  description: "Verify tour guide provides free maps with city information"
+  author: Integration Test Framework
+  created: 2025-10-19
+  tags: [shop, tour_guide, lesser_helium, map, new_player_experience]
+
+setup:
+  character:
+    name: TestTourist
+    class: warrior
+    level: 1
+  start_room: 3001  # Temple of the Jeddak (first room in Lesser Helium)
+  gold: 0  # Maps should be free, so no gold needed
+
+steps:
+  # Check for tour guide
+  - action: look
+    description: "Look for Tour Guide in the temple"
+    expected:
+      - pattern: "Tour Guide|tour guide"
+        message: "Tour Guide should be present in room 3001"
+
+  # Test list command to see maps
+  - action: command
+    description: "List available items from tour guide"
+    command: "list"
+    expected:
+      - pattern: "map of Lesser Helium|map"
+        message: "Should show map of Lesser Helium available"
+      - pattern: "0.*coins|free"
+        message: "Should indicate map costs 0 coins (free)"
+
+  # Purchase the map
+  - action: command
+    description: "Purchase the free map"
+    command: "buy map"
+    expected:
+      - pattern: "free|Welcome to Lesser Helium"
+        message: "Should receive free map with welcome message"
+    fail_on:
+      - pattern: "can't afford|don't have enough"
+        message: "BUG: Map should be free, not require payment"
+
+  # Check that we have the map
+  - action: command
+    description: "Check inventory for map"
+    command: "inventory"
+    expected:
+      - pattern: "map of Lesser Helium|map"
+        message: "Should have the map in inventory"
+
+  # Examine the map to see its content
+  - action: command
+    description: "Read the map details"
+    command: "look map"
+    expected:
+      - pattern: "GUILDMASTERS"
+        message: "Map should list guildmaster locations"
+      - pattern: "Warriors Guild"
+        message: "Map should mention Warriors Guild"
+      - pattern: "Scientific Academy"
+        message: "Map should mention Scientific Academy"
+      - pattern: "SHOPS"
+        message: "Map should list shop locations"
+      - pattern: "Market Plaza"
+        message: "Map should mention Market Plaza"
+      - pattern: "QUESTS"
+        message: "Map should mention quest locations"
+
+result:
+  should_pass: true
+  description: "Tour guide should provide free maps with helpful city information"
+  notes: |
+    This validates that the tour guide system works correctly:
+    - Tour guide (mob 3110) is present in room 3001
+    - Shop vnum 22 is properly configured for the tour guide
+    - Maps (object 3139) are available for 0 coins
+    - Map contains useful information about:
+      * Guildmaster locations (Warriors, Scientific, Assassins, Noble)
+      * Shop locations (all major shops in the city)
+      * Quest starting points
+      * Key city locations (Temple Plaza, Market Plaza, gates, etc.)

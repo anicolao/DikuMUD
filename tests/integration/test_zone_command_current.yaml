@@ -1,0 +1,71 @@
+# Integration test for the zone command showing detailed current zone info
+#
+# This test validates that the zone command shows detailed information
+# about the current zone only (not all zones).
+
+test:
+  id: test_zone_command_current
+  description: "Verify zone command shows detailed info for current zone"
+  author: Integration Test Framework
+  created: 2025-10-19
+  tags: [command, zone, information, lesser_helium]
+
+setup:
+  character:
+    name: TestZoner
+    class: warrior
+    level: 1
+  start_room: 3001  # Temple of the Jeddak in Lesser Helium
+  gold: 0
+
+steps:
+  # Test zone command without arguments
+  - action: command
+    description: "Run zone command to see current zone info"
+    command: "zone"
+    expected:
+      - pattern: "Zone Information"
+        message: "Should show zone information header"
+      - pattern: "Lesser Helium"
+        message: "Should show current zone name"
+      - pattern: "Rooms:"
+        message: "Should show number of rooms in zone"
+      - pattern: "Active Mobs:"
+        message: "Should show number of active mobs"
+      - pattern: "Level Range:"
+        message: "Should show level range for the zone"
+      - pattern: "1-10"
+        message: "Should show correct level range for Lesser Helium (1-10)"
+      - pattern: "Quests:"
+        message: "Should show number of quests available"
+    fail_on:
+      - pattern: "Greater Helium|Zodanga|Atmosphere Factory"
+        message: "Should NOT show other zones - only current zone"
+      - pattern: "Zone Status Summary"
+        message: "Should NOT show all zones summary - that's for 'zone status'"
+
+  # Move to a different zone to verify it changes
+  - action: command
+    description: "Move to temple and check zone again"
+    command: "north"
+    expected:
+      - pattern: "."
+        message: "Movement should succeed"
+
+  - action: command
+    description: "Check zone command in different room"
+    command: "zone"
+    expected:
+      - pattern: "Lesser Helium"
+        message: "Should still show Lesser Helium as we're in same zone"
+
+result:
+  should_pass: true
+  description: "Zone command should show detailed info for current zone only"
+  notes: |
+    This validates the modified zone command behavior:
+    - Without arguments, shows detailed info for current zone only
+    - Shows zone name, room count, active mob count
+    - Shows level range for known zones
+    - Shows quest count for the zone
+    - Does NOT show all zones (that's for 'zone status' command)
