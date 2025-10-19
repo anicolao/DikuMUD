@@ -1716,7 +1716,7 @@ mobiles:
 
     research if threatened.'
   action_flags: 22
-  affection_flags: 2
+  affection_flags: 0
   alignment: 2
   type: detailed
 - vnum: 4203
@@ -2122,7 +2122,7 @@ mobiles:
 
     should remain buried with their creators.'
   action_flags: 22
-  affection_flags: 2
+  affection_flags: 0
   alignment: 2
   type: detailed
 - vnum: 4213
@@ -2193,7 +2193,7 @@ mobiles:
 
     doing so risks everyone nearby including himself.'
   action_flags: 22
-  affection_flags: 2
+  affection_flags: 0
   alignment: 2
   type: detailed
 - vnum: 4215
@@ -2224,7 +2224,7 @@ mobiles:
 
     leading to questionable actions.'
   action_flags: 22
-  affection_flags: 2
+  affection_flags: 0
   alignment: 2
   type: detailed
 objects:
