@@ -1,0 +1,32 @@
+test:
+  id: websocket_compatibility
+  description: "Verify that WebSocket connections work alongside regular telnet connections"
+  author: WebSocket Integration
+  created: 2025-10-19
+  tags: [websocket, connectivity]
+
+setup:
+  character:
+    name: websocktest
+    password: testpass
+    class: warrior
+    level: 1
+  start_room: 3001
+
+steps:
+  - action: look
+    description: "Verify regular connection works after WebSocket support added"
+    expected:
+      - pattern: "Temple of the Jeddak"
+        message: "Should be at starting location"
+  
+  - action: command
+    command: "score"
+    description: "Test command processing"
+    expected:
+      - pattern: "websocktest"
+        message: "Should show character name in score"
+
+result:
+  should_pass: true
+  description: "Regular telnet connections work with WebSocket support"
