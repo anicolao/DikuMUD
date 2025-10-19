@@ -50,6 +50,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3979
+  - direction: 5
+    description: The Airship Landing Platform is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3964
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -126,6 +132,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3905
+  - direction: 4
+    description: The Diplomatic Reception Hall is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3975
+  - direction: 5
+    description: The Library Annex is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3997
   extra_descriptions: []
 - vnum: 3903
   name: The Throne Room of the Warlord
@@ -312,6 +330,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3914
+  - direction: 5
+    description: The Music Hall is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3998
   extra_descriptions: []
 - vnum: 3913
   name: Eastern Boulevard
@@ -336,6 +360,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3912
+  - direction: 0
+    description: The Hall of Antiquities is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3999
   extra_descriptions: []
 - vnum: 3914
   name: Noble Quarter Entrance
@@ -442,6 +472,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3923
+  - direction: 5
+    description: The Merchant Guild Hall is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3991
+  - direction: 4
+    description: The South Plaza is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
@@ -472,6 +514,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 2
+    description: The Warehouse District is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3962
   extra_descriptions: []
 - vnum: 3922
   name: Armory Row
@@ -696,6 +744,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3933
+  - direction: 5
+    description: The Western Thoroughfare is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   extra_descriptions: []
 - vnum: 3931
   name: Academy Main Hall
@@ -780,6 +834,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3936
+  - direction: 1
+    description: The Arena is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3989
   extra_descriptions: []
 - vnum: 3935
   name: Warrior's Guild Hall
@@ -854,6 +914,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3948
+  - direction: 4
+    description: The Scientific Academy Plaza is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  - direction: 0
+    description: City Administration is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
@@ -952,6 +1024,24 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3947
+  - direction: 5
+    description: The Bath House is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3990
+  - direction: 5
+    description: The South Plaza is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  - direction: 0
+    description: The Healer's Hall is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3987
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1130,6 +1220,24 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3956
+  - direction: 5
+    description: The Market District Plaza is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 4
+    description: The Residential District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  - direction: 0
+    description: The Common Square is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3958
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1170,6 +1278,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3953
+  - direction: 1
+    description: The training room is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3955
   extra_descriptions: []
 - vnum: 3955
   name: Training Room
@@ -1181,7 +1295,13 @@ rooms:
   zone: 35
   room_flags: 28
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 3
+    description: The main guild hall is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3954
   extra_descriptions: []
 - vnum: 3956
   name: Southern Gate - Interior
@@ -1250,6 +1370,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3960
+  - direction: 2
+    description: The South Plaza is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
   extra_descriptions: []
 - vnum: 3959
   name: The Common Rest Inn
@@ -1326,6 +1452,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3963
+  - direction: 0
+    description: The Eastern Market Row is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   extra_descriptions: []
 - vnum: 3963
   name: Old Docks
@@ -1355,7 +1487,25 @@ rooms:
   zone: 35
   room_flags: 0
   sector_type: 1
-  exits: []
+  exits:
+  - direction: 1
+    description: The Military Barracks are to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3965
+  - direction: 4
+    description: The Grand Plaza is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  - direction: 0
+    description: Naval Command is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3967
   extra_descriptions: []
 - vnum: 3965
   name: Military Barracks
@@ -1374,6 +1524,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3966
+  - direction: 3
+    description: The landing platform is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3964
   extra_descriptions: []
 - vnum: 3966
   name: Parade Ground
@@ -1408,6 +1564,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3968
+  - direction: 2
+    description: The Airship Landing Platform is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3964
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
@@ -1482,6 +1644,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3930
+  - direction: 0
+    description: The Scholars Quarter is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3996
   extra_descriptions: []
 - vnum: 3972
   name: Archives Hall
@@ -1543,7 +1711,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 5
+    description: The Palace Entrance Hall is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
   extra_descriptions: []
 - vnum: 3976
   name: Royal Gardens
@@ -1741,7 +1915,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: The Residential District is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
   extra_descriptions: []
 - vnum: 3988
   name: Training Hall
@@ -1771,7 +1951,13 @@ rooms:
   zone: 35
   room_flags: 0
   sector_type: 2
-  exits: []
+  exits:
+  - direction: 3
+    description: The Warrior's Quarter is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
   extra_descriptions: []
 - vnum: 3990
   name: Bath House
@@ -1781,7 +1967,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The Residential District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
   extra_descriptions: []
 - vnum: 3991
   name: Merchant Guild Hall
@@ -1793,7 +1985,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The Market District Plaza is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
   extra_descriptions: []
 - vnum: 3992
   name: City Administration
@@ -1810,6 +2008,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3993
+  - direction: 2
+    description: The Western Thoroughfare is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
+  - direction: 3
+    description: The Prison is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3994
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
@@ -1844,6 +2054,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3995
+  - direction: 3
+    description: Guard Headquarters is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3995
+  - direction: 1
+    description: City Administration is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
   extra_descriptions: []
 - vnum: 3995
   name: Guard Headquarters
@@ -1862,6 +2084,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3994
+  - direction: 1
+    description: The Prison is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3994
   extra_descriptions: []
 - vnum: 3996
   name: Scholars Quarter
@@ -1871,7 +2099,13 @@ rooms:
   zone: 35
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: The Observatory Tower is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3971
   extra_descriptions: []
 - vnum: 3997
   name: Library Annex
@@ -1881,7 +2115,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The Palace Entrance Hall is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3902
   extra_descriptions: []
 - vnum: 3998
   name: Music Hall
@@ -1893,7 +2133,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: The Boulevard of Heroes is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3912
   extra_descriptions: []
 - vnum: 3999
   name: Hall of Antiquities
@@ -1905,7 +2151,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 2
+    description: The Theater is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3913
   extra_descriptions: []
 mobiles:
 - vnum: 3900
