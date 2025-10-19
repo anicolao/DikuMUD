@@ -65,13 +65,13 @@ steps:
       - pattern: "You are"
         message: "Score should display"
 
-  # Verify we can't get the quest again (quest completion is in memory)
+  # Verify we can get the quest again (to remember hints) but won't get rewards
   - action: command
-    description: "Try to get quest again - should be denied"
+    description: "Get quest again - should be offered"
     command: "ask sola quest"
     expected:
-      - pattern: "already completed|already received|no tasks"
-        message: "Quest should be marked as completed"
+      - pattern: "White apes|white apes"
+        message: "Quest should be offered again (to see hints)"
 
   # Note: A full save/quit/login cycle would require more complex test setup
   # The save happens automatically, but we verify the in-memory tracking works

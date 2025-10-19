@@ -68,23 +68,21 @@ steps:
       - pattern: "sword|Sword"
         message: "Should have practice sword"
 
-  # Second completion - get quest again and complete it
+  # Second completion - get quest again (now allowed to see hints)
   - action: command
-    description: "Try to get the quest again - should be rejected"
+    description: "Get the quest again - should be offered"
     command: "ask sola quest"
     expected:
-      - pattern: "already completed|already received|no tasks|no other tasks"
-        message: "Should indicate quest was already completed"
+      - pattern: "White apes|white apes"
+        message: "Should be able to get quest again to remember hints"
 
-  # Alternative: Try to load another tooth and give it
-  # This tests if player somehow gets quest again through a bug
+  # Complete the quest a second time
   - action: command
     description: "Load another white ape tooth"
     command: "load obj 4091"
     expected:
       - pattern: "Ok"
         message: "Should load another tooth"
-        optional: true
 
   - action: command
     description: "Get the second tooth"
@@ -92,7 +90,18 @@ steps:
     expected:
       - pattern: "You get|you get"
         message: "Should pick up the tooth"
-        optional: true
+
+  - action: command
+    description: "Give the tooth again - should see hint but no reward"
+    command: "give tooth sola"
+    expected:
+      - pattern: "relief|gratitude"
+        message: "Should see completion text with hint"
+      - pattern: "already received the reward"
+        message: "Should see message about already receiving reward"
+    fail_on:
+      - pattern: "500 experience|You gain 500"
+        message: "Should NOT receive experience again"
 
 result:
   should_pass: true
