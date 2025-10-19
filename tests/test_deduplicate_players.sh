@@ -8,6 +8,21 @@ cd "$(dirname "$0")/../dm-dist-alfa"
 echo "=== Player File Deduplication Tool Test ==="
 echo ""
 
+# Build the tools if they don't exist
+if [ ! -f ../tools/create_test_player ]; then
+    echo "Building create_test_player tool..."
+    make ../tools/create_test_player > /dev/null 2>&1
+    echo "   ✓ create_test_player built successfully"
+    echo ""
+fi
+
+if [ ! -f ../tools/deduplicate_players ]; then
+    echo "Building deduplicate_players tool..."
+    make ../tools/deduplicate_players > /dev/null 2>&1
+    echo "   ✓ deduplicate_players built successfully"
+    echo ""
+fi
+
 # Clean up any existing test files
 rm -rf test_dedup_lib 2>/dev/null || true
 mkdir -p test_dedup_lib
