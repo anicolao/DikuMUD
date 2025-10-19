@@ -4,20 +4,26 @@ This document lists one-way exits that are intentionally designed into the game 
 
 ## Summary
 
-As of the latest validation run, there are **61 intentional one-way exits** remaining in the world. These have been reviewed and determined to serve important gameplay purposes:
+As of the latest validation run, there are **53 intentional one-way exits** remaining in the world. These have been reviewed and determined to serve important gameplay purposes:
 
 - **1** Limbo/starting area connection
 - **11** Secret passages, hidden doors, and concealed areas  
-- **4** One-way falls, drops, and slides
+- **3** One-way falls, drops, and slides
 - **1** Magical teleport/trap
-- **44** Complex topology cases (non-grid city layouts, mazes, checkpoints, multi-entry hubs)
+- **37** Complex topology cases (non-grid city layouts, mazes, checkpoints, multi-entry hubs)
 
-All other one-way exits (33 simple missing reverse exits) have been fixed by adding the appropriate return connections.
+All other one-way exits have been fixed by adding the appropriate return connections.
 
 ### Recent Fixes
 
 - Fixed 33 rooms with simple missing reverse exits across multiple zones
 - Fixed Scientific Supplies Shop (room 3933) navigation by rerouting its connection to the plaza
+- Fixed Southern Approach checkpoint leapfrog (3136-3137) to create proper bidirectional path
+- Fixed Zodanga unreachable rooms by connecting gates, arena, temple, prison, and treasury through district streets
+- Fixed Dark Tavern (3628-3629) with up/down stairs to Merchant District
+- Fixed Training Academy cluster (3636-3639) with up/down stairs to Espionage Quarter
+- Fixed Greater Helium unreachable rooms (3930-3936) by connecting Western Thoroughfare to Scientific Academy Plaza
+- Fixed Atmosphere Factory room 4136 by correcting duplicate exits in room 4064
 - Added comprehensive documentation for all intentional one-way exits
 
 ## Limbo Area
@@ -46,14 +52,6 @@ All other one-way exits (33 simple missing reverse exits) have been fixed by add
 
 ## One-Way Falls and Drops
 
-**Room 3636 (Training Academy) → Room 3630 (Espionage Quarter Street)**
-- Direction: south
-- Reason: One-way drop/fall. Players can fall or drop down but cannot climb back up.
-
-**Room 3645 (Observatory Deck) → Room 3600 (Main Plaza)**
-- Direction: east
-- Reason: One-way drop from elevated position.
-
 **Room 3767 (Western Dead Sea Bottom) → Room 3768 (Dark Sea Cavern)**
 - Direction: south
 - Reason: One-way fall into cavern system.
@@ -76,41 +74,9 @@ All other one-way exits (33 simple missing reverse exits) have been fixed by add
 
 The following cases involve complex spatial relationships where multiple rooms connect to a central hub or checkpoint, creating asymmetric pathways. These are intentional design features that add interest and challenge to navigation. Many represent non-Euclidean maze-like areas or realistic city layouts where streets don't form perfect grids.
 
-### Southern Approach Checkpoint (Room 3136 → 3137)
+### Zodanga City - Remaining One-Way Connections
 
-**Room 3136 (Pre-Gate Assembly) → Room 3137 (Inside the Checkpoint)**
-- Direction: south
-- Reason: Checkpoint has multiple entry points. Going through the checkpoint from the assembly area brings you inside, but the return path from inside goes to the Outer Checkpoint (3133) instead. This represents different entry and exit points in a security facility.
-
-### Zodanga City Gates and Plaza (Room 3600 and gates 3640-3644)
-
-The Main Plaza (3600) has exits to four major districts (north to Palace 3601, south to Merchant 3620, east to Military 3610, west to Espionage 3630). Multiple city gates and other locations also have one-way connections to the plaza:
-
-**Room 3640 (Eastern Gate) → Room 3600 (Main Plaza)**
-- Direction: west
-- Reason: City gate provides entrance to plaza, but plaza's directional exits lead to major districts. Players navigate back through district streets, not through the gates.
-
-**Room 3641 (Western Gate) → Room 3600 (Main Plaza)**
-- Direction: east
-- Reason: Same pattern - gate entrance to plaza, district exits from plaza.
-
-**Room 3642 (Northern Gate) → Room 3600 (Main Plaza)**
-- Direction: south
-- Reason: Same pattern - gate entrance to plaza, district exits from plaza.
-
-**Room 3644 (Arena) → Room 3600 (Main Plaza)**
-- Direction: north
-- Reason: Arena connects to plaza, but plaza's districts provide the return navigation paths.
-
-**Room 3628 (Dark Tavern) → Room 3620 (Merchant District)**
-- Direction: south
-- Reason: Tavern connects to merchant district street, but the street's north exit leads to the main plaza (3600) not back to the tavern. Represents complex city street layout.
-
-**Room 3649 (Jeddak's Treasury) → Room 3605 (Palace Private Chambers)**
-- Direction: south
-- Reason: Treasury room with single exit to palace chambers. Palace chambers have different navigational connections representing complex palace layout.
-
-This creates a realistic city layout where major landmarks and gates are entry points, but navigation between districts uses the main streets and thoroughfares.
+The following Zodanga locations still maintain one-way connections as part of the city's complex topology. Note that all previously unreachable rooms in Zodanga have been connected with bidirectional paths through the district streets, making all areas accessible while preserving these intentional one-way exit designs where they serve a gameplay purpose.
 
 ### Dead Sea Wilderness Complex (Rooms 3750-3779)
 
@@ -199,22 +165,13 @@ These one-way exits have been reviewed and determined to be intentional features
 
 ## Complete List of Intentional One-Way Exits
 
-The following table lists all 61 intentional one-way exits as of the latest validation:
+The following table lists all 53 intentional one-way exits as of the latest validation:
 
 | From Room | To Room | Direction | Category | Reason |
 |-----------|---------|-----------|----------|--------|
 | 0 | 3001 | up | Limbo | Starting area - no return |
 | 3055 | 3054 | south | Secret | Temple vault with concealed door |
-| 3136 | 3137 | south | Complex | Security checkpoint with multiple entry points |
-| 3628 | 3620 | south | Complex | City street non-grid layout |
 | 3635 | 3633 | south | Secret | Hidden intelligence archive |
-| 3636 | 3630 | south | Fall | One-way drop from training academy |
-| 3640 | 3600 | west | Complex | Eastern gate to main plaza |
-| 3641 | 3600 | east | Complex | Western gate to main plaza |
-| 3642 | 3600 | south | Complex | Northern gate to main plaza |
-| 3644 | 3600 | north | Complex | Arena to main plaza |
-| 3645 | 3600 | east | Fall | Observatory deck drop |
-| 3649 | 3605 | south | Complex | Treasury to palace chambers |
 | 3763 | 3767 | west | Maze | Dead Sea Wilderness - intentional non-Euclidean |
 | 3763 | 3752 | up | Maze | Dead Sea Wilderness - vertical maze |
 | 3765 | 3763 | north | Maze | Dead Sea Wilderness - underwater currents |
@@ -246,14 +203,14 @@ The following table lists all 61 intentional one-way exits as of the latest vali
 | 3998 | 3912 | south | Complex | Greater Helium - temple district |
 | 3999 | 3912 | west | Complex | Greater Helium - temple district |
 | 4055 | 4125 | down | Industrial | Factory vertical access/maintenance shaft |
-| 4064 | 4130 | south | Industrial | Factory unfinished chamber access |
+
 | 4074 | 4150 | down | Teleport | Magical transport or trap mechanism |
 | 4118 | 4117 | up | Industrial | Factory catwalk system |
 | 4120 | 4125 | down | Industrial | Factory corridor to unfinished area |
 | 4126 | 4054 | west | Industrial | Factory maintenance access |
 | 4128 | 4056 | up | Industrial | Factory vertical maintenance |
 | 4130 | 4120 | north | Industrial | Factory chamber connections |
-| 4136 | 4064 | north | Industrial | Factory unfinished area routing |
+
 | 4140 | 4071 | west | Industrial | Factory corridor system |
 | 4146 | 4147 | east | Industrial | Factory unfinished chambers |
 | 4155 | 4160 | down | Secret | Hidden service passage |

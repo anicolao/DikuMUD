@@ -930,6 +930,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
+  - direction: 0
+    description: The passage continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4130
   - direction: 2
     description: A radiation-shielded door leads to the core chamber itself.
     keywords: door shielded
@@ -937,23 +943,11 @@ rooms:
     key_vnum: 4051
     to_room: 4136
   - direction: 3
-    description: ''
+    description: The western corridor leads to more chambers.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4059
-  - direction: 2
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4130
-  - direction: 0
-    description: You can go north back to Unfinished Chamber 4130.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4130
   extra_descriptions:
   - keywords: window view
     description: 'Through the thick viewing window, you can see the inner core - a

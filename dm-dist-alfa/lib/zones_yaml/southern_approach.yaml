@@ -1257,7 +1257,7 @@ rooms:
     keywords: gate
     door_flag: 1
     key_vnum: -1
-    to_room: 3133
+    to_room: 3136
   - direction: 2
     description: The inner approach continues.
     keywords: ''
