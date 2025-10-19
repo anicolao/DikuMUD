@@ -45,6 +45,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3940
+  - direction: 4
+    description: You can go up back to Central Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3979
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -72,6 +78,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
+  - direction: 3
+    description: You can go west back to Northern Plaza.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3969
+  - direction: 1
+    description: You can go east back to Royal Gardens.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3976
   extra_descriptions: []
 - vnum: 3902
   name: Palace Entrance Hall
@@ -134,6 +152,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3902
+  - direction: 0
+    description: You can go north back to Hall of Heroes.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3973
+  - direction: 5
+    description: You can go down back to Meditation Chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3977
   extra_descriptions: []
 - vnum: 3904
   name: The Royal Library
@@ -155,6 +185,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3902
+  - direction: 0
+    description: You can go north back to Archives Hall.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3972
   extra_descriptions: []
 - vnum: 3905
   name: Military Command Center
@@ -176,6 +212,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3902
+  - direction: 3
+    description: You can go west back to Guard Barracks.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3974
+  - direction: 5
+    description: You can go down back to Treasure Vault.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3978
   extra_descriptions: []
 - vnum: 3910
   name: Temple Square
@@ -231,6 +279,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3910
+  - direction: 3
+    description: You can go west back to Temple Courtyard.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3983
+  - direction: 0
+    description: You can go north back to Priest's Quarters.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3984
   extra_descriptions: []
 - vnum: 3912
   name: Boulevard of Heroes
@@ -489,6 +549,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3929
+  - direction: 3
+    description: You can go west back to Smithy.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3985
   extra_descriptions: []
 - vnum: 3924
   name: Master Jeweler
@@ -526,6 +592,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3921
+  - direction: 2
+    description: You can go south back to Tannery.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3986
   extra_descriptions: []
 - vnum: 3926
   name: Master Weaponsmith
@@ -634,6 +706,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3934
+  - direction: 4
+    description: You can go up back to Observatory Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3971
   extra_descriptions: []
 - vnum: 3931
   name: Academy Main Hall
@@ -743,6 +821,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3934
+  - direction: 2
+    description: You can go south back to Training Hall.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3988
   extra_descriptions: []
 - vnum: 3936
   name: Practice Grounds
@@ -888,6 +972,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3946
+  - direction: 3
+    description: You can go west back to Calot Kennels.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3947
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -969,6 +1059,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3949
+  - direction: 4
+    description: You can go up back to Western Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3981
   extra_descriptions: []
 - vnum: 3949
   name: Western Gate - Exterior
@@ -1019,6 +1115,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3913
+  - direction: 4
+    description: You can go up back to Eastern Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3980
   extra_descriptions: []
 - vnum: 3951
   name: Eastern Gate - Exterior
@@ -1150,6 +1252,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3957
+  - direction: 4
+    description: You can go up back to Southern Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3982
   extra_descriptions: []
 - vnum: 3957
   name: Southern Gate - Exterior
@@ -1837,6 +1945,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
+  - direction: 0
+    description: You can go north back to Hall of Records.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3993
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records

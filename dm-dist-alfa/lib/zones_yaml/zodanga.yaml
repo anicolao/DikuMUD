@@ -47,6 +47,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3630
+  - direction: 4
+    description: You can go up back to Airship Landing Platform.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3643
   extra_descriptions: []
 - vnum: 3601
   name: Palace Approach
@@ -192,6 +198,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3604
+  - direction: 1
+    description: You can go east back to Prince's Chambers.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3609
   extra_descriptions: []
 - vnum: 3606
   name: War Council Chamber
@@ -985,6 +997,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3630
+  - direction: 3
+    description: You can go west back to Disguise Workshop.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3638
+  - direction: 0
+    description: You can go north back to Code Breaking Room.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3639
   extra_descriptions: []
 - vnum: 3637
   name: Assassination Practice
@@ -1221,6 +1245,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3646
+  - direction: 3
+    description: You can go west back to Torture Chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3648
   extra_descriptions: []
 - vnum: 3648
   name: Torture Chamber
@@ -3188,11 +3218,10 @@ quests:
   reward_exp: 2900
   reward_gold: 1400
   reward_item: 3616
-  quest_text: The Spy Master speaks urgently. 'We need maps of Zodanga's
-    defenses. Infiltrate their territory and scout the key positions. This information
-    is vital for Helium's security.'
+  quest_text: The Spy Master speaks urgently. 'We need maps of Zodanga's defenses.
+    Infiltrate their territory and scout the key positions. This information is vital
+    for Helium's security.'
   complete_text: The Spy Master examines your report carefully. 'Excellent intelligence.
-    This will help Helium immensely. Take this reward - you've done Mars a great
-    service.'
+    This will help Helium immensely. Take this reward - you've done Mars a great service.'
   fail_text: The Spy Master looks anxious. 'We still need that intelligence. Helium
     depends on it.'
