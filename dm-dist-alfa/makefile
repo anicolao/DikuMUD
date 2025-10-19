@@ -91,7 +91,7 @@ integration_tests: $(INTEGRATION_TEST_OUTPUTS)
 .PHONY: test
 test: integration_tests
 
-dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
+dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o websocket.o
 dmserver : changes.o
 	$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
@@ -102,7 +102,8 @@ zone_layout_validator: zone_layout_validator.o db.o handler.o utility.o constant
 
 zone_layout_validator.o: zone_layout_validator.c structs.h db.h utils.h
 
-comm.o : comm.c structs.h utils.h comm.h interpreter.h handler.h db.h
+comm.o : comm.c structs.h utils.h comm.h interpreter.h handler.h db.h websocket.h
+websocket.o : websocket.c websocket.h
 act.comm.o : act.comm.c structs.h utils.h comm.h interpreter.h handler.h \
   db.h spells.h
 act.informative.o : act.informative.c structs.h utils.h comm.h \

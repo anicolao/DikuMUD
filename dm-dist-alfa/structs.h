@@ -717,6 +717,9 @@ struct descriptor_data
 	struct char_data *character;  /* linked to char             */
    struct char_data *original;   /* original char              */
 	struct snoop_data snoop;      /* to snoop people.	         */
+	int is_websocket;             /* 1 if websocket connection  */
+	char ws_frame_buf[8192];      /* buffer for partial websocket frames */
+	int ws_frame_buf_len;         /* length of data in ws_frame_buf */
 	struct descriptor_data *next; /* link to next descriptor    */
 };
 

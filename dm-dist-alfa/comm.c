@@ -31,6 +31,7 @@
 #include "interpreter.h"
 #include "handler.h"
 #include "db.h"
+#include "websocket.h"
 
 #define DFLT_PORT 4000        /* default port */
 #define MAX_NAME_LENGTH 15
@@ -931,6 +932,8 @@ int new_descriptor(int s)
 	newd->original = 0;
 	newd->snoop.snooping = 0;
 	newd->snoop.snoop_by = 0;
+	newd->is_websocket = 0;
+	newd->ws_frame_buf_len = 0;
 
 	/* prepend to list */
 
@@ -951,7 +954,7 @@ int process_output(struct descriptor_data *t)
 	char i[MAX_STRING_LENGTH + 1];
 
 	if (!t->prompt_mode && !t->connected)
-		if (write_to_descriptor(t->descriptor, "\n\r") < 0)
+		if (write_to_descriptor_ws(t, "\n\r") < 0)
 			return(-1);
 
 
@@ -963,13 +966,13 @@ int process_output(struct descriptor_data *t)
 			write_to_q("% ",&t->snoop.snoop_by->desc->output);
 			write_to_q(i,&t->snoop.snoop_by->desc->output);
 		}
-		if (write_to_descriptor(t->descriptor, i))
+		if (write_to_descriptor_ws(t, i))
 			return(-1);
 	}
 	
 	if (!t->connected && !(t->character && !IS_NPC(t->character) && 
 								  IS_SET(t->character->specials.act, PLR_COMPACT)))
-		if (write_to_descriptor(t->descriptor, "\n\r") < 0)
+		if (write_to_descriptor_ws(t, "\n\r") < 0)
 			return(-1);
 
 	return(1);
@@ -996,6 +999,35 @@ int write_to_descriptor(int desc, char *txt)
 	while (sofar < total);
 
 	return(0);
+}
+
+/* Write to descriptor with websocket encoding support */
+int write_to_descriptor_ws(struct descriptor_data *d, char *txt)
+{
+	if (d->is_websocket) {
+		unsigned char frame[MAX_STRING_LENGTH * 2];
+		int frame_len = websocket_encode_frame(txt, strlen(txt), frame, sizeof(frame));
+		
+		if (frame_len < 0) {
+			/* Encoding failed */
+			return(-1);
+		}
+		
+		/* Write the encoded frame */
+		int sofar = 0;
+		do {
+			int thisround = write(d->descriptor, frame + sofar, frame_len - sofar);
+			if (thisround < 0) {
+				perror("Write to websocket");
+				return(-1);
+			}
+			sofar += thisround;
+		} while (sofar < frame_len);
+		
+		return(0);
+	} else {
+		return write_to_descriptor(d->descriptor, txt);
+	}
 }
 
 
@@ -1035,6 +1067,89 @@ int process_input(struct descriptor_data *t)
 	while (!ISNEWL(*(t->buf + begin + sofar - 1)));	
 
 	*(t->buf + begin + sofar) = 0;
+
+	/* Check for websocket handshake on first read */
+	if (!t->is_websocket && begin == 0 && sofar > 0) {
+		if (is_websocket_handshake(t->buf, sofar)) {
+			char response[1024];
+			if (websocket_handshake(t->buf, sofar, response, sizeof(response))) {
+				/* Send handshake response */
+				if (write(t->descriptor, response, strlen(response)) < 0) {
+					perror("WebSocket handshake write");
+					return(-1);
+				}
+				/* Mark as websocket connection */
+				t->is_websocket = 1;
+				/* Clear buffer */
+				*t->buf = '\0';
+				/* Send greeting to websocket client */
+				SEND_TO_Q(GREETINGS, t);
+				SEND_TO_Q("By what name do you wish to be known? ", t);
+				return(0);
+			}
+		}
+	}
+	
+	/* Handle websocket frames */
+	if (t->is_websocket) {
+		/* Copy incoming data to frame buffer */
+		if (t->ws_frame_buf_len + sofar < sizeof(t->ws_frame_buf)) {
+			memcpy(t->ws_frame_buf + t->ws_frame_buf_len, t->buf + begin, sofar);
+			t->ws_frame_buf_len += sofar;
+		}
+		
+		/* Try to decode frames from buffer */
+		int processed = 0;
+		while (t->ws_frame_buf_len > 0) {
+			char decoded[MAX_INPUT_LENGTH];
+			int frame_size = websocket_decode_frame(
+				(unsigned char *)t->ws_frame_buf, 
+				t->ws_frame_buf_len,
+				decoded, 
+				sizeof(decoded));
+			
+			if (frame_size < 0) {
+				/* Close frame received */
+				return(-1);
+			} else if (frame_size == 0) {
+				/* Incomplete frame, wait for more data */
+				break;
+			}
+			
+			/* Process the decoded text */
+			int decoded_len = strlen(decoded);
+			if (decoded_len > 0) {
+				/* Add newline if not present */
+				if (decoded[decoded_len - 1] != '\n' && decoded[decoded_len - 1] != '\r') {
+					if (decoded_len < sizeof(decoded) - 2) {
+						decoded[decoded_len++] = '\n';
+						decoded[decoded_len] = '\0';
+					}
+				}
+				
+				/* Write to input queue */
+				write_to_q(decoded, &t->input);
+				
+				if(t->snoop.snoop_by) {
+					write_to_q("% ",&t->snoop.snoop_by->desc->output);
+					write_to_q(decoded,&t->snoop.snoop_by->desc->output);
+					write_to_q("\n\r",&t->snoop.snoop_by->desc->output);
+				}
+			}
+			
+			/* Remove processed frame from buffer */
+			t->ws_frame_buf_len -= frame_size;
+			if (t->ws_frame_buf_len > 0) {
+				memmove(t->ws_frame_buf, t->ws_frame_buf + frame_size, t->ws_frame_buf_len);
+			}
+			processed = 1;
+		}
+		
+		/* Clear the main buffer */
+		*t->buf = '\0';
+		
+		return processed ? 1 : 0;
+	}
 
 	/* if no newline is contained in input, return without proc'ing */
 	for (i = begin; !ISNEWL(*(t->buf + i)); i++)
