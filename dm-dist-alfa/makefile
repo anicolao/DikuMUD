@@ -63,6 +63,10 @@ worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.
 ../tools/create_test_player: ../tools/create_test_player.c structs.h utils.h
 	$(CC) $(CFLAGS) -I. -o $@ $< -lcrypt
 
+# Player file deduplication tool
+../tools/deduplicate_players: ../tools/deduplicate_players.c structs.h utils.h
+	$(CC) $(CFLAGS) -I. -o $@ $< -lcrypt
+
 # Find all integration test YAML files
 INTEGRATION_TEST_YAMLS := $(shell find ../tests/integration -name "*.yaml" -type f 2>/dev/null | sort)
 

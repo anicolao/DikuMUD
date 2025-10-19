@@ -1,0 +1,34 @@
+# Test that new characters are saved only once in the player file
+# This verifies the fix for the duplicate character save bug
+
+test:
+  id: test_new_character_single_save
+  description: "Verify new characters are saved only once in the player file"
+  author: Integration Test Framework
+  created: 2025-10-19
+  tags: [character_creation, save, database]
+
+setup:
+  character:
+    name: SingleSave
+    password: test123
+    class: warrior
+    level: 1
+  start_room: 3001
+
+steps:
+  - action: look
+    description: "Connect with new character"
+    expected:
+      - pattern: "Lesser Helium"
+        message: "Should be in Lesser Helium"
+
+  - action: quit
+    description: "Quit to save character"
+    expected:
+      - pattern: "Goodbye"
+        message: "Should quit successfully"
+
+result:
+  should_pass: true
+  description: "New character should be saved exactly once in the player file"
