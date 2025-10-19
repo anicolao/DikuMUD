@@ -113,8 +113,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3780
-  - direction: 2
-    description: The northern gate is south.
+  - direction: 5
+    description: The northern gate is below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -136,8 +136,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4400
-  - direction: 0
-    description: The airship landing is north.
+  - direction: 4
+    description: The airship landing platform is above.
     keywords: ''
     door_flag: 0
     key_vnum: -1
