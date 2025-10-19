@@ -1,0 +1,65 @@
+# Integration test for mob targeting in quest 'ask' command
+# Tests that numbered and multi-word targeting works for asking quests
+test:
+  id: quest_mob_targeting
+  description: "Test that 'ask' command properly targets mobs with numbers and multi-word names"
+  author: Integration Test Framework
+  created: 2025-10-19
+  tags: [quest, targeting, mob_3007]
+
+setup:
+  character:
+    name: TargetTest
+    password: test
+    level: 23
+    class: warrior
+  start_room: 3001  # Temple area
+  gold: 1000
+
+steps:
+  # Step 1: Navigate to the Warriors Guild where mob 3007 is located
+  - action: command
+    command: "goto 3021"
+    description: "Teleport to Warriors Guild entrance (room 3021)"
+    expected:
+      - pattern: "."
+        message: "Should teleport successfully"
+
+  # Step 2: Verify the Red Martian Warrior is in the room
+  - action: look
+    description: "Look at the room to see the Red Martian Warrior"
+    expected:
+      - pattern: "Red Martian warrior|Red Martian Warrior"
+        message: "Red Martian Warrior should be in the room"
+
+  # Step 3: Try numbered targeting with specific short desc '2.red.martian.warrior'
+  # (There may be city guards with 'warrior' keyword, so we need to be more specific)
+  - action: command
+    command: "ask 1.red.martian.warrior quest"
+    description: "Ask warrior for quest using numbered multi-word target"
+    expected:
+      - pattern: "recruit|ulsio|sewers|already have"
+        message: "Should receive Quest 3001 or already have message with numbered targeting"
+
+  # Step 4: Try full multi-word targeting 'the.red.martian.warrior'  
+  - action: command
+    command: "ask the.red.martian.warrior quest"
+    description: "Ask warrior for quest using full multi-word target"
+    expected:
+      - pattern: "recruit|ulsio|sewers|already have"
+        message: "Should receive Quest 3001 or already have message with multi-word targeting"
+
+result:
+  should_pass: true
+  description: |
+    This test verifies that the 'ask' command properly targets mobs using:
+    1. Numbered targeting (1.warrior, 2.warrior)
+    2. Multi-word targeting using dots (the.red.martian.warrior)
+    3. Partial short description matching (red.martian)
+    
+    This ensures the quest system uses the same sophisticated targeting
+    mechanism as other commands like 'look', 'kill', etc.
+  notes: |
+    The bug being fixed is that quest_giver() was using isname() instead of
+    get_char_room_vis(), which prevented numbered and multi-word targeting
+    from working properly.

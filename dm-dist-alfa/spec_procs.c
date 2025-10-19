@@ -1549,7 +1549,6 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	struct quest_data *quest;
 	char npc_name[MAX_INPUT_LENGTH], message[MAX_INPUT_LENGTH];
 	extern void half_chop(char *string, char *arg1, char *arg2);
-	extern int isname(char *str, char *namelist);
 	
 	/* Respond to 'ask', 'say', or 'tell' commands */
 	if (cmd != CMD_ASK && cmd != CMD_SAY && cmd != CMD_TELL)
@@ -1603,16 +1602,15 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		}
 	} else {
 		/* For ask/tell, find the specific NPC being addressed */
-		for (mob = world[ch->in_room].people; mob; mob = mob->next_in_room) {
-			if (IS_NPC(mob) && isname(npc_name, mob->player.name))
-				break;
-		}
+		/* Use get_char_room_vis for proper targeting including numbered (2.warrior) 
+		 * and multi-word (the.red.martian.warrior) targeting */
+		mob = get_char_room_vis(ch, npc_name);
 		
 		if (!mob)
 			return FALSE;
 		
-		/* Verify this mob is a quest giver */
-		if (mob_index[mob->nr].func != quest_giver)
+		/* Verify this is an NPC and a quest giver */
+		if (!IS_NPC(mob) || mob_index[mob->nr].func != quest_giver)
 			return FALSE;
 	}
 	
