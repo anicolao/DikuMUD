@@ -175,12 +175,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3103
-  - direction: 2
-    description: You can head south along the western edge.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3108
   extra_descriptions: []
 - vnum: 3106
   name: Rocky Outcrop
@@ -258,12 +252,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western plains extend north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3105
   - direction: 1
     description: The main path is to the east.
     keywords: ''
@@ -289,12 +277,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The rocky outcrop continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3106
   - direction: 2
     description: The path heads south from this shelter.
     keywords: ''
@@ -307,6 +289,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3107
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3106
   extra_descriptions: []
 - vnum: 3110
   name: Deep Plains - North
@@ -357,12 +345,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: Isolated plains lie to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3108
   - direction: 1
     description: The safer main path is to the east.
     keywords: ''
@@ -375,6 +357,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3114
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3108
   extra_descriptions: []
 - vnum: 3112
   name: Eastern Branch
@@ -388,12 +376,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The sheltered camp lies to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3109
   - direction: 1
     description: The eastern path continues.
     keywords: ''
@@ -412,6 +394,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3110
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3109
   extra_descriptions: []
 - vnum: 3113
   name: Mid-Journey Point
@@ -462,12 +450,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western reaches extend north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3111
   - direction: 1
     description: The mid-journey point of the main path is east.
     keywords: ''
@@ -480,6 +462,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3118
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3111
   extra_descriptions: []
 - vnum: 3115
   name: Eastern Exploration
@@ -519,12 +507,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern branch extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3112
   - direction: 1
     description: More eastern territory lies that way.
     keywords: ''
@@ -543,6 +525,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3113
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3112
   extra_descriptions: []
 - vnum: 3117
   name: Southern Plains - Midpoint
@@ -593,12 +581,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: Predator territory continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3114
   - direction: 1
     description: The main path lies to the east.
     keywords: ''
@@ -611,6 +593,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3122
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3114
   extra_descriptions: []
 - vnum: 3119
   name: Ancient Ruins
@@ -624,12 +612,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern exploration area lies north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3115
   - direction: 2
     description: More ruins lie to the south.
     keywords: ''
@@ -642,6 +624,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3116
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3115
   extra_descriptions: []
 - vnum: 3120
   name: Eastern Route - Midpoint
@@ -655,12 +643,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern route continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3116
   - direction: 1
     description: Ancient ruins lie to the east.
     keywords: ''
@@ -679,6 +661,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3117
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3116
   extra_descriptions: []
 - vnum: 3121
   name: Factory Approach - North
@@ -733,12 +721,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The hunting grounds extend north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3118
   - direction: 1
     description: The northern approach to the factory lies east.
     keywords: ''
@@ -751,6 +733,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3126
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3118
   extra_descriptions: []
 - vnum: 3123
   name: Ruined Monument
@@ -767,12 +755,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: More ruins lie to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3119
   - direction: 2
     description: The ruins continue south.
     keywords: ''
@@ -785,6 +767,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3120
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3119
   extra_descriptions: []
 - vnum: 3124
   name: Eastern Approach
@@ -798,12 +786,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern route continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3120
   - direction: 1
     description: The ruined monument stands to the east.
     keywords: ''
@@ -822,6 +804,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3121
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3120
   extra_descriptions: []
 - vnum: 3125
   name: Main Approach Path
@@ -876,12 +864,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western danger zone extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3122
   - direction: 1
     description: The main approach is to the east.
     keywords: ''
@@ -894,6 +876,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3130
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3122
   extra_descriptions: []
 - vnum: 3127
   name: Ancient Waymarker
@@ -909,12 +897,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The ruined monument stands to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3123
   - direction: 2
     description: More ruins lie to the south.
     keywords: ''
@@ -927,6 +909,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3124
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3123
   extra_descriptions: []
 - vnum: 3128
   name: Convergence Point
@@ -940,12 +928,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern approach lies north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3124
   - direction: 1
     description: Ancient ruins lie to the east.
     keywords: ''
@@ -964,6 +946,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3125
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3124
   extra_descriptions: []
 - vnum: 3129
   name: Security Perimeter - North
@@ -1014,12 +1002,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western perimeter extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3126
   - direction: 1
     description: The northern security area is to the east.
     keywords: ''
@@ -1032,6 +1014,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3134
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3126
   extra_descriptions: []
 - vnum: 3131
   name: Eastern Ruins - Last Stop
@@ -1045,12 +1033,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The ancient waymarker lies north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3127
   - direction: 2
     description: You can head south along the ruins.
     keywords: ''
@@ -1063,6 +1045,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3128
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3127
   extra_descriptions: []
 - vnum: 3132
   name: Security Avenue
@@ -1077,30 +1065,24 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The convergence point is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3128
   - direction: 1
     description: Ruins lie to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3135
-  - direction: 2
-    description: The checkpoint gate is directly ahead.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3136
   - direction: 3
     description: The northern security zone is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3129
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3128
   extra_descriptions: []
 - vnum: 3133
   name: Outer Checkpoint
@@ -1120,12 +1102,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3129
-  - direction: 2
-    description: The checkpoint gate can be opened to proceed.
-    keywords: gate
-    door_flag: 1
-    key_vnum: -1
-    to_room: 3137
   - direction: 3
     description: The western patrol route is visible.
     keywords: ''
@@ -1138,6 +1114,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3136
+  - direction: 2
+    description: The checkpoint gate leads inside.
+    keywords: gate
+    door_flag: 1
+    key_vnum: -1
+    to_room: 3137
   extra_descriptions: []
 - vnum: 3134
   name: Western Checkpoint Tower
@@ -1151,12 +1133,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western perimeter patrol continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3130
   - direction: 1
     description: The outer checkpoint is to the east.
     keywords: ''
@@ -1169,6 +1145,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3138
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3130
   extra_descriptions: []
 - vnum: 3135
   name: Eastern Monument Vista
@@ -1182,12 +1164,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern ruins continue north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3131
   - direction: 2
     description: You can descend and head south.
     keywords: ''
@@ -1200,6 +1176,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3132
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3131
   extra_descriptions: []
 - vnum: 3136
   name: Pre-Gate Assembly
@@ -1213,24 +1195,12 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The security avenue extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3132
   - direction: 1
     description: The eastern vista is accessible.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3139
-  - direction: 2
-    description: The checkpoint gate lies ahead.
-    keywords: gate
-    door_flag: 1
-    key_vnum: -1
-    to_room: 3137
   - direction: 3
     description: The outer checkpoint guard post is that way.
     keywords: ''
@@ -1252,12 +1222,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The checkpoint gate leads back outside.
-    keywords: gate
-    door_flag: 1
-    key_vnum: -1
-    to_room: 3136
   - direction: 2
     description: The inner approach continues.
     keywords: ''
@@ -1270,6 +1234,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3138
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3133
   extra_descriptions: []
 - vnum: 3138
   name: Western Wall Patrol
@@ -1283,12 +1253,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The western checkpoint tower is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3134
   - direction: 1
     description: The checkpoint interior is visible to the east.
     keywords: ''
@@ -1301,6 +1265,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3141
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3134
   extra_descriptions: []
 - vnum: 3139
   name: Eastern Perimeter
@@ -1314,24 +1284,18 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The eastern vista lies above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3135
-  - direction: 2
-    description: The perimeter continues south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3142
   - direction: 3
     description: The assembly area is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3136
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3135
   extra_descriptions: []
 - vnum: 3140
   name: Inner Approach
@@ -1384,12 +1348,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The western wall patrol continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3138
   - direction: 1
     description: The inner approach is to the east.
     keywords: ''
@@ -1402,6 +1360,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3144
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3138
   extra_descriptions: []
 - vnum: 3142
   name: Eastern Service Area
@@ -1415,18 +1379,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The eastern perimeter continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3139
-  - direction: 2
-    description: Service facilities extend south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3145
   - direction: 3
     description: The inner approach is to the west.
     keywords: ''
@@ -1505,12 +1457,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The western guard post is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3141
   - direction: 1
     description: The grand entrance plaza is to the east.
     keywords: ''
@@ -1523,6 +1469,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3146
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3141
   extra_descriptions: []
 - vnum: 3145
   name: Eastern Warehouse
@@ -1537,18 +1489,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The eastern service area continues north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3142
-  - direction: 2
-    description: More warehouses lie to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3147
   - direction: 3
     description: The grand entrance is to the west.
     keywords: ''
@@ -1570,12 +1510,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The western service building is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3144
   - direction: 1
     description: You can cut across to the eastern side.
     keywords: ''
@@ -1588,6 +1522,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3148
+  - direction: 0
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3144
   extra_descriptions: []
 - vnum: 3147
   name: Eastern Supply Yard
@@ -1601,18 +1541,6 @@ rooms:
   room_flags: 0
   sector_type: 0
   exits:
-  - direction: 0
-    description: The eastern warehouse is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3145
-  - direction: 2
-    description: The eastern complex continues south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3149
   - direction: 3
     description: The western barracks are accessible.
     keywords: ''
@@ -1659,12 +1587,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The eastern supply yard is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3147
   - direction: 3
     description: The western security office is to the west.
     keywords: ''
