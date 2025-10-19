@@ -104,6 +104,35 @@ No automated tests exist. Testing requires:
 
 5. **Compatibility**: Changes should maintain compatibility with the original DikuMUD world files and save formats when possible.
 
+## Debugging Test Failures
+
+When integration tests fail, use `git bisect` to identify the commit that introduced the issue:
+
+1. **Write a correct bisect script** that:
+   - Builds the project cleanly (`make clean && make`)
+   - Runs the specific test
+   - Returns exit code 0 for pass, 1 for fail (e.g., `grep PASS output_file`)
+
+2. **Trust the bisect output** - do not make up reasons to ignore the commit git bisect identifies. The bisect algorithm is correct if your script is correct.
+
+3. **Example bisect script**:
+   ```bash
+   #!/usr/bin/env bash
+   cd dm-dist-alfa
+   make clean && make integration_test_outputs/quests/test_name.out && \
+   grep PASS integration_test_outputs/quests/test_name.out
+   ```
+
+4. **Run bisect**:
+   ```bash
+   git bisect start
+   git bisect bad HEAD
+   git bisect good <known_good_commit>
+   git bisect run /path/to/bisect_script.sh
+   ```
+
+5. Once git bisect identifies the offending commit, analyze THAT commit's changes to understand the root cause. Do not ignore bisect results.
+
 ## When Making Changes
 
 - Understand the historical context
