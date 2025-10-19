@@ -616,10 +616,16 @@ class WorldBuilder:
                     rooms = data.get('rooms', [])
                     if rooms:
                         zone['top_room'] = max(r['vnum'] for r in rooms)
+                        # Use minimum room number as sort key for zones
+                        min_room = min(r['vnum'] for r in rooms)
                     elif 'top_room' not in zone:
                         # Default to zone number * 100 if no rooms and no top_room specified
                         zone['top_room'] = zone.get('number', 0) * 100
-                    all_records.append((zone['number'], self._build_zone(zone, resets)))
+                        min_room = 0
+                    else:
+                        # If top_room is specified but no rooms, estimate min_room
+                        min_room = zone.get('number', 0) * 100
+                    all_records.append((min_room, self._build_zone(zone, resets)))
                 elif file_type == 'shp':
                     shops = data.get('shops', [])
                     all_records.extend([(s['vnum'], self._build_shop(s)) for s in shops])
@@ -627,9 +633,8 @@ class WorldBuilder:
                     quests = data.get('quests', [])
                     all_records.extend([(q['qnum'], self._build_quest(q)) for q in quests])
             
-            # Sort by vnum - except for zones which must maintain input order
-            if file_type != 'zon':
-                all_records.sort(key=lambda x: x[0])
+            # Sort by vnum/zone number for all file types
+            all_records.sort(key=lambda x: x[0])
             
             # Write output
             output_file = f"{output_dir}/{file_names[file_type]}"

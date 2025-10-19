@@ -2962,19 +2962,6 @@ resets:
   arg2: 20
 - command: M
   if_flag: 0
-  arg1: 4201
-  arg2: 1
-  arg3: 4181
-- command: G
-  if_flag: 1
-  arg1: 4266
-  arg2: 100
-- command: G
-  if_flag: 1
-  arg1: 4273
-  arg2: 100
-- command: M
-  if_flag: 0
   arg1: 4203
   arg2: 1
   arg3: 4167
