@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DikuMUD WebSocket Client</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1a0f08, #2c1810);
+            color: #f4e4d7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffcc66;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .connection-controls {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .connection-controls input {
+            flex: 1;
+            min-width: 150px;
+            padding: 8px;
+            background: #1a0f08;
+            border: 1px solid #8b3a3a;
+            color: #f4e4d7;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .connection-controls button {
+            padding: 8px 20px;
+            background: #cd5c5c;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .connection-controls button:hover:not(:disabled) {
+            background: #8b3a3a;
+        }
+
+        .connection-controls button:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+
+        #status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        #status.disconnected {
+            background: #8b3a3a;
+            color: white;
+        }
+
+        #status.connected {
+            background: #2d5016;
+            color: #90ee90;
+        }
+
+        #terminal {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #8b3a3a;
+            border-radius: 8px;
+            padding: 15px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        #input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        #input {
+            flex: 1;
+            padding: 12px;
+            background: #1a0f08;
+            border: 2px solid #8b3a3a;
+            color: #f4e4d7;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        #input:focus {
+            outline: none;
+            border-color: #cd5c5c;
+        }
+
+        #send-button {
+            padding: 12px 24px;
+            background: #cd5c5c;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #send-button:hover:not(:disabled) {
+            background: #8b3a3a;
+        }
+
+        #send-button:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+
+        .info-line {
+            color: #ffcc66;
+        }
+
+        .error-line {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #8b3a3a;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cd5c5c;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔴 Barsoom MUD - WebSocket Client</h1>
+    
+    <div class="connection-controls">
+        <input type="text" id="host" value="localhost" placeholder="Server host">
+        <input type="number" id="port" value="4000" placeholder="Port">
+        <button id="connect-button" onclick="toggleConnection()">Connect</button>
+        <span id="status" class="disconnected">Disconnected</span>
+    </div>
+
+    <div id="terminal"></div>
+    
+    <div id="input-area">
+        <input type="text" id="input" placeholder="Type your commands here..." disabled>
+        <button id="send-button" onclick="sendMessage()" disabled>Send</button>
+    </div>
+
+    <script>
+        let ws = null;
+        let isConnected = false;
+
+        const terminal = document.getElementById('terminal');
+        const input = document.getElementById('input');
+        const sendButton = document.getElementById('send-button');
+        const connectButton = document.getElementById('connect-button');
+        const status = document.getElementById('status');
+
+        function log(message, className = '') {
+            const line = document.createElement('div');
+            if (className) {
+                line.className = className;
+            }
+            line.textContent = message;
+            terminal.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function updateConnectionState(connected) {
+            isConnected = connected;
+            input.disabled = !connected;
+            sendButton.disabled = !connected;
+            connectButton.textContent = connected ? 'Disconnect' : 'Connect';
+            
+            if (connected) {
+                status.textContent = 'Connected';
+                status.className = 'connected';
+                input.focus();
+            } else {
+                status.textContent = 'Disconnected';
+                status.className = 'disconnected';
+            }
+        }
+
+        function toggleConnection() {
+            if (isConnected) {
+                disconnect();
+            } else {
+                connect();
+            }
+        }
+
+        function connect() {
+            const host = document.getElementById('host').value;
+            const port = document.getElementById('port').value;
+            const url = `ws://${host}:${port}`;
+
+            log(`Connecting to ${url}...`, 'info-line');
+
+            try {
+                ws = new WebSocket(url);
+
+                ws.onopen = function() {
+                    log('✓ Connected successfully!', 'info-line');
+                    updateConnectionState(true);
+                };
+
+                ws.onmessage = function(event) {
+                    // Strip ANSI color codes and other control sequences
+                    const text = event.data.replace(/\x1B\[[0-9;]*[mGKHf]/g, '');
+                    log(text);
+                };
+
+                ws.onerror = function(error) {
+                    log('✗ Connection error occurred', 'error-line');
+                    console.error('WebSocket error:', error);
+                };
+
+                ws.onclose = function() {
+                    log('Connection closed', 'info-line');
+                    updateConnectionState(false);
+                    ws = null;
+                };
+            } catch (error) {
+                log(`✗ Failed to connect: ${error.message}`, 'error-line');
+            }
+        }
+
+        function disconnect() {
+            if (ws) {
+                ws.close();
+                ws = null;
+            }
+            updateConnectionState(false);
+        }
+
+        function sendMessage() {
+            const message = input.value.trim();
+            if (message && ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(message);
+                input.value = '';
+            }
+        }
+
+        // Send message on Enter key
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Initial welcome message
+        log('Welcome to the Barsoom MUD WebSocket Client!', 'info-line');
+        log('Enter the server address and port, then click Connect.', 'info-line');
+        log('', '');
+    </script>
+</body>
+</html>

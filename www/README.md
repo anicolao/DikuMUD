@@ -10,6 +10,7 @@ This directory contains the promotional website for Barsoom MUD, a Mars-themed M
 - `world.html` - World setting and lore
 - `technology.html` - Technology system details
 - `style.css` - Mars-themed styling
+- `client.html` - WebSocket client for playing in the browser
 
 ## Deployment
 
@@ -30,6 +31,18 @@ python3 -m http.server 8080
 ```
 
 Then visit http://localhost:8080 in your browser.
+
+### WebSocket Client
+
+The `client.html` file provides a browser-based WebSocket client for connecting to the MUD:
+
+1. Start the HTTP server as shown above
+2. Start the MUD server (see dm-dist-alfa/README)
+3. Open http://localhost:8080/client.html in your browser
+4. Enter the server host (e.g., "localhost") and port (e.g., "4000")
+5. Click "Connect" and start playing!
+
+The WebSocket client works alongside traditional telnet connections, so players can use either method to connect.
 
 ## Game Client Link
 

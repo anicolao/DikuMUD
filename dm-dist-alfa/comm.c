@@ -1071,6 +1071,28 @@ int process_input(struct descriptor_data *t)
 	/* Check for websocket handshake on first read */
 	if (!t->is_websocket && begin == 0 && sofar > 0) {
 		if (is_websocket_handshake(t->buf, sofar)) {
+			/* For websocket, we need to read the full HTTP request (ends with \r\n\r\n) */
+			int attempts = 0;
+			while (strstr(t->buf, "\r\n\r\n") == NULL && sofar < MAX_STRING_LENGTH - 1 && attempts < 10) {
+				/* Small delay to let more data arrive */
+				usleep(10000); /* 10ms */
+				thisround = read(t->descriptor, t->buf + sofar, 
+					MAX_STRING_LENGTH - sofar - 1);
+				if (thisround > 0) {
+					sofar += thisround;
+					t->buf[sofar] = '\0';
+				} else if (thisround < 0) {
+					if (errno != EWOULDBLOCK) {
+						perror("WebSocket handshake read");
+						return(-1);
+					}
+					attempts++;
+				} else {
+					slog("EOF during websocket handshake");
+					return(-1);
+				}
+			}
+			
 			char response[1024];
 			if (websocket_handshake(t->buf, sofar, response, sizeof(response))) {
 				/* Send handshake response */
