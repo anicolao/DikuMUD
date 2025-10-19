@@ -1541,6 +1541,37 @@ void send_wrapped_text(struct char_data *ch, char *text, int max_line_len)
 	}
 }
 
+/* Handle quest completion with reward check
+ * Returns TRUE if quest was handled (completed or already rewarded)
+ * Returns FALSE if quest was not found or not complete
+ */
+static int handle_quest_completion(struct char_data *ch, struct char_data *mob, 
+                                   struct quest_data *quest, int quest_type)
+{
+	if (!quest)
+		return FALSE;
+	
+	/* Check if player has already received rewards for this quest */
+	if (is_quest_completed(ch, quest->qnum)) {
+		/* Player completed quest again after already receiving reward */
+		/* Send completion text first so player can see the hint for next quest */
+		send_wrapped_text(ch, quest->complete_text, 72);
+		send_wrapped_text(ch, "I see you've already received the reward. Thank you for performing my task again!", 72);
+		/* Remove the quest affect without giving rewards */
+		affect_from_char(ch, quest_type);
+		return TRUE;
+	}
+	
+	/* Award quest rewards */
+	send_wrapped_text(ch, quest->complete_text, 72);
+	grant_quest_reward(ch, quest);
+	
+	/* Remove the quest affect */
+	affect_from_char(ch, quest_type);
+	
+	return TRUE;
+}
+
 /* Generic quest giver - handles all quest types in a data-driven way */
 int quest_giver(struct char_data *ch, int cmd, char *arg)
 {
@@ -1635,24 +1666,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 						has_complete_quest = 1;
 						/* Find the quest to give rewards */
 						quest = find_quest_by_giver(giver_vnum);
-						if (quest) {
-							/* Check if player has already received rewards for this quest */
-							if (is_quest_completed(ch, quest->qnum)) {
-								/* Player completed quest again after already receiving reward */
-								act("$n says, 'I see you've already received the reward. Thank you for performing my task again!'", 
-									FALSE, mob, 0, 0, TO_ROOM);
-								/* Remove the quest affect without giving rewards */
-								affect_from_char(ch, af->type);
-								return TRUE;
-							}
-							
-							/* Award quest rewards */
-							send_wrapped_text(ch, quest->complete_text, 72);
-							grant_quest_reward(ch, quest);
-							
-							/* Remove the quest affect */
-							affect_from_char(ch, af->type);
-							
+						if (handle_quest_completion(ch, mob, quest, af->type)) {
 							return TRUE;
 						}
 					}
@@ -1693,24 +1707,7 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 		}
 		
 		if (quest_complete) {
-			/* Check if player has already received rewards for this quest */
-			if (is_quest_completed(ch, quest->qnum)) {
-				/* Player completed quest again after already receiving reward */
-				act("$n says, 'I see you've already received the reward. Thank you for performing my task again!'", 
-					FALSE, mob, 0, 0, TO_ROOM);
-				/* Remove the quest affect without giving rewards */
-				affect_from_char(ch, quest->quest_type);
-				return TRUE;
-			}
-			
-			/* Award quest rewards */
-			send_wrapped_text(ch, quest->complete_text, 72);
-			grant_quest_reward(ch, quest);
-			
-			/* Remove the quest affect */
-			affect_from_char(ch, quest->quest_type);
-			
-			return TRUE;
+			return handle_quest_completion(ch, mob, quest, quest->quest_type);
 		} else {
 			/* Quest in progress but not complete */
 			/* For delivery/retrieval quests, completion happens in do_give */
@@ -1718,13 +1715,6 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 				FALSE, mob, 0, 0, TO_ROOM);
 			return TRUE;
 		}
-	}
-	
-	/* Check if player has already completed and received rewards for this quest */
-	if (is_quest_completed(ch, quest->qnum)) {
-		act("$n says, 'You have already completed this task and received your reward. I have no other tasks for you at this time.'", 
-			FALSE, mob, 0, 0, TO_ROOM);
-		return TRUE;
 	}
 	
 	/* Assign quest affect 

@@ -67,16 +67,40 @@ steps:
         message: "Should have practice sword from first completion"
 
   # === ATTEMPT SECOND QUEST ===
-  # The quest should not be offered again since it was completed
+  # Players CAN get the quest again to remember the hint
   - action: command
-    description: "Try to ask for quest again - should be denied"
+    description: "Ask for quest again - should be offered"
     command: "ask sola quest"
     expected:
-      - pattern: "already completed|already received|no tasks|no other tasks"
-        message: "Sola should refuse to give quest again"
+      - pattern: "White apes|white apes"
+        message: "Sola should offer the quest again so player can remember hint"
+
+  # === COMPLETE SECOND TIME ===
+  - action: command
+    description: "Load another tooth"
+    command: "load obj 4091"
+    expected:
+      - pattern: "Ok"
+        message: "Should load another tooth"
+
+  - action: command
+    description: "Get the second tooth"
+    command: "get tooth"
+    expected:
+      - pattern: "You get|you get"
+        message: "Should pick up the tooth"
+
+  - action: command
+    description: "Complete quest second time - should get hint but no reward"
+    command: "give tooth sola"
+    expected:
+      - pattern: "relief|gratitude|proven"
+        message: "Should see quest completion text with hint"
+      - pattern: "already received the reward"
+        message: "Should see message about already receiving reward"
     fail_on:
-      - pattern: "White apes have been threatening"
-        message: "Should NOT offer the quest again after completion"
+      - pattern: "500 experience|You gain 500"
+        message: "Should NOT receive experience again"
 
 result:
   should_pass: true
