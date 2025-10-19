@@ -5063,7 +5063,7 @@ quests:
   fail_text: The warrior shakes his head. 'The ulsio still infest our sewers. Come
     back when you're ready to face them.'
 - qnum: 3002
-  giver: 3007
+  giver: 3063
   type: 64
   duration: 72
   target: 3014
@@ -5072,12 +5072,12 @@ quests:
   reward_exp: 250
   reward_gold: 100
   reward_item: 3001
-  quest_text: The warrior gestures toward the city. 'I need someone to make a patrol
+  quest_text: The mercenary gestures toward the market. 'I need someone to make a patrol
     through the market plaza and report back on the activity there. Simply make your
     way to the market plaza and return to me.'
-  complete_text: The warrior nods as you report your patrol findings. 'Good work.
+  complete_text: The mercenary nods as you report your patrol findings. 'Good work.
     Vigilance keeps Helium safe. Here is your compensation.'
-  fail_text: The warrior looks disappointed. 'I still need that patrol completed.'
+  fail_text: The mercenary looks disappointed. 'I still need that patrol completed.'
 - qnum: 3003
   giver: 3008
   type: 61

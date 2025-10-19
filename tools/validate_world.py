@@ -407,6 +407,14 @@ class WorldValidator:
             if giver_vnum in self.assigned_spec_procedures:
                 self.error(f"Mobile {giver_vnum} is quest giver for quest(s) {quest_vnums} but also has hardcoded special procedure in spec_assign.c. "
                           f"Mob can only have ONE special procedure - quests will NOT work!")
+        
+        # Check for 1-1 quest to mob relationship
+        # Each mob should have at most ONE quest assigned to them
+        for giver_vnum, quest_vnums in self.quest_givers.items():
+            if len(quest_vnums) > 1:
+                self.error(f"Mobile {giver_vnum} has multiple quests assigned {quest_vnums}. "
+                          f"Quest system does not properly support multiple quests per mob - "
+                          f"quest completion will not work correctly. Each mob should have exactly one quest.")
     
     def validate_shop_inventory(self):
         """Validate that shopkeeper zone reset inventory matches shop producing list.

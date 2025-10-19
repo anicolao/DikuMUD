@@ -1,15 +1,15 @@
-# Integration test for mob 3007 with multiple quest assignments
-# Tests that mob 3007 can offer different quests by completing them
+# Integration test for mob 3007 quest functionality
+# Tests that mob 3007 properly offers its assigned quest (3001)
 test:
-  id: quest_3007_multiple_quests
-  description: "Test that mob 3007 offers different quests (3001 and 3002)"
+  id: quest_3007_single_quest
+  description: "Test that mob 3007 offers quest 3001 correctly"
   author: Integration Test Framework
   created: 2025-10-18
-  tags: [quest, multiple_quests, mob_3007]
+  tags: [quest, mob_3007]
 
 setup:
   character:
-    name: MultiQuestTest
+    name: QuestTest
     password: test
     level: 23
     class: warrior
@@ -32,7 +32,7 @@ steps:
       - pattern: "Red Martian warrior|Red Martian Warrior"
         message: "Red Martian Warrior should be in the room"
 
-  # Step 3: Get first quest - should be Quest 3001 (KILL type 63)
+  # Step 3: Get quest 3001 (KILL type)
   - action: command
     command: "ask warrior quest"
     description: "Ask warrior for quest - should get quest 3001 (Guard's Training)"
@@ -40,53 +40,30 @@ steps:
       - pattern: "recruit|ulsio|sewers"
         message: "Should receive Quest 3001 about killing ulsio in sewers"
 
-  # Step 4: Ask again - should now offer Quest 3002 (different type)
-  # Since player has KILL quest (type 63), warrior offers EXPLORE quest (type 64)
+  # Step 4: Ask again - should say already have a task
   - action: command
     command: "ask warrior quest"
-    description: "Ask warrior again - should offer Quest 3002 (different type)"
+    description: "Ask warrior again while having Quest 3001"
     expected:
-      - pattern: "patrol|plaza|market"
-        message: "Should offer Quest 3002 since it's a different type (EXPLORE vs KILL)"
-
-  # Step 5: Ask a third time - now should say "already have" for both types
-  - action: command
-    command: "ask warrior quest"
-    description: "Ask again after having both quest types"
-    expected:
-      - pattern: "no tasks|already"
-        message: "Should say no tasks available or already have one"
-
-  # Step 6: Verify we have both quests active
-  - action: command
-    command: "score"
-    description: "Check score to see both quests"
-    expected:
-      - pattern: "Quest"
-        message: "Should show active quests"
+      - pattern: "already have a task|already have"
+        message: "Should say we already have a task from this warrior"
 
 result:
   should_pass: true
   description: |
-    This test verifies that mob 3007 (Red Martian Warrior) can offer multiple
-    different quests to the same player simultaneously! The mob has 3 quests:
+    This test verifies that mob 3007 (Red Martian Warrior) properly offers its
+    assigned quest. The mob has 1 quest:
     - Quest 3001: Guard's Training (KILL quest - type 63)
-    - Quest 3002: Market Patrol (EXPLORE quest - type 64)
-    - Quest 3602: Intelligence Gathering (EXPLORE quest - type 64)
     
     The test demonstrates:
-    1. Player receives Quest 3001 (KILL type) when first asking
-    2. Player receives Quest 3002 (EXPLORE type) when asking again, because
-       it's a different quest type and the player doesn't have it yet
-    3. After having both quest types active, warrior says "no tasks available"
+    1. Player receives Quest 3001 (KILL type) when asking
+    2. Player is told "already have a task" when asking again
     
-    This proves that mob 3007 successfully offers MULTIPLE DIFFERENT QUESTS
-    from its pool of 3 quests. The player can have Quest 3001 and 3002 active
-    simultaneously because they are different types (KILL vs EXPLORE).
-    
-    Quest 3602 is also EXPLORE type like 3002, so both cannot be active at once,
-    but the quest data confirms all 3 exist and are assigned to mob 3007.
+    This confirms the quest giver functionality works correctly with the proper
+    1-1 relationship between mob and quest.
   notes: |
-    This test uses the enhanced find_available_quest() function which allows
-    NPCs to offer different quests based on quest type. A player can have
-    multiple quests active as long as they are different types.
+    Previously mob 3007 had 3 quests assigned, but the quest system doesn't
+    properly support multiple quests per mob. Quests have been reassigned:
+    - Quest 3001: Mob 3007 (Red Martian Warrior)
+    - Quest 3002: Mob 3063 (Red Martian Mercenary)
+    - Quest 3602: Mob 3603 (Spy Master in Zodanga)

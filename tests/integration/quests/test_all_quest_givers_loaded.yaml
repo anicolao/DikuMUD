@@ -20,7 +20,7 @@ steps:
   # Use loop construct to check all quest-giving mobs
   - loop:
       variable: mobno
-      values: [3006, 3007, 3008, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 4202, 4203, 4212, 4214, 4215, 4300, 4301, 4500, 4501]
+      values: [3006, 3007, 3008, 3063, 3603, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 4202, 4203, 4212, 4214, 4215, 4300, 4301, 4500, 4501]
       steps:
         - action: command
           command: "locate char ${mobno}"
@@ -32,19 +32,22 @@ steps:
 result:
   should_pass: true
   description: |
-    This test verifies that all 19 quest-giving mobs in the game are properly
+    This test verifies that all 21 quest-giving mobs in the game are properly
     loaded and accessible to players at game startup. Each quest giver is
     checked using the wizard 'locate char <vnum>' command.
     
     Uses the loop construct to iterate over all quest giver vnums:
-    3006, 3007, 3008, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 
+    3006, 3007, 3008, 3063, 3603, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 
     4202, 4203, 4212, 4214, 4215, 4300, 4301, 4500, 4501
     
-    Total: 21 quests across 19 quest-giving mobs
+    Total: 21 quests across 21 quest-giving mobs (1-1 relationship)
   notes: |
     This test demonstrates the loop construct feature which allows concise
     iteration over multiple similar test cases. The loop replaces ~200 lines
     of repetitive YAML with a single loop definition.
+    
+    Each mob has exactly ONE quest assigned to maintain proper 1-1 relationship
+    required by the quest system. This ensures quest completion works correctly.
     
     If any quest giver is not loaded, the test will fail for that specific
     mob, indicating that players cannot access that quest in the game.
