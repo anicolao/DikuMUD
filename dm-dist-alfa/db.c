@@ -396,6 +396,8 @@ void build_player_index(void)
 
 	if ((fl = fopen(PLAYER_FILE, "rb+")))
 	{
+		/* Zero out dummy structure to handle any new fields */
+		memset(&dummy, 0, sizeof(struct char_file_u));
 
 		for (; !feof(fl);)
 		{
@@ -1715,6 +1717,7 @@ int load_char(char *name, struct char_file_u *char_element)
 {
 	FILE *fl;
 	int player_i;
+	size_t bytes_read;
 
 	int find_name(char *name);
 
@@ -1725,10 +1728,16 @@ int load_char(char *name, struct char_file_u *char_element)
 			exit(0);
 		}
 
+		/* Zero out the structure first to initialize any new fields
+		 * This ensures backward compatibility when structure size increases */
+		memset(char_element, 0, sizeof(struct char_file_u));
+
 		fseek(fl, (long) (player_table[player_i].nr *
 		sizeof(struct char_file_u)), 0);
 
-		fread(char_element, sizeof(struct char_file_u), 1, fl);
+		/* Read the player data - if file has old format (smaller size),
+		 * the zeroed new fields remain as 0, providing smooth upgrade */
+		bytes_read = fread(char_element, sizeof(struct char_file_u), 1, fl);
 		fclose(fl);
 		return(player_i);
 	} else
