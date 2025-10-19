@@ -4116,70 +4116,92 @@ objects:
   - keywords: map guide
     description: "This detailed map shows the layout of Lesser Helium:\n\n\
       \ ╔═══════════════════════════════════════════════════════════════════╗\n\
-      \ ║              LESSER HELIUM - City Map                             ║\n\
-      \ ║              (Starting City - Levels 1-10)                        ║\n\
+      \ ║            LESSER HELIUM - City Map                               ║\n\
+      \ ║            Market Plaza - Central Hub                             ║\n\
       \ ╚═══════════════════════════════════════════════════════════════════╝\n\
       \n\
-      \                     [Temple of Jeddak]\n\
-      \                         (3001) START\n\
-      \                              |\n\
-      \                           (down)\n\
-      \                              |\n\
-      \                      [Temple Plaza]────W────[Noble's Guild]\n\
-      \                         (3005)                  (3004)\n\
-      \                              |\n\
-      \                           (south)\n\
-      \                              |\n\
-      \      [West Gate]         [Market Plaza]         [East Gate]\n\
-      \        (3052)────W───(3013)─┼─(3015)───E────      (3053)\n\
-      \                           (3014)\n\
-      \                              |\n\
-      \                           (down)\n\
-      \                              |\n\
-      \                      [Common Plaza]\n\
-      \                         (3025)\n\
-      \                              |\n\
-      \                           (down)\n\
-      \                              |\n\
-      \                 [Lesser Helium Sewers]\n\
+      \                    [Temple Altar]\n\
+      \                         |\n\
+      \                        up\n\
+      \                         |\n\
+      \                  [Temple of Jeddak]\n\
+      \                         |\n\
+      \                       down\n\
+      \                         |\n\
+      \      [Noble's]──W──[Temple Plaza]──E──[Inn Entrance]\n\
+      \                         |\n\
+      \                         S\n\
+      \                         |\n\
+      \    [Provisions]     [MARKET PLAZA]     [General Merch]\n\
+      \        |       \\         |         /       |\n\
+      \        up       W        ( )        E       up\n\
+      \                  \\       |       /\n\
+      \                    \\     |     /\n\
+      \                     [West  |  East]\n\
+      \                    [Concourse]\n\
+      \                         |\n\
+      \                         D (down to lower level)\n\
+      \                         |\n\
+      \    [Lower]────W────[Common Plaza]────E────[Alley]\n\
+      \    [Quarter]            |                    |\n\
+      \                         S                    S\n\
+      \                         |                    |\n\
+      \                    [Disposal]          [Assassins]\n\
       \n\n\
       \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ GUILD LOCATIONS:                                             │\n\
+      \ │ FROM MARKET PLAZA - KEY DIRECTIONS:                          │\n\
       \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ Warriors Guild      : S from Market Plaza (3014 -> 3021)     │\n\
-      \ │ Scientific Academy  : W from Market Plaza to 3013, then S    │\n\
-      \ │ Assassins Guild     : Down to Common Plaza, E to Alley, S    │\n\
-      \ │ Noble's Guild       : N to Temple Plaza, W (3005 -> 3004)    │\n\
+      \ │ NORTH : Temple Plaza → Temple of Jeddak (up)                 │\n\
+      \ │ WEST  : Main Concourse West                                  │\n\
+      \ │ EAST  : Main Concourse East                                  │\n\
+      \ │ DOWN  : Common Plaza (lower level)                           │\n\
       \ └──────────────────────────────────────────────────────────────┘\n\
       \n\
       \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ SHOP LOCATIONS:                                              │\n\
+      \ │ GUILD LOCATIONS (from Market Plaza):                         │\n\
       \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ General Merchant    : E from Market Plaza, N (up)            │\n\
-      \ │ Weapon Smith        : E from Market Plaza, then N (up)       │\n\
-      \ │ Armory             : W from Market Plaza, S                  │\n\
-      \ │ Provisions         : W from Market Plaza, N (up)             │\n\
-      \ │ Jeweler's Shop     : E from Market Plaza, S                  │\n\
-      \ │ Leather Worker     : Down to Common Plaza, W, W, N           │\n\
-      \ │ Calot Shop (Pets)  : Down to Common Plaza, E, E, N           │\n\
-      \ │ Scientific Supplies: W, W from Market Plaza, N               │\n\
-      \ │ Traveler's Rest Inn: N from Market Plaza, E                  │\n\
+      \ │ Warriors Guild      : E → E → S                              │\n\
+      \ │ Scientific Academy  : W → W → S                              │\n\
+      \ │ Assassins Guild     : D → E → S                              │\n\
+      \ │ Noble's Guild       : N → W                                  │\n\
       \ └──────────────────────────────────────────────────────────────┘\n\
       \n\
       \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ QUEST STARTING POINTS:                                       │\n\
+      \ │ SHOP LOCATIONS (from Market Plaza):                          │\n\
       \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ Red Martian Mercenary : Down to Common Plaza, E to Alley     │\n\
-      \ │ Warriors Guild Quests : S from Market Plaza                  │\n\
+      \ │ Provisions Merchant : W → up                                 │\n\
+      \ │ General Merchant    : E → up                                 │\n\
+      \ │ Weapon Smith        : E → E → up                             │\n\
+      \ │ Armory             : W → S                                   │\n\
+      \ │ Jeweler's Shop     : E → S                                   │\n\
+      \ │ Scientific Supplies : W → W → N                              │\n\
+      \ │ Traveler's Rest Inn : N → E                                  │\n\
+      \ │ Leather Worker     : D → W → W → N                           │\n\
+      \ │ Calot Shop (Pets)  : D → E → E → N                           │\n\
+      \ └──────────────────────────────────────────────────────────────┘\n\
+      \n\
+      \ ┌──────────────────────────────────────────────────────────────┐\n\
+      \ │ QUEST LOCATIONS (from Market Plaza):                         │\n\
+      \ ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ Shadowy Alley (Mercenary) : D → E                            │\n\
+      \ │ Warriors Guild Quests     : E → E → S                        │\n\
+      \ └──────────────────────────────────────────────────────────────┘\n\
+      \n\
+      \ ┌──────────────────────────────────────────────────────────────┐\n\
+      \ │ CITY GATES (from Market Plaza):                              │\n\
+      \ ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ West Gate : W → W → W                                        │\n\
+      \ │ East Gate : E → E → E                                        │\n\
       \ └──────────────────────────────────────────────────────────────┘\n\
       \n\
       \ ┌──────────────────────────────────────────────────────────────┐\n\
       \ │ NAVIGATION TIPS:                                             │\n\
       \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ • Market Plaza (3014) is the central hub                     │\n\
-      \ │ • Most shops are accessed via Main Concourse (E/W of Market) │\n\
-      \ │ • Use 'up' and 'down' to reach elevated and lower areas     │\n\
-      \ │ • Get free map from Tour Guide at Temple of Jeddak (3001)   │\n\
+      \ │ • Market Plaza is the city center - all paths start here     │\n\
+      \ │ • UP/DOWN moves between city levels                          │\n\
+      \ │ • Main Concourse runs East-West through Market Plaza         │\n\
+      \ │ • Most elevated shops accessible via 'up' from concourse     │\n\
+      \ │ • Lower district accessible via 'down' from Market Plaza     │\n\
       \ └──────────────────────────────────────────────────────────────┘\n"
   affects: []
 resets:
