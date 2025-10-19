@@ -1,7 +1,9 @@
 *.backup
 __pycache__/
 tools/create_test_player
+tools/deduplicate_players
 dm-dist-alfa/test_lib/
+dm-dist-alfa/test_dedup_lib/
 dm-dist-alfa/integration_test_outputs/
 dm-dist-alfa/integration_test_failures/
 dm-dist-alfa/dm-dist-alfa

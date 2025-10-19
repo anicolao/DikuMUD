@@ -82,18 +82,27 @@ integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver lib/tinywor
 	@echo "Running test: $<"
 	@python3 ../tools/integration_test_runner.py ./dmserver $< > $@ 2>&1 && echo "PASSED" >> $@ || echo "FAILED" >> $@
 
-# Run all integration tests
-.PHONY: integration_tests
-integration_tests: $(INTEGRATION_TEST_OUTPUTS)
+# Standalone regression test output files
+STANDALONE_TEST_OUTPUTS := integration_test_outputs/test_password_fix.out integration_test_outputs/test_deduplicate_players.out
+
+# Pattern rule for password fix test
+integration_test_outputs/test_password_fix.out: ../tests/test_password_fix.sh ../tools/create_test_player | integration_test_outputs
+	@echo "Running test: ../tests/test_password_fix.sh"
+	@cd .. && bash tests/test_password_fix.sh > dm-dist-alfa/$@ 2>&1 && echo "PASSED" >> dm-dist-alfa/$@ || echo "FAILED" >> dm-dist-alfa/$@
+
+# Pattern rule for player deduplication test
+integration_test_outputs/test_deduplicate_players.out: ../tests/test_deduplicate_players.sh ../tools/create_test_player ../tools/deduplicate_players | integration_test_outputs
+	@echo "Running test: ../tests/test_deduplicate_players.sh"
+	@cd .. && bash tests/test_deduplicate_players.sh > dm-dist-alfa/$@ 2>&1 && echo "PASSED" >> dm-dist-alfa/$@ || echo "FAILED" >> dm-dist-alfa/$@
+
+# Run all tests (integration + standalone regression tests)
+.PHONY: test
+test: $(INTEGRATION_TEST_OUTPUTS) $(STANDALONE_TEST_OUTPUTS)
 	@echo ""
 	@echo "=========================================="
-	@echo "Integration Test Results Summary"
+	@echo "Test Results Summary"
 	@echo "=========================================="
 	@python3 process_test_results.py
-
-# Legacy test target - now calls integration_tests
-.PHONY: test
-test: integration_tests
 
 dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
 dmserver : changes.o
