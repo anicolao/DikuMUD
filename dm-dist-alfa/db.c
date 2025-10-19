@@ -8,6 +8,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
+#include <sys/stat.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -171,6 +172,7 @@ void boot_db(void)
 	renum_zone_table();
 
 	slog("Generating player index.");
+	migrate_player_file();
 	build_player_index();
 
 	slog("Loading fight messages.");
@@ -386,6 +388,147 @@ void update_time(void)
 }
 
 
+
+/* Migrate player file when structure size changes */
+void migrate_player_file(void)
+{
+	FILE *fl, *fl_new;
+	struct char_file_u *all_players = NULL;
+	int player_count = 0;
+	int i;
+	size_t old_size, new_size;
+	char size_file[256];
+	FILE *size_fl;
+	char buf[256];
+	
+	new_size = sizeof(struct char_file_u);
+	
+	/* Check if we have a stored size from previous run */
+	snprintf(size_file, sizeof(size_file), "%s.size", PLAYER_FILE);
+	
+	if ((size_fl = fopen(size_file, "r"))) {
+		if (fscanf(size_fl, "%zu", &old_size) != 1) {
+			old_size = new_size;  /* Assume current size if file is corrupted */
+		}
+		fclose(size_fl);
+	} else {
+		/* No size file exists - check if player file exists */
+		if ((fl = fopen(PLAYER_FILE, "rb"))) {
+			struct stat st;
+			fclose(fl);
+			
+			/* Try to detect old size by checking file size */
+			if (stat(PLAYER_FILE, &st) == 0 && st.st_size > 0) {
+				/* Read first record to try to detect size */
+				/* For now, assume this is a first-time run or old install */
+				old_size = new_size - 16;  /* Assume we added 16 bytes for quest fields */
+				snprintf(buf, sizeof(buf), "   No size file found, assuming old size: %zu", old_size);
+				slog(buf);
+			} else {
+				old_size = new_size;  /* Empty or new file */
+			}
+		} else {
+			old_size = new_size;  /* No player file exists yet */
+		}
+	}
+	
+	/* Check if migration is needed */
+	if (old_size == new_size) {
+		/* No migration needed, just save current size */
+		if ((size_fl = fopen(size_file, "w"))) {
+			fprintf(size_fl, "%zu\n", new_size);
+			fclose(size_fl);
+		}
+		return;
+	}
+	
+	/* Check for unsupported shrinking */
+	if (new_size < old_size) {
+		snprintf(buf, sizeof(buf), "FATAL: Player file structure shrank from %zu to %zu bytes!", 
+			old_size, new_size);
+		slog(buf);
+		slog("This is not supported - player data would be lost!");
+		slog("Cannot continue. Exiting.");
+		exit(1);
+	}
+	
+	/* Structure grew - need to migrate */
+	snprintf(buf, sizeof(buf), "   Player file structure size changed: %zu -> %zu bytes", 
+		old_size, new_size);
+	slog(buf);
+	slog("   Migrating player file...");
+	
+	/* Open old player file */
+	if (!(fl = fopen(PLAYER_FILE, "rb"))) {
+		/* No player file to migrate */
+		if ((size_fl = fopen(size_file, "w"))) {
+			fprintf(size_fl, "%zu\n", new_size);
+			fclose(size_fl);
+		}
+		return;
+	}
+	
+	/* Count players and allocate memory */
+	fseek(fl, 0, SEEK_END);
+	long file_size = ftell(fl);
+	player_count = file_size / old_size;
+	fseek(fl, 0, SEEK_SET);
+	
+	if (player_count == 0) {
+		fclose(fl);
+		if ((size_fl = fopen(size_file, "w"))) {
+			fprintf(size_fl, "%zu\n", new_size);
+			fclose(size_fl);
+		}
+		return;
+	}
+	
+	snprintf(buf, sizeof(buf), "   Found %d player(s) to migrate", player_count);
+	slog(buf);
+	
+	/* Allocate array for all players */
+	CREATE(all_players, struct char_file_u, player_count);
+	
+	/* Read all players at old offsets */
+	for (i = 0; i < player_count; i++) {
+		/* Zero out the structure first */
+		memset(&all_players[i], 0, new_size);
+		
+		/* Seek to old position and read old size */
+		fseek(fl, i * old_size, SEEK_SET);
+		fread(&all_players[i], old_size, 1, fl);
+	}
+	
+	fclose(fl);
+	
+	/* Backup old file */
+	char backup_file[256];
+	snprintf(backup_file, sizeof(backup_file), "%s.backup", PLAYER_FILE);
+	rename(PLAYER_FILE, backup_file);
+	
+	/* Write new file with new size */
+	if (!(fl_new = fopen(PLAYER_FILE, "wb"))) {
+		slog("   ERROR: Could not create new player file!");
+		slog("   Old file backed up to players.backup");
+		exit(1);
+	}
+	
+	for (i = 0; i < player_count; i++) {
+		fwrite(&all_players[i], new_size, 1, fl_new);
+	}
+	
+	fclose(fl_new);
+	free(all_players);
+	
+	/* Save new size */
+	if ((size_fl = fopen(size_file, "w"))) {
+		fprintf(size_fl, "%zu\n", new_size);
+		fclose(size_fl);
+	}
+	
+	snprintf(buf, sizeof(buf), "   Migration complete. Old file backed up to %s", backup_file);
+	slog(buf);
+}
 
 /* generate index table for the player file */
 void build_player_index(void)
