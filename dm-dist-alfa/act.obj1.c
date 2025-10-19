@@ -617,8 +617,15 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 			/* Send completion message */
 			act(quest->complete_text, FALSE, vict, 0, ch, TO_VICT);
 			
-			/* Grant rewards */
-			grant_quest_reward(ch, quest);
+			/* Check if player has already received rewards for this quest */
+			if (is_quest_completed(ch, quest->qnum)) {
+				/* Player completed quest again after already receiving reward */
+				act("I see you've already received the reward. Thank you for performing my task again!", 
+					FALSE, vict, 0, ch, TO_VICT);
+			} else {
+				/* Grant rewards */
+				grant_quest_reward(ch, quest);
+			}
 			
 			/* Remove quest affect */
 			affect_from_char(ch, af->type);

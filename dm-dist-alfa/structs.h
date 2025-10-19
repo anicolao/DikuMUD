@@ -433,6 +433,10 @@ struct char_player_data
 	struct time_data tmptime; /* PC s AGE in days, modified     */
 	ubyte weight;       /* PC / NPC s weight                    */
 	ubyte height;       /* PC / NPC s height                    */
+	
+	/* Quest completion tracking - bitfield to track which quests have been rewarded */
+	unsigned long long quests_completed_low;   /* Bits 0-63: quest numbers 0-63 */
+	unsigned long long quests_completed_high;  /* Bits 64-127: quest numbers 64-127 */
 };
 
 
@@ -619,6 +623,11 @@ struct char_file_u
 	char pwd[CRYPT_OUTPUT_SIZE+1];
 	sh_int apply_saving_throw[5];
 	int conditions[3];
+	
+	/* Quest completion tracking - bitfield to track which quests have been rewarded
+	 * Uses two 64-bit fields to support up to 128 quests */
+	unsigned long long quests_completed_low;   /* Bits 0-63: quest numbers 0-63 */
+	unsigned long long quests_completed_high;  /* Bits 64-127: quest numbers 64-127 */
 };
 
 
