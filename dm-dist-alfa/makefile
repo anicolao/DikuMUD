@@ -91,9 +91,27 @@ integration_tests: $(INTEGRATION_TEST_OUTPUTS)
 	@echo "=========================================="
 	@python3 process_test_results.py
 
-# Legacy test target - now calls integration_tests
+# Run standalone regression tests for password fix
+.PHONY: test_password_fix
+test_password_fix: ../tools/create_test_player
+	@echo ""
+	@echo "=========================================="
+	@echo "Running Password Fix Test"
+	@echo "=========================================="
+	@cd .. && bash tests/test_password_fix.sh
+
+# Run standalone regression tests for player deduplication
+.PHONY: test_deduplicate_players
+test_deduplicate_players: ../tools/create_test_player ../tools/deduplicate_players
+	@echo ""
+	@echo "=========================================="
+	@echo "Running Player Deduplication Test"
+	@echo "=========================================="
+	@cd .. && bash tests/test_deduplicate_players.sh
+
+# Run all tests (integration + standalone regression tests)
 .PHONY: test
-test: integration_tests
+test: integration_tests test_password_fix test_deduplicate_players
 
 dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
 dmserver : changes.o
