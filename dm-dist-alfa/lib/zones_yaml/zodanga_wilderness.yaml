@@ -7,7 +7,11 @@ zone:
 rooms:
 - vnum: 3650
   name: Western Approach to Zodanga
-  description: "   You stand on the dead sea bottom plains west of Zodanga. The enemy\n    city looms in the distance to the east, its dark towers visible against the\n    reddish Martian sky. The terrain is relatively open here, covered with ochre\n    moss. This is dangerous territory - Zodangan patrols watch for intruders, and\n    predators hunt across these plains."
+  description: "   You stand on the dead sea bottom plains west of Zodanga. The enemy\n\
+    \    city looms in the distance to the east, its dark towers visible against the\n\
+    \    reddish Martian sky. The terrain is relatively open here, covered with ochre\n\
+    \    moss. This is dangerous territory - Zodangan patrols watch for intruders,\
+    \ and\n    predators hunt across these plains."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -27,7 +31,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3651
   name: Dead Sea Bottom Plains
-  description: "   The ochre moss-covered plains stretch in all directions. Ancient ruins\n    dot the landscape in the distance. The thin Martian air carries sounds far,\n    making it difficult to move undetected. You are far from any friendly\n    territory here."
+  description: "   The ochre moss-covered plains stretch in all directions. Ancient\
+    \ ruins\n    dot the landscape in the distance. The thin Martian air carries sounds\
+    \ far,\n    making it difficult to move undetected. You are far from any friendly\n\
+    \    territory here."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -47,7 +54,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3700
   name: Wilderness Crossroads
-  description: "   Old trade routes converge here in the wilderness. Ancient markers,\n    weathered by time, indicate directions to various destinations. The routes are\n    still occasionally used by brave traders and scouts, though the journey is\n    perilous."
+  description: "   Old trade routes converge here in the wilderness. Ancient markers,\n\
+    \    weathered by time, indicate directions to various destinations. The routes\
+    \ are\n    still occasionally used by brave traders and scouts, though the journey\
+    \ is\n    perilous."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -79,7 +89,9 @@ rooms:
   extra_descriptions: []
 - vnum: 3701
   name: Northern Dead Sea Plains
-  description: "   The plains extend northward, becoming slightly more rugged. Rocky\n    outcrops appear more frequently here. This route eventually leads toward other\n    territories, though the journey would take many days."
+  description: "   The plains extend northward, becoming slightly more rugged. Rocky\n\
+    \    outcrops appear more frequently here. This route eventually leads toward\
+    \ other\n    territories, though the journey would take many days."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -99,7 +111,9 @@ rooms:
   extra_descriptions: []
 - vnum: 3710
   name: Southern Wilderness
-  description: "   The dead sea bottom extends southward here. In the far distance, you\n    might catch glimpses of territories controlled by Helium and its allies, but\n    they are many days' journey away. The wilderness holds many dangers."
+  description: "   The dead sea bottom extends southward here. In the far distance,\
+    \ you\n    might catch glimpses of territories controlled by Helium and its allies,\
+    \ but\n    they are many days' journey away. The wilderness holds many dangers."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -119,7 +133,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3711
   name: Banth Territory
-  description: "   Signs of predators are everywhere - bones scattered across the moss,\n    tracks in the dust, and a faint smell of carnivore. Banths hunt these plains,\n    and travelers must be wary. The Martian lions are deadly, especially in prides."
+  description: "   Signs of predators are everywhere - bones scattered across the\
+    \ moss,\n    tracks in the dust, and a faint smell of carnivore. Banths hunt these\
+    \ plains,\n    and travelers must be wary. The Martian lions are deadly, especially\
+    \ in prides."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -133,7 +150,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3712
   name: Ancient Ruins
-  description: "   Crumbling walls and fallen towers mark an ancient city, long dead.\n    These ruins dot the dead sea bottoms across Mars, remnants of civilizations\n    that flourished when water still filled the seas. Now they shelter predators\n    and provide occasional refuge for travelers."
+  description: "   Crumbling walls and fallen towers mark an ancient city, long dead.\n\
+    \    These ruins dot the dead sea bottoms across Mars, remnants of civilizations\n\
+    \    that flourished when water still filled the seas. Now they shelter predators\n\
+    \    and provide occasional refuge for travelers."
   zone: 38
   room_flags: 0
   sector_type: 1
@@ -147,7 +167,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3713
   name: Ruined Plaza
-  description: "   You stand in what was once a grand plaza in the ancient city. Broken\n    statues and toppled monuments lie scattered across the cracked pavement. The\n    ruins extend in all directions, a testament to a once-great civilization now\n    lost to time."
+  description: "   You stand in what was once a grand plaza in the ancient city. Broken\n\
+    \    statues and toppled monuments lie scattered across the cracked pavement.\
+    \ The\n    ruins extend in all directions, a testament to a once-great civilization\
+    \ now\n    lost to time."
   zone: 38
   room_flags: 0
   sector_type: 1
@@ -167,7 +190,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3720
   name: Western Wilderness Plains
-  description: "   The dead sea bottom continues westward. The ochre moss is thicker here,\n    and occasional hardy plants struggle to survive. In the distance, you can make\n    out elevated ground - perhaps the approaches to one of the western city-states."
+  description: "   The dead sea bottom continues westward. The ochre moss is thicker\
+    \ here,\n    and occasional hardy plants struggle to survive. In the distance,\
+    \ you can make\n    out elevated ground - perhaps the approaches to one of the\
+    \ western city-states."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -193,7 +219,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3721
   name: Traveler's Rest
-  description: "   This relatively sheltered spot has been used by travelers for\n    generations. A rocky outcrop provides some protection from predators and\n    weather. Old fire rings show where previous wanderers camped. It's one of the\n    few places in this wilderness that feels moderately safe."
+  description: "   This relatively sheltered spot has been used by travelers for\n\
+    \    generations. A rocky outcrop provides some protection from predators and\n\
+    \    weather. Old fire rings show where previous wanderers camped. It's one of\
+    \ the\n    few places in this wilderness that feels moderately safe."
   zone: 38
   room_flags: 0
   sector_type: 1
@@ -213,7 +242,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3728
   name: Gathol Trade Route
-  description: "   You've reached a more established route that leads to Gathol. While\n    still dangerous, this path sees occasional merchant caravans and military\n    patrols from the allied city. Signs of recent travel are visible - wheel ruts,\n    thoat tracks, and discarded supplies."
+  description: "   You've reached a more established route that leads to Gathol. While\n\
+    \    still dangerous, this path sees occasional merchant caravans and military\n\
+    \    patrols from the allied city. Signs of recent travel are visible - wheel\
+    \ ruts,\n    thoat tracks, and discarded supplies."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -233,7 +265,10 @@ rooms:
   extra_descriptions: []
 - vnum: 3729
   name: Gathol Outer Approach
-  description: "   You can see Gathol rising in the distance - its jeweled towers\n    catching the light, a stark contrast to the harsh wilderness. Guards patrol\n    this outer approach, watching for threats from the wilderness and ensuring\n    legitimate travelers can enter safely."
+  description: "   You can see Gathol rising in the distance - its jeweled towers\n\
+    \    catching the light, a stark contrast to the harsh wilderness. Guards patrol\n\
+    \    this outer approach, watching for threats from the wilderness and ensuring\n\
+    \    legitimate travelers can enter safely."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -250,10 +285,19 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3789
+  - direction: 1
+    description: You can go east back to Northern Gate.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3789
   extra_descriptions: []
 - vnum: 3749
   name: Northern Frontier
-  description: "   This remote area marks the northern edge of the currently explored\n    territory. Further north lie other city-states and territories, but reaching\n    them would require extensive preparation and many days of dangerous travel.\n    For now, this represents the frontier."
+  description: "   This remote area marks the northern edge of the currently explored\n\
+    \    territory. Further north lie other city-states and territories, but reaching\n\
+    \    them would require extensive preparation and many days of dangerous travel.\n\
+    \    For now, this represents the frontier."
   zone: 38
   room_flags: 0
   sector_type: 4
@@ -270,7 +314,11 @@ mobiles:
   namelist: banth lion predator
   short_desc: a banth
   long_desc: A ferocious banth prowls here, searching for prey.
-  detailed_desc: "This ten-legged Martian lion is one of the most dangerous predators on\n    Barsoom. Its sleek body is powerfully muscled, and its fangs can tear through\n    harness and flesh with ease. The banth's multiple legs give it incredible speed\n    and agility. Its eyes show intelligence and hunger. These creatures hunt alone\n    or in prides, and they fear nothing."
+  detailed_desc: "This ten-legged Martian lion is one of the most dangerous predators\
+    \ on\n    Barsoom. Its sleek body is powerfully muscled, and its fangs can tear\
+    \ through\n    harness and flesh with ease. The banth's multiple legs give it\
+    \ incredible speed\n    and agility. Its eyes show intelligence and hunger. These\
+    \ creatures hunt alone\n    or in prides, and they fear nothing."
   action_flags: 6
   affection_flags: 0
   alignment: 800
@@ -290,7 +338,10 @@ mobiles:
   namelist: zodangan scout soldier
   short_desc: a Zodangan scout
   long_desc: A Zodangan scout in dark purple watches the approaches.
-  detailed_desc: "This red Martian soldier serves in Zodanga's reconnaissance forces. Clad\n    in dark purple harness, the scout patrols the wilderness watching for threats\n    to the city or opportunities to ambush enemies. Well-trained and alert, the\n    scout is dangerous and loyal to Zodanga."
+  detailed_desc: "This red Martian soldier serves in Zodanga's reconnaissance forces.\
+    \ Clad\n    in dark purple harness, the scout patrols the wilderness watching\
+    \ for threats\n    to the city or opportunities to ambush enemies. Well-trained\
+    \ and alert, the\n    scout is dangerous and loyal to Zodanga."
   action_flags: 6
   affection_flags: 0
   alignment: 800
@@ -310,7 +361,10 @@ mobiles:
   namelist: gathol guard scout
   short_desc: a Gathol scout
   long_desc: A Gathol scout in silver and blue patrols here.
-  detailed_desc: "This red Martian warrior serves in Gathol's border patrol. The silver and\n    blue harness identifies them as from Gahan's city. They watch the wilderness\n    for threats and assist legitimate travelers. While professional warriors, they\n    maintain the courtesy expected of Gathol's forces."
+  detailed_desc: "This red Martian warrior serves in Gathol's border patrol. The silver\
+    \ and\n    blue harness identifies them as from Gahan's city. They watch the wilderness\n\
+    \    for threats and assist legitimate travelers. While professional warriors,\
+    \ they\n    maintain the courtesy expected of Gathol's forces."
   action_flags: 2
   affection_flags: 0
   alignment: -1000
@@ -330,7 +384,11 @@ mobiles:
   namelist: merchant trader traveler
   short_desc: a traveling merchant
   long_desc: A merchant rests here, eyeing the wilderness warily.
-  detailed_desc: "This red Martian trader braves the dangerous wilderness to conduct business\n    between cities. Wearing practical traveling gear and carrying valuable goods,\n    the merchant relies on speed, hired guards, and luck to survive the journey.\n    They are happy to share information with friendly travelers."
+  detailed_desc: "This red Martian trader braves the dangerous wilderness to conduct\
+    \ business\n    between cities. Wearing practical traveling gear and carrying\
+    \ valuable goods,\n    the merchant relies on speed, hired guards, and luck to\
+    \ survive the journey.\n    They are happy to share information with friendly\
+    \ travelers."
   action_flags: 0
   affection_flags: 0
   alignment: -500
@@ -364,7 +422,9 @@ objects:
   rent: 50
   extra_descriptions:
   - keywords: supplies rations
-    description: "Dried meat, water containers, and other necessities for wilderness\n      travel. These basic supplies are essential for surviving the journey between\n      cities on the dead sea bottom."
+    description: "Dried meat, water containers, and other necessities for wilderness\n\
+      \      travel. These basic supplies are essential for surviving the journey\
+      \ between\n      cities on the dead sea bottom."
   affects: []
 resets:
 - command: M
