@@ -554,7 +554,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 									tmp_desc = find_ex_description(arg2, 
 										ch->equipment[j]->ex_description);
 									if (tmp_desc) {
-										page_string(ch->desc, tmp_desc, 1);
+										send_to_char(tmp_desc, ch);
 										found = TRUE;
 									}
 								}
@@ -572,7 +572,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 								tmp_desc = find_ex_description(arg2, 
 									tmp_object->ex_description);
 								if (tmp_desc) {
-									page_string(ch->desc, tmp_desc, 1);
+									send_to_char(tmp_desc, ch);
 									found = TRUE;
 								}
 							}
@@ -589,7 +589,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 								tmp_desc = find_ex_description(arg2, 
 									tmp_object->ex_description);
 								if (tmp_desc) {
-									page_string(ch->desc, tmp_desc, 1);
+									send_to_char(tmp_desc, ch);
 									found = TRUE;
 								}
 							}
