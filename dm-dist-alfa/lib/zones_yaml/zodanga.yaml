@@ -105,6 +105,12 @@ rooms:
     door_flag: 1
     key_vnum: 3600
     to_room: 3603
+  - direction: 1
+    description: The northern city gate is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3642
   - direction: 2
     description: The palace approach is to the south.
     keywords: ''
@@ -140,6 +146,12 @@ rooms:
     door_flag: 1
     key_vnum: 3600
     to_room: 3602
+  - direction: 3
+    description: The Temple of War is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3645
   extra_descriptions: []
 - vnum: 3604
   name: Throne Room of Than Kosis
@@ -165,6 +177,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3605
+  - direction: 1
+    description: A door leads to the prison guard post.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3647
   - direction: 2
     description: The outer courtyard is to the south.
     keywords: ''
@@ -204,6 +222,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3609
+  - direction: 3
+    description: A guarded door leads to the treasury.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3649
   extra_descriptions: []
 - vnum: 3606
   name: War Council Chamber
@@ -394,6 +418,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3615
+  - direction: 1
+    description: The eastern gate is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3640
   - direction: 3
     description: The parade ground is to the west.
     keywords: ''
@@ -427,6 +457,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3616
+  - direction: 2
+    description: The arena is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3644
   extra_descriptions: []
 - vnum: 3614
   name: Training Facilities
@@ -694,6 +730,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3620
+  - direction: 3
+    description: The western gate is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3641
   extra_descriptions: []
 - vnum: 3624
   name: Weaponsmith Shop
