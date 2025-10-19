@@ -1150,6 +1150,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3600
+  - direction: 3
+    description: The military armory is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3612
   extra_descriptions: []
 - vnum: 3641
   name: Western Gate
@@ -1175,6 +1181,12 @@ rooms:
     door_flag: 1
     key_vnum: 3651
     to_room: 3650
+  - direction: 1
+    description: The trading post is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3623
   extra_descriptions: []
 - vnum: 3642
   name: Northern Gate
@@ -1200,6 +1212,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3600
+  - direction: 3
+    description: The palace gates are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3602
   extra_descriptions: []
 - vnum: 3643
   name: Airship Landing Platform
@@ -1240,6 +1258,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3600
+  - direction: 0
+    description: Officers' quarters are to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3613
   extra_descriptions: []
 - vnum: 3645
   name: Temple of War
@@ -1261,6 +1285,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3600
+  - direction: 1
+    description: The palace outer courtyard is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3603
   extra_descriptions: []
 - vnum: 3646
   name: Prison
@@ -1305,6 +1335,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3648
+  - direction: 3
+    description: The throne room is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3604
   extra_descriptions: []
 - vnum: 3648
   name: Torture Chamber
@@ -1341,8 +1377,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: The palace private chambers are to the south.
+  - direction: 1
+    description: A corridor leads back to the private chambers.
     keywords: ''
     door_flag: 0
     key_vnum: -1
