@@ -799,17 +799,45 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
 			if (k->affected) {
 				send_to_char("\n\rAffecting Spells:\n\r--------------\n\r", ch);
 				for(aff = k->affected; aff; aff = aff->next) {
-					sprintf(buf, "Spell : '%s'\n\r",spells[aff->type-1]);
-					send_to_char(buf, ch);
-					sprintf(buf,"     Modifies %s by %d points\n\r",
-						apply_types[aff->location], aff->modifier);
-					send_to_char(buf, ch);
-					sprintf(buf,"     Expires in %3d hours, Bits set ",
-						aff->duration);
-					send_to_char(buf, ch);
-					sprintbit(aff->bitvector,affected_bits,buf);
-					strcat(buf,"\n\r");
-					send_to_char(buf, ch);
+					/* Check if this is a quest affect (types 61-65) */
+					if (aff->type >= 61 && aff->type <= 65) {
+						/* Quest affects - display quest info */
+						const char *quest_types[] = {
+							"Quest: Delivery",
+							"Quest: Retrieval", 
+							"Quest: Kill",
+							"Quest: Explore",
+							"Quest: Collect"
+						};
+						int quest_index = aff->type - 61;
+						sprintf(buf, "%s%s\n\r",
+							quest_types[quest_index],
+							(aff->bitvector & AFF_QUEST_COMPLETE) ? " (COMPLETE)" : "");
+						send_to_char(buf, ch);
+						
+						/* Extract giver and target vnums from bitvector */
+						int target_vnum = aff->bitvector & 0xFFF;
+						int giver_vnum = (aff->bitvector >> 12) & 0xFFF;
+						sprintf(buf,"     Giver: %d, Target: %d\n\r",
+							giver_vnum, target_vnum);
+						send_to_char(buf, ch);
+						sprintf(buf,"     Expires in %3d hours\n\r",
+							aff->duration);
+						send_to_char(buf, ch);
+					} else {
+						/* Regular spell affect */
+						sprintf(buf, "Spell : '%s'\n\r",spells[aff->type-1]);
+						send_to_char(buf, ch);
+						sprintf(buf,"     Modifies %s by %d points\n\r",
+							apply_types[aff->location], aff->modifier);
+						send_to_char(buf, ch);
+						sprintf(buf,"     Expires in %3d hours, Bits set ",
+							aff->duration);
+						send_to_char(buf, ch);
+						sprintbit(aff->bitvector,affected_bits,buf);
+						strcat(buf,"\n\r");
+						send_to_char(buf, ch);
+					}
 				}
 			}
 			return;

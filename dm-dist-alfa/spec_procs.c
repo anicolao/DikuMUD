@@ -1617,9 +1617,51 @@ int quest_giver(struct char_data *ch, int cmd, char *arg)
 	}
 	
 	/* Find quest data for this NPC */
-	quest = find_quest_by_giver(mob_index[mob->nr].virtual);
-	if (!quest)
-		return FALSE;
+	quest = find_available_quest(ch, mob_index[mob->nr].virtual);
+	if (!quest) {
+		/* No available quests - check if player has any quest from this giver */
+		struct affected_type *af;
+		int giver_vnum = mob_index[mob->nr].virtual;
+		int has_quest_from_this_giver = 0;
+		int has_complete_quest = 0;
+		
+		/* First check if player has a COMPLETE quest from this giver */
+		for (af = ch->affected; af; af = af->next) {
+			/* Check if this is a quest affect */
+			if (af->bitvector & AFF_QUEST) {
+				/* Extract giver vnum from bitvector (bits 12-23) */
+				int quest_giver = (af->bitvector >> 12) & 0xFFF;
+				if (quest_giver == giver_vnum) {
+					has_quest_from_this_giver = 1;
+					if (af->bitvector & AFF_QUEST_COMPLETE) {
+						has_complete_quest = 1;
+						/* Find the quest to give rewards */
+						quest = find_quest_by_giver(giver_vnum);
+						if (quest) {
+							/* Award quest rewards */
+							send_wrapped_text(ch, quest->complete_text, 72);
+							grant_quest_reward(ch, quest);
+							
+							/* Remove the quest affect */
+							affect_from_char(ch, af->type);
+							
+							return TRUE;
+						}
+					}
+					break;
+				}
+			}
+		}
+		
+		if (has_quest_from_this_giver && !has_complete_quest) {
+			act("$n says, 'You already have a task from me. Complete it first!'", 
+				FALSE, mob, 0, 0, TO_ROOM);
+		} else {
+			act("$n says, 'I have no tasks for you at this time.'", 
+				FALSE, mob, 0, 0, TO_ROOM);
+		}
+		return TRUE;
+	}
 	
 	/* Check if player already has an active quest of this type */
 	if (has_quest_type(ch, quest->quest_type)) {

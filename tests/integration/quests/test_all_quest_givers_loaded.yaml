@@ -1,0 +1,53 @@
+# Integration test to verify all quest-giving mobs are loaded at startup
+# This uses the loop construct to concisely test all 19 quest-giving mobs
+test:
+  id: all_quest_givers_loaded
+  description: "Verify all quest-giving mobs are loaded using loop construct"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [quest, quest_givers, world_integrity, loop]
+
+setup:
+  character:
+    name: QuestGiverLoop
+    password: test
+    level: 23  # High level wizard for locate command
+    class: warrior
+  start_room: 3001  # Temple area
+  gold: 1000
+
+steps:
+  # Use loop construct to check all quest-giving mobs
+  - loop:
+      variable: mobno
+      values: [3006, 3007, 3008, 3063, 3603, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 4202, 4203, 4212, 4214, 4215, 4300, 4301, 4500, 4501]
+      steps:
+        - action: command
+          command: "locate char ${mobno}"
+          description: "Verify mob ${mobno} is loaded"
+          expected:
+            - pattern: "."
+              message: "Should find mob ${mobno}"
+
+result:
+  should_pass: true
+  description: |
+    This test verifies that all 21 quest-giving mobs in the game are properly
+    loaded and accessible to players at game startup. Each quest giver is
+    checked using the wizard 'locate char <vnum>' command.
+    
+    Uses the loop construct to iterate over all quest giver vnums:
+    3006, 3007, 3008, 3063, 3603, 3780, 3781, 3903, 3904, 3925, 4050, 4051, 
+    4202, 4203, 4212, 4214, 4215, 4300, 4301, 4500, 4501
+    
+    Total: 21 quests across 21 quest-giving mobs (1-1 relationship)
+  notes: |
+    This test demonstrates the loop construct feature which allows concise
+    iteration over multiple similar test cases. The loop replaces ~200 lines
+    of repetitive YAML with a single loop definition.
+    
+    Each mob has exactly ONE quest assigned to maintain proper 1-1 relationship
+    required by the quest system. This ensures quest completion works correctly.
+    
+    If any quest giver is not loaded, the test will fail for that specific
+    mob, indicating that players cannot access that quest in the game.

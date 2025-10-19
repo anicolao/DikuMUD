@@ -1,0 +1,69 @@
+# Integration test for mob 3007 quest functionality
+# Tests that mob 3007 properly offers its assigned quest (3001)
+test:
+  id: quest_3007_single_quest
+  description: "Test that mob 3007 offers quest 3001 correctly"
+  author: Integration Test Framework
+  created: 2025-10-18
+  tags: [quest, mob_3007]
+
+setup:
+  character:
+    name: QuestTest
+    password: test
+    level: 23
+    class: warrior
+  start_room: 3001  # Temple area
+  gold: 1000
+
+steps:
+  # Step 1: Navigate to the Warriors Guild where mob 3007 is located
+  - action: command
+    command: "goto 3021"
+    description: "Teleport to Warriors Guild entrance (room 3021)"
+    expected:
+      - pattern: "."
+        message: "Should teleport successfully"
+
+  # Step 2: Verify the Red Martian Warrior is in the room
+  - action: look
+    description: "Look at the room to see the Red Martian Warrior"
+    expected:
+      - pattern: "Red Martian warrior|Red Martian Warrior"
+        message: "Red Martian Warrior should be in the room"
+
+  # Step 3: Get quest 3001 (KILL type)
+  - action: command
+    command: "ask warrior quest"
+    description: "Ask warrior for quest - should get quest 3001 (Guard's Training)"
+    expected:
+      - pattern: "recruit|ulsio|sewers"
+        message: "Should receive Quest 3001 about killing ulsio in sewers"
+
+  # Step 4: Ask again - should say already have a task
+  - action: command
+    command: "ask warrior quest"
+    description: "Ask warrior again while having Quest 3001"
+    expected:
+      - pattern: "already have a task|already have"
+        message: "Should say we already have a task from this warrior"
+
+result:
+  should_pass: true
+  description: |
+    This test verifies that mob 3007 (Red Martian Warrior) properly offers its
+    assigned quest. The mob has 1 quest:
+    - Quest 3001: Guard's Training (KILL quest - type 63)
+    
+    The test demonstrates:
+    1. Player receives Quest 3001 (KILL type) when asking
+    2. Player is told "already have a task" when asking again
+    
+    This confirms the quest giver functionality works correctly with the proper
+    1-1 relationship between mob and quest.
+  notes: |
+    Previously mob 3007 had 3 quests assigned, but the quest system doesn't
+    properly support multiple quests per mob. Quests have been reassigned:
+    - Quest 3001: Mob 3007 (Red Martian Warrior)
+    - Quest 3002: Mob 3063 (Red Martian Mercenary)
+    - Quest 3602: Mob 3603 (Spy Master in Zodanga)
