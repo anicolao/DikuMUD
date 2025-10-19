@@ -1479,8 +1479,7 @@ void nanny(struct descriptor_data *d, char *arg)
 				return;
 			}
 
-			strcpy(d->pwd, encrypt_password(arg, d->character->player.name, &crypted));
-			*(d->pwd + 10) = '\0';
+			strcpy(d->pwd, encrypt_password(arg, make_salt(d->character->player.name), &crypted));
 
 			SEND_TO_Q("Please retype password: ", d);
 
