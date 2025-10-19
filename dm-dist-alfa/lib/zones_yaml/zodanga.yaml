@@ -609,6 +609,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3623
+  - direction: 4
+    description: Stairs lead down to a dark tavern below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3628
   extra_descriptions: []
 - vnum: 3621
   name: Market Square
@@ -795,8 +801,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3629
-  - direction: 2
-    description: The merchant district is to the south.
+  - direction: 5
+    description: Stairs lead up to the merchant district above.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -853,6 +859,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3632
+  - direction: 5
+    description: Stairs lead up to the training academy.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3636
   extra_descriptions: []
 - vnum: 3631
   name: Safehouse
