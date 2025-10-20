@@ -1,0 +1,72 @@
+# Integration test for Lesser Helium quest completion status bug
+#
+# This test verifies that completing all 3 core Lesser Helium quests
+# shows the correct count including quest 3601 (Sabotage Mission) which
+# has its quest giver (Helium Spy, mob 3006) located in Lesser Helium.
+#
+# Quests are attributed to the zone where they can be FOUND (where the
+# quest giver is located), not where they need to be completed.
+
+test:
+  id: test_helium_quest_completion_bug
+  description: "Verify zone command shows 3 of 4 quests when 3 Lesser Helium quests completed (4th is quest 3601)"
+  author: Integration Test Framework
+  created: 2025-10-20
+  tags: [quest, lesser_helium, bug, PR146]
+
+setup:
+  character:
+    name: QuestComplete
+    class: warrior
+    level: 25
+  start_room: 3001  # Temple of the Jeddak in Lesser Helium
+  gold: 0
+
+steps:
+  # Use completequest command to manually set quest completion bits
+  - action: command
+    description: "Complete quest 3001 (Guard's Training)"
+    command: "completequest 3001"
+    expected:
+      - pattern: "Quest 3001 marked as completed"
+        message: "Should confirm quest 3001 completion"
+
+  - action: command
+    description: "Complete quest 3002 (Market Patrol)"
+    command: "completequest 3002"
+    expected:
+      - pattern: "Quest 3002 marked as completed"
+        message: "Should confirm quest 3002 completion"
+
+  - action: command
+    description: "Complete quest 3003 (Calot Feeding)"
+    command: "completequest 3003"
+    expected:
+      - pattern: "Quest 3003 marked as completed"
+        message: "Should confirm quest 3003 completion"
+
+  # Check zone command output
+  - action: command
+    description: "Check zone command shows 3 of 4 completed quests"
+    command: "zone"
+    expected:
+      - pattern: "Lesser Helium|Helium"
+        message: "Should show zone name"
+      - pattern: "Completed Quests:"
+        message: "Should show completed quests label"
+      - pattern: "Completed Quests: 3 of 4"
+        message: "Should show 3 of 4 quests (3001, 3002, 3003 completed; 3601 not completed)"
+
+result:
+  should_pass: true
+  description: "Zone command should count all quests found in Lesser Helium including quest 3601"
+  notes: |
+    Lesser Helium has 4 quests total:
+    - Quest 3001 (Guard's Training) - giver mob 3007
+    - Quest 3002 (Market Patrol) - giver mob 3063
+    - Quest 3003 (Calot Feeding) - giver mob 3008
+    - Quest 3601 (Sabotage Mission) - giver mob 3006 (Helium Spy in Lesser Helium)
+    
+    Quests are attributed to zones based on where the quest giver is located,
+    not where the quest objectives are. Quest 3601 is a Zodanga-related quest
+    but is counted for Lesser Helium because the Helium Spy is in Lesser Helium.
