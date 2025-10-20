@@ -272,6 +272,43 @@ rooms:
       mutated
 
       and unnatural.'
+- vnum: 4158
+  name: Quarantine Airlock
+  description: '   This airlock chamber serves as a transitional space between quarantine
+    areas. The air
+
+    filtration systems hum constantly, attempting to prevent contamination from spreading.
+    Heavy
+
+    blast doors seal both ends, designed to contain any outbreak. Warning lights flash
+    amber,
+
+    indicating the system is active and monitoring for biological hazards.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The sealed door leads to the infection chamber.
+    keywords: door sealed
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4189
+  - direction: 4
+    description: The airlock door leads back up to quarantine.
+    keywords: door airlock
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4188
+  extra_descriptions:
+  - keywords: airlock filtration systems warning
+    description: 'The filtration systems are operating at maximum capacity, cycling
+      the air multiple times
+
+      per minute. The warning lights indicate elevated contamination levels beyond
+      this point.
+
+      Anyone proceeding further does so at their own extreme risk.'
 - vnum: 4160
   name: Research Laboratory - Entrance
   description: '   You enter what can only be a secret research laboratory. Modern
@@ -1087,6 +1124,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
+  - direction: 5
+    description: A sealed airlock descends to deeper containment areas.
+    keywords: door airlock sealed
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4158
   - direction: 3
     description: The corridor leads back to experimental holding.
     keywords: ''
@@ -1118,6 +1161,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
+  - direction: 2
+    description: The sealed airlock door leads back - get out while you can.
+    keywords: door sealed airlock
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4158
   - direction: 4
     description: A passage leads back up.
     keywords: ''
