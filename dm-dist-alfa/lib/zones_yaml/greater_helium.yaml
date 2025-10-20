@@ -45,11 +45,11 @@ rooms:
     key_vnum: -1
     to_room: 3940
   - direction: 4
-    description: You can go up back to Central Tower.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3979
+    to_room: 3906
   - direction: 5
     description: The Airship Landing Platform is below.
     keywords: ''
@@ -88,8 +88,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3969
-  - direction: 1
-    description: You can go east back to Royal Gardens.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -236,6 +236,86 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3978
+  extra_descriptions: []
+- vnum: 3906
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Central Tower. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Central Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3979
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  extra_descriptions: []
+- vnum: 3907
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to South Plaza. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to South Plaza.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  extra_descriptions: []
+- vnum: 3908
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Warehouse District. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Warehouse District.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3962
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
+  extra_descriptions: []
+- vnum: 3909
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Scientific Academy Plaza. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Scientific Academy Plaza.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   extra_descriptions: []
 - vnum: 3910
   name: Temple Square
@@ -402,8 +482,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: You see the entrance to the Guild of Nobles.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -428,12 +508,72 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Street of Towers is to the south.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3915
+  extra_descriptions: []
+- vnum: 3917
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Western Tower. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Western Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3981
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3948
+  extra_descriptions: []
+- vnum: 3918
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Eastern Tower. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Eastern Tower.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3980
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
+  extra_descriptions: []
+- vnum: 3919
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Warrior''s Quarter. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Warrior's Quarter.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3934
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3989
   extra_descriptions: []
 - vnum: 3920
   name: Market District Plaza
@@ -479,11 +619,11 @@ rooms:
     key_vnum: -1
     to_room: 3991
   - direction: 4
-    description: The South Plaza is above.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3952
+    to_room: 3907
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
@@ -496,14 +636,14 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: A jeweler's shop is to the east.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3924
-  - direction: 2
-    description: You see a leather worker's establishment.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -515,11 +655,11 @@ rooms:
     key_vnum: -1
     to_room: 3920
   - direction: 4
-    description: The Warehouse District is above.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3962
+    to_room: 3908
   extra_descriptions: []
 - vnum: 3922
   name: Armory Row
@@ -538,8 +678,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
-  - direction: 1
-    description: A master weaponsmith has his shop here.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -598,8 +738,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 3
-    description: Eastern Market Row is to the west.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -616,14 +756,14 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 0
-    description: Eastern Market Row is to the north.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3921
-  - direction: 2
-    description: You can go south back to Tannery.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -640,8 +780,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 3
-    description: Armory Row is to the west.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -745,11 +885,11 @@ rooms:
     key_vnum: -1
     to_room: 3933
   - direction: 5
-    description: The Western Thoroughfare is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3940
+    to_room: 3909
   extra_descriptions: []
 - vnum: 3931
   name: Academy Main Hall
@@ -835,11 +975,11 @@ rooms:
     key_vnum: -1
     to_room: 3936
   - direction: 5
-    description: The Arena is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3989
+    to_room: 3919
   extra_descriptions: []
 - vnum: 3935
   name: Warrior's Guild Hall
@@ -885,6 +1025,26 @@ rooms:
     key_vnum: -1
     to_room: 3934
   extra_descriptions: []
+- vnum: 3937
+  name: Ascending Stairway
+  description: '   A narrow stone stairway ascends upward, leading to Hall of Records. The steps are worn smooth by countless footsteps over the ages.'
+  zone: 35
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 4
+    description: The stairs lead up to Hall of Records.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3993
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
+  extra_descriptions: []
 - vnum: 3940
   name: Western Thoroughfare
   description: '   This broad avenue runs westward from the Grand Plaza toward the western gate.
@@ -915,13 +1075,13 @@ rooms:
     key_vnum: -1
     to_room: 3948
   - direction: 4
-    description: The Scientific Academy Plaza is above.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3930
-  - direction: 0
-    description: City Administration is to the north.
+    to_room: 3909
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -946,14 +1106,14 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3940
-  - direction: 1
-    description: A stairway leads up to the guest rooms.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3942
-  - direction: 2
-    description: The inn's private dining area is to the south.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -970,8 +1130,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 3
-    description: The stairs lead down to the common room.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -988,8 +1148,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 0
-    description: The common room is to the north.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1115,11 +1275,11 @@ rooms:
     key_vnum: -1
     to_room: 3949
   - direction: 4
-    description: You can go up back to Western Tower.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3981
+    to_room: 3917
   extra_descriptions: []
 - vnum: 3949
   name: Western Gate - Exterior
@@ -1169,11 +1329,11 @@ rooms:
     key_vnum: -1
     to_room: 3913
   - direction: 4
-    description: You can go up back to Eastern Tower.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3980
+    to_room: 3918
   extra_descriptions: []
 - vnum: 3951
   name: Eastern Gate - Exterior
@@ -1215,11 +1375,11 @@ rooms:
     key_vnum: -1
     to_room: 3956
   - direction: 5
-    description: The Market District Plaza is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3920
+    to_room: 3907
   - direction: 4
     description: The Residential District is above.
     keywords: ''
@@ -1447,11 +1607,11 @@ rooms:
     key_vnum: -1
     to_room: 3963
   - direction: 5
-    description: The Eastern Market Row is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3921
+    to_room: 3908
   extra_descriptions: []
 - vnum: 3963
   name: Old Docks
@@ -1724,8 +1884,8 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 3
-    description: A gate leads back to the palace grounds.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1777,11 +1937,11 @@ rooms:
   sector_type: 0
   exits:
   - direction: 5
-    description: The ground level is far below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3900
+    to_room: 3906
   extra_descriptions: []
 - vnum: 3980
   name: Eastern Tower
@@ -1795,11 +1955,11 @@ rooms:
   sector_type: 0
   exits:
   - direction: 5
-    description: The eastern gate is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3950
+    to_room: 3918
   extra_descriptions: []
 - vnum: 3981
   name: Western Tower
@@ -1813,11 +1973,11 @@ rooms:
   sector_type: 0
   exits:
   - direction: 5
-    description: The western gate is below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3948
+    to_room: 3917
   extra_descriptions: []
 - vnum: 3982
   name: Southern Tower
@@ -1894,8 +2054,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 0
-    description: The market area is to the north.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1953,11 +2113,11 @@ rooms:
   sector_type: 2
   exits:
   - direction: 4
-    description: The Warrior's Quarter is above.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3934
+    to_room: 3919
   extra_descriptions: []
 - vnum: 3990
   name: Bath House
@@ -2003,13 +2163,13 @@ rooms:
   sector_type: 0
   exits:
   - direction: 4
-    description: You can go up to Hall of Records.
+    description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3993
-  - direction: 2
-    description: The Western Thoroughfare is to the south.
+    to_room: 3937
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2031,11 +2191,11 @@ rooms:
   sector_type: 0
   exits:
   - direction: 5
-    description: The city administration is down below.
+    description: The stairs lead down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3992
+    to_room: 3937
   extra_descriptions: []
 - vnum: 3994
   name: Prison
@@ -5574,8 +5734,7 @@ objects:
   rent: 1000
   extra_descriptions:
   - keywords: fountain
-    description: It is a magnificent structure.  Made from fine white marble with intricate carvings depicting the founding
-      of Greater Helium.  Cool, clear water flows constantly from an ornate spout.
+    description: It is a magnificent structure.  Made from fine white marble with intricate carvings depicting the founding of Greater Helium.  Cool, clear water flows constantly from an ornate spout.
   affects: []
 resets:
 - command: M
@@ -6794,10 +6953,8 @@ quests:
   reward_exp: 1500
   reward_gold: 500
   reward_item: 3915
-  quest_text: The noble warrior regards you with interest. 'You look capable. The arena awaits those with courage. Face one
-    of the practice opponents and prove your mettle to the warriors of Greater Helium. Return when you've succeeded.'
-  complete_text: The warrior nods with respect. 'Well fought! You've proven yourself worthy. Take this as your reward - you've
-    earned it through combat.'
+  quest_text: The noble warrior regards you with interest. 'You look capable. The arena awaits those with courage. Face one of the practice opponents and prove your mettle to the warriors of Greater Helium. Return when you've succeeded.'
+  complete_text: The warrior nods with respect. 'Well fought! You've proven yourself worthy. Take this as your reward - you've earned it through combat.'
   fail_text: The warrior shakes his head. 'The arena awaits. Return when you're ready to prove yourself.'
 - qnum: 3902
   giver: 3903
@@ -6809,10 +6966,8 @@ quests:
   reward_exp: 1800
   reward_gold: 600
   reward_item: 3925
-  quest_text: The scholar looks at you thoughtfully. 'I require an ancient technological artifact for my research. Retrieve
-    it and I shall reward you well. Such knowledge could benefit all of Mars.'
-  complete_text: The scholar examines the artifact with excitement. 'Excellent! This will advance my research significantly.
-    Here, take this as thanks.'
+  quest_text: The scholar looks at you thoughtfully. 'I require an ancient technological artifact for my research. Retrieve it and I shall reward you well. Such knowledge could benefit all of Mars.'
+  complete_text: The scholar examines the artifact with excitement. 'Excellent! This will advance my research significantly. Here, take this as thanks.'
   fail_text: The scholar sighs. 'Without that artifact, my research cannot progress.'
 - qnum: 3903
   giver: 3904
@@ -6824,7 +6979,6 @@ quests:
   reward_exp: 1200
   reward_gold: 400
   reward_item: 3930
-  quest_text: The guard commander speaks firmly. 'We need someone to patrol the palace grounds. Visit the main palace hall
-    and report back on its status.'
+  quest_text: The guard commander speaks firmly. 'We need someone to patrol the palace grounds. Visit the main palace hall and report back on its status.'
   complete_text: The commander nods approvingly. 'Your report is noted. Take this as payment for your service.'
   fail_text: The commander frowns. 'The patrol must be completed.'
