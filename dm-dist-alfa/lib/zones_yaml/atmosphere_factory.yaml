@@ -764,7 +764,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: The emergency valve chamber lies to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4057
   extra_descriptions: []
 - vnum: 4057
   name: Emergency Valve Chamber
@@ -793,6 +799,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4059
+  - direction: 2
+    description: The pressure monitoring station is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4056
   extra_descriptions:
   - keywords: valves emergency
     description: 'These enormous valves can isolate sections of the factory, preventing
@@ -1023,6 +1035,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4075
+  - direction: 3
+    description: The records office lies to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4070
   extra_descriptions: []
 - vnum: 4070
   name: Records Office
@@ -1040,12 +1058,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: Stairs ascend.
-    keywords: door
-    door_flag: 1
+  - direction: 1
+    description: The administrative entrance is to the east.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
-    to_room: 4140
+    to_room: 4069
   extra_descriptions:
   - keywords: records books documents
     description: 'These records tell the story of the factory''s operation over many
@@ -1068,25 +1086,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 1
-    description: The corridor leads to the administrative entrance.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4140
-  - direction: 2
-    description: The corridor continues south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4144
-  - direction: 5
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4143
+  exits: []
   extra_descriptions: []
 - vnum: 4072
   name: Personnel Office
@@ -1252,7 +1252,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 3
+    description: The emergency valve chamber is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4127
   extra_descriptions: []
 - vnum: 4127
   name: Unfinished Chamber 4127
@@ -1271,6 +1277,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4057
+  - direction: 1
+    description: An unfinished chamber lies to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4126
+  - direction: 2
+    description: Another unfinished chamber lies to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4128
   extra_descriptions: []
 - vnum: 4128
   name: Unfinished Chamber 4128
@@ -1282,7 +1300,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 0
+    description: The emergency valve chamber is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4127
   extra_descriptions: []
 - vnum: 4130
   name: Unfinished Chamber 4130
@@ -1408,19 +1432,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 5
-    description: Stairs descend to offices.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4070
-  - direction: 3
-    description: A passage leads east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4071
+  exits: []
   extra_descriptions: []
 - vnum: 4141
   name: Unfinished Chamber 4141
@@ -1480,13 +1492,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 4
-    description: A passage leads west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4071
+  exits: []
   extra_descriptions: []
 - vnum: 4144
   name: Unfinished Chamber 4144
@@ -1498,13 +1504,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 0
-    description: A passage leads north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4071
+  exits: []
   extra_descriptions: []
 - vnum: 4145
   name: Unfinished Chamber 4145
