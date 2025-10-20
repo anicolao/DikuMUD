@@ -24,8 +24,8 @@ steps:
     description: "Check zone command shows 0 completed quests for new player"
     command: "zone"
     expected:
-      - pattern: "Completed Quests: 0 of 3"
-        message: "Should show 0 of 3 quests completed in Lesser Helium for new player"
+      - pattern: "Completed Quests: 0 of 4"
+        message: "Should show 0 of 4 quests completed in Lesser Helium for new player"
 
   # Test zone status command
   - action: command
@@ -36,8 +36,8 @@ steps:
         message: "Should show Lesser Helium zone"
       - pattern: "Completed Quests:"
         message: "Should show completed quests label"
-      - pattern: "0 of 3"
-        message: "Should show 0 of 3 format somewhere for Lesser Helium quests"
+      - pattern: "0 of 4"
+        message: "Should show 0 of 4 format for Lesser Helium quests"
 
 result:
   should_pass: true
@@ -46,4 +46,10 @@ result:
     This validates the quest completion display format:
     - Shows "Completed Quests: X of Y" instead of just "Quests: Y available"
     - Works for both "zone" and "zone status" commands
-    - Shows 0 of 3 for a new player in Lesser Helium
+    - Shows 0 of 4 for a new player in Lesser Helium (3 core quests + quest 3601)
+    
+    Lesser Helium has 4 quests found in the zone:
+    - Quest 3001 (Guard's Training) - giver mob 3007
+    - Quest 3002 (Market Patrol) - giver mob 3063  
+    - Quest 3003 (Calot Feeding) - giver mob 3008
+    - Quest 3601 (Sabotage Mission) - giver mob 3006 (Helium Spy in Lesser Helium)

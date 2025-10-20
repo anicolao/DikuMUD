@@ -1,15 +1,15 @@
 # Integration test for Lesser Helium quest completion status bug
 #
-# This test verifies that completing all 3 Lesser Helium quests
-# correctly shows "Completed Quests: 3 of 3" instead of "2 of 3"
+# This test verifies that completing all 3 core Lesser Helium quests
+# shows the correct count including quest 3601 (Sabotage Mission) which
+# has its quest giver (Helium Spy, mob 3006) located in Lesser Helium.
 #
-# The bug is that count_zone_quests checks if giver_vnum (mob ID) is within
-# the zone's room range, which may incorrectly count/miss quests depending
-# on mob numbering.
+# Quests are attributed to the zone where they can be FOUND (where the
+# quest giver is located), not where they need to be completed.
 
 test:
   id: test_helium_quest_completion_bug
-  description: "Verify zone command shows 3 of 3 quests when all Lesser Helium quests completed"
+  description: "Verify zone command shows 3 of 4 quests when 3 Lesser Helium quests completed (4th is quest 3601)"
   author: Integration Test Framework
   created: 2025-10-20
   tags: [quest, lesser_helium, bug, PR146]
@@ -47,24 +47,26 @@ steps:
 
   # Check zone command output
   - action: command
-    description: "Check zone command shows 3 of 3 completed quests"
+    description: "Check zone command shows 3 of 4 completed quests"
     command: "zone"
     expected:
       - pattern: "Lesser Helium|Helium"
         message: "Should show zone name"
       - pattern: "Completed Quests:"
         message: "Should show completed quests label"
-      - pattern: "Completed Quests: 3 of 3"
-        message: "Should show 3 of 3 quests completed, not 2 of 3"
+      - pattern: "Completed Quests: 3 of 4"
+        message: "Should show 3 of 4 quests (3001, 3002, 3003 completed; 3601 not completed)"
 
 result:
   should_pass: true
-  description: "Zone command should correctly count all 3 completed Lesser Helium quests"
+  description: "Zone command should count all quests found in Lesser Helium including quest 3601"
   notes: |
-    This test documents the bug where even with all 3 Lesser Helium quests
-    completed (3001, 3002, 3003), the zone command shows "2 of 3" instead
-    of "3 of 3".
+    Lesser Helium has 4 quests total:
+    - Quest 3001 (Guard's Training) - giver mob 3007
+    - Quest 3002 (Market Patrol) - giver mob 3063
+    - Quest 3003 (Calot Feeding) - giver mob 3008
+    - Quest 3601 (Sabotage Mission) - giver mob 3006 (Helium Spy in Lesser Helium)
     
-    The bug is in count_zone_quests() which checks if quest_index[q].giver_vnum
-    is within the zone's room range, but giver_vnum is a mob number not a room
-    number. The function needs to properly map quest givers to zones.
+    Quests are attributed to zones based on where the quest giver is located,
+    not where the quest objectives are. Quest 3601 is a Zodanga-related quest
+    but is counted for Lesser Helium because the Helium Spy is in Lesser Helium.
