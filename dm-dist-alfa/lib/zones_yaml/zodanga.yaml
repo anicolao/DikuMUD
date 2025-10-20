@@ -526,8 +526,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: Stairs lead up to the communications room.
+  - direction: 1
+    description: The communications room is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -580,8 +580,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3619
-  - direction: 5
-    description: Stairs lead down to the command post.
+  - direction: 3
+    description: The command post is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -601,7 +601,7 @@ rooms:
   sector_type: 1
   exits:
   - direction: 3
-    description: The stairs lead down to the communications center.
+    description: The communications center is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -639,8 +639,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3622
-  - direction: 3
-    description: The trading post is to the west.
+  - direction: 5
+    description: Stairs lead down to the trading post.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -705,8 +705,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3620
-  - direction: 1
-    description: A warehouse entrance is to the east.
+  - direction: 5
+    description: Stairs lead down to a warehouse storage area.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -724,8 +724,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: The merchant district is to the east.
+  - direction: 4
+    description: Stairs lead up to the merchant district.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -795,8 +795,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The warehouse district is to the west.
+  - direction: 4
+    description: Stairs lead up to the warehouse district.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -901,7 +901,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3632
-  - direction: 5
+  - direction: 4
     description: Stairs lead up to the training academy.
     keywords: ''
     door_flag: 0
@@ -1039,8 +1039,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: The practice range is to the east.
+  - direction: 4
+    description: Stairs lead up to the practice range.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1057,7 +1057,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3639
-  - direction: 4
+  - direction: 5
     description: Stairs lead down to the street.
     keywords: ''
     door_flag: 0
@@ -1076,8 +1076,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The training academy is to the west.
+  - direction: 5
+    description: Stairs lead down to the training academy.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1311,6 +1311,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3646
+  - direction: 5
+    description: Stairs lead down to the torture chamber.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3648
   - direction: 3
     description: The throne room is to the west.
     keywords: ''
@@ -1332,8 +1338,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: The guard post is to the east.
+  - direction: 4
+    description: Stairs lead up to the guard post.
     keywords: ''
     door_flag: 0
     key_vnum: -1
