@@ -1388,6 +1388,28 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
 
 }
 
+/* Helper function to count quests in a zone and how many are completed */
+static void count_zone_quests(struct char_data *ch, int zone_start, int zone_end,
+                               int *total, int *completed)
+{
+	int q;
+	extern struct quest_data *quest_index;
+	extern int top_of_quest_table;
+	
+	*total = 0;
+	*completed = 0;
+	
+	for (q = 0; q < top_of_quest_table; q++) {
+		/* Check if quest giver vnum is in this zone's room range */
+		if (quest_index[q].giver_vnum >= zone_start && 
+		    quest_index[q].giver_vnum <= zone_end) {
+			(*total)++;
+			if (is_quest_completed(ch, quest_index[q].qnum)) {
+				(*completed)++;
+			}
+		}
+	}
+}
 
 void do_zone(struct char_data *ch, char *argument, int cmd)
 {
@@ -1409,6 +1431,7 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 	if (!*arg) {
 		/* Show detailed info for current zone only */
 		int num_rooms, num_mobs;
+		int completed;
 		struct char_data *mob;
 		extern struct char_data *character_list;
 		
@@ -1489,19 +1512,12 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 			strcat(buf, "Level Range: 3-6\n\r");
 		}
 		
-		/* Find quests in this zone by checking if quest giver falls in zone range */
-		found = 0;
-		for (q = 0; q < top_of_quest_table; q++) {
-			/* Check if quest giver vnum is in this zone's room range */
-			if (quest_index[q].giver_vnum >= zone_start && 
-			    quest_index[q].giver_vnum <= zone_end) {
-				found++;
-			}
-		}
+		/* Count quests in this zone */
+		count_zone_quests(ch, zone_start, zone_end, &found, &completed);
 		
 		if (found > 0) {
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-				"Quests: %d available\n\r", found);
+				"Completed Quests: %d of %d\n\r", completed, found);
 		}
 		
 		send_to_char(buf, ch);
@@ -1511,6 +1527,7 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 	/* Check for "status" subcommand */
 	if (!strcasecmp(arg, "status")) {
 		int num_rooms, num_mobs;
+		int completed;
 		struct char_data *mob;
 		extern struct char_data *character_list;
 		
@@ -1578,19 +1595,12 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 				strcat(buf, "  Level Range: 3-6\n\r");
 			}
 			
-			/* Find quests in this zone by checking if quest giver falls in zone range */
-			found = 0;
-			for (q = 0; q < top_of_quest_table; q++) {
-				/* Check if quest giver vnum is in this zone's room range */
-				if (quest_index[q].giver_vnum >= zone_start && 
-				    quest_index[q].giver_vnum <= zone_end) {
-					found++;
-				}
-			}
+			/* Count quests in this zone */
+			count_zone_quests(ch, zone_start, zone_end, &found, &completed);
 			
 			if (found > 0) {
 				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-					"  Quests: %d available\n\r", found);
+					"  Completed Quests: %d of %d\n\r", completed, found);
 			}
 			
 			strcat(buf, "\n\r");

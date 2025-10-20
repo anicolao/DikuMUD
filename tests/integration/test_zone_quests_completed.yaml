@@ -1,0 +1,49 @@
+# Integration test for zone command showing quest completion counts
+#
+# This test validates that the zone command shows both completed and total quests
+# in the format "Completed Quests: X of Y"
+
+test:
+  id: test_zone_quests_completed
+  description: "Verify zone command shows quest completion in 'X of Y' format"
+  author: Integration Test Framework
+  created: 2025-10-20
+  tags: [command, zone, quest, completion]
+
+setup:
+  character:
+    name: QuestTracker
+    class: warrior
+    level: 1
+  start_room: 3001  # Temple of the Jeddak in Lesser Helium
+  gold: 0
+
+steps:
+  # Test zone command without any completed quests
+  - action: command
+    description: "Check zone command shows 0 completed quests for new player"
+    command: "zone"
+    expected:
+      - pattern: "Completed Quests: 0 of 3"
+        message: "Should show 0 of 3 quests completed in Lesser Helium for new player"
+
+  # Test zone status command
+  - action: command
+    description: "Check zone status shows quest completion counts for all zones"
+    command: "zone status"
+    expected:
+      - pattern: "Lesser Helium"
+        message: "Should show Lesser Helium zone"
+      - pattern: "Completed Quests:"
+        message: "Should show completed quests label"
+      - pattern: "0 of 3"
+        message: "Should show 0 of 3 format somewhere for Lesser Helium quests"
+
+result:
+  should_pass: true
+  description: "Zone command should show quest completion in 'Completed Quests: X of Y' format"
+  notes: |
+    This validates the quest completion display format:
+    - Shows "Completed Quests: X of Y" instead of just "Quests: Y available"
+    - Works for both "zone" and "zone status" commands
+    - Shows 0 of 3 for a new player in Lesser Helium
