@@ -144,18 +144,18 @@ int mana_gain(struct char_data *ch)
 
 ### Age-Based Regeneration
 
-The `graf()` function determines base regeneration based on character age:
+The `graf()` function determines base regeneration based on character age using the parameters: `graf(age, 2, 4, 6, 8, 6, 5, 8)`:
 
 | Age Range | Base Flux Gain per MUD Hour |
 |-----------|---------------------------|
 | < 15 years | 2 |
-| 15-29 years | 2-4 (linear progression) |
-| 30-44 years | 4-6 (linear progression) |
-| 45-59 years | 6-8 (linear progression) |
-| 60-79 years | 8-6 (linear decline) |
+| 15-29 years | 4-6 (linear interpolation from 4 at age 15 to 6 at age 29) |
+| 30-44 years | 6-8 (linear interpolation from 6 at age 30 to 8 at age 44) |
+| 45-59 years | 8-6 (linear decline from 8 at age 45 to 6 at age 59) |
+| 60-79 years | 6-5 (linear decline from 6 at age 60 to 5 at age 79) |
 | ≥ 80 years | 8 |
 
-**Note**: Most player characters fall in the 15-29 age range at character creation, giving them a base regeneration of 2-4 flux per MUD hour.
+**Note**: Most player characters fall in the 15-29 age range at character creation. At age 15 they gain 4 flux/hour base, increasing linearly to 6 flux/hour at age 29. A 20-year-old character (common starting age) would gain approximately 4.7 flux per MUD hour base.
 
 ### Class Modifiers
 
@@ -166,9 +166,9 @@ if ((GET_CLASS(ch) == CLASS_MAGIC_USER) || (GET_CLASS(ch) == CLASS_CLERIC))
     gain += gain;  // Doubles the base gain
 ```
 
-**Effective regeneration by class** (assuming age 20, base gain of 3):
-- **Scientist/Noble**: 6 flux per MUD hour (before position modifiers)
-- **Warrior/Assassin**: 3 flux per MUD hour (before position modifiers)
+**Effective regeneration by class** (assuming age 20, base gain of 4):
+- **Scientist/Noble**: 8 flux per MUD hour (before position modifiers)
+- **Warrior/Assassin**: 4 flux per MUD hour (before position modifiers)
 
 ### Position Modifiers
 
@@ -224,12 +224,12 @@ if((GET_COND(ch,FULL)==0)||(GET_COND(ch,THIRST)==0))
 - **Condition**: Well-fed, hydrated, not poisoned
 
 **Calculation**:
-1. Base gain (age 20): 3 flux/hour
-2. Class bonus (Scientist): 3 + 3 = 6 flux/hour
-3. Sleeping bonus: 6 + 6 = 12 flux/hour
-4. **Total: 12 flux per MUD hour**
+1. Base gain (age 20): 4 flux/hour
+2. Class bonus (Scientist): 4 + 4 = 8 flux/hour
+3. Sleeping bonus: 8 + 8 = 16 flux/hour
+4. **Total: 16 flux per MUD hour**
 
-**Time to full regeneration** (from 0 to 100): ~8.3 MUD hours (~10.4 real minutes)
+**Time to full regeneration** (from 0 to 100): ~6.25 MUD hours (~7.8 real minutes)
 
 ### Example 2: Active Combat (Warrior)
 - **Character**: Level 10 Warrior, Age 20
@@ -237,12 +237,12 @@ if((GET_COND(ch,FULL)==0)||(GET_COND(ch,THIRST)==0))
 - **Condition**: Well-fed, hydrated, not poisoned
 
 **Calculation**:
-1. Base gain (age 20): 3 flux/hour
-2. Class bonus (Warrior): None (stays at 3)
+1. Base gain (age 20): 4 flux/hour
+2. Class bonus (Warrior): None (stays at 4)
 3. Position bonus: None (fighting)
-4. **Total: 3 flux per MUD hour**
+4. **Total: 4 flux per MUD hour**
 
-**Time to full regeneration**: ~33.3 MUD hours (~41.6 real minutes)
+**Time to full regeneration**: ~25 MUD hours (~31.25 real minutes)
 
 ### Example 3: Resting Noble
 - **Character**: Level 10 Noble, Age 20
@@ -250,12 +250,12 @@ if((GET_COND(ch,FULL)==0)||(GET_COND(ch,THIRST)==0))
 - **Condition**: Well-fed, hydrated, not poisoned
 
 **Calculation**:
-1. Base gain (age 20): 3 flux/hour
-2. Class bonus (Noble): 3 + 3 = 6 flux/hour
-3. Resting bonus: 6 + (6/2) = 9 flux/hour
-4. **Total: 9 flux per MUD hour**
+1. Base gain (age 20): 4 flux/hour
+2. Class bonus (Noble): 4 + 4 = 8 flux/hour
+3. Resting bonus: 8 + (8/2) = 12 flux/hour
+4. **Total: 12 flux per MUD hour**
 
-**Time to full regeneration**: ~11.1 MUD hours (~13.9 real minutes)
+**Time to full regeneration**: ~8.3 MUD hours (~10.4 real minutes)
 
 ### Example 4: Poisoned Scientist
 - **Character**: Level 10 Scientist, Age 20
@@ -263,13 +263,13 @@ if((GET_COND(ch,FULL)==0)||(GET_COND(ch,THIRST)==0))
 - **Condition**: Poisoned, well-fed, hydrated
 
 **Calculation**:
-1. Base gain (age 20): 3 flux/hour
-2. Class bonus (Scientist): 3 + 3 = 6 flux/hour
-3. Resting bonus: 6 + (6/2) = 9 flux/hour
-4. Poison penalty: 9 / 4 = 2.25 flux/hour (rounded down to 2)
-5. **Total: 2 flux per MUD hour**
+1. Base gain (age 20): 4 flux/hour
+2. Class bonus (Scientist): 4 + 4 = 8 flux/hour
+3. Resting bonus: 8 + (8/2) = 12 flux/hour
+4. Poison penalty: 12 / 4 = 3 flux/hour
+5. **Total: 3 flux per MUD hour**
 
-**Time to full regeneration**: ~50 MUD hours (~62.5 real minutes)
+**Time to full regeneration**: ~33.3 MUD hours (~41.6 real minutes)
 
 ### Example 5: Hungry and Thirsty Assassin
 - **Character**: Level 10 Assassin, Age 20
@@ -277,13 +277,15 @@ if((GET_COND(ch,FULL)==0)||(GET_COND(ch,THIRST)==0))
 - **Condition**: Hungry and thirsty (not poisoned)
 
 **Calculation**:
-1. Base gain (age 20): 3 flux/hour
-2. Class bonus (Assassin): None (stays at 3)
-3. Sitting bonus: 3 + (3/4) = 3.75 flux/hour (3 in integer math)
-4. Hunger/Thirst penalty: 3 / 4 = 0.75 flux/hour (0 in integer math)
-5. **Total: 0 flux per MUD hour** (no regeneration!)
+1. Base gain (age 20): 4 flux/hour
+2. Class bonus (Assassin): None (stays at 4)
+3. Sitting bonus: 4 + (4/4) = 5 flux/hour
+4. Hunger/Thirst penalty: 5 / 4 = 1.25 flux/hour (rounded down to 1)
+5. **Total: 1 flux per MUD hour**
 
-**Note**: Characters should maintain food and water supplies to ensure flux regeneration.
+**Time to full regeneration**: ~100 MUD hours (~125 real minutes or ~2 hours)
+
+**Note**: Characters should maintain food and water supplies to ensure adequate flux regeneration.
 
 ## Time Conversions
 
@@ -298,14 +300,14 @@ Understanding MUD time is crucial for flux management:
 ### For Spellcasters (Scientists and Nobles)
 
 1. **Flux Management**: With only 100 flux total, casting expensive spells (40-100 flux) can deplete reserves quickly
-2. **Recovery Time**: Even with optimal regeneration (12 flux/hour while sleeping), full recovery takes ~8 MUD hours
-3. **Combat Efficiency**: In combat (no position bonus), regeneration is slow (6 flux/hour for Scientists/Nobles)
+2. **Recovery Time**: Even with optimal regeneration (16 flux/hour while sleeping), full recovery takes ~6.25 MUD hours (~7.8 real minutes)
+3. **Combat Efficiency**: In combat (no position bonus), regeneration is slow (8 flux/hour for Scientists/Nobles)
 4. **Rest Between Encounters**: Plan to rest after major spell expenditures
 
 ### For Non-Spellcasters (Warriors and Assassins)
 
 1. **Limited Flux**: Cannot normally cast spells until level 21 (deity level)
-2. **Slow Regeneration**: Only 3 flux/hour base when standing
+2. **Slow Regeneration**: Only 4 flux/hour base when standing (for age 20)
 3. **Magic Item Dependency**: Must rely on scrolls, wands, potions for magical effects
 4. **No Flux Management**: Generally not a concern for class mechanics
 
