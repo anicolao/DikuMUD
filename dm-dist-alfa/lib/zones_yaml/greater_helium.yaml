@@ -7,7 +7,8 @@ zone:
 rooms:
 - vnum: 3900
   name: The Grand Plaza of Greater Helium
-  description: '   You stand in the magnificent Grand Plaza of Greater Helium, the elder of the
+  description: '   You stand in the magnificent Grand Plaza of Greater Helium, the
+    elder of the
 
     Twin Cities.  This vast square is paved with polished crimson stone and surrounded
 
@@ -39,12 +40,6 @@ rooms:
     key_vnum: -1
     to_room: 3920
   - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
-  - direction: 4
     description: A stairway leads up.
     keywords: ''
     door_flag: 0
@@ -59,7 +54,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
-  description: '   You stand before the magnificent Palace of the Warlord of Mars, residence of
+  description: '   You stand before the magnificent Palace of the Warlord of Mars,
+    residence of
 
     John Carter himself.  The palace is constructed of gleaming scarlet and gold
 
@@ -97,7 +93,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3902
   name: Palace Entrance Hall
-  description: '   The entrance hall of the Palace of the Warlord is breathtaking in its grandeur.
+  description: '   The entrance hall of the Palace of the Warlord is breathtaking
+    in its grandeur.
 
     Murals depicting the great victories of John Carter adorn the walls.  Precious
 
@@ -147,7 +144,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3903
   name: The Throne Room of the Warlord
-  description: '   This vast chamber is the throne room of John Carter, Warlord of Mars.  The
+  description: '   This vast chamber is the throne room of John Carter, Warlord of
+    Mars.  The
 
     throne itself is carved from a single enormous ruby, catching and refracting the
 
@@ -181,7 +179,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3904
   name: The Royal Library
-  description: '   This magnificent library contains the accumulated knowledge of Martian
+  description: '   This magnificent library contains the accumulated knowledge of
+    Martian
 
     civilization.  Ancient tomes and scrolls line shelves reaching to the high
 
@@ -207,7 +206,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3905
   name: Military Command Center
-  description: '   This chamber serves as the command center for Helium''s military forces.  Large
+  description: '   This chamber serves as the command center for Helium''s military
+    forces.  Large
 
     maps of Mars cover the walls, showing troop positions and strategic locations.
 
@@ -239,7 +239,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3906
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Central Tower. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Central Tower.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -259,7 +260,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3907
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to South Plaza. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to South Plaza.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -279,7 +281,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3908
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Warehouse District. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Warehouse District.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -299,7 +302,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3909
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Scientific Academy Plaza. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Scientific Academy
+    Plaza. The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -319,9 +323,11 @@ rooms:
   extra_descriptions: []
 - vnum: 3910
   name: Temple Square
-  description: '   You stand in the Temple Square of Greater Helium.  The Great Temple rises to
+  description: '   You stand in the Temple Square of Greater Helium.  The Great Temple
+    rises to
 
-    the north, its scarlet walls and golden dome dominating the skyline.  Priests in
+    the north, its scarlet walls and golden dome dominating the skyline.  Priests
+    in
 
     ceremonial harnesses move about their duties.  Citizens come here to honor their
 
@@ -351,7 +357,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3911
   name: The Great Temple
-  description: '   The interior of the Great Temple is awe-inspiring.  Massive pillars of scarlet
+  description: '   The interior of the Great Temple is awe-inspiring.  Massive pillars
+    of scarlet
 
     marble support a vaulted ceiling decorated with golden stars.  An altar at the
 
@@ -383,7 +390,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3912
   name: Boulevard of Heroes
-  description: '   This grand boulevard is lined with statues of Helium''s greatest heroes.  You
+  description: '   This grand boulevard is lined with statues of Helium''s greatest
+    heroes.  You
 
     see monuments to Tardos Mors, Mors Kajak, and other legendary figures.  The
 
@@ -449,7 +457,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3914
   name: Noble Quarter Entrance
-  description: '   You enter the Noble Quarter, where the wealthiest citizens of Greater Helium
+  description: '   You enter the Noble Quarter, where the wealthiest citizens of Greater
+    Helium
 
     reside.  The buildings here are especially ornate, with jeweled facades and
 
@@ -473,7 +482,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3915
   name: Street of Towers
-  description: '   Magnificent towers rise on either side of this street, each more elaborate
+  description: '   Magnificent towers rise on either side of this street, each more
+    elaborate
 
     than the last.  Wealthy nobles maintain their residences here, competing to
 
@@ -497,7 +507,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3916
   name: Guild of Nobles
-  description: '   This is the headquarters of the Guild of Nobles, where matters of state and
+  description: '   This is the headquarters of the Guild of Nobles, where matters
+    of state and
 
     diplomacy are discussed.  Rich tapestries and rare furnishings fill the chamber.
 
@@ -517,7 +528,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3917
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Western Tower. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Western Tower.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -537,7 +549,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3918
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Eastern Tower. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Eastern Tower.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -557,7 +570,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3919
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Warrior''s Quarter. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Warrior''s Quarter.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -577,7 +591,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3920
   name: Market District Plaza
-  description: '   You are in the bustling Market District of Greater Helium.  Merchants hawk
+  description: '   You are in the bustling Market District of Greater Helium.  Merchants
+    hawk
 
     their wares from colorful stalls.  The sounds of bargaining and the aromas of
 
@@ -594,12 +609,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3921
   - direction: 2
     description: You see the armory and weaponsmith district.
     keywords: ''
@@ -627,7 +636,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
-  description: '   This section of the market specializes in luxury goods.  You see jewelers,
+  description: '   This section of the market specializes in luxury goods.  You see
+    jewelers,
 
     cloth merchants, and dealers in rare Martian artifacts.  Wealthy customers
 
@@ -636,18 +646,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3924
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3925
   - direction: 5
     description: You can go down.
     keywords: ''
@@ -663,7 +661,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3922
   name: Armory Row
-  description: '   This street is devoted to weapons and armor.  The ring of hammers on metal
+  description: '   This street is devoted to weapons and armor.  The ring of hammers
+    on metal
 
     fills the air as weaponsmiths and armorers ply their trade.  Warriors come here
 
@@ -693,7 +692,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3923
   name: Provisions Market
-  description: '   This area of the market sells food and basic supplies.  Vendors offer dried
+  description: '   This area of the market sells food and basic supplies.  Vendors
+    offer dried
 
     fruits, preserved meats, water, and other necessities for life on Mars.  The
 
@@ -747,7 +747,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3925
   name: Leather Worker's Shop
-  description: '   This shop specializes in leather goods and harnesses.  The leather worker
+  description: '   This shop specializes in leather goods and harnesses.  The leather
+    worker
 
     creates custom harnesses, belts, and equipment from the finest materials.  The
 
@@ -761,17 +762,12 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3921
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
     to_room: 3986
   extra_descriptions: []
 - vnum: 3926
   name: Master Weaponsmith
-  description: '   The master weaponsmith of Greater Helium works here, creating the finest
+  description: '   The master weaponsmith of Greater Helium works here, creating the
+    finest
 
     blades and radium weapons on Mars.  Weapons of exceptional quality line the
 
@@ -789,7 +785,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3927
   name: Armorer's Forge
-  description: '   The armorer''s forge is filled with the heat of the furnace and the ring of
+  description: '   The armorer''s forge is filled with the heat of the furnace and
+    the ring of
 
     hammers.  Metal harnesses and armor pieces in various stages of completion are
 
@@ -825,7 +822,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3929
   name: General Store
-  description: '   This general store carries a wide variety of goods for everyday life.  You
+  description: '   This general store carries a wide variety of goods for everyday
+    life.  You
 
     see tools, rope, containers, and various useful items.  The merchant is happy
 
@@ -843,7 +841,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3930
   name: Scientific Academy Plaza
-  description: '   You stand before the Scientific Academy of Greater Helium, the most advanced
+  description: '   You stand before the Scientific Academy of Greater Helium, the
+    most advanced
 
     research institution on Mars.  Scientists and students hurry about with
 
@@ -893,7 +892,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3931
   name: Academy Main Hall
-  description: '   The main hall of the Scientific Academy is filled with displays of Martian
+  description: '   The main hall of the Scientific Academy is filled with displays
+    of Martian
 
     technology and scientific instruments.  Models of airships, weapons, and other
 
@@ -911,7 +911,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3932
   name: Research Laboratory
-  description: '   This laboratory is equipped with the most advanced scientific equipment on
+  description: '   This laboratory is equipped with the most advanced scientific equipment
+    on
 
     Mars.  Experiments are in progress studying chemistry, physics, and Martian
 
@@ -929,7 +930,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3933
   name: Scientific Supplies Shop
-  description: '   This shop provides chemicals, equipment, and rare scientific supplies to the
+  description: '   This shop provides chemicals, equipment, and rare scientific supplies
+    to the
 
     Academy and independent researchers.  Vials, instruments, and unusual compounds
 
@@ -949,7 +951,8 @@ rooms:
   name: Warrior's Quarter
   description: '   This district houses the famous Warrior''s Guild of Greater Helium.  Combat
 
-    training echoes from the practice yards.  Warriors in battle harness come and go,
+    training echoes from the practice yards.  Warriors in battle harness come and
+    go,
 
     honing their skills in the art of war.'
   zone: 35
@@ -983,7 +986,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3935
   name: Warrior's Guild Hall
-  description: '   The great hall of the Warrior''s Guild displays weapons and trophies from
+  description: '   The great hall of the Warrior''s Guild displays weapons and trophies
+    from
 
     countless battles.  The guild master trains the finest warriors in Helium.
 
@@ -1027,7 +1031,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3937
   name: Ascending Stairway
-  description: '   A narrow stone stairway ascends upward, leading to Hall of Records. The steps are worn smooth by countless footsteps over the ages.'
+  description: '   A narrow stone stairway ascends upward, leading to Hall of Records.
+    The steps are worn smooth by countless footsteps over the ages.'
   zone: 35
   room_flags: 8
   sector_type: 0
@@ -1047,7 +1052,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3940
   name: Western Thoroughfare
-  description: '   This broad avenue runs westward from the Grand Plaza toward the western gate.
+  description: '   This broad avenue runs westward from the Grand Plaza toward the
+    western gate.
 
     Traffic is heavy with citizens, merchants, and travelers.  The western gate and
 
@@ -1056,12 +1062,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3900
   - direction: 2
     description: The Royal Inn is to the south.
     keywords: ''
@@ -1075,12 +1075,6 @@ rooms:
     key_vnum: -1
     to_room: 3948
   - direction: 4
-    description: A stairway leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3909
-  - direction: 4
     description: You can go up.
     keywords: ''
     door_flag: 0
@@ -1089,7 +1083,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
-  description: '   You enter the most prestigious inn in Greater Helium.  The furnishings are
+  description: '   You enter the most prestigious inn in Greater Helium.  The furnishings
+    are
 
     luxurious, with rare woods and precious metals adorning every surface.  This inn
 
@@ -1111,17 +1106,12 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3942
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
     to_room: 3943
   extra_descriptions: []
 - vnum: 3942
   name: Inn Upstairs
-  description: '   The upper floor of the inn contains luxurious guest chambers.  Each room is
+  description: '   The upper floor of the inn contains luxurious guest chambers.  Each
+    room is
 
     appointed with the finest furnishings.  Travelers rest here in comfort and
 
@@ -1139,7 +1129,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3943
   name: Private Dining Hall
-  description: '   This elegant dining area serves the inn''s guests.  Tables are set with fine
+  description: '   This elegant dining area serves the inn''s guests.  Tables are
+    set with fine
 
     tableware.  Servers bring exotic foods and beverages.  Important business and
 
@@ -1157,7 +1148,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3944
   name: Residential District
-  description: '   You are in a prosperous residential district.  Well-maintained buildings house
+  description: '   You are in a prosperous residential district.  Well-maintained
+    buildings house
 
     the middle class of Greater Helium.  The streets are clean and orderly.  Citizens
 
@@ -1178,12 +1170,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3946
-  - direction: 5
-    description: Down to the kennels.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3947
   - direction: 4
     description: You can go up.
     keywords: ''
@@ -1199,7 +1185,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
-  description: '   This residential street is lined with comfortable homes.  Small gardens grow
+  description: '   This residential street is lined with comfortable homes.  Small
+    gardens grow
 
     the hardy plants of Mars.  Children play while adults tend to their households.'
   zone: 35
@@ -1215,7 +1202,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3946
   name: Eastern Residential Street
-  description: '   More modest but well-kept homes line this street.  The residents here are
+  description: '   More modest but well-kept homes line this street.  The residents
+    here are
 
     artisans, merchants, and skilled workers who form the backbone of Helium''s
 
@@ -1251,7 +1239,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3948
   name: Western Gate - Interior
-  description: '   You stand at the western gate of Greater Helium.  Guards check travelers
+  description: '   You stand at the western gate of Greater Helium.  Guards check
+    travelers
 
     coming and going.  The gate opens onto the elevated roadway that connects to
 
@@ -1262,12 +1251,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
   - direction: 3
     description: The western gate opens onto the wilderness road.
     keywords: ''
@@ -1283,7 +1266,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3949
   name: Western Gate - Exterior
-  description: '   You stand just outside the western gate of Greater Helium.  The elevated
+  description: '   You stand just outside the western gate of Greater Helium.  The
+    elevated
 
     roadway extends westward toward Lesser Helium.  The vast expanse of the dead
 
@@ -1307,7 +1291,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3950
   name: Eastern Gate - Interior
-  description: '   You stand at the eastern gate of Greater Helium.  This gate faces the vast
+  description: '   You stand at the eastern gate of Greater Helium.  This gate faces
+    the vast
 
     expanse of Mars to the east.  Guards maintain vigilance against potential
 
@@ -1337,7 +1322,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3951
   name: Eastern Gate - Exterior
-  description: '   You stand outside the eastern gate of Greater Helium.  The Martian wilderness
+  description: '   You stand outside the eastern gate of Greater Helium.  The Martian
+    wilderness
 
     stretches endlessly to the east.  Ancient ruins and distant cities lie somewhere
 
@@ -1355,7 +1341,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3952
   name: South Plaza
-  description: '   This plaza on the southern side of the city serves as a gathering place for
+  description: '   This plaza on the southern side of the city serves as a gathering
+    place for
 
     citizens.  Smaller markets and local establishments surround the open space.'
   zone: 35
@@ -1395,7 +1382,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
-  description: '   This narrow alley is perpetually in shadow.  Few honest citizens venture here.
+  description: '   This narrow alley is perpetually in shadow.  Few honest citizens
+    venture here.
 
     Whispers speak of the Assassin''s Guild operating somewhere in these dark passages.'
   zone: 35
@@ -1417,7 +1405,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3954
   name: Assassin's Guild
-  description: '   You have found the secret headquarters of the Assassin''s Guild.  This place
+  description: '   You have found the secret headquarters of the Assassin''s Guild.  This
+    place
 
     operates in the shadows, training those who deal in silent death.  The guild
 
@@ -1459,7 +1448,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3956
   name: Southern Gate - Interior
-  description: '   The southern gate of Greater Helium provides access to the dead sea bottom
+  description: '   The southern gate of Greater Helium provides access to the dead
+    sea bottom
 
     plains to the south.  Guards monitor traffic in and out of the city.'
   zone: 35
@@ -1487,7 +1477,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3957
   name: Southern Gate - Exterior
-  description: '   You stand outside the southern gate of Greater Helium.  The dead sea bottom
+  description: '   You stand outside the southern gate of Greater Helium.  The dead
+    sea bottom
 
     stretches southward, a vast expanse of ancient ocean floor now dry and desolate.'
   zone: 35
@@ -1503,7 +1494,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3958
   name: Common Square
-  description: '   This is the common square where ordinary citizens gather.  Small vendors sell
+  description: '   This is the common square where ordinary citizens gather.  Small
+    vendors sell
 
     basic goods.  The atmosphere is less grand than the main plaza but more
 
@@ -1533,7 +1525,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3959
   name: The Common Rest Inn
-  description: '   This modest inn serves common citizens and travelers of limited means.  The
+  description: '   This modest inn serves common citizens and travelers of limited
+    means.  The
 
     furnishings are simple but clean.  The rates are affordable and the atmosphere
 
@@ -1551,7 +1544,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3960
   name: Poor Quarter
-  description: '   This district houses the poorest citizens of Greater Helium.  The buildings
+  description: '   This district houses the poorest citizens of Greater Helium.  The
+    buildings
 
     are run-down and crowded.  Despite the poverty, the residents maintain their
 
@@ -1575,9 +1569,11 @@ rooms:
   extra_descriptions: []
 - vnum: 3961
   name: Poor Quarter Street
-  description: '   Narrow streets wind through the poor quarter.  The residents here struggle to
+  description: '   Narrow streets wind through the poor quarter.  The residents here
+    struggle to
 
-    survive but maintain hope for a better future.  Some find work in the markets or
+    survive but maintain hope for a better future.  Some find work in the markets
+    or
 
     as laborers.'
   zone: 35
@@ -1593,19 +1589,14 @@ rooms:
   extra_descriptions: []
 - vnum: 3962
   name: Warehouse District
-  description: '   This area contains warehouses storing goods for the markets.  Large buildings
+  description: '   This area contains warehouses storing goods for the markets.  Large
+    buildings
 
     hold supplies, trade goods, and equipment.  Workers load and unload cargo.'
   zone: 35
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3963
   - direction: 5
     description: The stairs lead down.
     keywords: ''
@@ -1615,7 +1606,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3963
   name: Old Docks
-  description: '   These ancient docks once served water vessels when Mars had seas.  Now they
+  description: '   These ancient docks once served water vessels when Mars had seas.  Now
+    they
 
     are used for storage and less reputable activities.  The area has a rough
 
@@ -1633,7 +1625,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3964
   name: Airship Landing Platform
-  description: '   This elevated platform serves as a landing pad for airships.  The thin
+  description: '   This elevated platform serves as a landing pad for airships.  The
+    thin
 
     Martian atmosphere makes air travel challenging but essential.  Ships come and
 
@@ -1663,7 +1656,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3965
   name: Military Barracks
-  description: '   These barracks house the standing army of Greater Helium.  Warriors in
+  description: '   These barracks house the standing army of Greater Helium.  Warriors
+    in
 
     training and veteran soldiers share quarters here.  Weapons and equipment are
 
@@ -1687,7 +1681,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3966
   name: Parade Ground
-  description: '   This open space is used for military formations and ceremonies.  Troops drill
+  description: '   This open space is used for military formations and ceremonies.  Troops
+    drill
 
     and train here under the watchful eyes of officers.  The might of Helium is on
 
@@ -1705,7 +1700,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3967
   name: Naval Command
-  description: '   This headquarters coordinates Helium''s powerful airship navy.  Maps show
+  description: '   This headquarters coordinates Helium''s powerful airship navy.  Maps
+    show
 
     fleet positions and patrol routes.  Officers plan strategies and deployments.'
   zone: 35
@@ -1727,7 +1723,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
-  description: '   These shipyards construct and repair the airships of Helium''s navy.  Massive
+  description: '   These shipyards construct and repair the airships of Helium''s
+    navy.  Massive
 
     vessels are in various stages of construction.  The technology of Martian flight
 
@@ -1745,7 +1742,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3969
   name: Northern Plaza
-  description: '   This plaza on the northern side of the city provides access to the northern
+  description: '   This plaza on the northern side of the city provides access to
+    the northern
 
     districts.  Citizens gather here to socialize and conduct business.'
   zone: 35
@@ -1767,7 +1765,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3970
   name: Northern Residential Area
-  description: '   Comfortable homes for middle-class citizens line these northern streets.  The
+  description: '   Comfortable homes for middle-class citizens line these northern
+    streets.  The
 
     area is quiet and well-maintained.  Gardens grow hardy Martian plants.'
   zone: 35
@@ -1783,7 +1782,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3971
   name: Observatory Tower
-  description: '   This tower houses astronomical instruments.  Martian scientists study the
+  description: '   This tower houses astronomical instruments.  Martian scientists
+    study the
 
     heavens from here, tracking Earth and other planets.  The thin atmosphere
 
@@ -1807,7 +1807,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3972
   name: Archives Hall
-  description: '   This hall contains the historical records of Greater Helium and the broader
+  description: '   This hall contains the historical records of Greater Helium and
+    the broader
 
     Helium empire.  Ancient documents detail the history of the red Martian race.
 
@@ -1825,7 +1826,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3973
   name: Hall of Heroes
-  description: '   This magnificent hall displays portraits and statues of Helium''s greatest
+  description: '   This magnificent hall displays portraits and statues of Helium''s
+    greatest
 
     heroes.  John Carter, Tardos Mors, Mors Kajak, Carthoris, and many others are
 
@@ -1843,7 +1845,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3974
   name: Guard Barracks
-  description: '   These barracks house the elite palace guard.  Only the finest warriors serve
+  description: '   These barracks house the elite palace guard.  Only the finest warriors
+    serve
 
     here, protecting the Warlord and his family.  Training is constant and rigorous.'
   zone: 35
@@ -1859,7 +1862,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3975
   name: Diplomatic Reception Hall
-  description: '   This elegant hall is where the Warlord receives foreign dignitaries and
+  description: '   This elegant hall is where the Warlord receives foreign dignitaries
+    and
 
     ambassadors.  Meetings and negotiations that affect all of Mars occur here.'
   zone: 35
@@ -1875,7 +1879,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3976
   name: Royal Gardens
-  description: '   These magnificent gardens grow the rarest plants of Mars.  Carefully tended
+  description: '   These magnificent gardens grow the rarest plants of Mars.  Carefully
+    tended
 
     by expert gardeners, they provide beauty and tranquility.  The royal family
 
@@ -1893,7 +1898,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3977
   name: Meditation Chamber
-  description: '   This quiet chamber is used for meditation and reflection.  The Warlord
+  description: '   This quiet chamber is used for meditation and reflection.  The
+    Warlord
 
     sometimes retreats here to think and plan.  Silence and peace pervade the space.'
   zone: 35
@@ -1909,7 +1915,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3978
   name: Treasure Vault
-  description: '   This secure vault holds the treasures of Greater Helium.  Gems, precious
+  description: '   This secure vault holds the treasures of Greater Helium.  Gems,
+    precious
 
     metals, and rare artifacts are carefully guarded.  The wealth of the city-state
 
@@ -1945,7 +1952,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3980
   name: Eastern Tower
-  description: '   This tower on the eastern wall provides observation of the eastern approaches.
+  description: '   This tower on the eastern wall provides observation of the eastern
+    approaches.
 
     Guards maintain constant vigilance.  Warning systems are ready to alert the city
 
@@ -1963,7 +1971,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3981
   name: Western Tower
-  description: '   This tower guards the western approaches and the road to Lesser Helium.
+  description: '   This tower guards the western approaches and the road to Lesser
+    Helium.
 
     Guards watch the traffic on the elevated roadway and scan the dead sea bottom
 
@@ -1981,7 +1990,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3982
   name: Southern Tower
-  description: '   This tower provides a commanding view of the southern approaches.  The vast
+  description: '   This tower provides a commanding view of the southern approaches.  The
+    vast
 
     expanse of the dead sea bottom stretches endlessly to the south.'
   zone: 35
@@ -1997,7 +2007,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3983
   name: Temple Courtyard
-  description: '   This courtyard outside the Great Temple is a place of peace.  Citizens come
+  description: '   This courtyard outside the Great Temple is a place of peace.  Citizens
+    come
 
     here to rest and reflect.  Gardens surround a central fountain.'
   zone: 35
@@ -2013,7 +2024,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3984
   name: Priest's Quarters
-  description: '   These chambers house the priests who serve the Great Temple.  Simple but
+  description: '   These chambers house the priests who serve the Great Temple.  Simple
+    but
 
     comfortable rooms provide rest for those dedicated to religious service.'
   zone: 35
@@ -2029,7 +2041,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3985
   name: Smithy
-  description: '   This smithy serves the city, producing tools and hardware for everyday use.
+  description: '   This smithy serves the city, producing tools and hardware for everyday
+    use.
 
     The heat of the forge and the ring of hammers fill the space.  A skilled smith
 
@@ -2047,7 +2060,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3986
   name: Tannery
-  description: '   This tannery processes leather for various uses.  The smell is strong but the
+  description: '   This tannery processes leather for various uses.  The smell is
+    strong but the
 
     work is essential.  Skilled tanners create quality leather for the city''s needs.'
   zone: 35
@@ -2063,7 +2077,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3987
   name: Healer's Hall
-  description: '   This hall is where the injured and sick receive care.  Martian medical
+  description: '   This hall is where the injured and sick receive care.  Martian
+    medical
 
     knowledge combines with traditional healing.  Healers tend to those in need.'
   zone: 35
@@ -2085,7 +2100,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3988
   name: Training Hall
-  description: '   This hall is where young warriors begin their training.  Basic combat skills
+  description: '   This hall is where young warriors begin their training.  Basic
+    combat skills
 
     and weapon use are taught here.  The next generation of Helium''s defenders
 
@@ -2103,7 +2119,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3989
   name: Arena
-  description: '   This arena hosts combat demonstrations and competitions.  Warriors test their
+  description: '   This arena hosts combat demonstrations and competitions.  Warriors
+    test their
 
     skills against each other in non-lethal contests.  Spectators watch the displays
 
@@ -2162,12 +2179,6 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 4
-    description: A stairway leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3937
   - direction: 5
     description: You can go down.
     keywords: ''
@@ -2199,7 +2210,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3994
   name: Prison
-  description: '   This secure facility holds those who have violated the laws of Greater Helium.
+  description: '   This secure facility holds those who have violated the laws of
+    Greater Helium.
 
     Guards maintain strict watch over the prisoners.  Justice in Helium is swift but
 
@@ -2213,17 +2225,12 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3995
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
     to_room: 3992
   extra_descriptions: []
 - vnum: 3995
   name: Guard Headquarters
-  description: '   This building serves as headquarters for the city guard.  Patrols are
+  description: '   This building serves as headquarters for the city guard.  Patrols
+    are
 
     coordinated and reports filed here.  The guard maintains order and security
 
@@ -2241,7 +2248,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3996
   name: Scholars Quarter
-  description: '   This district houses scholars, researchers, and intellectuals.  Libraries and
+  description: '   This district houses scholars, researchers, and intellectuals.  Libraries
+    and
 
     study halls are found here.  The pursuit of knowledge is celebrated.'
   zone: 35
@@ -2273,7 +2281,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3998
   name: Music Hall
-  description: '   This hall is dedicated to Martian music and performance.  While Martians are
+  description: '   This hall is dedicated to Martian music and performance.  While
+    Martians are
 
     not as musically inclined as Earth cultures, they appreciate artistic expression.
 
@@ -2291,7 +2300,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3999
   name: Hall of Antiquities
-  description: '   This museum displays artifacts from Mars'' ancient past.  Relics from lost
+  description: '   This museum displays artifacts from Mars'' ancient past.  Relics
+    from lost
 
     civilizations and historical items are preserved here.  The long history of Mars
 
@@ -2312,7 +2322,8 @@ mobiles:
   namelist: scientist elder red martian
   short_desc: the Elder Red Martian Scientist
   long_desc: An elderly Red Martian scientist examines rare compounds and instruments.
-  detailed_desc: 'This ancient scientist has copper-red skin weathered by centuries of life. His
+  detailed_desc: 'This ancient scientist has copper-red skin weathered by centuries
+    of life. His
 
     coal-black hair is streaked with silver. He wears an ornate harness decorated
 
@@ -2336,7 +2347,8 @@ mobiles:
   namelist: baker master red martian
   short_desc: the Master Red Martian Baker
   long_desc: A master baker works here, preparing traditional Martian breads and pastries.
-  detailed_desc: 'This baker has smooth copper-red skin and powerful arms from years of kneading
+  detailed_desc: 'This baker has smooth copper-red skin and powerful arms from years
+    of kneading
 
     dough. His simple but quality harness is dusted with flour from his trade. Scars
 
@@ -2360,7 +2372,8 @@ mobiles:
   namelist: grocer provisions merchant red martian
   short_desc: the Red Martian Provisions Merchant
   long_desc: A prosperous provisions merchant manages his extensive inventory.
-  detailed_desc: 'A tall red Martian with athletic build and copper-red skin. His jeweled harness
+  detailed_desc: 'A tall red Martian with athletic build and copper-red skin. His
+    jeweled harness
 
     marks him as a successful merchant. He moves with efficiency between shelves
 
@@ -2384,7 +2397,8 @@ mobiles:
   namelist: weaponsmith master artisan red martian
   short_desc: the Master Weaponsmith
   long_desc: A renowned weaponsmith examines blades with a critical eye.
-  detailed_desc: 'This master craftsman has copper-red skin marked with forge burns and scars from
+  detailed_desc: 'This master craftsman has copper-red skin marked with forge burns
+    and scars from
 
     testing weapons. His harness displays weapons of his own creation. His
 
@@ -2408,7 +2422,8 @@ mobiles:
   namelist: armorer master craftsman red martian
   short_desc: the Master Armorer
   long_desc: A master armorer inspects harnesses and armor with expert attention.
-  detailed_desc: 'A powerful red Martian with copper-red skin and muscular build. His hands show
+  detailed_desc: 'A powerful red Martian with copper-red skin and muscular build.
+    His hands show
 
     the marks of his craft. He wears an example of his finest work - a jeweled
 
@@ -2432,7 +2447,8 @@ mobiles:
   namelist: jeweler master artisan red martian
   short_desc: the Master Jeweler
   long_desc: A distinguished jeweler examines precious gems through a magnifying lens.
-  detailed_desc: 'This elderly jeweler has copper-red skin and delicate hands perfect for
+  detailed_desc: 'This elderly jeweler has copper-red skin and delicate hands perfect
+    for
 
     intricate work. His harness is a masterwork of gems and precious metals,
 
@@ -2456,7 +2472,8 @@ mobiles:
   namelist: leather worker master craftsman red martian
   short_desc: the Master Leather Worker
   long_desc: A skilled leather worker creates custom harnesses and equipment.
-  detailed_desc: 'This craftsman has copper-red skin and strong, steady hands. He wears a simple
+  detailed_desc: 'This craftsman has copper-red skin and strong, steady hands. He
+    wears a simple
 
     but perfectly fitted leather harness of his own design. The smell of cured
 
@@ -2480,7 +2497,8 @@ mobiles:
   namelist: noble guildmaster red martian
   short_desc: the Noble Guildmaster
   long_desc: A distinguished guildmaster of the Noble's Guild stands here imperiously.
-  detailed_desc: 'This noble has the bearing of ancient lineage. His copper-red skin is
+  detailed_desc: 'This noble has the bearing of ancient lineage. His copper-red skin
+    is
 
     unblemished, his coal-black hair perfectly groomed. His harness is adorned with
 
@@ -2504,7 +2522,8 @@ mobiles:
   namelist: warrior guildmaster red martian
   short_desc: the Warrior Guildmaster
   long_desc: A legendary warrior stands here, his presence commanding respect.
-  detailed_desc: 'This warrior guildmaster is a living legend. His copper-red skin bears countless
+  detailed_desc: 'This warrior guildmaster is a living legend. His copper-red skin
+    bears countless
 
     battle scars earned in decades of combat. His eyes are hard and calculating. His
 
@@ -2528,9 +2547,11 @@ mobiles:
   namelist: scientist guildmaster red martian
   short_desc: the Scientific Guildmaster
   long_desc: The guildmaster of the Scientific Academy works at a complex apparatus.
-  detailed_desc: 'This brilliant scientist has copper-red skin and intense, focused eyes. His
+  detailed_desc: 'This brilliant scientist has copper-red skin and intense, focused
+    eyes. His
 
-    harness is decorated with scientific instruments and rare materials. His mind is
+    harness is decorated with scientific instruments and rare materials. His mind
+    is
 
     one of the greatest on Mars, advancing knowledge in multiple fields.'
   action_flags: 2
@@ -2552,7 +2573,8 @@ mobiles:
   namelist: assassin guildmaster red martian
   short_desc: the Assassin Guildmaster
   long_desc: A figure cloaked in shadows watches you with cold, calculating eyes.
-  detailed_desc: 'This master assassin moves with deadly grace. His copper-red skin is pale from
+  detailed_desc: 'This master assassin moves with deadly grace. His copper-red skin
+    is pale from
 
     working in shadows. His harness is black and minimal, designed for silence. His
 
@@ -2576,7 +2598,8 @@ mobiles:
   namelist: innkeeper royal red martian
   short_desc: the Royal Innkeeper
   long_desc: The distinguished innkeeper of the Royal Helium Inn greets guests warmly.
-  detailed_desc: 'This innkeeper has copper-red skin and a welcoming demeanor. His fine harness
+  detailed_desc: 'This innkeeper has copper-red skin and a welcoming demeanor. His
+    fine harness
 
     shows his establishment''s quality. He has served countless dignitaries and
 
@@ -2600,7 +2623,8 @@ mobiles:
   namelist: innkeeper common red martian
   short_desc: the Common Rest Innkeeper
   long_desc: A friendly innkeeper welcomes travelers of modest means.
-  detailed_desc: 'This innkeeper has copper-red skin and a warm smile. His simple but clean
+  detailed_desc: 'This innkeeper has copper-red skin and a warm smile. His simple
+    but clean
 
     harness reflects his honest trade. He treats all guests with respect regardless
 
@@ -2624,7 +2648,8 @@ mobiles:
   namelist: guard palace elite red martian
   short_desc: a Palace Guard
   long_desc: An elite palace guard stands at attention, alert and dangerous.
-  detailed_desc: 'This elite warrior has copper-red skin and a hardened demeanor. His jeweled
+  detailed_desc: 'This elite warrior has copper-red skin and a hardened demeanor.
+    His jeweled
 
     battle harness marks him as part of the palace guard. He is trained to defend
 
@@ -2648,7 +2673,8 @@ mobiles:
   namelist: guard city red martian
   short_desc: a City Guard
   long_desc: A city guard patrols here, maintaining order.
-  detailed_desc: 'This guard has copper-red skin and the alert bearing of a trained warrior. His
+  detailed_desc: 'This guard has copper-red skin and the alert bearing of a trained
+    warrior. His
 
     battle harness is functional and well-maintained. He watches for trouble and
 
@@ -2672,7 +2698,8 @@ mobiles:
   namelist: guard gate red martian
   short_desc: a Gate Guard
   long_desc: A vigilant gate guard monitors all who pass through.
-  detailed_desc: 'This guard has copper-red skin weathered from standing watch. His battle harness
+  detailed_desc: 'This guard has copper-red skin weathered from standing watch. His
+    battle harness
 
     shows signs of long service. He questions travelers and watches for threats to
 
@@ -2696,7 +2723,8 @@ mobiles:
   namelist: priest temple red martian
   short_desc: a Temple Priest
   long_desc: A priest in ceremonial harness performs his sacred duties.
-  detailed_desc: 'This priest has copper-red skin and a serene expression. His ceremonial harness
+  detailed_desc: 'This priest has copper-red skin and a serene expression. His ceremonial
+    harness
 
     is adorned with religious symbols and precious metals. He serves the Great
 
@@ -2720,7 +2748,8 @@ mobiles:
   namelist: scholar red martian
   short_desc: a Red Martian Scholar
   long_desc: A scholar pores over ancient texts and documents.
-  detailed_desc: 'This scholar has copper-red skin and the distracted air of one lost in thought.
+  detailed_desc: 'This scholar has copper-red skin and the distracted air of one lost
+    in thought.
 
     His harness is modest but adorned with writing instruments and scrolls. He
 
@@ -2744,7 +2773,8 @@ mobiles:
   namelist: warrior student red martian
   short_desc: a Warrior Student
   long_desc: A young warrior practices combat forms with dedication.
-  detailed_desc: 'This student has copper-red skin unmarked by battle scars. His simple battle
+  detailed_desc: 'This student has copper-red skin unmarked by battle scars. His simple
+    battle
 
     harness shows he is still in training. Eagerness and determination shine in his
 
@@ -2768,7 +2798,8 @@ mobiles:
   namelist: scientist student red martian
   short_desc: a Scientific Student
   long_desc: A student scientist works on an experiment with intense focus.
-  detailed_desc: 'This student has copper-red skin and hands stained with various chemicals. His
+  detailed_desc: 'This student has copper-red skin and hands stained with various
+    chemicals. His
 
     simple harness holds scientific instruments. He studies under the greatest minds
 
@@ -2792,7 +2823,8 @@ mobiles:
   namelist: merchant red martian
   short_desc: a Red Martian Merchant
   long_desc: A merchant conducts business with customers.
-  detailed_desc: 'This merchant has copper-red skin and a shrewd expression. His harness is good
+  detailed_desc: 'This merchant has copper-red skin and a shrewd expression. His harness
+    is good
 
     quality, showing his success in trade. He deals fairly but drives a hard
 
@@ -2816,7 +2848,8 @@ mobiles:
   namelist: citizen wealthy red martian
   short_desc: a Wealthy Citizen
   long_desc: A prosperous citizen goes about their business.
-  detailed_desc: 'This citizen has copper-red skin and wears an expensive jeweled harness. They
+  detailed_desc: 'This citizen has copper-red skin and wears an expensive jeweled
+    harness. They
 
     move with the confidence of wealth and status. Their life in Greater Helium is
 
@@ -2840,7 +2873,8 @@ mobiles:
   namelist: citizen common red martian
   short_desc: a Common Citizen
   long_desc: An ordinary citizen of Greater Helium hurries past.
-  detailed_desc: 'This citizen has copper-red skin and wears a simple but serviceable harness.
+  detailed_desc: 'This citizen has copper-red skin and wears a simple but serviceable
+    harness.
 
     They work hard to support themselves and their family. Pride in being a citizen
 
@@ -2864,7 +2898,8 @@ mobiles:
   namelist: citizen poor red martian
   short_desc: a Poor Citizen
   long_desc: A struggling citizen tries to make their way.
-  detailed_desc: 'This citizen has copper-red skin and wears a worn, patched harness. Life is hard
+  detailed_desc: 'This citizen has copper-red skin and wears a worn, patched harness.
+    Life is hard
 
     in the poor quarter but they maintain their dignity. Hope for better times keeps
 
@@ -2888,7 +2923,8 @@ mobiles:
   namelist: worker laborer red martian
   short_desc: a Red Martian Laborer
   long_desc: A muscular laborer carries goods and materials.
-  detailed_desc: 'This worker has copper-red skin darkened by sun exposure and muscular arms from
+  detailed_desc: 'This worker has copper-red skin darkened by sun exposure and muscular
+    arms from
 
     hard labor. His simple harness is practical and worn. He earns his living
 
@@ -2912,7 +2948,8 @@ mobiles:
   namelist: officer military red martian
   short_desc: a Military Officer
   long_desc: A military officer reviews strategic documents.
-  detailed_desc: 'This officer has copper-red skin marked with battle scars. His decorated battle
+  detailed_desc: 'This officer has copper-red skin marked with battle scars. His decorated
+    battle
 
     harness shows his rank and service. He commands troops and plans military
 
@@ -2936,7 +2973,8 @@ mobiles:
   namelist: pilot airship red martian
   short_desc: an Airship Pilot
   long_desc: An airship pilot checks navigation instruments.
-  detailed_desc: 'This pilot has copper-red skin and the keen eyes of one who navigates the thin
+  detailed_desc: 'This pilot has copper-red skin and the keen eyes of one who navigates
+    the thin
 
     Martian air. His harness includes navigation tools and safety equipment. He
 
@@ -2960,7 +2998,8 @@ mobiles:
   namelist: healer physician red martian
   short_desc: a Red Martian Healer
   long_desc: A skilled healer tends to the sick and injured.
-  detailed_desc: 'This healer has copper-red skin and gentle hands skilled in Martian medicine.
+  detailed_desc: 'This healer has copper-red skin and gentle hands skilled in Martian
+    medicine.
 
     His harness includes medical instruments and pouches of healing compounds. He
 
@@ -2984,7 +3023,8 @@ mobiles:
   namelist: calot handler trainer red martian
   short_desc: a Calot Handler
   long_desc: A handler works with fierce but loyal calots.
-  detailed_desc: 'This handler has copper-red skin scarred from working with dangerous animals. His
+  detailed_desc: 'This handler has copper-red skin scarred from working with dangerous
+    animals. His
 
     heavy leather harness protects against calot claws and teeth. He trains and
 
@@ -3008,7 +3048,8 @@ mobiles:
   namelist: calot guard ten-legged
   short_desc: a Calot
   long_desc: A ten-legged calot watches alertly, ready to defend its territory.
-  detailed_desc: 'This calot is sized like a large pony with ten powerful legs. Its hairless,
+  detailed_desc: 'This calot is sized like a large pony with ten powerful legs. Its
+    hairless,
 
     leathery hide is mottled gray and brown. The frog-like head houses a mouth full
 
@@ -3034,7 +3075,8 @@ mobiles:
   namelist: servant palace red martian
   short_desc: a Palace Servant
   long_desc: A palace servant performs their duties with quiet efficiency.
-  detailed_desc: 'This servant has copper-red skin and wears a fine harness befitting palace
+  detailed_desc: 'This servant has copper-red skin and wears a fine harness befitting
+    palace
 
     staff. They serve the Warlord''s household with dedication and discretion.'
   action_flags: 2
@@ -3056,7 +3098,8 @@ mobiles:
   namelist: diplomat ambassador red martian
   short_desc: a Diplomatic Ambassador
   long_desc: An ambassador from another city-state conducts official business.
-  detailed_desc: 'This ambassador has copper-red skin and the polished demeanor of a professional
+  detailed_desc: 'This ambassador has copper-red skin and the polished demeanor of
+    a professional
 
     diplomat. Their elaborate harness displays the symbols of their home city. They
 
@@ -3080,7 +3123,8 @@ mobiles:
   namelist: artisan craftsman red martian
   short_desc: a Red Martian Artisan
   long_desc: A skilled artisan works on their craft.
-  detailed_desc: 'This artisan has copper-red skin and the focused expression of someone absorbed
+  detailed_desc: 'This artisan has copper-red skin and the focused expression of someone
+    absorbed
 
     in their work. Their harness is decorated with tools of their trade. They create
 
@@ -3104,7 +3148,8 @@ mobiles:
   namelist: child red martian
   short_desc: a Red Martian Child
   long_desc: A young Martian child plays here, full of energy.
-  detailed_desc: 'This child has smooth copper-red skin unmarked by age or hardship. Their small
+  detailed_desc: 'This child has smooth copper-red skin unmarked by age or hardship.
+    Their small
 
     harness is simple but well-made. They play with the innocent joy of youth,
 
@@ -3128,7 +3173,8 @@ mobiles:
   namelist: guard tower watchman red martian
   short_desc: a Tower Watchman
   long_desc: A vigilant watchman scans the horizon for threats.
-  detailed_desc: 'This watchman has copper-red skin weathered from exposure to sun and wind. His
+  detailed_desc: 'This watchman has copper-red skin weathered from exposure to sun
+    and wind. His
 
     harness includes observation equipment. He maintains constant watch over the
 
@@ -3152,7 +3198,8 @@ mobiles:
   namelist: clerk administrator red martian
   short_desc: a City Clerk
   long_desc: A clerk manages paperwork and administrative duties.
-  detailed_desc: 'This clerk has copper-red skin and ink-stained hands. Their simple harness
+  detailed_desc: 'This clerk has copper-red skin and ink-stained hands. Their simple
+    harness
 
     includes pouches for documents and writing instruments. They keep the records
 
@@ -3176,7 +3223,8 @@ mobiles:
   namelist: prisoner criminal red martian
   short_desc: a Prisoner
   long_desc: A prisoner sits here, contemplating their crimes.
-  detailed_desc: 'This prisoner has copper-red skin and wears a plain, unmarked harness. They are
+  detailed_desc: 'This prisoner has copper-red skin and wears a plain, unmarked harness.
+    They are
 
     held for crimes against Helium. Guards watch them carefully.'
   action_flags: 2
@@ -3198,7 +3246,8 @@ mobiles:
   namelist: musician performer red martian
   short_desc: a Martian Musician
   long_desc: A musician practices their art.
-  detailed_desc: 'This musician has copper-red skin and sensitive hands. Their harness is adorned
+  detailed_desc: 'This musician has copper-red skin and sensitive hands. Their harness
+    is adorned
 
     with musical symbols. While music is not as central to Martian culture as to
 
@@ -3222,7 +3271,8 @@ mobiles:
   namelist: gardener red martian
   short_desc: a Royal Gardener
   long_desc: A skilled gardener tends to rare Martian plants.
-  detailed_desc: 'This gardener has copper-red skin darkened by sun exposure and hands skilled in
+  detailed_desc: 'This gardener has copper-red skin darkened by sun exposure and hands
+    skilled in
 
     nurturing plant life. Their harness is practical for outdoor work. They coax
 
@@ -3246,7 +3296,8 @@ mobiles:
   namelist: shipwright builder red martian
   short_desc: an Airship Shipwright
   long_desc: A master shipwright works on airship construction.
-  detailed_desc: 'This shipwright has copper-red skin and powerful arms from working with heavy
+  detailed_desc: 'This shipwright has copper-red skin and powerful arms from working
+    with heavy
 
     materials. Their harness shows the marks of their trade. They build the ships
 
@@ -3270,7 +3321,8 @@ mobiles:
   namelist: carter john warlord mars
   short_desc: John Carter, Warlord of Mars
   long_desc: John Carter, the legendary Warlord of Mars, stands here in regal bearing.
-  detailed_desc: 'This is John Carter, the greatest warrior Mars has ever known. Though originally
+  detailed_desc: 'This is John Carter, the greatest warrior Mars has ever known. Though
+    originally
 
     from Earth, he appears as a tall, powerful man in his prime. His skin has taken
 
@@ -3297,8 +3349,10 @@ mobiles:
 - vnum: 3941
   namelist: thoris dejah princess mars
   short_desc: Dejah Thoris, Princess of Helium
-  long_desc: Dejah Thoris, the incomparable Princess of Helium, stands here in breathtaking beauty.
-  detailed_desc: 'This is Dejah Thoris, Princess of Helium and wife of John Carter. She is the
+  long_desc: Dejah Thoris, the incomparable Princess of Helium, stands here in breathtaking
+    beauty.
+  detailed_desc: 'This is Dejah Thoris, Princess of Helium and wife of John Carter.
+    She is the
 
     epitome of red Martian beauty with smooth copper-red skin, coal-black hair, and
 
@@ -3325,8 +3379,10 @@ mobiles:
 - vnum: 3942
   namelist: carthoris prince helium red martian
   short_desc: Carthoris, Prince of Helium
-  long_desc: Carthoris, son of John Carter and heir to Helium's throne, stands ready for action.
-  detailed_desc: 'This is Carthoris, son of John Carter and Dejah Thoris. He has copper-red skin
+  long_desc: Carthoris, son of John Carter and heir to Helium's throne, stands ready
+    for action.
+  detailed_desc: 'This is Carthoris, son of John Carter and Dejah Thoris. He has copper-red
+    skin
 
     like his mother and the powerful build of his father. His jeweled battle harness
 
@@ -3351,8 +3407,10 @@ mobiles:
 - vnum: 3943
   namelist: mors tardos jeddak helium red martian
   short_desc: Tardos Mors, Jeddak of Helium
-  long_desc: Tardos Mors, the ancient Jeddak of Helium, stands here with centuries of wisdom.
-  detailed_desc: 'This is Tardos Mors, grandfather of Dejah Thoris and Jeddak of Helium. He is
+  long_desc: Tardos Mors, the ancient Jeddak of Helium, stands here with centuries
+    of wisdom.
+  detailed_desc: 'This is Tardos Mors, grandfather of Dejah Thoris and Jeddak of Helium.
+    He is
 
     very ancient, his copper-red skin marked by extreme age. His coal-black hair is
 
@@ -3377,8 +3435,10 @@ mobiles:
 - vnum: 3944
   namelist: kantos red martian warrior
   short_desc: Kantos Kan, Admiral of the Fleet
-  long_desc: Kantos Kan, Admiral of Helium's airship fleet, stands here consulting charts.
-  detailed_desc: 'This is Kantos Kan, loyal friend of John Carter and Admiral of Helium''s fleet.
+  long_desc: Kantos Kan, Admiral of Helium's airship fleet, stands here consulting
+    charts.
+  detailed_desc: 'This is Kantos Kan, loyal friend of John Carter and Admiral of Helium''s
+    fleet.
 
     His copper-red skin bears the scars of many battles in the air and on the
 
@@ -5715,7 +5775,8 @@ objects:
   rent: 10
   extra_descriptions:
   - keywords: waterskin
-    description: A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.
+    description: A sturdy leather waterskin for carrying water on journeys across
+      the dead sea bottoms.
   affects: []
 - vnum: 3775
   namelist: fountain water marble
@@ -5734,7 +5795,9 @@ objects:
   rent: 1000
   extra_descriptions:
   - keywords: fountain
-    description: It is a magnificent structure.  Made from fine white marble with intricate carvings depicting the founding of Greater Helium.  Cool, clear water flows constantly from an ornate spout.
+    description: It is a magnificent structure.  Made from fine white marble with
+      intricate carvings depicting the founding of Greater Helium.  Cool, clear water
+      flows constantly from an ornate spout.
   affects: []
 resets:
 - command: M
@@ -6953,9 +7016,13 @@ quests:
   reward_exp: 1500
   reward_gold: 500
   reward_item: 3915
-  quest_text: The noble warrior regards you with interest. 'You look capable. The arena awaits those with courage. Face one of the practice opponents and prove your mettle to the warriors of Greater Helium. Return when you've succeeded.'
-  complete_text: The warrior nods with respect. 'Well fought! You've proven yourself worthy. Take this as your reward - you've earned it through combat.'
-  fail_text: The warrior shakes his head. 'The arena awaits. Return when you're ready to prove yourself.'
+  quest_text: The noble warrior regards you with interest. 'You look capable. The
+    arena awaits those with courage. Face one of the practice opponents and prove
+    your mettle to the warriors of Greater Helium. Return when you've succeeded.'
+  complete_text: The warrior nods with respect. 'Well fought! You've proven yourself
+    worthy. Take this as your reward - you've earned it through combat.'
+  fail_text: The warrior shakes his head. 'The arena awaits. Return when you're ready
+    to prove yourself.'
 - qnum: 3902
   giver: 3903
   type: 62
@@ -6966,8 +7033,11 @@ quests:
   reward_exp: 1800
   reward_gold: 600
   reward_item: 3925
-  quest_text: The scholar looks at you thoughtfully. 'I require an ancient technological artifact for my research. Retrieve it and I shall reward you well. Such knowledge could benefit all of Mars.'
-  complete_text: The scholar examines the artifact with excitement. 'Excellent! This will advance my research significantly. Here, take this as thanks.'
+  quest_text: The scholar looks at you thoughtfully. 'I require an ancient technological
+    artifact for my research. Retrieve it and I shall reward you well. Such knowledge
+    could benefit all of Mars.'
+  complete_text: The scholar examines the artifact with excitement. 'Excellent! This
+    will advance my research significantly. Here, take this as thanks.'
   fail_text: The scholar sighs. 'Without that artifact, my research cannot progress.'
 - qnum: 3903
   giver: 3904
@@ -6979,6 +7049,8 @@ quests:
   reward_exp: 1200
   reward_gold: 400
   reward_item: 3930
-  quest_text: The guard commander speaks firmly. 'We need someone to patrol the palace grounds. Visit the main palace hall and report back on its status.'
-  complete_text: The commander nods approvingly. 'Your report is noted. Take this as payment for your service.'
+  quest_text: The guard commander speaks firmly. 'We need someone to patrol the palace
+    grounds. Visit the main palace hall and report back on its status.'
+  complete_text: The commander nods approvingly. 'Your report is noted. Take this
+    as payment for your service.'
   fail_text: The commander frowns. 'The patrol must be completed.'

@@ -563,7 +563,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4115
-  - direction: 5
+  - direction: 1
     description: The catwalk extends east.
     keywords: ''
     door_flag: 0
@@ -612,7 +612,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4119
-  - direction: 4
+  - direction: 3
     description: ''
     keywords: ''
     door_flag: 0
@@ -691,7 +691,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4110
-  - direction: 5
+  - direction: 3
     description: A door leads to the distribution manifold.
     keywords: door
     door_flag: 1
@@ -709,8 +709,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4054
-  - direction: 2
-    description: The passage leads south.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -730,7 +730,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The passage leads down.
     keywords: door heavy
     door_flag: 2
@@ -819,7 +819,7 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4128
-  - direction: 5
+  - direction: 2
     description: A shaft leads down.
     keywords: ''
     door_flag: 0
@@ -875,7 +875,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 5
     description: The corridor leads back north.
     keywords: ''
     door_flag: 0
@@ -890,12 +890,6 @@ rooms:
   - direction: 4
     description: Stairs lead up to the emergency valve chamber.
     keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4057
-  - direction: 4
-    description: Stairs ascend back to the corridor.
-    keywords: stairs
     door_flag: 0
     key_vnum: -1
     to_room: 4057
@@ -1153,24 +1147,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4140
-  - direction: 1
-    description: A door leads to the personnel office.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4143
   - direction: 2
     description: The corridor continues south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4144
-  - direction: 3
-    description: You can go west back to Unfinished Chamber 4140.
+  - direction: 5
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4140
+    to_room: 4143
   extra_descriptions: []
 - vnum: 4072
   name: Personnel Office
@@ -1287,7 +1275,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The escape route continues.
     keywords: ''
     door_flag: 0
@@ -1331,13 +1319,13 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4055
-  - direction: 4
+  - direction: 1
     description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4120
-  - direction: 4
+  - direction: 0
     description: ''
     keywords: ''
     door_flag: 0
@@ -1355,7 +1343,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
+  - direction: 4
     description: ''
     keywords: ''
     door_flag: 0
@@ -1547,12 +1535,6 @@ rooms:
     door_flag: 2
     key_vnum: -1
     to_room: 4111
-  - direction: 1
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4071
   extra_descriptions: []
 - vnum: 4141
   name: Unfinished Chamber 4141
@@ -1613,7 +1595,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
+  - direction: 4
     description: A passage leads west.
     keywords: ''
     door_flag: 0
@@ -1723,13 +1705,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4146
-  - direction: 3
-    description: The passage continues west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4146
-  - direction: 3
+  - direction: 4
     description: ''
     keywords: ''
     door_flag: 0
