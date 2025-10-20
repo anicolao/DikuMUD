@@ -294,8 +294,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3983
-  - direction: 0
-    description: You can go north back to Priest's Quarters.
+  - direction: 4
+    description: You can go up to Priest's Quarters.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1860,8 +1860,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The temple is to the south.
+  - direction: 5
+    description: The temple is down below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2002,8 +2002,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 0
-    description: You can go north back to Hall of Records.
+  - direction: 4
+    description: You can go up to Hall of Records.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2030,8 +2030,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The city administration is to the south.
+  - direction: 5
+    description: The city administration is down below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
