@@ -639,8 +639,8 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 					for (door = 0; door <= 5; door++) {
 						if (EXIT(ch, door) && 
 						    EXIT(ch, door)->to_room != NOWHERE &&
-						    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) &&
-						    !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET)) {
+						    !(IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) &&
+						      IS_SET(EXIT(ch, door)->exit_info, EX_SECRET))) {
 							strncat(exits_buf, &exit_letters[door], 1);
 						}
 					}
