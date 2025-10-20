@@ -1087,12 +1087,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A sealed door leads to the infection chamber - sealed for good reason.
-    keywords: door sealed
-    door_flag: 2
-    key_vnum: 4254
-    to_room: 4189
   - direction: 3
     description: The corridor leads back to experimental holding.
     keywords: ''
@@ -1124,12 +1118,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The sealed door leads back to quarantine - get out while you can.
-    keywords: door sealed
-    door_flag: 2
-    key_vnum: 4254
-    to_room: 4188
   - direction: 4
     description: A passage leads back up.
     keywords: ''
