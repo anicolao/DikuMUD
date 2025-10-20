@@ -342,7 +342,9 @@ void make_prompt(struct descriptor_data *d, char *prompt_buf, int buf_size)
 	/* Build exits string - initialize entire buffer to 0 */
 	memset(exits_buf, 0, sizeof(exits_buf));
 	for (door = 0; door <= 5; door++) {
-		if (EXIT(ch, door) && EXIT(ch, door)->to_room != NOWHERE) {
+		if (EXIT(ch, door) && EXIT(ch, door)->to_room != NOWHERE &&
+		    !(IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) &&
+		      IS_SET(EXIT(ch, door)->exit_info, EX_SECRET))) {
 			if (IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
 				/* Show closed exits in parentheses */
 				exits_buf[exit_pos++] = '(';
