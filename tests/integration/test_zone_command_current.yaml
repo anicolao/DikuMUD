@@ -36,8 +36,8 @@ steps:
         message: "Should show level range for the zone"
       - pattern: "1-10"
         message: "Should show correct level range for Lesser Helium (1-10)"
-      - pattern: "Quests:"
-        message: "Should show number of quests available"
+      - pattern: "Completed Quests:"
+        message: "Should show completed quests count"
     fail_on:
       - pattern: "Greater Helium|Zodanga|Atmosphere Factory"
         message: "Should NOT show other zones - only current zone"

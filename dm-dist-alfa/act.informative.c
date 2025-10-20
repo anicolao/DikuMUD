@@ -1491,17 +1491,21 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 		
 		/* Find quests in this zone by checking if quest giver falls in zone range */
 		found = 0;
+		int completed = 0;
 		for (q = 0; q < top_of_quest_table; q++) {
 			/* Check if quest giver vnum is in this zone's room range */
 			if (quest_index[q].giver_vnum >= zone_start && 
 			    quest_index[q].giver_vnum <= zone_end) {
 				found++;
+				if (is_quest_completed(ch, quest_index[q].qnum)) {
+					completed++;
+				}
 			}
 		}
 		
 		if (found > 0) {
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-				"Quests: %d available\n\r", found);
+				"Completed Quests: %d of %d\n\r", completed, found);
 		}
 		
 		send_to_char(buf, ch);
@@ -1580,17 +1584,21 @@ void do_zone(struct char_data *ch, char *argument, int cmd)
 			
 			/* Find quests in this zone by checking if quest giver falls in zone range */
 			found = 0;
+			int completed = 0;
 			for (q = 0; q < top_of_quest_table; q++) {
 				/* Check if quest giver vnum is in this zone's room range */
 				if (quest_index[q].giver_vnum >= zone_start && 
 				    quest_index[q].giver_vnum <= zone_end) {
 					found++;
+					if (is_quest_completed(ch, quest_index[q].qnum)) {
+						completed++;
+					}
 				}
 			}
 			
 			if (found > 0) {
 				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-					"  Quests: %d available\n\r", found);
+					"  Completed Quests: %d of %d\n\r", completed, found);
 			}
 			
 			strcat(buf, "\n\r");
