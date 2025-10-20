@@ -1391,12 +1391,13 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
 /* Helper function to count quests in a zone and how many are completed */
 /* Helper function to count quests in a zone and how many are completed 
  * Note: Quest givers are mobs, and mob vnums may not align with room vnums.
- * We match quests to zones by checking if the giver mob's vnum matches
- * the zone's primary vnum prefix (e.g., zone with rooms 3001-3055 matches
- * mobs 3000-3099, as both are in the "30xx" range).
+ * We match quests to zones by checking TWO criteria:
+ * 1. The giver mob's vnum matches the zone's primary vnum prefix
+ * 2. The quest number itself matches the zone's prefix (e.g., quest 3001 
+ *    belongs to zone 30, quest 3601 belongs to zone 36)
  * 
- * This works for the standard zone numbering where zone N has rooms and
- * mobs in the N*100 to N*100+99 range (e.g., zone 30 = 3000-3099).
+ * This ensures we only count quests that truly belong to a zone, even if
+ * the quest giver mob happens to be physically located in that zone.
  */
 static void count_zone_quests(struct char_data *ch, int zone_start, int zone_end,
                                int *total, int *completed)
@@ -1427,9 +1428,16 @@ static void count_zone_quests(struct char_data *ch, int zone_start, int zone_end
 	}
 	
 	for (q = 0; q < top_of_quest_table; q++) {
-		/* Check if quest giver vnum is in this zone's prefix range */
-		if (quest_index[q].giver_vnum >= zone_prefix_min && 
-		    quest_index[q].giver_vnum <= zone_prefix_max) {
+		/* Check if BOTH the quest giver AND the quest number match this zone's prefix.
+		 * This prevents counting quest 3601 (Zodanga) in zone 30 (Lesser Helium)
+		 * even though the giver mob 3006 is in Lesser Helium.
+		 */
+		int giver_matches = (quest_index[q].giver_vnum >= zone_prefix_min && 
+		                     quest_index[q].giver_vnum <= zone_prefix_max);
+		int quest_matches = (quest_index[q].qnum >= zone_prefix_min && 
+		                     quest_index[q].qnum <= zone_prefix_max);
+		
+		if (giver_matches && quest_matches) {
 			(*total)++;
 			if (is_quest_completed(ch, quest_index[q].qnum)) {
 				(*completed)++;
