@@ -435,25 +435,30 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 			case 5 : {   
 
 				if (EXIT(ch, keyword_no)) {
-
-					if (EXIT(ch, keyword_no)->general_description) {
-						send_to_char(EXIT(ch, keyword_no)->
-							general_description, ch);
+					/* Hide secret doors that are closed */
+					if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_SECRET) &&
+					    IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED)) {
+						send_to_char("Nothing special there...\n\r", ch);
 					} else {
-						send_to_char("You see nothing special.\n\r", ch);
-					}
+						if (EXIT(ch, keyword_no)->general_description) {
+							send_to_char(EXIT(ch, keyword_no)->
+								general_description, ch);
+						} else {
+							send_to_char("You see nothing special.\n\r", ch);
+						}
 
-					if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) && 
-						(EXIT(ch, keyword_no)->keyword)) {
-							sprintf(buffer, "The %s is closed.\n\r",
-								fname(EXIT(ch, keyword_no)->keyword));
-							send_to_char(buffer, ch);
-					}	else {
-						if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ISDOOR) &&
-						    EXIT(ch, keyword_no)->keyword) {
-							sprintf(buffer, "The %s is open.\n\r",
-								fname(EXIT(ch, keyword_no)->keyword));
-							send_to_char(buffer, ch);
+						if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) && 
+							(EXIT(ch, keyword_no)->keyword)) {
+								sprintf(buffer, "The %s is closed.\n\r",
+									fname(EXIT(ch, keyword_no)->keyword));
+								send_to_char(buffer, ch);
+						}	else {
+							if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ISDOOR) &&
+							    EXIT(ch, keyword_no)->keyword) {
+								sprintf(buffer, "The %s is open.\n\r",
+									fname(EXIT(ch, keyword_no)->keyword));
+								send_to_char(buffer, ch);
+							}
 						}
 					}
 				} else {
@@ -634,7 +639,8 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 					for (door = 0; door <= 5; door++) {
 						if (EXIT(ch, door) && 
 						    EXIT(ch, door)->to_room != NOWHERE &&
-						    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
+						    !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) &&
+						    !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET)) {
 							strncat(exits_buf, &exit_letters[door], 1);
 						}
 					}
