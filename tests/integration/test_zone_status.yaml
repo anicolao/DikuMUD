@@ -30,7 +30,7 @@ steps:
       - pattern: 'Gathol - Allied City\s+\(6 rooms'
       - pattern: 'Greater Helium\s+\(9. rooms'
       - pattern: 'Thark Territory\s+\(50 rooms'
-      - pattern: 'Atmosphere Factory - Main Levels\s+\(55 rooms'
+      - pattern: 'Atmosphere Factory - Main Levels\s+\(51 rooms'
       - pattern: 'Atmosphere Factory - Lower Levels\s+\(4. rooms'
       - pattern: 'Ptarth - Allied City\s+\(11 rooms'
       - pattern: 'Gathol-Ptarth Wilderness\s+\(14 rooms'
