@@ -50,6 +50,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3964
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -304,6 +310,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3930
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   extra_descriptions: []
 - vnum: 3910
   name: Temple Square
@@ -606,6 +618,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3907
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
@@ -618,12 +636,30 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
   - direction: 4
     description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3908
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3924
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3925
   extra_descriptions: []
 - vnum: 3922
   name: Armory Row
@@ -701,7 +737,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   extra_descriptions: []
 - vnum: 3925
   name: Leather Worker's Shop
@@ -720,6 +762,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3986
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   extra_descriptions: []
 - vnum: 3926
   name: Master Weaponsmith
@@ -990,6 +1038,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3993
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
   extra_descriptions: []
 - vnum: 3940
   name: Western Thoroughfare
@@ -1008,12 +1062,30 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3941
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3948
   - direction: 4
     description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3992
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3909
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
@@ -1040,6 +1112,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3943
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3942
   extra_descriptions: []
 - vnum: 3942
   name: Inn Upstairs
@@ -1051,7 +1129,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
   extra_descriptions: []
 - vnum: 3943
   name: Private Dining Hall
@@ -1106,6 +1190,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3947
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1151,7 +1241,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: Up to residential district.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
   extra_descriptions: []
 - vnum: 3948
   name: Western Gate - Interior
@@ -1178,6 +1274,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3917
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   extra_descriptions: []
 - vnum: 3949
   name: Western Gate - Exterior
@@ -1504,6 +1606,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3908
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3963
   extra_descriptions: []
 - vnum: 3963
   name: Old Docks
@@ -1515,7 +1623,13 @@ rooms:
   zone: 35
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3962
   extra_descriptions: []
 - vnum: 3964
   name: Airship Landing Platform
@@ -2060,6 +2174,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3994
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3937
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
@@ -2094,6 +2214,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3992
+  - direction: 5
+    description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3995
   extra_descriptions: []
 - vnum: 3995
   name: Guard Headquarters
@@ -2105,7 +2231,13 @@ rooms:
   zone: 35
   room_flags: 12
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3994
   extra_descriptions: []
 - vnum: 3996
   name: Scholars Quarter
