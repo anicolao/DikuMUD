@@ -311,8 +311,6 @@ void do_open(struct char_data *ch, char *argument, int cmd)
 		else
 		{
 			REMOVE_BIT(EXIT(ch, door)->exit_info, EX_CLOSED);
-			/* Remove secret flag when door is opened - it becomes visible */
-			REMOVE_BIT(EXIT(ch, door)->exit_info, EX_SECRET);
 			if (EXIT(ch, door)->keyword)
 				act("$n opens the $F.", FALSE, ch, 0, EXIT(ch, door)->keyword,
 					TO_ROOM);
@@ -325,8 +323,6 @@ void do_open(struct char_data *ch, char *argument, int cmd)
 					if (back->to_room == ch->in_room)
 					{
 						REMOVE_BIT(back->exit_info, EX_CLOSED);
-						/* Remove secret flag from other side too */
-						REMOVE_BIT(back->exit_info, EX_SECRET);
 						if (back->keyword)
 						{
 							sprintf(buf,

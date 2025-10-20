@@ -438,7 +438,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 					/* Hide secret doors that are closed */
 					if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_SECRET) &&
 					    IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED)) {
-						send_to_char("Nothing special there...\n\r", ch);
+						send_to_char("You see nothing special.\n\r", ch);
 					} else {
 						if (EXIT(ch, keyword_no)->general_description) {
 							send_to_char(EXIT(ch, keyword_no)->

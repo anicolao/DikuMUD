@@ -535,7 +535,7 @@ rooms:
   - direction: 0
     description: The concealed hatch leads back up.
     keywords: secret hatch concealed floor
-    door_flag: 67
+    door_flag: 3
     key_vnum: -1
     to_room: 3165
   - direction: 2
@@ -835,7 +835,7 @@ rooms:
   - direction: 0
     description: The concealed passage leads back to the living quarters.
     keywords: secret stone concealed loose
-    door_flag: 67
+    door_flag: 3
     key_vnum: -1
     to_room: 3174
   - direction: 2
