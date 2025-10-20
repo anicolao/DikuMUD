@@ -211,6 +211,7 @@ struct obj_data
 #define EX_RSCLOSED	8
 #define EX_RSLOCKED	16
 #define EX_PICKPROOF 32
+#define EX_SECRET    64
 
 /* For 'Sector types' */
 

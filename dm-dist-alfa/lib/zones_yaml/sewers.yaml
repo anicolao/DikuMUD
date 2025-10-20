@@ -475,10 +475,19 @@ rooms:
   - direction: 2
     description: The passage continues south, partially blocked by debris.
     keywords: secret hatch concealed floor
-    door_flag: 1
+    door_flag: 67
     key_vnum: -1
     to_room: 3167
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: floor stones fitted odd oddly concealed hatch
+    description: 'Upon closer inspection, you notice that several floor stones in the
+      southern section
+
+      of the passage don''t quite fit properly. There are small gaps around their edges,
+
+      and they appear to have been disturbed recently. If you were to open or move
+
+      these stones, you might find something beneath them.'
 - vnum: 3166
   name: Ancient Southern Corridor
   description: '   The ancient corridor continues south from the junction.  The superior
@@ -526,7 +535,7 @@ rooms:
   - direction: 0
     description: The concealed hatch leads back up.
     keywords: secret hatch concealed floor
-    door_flag: 1
+    door_flag: 3
     key_vnum: -1
     to_room: 3165
   - direction: 2
@@ -745,10 +754,22 @@ rooms:
   - direction: 2
     description: A concealed passage lies behind a loose stone.
     keywords: secret stone concealed loose bed bunk
-    door_flag: 1
+    door_flag: 67
     key_vnum: -1
     to_room: 3177
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: bunk bunks bed beds stone loose concealed
+    description: 'Examining the stone bunks more carefully, you notice that one of the
+      wall stones
+
+      behind the southernmost bunk appears to be loose. It''s set slightly differently
+      than
+
+      the others, and there are faint scrape marks on the floor beneath it, as if it
+
+      has been moved many times. Perhaps if you were to open or push this stone, something
+
+      might be revealed.'
 - vnum: 3175
   name: Archive Vault
   description: '   This secure vault was used to store the most valuable or sensitive
@@ -814,7 +835,7 @@ rooms:
   - direction: 0
     description: The concealed passage leads back to the living quarters.
     keywords: secret stone concealed loose
-    door_flag: 1
+    door_flag: 3
     key_vnum: -1
     to_room: 3174
   - direction: 2
