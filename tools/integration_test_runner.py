@@ -126,6 +126,7 @@ class ServerManager:
         for ext in test_extensions:
             zone_file = ext['zone_file']
             extension_file = ext['extension_file']
+            room_vnum = ext.get('room', 1200)  # Default to room 1200 for backwards compatibility
             
             # Load the zone YAML
             zone_yaml_path = os.path.join(zones_yaml_dest, zone_file)
@@ -144,20 +145,19 @@ class ServerManager:
                 zone_data['objects'].extend(extension_data)
             
             # Also need to add a reset command to load the object into the room
-            # Add reset to put Thor's Hammer in room 1200
             if 'resets' not in zone_data:
                 zone_data['resets'] = []
             
             # Find the object vnum from the extension
             for obj in extension_data:
                 if 'vnum' in obj:
-                    # Add a reset command to load this object into room 1200
+                    # Add a reset command to load this object into the specified room
                     zone_data['resets'].append({
                         'command': 'O',
                         'if_flag': 0,
                         'arg1': obj['vnum'],
                         'arg2': 1,  # max_existing
-                        'arg3': 1200  # room vnum
+                        'arg3': room_vnum  # Use the room specified in the extension
                     })
             
             # Write modified zone YAML
@@ -1173,7 +1173,8 @@ class TestRunner:
                     ext_file = os.path.join(os.path.dirname(test_file), ext_file)
                 test_extensions.append({
                     'zone_file': ext.get('zone_file'),
-                    'extension_file': ext_file
+                    'extension_file': ext_file,
+                    'room': ext.get('room', start_room)  # Use specified room or default to start_room
                 })
             self.server_manager.set_test_extensions(test_extensions)
         
