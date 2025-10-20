@@ -50,6 +50,10 @@ steps:
     description: "Check zone command shows 3 of 3 completed quests"
     command: "zone"
     expected:
+      - pattern: "Lesser Helium|Helium"
+        message: "Should show zone name"
+      - pattern: "Completed Quests:"
+        message: "Should show completed quests label"
       - pattern: "Completed Quests: 3 of 3"
         message: "Should show 3 of 3 quests completed, not 2 of 3"
 

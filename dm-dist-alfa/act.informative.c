@@ -1389,20 +1389,47 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
 }
 
 /* Helper function to count quests in a zone and how many are completed */
+/* Helper function to count quests in a zone and how many are completed 
+ * Note: Quest givers are mobs, and mob vnums may not align with room vnums.
+ * We match quests to zones by checking if the giver mob's vnum matches
+ * the zone's primary vnum prefix (e.g., zone with rooms 3001-3055 matches
+ * mobs 3000-3099, as both are in the "30xx" range).
+ * 
+ * This works for the standard zone numbering where zone N has rooms and
+ * mobs in the N*100 to N*100+99 range (e.g., zone 30 = 3000-3099).
+ */
 static void count_zone_quests(struct char_data *ch, int zone_start, int zone_end,
                                int *total, int *completed)
 {
 	int q;
+	int zone_prefix_min, zone_prefix_max;
 	extern struct quest_data *quest_index;
 	extern int top_of_quest_table;
 	
 	*total = 0;
 	*completed = 0;
 	
+	/* Determine the zone's primary vnum prefix by looking at the room range.
+	 * For zone with rooms 3001-3055, the prefix is 30 (covers 3000-3099).
+	 * We use the END of the range since that's where the zone's actual content is.
+	 */
+	if (zone_end >= 1000) {
+		/* For 4-digit vnums, use the first 2 digits as prefix */
+		int end_prefix = zone_end / 100;
+		
+		/* Use the century where the zone actually is */
+		zone_prefix_min = end_prefix * 100;
+		zone_prefix_max = zone_prefix_min + 99;
+	} else {
+		/* For small vnums (< 1000), just use the original range */
+		zone_prefix_min = zone_start;
+		zone_prefix_max = zone_end;
+	}
+	
 	for (q = 0; q < top_of_quest_table; q++) {
-		/* Check if quest giver vnum is in this zone's room range */
-		if (quest_index[q].giver_vnum >= zone_start && 
-		    quest_index[q].giver_vnum <= zone_end) {
+		/* Check if quest giver vnum is in this zone's prefix range */
+		if (quest_index[q].giver_vnum >= zone_prefix_min && 
+		    quest_index[q].giver_vnum <= zone_prefix_max) {
 			(*total)++;
 			if (is_quest_completed(ch, quest_index[q].qnum)) {
 				(*completed)++;
