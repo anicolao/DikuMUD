@@ -762,12 +762,6 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3986
   - direction: 0
     description: Market north.
     keywords: ''
@@ -1050,12 +1044,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3993
-  - direction: 0
-    description: City administration north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3992
   - direction: 5
     description: The central stairway continues down.
     keywords: ''
@@ -2118,12 +2106,6 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3925
   - direction: 0
     description: Back north.
     keywords: ''
@@ -2170,12 +2152,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3935
-  - direction: 2
-    description: Arena south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3989
   extra_descriptions: []
 - vnum: 3989
   name: Arena
@@ -2194,12 +2170,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3919
-  - direction: 0
-    description: Training north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3988
   extra_descriptions: []
 - vnum: 3990
   name: Bath House
@@ -2250,12 +2220,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3994
-  - direction: 2
-    description: Stairway south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3937
   - direction: 5
     description: The administrative stairway descends.
     keywords: ''
