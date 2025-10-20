@@ -94,7 +94,7 @@ rooms:
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3763
+    to_room: 3765
   extra_descriptions: []
 - vnum: 3753
   name: On the Elevated Road
@@ -280,12 +280,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3765
-  - direction: 4
-    description: You see the elevated road high above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3752
   extra_descriptions: []
 - vnum: 3764
   name: Northwestern Dead Sea Bottom
@@ -317,12 +311,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3763
-  - direction: 3
-    description: An oasis of moss lies to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3778
   extra_descriptions: []
 - vnum: 3765
   name: Dead Sea Bottom - Mid-Section
@@ -348,6 +336,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3767
+  - direction: 4
+    description: The elevated road is high above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3752
   extra_descriptions: []
 - vnum: 3766
   name: Southwestern Dead Sea Bottom
@@ -366,12 +360,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3763
-  - direction: 1
-    description: The southern wilderness is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3768
   - direction: 3
     description: A skeleton field lies to the west.
     keywords: ''
@@ -433,12 +421,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3767
-  - direction: 3
-    description: The southwestern section is to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3766
   extra_descriptions: []
 - vnum: 3770
   name: Dead Sea Bottom - Western Section
@@ -534,12 +516,6 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 1
-    description: The northwestern sea bottom is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3764
   - direction: 2
     description: The western sea bottom is to the south.
     keywords: ''
