@@ -75,12 +75,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4152
-  - direction: 2
-    description: A side passage branches south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4153
   - direction: 3
     description: The tunnel extends back west.
     keywords: ''
@@ -109,6 +103,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4154
+  - direction: 1
+    description: A passage extends east to a side area.
+    keywords: door metal
+    door_flag: 1
+    key_vnum: 4250
+    to_room: 4153
   - direction: 3
     description: The corridor extends back west.
     keywords: ''
@@ -141,17 +141,17 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The main corridor lies to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4151
-  - direction: 5
-    description: A shaft drops down to a lower level.
+  - direction: 3
+    description: A passage leads west back to the collapsed section.
     keywords: door metal
     door_flag: 1
     key_vnum: 4250
+    to_room: 4152
+  - direction: 2
+    description: A passage leads south to the lower laboratory.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
     to_room: 4160
   extra_descriptions: []
 - vnum: 4154
@@ -176,8 +176,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4152
-  - direction: 5
-    description: A ramp slopes down to the lower section.
+  - direction: 3
+    description: A passage extends west to the lower section.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -205,14 +205,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads to what sounds like a laboratory.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4160
-  - direction: 4
-    description: A ramp slopes back up.
+  - direction: 1
+    description: A passage extends back east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -278,6 +272,43 @@ rooms:
       mutated
 
       and unnatural.'
+- vnum: 4158
+  name: Quarantine Airlock
+  description: '   This airlock chamber serves as a transitional space between quarantine
+    areas. The air
+
+    filtration systems hum constantly, attempting to prevent contamination from spreading.
+    Heavy
+
+    blast doors seal both ends, designed to contain any outbreak. Warning lights flash
+    amber,
+
+    indicating the system is active and monitoring for biological hazards.'
+  zone: 42
+  room_flags: 8
+  sector_type: 0
+  exits:
+  - direction: 0
+    description: The sealed door leads to the infection chamber.
+    keywords: door sealed
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4189
+  - direction: 4
+    description: The airlock door leads back up to quarantine.
+    keywords: door airlock
+    door_flag: 2
+    key_vnum: 4254
+    to_room: 4188
+  extra_descriptions:
+  - keywords: airlock filtration systems warning
+    description: 'The filtration systems are operating at maximum capacity, cycling
+      the air multiple times
+
+      per minute. The warning lights indicate elevated contamination levels beyond
+      this point.
+
+      Anyone proceeding further does so at their own extreme risk.'
 - vnum: 4160
   name: Research Laboratory - Entrance
   description: '   You enter what can only be a secret research laboratory. Modern
@@ -306,14 +337,8 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4165
-  - direction: 4
-    description: The restored passage leads back west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4155
-  - direction: 4
-    description: A shaft leads up.
+  - direction: 0
+    description: A passage leads north to the side passage.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -516,12 +541,6 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4162
-  - direction: 5
-    description: A door leads to recovery chambers.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4169
   extra_descriptions:
   - keywords: equipment surgical instruments
     description: 'These surgical instruments are of the highest quality, some clearly
@@ -585,12 +604,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The door leads to the surgical suite.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4167
   - direction: 1
     description: A corridor leads to the power experiments section.
     keywords: ''
@@ -947,8 +960,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A door leads to containment cells.
+  - direction: 1
+    description: A door leads to containment cells to the east.
     keywords: door reinforced
     door_flag: 2
     key_vnum: 4253
@@ -1077,8 +1090,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The reinforced door leads back to hybrid creation.
+  - direction: 3
+    description: The reinforced door leads back west to hybrid creation.
     keywords: door reinforced
     door_flag: 2
     key_vnum: 4253
@@ -1111,12 +1124,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A sealed door leads to the infection chamber - sealed for good reason.
-    keywords: door sealed
+  - direction: 5
+    description: A sealed airlock descends to deeper containment areas.
+    keywords: door airlock sealed
     door_flag: 2
     key_vnum: 4254
-    to_room: 4189
+    to_room: 4158
   - direction: 3
     description: The corridor leads back to experimental holding.
     keywords: ''
@@ -1148,12 +1161,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The sealed door leads back to quarantine - get out while you can.
-    keywords: door sealed
+  - direction: 2
+    description: The sealed airlock door leads back - get out while you can.
+    keywords: door sealed airlock
     door_flag: 2
     key_vnum: 4254
-    to_room: 4188
+    to_room: 4158
   - direction: 4
     description: A passage leads back up.
     keywords: ''
@@ -1325,12 +1338,6 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4192
-  - direction: 5
-    description: A corridor leads to a chamber with active systems.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4194
   extra_descriptions:
   - keywords: container crystalline preservation
     description: 'The container is a marvel of ancient technology, preserving not
@@ -1359,18 +1366,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The corridor leads to the engineer's chamber.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4193
-  - direction: 2
-    description: A passage leads to the main laboratory.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4197
   - direction: 1
     description: The passage continues.
     keywords: ''
@@ -1493,12 +1488,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: A passage leads to the ancient control chamber.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4194
   - direction: 1
     description: A door leads to the observation chamber.
     keywords: door
