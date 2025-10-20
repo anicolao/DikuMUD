@@ -1208,6 +1208,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
+  - direction: 3
+    description: The western gate is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3949
+  - direction: 2
+    description: The western gate is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3949
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1248,12 +1260,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3947
-  - direction: 3
-    description: Western area.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3949
   extra_descriptions: []
 - vnum: 3947
   name: Calot Kennels
@@ -1328,12 +1334,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3750
-  - direction: 1
-    description: Residential street.
+  - direction: 0
+    description: The residential district is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3946
+    to_room: 3944
   extra_descriptions: []
 - vnum: 3950
   name: Eastern Gate - Interior
@@ -2228,12 +2234,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3937
-  - direction: 2
-    description: Stairway south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3906
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
