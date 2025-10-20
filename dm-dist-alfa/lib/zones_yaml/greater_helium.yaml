@@ -514,6 +514,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 4
+    description: The Warehouse District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3962
   extra_descriptions: []
 - vnum: 3922
   name: Armory Row
@@ -828,6 +834,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3936
+  - direction: 5
+    description: The Arena is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3989
   extra_descriptions: []
 - vnum: 3935
   name: Warrior's Guild Hall
@@ -1018,6 +1030,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3990
+  - direction: 4
+    description: The South Plaza is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  - direction: 2
+    description: The Healer's Hall is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3987
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1202,18 +1226,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
-  - direction: 4
-    description: The Residential District is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3944
-  - direction: 0
-    description: The Common Square is to the north.
+  - direction: 3
+    description: The Common Square is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3958
+  - direction: 5
+    description: The Residential District is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1346,6 +1370,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3960
+  - direction: 1
+    description: The South Plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
   extra_descriptions: []
 - vnum: 3959
   name: The Common Rest Inn
@@ -1422,8 +1452,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3963
-  - direction: 0
-    description: The Eastern Market Row is to the north.
+  - direction: 5
+    description: The Eastern Market Row is below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1470,8 +1500,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 0
-    description: Naval Command is to the north.
+  - direction: 4
+    description: Naval Command is above.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1534,6 +1564,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3968
+  - direction: 5
+    description: The Airship Landing Platform is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3964
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
@@ -1880,8 +1916,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Residential District is to the south.
+  - direction: 0
+    description: The Residential District is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1916,8 +1952,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 3
-    description: The Warrior's Quarter is to the west.
+  - direction: 4
+    description: The Warrior's Quarter is above.
     keywords: ''
     door_flag: 0
     key_vnum: -1
