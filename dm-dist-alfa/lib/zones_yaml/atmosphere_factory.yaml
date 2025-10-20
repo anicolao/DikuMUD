@@ -520,12 +520,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: Steps lead down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4118
   - direction: 4
     description: ''
     keywords: ''
@@ -575,12 +569,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4119
-  - direction: 4
-    description: A passage ascends.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4128
   extra_descriptions:
   - keywords: below floor
     description: 'The factory floor far below is a maze of machinery, pipes, and tanks.
@@ -606,24 +594,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: The catwalk continues south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4119
   - direction: 3
     description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4117
-  - direction: 0
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4116
   extra_descriptions:
   - keywords: panels controls
     description: 'These control panels use a mix of ancient technology and modern
@@ -647,19 +623,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 0
-    description: The catwalk extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4118
-  - direction: 4
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4117
+  exits: []
   extra_descriptions:
   - keywords: pumps pistons machinery
     description: 'These pumps move incomprehensible volumes of gas through the factory''s
@@ -779,12 +743,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads down.
-    keywords: door heavy
-    door_flag: 2
-    key_vnum: -1
-    to_room: 4125
   - direction: 3
     description: ''
     keywords: ''
@@ -893,12 +851,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4057
-  - direction: 1
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4064
   extra_descriptions:
   - keywords: signs warnings
     description: 'The warning signs use stark symbols and text: radiation hazard,
@@ -936,12 +888,6 @@ rooms:
     door_flag: 2
     key_vnum: 4051
     to_room: 4136
-  - direction: 3
-    description: The western corridor leads to more chambers.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4059
   extra_descriptions:
   - keywords: window view
     description: 'Through the thick viewing window, you can see the inner core - a
@@ -1246,12 +1192,6 @@ rooms:
     door_flag: 2
     key_vnum: 4053
     to_room: 4150
-  - direction: 1
-    description: A door leads to the directors office.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4075
   extra_descriptions:
   - keywords: trapdoor
     description: 'This heavy metal trapdoor is concealed in the floor, almost invisible
@@ -1313,12 +1253,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4055
   - direction: 1
     description: ''
     keywords: ''
@@ -1385,12 +1319,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4056
-  - direction: 5
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4117
   extra_descriptions: []
 - vnum: 4130
   name: Unfinished Chamber 4130
@@ -1643,12 +1571,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4073
-  - direction: 1
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4146
   extra_descriptions: []
 - vnum: 4146
   name: Unfinished Chamber 4146
@@ -1667,12 +1589,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
-  - direction: 3
-    description: ''
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4145
   extra_descriptions: []
 - vnum: 4147
   name: Escape Route Junction
@@ -1734,12 +1650,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
-  - direction: 1
-    description: The passage continues east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4149
   extra_descriptions: []
 - vnum: 4149
   name: Emergency Shelter
@@ -1763,12 +1673,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4147
-  - direction: 3
-    description: The passage continues west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4148
   extra_descriptions:
   - keywords: supplies equipment
     description: 'The shelter is well-stocked with food, water, medical supplies,
