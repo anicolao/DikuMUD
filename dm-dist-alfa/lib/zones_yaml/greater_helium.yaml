@@ -1030,12 +1030,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3990
-  - direction: 4
-    description: The South Plaza is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3952
   - direction: 2
     description: The Healer's Hall is to the south.
     keywords: ''
@@ -1226,18 +1220,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
-  - direction: 3
-    description: The Common Square is to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3958
-  - direction: 5
-    description: The Residential District is below.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3944
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1370,12 +1352,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3960
-  - direction: 1
-    description: The South Plaza is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3952
   extra_descriptions: []
 - vnum: 3959
   name: The Common Rest Inn
@@ -1500,12 +1476,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 4
-    description: Naval Command is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3967
   extra_descriptions: []
 - vnum: 3965
   name: Military Barracks
@@ -1564,12 +1534,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3968
-  - direction: 5
-    description: The Airship Landing Platform is below.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3964
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
