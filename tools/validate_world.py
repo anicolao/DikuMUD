@@ -98,18 +98,33 @@ class WorldValidator:
                 self.error(f"{zone_name}: Room {vnum} missing zone field")
             
             # Validate exits
+            exit_directions = {}  # direction -> count
             for exit_data in room.get('exits', []):
                 to_room = exit_data.get('to_room')
                 if to_room and to_room != -1:
                     # We'll validate cross-references after loading all files
                     pass
                 
+                # Check for duplicate exit directions
+                direction = exit_data.get('direction')
+                if direction is not None:
+                    if direction in exit_directions:
+                        exit_directions[direction] += 1
+                    else:
+                        exit_directions[direction] = 1
+                
                 # Track secret doors (EX_SECRET = 64, EX_CLOSED = 2, EX_ISDOOR = 1)
                 door_flag = exit_data.get('door_flag', 0)
-                direction = exit_data.get('direction')
                 if door_flag & 64:  # Has EX_SECRET flag
                     if direction is not None:
                         self.secret_doors[(vnum, direction)] = zone_name
+            
+            # Report duplicate exit directions as errors
+            direction_names = ['north', 'east', 'south', 'west', 'up', 'down']
+            for direction, count in exit_directions.items():
+                if count > 1:
+                    dir_name = direction_names[direction] if 0 <= direction < len(direction_names) else str(direction)
+                    self.error(f"{zone_name}: Room {vnum} has {count} exits in direction {direction} ({dir_name})")
         
         # Validate mobiles
         mobiles = data.get('mobiles', [])

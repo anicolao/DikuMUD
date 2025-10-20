@@ -433,14 +433,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3013
-    key_vnum: -1
-    to_room: 3025
-  - direction: 3
-    description: You see the main concourse.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3013
   extra_descriptions:
   - keywords: statue
     description: 'The statue depicts John Carter and Dejah Thoris, representing the
@@ -486,8 +478,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3016
   name: The Main Concourse
-  description: '   The main concourse continues here, stairs lead up to the weapon smith
-    to the north and to the
+  description: '   The main concourse continues here, stairs lead up to the weapon
+    smith to the north and to the
 
     south is the Warriors Guild.  To the east is the city''s east gate and to the
     west
@@ -1222,7 +1214,8 @@ rooms:
   extra_descriptions: []
 - vnum: 3045
   name: Alley at Channel Edge
-  description: '   You are standing in an alley which continues east and west.  Steps descend
+  description: '   You are standing in an alley which continues east and west.  Steps
+    descend
 
     south to the edge of the ancient dried channel.  To the north is a shop.'
   zone: 30
@@ -2861,11 +2854,9 @@ mobiles:
   detailed_desc: 'This helpful red Martian has copper-red skin and an engaging smile.
     She wears
 
-    a bright harness marked with the emblem of Helium''s Visitor Services.
-    Her
+    a bright harness marked with the emblem of Helium''s Visitor Services. Her
 
-    friendly demeanor and patient manner make new arrivals feel welcome.
-    She
+    friendly demeanor and patient manner make new arrivals feel welcome. She
 
     carries detailed maps of the city and knows all the important locations.'
   action_flags: 2
@@ -3275,23 +3266,22 @@ objects:
   rent: 100
   extra_descriptions:
   - keywords: staff
-    description: 'The staff is made of old oak, and is around five feet long. It
-      fits
+    description: 'The staff is made of old oak, and is around five feet long. It fits
 
       perfectly into your hand. You notice a small symbol etched at the
 
       base of the staff, it looks like:
 
 
-        ZZZZZ
+      ZZZZZ
 
-           Z
+      Z
 
-          Z
+      Z
 
-         Z
+      Z
 
-        ZZZZZ  z   z'
+      ZZZZZ  z   z'
   affects: []
 - vnum: 3050
   namelist: radium crystal
@@ -4114,95 +4104,60 @@ objects:
   rent: 1
   extra_descriptions:
   - keywords: map guide
-    description: "This detailed map shows the layout of Lesser Helium:\n\n\
-      \ ╔═══════════════════════════════════════════════════════════════════╗\n\
-      \ ║            LESSER HELIUM - City Map                               ║\n\
-      \ ║            Market Plaza - Central Hub                             ║\n\
-      \ ╚═══════════════════════════════════════════════════════════════════╝\n\
-      \n\
-      \                    [Temple Altar]\n\
-      \                         |\n\
-      \                        up\n\
-      \                         |\n\
-      \                  [Temple of Jeddak]\n\
-      \                         |\n\
-      \                       down\n\
-      \                         |\n\
-      \      [Noble's]──W──[Temple Plaza]──E──[Inn Entrance]\n\
-      \                         |\n\
-      \                         S\n\
-      \                         |\n\
-      \    [Provisions]     [MARKET PLAZA]     [General Merch]\n\
-      \        |       \\         |         /       |\n\
-      \        up       W        ( )        E       up\n\
-      \                  \\       |       /\n\
-      \                    \\     |     /\n\
-      \                     [West  |  East]\n\
-      \                    [Concourse]\n\
-      \                         |\n\
-      \                         D (down to lower level)\n\
-      \                         |\n\
-      \    [Lower]────W────[Common Plaza]────E────[Alley]\n\
-      \    [Quarter]            |                    |\n\
-      \                         S                    S\n\
-      \                         |                    |\n\
-      \                    [Disposal]          [Assassins]\n\
-      \n\n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ FROM MARKET PLAZA - KEY DIRECTIONS:                          │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ NORTH : Temple Plaza → Temple of Jeddak (up)                 │\n\
-      \ │ WEST  : Main Concourse West                                  │\n\
-      \ │ EAST  : Main Concourse East                                  │\n\
-      \ │ DOWN  : Common Plaza (lower level)                           │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n\
-      \n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ GUILDMASTERS (from Market Plaza):                            │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ Warriors Guild      : E → E → S                              │\n\
-      \ │ Scientific Academy  : W → W → S                              │\n\
-      \ │ Assassins Guild     : D → E → S                              │\n\
-      \ │ Noble's Guild       : N → W                                  │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n\
-      \n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ SHOP LOCATIONS (from Market Plaza):                          │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ Provisions Merchant : W → up                                 │\n\
-      \ │ General Merchant    : E → up                                 │\n\
-      \ │ Weapon Smith        : E → E → up                             │\n\
-      \ │ Armory             : W → S                                   │\n\
-      \ │ Jeweler's Shop     : E → S                                   │\n\
-      \ │ Scientific Supplies : W → W → N                              │\n\
-      \ │ Traveler's Rest Inn : N → E                                  │\n\
-      \ │ Leather Worker     : D → W → W → N                           │\n\
-      \ │ Calot Shop (Pets)  : D → E → E → N                           │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n\
-      \n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ QUEST LOCATIONS (from Market Plaza):                         │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ Shadowy Alley (Mercenary) : D → E                            │\n\
-      \ │ Warriors Guild Quests     : E → E → S                        │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n\
-      \n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ CITY GATES (from Market Plaza):                              │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ West Gate : W → W → W                                        │\n\
-      \ │ East Gate : E → E → E                                        │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n\
-      \n\
-      \ ┌──────────────────────────────────────────────────────────────┐\n\
-      \ │ NAVIGATION TIPS:                                             │\n\
-      \ ├──────────────────────────────────────────────────────────────┤\n\
-      \ │ • Market Plaza is the city center - all paths start here     │\n\
-      \ │ • UP/DOWN moves between city levels                          │\n\
-      \ │ • Main Concourse runs East-West through Market Plaza         │\n\
-      \ │ • Most elevated shops accessible via 'up' from concourse     │\n\
-      \ │ • Lower district accessible via 'down' from Market Plaza     │\n\
-      \ └──────────────────────────────────────────────────────────────┘\n"
+    description: "This detailed map shows the layout of Lesser Helium:\n\n ╔═══════════════════════════════════════════════════════════════════╗\n\
+      \ ║            LESSER HELIUM - City Map                               ║\n ║\
+      \            Market Plaza - Central Hub                             ║\n ╚═══════════════════════════════════════════════════════════════════╝\n\
+      \n                    [Temple Altar]\n                         |\n         \
+      \               up\n                         |\n                  [Temple of\
+      \ Jeddak]\n                         |\n                       down\n       \
+      \                  |\n      [Noble's]──W──[Temple Plaza]──E──[Inn Entrance]\n\
+      \                         |\n                         S\n                  \
+      \       |\n    [Provisions]     [MARKET PLAZA]     [General Merch]\n       \
+      \ |       \\         |         /       |\n        up       W        ( )    \
+      \    E       up\n                  \\       |       /\n                    \\\
+      \     |     /\n                     [West  |  East]\n                    [Concourse]\n\
+      \                         |\n                         D (down to lower level)\n\
+      \                         |\n    [Lower]────W────[Common Plaza]────E────[Alley]\n\
+      \    [Quarter]            |                    |\n                         S\
+      \                    S\n                         |                    |\n  \
+      \                  [Disposal]          [Assassins]\n\n\n ┌──────────────────────────────────────────────────────────────┐\n\
+      \ │ FROM MARKET PLAZA - KEY DIRECTIONS:                          │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ NORTH : Temple Plaza → Temple of Jeddak (up)                 │\n │ WEST\
+      \  : Main Concourse West                                  │\n │ EAST  : Main\
+      \ Concourse East                                  │\n │ DOWN  : Common Plaza\
+      \ (lower level)                           │\n └──────────────────────────────────────────────────────────────┘\n\
+      \n ┌──────────────────────────────────────────────────────────────┐\n │ GUILDMASTERS\
+      \ (from Market Plaza):                            │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ Warriors Guild      : E → E → S                              │\n │ Scientific\
+      \ Academy  : W → W → S                              │\n │ Assassins Guild  \
+      \   : D → E → S                              │\n │ Noble's Guild       : N →\
+      \ W                                  │\n └──────────────────────────────────────────────────────────────┘\n\
+      \n ┌──────────────────────────────────────────────────────────────┐\n │ SHOP\
+      \ LOCATIONS (from Market Plaza):                          │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ Provisions Merchant : W → up                                 │\n │ General\
+      \ Merchant    : E → up                                 │\n │ Weapon Smith  \
+      \      : E → E → up                             │\n │ Armory             : W\
+      \ → S                                   │\n │ Jeweler's Shop     : E → S   \
+      \                                │\n │ Scientific Supplies : W → W → N     \
+      \                         │\n │ Traveler's Rest Inn : N → E                \
+      \                  │\n │ Leather Worker     : D → W → W → N                \
+      \           │\n │ Calot Shop (Pets)  : D → E → E → N                       \
+      \    │\n └──────────────────────────────────────────────────────────────┘\n\n\
+      \ ┌──────────────────────────────────────────────────────────────┐\n │ QUEST\
+      \ LOCATIONS (from Market Plaza):                         │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ Shadowy Alley (Mercenary) : D → E                            │\n │ Warriors\
+      \ Guild Quests     : E → E → S                        │\n └──────────────────────────────────────────────────────────────┘\n\
+      \n ┌──────────────────────────────────────────────────────────────┐\n │ CITY\
+      \ GATES (from Market Plaza):                              │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ West Gate : W → W → W                                        │\n │ East\
+      \ Gate : E → E → E                                        │\n └──────────────────────────────────────────────────────────────┘\n\
+      \n ┌──────────────────────────────────────────────────────────────┐\n │ NAVIGATION\
+      \ TIPS:                                             │\n ├──────────────────────────────────────────────────────────────┤\n\
+      \ │ • Market Plaza is the city center - all paths start here     │\n │ • UP/DOWN\
+      \ moves between city levels                          │\n │ • Main Concourse\
+      \ runs East-West through Market Plaza         │\n │ • Most elevated shops accessible\
+      \ via 'up' from concourse     │\n │ • Lower district accessible via 'down' from\
+      \ Market Plaza     │\n └──────────────────────────────────────────────────────────────┘\n"
   affects: []
 resets:
 - command: O
@@ -5222,8 +5177,8 @@ quests:
   complete_text: The warrior nods with approval as you report your success. 'Well
     done! You've proven you have the makings of a defender of Helium. Take this equipment
     - it will serve you well in the battles ahead. If you seek to serve the city further,
-    the beast-handler at the calot shop needs help feeding his animals. Speak with the
-    beast-handler about assisting with his calots.'
+    the beast-handler at the calot shop needs help feeding his animals. Speak with
+    the beast-handler about assisting with his calots.'
   fail_text: The warrior shakes his head. 'The ulsio still infest our sewers. Come
     back when you're ready to face them.'
 - qnum: 3002
@@ -5236,13 +5191,13 @@ quests:
   reward_exp: 250
   reward_gold: 100
   reward_item: 3001
-  quest_text: The mercenary gestures toward the market. 'I need someone to make a patrol
-    through the market plaza and report back on the activity there. Simply make your
-    way to the market plaza and return to me.'
+  quest_text: The mercenary gestures toward the market. 'I need someone to make a
+    patrol through the market plaza and report back on the activity there. Simply
+    make your way to the market plaza and return to me.'
   complete_text: The mercenary nods as you report your patrol findings. 'Good work.
-    Vigilance keeps Helium safe. Here is your compensation. If you're looking for more
-    dangerous work, talk to the Red Martian Warrior at the Warriors Guild entrance - he
-    has tasks that involve clearing out the ulsio vermin in our sewers.'
+    Vigilance keeps Helium safe. Here is your compensation. If you're looking for
+    more dangerous work, talk to the Red Martian Warrior at the Warriors Guild entrance
+    - he has tasks that involve clearing out the ulsio vermin in our sewers.'
   fail_text: The mercenary looks disappointed. 'I still need that patrol completed.'
 - qnum: 3003
   giver: 3008

@@ -1157,12 +1157,6 @@ rooms:
   room_flags: 8
   sector_type: 1
   exits:
-  - direction: 1
-    description: The main plaza is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3600
   - direction: 3
     description: The wilderness extends westward.
     keywords: gate
@@ -1255,12 +1249,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: The temple courtyard is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3600
   - direction: 1
     description: The palace outer courtyard is to the east.
     keywords: ''
