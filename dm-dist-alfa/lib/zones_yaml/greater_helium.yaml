@@ -50,12 +50,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3964
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -291,11 +285,11 @@ rooms:
     key_vnum: -1
     to_room: 3962
   - direction: 5
-    description: The stairs lead down.
+    description: Stairway down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3921
+    to_room: 3920
   extra_descriptions: []
 - vnum: 3909
   name: Ascending Stairway
@@ -311,7 +305,7 @@ rooms:
     key_vnum: -1
     to_room: 3930
   - direction: 5
-    description: The stairs lead down.
+    description: Stairway down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -618,8 +612,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3907
-  - direction: 4
-    description: You can go up.
+  - direction: 1
+    description: Market east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -636,26 +630,20 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 5
-    description: You can go down.
+  - direction: 3
+    description: West market.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3920
-  - direction: 4
-    description: A stairway leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3908
-  - direction: 4
-    description: You can go up.
+  - direction: 0
+    description: Jeweler north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3924
-  - direction: 4
-    description: You can go up.
+  - direction: 2
+    description: Leather worker south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -738,8 +726,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 5
-    description: You can go down.
+  - direction: 2
+    description: Market south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -762,12 +750,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3986
-  - direction: 5
-    description: You can go down.
+  - direction: 0
+    description: Market north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3921
+  - direction: 2
+    description: Tannery south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3986
   extra_descriptions: []
 - vnum: 3926
   name: Master Weaponsmith
@@ -1038,12 +1032,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3993
-  - direction: 5
-    description: The stairs lead down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3992
   extra_descriptions: []
 - vnum: 3940
   name: Western Thoroughfare
@@ -1056,32 +1044,20 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 2
-    description: The Royal Inn is to the south.
+  - direction: 5
+    description: Grand Plaza down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3941
-  - direction: 5
-    description: You can go down.
+    to_room: 3900
+  - direction: 2
+    description: Western gate south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3948
   - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3992
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3900
-  - direction: 4
-    description: You can go up.
+    description: Stairway up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1107,13 +1083,7 @@ rooms:
     key_vnum: -1
     to_room: 3940
   - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3943
-  - direction: 4
-    description: You can go up.
+    description: Upstairs.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1131,7 +1101,7 @@ rooms:
   sector_type: 0
   exits:
   - direction: 5
-    description: You can go down.
+    description: Downstairs.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1190,8 +1160,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
-  - direction: 5
-    description: You can go down.
+  - direction: 1
+    description: Kennels east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1230,6 +1200,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3944
+  - direction: 1
+    description: Kennels east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3947
   extra_descriptions: []
 - vnum: 3947
   name: Calot Kennels
@@ -1242,8 +1218,14 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 4
-    description: Up to residential district.
+  - direction: 3
+    description: Street west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3946
+  - direction: 3
+    description: Back west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1274,8 +1256,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3917
-  - direction: 4
-    description: You can go up.
+  - direction: 0
+    description: Western Thoroughfare north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1606,8 +1588,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3908
-  - direction: 5
-    description: You can go down.
+  - direction: 1
+    description: Docks east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1624,8 +1606,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
+  - direction: 3
+    description: Warehouse west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2060,6 +2042,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3925
+  - direction: 0
+    description: Back north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3925
   extra_descriptions: []
 - vnum: 3987
   name: Healer's Hall
@@ -2100,6 +2088,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3935
+  - direction: 2
+    description: Arena south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3989
   extra_descriptions: []
 - vnum: 3989
   name: Arena
@@ -2118,6 +2112,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3919
+  - direction: 0
+    description: Training north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3988
   extra_descriptions: []
 - vnum: 3990
   name: Bath House
@@ -2174,12 +2174,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3994
-  - direction: 4
-    description: You can go up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3937
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
@@ -2214,8 +2208,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3992
-  - direction: 5
-    description: You can go down.
+  - direction: 0
+    description: Guard HQ north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2232,8 +2226,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
+  - direction: 2
+    description: Prison south.
     keywords: ''
     door_flag: 0
     key_vnum: -1

@@ -120,14 +120,11 @@ class WorldValidator:
                         self.secret_doors[(vnum, direction)] = zone_name
             
             # Report duplicate exit directions as errors
-            # Exception: Zone 11 (greater_helium) requires duplicate exits for full connectivity
-            # due to its complex non-planar topology
             direction_names = ['north', 'east', 'south', 'west', 'up', 'down']
-            if zone_name != 'greater_helium':
-                for direction, count in exit_directions.items():
-                    if count > 1:
-                        dir_name = direction_names[direction] if 0 <= direction < len(direction_names) else str(direction)
-                        self.error(f"{zone_name}: Room {vnum} has {count} exits in direction {direction} ({dir_name})")
+            for direction, count in exit_directions.items():
+                if count > 1:
+                    dir_name = direction_names[direction] if 0 <= direction < len(direction_names) else str(direction)
+                    self.error(f"{zone_name}: Room {vnum} has {count} exits in direction {direction} ({dir_name})")
         
         # Validate mobiles
         mobiles = data.get('mobiles', [])
