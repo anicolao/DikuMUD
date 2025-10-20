@@ -110,6 +110,8 @@ struct zone_data
 
 	int reset_mode;         /* conditions for reset (see below)   */
 	struct reset_com *cmd;  /* command table for reset	           */
+	
+	time_t last_reset_time; /* wall-clock time of last zone reset */
 
 	/*
 	*  Reset mode:                              *

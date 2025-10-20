@@ -29,6 +29,8 @@ class WorldValidator:
         self.quest_givers = {}  # giver_vnum -> [quest_vnums]
         self.zones = {}
         self.mobs_with_spec_flag = {}  # vnum -> zone_name
+        self.secret_doors = {}  # (room_vnum, direction) -> zone_name
+        self.door_resets = set()  # set of (room_vnum, direction) tuples that have reset commands
         
         # Mobiles with assigned special procedures in spec_assign.c
         # This list should be kept in sync with dm-dist-alfa/spec_assign.c
@@ -101,6 +103,13 @@ class WorldValidator:
                 if to_room and to_room != -1:
                     # We'll validate cross-references after loading all files
                     pass
+                
+                # Track secret doors (EX_SECRET = 64, EX_CLOSED = 2, EX_ISDOOR = 1)
+                door_flag = exit_data.get('door_flag', 0)
+                direction = exit_data.get('direction')
+                if door_flag & 64:  # Has EX_SECRET flag
+                    if direction is not None:
+                        self.secret_doors[(vnum, direction)] = zone_name
         
         # Validate mobiles
         mobiles = data.get('mobiles', [])
@@ -344,8 +353,13 @@ class WorldValidator:
                 elif cmd == 'D':
                     # Door state
                     room_vnum = reset.get('arg1')
+                    direction = reset.get('arg2')
+                    door_state = reset.get('arg3')  # 0=open, 1=closed, 2=locked
                     if room_vnum and room_vnum not in self.all_rooms:
                         self.error(f"{zone_name}: Reset references non-existent room {room_vnum}")
+                    # Track door resets that close/lock doors (state 1 or 2)
+                    if room_vnum and direction is not None and door_state in [1, 2]:
+                        self.door_resets.add((room_vnum, direction))
             
             # Check shops
             for shop in data.get('shops', []):
@@ -416,6 +430,20 @@ class WorldValidator:
                           f"Quest system does not properly support multiple quests per mob - "
                           f"quest completion will not work correctly. Each mob should have exactly one quest.")
     
+    def validate_secret_doors(self):
+        """Validate that secret doors have zone resets to close them.
+        
+        Secret doors should always be closed by zone resets, otherwise they're visible
+        and defeat the purpose of being secret.
+        """
+        for (room_vnum, direction), zone_name in self.secret_doors.items():
+            if (room_vnum, direction) not in self.door_resets:
+                direction_names = ['north', 'east', 'south', 'west', 'up', 'down']
+                dir_name = direction_names[direction] if 0 <= direction < len(direction_names) else str(direction)
+                self.error(f"{zone_name}: Room {room_vnum} has secret door to {dir_name} (direction {direction}) "
+                          f"but no zone reset to close it. Secret doors must be closed by a zone reset "
+                          f"(command D with arg1={room_vnum}, arg2={direction}, arg3=1 or 2)")
+    
     def validate_shop_inventory(self):
         """Validate that shopkeeper zone reset inventory matches shop producing list.
         
@@ -476,6 +504,9 @@ class WorldValidator:
         
         # Fifth pass: check shop inventory matches zone resets
         self.validate_shop_inventory()
+        
+        # Sixth pass: check secret doors have zone resets
+        self.validate_secret_doors()
         
         # Print results
         print(f"\nFound {len(self.all_rooms)} rooms, {len(self.all_mobs)} mobiles, {len(self.all_objects)} objects, {len(self.all_shops)} shops")

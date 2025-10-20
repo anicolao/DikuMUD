@@ -777,8 +777,11 @@ void setup_dir(FILE *fl, int room, int dir)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR;
 	else if (tmp == 2)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_PICKPROOF;
-	else
+	else if (tmp == 0)
 		world[room].dir_option[dir]->exit_info = 0;
+	else
+		/* Use the full flags value for doors with additional properties like secret doors */
+		world[room].dir_option[dir]->exit_info = tmp;
  
 	fscanf(fl, " %d ", &tmp);
 	world[room].dir_option[dir]->key = tmp;
@@ -1000,6 +1003,7 @@ void boot_zones(void)
 		fscanf(fl, " %d ", &zone_table[zon].top);
 		fscanf(fl, " %d ", &zone_table[zon].lifespan);
 		fscanf(fl, " %d ", &zone_table[zon].reset_mode);
+		zone_table[zon].last_reset_time = time(0); /* Initialize to current time */
 
 		/* read the command table */
 
@@ -1101,6 +1105,7 @@ void boot_zones(void)
 		fscanf(fl, " %d ", &zone_table[zon].top);
 		fscanf(fl, " %d ", &zone_table[zon].lifespan);
 		fscanf(fl, " %d ", &zone_table[zon].reset_mode);
+		zone_table[zon].last_reset_time = time(0); /* Initialize to current time */
 
 		/* read the command table */
 
@@ -1518,17 +1523,28 @@ void zone_update(void)
 {
 	int i;
 	struct reset_q_element *update_u, *temp;
+	time_t now;
+	int elapsed_minutes;
+
+	now = time(0);
 
 	/* enqueue zones */
 
 	for (i = 0; i <= top_of_zone_table; i++)
 	{
-		if (zone_table[i].age < zone_table[i].lifespan &&
-			zone_table[i].reset_mode)
-			(zone_table[i].age)++;
-		else
-			if (zone_table[i].age < ZO_DEAD && zone_table[i].reset_mode)
-			{
+		if (!zone_table[i].reset_mode)
+			continue;
+		
+		/* Calculate elapsed time in minutes since last reset */
+		elapsed_minutes = (now - zone_table[i].last_reset_time) / 60;
+		
+		/* Update age to match elapsed time (for compatibility/display) */
+		zone_table[i].age = elapsed_minutes;
+		
+		/* Check if zone needs reset based on wall-clock time */
+		if (elapsed_minutes >= zone_table[i].lifespan &&
+		    zone_table[i].age < ZO_DEAD)
+		{
 			/* enqueue zone */
 
 			CREATE(update_u, struct reset_q_element, 1);
@@ -1545,7 +1561,7 @@ void zone_update(void)
 			}
 
 			zone_table[i].age = ZO_DEAD;
-			}
+		}
 	}
 
 	/* dequeue zones (if possible) and reset */
@@ -1708,6 +1724,7 @@ void reset_zone(int zone)
 	}
 
 	zone_table[zone].age = 0;
+	zone_table[zone].last_reset_time = time(0);
 }
 
 #undef ZCMD
@@ -1828,6 +1845,7 @@ void reset_zone(int zone)
 	}
 
 	zone_table[zone].age = 0;
+	zone_table[zone].last_reset_time = time(0);
 }
 
 #undef ZCMD
