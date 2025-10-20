@@ -475,7 +475,7 @@ rooms:
   - direction: 2
     description: The passage continues south, partially blocked by debris.
     keywords: secret hatch concealed floor
-    door_flag: 67
+    door_flag: 65
     key_vnum: -1
     to_room: 3167
   extra_descriptions:
@@ -754,7 +754,7 @@ rooms:
   - direction: 2
     description: A concealed passage lies behind a loose stone.
     keywords: secret stone concealed loose bed bunk
-    door_flag: 67
+    door_flag: 65
     key_vnum: -1
     to_room: 3177
   extra_descriptions:
@@ -2312,6 +2312,17 @@ objects:
       gems are highly prized by collectors and jewelers.'
   affects: []
 resets:
+# Close secret doors so they remain hidden
+- command: D
+  if_flag: 0
+  arg1: 3165
+  arg2: 2
+  arg3: 1
+- command: D
+  if_flag: 0
+  arg1: 3174
+  arg2: 2
+  arg3: 1
 - command: M
   if_flag: 0
   arg1: 3500
