@@ -181,6 +181,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3763
+  - direction: 4
+    description: You can climb up to the elevated road above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3750
   extra_descriptions: []
 - vnum: 3761
   name: Northern Dead Sea Bottom
@@ -237,12 +243,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3777
-  - direction: 3
-    description: The southwestern section is to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3766
   extra_descriptions: []
 - vnum: 3763
   name: Central Dead Sea Bottom
@@ -367,11 +367,11 @@ rooms:
     key_vnum: -1
     to_room: 3763
   - direction: 1
-    description: The southern section is to the east.
+    description: The southern wilderness is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3762
+    to_room: 3768
   - direction: 3
     description: A skeleton field lies to the west.
     keywords: ''
@@ -433,8 +433,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3767
-  - direction: 1
-    description: The southwestern section is to the east.
+  - direction: 3
+    description: The southwestern section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
