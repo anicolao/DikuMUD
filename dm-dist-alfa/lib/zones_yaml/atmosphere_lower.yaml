@@ -103,8 +103,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4154
-  - direction: 5
-    description: A shaft drops down to a lower level.
+  - direction: 1
+    description: A passage extends east to a side area.
     keywords: door metal
     door_flag: 1
     key_vnum: 4250
@@ -141,8 +141,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: A shaft leads up to the collapsed section.
+  - direction: 3
+    description: A passage leads west back to the collapsed section.
     keywords: door metal
     door_flag: 1
     key_vnum: 4250
