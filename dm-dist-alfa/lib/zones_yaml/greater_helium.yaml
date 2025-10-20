@@ -1916,8 +1916,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3944
-  - direction: 0
-    description: The Bath House is to the north.
+  - direction: 1
+    description: The Bath House is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1968,8 +1968,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Healer's Hall is to the south.
+  - direction: 3
+    description: The Healer's Hall is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
