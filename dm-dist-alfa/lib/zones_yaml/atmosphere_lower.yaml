@@ -960,8 +960,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A door leads to containment cells.
+  - direction: 1
+    description: A door leads to containment cells to the east.
     keywords: door reinforced
     door_flag: 2
     key_vnum: 4253
@@ -1090,8 +1090,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The reinforced door leads back to hybrid creation.
+  - direction: 3
+    description: The reinforced door leads back west to hybrid creation.
     keywords: door reinforced
     door_flag: 2
     key_vnum: 4253
