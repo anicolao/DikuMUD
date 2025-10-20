@@ -238,12 +238,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The stairs lead up to Central Tower.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3979
   - direction: 5
     description: The stairs lead down.
     keywords: ''
@@ -256,12 +250,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3940
-  - direction: 0
-    description: City administration north.
+  - direction: 4
+    description: Stairs ascend to the guard tower.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3992
+    to_room: 3979
   extra_descriptions: []
 - vnum: 3907
   name: Ascending Stairway
@@ -302,12 +296,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3962
-  - direction: 5
-    description: Stairway down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3920
   - direction: 3
     description: Stairway west.
     keywords: ''
@@ -322,18 +310,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The stairs lead up to Scientific Academy Plaza.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3930
   - direction: 5
     description: Stairway down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3940
+  - direction: 4
+    description: The stairway ascends.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3930
+  - direction: 0
+    description: A passage leads north to another stairway landing.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3939
   extra_descriptions: []
 - vnum: 3910
   name: Temple Square
@@ -1062,7 +1056,59 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3992
+  - direction: 5
+    description: The central stairway continues down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3939
   extra_descriptions: []
+- vnum: 3938
+  name: Administrative Stairway Landing
+  description: '   This landing serves as an intermediate connection between the lower stairway and the administrative levels above. The walls are lined with crimson stone, and torches provide steady illumination. You can proceed up to the administrative offices or down to continue your descent.'
+  zone: 35
+  room_flags: 0
+  sector_type: 0
+  coordinates:
+    x: 0
+    y: 1
+    z: 4
+  exits:
+  - direction: 4
+    description: The administrative level is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
+  - direction: 5
+    description: The guard tower stairway is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3979
+- vnum: 3939
+  name: Central Stairway Landing
+  description: '   This intermediate landing provides access between the Grand Plaza below and the upper administrative levels. The architecture here is elegant, with polished crimson walls and ornate railings. Stairs lead both up and down.'
+  zone: 35
+  room_flags: 0
+  sector_type: 0
+  coordinates:
+    x: 0
+    y: 0
+    z: 4
+  exits:
+  - direction: 4
+    description: The upper stairway is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3937
+  - direction: 2
+    description: A passage leads south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3909
 - vnum: 3940
   name: Western Thoroughfare
   description: '   This broad avenue runs westward from the Grand Plaza toward the western gate.
@@ -1074,12 +1120,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 5
-    description: Grand Plaza down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3900
   - direction: 4
     description: Stairway up.
     keywords: ''
@@ -1160,12 +1200,6 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3941
   - direction: 3
     description: Inn west.
     keywords: ''
@@ -1208,12 +1242,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
-  - direction: 3
-    description: The western gate is to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3949
   - direction: 2
     description: The western gate is to the south.
     keywords: ''
@@ -1304,12 +1332,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3917
-  - direction: 0
-    description: Western Thoroughfare north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
   extra_descriptions: []
 - vnum: 3949
   name: Western Gate - Exterior
@@ -1978,6 +2000,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3906
+  - direction: 4
+    description: An administrative stairway continues upward.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3938
   extra_descriptions: []
 - vnum: 3980
   name: Eastern Tower
@@ -2216,12 +2244,6 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 5
-    description: You can go down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
   - direction: 4
     description: You can go up.
     keywords: ''
@@ -2234,6 +2256,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3937
+  - direction: 5
+    description: The administrative stairway descends.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3938
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
