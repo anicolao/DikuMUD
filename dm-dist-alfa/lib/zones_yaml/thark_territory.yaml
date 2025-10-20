@@ -1384,11 +1384,11 @@ rooms:
     key_vnum: -1
     to_room: 4046
   - direction: 2
-    description: The dead sea bottom wilderness lies to the south.
+    description: Ancient ruins lie to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3764
+    to_room: 3775
   extra_descriptions: []
 - vnum: 4048
   name: Northern Gate - Interior
