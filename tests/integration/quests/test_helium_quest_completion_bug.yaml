@@ -1,0 +1,66 @@
+# Integration test for Lesser Helium quest completion status bug
+#
+# This test verifies that completing all 3 Lesser Helium quests
+# correctly shows "Completed Quests: 3 of 3" instead of "2 of 3"
+#
+# The bug is that count_zone_quests checks if giver_vnum (mob ID) is within
+# the zone's room range, which may incorrectly count/miss quests depending
+# on mob numbering.
+
+test:
+  id: test_helium_quest_completion_bug
+  description: "Verify zone command shows 3 of 3 quests when all Lesser Helium quests completed"
+  author: Integration Test Framework
+  created: 2025-10-20
+  tags: [quest, lesser_helium, bug, PR146]
+
+setup:
+  character:
+    name: QuestComplete
+    class: warrior
+    level: 25
+  start_room: 3001  # Temple of the Jeddak in Lesser Helium
+  gold: 0
+
+steps:
+  # Use completequest command to manually set quest completion bits
+  - action: command
+    description: "Complete quest 3001 (Guard's Training)"
+    command: "completequest 3001"
+    expected:
+      - pattern: "Quest 3001 marked as completed"
+        message: "Should confirm quest 3001 completion"
+
+  - action: command
+    description: "Complete quest 3002 (Market Patrol)"
+    command: "completequest 3002"
+    expected:
+      - pattern: "Quest 3002 marked as completed"
+        message: "Should confirm quest 3002 completion"
+
+  - action: command
+    description: "Complete quest 3003 (Calot Feeding)"
+    command: "completequest 3003"
+    expected:
+      - pattern: "Quest 3003 marked as completed"
+        message: "Should confirm quest 3003 completion"
+
+  # Check zone command output
+  - action: command
+    description: "Check zone command shows 3 of 3 completed quests"
+    command: "zone"
+    expected:
+      - pattern: "Completed Quests: 3 of 3"
+        message: "Should show 3 of 3 quests completed, not 2 of 3"
+
+result:
+  should_pass: true
+  description: "Zone command should correctly count all 3 completed Lesser Helium quests"
+  notes: |
+    This test documents the bug where even with all 3 Lesser Helium quests
+    completed (3001, 3002, 3003), the zone command shows "2 of 3" instead
+    of "3 of 3".
+    
+    The bug is in count_zone_quests() which checks if quest_index[q].giver_vnum
+    is within the zone's room range, but giver_vnum is a mob number not a room
+    number. The function needs to properly map quest givers to zones.

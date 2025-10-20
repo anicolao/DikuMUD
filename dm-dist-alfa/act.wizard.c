@@ -1782,4 +1782,41 @@ void do_locate(struct char_data *ch, char *argument, int cmd)
 	}
 }
 
+/* Wizard command to manually mark a quest as completed for testing */
+void do_completequest(struct char_data *ch, char *argument, int cmd)
+{
+	char arg[MAX_INPUT_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	int quest_num;
+	extern void set_quest_completed(struct char_data *ch, int quest_num);
+	
+	if (IS_NPC(ch))
+		return;
+	
+	one_argument(argument, arg);
+	
+	if (!*arg) {
+		send_to_char("Usage: completequest <quest_number>\n\r", ch);
+		send_to_char("Example: completequest 3001\n\r", ch);
+		return;
+	}
+	
+	quest_num = atoi(arg);
+	
+	if (quest_num <= 0) {
+		send_to_char("Invalid quest number.\n\r", ch);
+		return;
+	}
+	
+	set_quest_completed(ch, quest_num);
+	
+	snprintf(buf, sizeof(buf), "Quest %d marked as completed for %s.\n\r", 
+		quest_num, GET_NAME(ch));
+	send_to_char(buf, ch);
+	
+	snprintf(buf, sizeof(buf), "%s used completequest to mark quest %d completed.",
+		GET_NAME(ch), quest_num);
+	slog(buf);
+}
+
 
