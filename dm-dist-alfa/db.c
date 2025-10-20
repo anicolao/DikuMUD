@@ -777,8 +777,11 @@ void setup_dir(FILE *fl, int room, int dir)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR;
 	else if (tmp == 2)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_PICKPROOF;
-	else
+	else if (tmp == 0)
 		world[room].dir_option[dir]->exit_info = 0;
+	else
+		/* Use the full flags value for doors with additional properties like secret doors */
+		world[room].dir_option[dir]->exit_info = tmp;
  
 	fscanf(fl, " %d ", &tmp);
 	world[room].dir_option[dir]->key = tmp;
