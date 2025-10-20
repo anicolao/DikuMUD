@@ -192,10 +192,10 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4106
-  - direction: 2
-    description: A door leads south to the mess hall.
-    keywords: door
-    door_flag: 1
+  - direction: 4
+    description: Stairs lead up to the mess hall.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4107
   - direction: 3
@@ -226,6 +226,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4105
+  - direction: 5
+    description: Stairs lead down to the administrative level.
+    keywords: stairs
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4069
   extra_descriptions: []
 - vnum: 4107
   name: Mess Hall
@@ -241,10 +247,10 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The door leads north to the quarters entrance.
-    keywords: door
-    door_flag: 1
+  - direction: 5
+    description: Stairs descend to the quarters entrance.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4105
   - direction: 2
@@ -334,10 +340,10 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4102
-  - direction: 1
-    description: A massive metal door leads east to the processing halls.
-    keywords: door heavy
-    door_flag: 2
+  - direction: 5
+    description: Stairs descend to the processing halls.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4115
   - direction: 2
@@ -375,10 +381,10 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4110
-  - direction: 2
-    description: A private door leads to the workshop.
-    keywords: door
-    door_flag: 1
+  - direction: 4
+    description: Stairs lead up to the engineering workshop.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4112
   extra_descriptions:
@@ -409,10 +415,10 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The door leads to the chief engineer's office.
-    keywords: door
-    door_flag: 1
+  - direction: 5
+    description: Stairs descend to the chief engineer's office.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4111
   - direction: 1
@@ -462,7 +468,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The processing hall extends eastward.
     keywords: ''
     door_flag: 0
@@ -474,10 +480,10 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4117
-  - direction: 3
-    description: The heavy door leads back to the corridor.
-    keywords: door heavy
-    door_flag: 2
+  - direction: 4
+    description: Stairs ascend to the main corridor.
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4110
   extra_descriptions:
@@ -508,14 +514,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A catwalk leads south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4118
-  - direction: 3
-    description: The processing hall extends west.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -557,8 +557,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4118
-  - direction: 2
-    description: Another catwalk leads south.
+  - direction: 5
+    description: Steps descend further.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -588,14 +588,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: The catwalk continues south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4119
   - direction: 3
-    description: The catwalk leads to the junction.
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -623,13 +617,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 0
-    description: The catwalk extends north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4118
+  exits: []
   extra_descriptions:
   - keywords: pumps pistons machinery
     description: 'These pumps move incomprehensible volumes of gas through the factory''s
@@ -661,7 +649,7 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4110
-  - direction: 1
+  - direction: 3
     description: A door leads to the distribution manifold.
     keywords: door
     door_flag: 1
@@ -679,8 +667,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4054
-  - direction: 2
-    description: The passage leads south.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -700,24 +688,18 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads down.
-    keywords: door heavy
-    door_flag: 2
-    key_vnum: -1
-    to_room: 4126
-  - direction: 5
-    description: The passage leads down.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4127
   - direction: 3
     description: The door leads to the corridor.
     keywords: door
     door_flag: 1
     key_vnum: -1
     to_room: 4120
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4055
   extra_descriptions:
   - keywords: maps boards displays
     description: 'These boards show Mars as a whole, with lines indicating oxygen
@@ -749,12 +731,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads down.
-    keywords: door heavy
-    door_flag: 2
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
-    to_room: 4125
+    to_room: 4054
   extra_descriptions:
   - keywords: manifold sphere
     description: 'The manifold is perfectly spherical and appears seamless. It pulses
@@ -776,19 +758,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 0
-    description: The door leads back to the control room.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4125
-  - direction: 5
-    description: The passage leads down.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4128
+  exits: []
   extra_descriptions: []
 - vnum: 4057
   name: Emergency Valve Chamber
@@ -805,14 +775,14 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The passage leads down.
-    keywords: door
-    door_flag: 1
+  - direction: 1
+    description: ''
+    keywords: ''
+    door_flag: 0
     key_vnum: -1
     to_room: 4127
   - direction: 5
-    description: Stairs descend to a restricted corridor.
+    description: You can go down back to Restricted Access Corridor.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -839,7 +809,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 5
     description: The corridor leads back north.
     keywords: ''
     door_flag: 0
@@ -883,10 +853,10 @@ rooms:
   sector_type: 0
   exits:
   - direction: 0
-    description: The secured door leads back to the corridor.
-    keywords: door secured
-    door_flag: 2
-    key_vnum: 4050
+    description: The passage continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
     to_room: 4130
   - direction: 2
     description: A radiation-shielded door leads to the core chamber itself.
@@ -1036,11 +1006,17 @@ rooms:
     key_vnum: -1
     to_room: 4142
   - direction: 4
-    description: Stairs lead up to the emergency escape route.
+    description: Stairs lead up to the main corridor.
+    keywords: stairs
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4106
+  - direction: 0
+    description: The emergency escape route leads north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4142
+    to_room: 4075
   extra_descriptions: []
 - vnum: 4070
   name: Records Office
@@ -1058,8 +1034,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The door leads back to the entrance.
+  - direction: 4
+    description: Stairs ascend.
     keywords: door
     door_flag: 1
     key_vnum: -1
@@ -1087,24 +1063,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
+  - direction: 1
     description: The corridor leads to the administrative entrance.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4140
-  - direction: 1
-    description: A door leads to the personnel office.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4143
   - direction: 2
     description: The corridor continues south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4144
+  - direction: 5
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4143
   extra_descriptions: []
 - vnum: 4072
   name: Personnel Office
@@ -1180,12 +1156,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The concealed door leads to security administration.
-    keywords: door concealed
-    door_flag: 2
-    key_vnum: 4052
-    to_room: 4144
   - direction: 5
     description: A hidden trapdoor in the floor leads down to maintenance tunnels.
     keywords: trapdoor hidden
@@ -1215,18 +1185,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
+  - direction: 5
     description: The escape route continues.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4147
-  - direction: 5
+  - direction: 2
     description: Stairs descend to the administrative section.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4069
+  - direction: 3
+    description: ''
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4074
   extra_descriptions:
   - keywords: signs evacuation
     description: 'Emergency evacuation signs point the way to safety, with distance
@@ -1247,18 +1223,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The passage leads up.
+  - direction: 1
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4055
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4056
+    to_room: 4120
   extra_descriptions: []
 - vnum: 4126
   name: Unfinished Chamber 4126
@@ -1270,13 +1240,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4054
+  exits: []
   extra_descriptions: []
 - vnum: 4127
   name: Unfinished Chamber 4127
@@ -1289,14 +1253,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4054
-  - direction: 4
-    description: The passage leads up.
+  - direction: 3
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1312,13 +1270,7 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits:
-  - direction: 4
-    description: The passage leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4056
+  exits: []
   extra_descriptions: []
 - vnum: 4130
   name: Unfinished Chamber 4130
@@ -1337,6 +1289,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4064
+  - direction: 0
+    description: The passage continues north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4120
   extra_descriptions: []
 - vnum: 4135
   name: Unfinished Chamber 4135
@@ -1439,13 +1397,13 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: A passage leads south.
+  - direction: 5
+    description: Stairs descend to offices.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4070
-  - direction: 1
+  - direction: 3
     description: A passage leads east.
     keywords: ''
     door_flag: 0
@@ -1511,7 +1469,7 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
+  - direction: 4
     description: A passage leads west.
     keywords: ''
     door_flag: 0
@@ -1535,12 +1493,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4071
-  - direction: 2
-    description: A passage leads south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4074
   extra_descriptions: []
 - vnum: 4145
   name: Unfinished Chamber 4145
@@ -1570,7 +1522,13 @@ rooms:
   zone: 41
   room_flags: 8
   sector_type: 0
-  exits: []
+  exits:
+  - direction: 1
+    description: The passage continues east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 4147
   extra_descriptions: []
 - vnum: 4147
   name: Escape Route Junction
@@ -1603,18 +1561,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 4146
-  - direction: 3
-    description: The passage leads west.
+  - direction: 4
+    description: ''
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 4075
-  - direction: 1
-    description: The passage leads east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4146
   extra_descriptions: []
 - vnum: 4148
   name: Surface Emergency Exit
