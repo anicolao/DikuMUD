@@ -1024,18 +1024,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3947
-  - direction: 5
-    description: The Bath House is below.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3990
   - direction: 2
     description: The Healer's Hall is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3987
+  - direction: 5
+    description: The South Plaza is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1220,6 +1220,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 4
+    description: The Residential District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  - direction: 3
+    description: The Common Square is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3958
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1340,18 +1352,24 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: A modest inn is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3959
   - direction: 2
     description: The poor quarter begins to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3960
+  - direction: 1
+    description: The South Plaza is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3952
+  - direction: 0
+    description: The Common Rest Inn is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3959
   extra_descriptions: []
 - vnum: 3959
   name: The Common Rest Inn
@@ -1364,8 +1382,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 3
-    description: The Common Square is to the west.
+  - direction: 2
+    description: The Common Square is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1476,6 +1494,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
+  - direction: 5
+    description: Naval Command is below.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3967
   extra_descriptions: []
 - vnum: 3965
   name: Military Barracks
@@ -1534,6 +1558,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3968
+  - direction: 4
+    description: The Airship Landing Platform is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3964
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
@@ -1886,6 +1916,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3944
+  - direction: 0
+    description: The Bath House is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3990
   extra_descriptions: []
 - vnum: 3988
   name: Training Hall
@@ -1932,12 +1968,12 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 4
-    description: The Residential District is above.
+  - direction: 2
+    description: The Healer's Hall is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3944
+    to_room: 3987
   extra_descriptions: []
 - vnum: 3991
   name: Merchant Guild Hall
