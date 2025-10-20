@@ -453,11 +453,13 @@ void affect_remove( struct char_data *ch, struct affected_type *af )
 /* Call affect_remove with every spell of spelltype "skill" */
 void affect_from_char( struct char_data *ch, byte skill)
 {
-	struct affected_type *hjp;
+	struct affected_type *hjp, *next_hjp;
 
-	for(hjp = ch->affected; hjp; hjp = hjp->next)
+	for(hjp = ch->affected; hjp; hjp = next_hjp) {
+		next_hjp = hjp->next;
 		if (hjp->type == skill)
 			affect_remove( ch, hjp );
+	}
 
 }
 

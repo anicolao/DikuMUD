@@ -2334,7 +2334,7 @@ char *fread_string(FILE *fl)
 /* release memory allocated for a char struct */
 void free_char(struct char_data *ch)
 {
-	struct affected_type *af;
+	struct affected_type *af, *next_af;
 
 	free(GET_NAME(ch));
 
@@ -2347,8 +2347,10 @@ void free_char(struct char_data *ch)
 	if(ch->player.description)
 		free(ch->player.description);
 
-	for (af = ch->affected; af; af = af->next) 
+	for (af = ch->affected; af; af = next_af) {
+		next_af = af->next;
 		affect_remove(ch, af);
+	}
 
 	free(ch);
 }
