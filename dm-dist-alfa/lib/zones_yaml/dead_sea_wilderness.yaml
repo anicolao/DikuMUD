@@ -90,11 +90,11 @@ rooms:
     key_vnum: -1
     to_room: 3753
   - direction: 5
-    description: You see a descent point to the sea bottom below.
+    description: You see a descent to the sea bottom below.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3765
+    to_room: 3763
   extra_descriptions: []
 - vnum: 3753
   name: On the Elevated Road
@@ -164,29 +164,23 @@ rooms:
   sector_type: 2
   exits:
   - direction: 0
-    description: The dead sea bottom extends north.
+    description: The sea bottom extends north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3761
   - direction: 2
-    description: The dead sea bottom stretches south.
+    description: The sea bottom extends south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3762
   - direction: 3
-    description: The sea bottom extends westward.
+    description: The sea bottom extends west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3763
-  - direction: 4
-    description: You see the elevated road far above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3750
   extra_descriptions: []
 - vnum: 3761
   name: Northern Dead Sea Bottom
@@ -201,19 +195,19 @@ rooms:
   sector_type: 2
   exits:
   - direction: 1
-    description: You see Greater Helium's walls in the distance.
+    description: A predator's den lies to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: -1
+    to_room: 3776
   - direction: 2
-    description: The sea bottom stretches south.
+    description: The sea bottom is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3760
   - direction: 3
-    description: The wilderness continues west.
+    description: The northwestern section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -232,19 +226,19 @@ rooms:
   sector_type: 2
   exits:
   - direction: 0
-    description: The sea bottom extends north.
+    description: The sea bottom is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3760
   - direction: 2
-    description: The wilderness stretches endlessly south.
+    description: A rock formation lies to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: -1
+    to_room: 3777
   - direction: 3
-    description: The sea bottom continues west.
+    description: The southwestern section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -263,31 +257,31 @@ rooms:
   sector_type: 2
   exits:
   - direction: 0
-    description: The sea bottom extends north.
+    description: The northwestern area is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3764
   - direction: 1
-    description: The eastern section lies that way.
+    description: The eastern section is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3760
   - direction: 2
-    description: The sea bottom stretches south.
+    description: The southwestern section is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3766
   - direction: 3
-    description: The sea bottom continues west.
+    description: The mid-section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3767
+    to_room: 3765
   - direction: 4
-    description: You can see the elevated road far above.
+    description: You see the elevated road high above.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -305,8 +299,14 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
+  - direction: 0
+    description: Ancient ruins lie to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3775
   - direction: 1
-    description: The northern sea bottom is to the east.
+    description: The northern section is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -317,12 +317,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3763
-  - direction: 0
-    description: Thark territory lies to the north.
+  - direction: 3
+    description: An oasis of moss lies to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 4047
+    to_room: 3778
   extra_descriptions: []
 - vnum: 3765
   name: Dead Sea Bottom - Mid-Section
@@ -336,30 +336,18 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The sea bottom extends north.
+  - direction: 1
+    description: The central area is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3763
-  - direction: 2
-    description: The sea bottom stretches south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3768
   - direction: 3
-    description: The western section lies ahead.
+    description: The western section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3767
-  - direction: 4
-    description: The elevated road is far above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3752
   extra_descriptions: []
 - vnum: 3766
   name: Southwestern Dead Sea Bottom
@@ -384,12 +372,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3762
-  - direction: 2
-    description: Distant atmosphere factories lie far south.
+  - direction: 3
+    description: A skeleton field lies to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: -1
+    to_room: 3779
   extra_descriptions: []
 - vnum: 3767
   name: Western Dead Sea Bottom
@@ -404,25 +392,25 @@ rooms:
   sector_type: 2
   exits:
   - direction: 0
-    description: The northwestern section is to the north.
+    description: An oasis lies to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3764
+    to_room: 3778
   - direction: 1
-    description: The Lesser Helium west gate is to the east.
+    description: The mid-section is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3052
+    to_room: 3765
   - direction: 2
-    description: The southwestern section is to the south.
+    description: The southern wilderness is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3768
   - direction: 3
-    description: You see the walls of Lesser Helium ahead.
+    description: The western section is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -440,13 +428,13 @@ rooms:
   sector_type: 2
   exits:
   - direction: 0
-    description: The mid-section is to the north.
+    description: The western sea bottom is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3765
+    to_room: 3767
   - direction: 1
-    description: The southwestern area is to the east.
+    description: The southwestern section is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -465,17 +453,11 @@ rooms:
   sector_type: 2
   exits:
   - direction: 1
-    description: The western dead sea bottom extends east.
+    description: The western sea bottom is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3767
-  - direction: 3
-    description: You see Lesser Helium's channel passage.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3205
   - direction: 4
     description: The elevated road is high above.
     keywords: ''
@@ -496,11 +478,11 @@ rooms:
   sector_type: 2
   exits:
   - direction: 2
-    description: The wilderness lies to the south.
+    description: The northwestern sea bottom is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3763
+    to_room: 3764
   extra_descriptions: []
 - vnum: 3776
   name: Predator's Den
@@ -533,8 +515,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 1
-    description: The sea bottom stretches east.
+  - direction: 0
+    description: The southern sea bottom is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -552,12 +534,18 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: The wilderness is to the north.
+  - direction: 1
+    description: The northwestern sea bottom is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3764
+  - direction: 2
+    description: The western sea bottom is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3767
   extra_descriptions: []
 - vnum: 3779
   name: Skeleton Field
@@ -571,8 +559,8 @@ rooms:
   room_flags: 8
   sector_type: 2
   exits:
-  - direction: 2
-    description: The southwestern section is to the south.
+  - direction: 1
+    description: The southwestern section is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
