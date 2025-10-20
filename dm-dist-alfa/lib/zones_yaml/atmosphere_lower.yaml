@@ -205,12 +205,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The passage leads to what sounds like a laboratory.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4160
   - direction: 4
     description: A ramp slopes back up.
     keywords: ''
@@ -294,8 +288,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The laboratory continues west.
+  - direction: 1
+    description: The laboratory continues east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -306,12 +300,6 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4165
-  - direction: 1
-    description: The restored passage leads back to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4155
   - direction: 4
     description: A shaft leads up.
     keywords: ''
@@ -516,12 +504,6 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4162
-  - direction: 2
-    description: A door leads to recovery chambers.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4169
   extra_descriptions:
   - keywords: equipment surgical instruments
     description: 'These surgical instruments are of the highest quality, some clearly
@@ -585,12 +567,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The door leads to the surgical suite.
-    keywords: door
-    door_flag: 1
-    key_vnum: -1
-    to_room: 4167
   - direction: 1
     description: A corridor leads to the power experiments section.
     keywords: ''
