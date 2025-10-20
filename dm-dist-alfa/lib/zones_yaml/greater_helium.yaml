@@ -288,8 +288,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3910
-  - direction: 3
-    description: You can go west back to Temple Courtyard.
+  - direction: 1
+    description: You can go east to the Temple Courtyard.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1844,8 +1844,8 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: The Great Temple is to the east.
+  - direction: 3
+    description: The Great Temple is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2054,12 +2054,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3995
-  - direction: 3
-    description: Guard Headquarters is to the west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3995
   - direction: 1
     description: City Administration is to the east.
     keywords: ''
@@ -2080,12 +2074,6 @@ rooms:
   exits:
   - direction: 2
     description: The prison is to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3994
-  - direction: 1
-    description: The Prison is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
