@@ -250,6 +250,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
+  - direction: 1
+    description: Eastern thoroughfare.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
+  - direction: 0
+    description: City administration north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
   extra_descriptions: []
 - vnum: 3907
   name: Ascending Stairway
@@ -270,6 +282,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 1
+    description: Another stairway east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3908
   extra_descriptions: []
 - vnum: 3908
   name: Ascending Stairway
@@ -290,6 +308,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 3
+    description: Stairway west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3907
   extra_descriptions: []
 - vnum: 3909
   name: Ascending Stairway
@@ -1032,6 +1056,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3993
+  - direction: 0
+    description: City administration north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3992
   extra_descriptions: []
 - vnum: 3940
   name: Western Thoroughfare
@@ -1050,18 +1080,24 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 2
-    description: Western gate south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3948
   - direction: 4
     description: Stairway up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3909
+  - direction: 3
+    description: Stairway west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3906
+  - direction: 2
+    description: The Royal Inn is south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
@@ -1088,6 +1124,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3942
+  - direction: 1
+    description: Dining hall east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3943
   extra_descriptions: []
 - vnum: 3942
   name: Inn Upstairs
@@ -1120,6 +1162,12 @@ rooms:
   exits:
   - direction: 5
     description: You can go down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3941
+  - direction: 3
+    description: Inn west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1160,12 +1208,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
-  - direction: 1
-    description: Kennels east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3947
   extra_descriptions: []
 - vnum: 3945
   name: Northern Residential Street
@@ -1206,6 +1248,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3947
+  - direction: 3
+    description: Western area.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3949
   extra_descriptions: []
 - vnum: 3947
   name: Calot Kennels
@@ -1224,12 +1272,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3946
-  - direction: 3
-    description: Back west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3944
   extra_descriptions: []
 - vnum: 3948
   name: Western Gate - Interior
@@ -1286,6 +1328,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3750
+  - direction: 1
+    description: Residential street.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3946
   extra_descriptions: []
 - vnum: 3950
   name: Eastern Gate - Interior
@@ -2174,6 +2222,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3994
+  - direction: 2
+    description: Stairway south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3937
+  - direction: 2
+    description: Stairway south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3906
   extra_descriptions: []
 - vnum: 3993
   name: Hall of Records
