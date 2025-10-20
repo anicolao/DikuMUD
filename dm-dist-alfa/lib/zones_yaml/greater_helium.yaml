@@ -38,8 +38,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
-  - direction: 3
-    description: You see the grand thoroughfare heading west toward the city gates.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -594,8 +594,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 1
-    description: The market continues eastward with more shops.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -648,8 +648,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3925
-  - direction: 3
-    description: The Market District Plaza is to the west.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1056,8 +1056,8 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: The Grand Plaza is to the east.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1068,8 +1068,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3941
-  - direction: 3
-    description: You see the western gate ahead.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1178,14 +1178,14 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3946
-  - direction: 3
-    description: You can go west back to Calot Kennels.
+  - direction: 5
+    description: Down to the kennels.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3947
-  - direction: 2
-    description: The Healer's Hall is to the south.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1242,8 +1242,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 1
-    description: You see the way out to the street.
+  - direction: 4
+    description: Up to residential district.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1262,8 +1262,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 1
-    description: The Western Thoroughfare extends back into the city.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1432,8 +1432,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3953
-  - direction: 1
-    description: The training room is to the east.
+  - direction: 4
+    description: Up to training room.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1450,8 +1450,8 @@ rooms:
   room_flags: 28
   sector_type: 0
   exits:
-  - direction: 3
-    description: The main guild hall is to the west.
+  - direction: 5
+    description: Down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1524,8 +1524,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
-  - direction: 0
-    description: The Common Rest Inn is to the north.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1542,8 +1542,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Common Square is to the south.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1566,8 +1566,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3958
-  - direction: 1
-    description: The streets wind through the poor district.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1584,8 +1584,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 3
-    description: The poor quarter continues west.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1600,8 +1600,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 2
-    description: The old docks area is to the south.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1624,8 +1624,8 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The warehouse district is to the north.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2070,14 +2070,14 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 0
-    description: The Residential District is to the north.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3944
   - direction: 1
-    description: The Bath House is to the east.
+    description: The bath house is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2129,7 +2129,7 @@ rooms:
   sector_type: 0
   exits:
   - direction: 3
-    description: The Healer's Hall is to the west.
+    description: Healer's Hall is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2174,8 +2174,8 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3940
-  - direction: 3
-    description: The Prison is to the west.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2208,14 +2208,14 @@ rooms:
   room_flags: 28
   sector_type: 0
   exits:
-  - direction: 0
-    description: The guard headquarters is to the north.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3995
-  - direction: 1
-    description: City Administration is to the east.
+  - direction: 5
+    description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2232,8 +2232,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The prison is to the south.
+  - direction: 4
+    description: You can go up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
