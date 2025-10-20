@@ -1289,12 +1289,6 @@ rooms:
     door_flag: 1
     key_vnum: -1
     to_room: 4192
-  - direction: 5
-    description: A corridor leads to a chamber with active systems.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4194
   extra_descriptions:
   - keywords: container crystalline preservation
     description: 'The container is a marvel of ancient technology, preserving not
@@ -1323,12 +1317,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: The corridor leads to the engineer's chamber.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 4193
   - direction: 2
     description: A passage leads to the main laboratory.
     keywords: ''
