@@ -30,72 +30,95 @@ static int spec_proc_capacity = 0;
 /* Initialize the special procedure system */
 void init_obj_spec_procs(void)
 {
+    FILE *fl;
+    char line[MAX_STRING_LENGTH];
+    char buf[MAX_STRING_LENGTH];
+    int vnum, target_room, xp_reward, discovery_bit, consume_item;
+    char spec_type_str[256];
+    struct obj_spec_proc_data *spec;
+    extern void slog(char *str);
+    
     /* Initial capacity for spec proc table */
     spec_proc_capacity = 10;
     CREATE(spec_proc_table, struct obj_spec_proc_data, spec_proc_capacity);
     spec_proc_count = 0;
     
-    /* Add hardcoded special procedures for sewers deep discovery */
-    /* These would normally be loaded from YAML, but for now we hardcode them */
-    
-    /* Rope + Valve (object 3224 in room 3157) - Discovery bit 31 */
-    {
-        struct obj_spec_proc_data *spec = &spec_proc_table[spec_proc_count++];
-        spec->spec_type = SPEC_PROC_VALVE_ROPE;
-        spec->target_room = 3157;
-        spec->xp_reward = 100;  /* XP reward for first discovery */
-        spec->discovery_bit = 31;  /* Use bit 31 for valve discovery */
-        spec->consume_item = 1;  /* Rope is consumed */
-        
-        /* Allocate and set messages */
-        CREATE(spec->success_msg, char, MAX_SPEC_MSG_LEN);
-        CREATE(spec->fail_msg, char, MAX_SPEC_MSG_LEN);
-        CREATE(spec->room_msg, char, MAX_SPEC_MSG_LEN);
-        
-        strncpy(spec->success_msg,
-                "You loop the rope through the pulley above the valve wheel and pull "
-                "with all your might! The rope provides the leverage needed, and with "
-                "a screech of protesting metal, the ancient valve begins to turn. "
-                "Water rushes through pipes all around you as the mechanism activates!",
-                MAX_SPEC_MSG_LEN - 1);
-        
-        strncpy(spec->fail_msg,
-                "You need to be near the valve mechanism to use the rope with it.",
-                MAX_SPEC_MSG_LEN - 1);
-        
-        strncpy(spec->room_msg,
-                "$n uses $p to activate an ancient valve mechanism!",
-                MAX_SPEC_MSG_LEN - 1);
+    /* Open the specials file */
+    if (!(fl = fopen("lib/tinyworld.specials", "r"))) {
+        slog("   No lib/tinyworld.specials file - no object special procedures loaded");
+        return;
     }
     
-    /* Iron Key + Panel (object 3221 in room 3151) - Discovery bit 32 */
-    {
-        struct obj_spec_proc_data *spec = &spec_proc_table[spec_proc_count++];
-        spec->spec_type = SPEC_PROC_KEY_PANEL;
-        spec->target_room = 3151;
-        spec->xp_reward = 75;  /* XP reward for first discovery */
-        spec->discovery_bit = 32;  /* Use bit 32 for panel discovery */
-        spec->consume_item = 0;  /* Key is not consumed */
+    /* Read special procedures from file */
+    while (fgets(line, sizeof(line), fl)) {
+        /* Skip blank lines and comments */
+        if (line[0] == '\n' || line[0] == '*')
+            continue;
         
-        /* Allocate and set messages */
-        CREATE(spec->success_msg, char, MAX_SPEC_MSG_LEN);
-        CREATE(spec->fail_msg, char, MAX_SPEC_MSG_LEN);
-        CREATE(spec->room_msg, char, MAX_SPEC_MSG_LEN);
+        /* Check for EOF marker */
+        if (line[0] == '$')
+            break;
         
-        strncpy(spec->success_msg,
-                "You insert the ancient iron key into the maintenance panel's lock. "
-                "With a satisfying click, the corroded mechanism yields and the panel "
-                "swings open, revealing a compartment that has been sealed for centuries!",
-                MAX_SPEC_MSG_LEN - 1);
-        
-        strncpy(spec->fail_msg,
-                "You need to be near the maintenance panel to use the key with it.",
-                MAX_SPEC_MSG_LEN - 1);
-        
-        strncpy(spec->room_msg,
-                "$n unlocks an ancient maintenance panel with $p!",
-                MAX_SPEC_MSG_LEN - 1);
+        /* Read vnum line */
+        if (line[0] == '#') {
+            vnum = atoi(line + 1);
+            
+            /* Read spec type, target room, xp, discovery bit, consume flag */
+            if (!fgets(line, sizeof(line), fl))
+                break;
+            sscanf(line, "%s %d %d %d %d", spec_type_str, &target_room, &xp_reward, &discovery_bit, &consume_item);
+            
+            /* Expand table if needed */
+            if (spec_proc_count >= spec_proc_capacity) {
+                spec_proc_capacity *= 2;
+                RECREATE(spec_proc_table, struct obj_spec_proc_data, spec_proc_capacity);
+            }
+            
+            /* Add new spec */
+            spec = &spec_proc_table[spec_proc_count++];
+            spec->target_room = target_room;
+            spec->xp_reward = xp_reward;
+            spec->discovery_bit = discovery_bit;
+            spec->consume_item = consume_item;
+            
+            /* Determine spec type from string */
+            if (strcmp(spec_type_str, "valve_rope") == 0) {
+                spec->spec_type = SPEC_PROC_VALVE_ROPE;
+            } else if (strcmp(spec_type_str, "key_panel") == 0) {
+                spec->spec_type = SPEC_PROC_KEY_PANEL;
+            } else {
+                slog("Unknown special procedure type in tinyworld.specials");
+                spec_proc_count--;
+                continue;
+            }
+            
+            /* Read success message (tilde-terminated) */
+            CREATE(spec->success_msg, char, MAX_SPEC_MSG_LEN);
+            if (!fgets(buf, sizeof(buf), fl)) break;
+            buf[strcspn(buf, "~")] = '\0';  /* Remove tilde */
+            strncpy(spec->success_msg, buf, MAX_SPEC_MSG_LEN - 1);
+            
+            /* Read fail message (tilde-terminated) */
+            CREATE(spec->fail_msg, char, MAX_SPEC_MSG_LEN);
+            if (!fgets(buf, sizeof(buf), fl)) break;
+            buf[strcspn(buf, "~")] = '\0';  /* Remove tilde */
+            strncpy(spec->fail_msg, buf, MAX_SPEC_MSG_LEN - 1);
+            
+            /* Read room message (tilde-terminated) */
+            CREATE(spec->room_msg, char, MAX_SPEC_MSG_LEN);
+            if (!fgets(buf, sizeof(buf), fl)) break;
+            buf[strcspn(buf, "~")] = '\0';  /* Remove tilde */
+            strncpy(spec->room_msg, buf, MAX_SPEC_MSG_LEN - 1);
+            
+            /* Store vnum mapping */
+            spec->obj_vnum = vnum;
+        }
     }
+    
+    fclose(fl);
+    
+    snprintf(buf, sizeof(buf), "   Loaded %d object special procedures", spec_proc_count);
+    slog(buf);
 }
 
 /* Free special procedure data */
@@ -121,15 +144,9 @@ struct obj_spec_proc_data *get_obj_spec_proc(int obj_vnum)
 {
     int i;
     
-    /* For now, we match based on object vnum and spec type */
-    /* Object 3224 (rope) -> SPEC_PROC_VALVE_ROPE */
-    /* Object 3221 (iron key) -> SPEC_PROC_KEY_PANEL */
-    
+    /* Search for special procedure matching the object vnum */
     for (i = 0; i < spec_proc_count; i++) {
-        if (obj_vnum == 3224 && spec_proc_table[i].spec_type == SPEC_PROC_VALVE_ROPE) {
-            return &spec_proc_table[i];
-        }
-        if (obj_vnum == 3221 && spec_proc_table[i].spec_type == SPEC_PROC_KEY_PANEL) {
+        if (spec_proc_table[i].obj_vnum == obj_vnum) {
             return &spec_proc_table[i];
         }
     }

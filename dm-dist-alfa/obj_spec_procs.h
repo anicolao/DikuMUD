@@ -16,6 +16,7 @@
 
 /* Structure to hold special procedure configuration */
 struct obj_spec_proc_data {
+    int obj_vnum;               /* Object vnum this procedure applies to */
     int spec_type;              /* Type of special procedure */
     int target_room;            /* Room where procedure works */
     char *success_msg;          /* Message on success */

@@ -70,6 +70,7 @@ class Object:
     rent: int
     extra_descriptions: List[Dict[str, str]] = field(default_factory=list)
     affects: List[Dict[str, int]] = field(default_factory=list)
+    special_procedure: Optional[Dict[str, Any]] = None
 
 
 @dataclass
@@ -519,7 +520,7 @@ class YAMLConverter:
         return data
     
     def _object_to_dict(self, obj: Object) -> dict:
-        return {
+        data = {
             'vnum': obj.vnum,
             'namelist': obj.namelist,
             'short_desc': obj.short_desc,
@@ -538,6 +539,9 @@ class YAMLConverter:
             'extra_descriptions': obj.extra_descriptions,
             'affects': obj.affects
         }
+        if obj.special_procedure:
+            data['special_procedure'] = obj.special_procedure
+        return data
     
     def _reset_to_dict(self, reset: ResetCommand) -> dict:
         data = {
@@ -596,6 +600,9 @@ class WorldBuilder:
             'qst': 'tinyworld.qst'
         }
         
+        # Collect special procedures while building objects
+        special_procedures = []
+        
         for file_type in file_types:
             all_records = []
             
@@ -609,6 +616,12 @@ class WorldBuilder:
                 elif file_type == 'obj':
                     records = data.get('objects', [])
                     all_records.extend([(o['vnum'], self._build_object(o)) for o in records])
+                    # Collect special procedures from objects
+                    for obj in records:
+                        if 'special_procedure' in obj and obj['special_procedure']:
+                            spec = obj['special_procedure'].copy()
+                            spec['vnum'] = obj['vnum']
+                            special_procedures.append(spec)
                 elif file_type == 'zon':
                     zone = data.get('zone', {})
                     resets = data.get('resets', [])
@@ -643,6 +656,15 @@ class WorldBuilder:
                     f.write("$~\n")
             
             print(f"Built {output_file}")
+        
+        # Build special procedures file if any exist
+        if special_procedures:
+            specials_file = f"{output_dir}/tinyworld.specials"
+            with open(specials_file, 'w') as f:
+                for spec in special_procedures:
+                    f.write(self._build_special_procedure(spec))
+                f.write("$~\n")
+            print(f"Built {specials_file}")
 
     def build_world_file(self, yaml_files: List[str], output_file: str, file_type: str):
         """Build a complete world file from multiple YAML zone files."""
@@ -851,6 +873,17 @@ class WorldBuilder:
         lines.append(f"{quest['complete_text']}~")
         lines.append(f"{quest['fail_text']}~")
         lines.append("S")
+        return '\n'.join(lines) + '\n'
+    
+    def _build_special_procedure(self, spec: dict) -> str:
+        """Build special procedure record."""
+        lines = []
+        lines.append(f"#{spec['vnum']}")
+        lines.append(f"{spec['type']} {spec['target_room']} {spec['xp_reward']} {spec['discovery_bit']} {1 if spec.get('consume_item', False) else 0}")
+        lines.append(f"{spec['success_msg']}~")
+        lines.append(f"{spec['fail_msg']}~")
+        lines.append(f"{spec['room_msg']}~")
+        lines.append("")
         return '\n'.join(lines) + '\n'
 
 

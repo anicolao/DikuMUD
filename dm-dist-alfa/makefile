@@ -48,6 +48,7 @@ lib/tinyworld.obj: lib/.worldfiles_built
 lib/tinyworld.zon: lib/.worldfiles_built
 lib/tinyworld.shp: lib/.worldfiles_built
 lib/tinyworld.qst: lib/.worldfiles_built
+lib/tinyworld.specials: lib/.worldfiles_built
 
 # Create empty pcobjs.obj file (stores player objects at inns, modified during gameplay)
 lib/pcobjs.obj:
@@ -57,7 +58,7 @@ lib/pcobjs.obj:
 # Main build targets
 all: validate-commands delplay dmserver zone_layout_validator worldfiles test
 
-worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/pcobjs.obj
+worldfiles: lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/tinyworld.specials lib/pcobjs.obj
 
 # Integration test helper - build dynamically on host
 ../tools/create_test_player: ../tools/create_test_player.c structs.h utils.h
@@ -78,7 +79,7 @@ integration_test_outputs:
 	@mkdir -p integration_test_outputs integration_test_outputs/shops integration_test_outputs/items integration_test_outputs/quests integration_test_outputs/zones
 
 # Pattern rule to run a single integration test and capture output
-integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/pcobjs.obj ../tools/create_test_player | integration_test_outputs
+integration_test_outputs/%.out: ../tests/integration/%.yaml dmserver lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/tinyworld.specials lib/pcobjs.obj ../tools/create_test_player | integration_test_outputs
 	@echo "Running test: $<"
 	@python3 ../tools/integration_test_runner.py ./dmserver $< > $@ 2>&1 && echo "PASSED" >> $@ || echo "FAILED" >> $@
 
@@ -178,5 +179,5 @@ obj_spec_procs.o : obj_spec_procs.c structs.h utils.h comm.h db.h handler.h inte
 delplay.o : delplay.c structs.h
 
 clean:
-	rm -f *.o dmserver delplay zone_layout_validator lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/.worldfiles_built .validate-commands-passed
+	rm -f *.o dmserver delplay zone_layout_validator lib/tinyworld.wld lib/tinyworld.mob lib/tinyworld.obj lib/tinyworld.zon lib/tinyworld.shp lib/tinyworld.qst lib/tinyworld.specials lib/.worldfiles_built .validate-commands-passed
 	rm -rf integration_test_outputs integration_test_failures

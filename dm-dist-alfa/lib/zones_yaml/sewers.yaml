@@ -1969,6 +1969,15 @@ objects:
 
       ancient doors or chests in the deeper sections of the sewers.'
   affects: []
+  special_procedure:
+    type: key_panel
+    target_room: 3151
+    xp_reward: 75
+    discovery_bit: 32
+    consume_item: false
+    success_msg: "You insert the ancient iron key into the maintenance panel's lock. With a satisfying click, the corroded mechanism yields and the panel swings open, revealing a compartment that has been sealed for centuries!"
+    fail_msg: "You need to be near the maintenance panel to use the key with it."
+    room_msg: "$n unlocks an ancient maintenance panel with $p!"
 - vnum: 3222
   namelist: backpack bag pack container
   short_desc: a worn backpack
@@ -2035,6 +2044,15 @@ objects:
 
       securing items.'
   affects: []
+  special_procedure:
+    type: valve_rope
+    target_room: 3157
+    xp_reward: 100
+    discovery_bit: 31
+    consume_item: true
+    success_msg: "You loop the rope through the pulley above the valve wheel and pull with all your might! The rope provides the leverage needed, and with a screech of protesting metal, the ancient valve begins to turn. Water rushes through pipes all around you as the mechanism activates!"
+    fail_msg: "You need to be near the valve mechanism to use the rope with it."
+    room_msg: "$n uses $p to activate an ancient valve mechanism!"
 - vnum: 3225
   namelist: lantern light oil
   short_desc: an oil lantern
