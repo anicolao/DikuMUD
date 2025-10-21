@@ -33,23 +33,17 @@ rooms:
     key_vnum: -1
     to_room: 3910
   - direction: 2
-    description: The sounds and smells of the marketplace beckon to the south.
+    description: The Market District is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3920
+    to_room: 3964
   - direction: 4
     description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3906
-  - direction: 5
-    description: The Airship Landing Platform is below.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3964
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -589,11 +583,17 @@ rooms:
   sector_type: 1
   exits:
   - direction: 0
-    description: The Grand Plaza is to the north.
+    description: Naval Command is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3900
+    to_room: 3967
+  - direction: 1
+    description: Market east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   - direction: 2
     description: You see the armory and weaponsmith district.
     keywords: ''
@@ -612,12 +612,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3991
-  - direction: 1
-    description: Market east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3921
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
@@ -1670,20 +1664,20 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
+  - direction: 0
+    description: The Grand Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
   - direction: 1
     description: The Military Barracks are to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3965
-  - direction: 4
-    description: The Grand Plaza is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3900
-  - direction: 5
-    description: Naval Command is below.
+  - direction: 2
+    description: The Naval Command area is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1740,18 +1734,24 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: You see the shipyards to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3968
-  - direction: 4
-    description: The Airship Landing Platform is above.
+  - direction: 0
+    description: The Airship Landing Platform is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3964
+  - direction: 2
+    description: The Market District is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 3
+    description: The shipyards are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3968
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
@@ -1764,8 +1764,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: Naval Command is to the north.
+  - direction: 1
+    description: Naval Command is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
