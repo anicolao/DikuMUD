@@ -30,6 +30,11 @@ static int spec_proc_capacity = 0;
 /* Initialize the special procedure system */
 void init_obj_spec_procs(void)
 {
+    extern void slog(char *str);
+    char buf[256];
+    
+    slog("DEBUG: init_obj_spec_procs called");
+    
     /* Initial capacity for spec proc table */
     spec_proc_capacity = 10;
     CREATE(spec_proc_table, struct obj_spec_proc_data, spec_proc_capacity);
@@ -66,6 +71,9 @@ void init_obj_spec_procs(void)
         strncpy(spec->room_msg,
                 "$n uses $p to activate an ancient valve mechanism!",
                 MAX_SPEC_MSG_LEN - 1);
+        
+        snprintf(buf, sizeof(buf), "DEBUG: Added rope+valve spec (vnum 3224, room 3157)");
+        slog(buf);
     }
     
     /* Iron Key + Panel (object 3221 in room 3151) - Discovery bit 32 */
@@ -95,7 +103,13 @@ void init_obj_spec_procs(void)
         strncpy(spec->room_msg,
                 "$n unlocks an ancient maintenance panel with $p!",
                 MAX_SPEC_MSG_LEN - 1);
+        
+        snprintf(buf, sizeof(buf), "DEBUG: Added key+panel spec (vnum 3221, room 3151)");
+        slog(buf);
     }
+    
+    snprintf(buf, sizeof(buf), "DEBUG: init_obj_spec_procs complete, loaded %d specs", spec_proc_count);
+    slog(buf);
 }
 
 /* Free special procedure data */
@@ -205,34 +219,62 @@ int execute_obj_spec_proc(struct char_data *ch, struct obj_data *obj,
     int result = 0;
     int obj_vnum;
     extern struct index_data *obj_index;
+    extern void slog(char *str);
+    char debug_buf[256];
+    
+    /* Debug: Send message to player so it appears in test output */
+    snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: execute_obj_spec_proc called, cmd=%d]\r\n", cmd);
+    send_to_char(debug_buf, ch);
     
     /* Only handle USE command */
-    if (cmd != CMD_USE)
+    if (cmd != CMD_USE) {
+        snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Not USE command (expected %d), returning 0]\r\n", CMD_USE);
+        send_to_char(debug_buf, ch);
         return 0;
+    }
     
     /* Get virtual number from object */
     if (obj->item_number >= 0 && obj->item_number < 99999) {
         obj_vnum = obj_index[obj->item_number].virtual;
+        snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Object vnum=%d]\r\n", obj_vnum);
+        send_to_char(debug_buf, ch);
     } else {
+        snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Invalid item_number=%d]\r\n", obj->item_number);
+        send_to_char(debug_buf, ch);
         return 0;
     }
     
     /* Get special procedure data for this object */
     spec_data = get_obj_spec_proc(obj_vnum);
-    if (!spec_data)
+    if (!spec_data) {
+        snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: No spec_data for vnum %d]\r\n", obj_vnum);
+        send_to_char(debug_buf, ch);
         return 0;
+    }
+    
+    snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Found spec_data, type=%d]\r\n", spec_data->spec_type);
+    send_to_char(debug_buf, ch);
     
     /* Execute the appropriate handler */
     switch (spec_data->spec_type) {
         case SPEC_PROC_VALVE_ROPE:
+            snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Executing valve_rope procedure]\r\n");
+            send_to_char(debug_buf, ch);
             result = spec_proc_valve_rope(ch, obj, spec_data, argument);
             break;
         case SPEC_PROC_KEY_PANEL:
+            snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Executing key_panel procedure]\r\n");
+            send_to_char(debug_buf, ch);
             result = spec_proc_key_panel(ch, obj, spec_data, argument);
             break;
         default:
+            snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Unknown spec_type=%d]\r\n", spec_data->spec_type);
+            send_to_char(debug_buf, ch);
             return 0;
     }
+    
+    snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Procedure returned %d]\r\n", result);
+    send_to_char(debug_buf, ch);
     
     return result;
 }
@@ -242,9 +284,17 @@ int spec_proc_valve_rope(struct char_data *ch, struct obj_data *obj,
                          struct obj_spec_proc_data *spec_data, char *argument)
 {
     char buf[MAX_STRING_LENGTH];
+    extern void slog(char *str);
+    char debug_buf[256];
+    
+    snprintf(debug_buf, sizeof(debug_buf), "DEBUG: spec_proc_valve_rope: room=%d, target=%d, arg='%s'", 
+             world[ch->in_room].number, spec_data->target_room, argument ? argument : "NULL");
+    slog(debug_buf);
     
     /* Check if in the correct room */
     if (world[ch->in_room].number != spec_data->target_room) {
+        snprintf(debug_buf, sizeof(debug_buf), "DEBUG: Wrong room, sending fail message");
+        slog(debug_buf);
         send_to_char(spec_data->fail_msg, ch);
         send_to_char("\r\n", ch);
         return 1;
@@ -253,9 +303,14 @@ int spec_proc_valve_rope(struct char_data *ch, struct obj_data *obj,
     /* Check if argument mentions valve/wheel/mechanism */
     if (!argument || (!strstr(argument, "valve") && !strstr(argument, "wheel") &&
                       !strstr(argument, "mechanism"))) {
+        snprintf(debug_buf, sizeof(debug_buf), "DEBUG: Argument doesn't mention valve/wheel/mechanism");
+        slog(debug_buf);
         send_to_char("Use the rope with what?\r\n", ch);
         return 1;
     }
+    
+    snprintf(debug_buf, sizeof(debug_buf), "DEBUG: Success! Activating valve");
+    slog(debug_buf);
     
     /* Success! Display success message */
     send_to_char(spec_data->success_msg, ch);
