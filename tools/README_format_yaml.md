@@ -32,7 +32,7 @@ The tool produces YAML with these formatting conventions:
 1. **List indentation**: List items (`-`) are indented 2 spaces from their parent key
 2. **List content**: Properties within list items are indented 4 spaces from the parent key  
 3. **Nested lists**: Follow the same pattern recursively
-4. **Empty strings**: Use double quotes (`""`) instead of single quotes
+4. **String quotes**: All strings use double quotes (`"`) for consistency
 5. **Multi-line strings**: Use literal block scalars (`|`) for readability
 
 ### Example
@@ -40,11 +40,15 @@ The tool produces YAML with these formatting conventions:
 ```yaml
 rooms:
   - vnum: 3001
-    name: The Temple
+    name: "The Temple"
+    description: |2-
+         You are in the temple.
+      The walls are covered in murals.
     exits:
       - direction: 0
         keywords: ""
         to_room: 3002
+        description: "You see the altar."
 ```
 
 ## Usage
@@ -79,7 +83,7 @@ make build-worldfiles
 
 - Uses `ruamel.yaml` library which provides better control over YAML formatting than PyYAML
 - Automatically detects multi-line strings (containing `\n`) and converts them to literal block scalars
-- Empty strings are explicitly formatted with double quotes
+- All strings are explicitly formatted with double quotes for consistency
 - Indent settings: `mapping=2, sequence=4, offset=2` for consistent formatting
 - Preserves the semantic meaning of the YAML (content is identical)
 - Only changes the presentation format

@@ -1,12 +1,12 @@
 zone:
   number: 30
-  name: Lesser Helium
+  name: "Lesser Helium"
   top_room: 3099
   lifespan: 30
   reset_mode: 2
 rooms:
   - vnum: 3001
-    name: The Temple of the Jeddak
+    name: "The Temple of the Jeddak"
     description: |2-
          You are in the southern end of the temple hall of Lesser Helium's great temple.
       The temple has been constructed from giant marble blocks, scarlet and yellow in
@@ -19,20 +19,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: At the northern end of the temple hall is a statue and a huge altar.
+        description: "At the northern end of the temple hall is a statue and a huge altar."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3054
       - direction: 5
-        description: You descend the huge stone steps to the temple square below.
+        description: "You descend the huge stone steps to the temple square below."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3005
     extra_descriptions: []
   - vnum: 3002
-    name: Noble's Inner Chamber
+    name: "Noble's Inner Chamber"
     description: |2-
          This is the inner chamber of the Noble's Guild, where matters of state and
       diplomacy are discussed.  Rich tapestries depicting the history of Helium hang
@@ -43,14 +43,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 1
-        description: You see your favorite place, the common room.
+        description: "You see your favorite place, the common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3003
     extra_descriptions: []
   - vnum: 3003
-    name: Noble's Common Room
+    name: "Noble's Common Room"
     description: |2-
          This elegant common room is reserved for members of noble houses.  Fine
       Barsoomian furnishings of rare woods and precious metals are arranged around the
@@ -61,19 +61,19 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the entrance.
+        description: "You see the entrance."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3004
       - direction: 3
-        description: You see the inner sanctum.
+        description: "You see the inner sanctum."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3002
     extra_descriptions:
-      - keywords: sign
+      - keywords: "sign"
         description: |-
           The sign reads:
           Free instructions provided by the waiter:
@@ -82,7 +82,7 @@ rooms:
              List - The waiter will show you all the different drinks and
                     specialities, and tell the price of each.
   - vnum: 3004
-    name: Entrance to Noble's Guild
+    name: "Entrance to Noble's Guild"
     description: |2-
          The entrance hall is an elegant chamber with polished stone floors and banners
       of the great houses of Helium.  The exit leads east to the temple plaza.  A small
@@ -92,20 +92,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the common room, richly decorated with Barsoomian furniture.
+        description: "You see the common room, richly decorated with Barsoomian furniture."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3003
       - direction: 1
-        description: You see the Temple Plaza.
+        description: "You see the Temple Plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3005
     extra_descriptions: []
   - vnum: 3005
-    name: The Temple Plaza
+    name: "The Temple Plaza"
     description: |2-
          You are standing on the temple plaza of Lesser Helium.  Huge marble steps lead
       up to the temple gate.  The entrance to the Noble's Guild is to the west, and the
@@ -116,32 +116,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: The huge marble steps lead up to the temple.
+        description: "The huge marble steps lead up to the temple."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3001
       - direction: 1
-        description: You see the Traveler's Rest Inn.
+        description: "You see the Traveler's Rest Inn."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3006
       - direction: 2
-        description: You see the Market Plaza.
+        description: "You see the Market Plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3014
       - direction: 3
-        description: You see the entrance to the Noble's Guild.
+        description: "You see the entrance to the Noble's Guild."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3004
     extra_descriptions: []
   - vnum: 3006
-    name: Entrance to the Traveler's Rest Inn
+    name: "Entrance to the Traveler's Rest Inn"
     description: |2-
          You are standing in the entrance hall of the Traveler's Rest Inn.  The hall
       has been decorated with simple but elegant Martian furnishings.  A small
@@ -151,26 +151,26 @@ rooms:
     sector_type: 0
     exits:
       - direction: 1
-        description: You see the common room.
+        description: "You see the common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3007
       - direction: 3
-        description: You see the temple plaza.
+        description: "You see the temple plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3005
       - direction: 4
-        description: You see the room reception.
+        description: "You see the room reception."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3008
     extra_descriptions: []
   - vnum: 3007
-    name: The Traveler's Common Room
+    name: "The Traveler's Common Room"
     description: |2-
          You are in the inn's common room.  The serving counter is set against the northern
       wall, with ancient Barsoomian script carved into its surface.  A brazier burns in
@@ -182,13 +182,13 @@ rooms:
     sector_type: 0
     exits:
       - direction: 3
-        description: You see the exit to the entrance hall.
+        description: "You see the exit to the entrance hall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3006
     extra_descriptions:
-      - keywords: sign
+      - keywords: "sign"
         description: |-
           The sign reads:
           Services provided by the Traveler's Rest Inn.
@@ -196,12 +196,12 @@ rooms:
              Buy  - Buy refreshments from the innkeeper.
              List - The innkeeper will show you all available food and drink,
                     with prices in tanpi (Martian currency).
-      - keywords: writing carving carvings symbols symbol
+      - keywords: "writing carving carvings symbols symbol"
         description: |-
           The ancient script depicts scenes of Helium's founding and great battles against
           the green hordes.  The craftsmanship is exquisite.
   - vnum: 3008
-    name: The Inn Reception
+    name: "The Inn Reception"
     description: |2-
          You are standing in the reception area.  The staircase leads down to the
       entrance hall.  A small sign made of precious metal sits on the counter.
@@ -210,13 +210,13 @@ rooms:
     sector_type: 0
     exits:
       - direction: 5
-        description: You see the entrance hall.
+        description: "You see the entrance hall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3006
     extra_descriptions:
-      - keywords: sign
+      - keywords: "sign"
         description: |-
           Rooms are expensive but good!  You may:
 
@@ -229,7 +229,7 @@ rooms:
                                        PAY YOUR RENT!
                           WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
   - vnum: 3009
-    name: The Provisions Merchant
+    name: "The Provisions Merchant"
     description: |2-
          You are standing inside a provisions shop.  The pleasant aroma of Martian bread
       and preserved meats fills the room.  Food supplies are arranged in precise order
@@ -240,25 +240,25 @@ rooms:
     sector_type: 0
     exits:
       - direction: 5
-        description: Stairs lead down to the main street.
+        description: "Stairs lead down to the main street."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3013
     extra_descriptions:
-      - keywords: food bread meat
+      - keywords: "food bread meat"
         description: |
           The Martian bread is dense and nutritious, made from grain grown in the hydroponic
           gardens of Helium.  The preserved meats come from thoats and other game animals of
           the dead sea bottoms.  Everything looks fresh and appetizing.
-      - keywords: sign
+      - keywords: "sign"
         description: |-
           Services provided by this establishment:
 
              Buy  - Purchase provisions for your journeys.
              List - The merchant will show you available goods and their prices.
   - vnum: 3010
-    name: The General Merchant
+    name: "The General Merchant"
     description: |2-
          You are inside a general merchant's shop.  All sorts of useful items are displayed
       on shelves behind the counter, carefully organized.
@@ -268,13 +268,13 @@ rooms:
     sector_type: 0
     exits:
       - direction: 5
-        description: Stairs lead down to the main street.
+        description: "Stairs lead down to the main street."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3015
     extra_descriptions:
-      - keywords: note
+      - keywords: "note"
         description: |-
           The note reads:
 
@@ -284,7 +284,7 @@ rooms:
                     pay for your item.
             Sell  - Sell an item.
   - vnum: 3011
-    name: The Weapon Smith
+    name: "The Weapon Smith"
     description: |2-
          You are inside a weapon smith's shop.  Swords, daggers, and radium pistols line
       the walls.  A small notice is carved on the counter.
@@ -293,13 +293,13 @@ rooms:
     sector_type: 0
     exits:
       - direction: 5
-        description: Stairs lead down to the main concourse.
+        description: "Stairs lead down to the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3016
     extra_descriptions:
-      - keywords: note notice
+      - keywords: "note notice"
         description: |-
           The notice reads:
 
@@ -308,7 +308,7 @@ rooms:
             Value - The smith will appraise your weapons.
             Sell  - Sell weapons to the smith.
   - vnum: 3012
-    name: Main Concourse
+    name: "Main Concourse"
     description: |2-
          You are at the western end of Lesser Helium's main concourse.  South of here is
       the entrance to the Scientific Academy.  The concourse continues east towards the
@@ -319,32 +319,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: You see the scientific supply shop.
+        description: "You see the scientific supply shop."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3033
       - direction: 1
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3013
       - direction: 2
-        description: You see the entrance to the Scientific Academy.
+        description: "You see the entrance to the Scientific Academy."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3017
       - direction: 3
-        description: You see the city gate.
+        description: "You see the city gate."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3040
     extra_descriptions: []
   - vnum: 3013
-    name: Main Concourse
+    name: "Main Concourse"
     description: |2-
          You are on the main concourse of Lesser Helium.  South of here is the entrance
       to the Armory, and stairs lead up to the provisions merchant to the north.  East of here is the
@@ -354,32 +354,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: Stairs lead up to the provisions merchant.
+        description: "Stairs lead up to the provisions merchant."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3009
       - direction: 1
-        description: You see the market plaza.
+        description: "You see the market plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3014
       - direction: 2
-        description: You see the armory.
+        description: "You see the armory."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3020
       - direction: 3
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3012
     extra_descriptions: []
   - vnum: 3014
-    name: Market Plaza
+    name: "Market Plaza"
     description: |2-
          You are standing on the market plaza, the heart of Lesser Helium.
       A magnificent statue commemorating the unification of the Twin Cities stands in the
@@ -390,36 +390,36 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: You see the temple plaza.
+        description: "You see the temple plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3005
       - direction: 1
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3015
       - direction: 5
-        description: Steps descend to the common plaza in the lower district.
+        description: "Steps descend to the common plaza in the lower district."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3025
       - direction: 3
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3013
     extra_descriptions:
-      - keywords: statue
+      - keywords: "statue"
         description: |-
           The statue depicts John Carter and Dejah Thoris, representing the alliance between
           Earth and Helium that secured Mars' future.  It is carved from scarlet marble.
   - vnum: 3015
-    name: The Main Concourse
+    name: "The Main Concourse"
     description: |2-
          You are on the main concourse.  Stairs lead up to the general merchant
       to the north, and the concourse continues east.  To the west you see the market plaza and to
@@ -429,32 +429,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: Stairs lead up to the general merchant.
+        description: "Stairs lead up to the general merchant."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3010
       - direction: 1
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3016
       - direction: 2
-        description: You see the jeweler's shop.
+        description: "You see the jeweler's shop."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3034
       - direction: 3
-        description: You see the market plaza.
+        description: "You see the market plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3014
     extra_descriptions: []
   - vnum: 3016
-    name: The Main Concourse
+    name: "The Main Concourse"
     description: |2-
          The main concourse continues here, stairs lead up to the weapon smith to the north and to the
       south is the Warriors Guild.  To the east is the city's east gate and to the west
@@ -464,52 +464,52 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: Stairs lead up to the weapon smith.
+        description: "Stairs lead up to the weapon smith."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3011
       - direction: 1
-        description: You see the city's east gate.
+        description: "You see the city's east gate."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3041
       - direction: 2
-        description: You see the Warriors Guild.
+        description: "You see the Warriors Guild."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3021
       - direction: 3
-        description: You see the main concourse leading to the market plaza.
+        description: "You see the main concourse leading to the market plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3015
     extra_descriptions: []
   - vnum: 3017
-    name: Entrance to Scientific Academy
-    description: '   The entrance hall is a small chamber lit by radium bulbs set into the ceiling.'
+    name: "Entrance to Scientific Academy"
+    description: "   The entrance hall is a small chamber lit by radium bulbs set into the ceiling."
     zone: 30
     room_flags: 8
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3012
       - direction: 2
-        description: You see the academy common room.
+        description: "You see the academy common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3018
     extra_descriptions: []
   - vnum: 3018
-    name: Scientific Academy Common Room
+    name: "Scientific Academy Common Room"
     description: |2-
          The common room is one of the most fascinating in the city.  Holographic
       projections of Barsoomian fauna and planetary maps float in the air.  Elegant
@@ -519,20 +519,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the entrance hall.
+        description: "You see the entrance hall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3017
       - direction: 1
-        description: You see the research laboratory.
+        description: "You see the research laboratory."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3019
     extra_descriptions: []
   - vnum: 3019
-    name: Scientific Research Laboratory
+    name: "Scientific Research Laboratory"
     description: |2-
          This is the research laboratory of the Scientific Academy.  Ancient stone
       arches over numerous work tables cluttered with chemical apparatus, radium
@@ -544,14 +544,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 3
-        description: You see the common room.
+        description: "You see the common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3018
     extra_descriptions: []
   - vnum: 3020
-    name: The Armory
+    name: "The Armory"
     description: |2-
          The armory displays all kinds of armor on the walls and in cases.  You see
       leather harnesses, metal helmets, and protective gear typical of Martian warriors.
@@ -561,13 +561,13 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3013
     extra_descriptions:
-      - keywords: note notice
+      - keywords: "note notice"
         description: |2-
             Trading commands:
 
@@ -578,7 +578,7 @@ rooms:
 
                   PRICES ARE FIXED - NO CREDIT EXTENDED
   - vnum: 3021
-    name: Entrance Hall to the Warriors Guild
+    name: "Entrance Hall to the Warriors Guild"
     description: |2-
          The entrance hall to the Warriors Guild.  Weapons and trophies from battles
       across Barsoom line the walls.  To the east is the common room and to the north
@@ -588,20 +588,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3016
       - direction: 1
-        description: You see the warriors' common room, sounds of combat practice echo from within.
+        description: "You see the warriors' common room, sounds of combat practice echo from within."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3022
     extra_descriptions: []
   - vnum: 3022
-    name: The Warriors Common Room
+    name: "The Warriors Common Room"
     description: |2-
          The warriors' common room is functional rather than elegant.  Training equipment
       and weapon racks line the walls.  To the south is the practice yard, and to the
@@ -611,20 +611,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the practice yard.
+        description: "You see the practice yard."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3023
       - direction: 3
-        description: You see the entrance hall.
+        description: "You see the entrance hall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3021
     extra_descriptions: []
   - vnum: 3023
-    name: The Practice Yard
+    name: "The Practice Yard"
     description: |2-
          The practice yard of the warriors.  Sand covers the ground where warriors spar
       with swords and practice combat.  To the north is the common room.  A shaft leads
@@ -634,14 +634,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the common room.
+        description: "You see the common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3022
     extra_descriptions: []
   - vnum: 3024
-    name: Eastern End of Lower Quarter
+    name: "Eastern End of Lower Quarter"
     description: |2-
          You are in the lower quarter of Lesser Helium.  South of here is a poor inn
       and to the east you see the common plaza.  The alley continues further west.
@@ -650,26 +650,26 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: You see the common plaza.
+        description: "You see the common plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3025
       - direction: 2
-        description: You see the poor inn.
+        description: "You see the poor inn."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3048
       - direction: 3
-        description: You see the lower quarter.
+        description: "You see the lower quarter."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3044
     extra_descriptions: []
   - vnum: 3025
-    name: The Common Plaza
+    name: "The Common Plaza"
     description: |2-
          The common plaza where citizens gather and converse.  To the west is the lower
       quarter and to the east is a shadowy alley.  Steps lead up to the market plaza above.
@@ -679,32 +679,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: Steps lead up to the market plaza.
+        description: "Steps lead up to the market plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3014
       - direction: 1
-        description: You see the shadowy alley.
+        description: "You see the shadowy alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3026
       - direction: 2
-        description: You see the waste disposal.
+        description: "You see the waste disposal."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3030
       - direction: 3
-        description: You see the lower quarter.
+        description: "You see the lower quarter."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3024
     extra_descriptions: []
   - vnum: 3026
-    name: The Shadowy Alley
+    name: "The Shadowy Alley"
     description: |2-
          A shadowy alley in the less reputable part of Lesser Helium.  To the west is
       the common plaza and to the south is the Assassins Guild (though few acknowledge
@@ -714,30 +714,30 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: The alley continues east.
+        description: "The alley continues east."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3045
       - direction: 2
-        description: You see a nondescript entrance.
+        description: "You see a nondescript entrance."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3027
       - direction: 3
-        description: You see the common plaza.
+        description: "You see the common plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3025
     extra_descriptions:
-      - keywords: guild entrance
+      - keywords: "guild entrance"
         description: |-
           The entrance is deliberately unmarked.  Those who belong here know where to go.
           Those who don't... shouldn't be here.
   - vnum: 3027
-    name: Entrance Hall to the Assassins Guild
+    name: "Entrance Hall to the Assassins Guild"
     description: |2-
          The entrance hall to the assassins' guild.  A place where secrets are currency
       and careless words can be fatal.  To the north is the shadowy alley and to the
@@ -747,20 +747,20 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the shadowy alley.
+        description: "You see the shadowy alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3026
       - direction: 1
-        description: You see the guild's common room, draped in shadows.
+        description: "You see the guild's common room, draped in shadows."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3028
     extra_descriptions: []
   - vnum: 3028
-    name: The Assassins Common Room
+    name: "The Assassins Common Room"
     description: |2-
          The common room of the assassins.  The furnishings are sparse and functional,
       with weapons concealed in shadows.  To the south is the training yard, and to
@@ -770,24 +770,24 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the training yard.
+        description: "You see the training yard."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3029
       - direction: 3
-        description: You see the entrance hall.
+        description: "You see the entrance hall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3027
     extra_descriptions:
-      - keywords: furniture weapons shadows
+      - keywords: "furniture weapons shadows"
         description: |-
           The furniture is designed for function, not comfort.  Hidden compartments and
           weapon caches are built into every piece.
   - vnum: 3029
-    name: The Training Yard
+    name: "The Training Yard"
     description: |2-
          The secret training yard where assassins practice their deadly arts.  To the
       north is the common room.  A shaft leads down to hidden chambers below.
@@ -796,14 +796,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the common room.
+        description: "You see the common room."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3028
     extra_descriptions: []
   - vnum: 3030
-    name: The Waste Disposal
+    name: "The Waste Disposal"
     description: |2-
          The waste disposal area where refuse from the city is processed.  Through the
       accumulated waste you can see access points to the underground water reclamation
@@ -814,20 +814,20 @@ rooms:
     sector_type: 2
     exits:
       - direction: 0
-        description: You see the common plaza.
+        description: "You see the common plaza."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3025
       - direction: 5
-        description: A narrow opening descends into darkness and the smell of decay.
+        description: "A narrow opening descends into darkness and the smell of decay."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3150
     extra_descriptions: []
   - vnum: 3031
-    name: The Calot Shop
+    name: "The Calot Shop"
     description: |2-
          The calot shop is a small crowded store, full of pens containing calots,
       apts, and other Martian beasts available as companions.  A sign carved in stone
@@ -837,19 +837,19 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: The alley is to the south.
+        description: "The alley is to the south."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3045
       - direction: 3
-        description: The holding pens are to the west.
+        description: "The holding pens are to the west."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3032
     extra_descriptions:
-      - keywords: sign
+      - keywords: "sign"
         description: |
           The sign reads:
 
@@ -866,7 +866,7 @@ rooms:
 
            By order of the Master Calot Keeper
   - vnum: 3032
-    name: Calot Holding Pens
+    name: "Calot Holding Pens"
     description: |2-
          This is the holding area where the calot merchant keeps his beasts.
       Cages line the walls containing various creatures from across Barsoom.
@@ -875,14 +875,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 1
-        description: The calot shop is to the east.
+        description: "The calot shop is to the east."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3031
     extra_descriptions: []
   - vnum: 3033
-    name: The Scientific Supply Shop
+    name: "The Scientific Supply Shop"
     description: |2-
          You are in a small room that smells of rare chemicals and scientific reagents.
       A large counter divides the room, and on the shelves behind it are numerous containers,
@@ -892,24 +892,24 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3012
     extra_descriptions:
-      - keywords: jars bottles containers
+      - keywords: "jars bottles containers"
         description: |-
           Some are transparent, revealing colored chemical powders, biological specimens,
           and rare minerals from across Barsoom.
-      - keywords: books texts
+      - keywords: "books texts"
         description: |-
           Ancient Barsoomian scientific texts, some dating back to when Mars was young
           and the seas still flowed.
-      - keywords: scrolls schematics
-        description: Technical diagrams and formulae, carefully preserved in protective cases.
+      - keywords: "scrolls schematics"
+        description: "Technical diagrams and formulae, carefully preserved in protective cases."
   - vnum: 3034
-    name: The Jeweler's Shop
+    name: "The Jeweler's Shop"
     description: |2-
          You are in a small, elegantly furnished room.  Soft radium light from fixtures
       on the walls reflects off the polished surface of the display cases containing
@@ -920,19 +920,19 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3015
     extra_descriptions:
-      - keywords: lamps fixtures light
+      - keywords: "lamps fixtures light"
         description: |-
           Radium bulbs set in precious metal fixtures provide steady, soft illumination
           that never dims.
-      - keywords: counter cases
-        description: Display cases of polished stone showcase the jeweler's finest work.
-      - keywords: sign
+      - keywords: "counter cases"
+        description: "Display cases of polished stone showcase the jeweler's finest work."
+      - keywords: "sign"
         description: |-
           The golden letters read:
 
@@ -941,7 +941,7 @@ rooms:
                   'sell <item>' to sell an item and
                   'value <item>' to have the jeweler appraise an item.
   - vnum: 3035
-    name: The Leather Worker's Shop
+    name: "The Leather Worker's Shop"
     description: |2-
          The smell of curing leather fills this large room.  Along the walls are shelves
       containing hides from thoats, banths, and other Martian creatures.  A brazier in
@@ -952,25 +952,25 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the alley.
+        description: "You see the alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3044
     extra_descriptions:
-      - keywords: brazier
+      - keywords: "brazier"
         description: |-
           A metal brazier containing hot coals for heating leather-working tools and
           treatment chemicals.
-      - keywords: table
+      - keywords: "table"
         description: |-
           A sturdy work table made from rare hardwood, its surface scarred by years of
           leather crafting.  Tools are neatly arranged along one edge.
-      - keywords: hides leather
+      - keywords: "hides leather"
         description: |-
           Thoat leather is tough and durable, banth hide is supple yet strong - the finest
           materials for Martian harnesses and gear.
-      - keywords: sign
+      - keywords: "sign"
         description: |-
           The bone sign reads:
 
@@ -979,7 +979,7 @@ rooms:
                   'sell <item>' to sell an item and
                   'value <item>' to have the leather worker appraise an item.
   - vnum: 3040
-    name: Inside the West Gate of Lesser Helium
+    name: "Inside the West Gate of Lesser Helium"
     description: |2-
          You are by two defensive towers built into the city wall and connected by a
       footbridge spanning the massive gate.  The main concourse leads east and Wall
@@ -989,43 +989,43 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3012
       - direction: 2
-        description: You see Wall Road running along the inner side of the city wall.
+        description: "You see Wall Road running along the inner side of the city wall."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3042
       - direction: 3
-        description: The city gate is to the west.
-        keywords: gate
+        description: "The city gate is to the west."
+        keywords: "gate"
         door_flag: 1
         key_vnum: 3133
         to_room: 3052
     extra_descriptions:
-      - keywords: bridge footbridge
+      - keywords: "bridge footbridge"
         description: |-
           It is too high up to reach but it looks as if one easily could walk across it
           from one tower to the other.
-      - keywords: gate
+      - keywords: "gate"
         description: |-
           It is a set of very big double doors made from hard wood.  They have been
           reinforced with large iron bands to make them even more sturdy.  One of the
           doors is equipped with a very big lock.
-      - keywords: tower towers
+      - keywords: "tower towers"
         description: |-
           Both of the towers are built from large grey rocks that have been fastened to
           each other with some kind of mortar, just like the city wall.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3041
-    name: Inside the East Gate of Lesser Helium
+    name: "Inside the East Gate of Lesser Helium"
     description: |2-
          You are by two defensive towers built into the city wall and connected by a
       footbridge spanning the massive gate.  The main concourse leads west from here.
@@ -1034,36 +1034,36 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: You see the city gate.
-        keywords: gate
+        description: "You see the city gate."
+        keywords: "gate"
         door_flag: 1
         key_vnum: 3133
         to_room: 3053
       - direction: 3
-        description: You see the main concourse.
+        description: "You see the main concourse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3016
     extra_descriptions:
-      - keywords: bridge footbridge
+      - keywords: "bridge footbridge"
         description: |-
           The footbridge connects the two gate towers high above the gate mechanism.
           Guards can cross to coordinate defense of the city.
-      - keywords: gate
+      - keywords: "gate"
         description: |-
           Massive gates made from rare hardwood and reinforced with metal bands.  The
           locking mechanism is intricate and secure.
-      - keywords: tower towers
+      - keywords: "tower towers"
         description: |-
           The defensive towers are built from the same ancient stone as the city walls,
           constructed using techniques from when Mars was young.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3042
-    name: Wall Road
+    name: "Wall Road"
     description: |2-
          You are walking along Wall Road next to the western defensive wall.  The road
       continues south and the west gate is just north of here.
@@ -1072,24 +1072,24 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: You see the city gate.
+        description: "You see the city gate."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3040
       - direction: 2
-        description: The road continues further south.
+        description: "The road continues further south."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3043
     extra_descriptions:
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3043
-    name: Wall Road
+    name: "Wall Road"
     description: |2-
          You are walking along Wall Road next to the western defensive wall.  The road
       continues north and south.  Ancient script is carved into the wall here.
@@ -1098,28 +1098,28 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: The road continues further north.
+        description: "The road continues further north."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3042
       - direction: 2
-        description: The road continues further south.
+        description: "The road continues further south."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3047
     extra_descriptions:
-      - keywords: letters script
+      - keywords: "letters script"
         description: |-
           Ancient Barsoomian script, barely legible with age.  It appears to be a warning
           or perhaps a philosophical question about duty and trust.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3044
-    name: Lower Quarter Alley
+    name: "Lower Quarter Alley"
     description: |2-
          You are in a narrow alley in the lower quarter, leading east.  The
       leather worker's shop is to the north.
@@ -1128,20 +1128,20 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: The leather shop is to the north.
+        description: "The leather shop is to the north."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3035
       - direction: 1
-        description: The alley leads east.
+        description: "The alley leads east."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3024
     extra_descriptions: []
   - vnum: 3045
-    name: Alley at Channel Edge
+    name: "Alley at Channel Edge"
     description: |2-
          You are standing in an alley which continues east and west.  Steps descend
       south to the edge of the ancient dried channel.  To the north is a shop.
@@ -1150,32 +1150,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: The calot shop is to the north.
+        description: "The calot shop is to the north."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3031
       - direction: 1
-        description: The alley leads east.
+        description: "The alley leads east."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3046
       - direction: 5
-        description: Steps descend to the channel edge.
+        description: "Steps descend to the channel edge."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3049
       - direction: 3
-        description: The alley leads west.
+        description: "The alley leads west."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3026
     extra_descriptions: []
   - vnum: 3046
-    name: Eastern End of Alley
+    name: "Eastern End of Alley"
     description: |2-
          You are standing at the eastern end of the alley.  The city wall blocks further
       progress to the east.  An old warehouse is directly south of here.
@@ -1184,20 +1184,20 @@ rooms:
     sector_type: 1
     exits:
       - direction: 2
-        description: You see the warehouse.
+        description: "You see the warehouse."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3050
       - direction: 3
-        description: You see the alley.
+        description: "You see the alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3045
     extra_descriptions: []
   - vnum: 3047
-    name: Wall Road
+    name: "Wall Road"
     description: |2-
          You are standing on Wall Road next to the western city wall which continues
       north.  South of here is a bridge spanning the ancient dried channel.
@@ -1206,24 +1206,24 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: You see the road.
+        description: "You see the road."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3043
       - direction: 2
-        description: You see the bridge.
+        description: "You see the bridge."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3051
     extra_descriptions:
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3048
-    name: Poor Inn
+    name: "Poor Inn"
     description: |2-
          You are inside a run-down inn in the lower quarter.  The establishment has
       seen better days, and maintenance has been... lacking.
@@ -1232,14 +1232,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the alley.
+        description: "You see the alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3024
     extra_descriptions: []
   - vnum: 3049
-    name: Channel Edge
+    name: "Channel Edge"
     description: |2-
         You are at the edge of the ancient dried channel.  South of here the ground
       slopes down into the channel floor, which once carried water but now is covered
@@ -1249,20 +1249,20 @@ rooms:
     sector_type: 1
     exits:
       - direction: 4
-        description: Steps lead back up to the alley.
+        description: "Steps lead back up to the alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3045
       - direction: 2
-        description: You see the channel floor below, covered in ochre moss.
+        description: "You see the channel floor below, covered in ochre moss."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3203
     extra_descriptions: []
   - vnum: 3050
-    name: Abandoned Warehouse
+    name: "Abandoned Warehouse"
     description: |2-
          You are inside an old abandoned warehouse.  Dim light filters through cracks
       in the boarded windows above.  Dust covers everything, and the place shows no
@@ -1272,14 +1272,14 @@ rooms:
     sector_type: 0
     exits:
       - direction: 0
-        description: You see the alley.
+        description: "You see the alley."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3046
     extra_descriptions: []
   - vnum: 3051
-    name: On the Bridge
+    name: "On the Bridge"
     description: |2-
          You are standing on a stone bridge spanning the ancient dried channel.  The
       bridge extends from the western city wall, and the channel floor lies ten feet
@@ -1289,32 +1289,32 @@ rooms:
     sector_type: 1
     exits:
       - direction: 0
-        description: You see the road.
+        description: "You see the road."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3047
       - direction: 2
-        description: The path south leads into the dead sea bottom toward the Atmosphere Factory.
+        description: "The path south leads into the dead sea bottom toward the Atmosphere Factory."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3100
     extra_descriptions:
-      - keywords: bridge
+      - keywords: "bridge"
         description: |-
           The bridge is constructed from ancient stone, matching the city wall in both
           material and construction technique.  It has stood for countless ages.
-      - keywords: channel floor
+      - keywords: "channel floor"
         description: |-
           The dried channel floor lies below, covered in ochre moss.  The ancient waterway
           stretches into the distance.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3052
-    name: Outside the West Gate of Lesser Helium
+    name: "Outside the West Gate of Lesser Helium"
     description: |2-
          You are outside the western gate of Lesser Helium, by two defensive towers
       connected by a footbridge.  To the west stretches the dead sea bottom, its ochre
@@ -1324,36 +1324,36 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: The city gate is to the east.
-        keywords: gate
+        description: "The city gate is to the east."
+        keywords: "gate"
         door_flag: 1
         key_vnum: 3133
         to_room: 3040
       - direction: 3
-        description: The dead sea bottom wilderness extends to the west.
+        description: "The dead sea bottom wilderness extends to the west."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3767
     extra_descriptions:
-      - keywords: bridge footbridge
+      - keywords: "bridge footbridge"
         description: |-
           The footbridge connects the two gate towers high above.  Guards patrol it to
           watch both approaches to the city.
-      - keywords: gate
+      - keywords: "gate"
         description: |-
           Massive gates of rare hardwood reinforced with metal bands.  The gates represent
           centuries of Helium's defensive tradition.
-      - keywords: tower towers
+      - keywords: "tower towers"
         description: |-
           The defensive towers are built from ancient stone, their construction techniques
           lost to time but their strength enduring.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3053
-    name: Outside the East Gate of Lesser Helium
+    name: "Outside the East Gate of Lesser Helium"
     description: |2-
          You are outside the eastern gate of Lesser Helium, by two defensive towers
       connected by a footbridge.  To the east, the elevated roadway stretches toward
@@ -1363,36 +1363,36 @@ rooms:
     sector_type: 1
     exits:
       - direction: 1
-        description: You see the elevated roadway leading toward Greater Helium.
+        description: "You see the elevated roadway leading toward Greater Helium."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3754
       - direction: 3
-        description: You see the city gate.
-        keywords: gate
+        description: "You see the city gate."
+        keywords: "gate"
         door_flag: 1
         key_vnum: 3133
         to_room: 3041
     extra_descriptions:
-      - keywords: bridge footbridge
+      - keywords: "bridge footbridge"
         description: |-
           The footbridge connects the two gate towers high above.  Guards patrol it to
           watch the approaches from Greater Helium and beyond.
-      - keywords: gate
+      - keywords: "gate"
         description: |-
           Massive gates of rare hardwood reinforced with metal bands.  The gates bear the
           seal of Helium - twin cities united.
-      - keywords: tower towers
+      - keywords: "tower towers"
         description: |-
           The defensive towers are built from ancient stone, their construction techniques
           lost to time but their strength enduring.
-      - keywords: wall
+      - keywords: "wall"
         description: |-
           The city wall is built from massive blocks of stone, seamlessly joined by ancient
           Barsoomian construction techniques.  It rises far too high to climb.
   - vnum: 3054
-    name: By the Temple Altar
+    name: "By the Temple Altar"
     description: |2-
          You are by the temple altar in the northern end of Lesser Helium's great temple.
       A huge altar carved from scarlet marble stands before you, and behind it is a
@@ -1402,23 +1402,23 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: You see the southern end of the temple.
+        description: "You see the southern end of the temple."
         keywords: ""
         door_flag: 0
         key_vnum: -1
         to_room: 3001
     extra_descriptions:
-      - keywords: altar
+      - keywords: "altar"
         description: |-
           The altar is more than ten feet long, carved from a single massive block of
           scarlet marble.  Ancient Barsoomian inscriptions cover its surface.
-      - keywords: statue jeddak
+      - keywords: "statue jeddak"
         description: |-
           The statue depicts the Jeddak of Helium seated in command, representing the
           authority and tradition of the Twin Cities.  The craftsmanship is magnificent,
           showing every detail of the ceremonial harness and regalia.
   - vnum: 3055
-    name: Temple Vault
+    name: "Temple Vault"
     description: |2-
          This is a secure vault where the temple priests safeguard belongings of
       travelers and warriors.  The room's virtual number must remain exactly one
@@ -1428,17 +1428,17 @@ rooms:
     sector_type: 0
     exits:
       - direction: 2
-        description: The concealed door leads back to the altar.
-        keywords: concealed door hidden
+        description: "The concealed door leads back to the altar."
+        keywords: "concealed door hidden"
         door_flag: 1
         key_vnum: 3134
         to_room: 3054
     extra_descriptions: []
 mobiles:
   - vnum: 3000
-    namelist: scientist alchemist red martian
-    short_desc: the Red Martian Scientist
-    long_desc: A Red Martian scientist works behind the counter, examining vials of chemicals.
+    namelist: "scientist alchemist red martian"
+    short_desc: "the Red Martian Scientist"
+    long_desc: "A Red Martian scientist works behind the counter, examining vials of chemicals."
     detailed_desc: |-
       This scientist has smooth copper-red skin and coal-black hair. He wears an
       ornate jeweled harness decorated with scientific instruments. His large dark
@@ -1446,22 +1446,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 10000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3001
-    namelist: baker red martian
-    short_desc: the Red Martian Baker
-    long_desc: A Red Martian baker stands here, wiping dried fruit from his hands.
+    namelist: "baker red martian"
+    short_desc: "the Red Martian Baker"
+    long_desc: "A Red Martian baker stands here, wiping dried fruit from his hands."
     detailed_desc: |-
       This baker has the copper-red skin typical of Helium's citizens. Despite his
       peaceful profession, several old scars on his muscular body show he once
@@ -1469,22 +1469,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3002
-    namelist: grocer merchant red martian
-    short_desc: the Red Martian Grocer
-    long_desc: A Red Martian grocer stands at the counter, looking slightly impatient.
+    namelist: "grocer merchant red martian"
+    short_desc: "the Red Martian Grocer"
+    long_desc: "A Red Martian grocer stands at the counter, looking slightly impatient."
     detailed_desc: |-
       A tall red Martian merchant with copper-red skin and athletic build. He easily
       moves heavy sacks of dried provisions around his shop. His jeweled harness
@@ -1492,22 +1492,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3003
-    namelist: weaponsmith armorer red martian
-    short_desc: the Red Martian Weaponsmith
-    long_desc: A Red Martian weaponsmith works at his forge.
+    namelist: "weaponsmith armorer red martian"
+    short_desc: "the Red Martian Weaponsmith"
+    long_desc: "A Red Martian weaponsmith works at his forge."
     detailed_desc: |-
       A young weaponsmith with copper-red skin and strong arms. He is skilled in
       crafting both traditional longswords and modern radium weapons. His harness
@@ -1515,22 +1515,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 10000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3004
-    namelist: armorer harness-maker red martian
-    short_desc: the Red Martian Harness-Maker
-    long_desc: A Red Martian harness-maker stands at his workbench.
+    namelist: "armorer harness-maker red martian"
+    short_desc: "the Red Martian Harness-Maker"
+    long_desc: "A Red Martian harness-maker stands at his workbench."
     detailed_desc: |-
       An old but strong red Martian craftsman with centuries of experience. His
       copper-red skin is weathered but his hands are steady. He has crafted more
@@ -1538,22 +1538,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 10000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3005
-    namelist: receptionist red martian
-    short_desc: the Red Martian Receptionist
-    long_desc: A Red Martian receptionist greets you with practiced courtesy.
+    namelist: "receptionist red martian"
+    short_desc: "the Red Martian Receptionist"
+    long_desc: "A Red Martian receptionist greets you with practiced courtesy."
     detailed_desc: |-
       This red Martian woman has smooth copper-red skin and long coal-black hair.
       She wears an elegant jeweled harness that marks her position. Despite her
@@ -1561,22 +1561,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3006
-    namelist: captain airship red martian
-    short_desc: the Red Martian Airship Captain
-    long_desc: A retired airship captain stands here, selling navigation equipment.
+    namelist: "captain airship red martian"
+    short_desc: "the Red Martian Airship Captain"
+    long_desc: "A retired airship captain stands here, selling navigation equipment."
     detailed_desc: |-
       This weathered red Martian captain has copper-red skin darkened by years
       under the Martian sun. His jeweled harness bears the insignia of Helium's
@@ -1584,22 +1584,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3007
-    namelist: warrior guard red martian
-    short_desc: the Red Martian Warrior
-    long_desc: A Red Martian warrior stands ready to assist you.
+    namelist: "warrior guard red martian"
+    short_desc: "the Red Martian Warrior"
+    long_desc: "A Red Martian warrior stands ready to assist you."
     detailed_desc: |-
       This strong, athletic red Martian has the build of a professional warrior.
       His copper-red skin gleams with health, and his jeweled harness bears the
@@ -1607,22 +1607,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3008
-    namelist: beast-handler trainer red martian
-    short_desc: the Red Martian Beast-Handler
-    long_desc: A Red Martian beast-handler tends to his creatures here.
+    namelist: "beast-handler trainer red martian"
+    short_desc: "the Red Martian Beast-Handler"
+    long_desc: "A Red Martian beast-handler tends to his creatures here."
     detailed_desc: |-
       This young red Martian has copper-red skin and an easy smile. He specializes
       in training calots and other Martian beasts. His harness is simple but well-
@@ -1630,22 +1630,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3009
-    namelist: jeweller craftsman red martian
-    short_desc: the Red Martian Jeweller
-    long_desc: A Red Martian jeweller examines a gem behind his desk.
+    namelist: "jeweller craftsman red martian"
+    short_desc: "the Red Martian Jeweller"
+    long_desc: "A Red Martian jeweller examines a gem behind his desk."
     detailed_desc: |-
       This prosperous red Martian merchant has copper-red skin and wears an
       elaborate jeweled harness that displays his craft. He has a content but
@@ -1653,22 +1653,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 10000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3010
-    namelist: leather worker craftsman red martian
-    short_desc: the Red Martian Leather Worker
-    long_desc: A Red Martian leather worker sits at his table, crafting a harness strap.
+    namelist: "leather worker craftsman red martian"
+    short_desc: "the Red Martian Leather Worker"
+    long_desc: "A Red Martian leather worker sits at his table, crafting a harness strap."
     detailed_desc: |-
       This honest red Martian craftsman has copper-red skin marked by years of
       hard work. He specializes in leather goods for harnesses and thoat saddles.
@@ -1676,22 +1676,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 10000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3020
-    namelist: guildmaster scientist red martian
-    short_desc: the Red Martian Science Master
-    long_desc: The Science Master of Helium stands here.
+    namelist: "guildmaster scientist red martian"
+    short_desc: "the Red Martian Science Master"
+    long_desc: "The Science Master of Helium stands here."
     detailed_desc: |-
       This ancient red Martian woman has copper-red skin and wisdom in her large
       dark eyes. Though she looks old and tired from centuries of study, her vast
@@ -1700,22 +1700,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 24
       thac0: 0
       ac: 0
-      hp_dice: 6d10+440
-      damage_dice: 3d8+4
+      hp_dice: "6d10+440"
+      damage_dice: "3d8+4"
       gold: 8794
       experience: 100000
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3021
-    namelist: guildmaster priest red martian
-    short_desc: the Red Martian High Priest
-    long_desc: The High Priest of Helium stands here in meditation.
+    namelist: "guildmaster priest red martian"
+    short_desc: "the Red Martian High Priest"
+    long_desc: "The High Priest of Helium stands here in meditation."
     detailed_desc: |-
       This venerable red Martian priest has copper-red skin and a peaceful,
       loving expression. He has devoted centuries to spiritual contemplation
@@ -1724,22 +1724,22 @@ mobiles:
     action_flags: 3
     affection_flags: 128
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 24
       thac0: 0
       ac: 0
-      hp_dice: 6d10+440
-      damage_dice: 3d8+4
+      hp_dice: "6d10+440"
+      damage_dice: "3d8+4"
       gold: 8794
       experience: 100000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3022
-    namelist: guildmaster assassin red martian
-    short_desc: the Red Martian Shadow Master
-    long_desc: The Shadow Master stands here, nearly invisible.
+    namelist: "guildmaster assassin red martian"
+    short_desc: "the Red Martian Shadow Master"
+    long_desc: "The Shadow Master stands here, nearly invisible."
     detailed_desc: |-
       This red Martian woman moves with such grace that you barely notice her
       movements - the mark of a true master assassin. Her copper-red skin blends
@@ -1748,22 +1748,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 24
       thac0: 0
       ac: 0
-      hp_dice: 6d10+440
-      damage_dice: 3d8+4
+      hp_dice: "6d10+440"
+      damage_dice: "3d8+4"
       gold: 8794
       experience: 100000
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3023
-    namelist: guildmaster warrior red martian
-    short_desc: the Red Martian War Master
-    long_desc: The War Master of Helium stands here, radiating authority.
+    namelist: "guildmaster warrior red martian"
+    short_desc: "the Red Martian War Master"
+    long_desc: "The War Master of Helium stands here, radiating authority."
     detailed_desc: |-
       This red Martian warrior is massive and powerful, his copper-red skin
       marked with numerous battle scars. His muscles bulge with the strength
@@ -1772,22 +1772,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 24
       thac0: 0
       ac: 0
-      hp_dice: 6d10+440
-      damage_dice: 3d8+4
+      hp_dice: "6d10+440"
+      damage_dice: "3d8+4"
       gold: 8794
       experience: 100000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3024
-    namelist: scientist guard red martian
-    short_desc: the Red Martian Science Guard
-    long_desc: A Red Martian science guard stands watch here.
+    namelist: "scientist guard red martian"
+    short_desc: "the Red Martian Science Guard"
+    long_desc: "A Red Martian science guard stands watch here."
     detailed_desc: |-
       This experienced red Martian scientist has copper-red skin and keen dark
       eyes. He specializes in combat applications of scientific knowledge. His
@@ -1796,22 +1796,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 800
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3025
-    namelist: templar guard red martian
-    short_desc: the Red Martian Temple Guard
-    long_desc: A Red Martian temple guard stands watch here.
+    namelist: "templar guard red martian"
+    short_desc: "the Red Martian Temple Guard"
+    long_desc: "A Red Martian temple guard stands watch here."
     detailed_desc: |-
       This specially trained red Martian warrior belongs to the sacred order
       protecting Helium's temples. His copper-red skin bears ritual markings,
@@ -1820,22 +1820,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 800
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3026
-    namelist: assassin guard red martian
-    short_desc: the Red Martian Assassin
-    long_desc: A Red Martian assassin guards this entrance.
+    namelist: "assassin guard red martian"
+    short_desc: "the Red Martian Assassin"
+    long_desc: "A Red Martian assassin guards this entrance."
     detailed_desc: |-
       This red Martian has mastered the art of silent killing. His copper-red
       skin seems to blend with shadows. He knows every weapon and every vital
@@ -1844,22 +1844,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 800
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 4
       ac: 4
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3027
-    namelist: warrior guard red martian
-    short_desc: the Red Martian Elite Guard
-    long_desc: A Red Martian elite warrior guards this entrance.
+    namelist: "warrior guard red martian"
+    short_desc: "the Red Martian Elite Guard"
+    long_desc: "A Red Martian elite warrior guards this entrance."
     detailed_desc: |-
       This expert red Martian warrior has earned his position through countless
       battles and acts of valor. His copper-red skin is marked with honorable
@@ -1868,22 +1868,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 800
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 0
       ac: 0
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3040
-    namelist: bartender innkeeper red martian
-    short_desc: the Red Martian Bartender
-    long_desc: A Red Martian bartender watches you calmly while mixing wine.
+    namelist: "bartender innkeeper red martian"
+    short_desc: "the Red Martian Bartender"
+    long_desc: "A Red Martian bartender watches you calmly while mixing wine."
     detailed_desc: |-
       This tired-looking red Martian innkeeper has copper-red skin and weary
       eyes. He skillfully pours wine and mixes drinks while keeping a watchful
@@ -1891,22 +1891,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3041
-    namelist: waiter servant red martian
-    short_desc: the Red Martian Waiter
-    long_desc: A Red Martian waiter moves efficiently between tables.
+    namelist: "waiter servant red martian"
+    short_desc: "the Red Martian Waiter"
+    long_desc: "A Red Martian waiter moves efficiently between tables."
     detailed_desc: |-
       A tired-looking red Martian servant with copper-red skin and a simple
       leather harness. He moves efficiently between tables, serving food and
@@ -1914,22 +1914,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3042
-    namelist: waiter scientist red martian
-    short_desc: the Red Martian Retired Scientist
-    long_desc: A Red Martian who once was a renowned scientist now serves as a waiter.
+    namelist: "waiter scientist red martian"
+    short_desc: "the Red Martian Retired Scientist"
+    long_desc: "A Red Martian who once was a renowned scientist now serves as a waiter."
     detailed_desc: |-
       This red Martian man with copper-red skin was once a famous scientist, but
       now leads a quiet, peaceful life serving in an inn. His jeweled harness
@@ -1937,22 +1937,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 600
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 1
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3043
-    namelist: waiter priest red martian
-    short_desc: the Red Martian Retired Priest
-    long_desc: A Red Martian who has found spiritual enlightenment now serves as a waiter.
+    namelist: "waiter priest red martian"
+    short_desc: "the Red Martian Retired Priest"
+    long_desc: "A Red Martian who has found spiritual enlightenment now serves as a waiter."
     detailed_desc: |-
       This red Martian has copper-red skin and an aura of peace about him. He
       has achieved spiritual enlightenment and now serves others in humble work.
@@ -1960,22 +1960,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 600
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 1
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3044
-    namelist: waiter thief red martian
-    short_desc: the Red Martian Observant Waiter
-    long_desc: A Red Martian waiter who notices everything about his customers.
+    namelist: "waiter thief red martian"
+    short_desc: "the Red Martian Observant Waiter"
+    long_desc: "A Red Martian waiter who notices everything about his customers."
     detailed_desc: |-
       This red Martian waiter has copper-red skin and unusually keen eyes. He
       knows exactly where each customer keeps their coins and valuables. His
@@ -1983,22 +1983,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 600
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 1
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3045
-    namelist: waiter warrior red martian
-    short_desc: the Red Martian Warrior-Waiter
-    long_desc: A Red Martian waiter who could easily kill you while serving drinks.
+    namelist: "waiter warrior red martian"
+    short_desc: "the Red Martian Warrior-Waiter"
+    long_desc: "A Red Martian waiter who could easily kill you while serving drinks."
     detailed_desc: |-
       This powerful red Martian waiter has copper-red skin marked with battle
       scars. Despite his humble work, he moves with the grace of a trained
@@ -2007,22 +2007,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 600
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 1
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3046
-    namelist: filthy bartender red martian
-    short_desc: Filthy the Bartender
-    long_desc: Filthy the bartender stands here, ready to serve you strong drink.
+    namelist: "filthy bartender red martian"
+    short_desc: "Filthy the Bartender"
+    long_desc: "Filthy the bartender stands here, ready to serve you strong drink."
     detailed_desc: |-
       This red Martian bartender has copper-red skin darkened by grime and dust.
       He looks rough and unkempt, even by poor quarter standards. He likes to
@@ -2031,22 +2031,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 600
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 1
       ac: 2
-      hp_dice: 1d1+30000
-      damage_dice: 1d8+12
+      hp_dice: "1d1+30000"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3060
-    namelist: cityguard warrior red martian guard
-    short_desc: the Red Martian City Guard
-    long_desc: A Red Martian city guard stands watch here.
+    namelist: "cityguard warrior red martian guard"
+    short_desc: "the Red Martian City Guard"
+    long_desc: "A Red Martian city guard stands watch here."
     detailed_desc: |-
       A big, strong Red Martian warrior with copper-red skin and alert dark eyes.
       He wears the jeweled harness of Helium's city guard and carries a longsword
@@ -2055,22 +2055,22 @@ mobiles:
     action_flags: 193
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 10
       thac0: 10
       ac: 2
-      hp_dice: 1d12+123
-      damage_dice: 1d8+3
+      hp_dice: "1d12+123"
+      damage_dice: "1d8+3"
       gold: 500
       experience: 9000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3061
-    namelist: janitor cleaner red martian
-    short_desc: the Red Martian Janitor
-    long_desc: A Red Martian janitor cleans the area quietly.
+    namelist: "janitor cleaner red martian"
+    short_desc: "the Red Martian Janitor"
+    long_desc: "A Red Martian janitor cleans the area quietly."
     detailed_desc: |-
       This humble red Martian servant has copper-red skin and wears a plain,
       worn harness. He moves about quietly, cleaning and maintaining the
@@ -2078,22 +2078,22 @@ mobiles:
     action_flags: 1
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 2d6+10
-      damage_dice: 1d5+0
+      hp_dice: "2d6+10"
+      damage_dice: "1d5+0"
       gold: 34
       experience: 100
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3062
-    namelist: calot scavenger beast
-    short_desc: the scavenging Calot
-    long_desc: A scavenging calot prowls here, searching for scraps.
+    namelist: "calot scavenger beast"
+    short_desc: "the scavenging Calot"
+    long_desc: "A scavenging calot prowls here, searching for scraps."
     detailed_desc: |-
       This small calot has ten legs and hairless, mottled hide. It moves with
       surprising speed on its many legs. A foul smell emanates from it, and
@@ -2102,22 +2102,22 @@ mobiles:
     action_flags: 161
     affection_flags: 0
     alignment: -200
-    type: simple
+    type: "simple"
     simple:
       level: 0
       thac0: 20
       ac: 10
-      hp_dice: 1d6+4
-      damage_dice: 1d4+0
+      hp_dice: "1d6+4"
+      damage_dice: "1d4+0"
       gold: 10
       experience: 25
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3063
-    namelist: mercenary warrior red martian
-    short_desc: the Red Martian Mercenary
-    long_desc: A Red Martian mercenary loiters here, looking for work.
+    namelist: "mercenary warrior red martian"
+    short_desc: "the Red Martian Mercenary"
+    long_desc: "A Red Martian mercenary loiters here, looking for work."
     detailed_desc: |-
       This tough red Martian warrior has copper-red skin marked with numerous
       scars. He wears a battered harness and carries well-used weapons. His
@@ -2126,22 +2126,22 @@ mobiles:
     action_flags: 4
     affection_flags: 0
     alignment: -200
-    type: simple
+    type: "simple"
     simple:
       level: 5
       thac0: 16
       ac: 5
-      hp_dice: 2d6+60
-      damage_dice: 1d8+0
+      hp_dice: "2d6+60"
+      damage_dice: "1d8+0"
       gold: 47
       experience: 900
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3064
-    namelist: drunk red martian
-    short_desc: the Drunken Red Martian
-    long_desc: A singing, happy drunk staggers about here.
+    namelist: "drunk red martian"
+    short_desc: "the Drunken Red Martian"
+    long_desc: "A singing, happy drunk staggers about here."
     detailed_desc: |-
       This red Martian has copper-red skin flushed from too much wine. He
       sings loudly and stumbles about with a foolish grin. Despite his
@@ -2150,22 +2150,22 @@ mobiles:
     action_flags: 0
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 2
       thac0: 19
       ac: 8
-      hp_dice: 2d6+22
-      damage_dice: 1d6+0
+      hp_dice: "2d6+22"
+      damage_dice: "1d6+0"
       gold: 85
       experience: 200
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3065
-    namelist: beggar red martian
-    short_desc: the Red Martian Beggar
-    long_desc: A Red Martian beggar sits here, asking for coins.
+    namelist: "beggar red martian"
+    short_desc: "the Red Martian Beggar"
+    long_desc: "A Red Martian beggar sits here, asking for coins."
     detailed_desc: |-
       This impoverished red Martian woman has copper-red skin dulled by hardship.
       Her tattered harness is barely more than rags. She looks fed up with life
@@ -2173,22 +2173,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 2d6+10
-      damage_dice: 1d5+0
+      hp_dice: "2d6+10"
+      damage_dice: "1d5+0"
       gold: 0
       experience: 100
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3066
-    namelist: tolac reversed beast
-    short_desc: the Tolac
-    long_desc: A strange reversed calot moves backwards here.
+    namelist: "tolac reversed beast"
+    short_desc: "the Tolac"
+    long_desc: "A strange reversed calot moves backwards here."
     detailed_desc: |-
       This peculiar calot has ten legs but moves backwards in an unsettling
       manner. Its hairless hide is mottled, and its frog-like head faces
@@ -2197,22 +2197,22 @@ mobiles:
     action_flags: 161
     affection_flags: 0
     alignment: -200
-    type: simple
+    type: "simple"
     simple:
       level: 0
       thac0: 20
       ac: 10
-      hp_dice: 1d6+4
-      damage_dice: 1d4+0
+      hp_dice: "1d6+4"
+      damage_dice: "1d4+0"
       gold: 10
       experience: 25
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3067
-    namelist: cityguard warrior red martian gate
-    short_desc: the Red Martian Gate Guard
-    long_desc: A Red Martian gate guard stands watch here.
+    namelist: "cityguard warrior red martian gate"
+    short_desc: "the Red Martian Gate Guard"
+    long_desc: "A Red Martian gate guard stands watch here."
     detailed_desc: |-
       A big, strong Red Martian warrior with copper-red skin and vigilant dark
       eyes. He wears the elite jeweled harness of Helium's gate guards and
@@ -2221,22 +2221,22 @@ mobiles:
     action_flags: 67
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 10
       thac0: 10
       ac: 2
-      hp_dice: 1d12+123
-      damage_dice: 1d8+3
+      hp_dice: "1d12+123"
+      damage_dice: "1d8+3"
       gold: 500
       experience: 9000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3090
-    namelist: calot pup young beast
-    short_desc: the young Calot pup
-    long_desc: A small loyal calot pup is here.
+    namelist: "calot pup young beast"
+    short_desc: "the young Calot pup"
+    long_desc: "A small loyal calot pup is here."
     detailed_desc: |-
       This young calot has ten stubby legs and smooth, hairless hide. It's
       only the size of a small dog, but already shows the fierce loyalty and
@@ -2245,22 +2245,22 @@ mobiles:
     action_flags: 6
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 1d6+11
-      damage_dice: 1d4+0
+      hp_dice: "1d6+11"
+      damage_dice: "1d4+0"
       gold: 0
       experience: 100
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3091
-    namelist: calot juvenile beast
-    short_desc: the juvenile Calot
-    long_desc: A small loyal calot is here.
+    namelist: "calot juvenile beast"
+    short_desc: "the juvenile Calot"
+    long_desc: "A small loyal calot is here."
     detailed_desc: |-
       This juvenile calot has ten legs and hairless, mottled hide. About the
       size of a medium dog, it moves with surprising speed and agility. Its
@@ -2269,22 +2269,22 @@ mobiles:
     action_flags: 6
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 1d6+11
-      damage_dice: 1d4+0
+      hp_dice: "1d6+11"
+      damage_dice: "1d4+0"
       gold: 0
       experience: 100
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3092
-    namelist: calot adult beast tracker
-    short_desc: the adult Calot
-    long_desc: A quick, loyal calot stands ready here.
+    namelist: "calot adult beast tracker"
+    short_desc: "the adult Calot"
+    long_desc: "A quick, loyal calot stands ready here."
     detailed_desc: |-
       This adult calot has ten powerful legs and tough, hairless hide. It's
       the size of a pony and moves with incredible speed. Its frog-like head
@@ -2293,22 +2293,22 @@ mobiles:
     action_flags: 6
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 2
       thac0: 19
       ac: 8
-      hp_dice: 1d12+22
-      damage_dice: 1d6+0
+      hp_dice: "1d12+22"
+      damage_dice: "1d6+0"
       gold: 0
       experience: 200
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3093
-    namelist: calot war-trained beast guard
-    short_desc: the war-trained Calot
-    long_desc: A large, loyal war-trained calot is here.
+    namelist: "calot war-trained beast guard"
+    short_desc: "the war-trained Calot"
+    long_desc: "A large, loyal war-trained calot is here."
     detailed_desc: |-
       This large calot has ten powerful legs and thick, armored hide. It's
       been specially trained for combat and guarding. Its massive jaws can
@@ -2317,22 +2317,22 @@ mobiles:
     action_flags: 6
     affection_flags: 0
     alignment: 400
-    type: simple
+    type: "simple"
     simple:
       level: 3
       thac0: 18
       ac: 7
-      hp_dice: 1d12+35
-      damage_dice: 1d7+0
+      hp_dice: "1d12+35"
+      damage_dice: "1d7+0"
       gold: 0
       experience: 800
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3094
-    namelist: calot hunting beast tracker
-    short_desc: the hunting Calot
-    long_desc: A large, trained hunting calot is here.
+    namelist: "calot hunting beast tracker"
+    short_desc: "the hunting Calot"
+    long_desc: "A large, trained hunting calot is here."
     detailed_desc: |-
       This impressive calot has ten muscular legs and battle-scarred hide.
       It's been trained for hunting and tracking across the Martian wilderness.
@@ -2341,22 +2341,22 @@ mobiles:
     action_flags: 6
     affection_flags: 0
     alignment: 0
-    type: simple
+    type: "simple"
     simple:
       level: 4
       thac0: 17
       ac: 6
-      hp_dice: 1d12+47
-      damage_dice: 1d8+0
+      hp_dice: "1d12+47"
+      damage_dice: "1d8+0"
       gold: 0
       experience: 1600
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3100
-    namelist: maid servant red martian
-    short_desc: the Red Martian Maid
-    long_desc: A Red Martian maid waits to serve you.
+    namelist: "maid servant red martian"
+    short_desc: "the Red Martian Maid"
+    long_desc: "A Red Martian maid waits to serve you."
     detailed_desc: |-
       This beautiful red Martian woman has smooth copper-red skin and long
       coal-black hair. Her large, dark eyes are captivating, and her graceful
@@ -2365,22 +2365,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 2000
       experience: 80000
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3120
-    namelist: caretaker gravedigger red martian
-    short_desc: the Red Martian Tomb Caretaker
-    long_desc: A Red Martian tomb caretaker rests here.
+    namelist: "caretaker gravedigger red martian"
+    short_desc: "the Red Martian Tomb Caretaker"
+    long_desc: "A Red Martian tomb caretaker rests here."
     detailed_desc: |-
       This red Martian has copper-red skin weathered by outdoor work. He tends
       the ancient tombs and burial chambers of Lesser Helium. He looks tired,
@@ -2389,22 +2389,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 800
-    type: simple
+    type: "simple"
     simple:
       level: 3
       thac0: 18
       ac: 7
-      hp_dice: 2d6+35
-      damage_dice: 1d7+0
+      hp_dice: "2d6+35"
+      damage_dice: "1d7+0"
       gold: 13
       experience: 350
       position: 6
       default_position: 6
       sex: 1
   - vnum: 3121
-    namelist: bird martian waterfowl
-    short_desc: a Martian water bird
-    long_desc: A graceful Martian water bird glides through the pond.
+    namelist: "bird martian waterfowl"
+    short_desc: "a Martian water bird"
+    long_desc: "A graceful Martian water bird glides through the pond."
     detailed_desc: |-
       This elegant water bird is one of the few avian species that survived
       Mars' ancient climate changes. It has adapted to the scarce water sources,
@@ -2413,22 +2413,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 2d6+10
-      damage_dice: 1d5+0
+      hp_dice: "2d6+10"
+      damage_dice: "1d5+0"
       gold: 0
       experience: 100
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3122
-    namelist: chick bird young
-    short_desc: a young water bird
-    long_desc: A young Martian water bird paddles in the pond.
+    namelist: "chick bird young"
+    short_desc: "a young water bird"
+    long_desc: "A young Martian water bird paddles in the pond."
     detailed_desc: |-
       This adorable young water bird is covered in soft, downy feathers. It's
       still learning to navigate the water, paddling clumsily but determinedly.
@@ -2436,22 +2436,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 0
       thac0: 20
       ac: 10
-      hp_dice: 1d1+0
-      damage_dice: 1d1+0
+      hp_dice: "1d1+0"
+      damage_dice: "1d1+0"
       gold: 0
       experience: 1
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3123
-    namelist: bird small martian
-    short_desc: a small Martian bird
-    long_desc: A small Martian bird hops along the ground.
+    namelist: "bird small martian"
+    short_desc: "a small Martian bird"
+    long_desc: "A small Martian bird hops along the ground."
     detailed_desc: |-
       This tiny bird is one of the hardy species that survived Mars' environmental
       changes. It flits and hops about energetically, searching for insects and
@@ -2459,22 +2459,22 @@ mobiles:
     action_flags: 192
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 0
       thac0: 20
       ac: 10
-      hp_dice: 2d6+0
-      damage_dice: 1d3+0
+      hp_dice: "2d6+0"
+      damage_dice: "1d3+0"
       gold: 0
       experience: 25
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3124
-    namelist: bird waterfowl martian
-    short_desc: a plump water bird
-    long_desc: A plump Martian water bird waddles here contentedly.
+    namelist: "bird waterfowl martian"
+    short_desc: "a plump water bird"
+    long_desc: "A plump Martian water bird waddles here contentedly."
     detailed_desc: |-
       This water bird has adapted well to life near Lesser Helium's precious
       water sources. It's quite fat from regular feeding, its feathers sleek
@@ -2483,22 +2483,22 @@ mobiles:
     action_flags: 64
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 10
-      hp_dice: 2d6+5
-      damage_dice: 1d4+0
+      hp_dice: "2d6+5"
+      damage_dice: "1d4+0"
       gold: 0
       experience: 75
       position: 8
       default_position: 8
       sex: 0
   - vnum: 3140
-    namelist: captain commander red martian guard
-    short_desc: the Red Martian Guard Captain
-    long_desc: The Captain of the Guard stands here, looking very upset.
+    namelist: "captain commander red martian guard"
+    short_desc: "the Red Martian Guard Captain"
+    long_desc: "The Captain of the Guard stands here, looking very upset."
     detailed_desc: |-
       This formidable red Martian warrior commands Helium's city guard. His
       copper-red skin bears many battle scars, and his muscular frame radiates
@@ -2507,22 +2507,22 @@ mobiles:
     action_flags: 38
     affection_flags: 8
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 17
       thac0: 4
       ac: 1
-      hp_dice: 1d12+210
-      damage_dice: 1d8+8
+      hp_dice: "1d12+210"
+      damage_dice: "1d8+8"
       gold: 0
       experience: 28000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3141
-    namelist: cityguard warrior red martian angry
-    short_desc: the angry Red Martian Guard
-    long_desc: A Red Martian city guard stands here, looking very upset.
+    namelist: "cityguard warrior red martian angry"
+    short_desc: "the angry Red Martian Guard"
+    long_desc: "A Red Martian city guard stands here, looking very upset."
     detailed_desc: |-
       This big, strong red Martian warrior has copper-red skin and a furious
       expression. He wears the jeweled harness of Helium's city guard and
@@ -2531,22 +2531,22 @@ mobiles:
     action_flags: 38
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 10
       thac0: 10
       ac: 2
-      hp_dice: 1d12+123
-      damage_dice: 1d8+3
+      hp_dice: "1d12+123"
+      damage_dice: "1d8+3"
       gold: 0
       experience: 9000
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3142
-    namelist: secretary scribe red martian
-    short_desc: the Red Martian Secretary
-    long_desc: A Red Martian secretary works diligently at her desk.
+    namelist: "secretary scribe red martian"
+    short_desc: "the Red Martian Secretary"
+    long_desc: "A Red Martian secretary works diligently at her desk."
     detailed_desc: |-
       This efficient red Martian woman has copper-red skin and wears a practical
       jeweled harness. She sits at her desk, making records with precise strokes.
@@ -2558,22 +2558,22 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 12
       thac0: 9
       ac: 2
-      hp_dice: 1d12+148
-      damage_dice: 2d7+1
+      hp_dice: "1d12+148"
+      damage_dice: "2d7+1"
       gold: 100
       experience: 13000
       position: 8
       default_position: 8
       sex: 2
   - vnum: 3143
-    namelist: jed noble red martian mayor
-    short_desc: the Jed of Lesser Helium
-    long_desc: The Jed sits in his ornate chair, snoring softly.
+    namelist: "jed noble red martian mayor"
+    short_desc: "the Jed of Lesser Helium"
+    long_desc: "The Jed sits in his ornate chair, snoring softly."
     detailed_desc: |-
       This red Martian noble has copper-red skin and wears an elaborate jeweled
       harness marking his rank as Jed. Though still vital, his coal-black hair
@@ -2582,22 +2582,22 @@ mobiles:
     action_flags: 3
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 23
       thac0: 2
       ac: 2
-      hp_dice: 6d10+390
-      damage_dice: 1d8+12
+      hp_dice: "6d10+390"
+      damage_dice: "1d8+12"
       gold: 1000
       experience: 80000
       position: 4
       default_position: 4
       sex: 1
   - vnum: 3144
-    namelist: crier herald red martian
-    short_desc: the Red Martian Town Crier
-    long_desc: A Red Martian town crier stands here, weeping dramatically.
+    namelist: "crier herald red martian"
+    short_desc: "the Red Martian Town Crier"
+    long_desc: "A Red Martian town crier stands here, weeping dramatically."
     detailed_desc: |-
       This red Martian has copper-red skin and wears a herald's harness. He
       is currently performing his duties with great emotion, weeping openly
@@ -2606,22 +2606,22 @@ mobiles:
     action_flags: 128
     affection_flags: 0
     alignment: 900
-    type: simple
+    type: "simple"
     simple:
       level: 1
       thac0: 20
       ac: 9
-      hp_dice: 2d6+10
-      damage_dice: 1d5+0
+      hp_dice: "2d6+10"
+      damage_dice: "1d5+0"
       gold: 34
       experience: 100
       position: 8
       default_position: 8
       sex: 1
   - vnum: 3110
-    namelist: guide tour red martian helper
-    short_desc: the Tour Guide
-    long_desc: A friendly Red Martian tour guide stands here, ready to help visitors.
+    namelist: "guide tour red martian helper"
+    short_desc: "the Tour Guide"
+    long_desc: "A friendly Red Martian tour guide stands here, ready to help visitors."
     detailed_desc: |-
       This helpful red Martian has copper-red skin and an engaging smile. She wears
       a bright harness marked with the emblem of Helium's Visitor Services. Her
@@ -2630,13 +2630,13 @@ mobiles:
     action_flags: 2
     affection_flags: 0
     alignment: 1000
-    type: simple
+    type: "simple"
     simple:
       level: 20
       thac0: 5
       ac: 5
-      hp_dice: 1d1+20000
-      damage_dice: 1d6+8
+      hp_dice: "1d1+20000"
+      damage_dice: "1d6+8"
       gold: 5000
       experience: 50000
       position: 8
@@ -2644,9 +2644,9 @@ mobiles:
       sex: 2
 objects:
   - vnum: 3000
-    namelist: water barrel
-    short_desc: a water barrel
-    long_desc: A sealed water barrel stands here.
+    namelist: "water barrel"
+    short_desc: "a water barrel"
+    long_desc: "A sealed water barrel stands here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -2661,9 +2661,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3001
-    namelist: water flask
-    short_desc: a water flask
-    long_desc: A metal water flask has been left here.
+    namelist: "water flask"
+    short_desc: "a water flask"
+    long_desc: "A metal water flask has been left here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -2678,9 +2678,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3002
-    namelist: wine flask
-    short_desc: a flask of wine
-    long_desc: A flask of red wine has been left here.
+    namelist: "wine flask"
+    short_desc: "a flask of wine"
+    long_desc: "A flask of red wine has been left here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -2695,9 +2695,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3003
-    namelist: whiskey flask strong
-    short_desc: a strong whiskey
-    long_desc: A flask of strong Heliumetic whiskey has been left here.
+    namelist: "whiskey flask strong"
+    short_desc: "a strong whiskey"
+    long_desc: "A flask of strong Heliumetic whiskey has been left here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -2712,9 +2712,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3004
-    namelist: local wine flask
-    short_desc: a flask of local wine
-    long_desc: A flask of local wine has been left here.
+    namelist: "local wine flask"
+    short_desc: "a flask of local wine"
+    long_desc: "A flask of local wine has been left here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -2729,9 +2729,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3010
-    namelist: bread loaf
-    short_desc: a loaf of bread
-    long_desc: A loaf of Martian bread has been left here.
+    namelist: "bread loaf"
+    short_desc: "a loaf of bread"
+    long_desc: "A loaf of Martian bread has been left here."
     action_desc: ""
     type_flag: 19
     extra_flags: 0
@@ -2746,9 +2746,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3011
-    namelist: pastry dried fruit
-    short_desc: dried fruit pastry
-    long_desc: A pastry made with dried Martian fruits has been placed here.
+    namelist: "pastry dried fruit"
+    short_desc: "dried fruit pastry"
+    long_desc: "A pastry made with dried Martian fruits has been placed here."
     action_desc: ""
     type_flag: 19
     extra_flags: 0
@@ -2763,9 +2763,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3020
-    namelist: radium lamp small
-    short_desc: a small radium lamp
-    long_desc: A small radium lamp glows softly here.
+    namelist: "radium lamp small"
+    short_desc: "a small radium lamp"
+    long_desc: "A small radium lamp glows softly here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2780,9 +2780,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3021
-    namelist: radium lamp large
-    short_desc: a large radium lamp
-    long_desc: A large radium lamp provides steady illumination.
+    namelist: "radium lamp large"
+    short_desc: "a large radium lamp"
+    long_desc: "A large radium lamp provides steady illumination."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2797,9 +2797,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3022
-    namelist: radium torch
-    short_desc: a radium torch
-    long_desc: A radium torch glows with pale light.
+    namelist: "radium torch"
+    short_desc: "a radium torch"
+    long_desc: "A radium torch glows with pale light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2814,9 +2814,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3023
-    namelist: radium lantern
-    short_desc: a radium lantern
-    long_desc: A radium lantern emits a steady glow.
+    namelist: "radium lantern"
+    short_desc: "a radium lantern"
+    long_desc: "A radium lantern emits a steady glow."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2831,9 +2831,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3024
-    namelist: radium orb
-    short_desc: a glowing radium orb
-    long_desc: A glowing radium orb pulses with soft light.
+    namelist: "radium orb"
+    short_desc: "a glowing radium orb"
+    long_desc: "A glowing radium orb pulses with soft light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2848,9 +2848,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3030
-    namelist: torch
-    short_desc: a torch
-    long_desc: A torch lies here.
+    namelist: "torch"
+    short_desc: "a torch"
+    long_desc: "A torch lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2865,9 +2865,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3031
-    namelist: radium lamp
-    short_desc: a radium lamp
-    long_desc: A radium lamp casts a soft glow here.
+    namelist: "radium lamp"
+    short_desc: "a radium lamp"
+    long_desc: "A radium lamp casts a soft glow here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -2882,9 +2882,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3032
-    namelist: leather bag
-    short_desc: a leather bag
-    long_desc: A leather bag lies here.
+    namelist: "leather bag"
+    short_desc: "a leather bag"
+    long_desc: "A leather bag lies here."
     action_desc: ""
     type_flag: 15
     extra_flags: 0
@@ -2899,9 +2899,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3033
-    namelist: metal box
-    short_desc: a metal box
-    long_desc: A metal storage box sits here.
+    namelist: "metal box"
+    short_desc: "a metal box"
+    long_desc: "A metal storage box sits here."
     action_desc: ""
     type_flag: 15
     extra_flags: 0
@@ -2916,9 +2916,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3034
-    namelist: parchment note
-    short_desc: a parchment note
-    long_desc: A parchment note has been dropped here.
+    namelist: "parchment note"
+    short_desc: "a parchment note"
+    long_desc: "A parchment note has been dropped here."
     action_desc: ""
     type_flag: 16
     extra_flags: 0
@@ -2933,9 +2933,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3035
-    namelist: stylus writing
-    short_desc: a writing stylus
-    long_desc: A metal writing stylus lies here.
+    namelist: "stylus writing"
+    short_desc: "a writing stylus"
+    long_desc: "A metal writing stylus lies here."
     action_desc: ""
     type_flag: 21
     extra_flags: 0
@@ -2950,9 +2950,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3040
-    namelist: scroll map
-    short_desc: a map scroll
-    long_desc: A rolled map scroll lies here.
+    namelist: "scroll map"
+    short_desc: "a map scroll"
+    long_desc: "A rolled map scroll lies here."
     action_desc: ""
     type_flag: 2
     extra_flags: 64
@@ -2967,9 +2967,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3041
-    namelist: potion sight
-    short_desc: a sight enhancement potion
-    long_desc: A small vial of clear liquid is here.
+    namelist: "potion sight"
+    short_desc: "a sight enhancement potion"
+    long_desc: "A small vial of clear liquid is here."
     action_desc: ""
     type_flag: 10
     extra_flags: 64
@@ -2984,9 +2984,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3042
-    namelist: scroll recall
-    short_desc: a recall scroll
-    long_desc: A scroll inscribed with mystical symbols lies here.
+    namelist: "scroll recall"
+    short_desc: "a recall scroll"
+    long_desc: "A scroll inscribed with mystical symbols lies here."
     action_desc: ""
     type_flag: 2
     extra_flags: 64
@@ -3001,9 +3001,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3043
-    namelist: device invisibility
-    short_desc: an invisibility device
-    long_desc: A small technological device lies here.
+    namelist: "device invisibility"
+    short_desc: "an invisibility device"
+    long_desc: "A small technological device lies here."
     action_desc: ""
     type_flag: 3
     extra_flags: 64
@@ -3018,9 +3018,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3044
-    namelist: staff sleep
-    short_desc: a sleeping staff
-    long_desc: A long staff with strange properties lies here.
+    namelist: "staff sleep"
+    short_desc: "a sleeping staff"
+    long_desc: "A long staff with strange properties lies here."
     action_desc: ""
     type_flag: 4
     extra_flags: 64
@@ -3033,7 +3033,7 @@ objects:
     cost: 5000
     rent: 100
     extra_descriptions:
-      - keywords: staff
+      - keywords: "staff"
         description: |-
           The staff is made of old oak, and is around five feet long. It fits
           perfectly into your hand. You notice a small symbol etched at the
@@ -3046,9 +3046,9 @@ objects:
           ZZZZZ  z   z
     affects: []
   - vnum: 3050
-    namelist: radium crystal
-    short_desc: a radium crystal
-    long_desc: A luminous radium crystal lies here.
+    namelist: "radium crystal"
+    short_desc: "a radium crystal"
+    long_desc: "A luminous radium crystal lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3063,9 +3063,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3051
-    namelist: radium sphere
-    short_desc: a radium sphere
-    long_desc: A radium sphere glows with inner light.
+    namelist: "radium sphere"
+    short_desc: "a radium sphere"
+    long_desc: "A radium sphere glows with inner light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3080,9 +3080,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3060
-    namelist: radium rod
-    short_desc: a radium rod
-    long_desc: A radium rod emits a soft glow.
+    namelist: "radium rod"
+    short_desc: "a radium rod"
+    long_desc: "A radium rod emits a soft glow."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3097,9 +3097,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3061
-    namelist: lamp brass
-    short_desc: a brass lamp
-    long_desc: A brass lamp shines brightly here.
+    namelist: "lamp brass"
+    short_desc: "a brass lamp"
+    long_desc: "A brass lamp shines brightly here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3114,9 +3114,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3062
-    namelist: lamp copper
-    short_desc: a copper lamp
-    long_desc: A tarnished copper lamp lies here.
+    namelist: "lamp copper"
+    short_desc: "a copper lamp"
+    long_desc: "A tarnished copper lamp lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3131,9 +3131,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3063
-    namelist: lamp silver
-    short_desc: a silver lamp
-    long_desc: A polished silver lamp gleams here.
+    namelist: "lamp silver"
+    short_desc: "a silver lamp"
+    long_desc: "A polished silver lamp gleams here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3148,9 +3148,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3064
-    namelist: lamp gold
-    short_desc: a golden lamp
-    long_desc: A golden lamp radiates warm light.
+    namelist: "lamp gold"
+    short_desc: "a golden lamp"
+    long_desc: "A golden lamp radiates warm light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3165,9 +3165,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3065
-    namelist: lamp ornate
-    short_desc: an ornate lamp
-    long_desc: An ornately decorated lamp rests here.
+    namelist: "lamp ornate"
+    short_desc: "an ornate lamp"
+    long_desc: "An ornately decorated lamp rests here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3182,9 +3182,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3066
-    namelist: harness studded chest
-    short_desc: a studded chest harness
-    long_desc: A studded leather chest harness lies here.
+    namelist: "harness studded chest"
+    short_desc: "a studded chest harness"
+    long_desc: "A studded leather chest harness lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3199,9 +3199,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3067
-    namelist: helm studded
-    short_desc: a studded helm
-    long_desc: A studded leather helm lies here.
+    namelist: "helm studded"
+    short_desc: "a studded helm"
+    long_desc: "A studded leather helm lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3216,9 +3216,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3068
-    namelist: harness studded legs
-    short_desc: a studded leg harness
-    long_desc: A studded leather leg harness lies here.
+    namelist: "harness studded legs"
+    short_desc: "a studded leg harness"
+    long_desc: "A studded leather leg harness lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3233,9 +3233,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3069
-    namelist: boots studded
-    short_desc: a pair of studded boots
-    long_desc: A pair of studded leather boots lies here.
+    namelist: "boots studded"
+    short_desc: "a pair of studded boots"
+    long_desc: "A pair of studded leather boots lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3250,9 +3250,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3070
-    namelist: gloves studded
-    short_desc: a pair of studded gloves
-    long_desc: A pair of studded leather gloves lies here.
+    namelist: "gloves studded"
+    short_desc: "a pair of studded gloves"
+    long_desc: "A pair of studded leather gloves lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3267,9 +3267,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3071
-    namelist: sleeves studded
-    short_desc: a pair of studded sleeves
-    long_desc: A pair of studded leather sleeves lies here.
+    namelist: "sleeves studded"
+    short_desc: "a pair of studded sleeves"
+    long_desc: "A pair of studded leather sleeves lies here."
     action_desc: ""
     type_flag: 9
     extra_flags: 0
@@ -3284,9 +3284,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3072
-    namelist: lamp carved
-    short_desc: a carved lamp
-    long_desc: A lamp carved from red stone lies here.
+    namelist: "lamp carved"
+    short_desc: "a carved lamp"
+    long_desc: "A lamp carved from red stone lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3301,9 +3301,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3073
-    namelist: lamp ancient
-    short_desc: an ancient lamp
-    long_desc: An ancient lamp of mysterious origin lies here.
+    namelist: "lamp ancient"
+    short_desc: "an ancient lamp"
+    long_desc: "An ancient lamp of mysterious origin lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3318,9 +3318,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3074
-    namelist: phosphor lamp
-    short_desc: a phosphorescent lamp
-    long_desc: A phosphorescent lamp gives off a greenish glow.
+    namelist: "phosphor lamp"
+    short_desc: "a phosphorescent lamp"
+    long_desc: "A phosphorescent lamp gives off a greenish glow."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3335,9 +3335,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3075
-    namelist: phosphor orb
-    short_desc: a phosphorescent orb
-    long_desc: A phosphorescent orb glows dimly.
+    namelist: "phosphor orb"
+    short_desc: "a phosphorescent orb"
+    long_desc: "A phosphorescent orb glows dimly."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3352,9 +3352,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3076
-    namelist: phosphor stone
-    short_desc: a phosphorescent stone
-    long_desc: A stone that glows with phosphorescent light lies here.
+    namelist: "phosphor stone"
+    short_desc: "a phosphorescent stone"
+    long_desc: "A stone that glows with phosphorescent light lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3369,9 +3369,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3077
-    namelist: crystal lamp clear
-    short_desc: a clear crystal lamp
-    long_desc: A lamp of clear crystal lies here.
+    namelist: "crystal lamp clear"
+    short_desc: "a clear crystal lamp"
+    long_desc: "A lamp of clear crystal lies here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3386,9 +3386,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3078
-    namelist: crystal lamp blue
-    short_desc: a blue crystal lamp
-    long_desc: A lamp made of blue crystal glows here.
+    namelist: "crystal lamp blue"
+    short_desc: "a blue crystal lamp"
+    long_desc: "A lamp made of blue crystal glows here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3403,9 +3403,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3079
-    namelist: crystal lamp red
-    short_desc: a red crystal lamp
-    long_desc: A lamp of red crystal provides illumination.
+    namelist: "crystal lamp red"
+    short_desc: "a red crystal lamp"
+    long_desc: "A lamp of red crystal provides illumination."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3420,9 +3420,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3080
-    namelist: crystal lamp green
-    short_desc: a green crystal lamp
-    long_desc: A green crystal lamp shines here.
+    namelist: "crystal lamp green"
+    short_desc: "a green crystal lamp"
+    long_desc: "A green crystal lamp shines here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3437,9 +3437,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3081
-    namelist: dome light
-    short_desc: a dome light
-    long_desc: A small dome light illuminates the area.
+    namelist: "dome light"
+    short_desc: "a dome light"
+    long_desc: "A small dome light illuminates the area."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3454,9 +3454,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3082
-    namelist: wall lamp
-    short_desc: a wall lamp
-    long_desc: A wall-mounted lamp provides light.
+    namelist: "wall lamp"
+    short_desc: "a wall lamp"
+    long_desc: "A wall-mounted lamp provides light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3471,9 +3471,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3083
-    namelist: moss lamp
-    short_desc: a moss-covered lamp
-    long_desc: A lamp covered in glowing moss rests here.
+    namelist: "moss lamp"
+    short_desc: "a moss-covered lamp"
+    long_desc: "A lamp covered in glowing moss rests here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3488,9 +3488,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3084
-    namelist: gem lamp
-    short_desc: a jeweled lamp
-    long_desc: A lamp encrusted with gems sparkles here.
+    namelist: "gem lamp"
+    short_desc: "a jeweled lamp"
+    long_desc: "A lamp encrusted with gems sparkles here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3505,9 +3505,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3085
-    namelist: torch burning
-    short_desc: a burning torch
-    long_desc: A burning torch flickers here.
+    namelist: "torch burning"
+    short_desc: "a burning torch"
+    long_desc: "A burning torch flickers here."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3522,9 +3522,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3086
-    namelist: lantern metal
-    short_desc: a metal lantern
-    long_desc: A metal lantern hangs ready.
+    namelist: "lantern metal"
+    short_desc: "a metal lantern"
+    long_desc: "A metal lantern hangs ready."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3539,9 +3539,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3087
-    namelist: candle white
-    short_desc: a white candle
-    long_desc: A white candle burns steadily.
+    namelist: "candle white"
+    short_desc: "a white candle"
+    long_desc: "A white candle burns steadily."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3556,9 +3556,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3088
-    namelist: candle red
-    short_desc: a red candle
-    long_desc: A red candle flickers gently.
+    namelist: "candle red"
+    short_desc: "a red candle"
+    long_desc: "A red candle flickers gently."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3573,9 +3573,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3089
-    namelist: oil lamp
-    short_desc: an oil lamp
-    long_desc: An oil lamp burns with a steady flame.
+    namelist: "oil lamp"
+    short_desc: "an oil lamp"
+    long_desc: "An oil lamp burns with a steady flame."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3590,9 +3590,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3090
-    namelist: radium lamp small bright
-    short_desc: a small radium lamp (bright)
-    long_desc: A small radium lamp glows softly here (bright).
+    namelist: "radium lamp small bright"
+    short_desc: "a small radium lamp (bright)"
+    long_desc: "A small radium lamp glows softly here (bright)."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3607,9 +3607,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3091
-    namelist: radium lamp large bright
-    short_desc: a large radium lamp (bright)
-    long_desc: A large radium lamp provides steady illumination.
+    namelist: "radium lamp large bright"
+    short_desc: "a large radium lamp (bright)"
+    long_desc: "A large radium lamp provides steady illumination."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3624,9 +3624,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3092
-    namelist: radium torch bright
-    short_desc: a radium torch (bright)
-    long_desc: A radium torch glows with pale light.
+    namelist: "radium torch bright"
+    short_desc: "a radium torch (bright)"
+    long_desc: "A radium torch glows with pale light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3641,9 +3641,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3093
-    namelist: radium lantern bright
-    short_desc: a radium lantern (bright)
-    long_desc: A radium lantern emits a steady glow.
+    namelist: "radium lantern bright"
+    short_desc: "a radium lantern (bright)"
+    long_desc: "A radium lantern emits a steady glow."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3658,9 +3658,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3094
-    namelist: radium orb bright
-    short_desc: a glowing radium orb (bright)
-    long_desc: A glowing radium orb pulses with soft light.
+    namelist: "radium orb bright"
+    short_desc: "a glowing radium orb (bright)"
+    long_desc: "A glowing radium orb pulses with soft light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3675,9 +3675,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3095
-    namelist: radium crystal bright
-    short_desc: a radium crystal (bright)
-    long_desc: A luminous radium crystal lies here, looking bright.
+    namelist: "radium crystal bright"
+    short_desc: "a radium crystal (bright)"
+    long_desc: "A luminous radium crystal lies here, looking bright."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3692,9 +3692,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3096
-    namelist: radium sphere bright
-    short_desc: a radium sphere (bright)
-    long_desc: A radium sphere glows with inner light.
+    namelist: "radium sphere bright"
+    short_desc: "a radium sphere (bright)"
+    long_desc: "A radium sphere glows with inner light."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3709,9 +3709,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3097
-    namelist: radium rod bright
-    short_desc: a radium rod (bright)
-    long_desc: A radium rod emits a soft glow.
+    namelist: "radium rod bright"
+    short_desc: "a radium rod (bright)"
+    long_desc: "A radium rod emits a soft glow."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3726,9 +3726,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3098
-    namelist: lamp brass bright
-    short_desc: a brass lamp (bright)
-    long_desc: A brass lamp shines brightly here (bright).
+    namelist: "lamp brass bright"
+    short_desc: "a brass lamp (bright)"
+    long_desc: "A brass lamp shines brightly here (bright)."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3743,9 +3743,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3099
-    namelist: lamp copper bright
-    short_desc: a copper lamp (bright)
-    long_desc: A tarnished copper lamp lies here, looking bright.
+    namelist: "lamp copper bright"
+    short_desc: "a copper lamp (bright)"
+    long_desc: "A tarnished copper lamp lies here, looking bright."
     action_desc: ""
     type_flag: 1
     extra_flags: 0
@@ -3760,9 +3760,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3100
-    namelist: cup water metal
-    short_desc: a metal cup
-    long_desc: A metal cup lies here.
+    namelist: "cup water metal"
+    short_desc: "a metal cup"
+    long_desc: "A metal cup lies here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -3777,9 +3777,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3101
-    namelist: cup wine metal
-    short_desc: a metal cup
-    long_desc: A metal cup lies here.
+    namelist: "cup wine metal"
+    short_desc: "a metal cup"
+    long_desc: "A metal cup lies here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -3794,9 +3794,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3102
-    namelist: cup water metal
-    short_desc: a metal cup
-    long_desc: A metal cup lies here.
+    namelist: "cup water metal"
+    short_desc: "a metal cup"
+    long_desc: "A metal cup lies here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -3811,9 +3811,9 @@ objects:
     extra_descriptions: []
     affects: []
   - vnum: 3135
-    namelist: fountain water
-    short_desc: a fountain
-    long_desc: A water fountain provides fresh water here.
+    namelist: "fountain water"
+    short_desc: "a fountain"
+    long_desc: "A water fountain provides fresh water here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -3826,13 +3826,13 @@ objects:
     cost: 3000
     rent: 1000
     extra_descriptions:
-      - keywords: fountain
-        description: It is very nice.  Made from fine white marble.
+      - keywords: "fountain"
+        description: "It is very nice.  Made from fine white marble."
     affects: []
   - vnum: 3138
-    namelist: waterskin leather
-    short_desc: a leather waterskin
-    long_desc: A leather waterskin lies here.
+    namelist: "waterskin leather"
+    short_desc: "a leather waterskin"
+    long_desc: "A leather waterskin lies here."
     action_desc: ""
     type_flag: 17
     extra_flags: 0
@@ -3845,13 +3845,13 @@ objects:
     cost: 30
     rent: 10
     extra_descriptions:
-      - keywords: waterskin
-        description: A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms.
+      - keywords: "waterskin"
+        description: "A sturdy leather waterskin for carrying water on journeys across the dead sea bottoms."
     affects: []
   - vnum: 3139
-    namelist: map helium city guide
-    short_desc: a map of Lesser Helium
-    long_desc: A detailed map of Lesser Helium lies here.
+    namelist: "map helium city guide"
+    short_desc: "a map of Lesser Helium"
+    long_desc: "A detailed map of Lesser Helium lies here."
     action_desc: ""
     type_flag: 16
     extra_flags: 0
@@ -3864,7 +3864,7 @@ objects:
     cost: 1
     rent: 1
     extra_descriptions:
-      - keywords: map guide
+      - keywords: "map guide"
         description: |
           This detailed map shows the layout of Lesser Helium:
 
@@ -3959,647 +3959,647 @@ objects:
            └──────────────────────────────────────────────────────────────┘
     affects: []
 resets:
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3300
     arg2: 2
     arg3: 3055
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3301
     arg2: 2
     arg3: 3055
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3302
     arg2: 2
     arg3: 3055
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3307
     arg2: 2
     arg3: 3055
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3310
     arg2: 2
     arg3: 3055
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3321
     arg2: 2
     arg3: 3055
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3110
     arg2: 1
     arg3: 3001
-    comment: Tour guide in Temple of Jeddak (first room)
-  - command: G
+    comment: "Tour guide in Temple of Jeddak (first room)"
+  - command: "G"
     if_flag: 1
     arg1: 3139
     arg2: 500
-    comment: Give tour guide maps to sell
-  - command: M
+    comment: "Give tour guide maps to sell"
+  - command: "M"
     if_flag: 0
     arg1: 3000
     arg2: 1
     arg3: 3033
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3040
     arg2: 500
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3041
     arg2: 500
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3042
     arg2: 500
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3043
     arg2: 500
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3044
     arg2: 500
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3003
     arg2: 1
     arg3: 3011
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3520
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3521
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3522
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3590
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3591
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3226
     arg2: 100
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3004
     arg2: 1
     arg3: 3020
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3066
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3067
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3068
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3069
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3070
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3071
     arg2: 100
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3002
     arg2: 1
     arg3: 3010
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3030
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3031
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3032
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3033
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3034
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3035
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3001
     arg2: 1
     arg3: 3009
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3010
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3011
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3008
     arg2: 1
     arg3: 3031
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3009
     arg2: 1
     arg3: 3034
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3570
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3571
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3572
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3573
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3574
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3552
     arg2: 100
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3010
     arg2: 1
     arg3: 3035
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3066
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3067
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3068
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3069
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3070
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3071
     arg2: 100
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3005
     arg2: 1
     arg3: 3008
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3006
     arg2: 1
     arg3: 3049
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3050
     arg2: 20
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3051
     arg2: 10
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3040
     arg2: 1
     arg3: 3007
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3000
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3001
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3100
     arg2: 1
     arg3: 3007
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3100
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3101
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3102
     arg2: 100
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3043
     arg2: 1
     arg3: 3003
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3502
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3503
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3504
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3042
     arg2: 1
     arg3: 3018
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3002
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3003
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3045
     arg2: 1
     arg3: 3022
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3002
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3003
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3004
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3044
     arg2: 1
     arg3: 3028
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3003
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3004
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3046
     arg2: 1
     arg3: 3048
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3002
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3003
     arg2: 100
-  - command: G
+  - command: "G"
     if_flag: 1
     arg1: 3004
     arg2: 100
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3020
     arg2: 1
     arg3: 3019
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3021
     arg2: 1
     arg3: 3002
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3022
     arg2: 1
     arg3: 3029
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3023
     arg2: 1
     arg3: 3023
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3024
     arg2: 1
     arg3: 3017
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3025
     arg2: 1
     arg3: 3004
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3026
     arg2: 1
     arg3: 3027
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3027
     arg2: 1
     arg3: 3021
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3007
     arg2: 1
     arg3: 3021
-    comment: Quest giver for quests 3001, 3002, 3602
-  - command: M
+    comment: "Quest giver for quests 3001, 3002, 3602"
+  - command: "M"
     if_flag: 0
     arg1: 3060
     arg2: 10
     arg3: 3004
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3135
     arg2: 1
     arg3: 3014
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3060
     arg2: 10
     arg3: 3014
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3060
     arg2: 10
     arg3: 3017
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3060
     arg2: 10
     arg3: 3021
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3060
     arg2: 10
     arg3: 3027
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3067
     arg2: 4
     arg3: 3041
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3067
     arg2: 4
     arg3: 3041
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3067
     arg2: 4
     arg3: 3040
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3067
     arg2: 4
     arg3: 3040
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3022
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3063
     arg2: 5
     arg3: 3026
-  - command: E
+  - command: "E"
     if_flag: 1
     arg1: 3021
     arg2: 100
     arg3: 16
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3064
     arg2: 3
     arg3: 3007
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3065
     arg2: 2
     arg3: 3044
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3065
     arg2: 2
     arg3: 3048
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3062
     arg2: 15
     arg3: 3024
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3062
     arg2: 15
     arg3: 3025
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3062
     arg2: 15
     arg3: 3016
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3062
     arg2: 15
     arg3: 3012
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3066
     arg2: 1
     arg3: 3026
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3061
     arg2: 5
     arg3: 3006
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3090
     arg2: 1
     arg3: 3032
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3091
     arg2: 1
     arg3: 3032
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3092
     arg2: 1
     arg3: 3032
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3093
     arg2: 1
     arg3: 3032
-  - command: M
+  - command: "M"
     if_flag: 0
     arg1: 3094
     arg2: 1
     arg3: 3032
-  - command: O
+  - command: "O"
     if_flag: 0
     arg1: 3099
     arg2: 1
@@ -4617,9 +4617,9 @@ shops:
       no_such_item2: "%s I don't buy!"
       do_not_buy: "%s I don't buy!"
       missing_cash1: "%s I don't buy!"
-      missing_cash2: '%s Are you drunk or what ?? - NO CREDIT!'
+      missing_cash2: "%s Are you drunk or what ?? - NO CREDIT!"
       message_buy: "%s That'll be - say %d coins."
-      message_sell: '%s Oups - %d a minor bug - please report!'
+      message_sell: "%s Oups - %d a minor bug - please report!"
     temper1: 0
     temper2: 0
     keeper: 3001
@@ -4679,11 +4679,11 @@ shops:
     messages:
       no_such_item1: "%s I haven't got that kind of a weapon."
       no_such_item2: "%s You don't carry that weapon."
-      do_not_buy: '%s I only buy weapons.'
+      do_not_buy: "%s I only buy weapons."
       missing_cash1: "%s I can't afford such a great weapon."
-      missing_cash2: '%s Sorry, but NO CREDIT!'
-      message_buy: '%s That just costs %d coins.'
-      message_sell: '%s Here you have %d coins for that.'
+      missing_cash2: "%s Sorry, but NO CREDIT!"
+      message_buy: "%s That just costs %d coins."
+      message_sell: "%s Here you have %d coins for that."
     temper1: 0
     temper2: 0
     keeper: 3003
@@ -4708,8 +4708,8 @@ shops:
     messages:
       no_such_item1: "%s Haven't got that on storage - try list!"
       no_such_item2: "%s You don't seem to have that."
-      do_not_buy: '%s I only buy armours.. Go away!'
-      missing_cash1: '%s That is too expensive for me - Try a wizard!'
+      do_not_buy: "%s I only buy armours.. Go away!"
+      missing_cash1: "%s That is too expensive for me - Try a wizard!"
       missing_cash2: "%s You can't afford it!"
       message_buy: "%s That'll be %d coins, please."
       message_sell: "%s You'll get %d coins for it!"
@@ -4736,7 +4736,7 @@ shops:
       missing_cash1: "%s I don't buy!"
       missing_cash2: "%s If you have no money, you'll have to go!"
       message_buy: "%s That'll be %d coins."
-      message_sell: '%s Oups - %d a minor bug - please report!'
+      message_sell: "%s Oups - %d a minor bug - please report!"
     temper1: 0
     temper2: 0
     keeper: 3042
@@ -4761,7 +4761,7 @@ shops:
       missing_cash1: "%s I don't buy!"
       missing_cash2: "%s If you have no money, you'll have to go!"
       message_buy: "%s That'll be %d coins."
-      message_sell: '%s Oups - %d a minor bug - please report!'
+      message_sell: "%s Oups - %d a minor bug - please report!"
     temper1: 0
     temper2: 0
     keeper: 3045
@@ -4789,7 +4789,7 @@ shops:
       no_such_item1: "%s Sorry, I haven't got exactly that item."
       no_such_item2: "%s You don't seem to have that."
       do_not_buy: "%s I don't buy such items."
-      missing_cash1: '%s That is too expensive for me!'
+      missing_cash1: "%s That is too expensive for me!"
       missing_cash2: "%s You can't afford it!"
       message_buy: "%s That'll be %d coins, please."
       message_sell: "%s You'll get %d coins for it!"
@@ -4811,13 +4811,13 @@ shops:
     profit_sell: 0.9
     buy_types: []
     messages:
-      no_such_item1: '%s I got no such drink.'
-      no_such_item2: '%s I see no such thing.'
-      do_not_buy: '%s I do not buy, would you like a drink?'
-      missing_cash1: '%s BUG, Please report'
+      no_such_item1: "%s I got no such drink."
+      no_such_item2: "%s I see no such thing."
+      do_not_buy: "%s I do not buy, would you like a drink?"
+      missing_cash1: "%s BUG, Please report"
       missing_cash2: "%s You can't afford such a fine drink, try the Grubby Inn."
       message_buy: "%s Fine, that'll be %d gold pieces."
-      message_sell: '%s Bug, please report (%d).'
+      message_sell: "%s Bug, please report (%d)."
     temper1: 0
     temper2: 0
     keeper: 3100
@@ -4842,8 +4842,8 @@ shops:
     messages:
       no_such_item1: "%s Haven't got that on storage - try list!"
       no_such_item2: "%s You don't seem to have that."
-      do_not_buy: '%s I only buy armours..'
-      missing_cash1: '%s That is too expensive for me - Try a wizard!'
+      do_not_buy: "%s I only buy armours.."
+      missing_cash1: "%s That is too expensive for me - Try a wizard!"
       missing_cash2: "%s You can't afford it!"
       message_buy: "%s That'll be %d coins, please."
       message_sell: "%s You'll get %d coins for it!"
@@ -4871,8 +4871,8 @@ shops:
     messages:
       no_such_item1: "%s Haven't got that on storage - try list!"
       no_such_item2: "%s You don't seem to have that."
-      do_not_buy: '%s I only buy fine jewelry..'
-      missing_cash1: '%s That is such an expensive item that I dare not possess it!'
+      do_not_buy: "%s I only buy fine jewelry.."
+      missing_cash1: "%s That is such an expensive item that I dare not possess it!"
       missing_cash2: "%s You can't afford it, you slut!"
       message_buy: "%s That'll be %d coins, please."
       message_sell: "%s You'll get %d coins for it!"
@@ -4898,9 +4898,9 @@ shops:
       no_such_item2: "%s I don't buy!"
       do_not_buy: "%s I don't buy!"
       missing_cash1: "%s I don't buy!"
-      missing_cash2: '%s Are you drunk or what ?? - NO CREDIT!'
+      missing_cash2: "%s Are you drunk or what ?? - NO CREDIT!"
       message_buy: "%s That'll be - say %d coins."
-      message_sell: '%s Oups - %d a minor bug - please report!'
+      message_sell: "%s Oups - %d a minor bug - please report!"
     temper1: 0
     temper2: 0
     keeper: 3046
@@ -4919,13 +4919,13 @@ shops:
     profit_sell: 0.9
     buy_types: []
     messages:
-      no_such_item1: '%s I regret we do not have that available today.'
-      no_such_item2: '%s I do not purchase items from patrons.'
-      do_not_buy: '%s I do not purchase items from patrons.'
-      missing_cash1: '%s I do not purchase items from patrons.'
-      missing_cash2: '%s I am afraid you lack sufficient funds.'
-      message_buy: '%s That will be %d gold coins.'
-      message_sell: '%s My apologies, but I do not purchase items.'
+      no_such_item1: "%s I regret we do not have that available today."
+      no_such_item2: "%s I do not purchase items from patrons."
+      do_not_buy: "%s I do not purchase items from patrons."
+      missing_cash1: "%s I do not purchase items from patrons."
+      missing_cash2: "%s I am afraid you lack sufficient funds."
+      message_buy: "%s That will be %d gold coins."
+      message_sell: "%s My apologies, but I do not purchase items."
     temper1: 0
     temper2: 0
     keeper: 3043
@@ -4946,7 +4946,7 @@ shops:
       no_such_item2: "%s I don't buy anything, I just provide maps to visitors."
       do_not_buy: "%s I don't buy anything, I just provide maps to visitors."
       missing_cash1: "%s I don't buy anything, I just provide maps to visitors."
-      missing_cash2: '%s The map is free for all visitors to Lesser Helium!'
+      missing_cash2: "%s The map is free for all visitors to Lesser Helium!"
       message_buy: "%s Here's your map - completely free! Welcome to Lesser Helium!"
       message_sell: "%s I don't buy anything, I just provide maps to visitors."
     temper1: 0
@@ -4969,9 +4969,9 @@ quests:
     reward_exp: 200
     reward_gold: 50
     reward_item: 3015
-    quest_text: The Red Martian warrior regards you with a critical eye. 'Welcome, recruit! To prove you're ready to serve Helium, venture into the sewers beneath the city and deal with one of the ulsio vermin. They've been growing bold lately. Return when you've succeeded, and I'll see you're properly equipped.'
-    complete_text: The warrior nods with approval as you report your success. 'Well done! You've proven you have the makings of a defender of Helium. Take this equipment - it will serve you well in the battles ahead. If you seek to serve the city further, the beast-handler at the calot shop needs help feeding his animals. Speak with the beast-handler about assisting with his calots.'
-    fail_text: The warrior shakes his head. 'The ulsio still infest our sewers. Come back when you're ready to face them.'
+    quest_text: "The Red Martian warrior regards you with a critical eye. 'Welcome, recruit! To prove you're ready to serve Helium, venture into the sewers beneath the city and deal with one of the ulsio vermin. They've been growing bold lately. Return when you've succeeded, and I'll see you're properly equipped.'"
+    complete_text: "The warrior nods with approval as you report your success. 'Well done! You've proven you have the makings of a defender of Helium. Take this equipment - it will serve you well in the battles ahead. If you seek to serve the city further, the beast-handler at the calot shop needs help feeding his animals. Speak with the beast-handler about assisting with his calots.'"
+    fail_text: "The warrior shakes his head. 'The ulsio still infest our sewers. Come back when you're ready to face them.'"
   - qnum: 3002
     giver: 3063
     type: 64
@@ -4982,9 +4982,9 @@ quests:
     reward_exp: 250
     reward_gold: 100
     reward_item: 3001
-    quest_text: The mercenary gestures toward the market. 'I need someone to make a patrol through the market plaza and report back on the activity there. Simply make your way to the market plaza and return to me.'
-    complete_text: The mercenary nods as you report your patrol findings. 'Good work. Vigilance keeps Helium safe. Here is your compensation. If you're looking for more dangerous work, talk to the Red Martian Warrior at the Warriors Guild entrance - he has tasks that involve clearing out the ulsio vermin in our sewers.'
-    fail_text: The mercenary looks disappointed. 'I still need that patrol completed.'
+    quest_text: "The mercenary gestures toward the market. 'I need someone to make a patrol through the market plaza and report back on the activity there. Simply make your way to the market plaza and return to me.'"
+    complete_text: "The mercenary nods as you report your patrol findings. 'Good work. Vigilance keeps Helium safe. Here is your compensation. If you're looking for more dangerous work, talk to the Red Martian Warrior at the Warriors Guild entrance - he has tasks that involve clearing out the ulsio vermin in our sewers.'"
+    fail_text: "The mercenary looks disappointed. 'I still need that patrol completed.'"
   - qnum: 3003
     giver: 3008
     type: 62
@@ -4995,6 +4995,6 @@ quests:
     reward_exp: 300
     reward_gold: 75
     reward_item: 3003
-    quest_text: The beast-handler looks at his calots with concern. 'My calots are hungry, and I need fresh meat to keep them strong and healthy. The carrion birds in the sewers beneath the city often have dried meat in their nests. If you could venture down there and bring me back some dried meat, I would be most grateful. The calots are important to Helium's defense, after all.'
-    complete_text: The beast-handler accepts the dried meat with a grateful smile. 'Excellent! This will keep my calots well-fed and ready for duty. You've done Helium a great service. Take this as thanks.'
-    fail_text: The beast-handler looks worried. 'My calots still need feeding. Please help if you can find dried meat from the carrion birds in the sewers.'
+    quest_text: "The beast-handler looks at his calots with concern. 'My calots are hungry, and I need fresh meat to keep them strong and healthy. The carrion birds in the sewers beneath the city often have dried meat in their nests. If you could venture down there and bring me back some dried meat, I would be most grateful. The calots are important to Helium's defense, after all.'"
+    complete_text: "The beast-handler accepts the dried meat with a grateful smile. 'Excellent! This will keep my calots well-fed and ready for duty. You've done Helium a great service. Take this as thanks.'"
+    fail_text: "The beast-handler looks worried. 'My calots still need feeding. Please help if you can find dried meat from the carrion birds in the sewers.'"

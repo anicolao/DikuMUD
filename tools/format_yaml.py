@@ -18,7 +18,7 @@ def convert_multiline_to_literal(data):
     
     Multi-line strings (containing \\n) are converted to use YAML's | format
     which is much more readable than escaped strings.
-    Empty strings are converted to use double quotes.
+    All other strings are converted to use double quotes.
     """
     if isinstance(data, dict):
         return {k: convert_multiline_to_literal(v) for k, v in data.items()}
@@ -28,11 +28,9 @@ def convert_multiline_to_literal(data):
         if '\n' in data:
             # Convert multi-line strings to literal scalars
             return LiteralScalarString(data)
-        elif data == '':
-            # Convert empty strings to double-quoted strings
-            return DoubleQuotedScalarString(data)
         else:
-            return data
+            # Convert all other strings to double-quoted strings
+            return DoubleQuotedScalarString(data)
     else:
         return data
 
