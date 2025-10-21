@@ -244,12 +244,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3907
-  - direction: 4
-    description: Stairs ascend to the guard tower.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3979
   extra_descriptions: []
 - vnum: 3907
   name: Ascending Stairway
@@ -1390,30 +1384,36 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3953
+  - direction: 1
+    description: The Central Tower is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3979
   - direction: 2
     description: The southern wall and gate are to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3956
-  - direction: 5
-    description: The stairs lead down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3907
-  - direction: 4
-    description: The Residential District is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3944
   - direction: 3
     description: The Common Square is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3958
+  - direction: 4
+    description: The Residential District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3907
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1970,12 +1970,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The stairs lead down.
+  - direction: 3
+    description: South Plaza is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3906
+    to_room: 3952
   - direction: 4
     description: An administrative stairway continues upward.
     keywords: ''
