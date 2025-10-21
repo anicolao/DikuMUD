@@ -1,25 +1,15 @@
-delplay
-dmserver
-zone_layout_validator
 *.o
-.direnv
-lib/players
-lib/board.messages
-syntax_check
-# Assembled world files (generated from lib/zones_yaml/*)
+dmserver
+delplay
+zone_layout_validator
+find_room_paths
 lib/tinyworld.wld
 lib/tinyworld.mob
 lib/tinyworld.obj
 lib/tinyworld.zon
 lib/tinyworld.shp
 lib/tinyworld.qst
-lib/pcobjs.obj
 lib/.worldfiles_built
 .validate-commands-passed
-# Legacy zone files (generated from YAML, should not be checked in)
-lib/zones/*.mob
-lib/zones/*.obj
-lib/zones/*.wld
-lib/zones/*.zon
-lib/zones/*.shp
-lib/zones/*.qst
+integration_test_outputs/
+integration_test_failures/
