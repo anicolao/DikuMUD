@@ -342,12 +342,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3911
-  - direction: 2
-    description: A broad avenue leads south toward the residential districts.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
   - direction: 3
     description: The Grand Plaza is to the west.
     keywords: ''
@@ -398,12 +392,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: Temple Square is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3910
   - direction: 1
     description: The boulevard continues eastward.
     keywords: ''
@@ -1102,24 +1090,24 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 4
-    description: Stairway up.
+  - direction: 0
+    description: Northern Plaza is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3909
-  - direction: 3
-    description: Stairway west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3906
+    to_room: 3969
   - direction: 2
     description: The Royal Inn is south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3941
+  - direction: 4
+    description: Stairway up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3909
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
@@ -1798,6 +1786,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3901
+  - direction: 2
+    description: The Western Thoroughfare is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   - direction: 3
     description: The northern residential areas are to the west.
     keywords: ''
@@ -2198,6 +2192,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 2
+    description: A passage leads south to cultural buildings.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3998
   extra_descriptions: []
 - vnum: 3992
   name: City Administration
@@ -2328,6 +2328,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3912
+  - direction: 0
+    description: The Merchant Guild Hall is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3991
   extra_descriptions: []
 - vnum: 3999
   name: Hall of Antiquities
