@@ -1954,7 +1954,7 @@ objects:
   action_desc: ''
   type_flag: 18
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385  # ITEM_TAKE (1) + ITEM_HOLD (16384)
   value0: 0
   value1: 0
   value2: 0
@@ -2018,9 +2018,9 @@ objects:
   short_desc: a coil of rope
   long_desc: A coil of rope lies here.
   action_desc: ''
-  type_flag: 1
+  type_flag: 12  # ITEM_OTHER (rope is not a light source)
   extra_flags: 0
-  wear_flags: 1
+  wear_flags: 16385  # ITEM_TAKE (1) + ITEM_HOLD (16384)
   value0: 0
   value1: 0
   value2: 0

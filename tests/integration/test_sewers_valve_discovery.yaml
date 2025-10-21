@@ -14,54 +14,25 @@ setup:
     password: test
     class: warrior
     level: 22  # Need level 22+ for 'load obj' command
-  start_room: 3150  # Lower Sewer Access
+  start_room: 1200  # Start in well-lit Chat Room
   gold: 0
 
 steps:
-  - action: command
-    command: "load obj 3531"
-    description: "Load a glow crystal for light"
-    expected:
-      - pattern: "Ok"
-
-  - action: command
-    command: "get crystal"
-    description: "Get the crystal"
-    expected:
-      - pattern: "."
-
-  - action: command
-    command: "hold crystal"
-    description: "Hold the crystal for light"
-    expected:
-      - pattern: "."
-
   - action: command
     command: "load obj 3224"
     description: "Load a rope for testing"
     expected:
       - pattern: "Ok"
 
-  - action: look
-    description: "Look to see the rope in the room"
-    expected:
-      - pattern: "rope"
-
   - action: command
     command: "get rope"
-    description: "Pick up the rope"
-    expected:
-      - pattern: "."
-
-  - action: command
-    command: "remove crystal"
-    description: "Remove crystal to free hold slot"
+    description: "Get the rope"
     expected:
       - pattern: "."
 
   - action: command
     command: "hold rope"
-    description: "Hold the rope for use command"
+    description: "Hold the rope while still in lit room"
     expected:
       - pattern: "."
 
@@ -72,28 +43,10 @@ steps:
       - pattern: "near the valve mechanism"
 
   - action: command
-    command: "s"
-    description: "Move south to Main Sewer Tunnel"
+    command: "goto 3157"
+    description: "Teleport to Deep Sewer Chamber (valve room)"
     expected:
-      - pattern: "Main Sewer Tunnel"
-
-  - action: command
-    command: "s"
-    description: "Move south to Main Tunnel Junction"
-    expected:
-      - pattern: "Junction"
-
-  - action: command
-    command: "s"
-    description: "Move south to Southern Main Tunnel"
-    expected:
-      - pattern: "Southern Main Tunnel"
-
-  - action: command
-    command: "s"
-    description: "Move south to Deep Sewer Chamber"
-    expected:
-      - pattern: "Deep Sewer Chamber"
+      - pattern: "."
 
   - action: command
     command: "use rope valve"

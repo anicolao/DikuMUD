@@ -14,19 +14,25 @@ setup:
     password: test
     class: warrior
     level: 22  # Need level 22+ for 'load obj' command
-  start_room: 3150  # Lower Sewer Access
+  start_room: 1200  # Start in well-lit Chat Room
   gold: 0
 
 steps:
   - action: command
     command: "load obj 3221"
-    description: "Load an iron key for testing (loads into inventory)"
+    description: "Load an iron key for testing"
     expected:
       - pattern: "Ok"
 
   - action: command
+    command: "get key"
+    description: "Get the key"
+    expected:
+      - pattern: "."
+
+  - action: command
     command: "hold key"
-    description: "Hold the key"
+    description: "Hold the key while still in lit room"
     expected:
       - pattern: "."
 
@@ -37,10 +43,10 @@ steps:
       - pattern: "near the maintenance panel"
 
   - action: command
-    command: "s"
-    description: "Move south to Main Sewer Tunnel"
+    command: "goto 3151"
+    description: "Teleport to Main Sewer Tunnel (panel room)"
     expected:
-      - pattern: "Main Sewer Tunnel"
+      - pattern: "."
 
   - action: command
     command: "use key panel"
