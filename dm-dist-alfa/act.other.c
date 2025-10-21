@@ -610,9 +610,7 @@ void do_use(struct char_data *ch, char *argument, int cmd)
                                      char *argument, int cmd);
 
   int bits;
-  
-  /* Debug: Confirm do_use is called */
-  send_to_char("[DEBUG: do_use called]\r\n", ch);
+  int spec_result;
 
   argument = one_argument(argument,buf);
 
@@ -623,21 +621,12 @@ void do_use(struct char_data *ch, char *argument, int cmd)
   }
 
 	stick = ch->equipment[HOLD];
-  
-  /* Debug: Show what we're checking */
-  {
-    char debug_buf[256];
-    snprintf(debug_buf, sizeof(debug_buf), "[DEBUG: Calling execute_obj_spec_proc, cmd=%d]\r\n", cmd);
-    send_to_char(debug_buf, ch);
-  }
 
   /* Check for object-specific special procedures first */
-  if (execute_obj_spec_proc(ch, stick, argument, cmd)) {
-    send_to_char("[DEBUG: execute_obj_spec_proc returned true]\r\n", ch);
+  spec_result = execute_obj_spec_proc(ch, stick, argument, cmd);
+  if (spec_result) {
     return;  /* Special procedure handled the command */
   }
-  
-  send_to_char("[DEBUG: execute_obj_spec_proc returned false, continuing with normal use]\r\n", ch);
 
   if (stick->obj_flags.type_flag == ITEM_STAFF)
   {
