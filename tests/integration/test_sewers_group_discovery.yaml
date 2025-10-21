@@ -5,10 +5,10 @@ setup:
   start_room: 3150  # Lower Sewer Access
 
 steps:
-- command: "test_create_player warrior 3 test_group_leader"
+- command: "test_create_player warrior 22 test_group_leader"  # Level 22 for 'load obj'
   match_output: "Created test player"
 
-- command: "test_create_player warrior 3 test_group_follower"
+- command: "test_create_player warrior 22 test_group_follower"  # Level 22 for 'load obj'
   match_output: "Created test player"
 
 - command: "test_load_obj 3224"

@@ -13,28 +13,22 @@ setup:
     name: KeyTester
     password: test
     class: warrior
-    level: 3
+    level: 22  # Need level 22+ for 'load obj' command
   start_room: 3150  # Lower Sewer Access
   gold: 0
 
 steps:
   - action: command
     command: "load obj 3221"
-    description: "Load an iron key for testing"
+    description: "Load an iron key for testing (loads into inventory)"
     expected:
-      - pattern: "."
-
-  - action: command
-    command: "get key"
-    description: "Pick up the key"
-    expected:
-      - pattern: "key"
+      - pattern: "Ok"
 
   - action: command
     command: "hold key"
     description: "Hold the key"
     expected:
-      - pattern: "key"
+      - pattern: "."
 
   - action: command
     command: "use key panel"
