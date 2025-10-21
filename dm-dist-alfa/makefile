@@ -115,6 +115,11 @@ zone_layout_validator: zone_layout_validator.o db.o handler.o utility.o constant
 
 zone_layout_validator.o: zone_layout_validator.c structs.h db.h utils.h
 
+find_room_paths: find_room_paths.o db.o handler.o utility.o constants.o
+	$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+find_room_paths.o: find_room_paths.c structs.h db.h utils.h
+
 comm.o : comm.c structs.h utils.h comm.h interpreter.h handler.h db.h
 act.comm.o : act.comm.c structs.h utils.h comm.h interpreter.h handler.h \
   db.h spells.h

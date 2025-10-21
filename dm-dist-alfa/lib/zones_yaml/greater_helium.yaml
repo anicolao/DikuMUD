@@ -33,23 +33,17 @@ rooms:
     key_vnum: -1
     to_room: 3910
   - direction: 2
-    description: The sounds and smells of the marketplace beckon to the south.
+    description: The Market District is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3920
+    to_room: 3964
   - direction: 4
     description: A stairway leads up.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3906
-  - direction: 5
-    description: The Airship Landing Platform is below.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3964
   extra_descriptions: []
 - vnum: 3901
   name: Before the Palace of the Warlord
@@ -245,17 +239,11 @@ rooms:
     key_vnum: -1
     to_room: 3900
   - direction: 1
-    description: Eastern thoroughfare.
+    description: Another stairway to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3940
-  - direction: 4
-    description: Stairs ascend to the guard tower.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3979
+    to_room: 3907
   extra_descriptions: []
 - vnum: 3907
   name: Ascending Stairway
@@ -270,12 +258,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3952
-  - direction: 5
-    description: The stairs lead down.
+  - direction: 3
+    description: Another stairway to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3920
+    to_room: 3906
   - direction: 1
     description: Another stairway east.
     keywords: ''
@@ -348,12 +336,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3911
-  - direction: 2
-    description: A broad avenue leads south toward the residential districts.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
   - direction: 3
     description: The Grand Plaza is to the west.
     keywords: ''
@@ -404,24 +386,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 0
-    description: Temple Square is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3910
-  - direction: 1
-    description: The boulevard continues eastward.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3913
-  - direction: 2
-    description: You see the entrance to the Noble Quarter.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3914
   - direction: 5
     description: The Music Hall is below.
     keywords: ''
@@ -440,20 +404,14 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: You see the eastern gate in the distance.
+  - direction: 0
+    description: The eastern gate is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3950
   - direction: 3
-    description: The Boulevard of Heroes continues west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
-  - direction: 0
-    description: The Hall of Antiquities is to the north.
+    description: The Hall of Antiquities is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -470,12 +428,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The Boulevard of Heroes is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
   - direction: 1
     description: An elegant street leads into the heart of the Noble Quarter.
     keywords: ''
@@ -494,18 +446,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
+  - direction: 2
+    description: The market district is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3916
+    to_room: 3924
   - direction: 3
     description: The entrance to the Noble Quarter is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3914
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3916
   extra_descriptions: []
 - vnum: 3916
   name: Guild of Nobles
@@ -601,11 +559,17 @@ rooms:
   sector_type: 1
   exits:
   - direction: 0
-    description: The Grand Plaza is to the north.
+    description: Naval Command is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3900
+    to_room: 3967
+  - direction: 1
+    description: Market east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3921
   - direction: 2
     description: You see the armory and weaponsmith district.
     keywords: ''
@@ -624,18 +588,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3991
-  - direction: 4
-    description: A stairway leads up.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3907
-  - direction: 1
-    description: Market east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3921
   extra_descriptions: []
 - vnum: 3921
   name: Eastern Market Row
@@ -744,6 +696,18 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
+  - direction: 0
+    description: The Noble Quarter is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3915
+  - direction: 1
+    description: The Eastern Gate is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
   - direction: 3
     description: Market west.
     keywords: ''
@@ -1108,24 +1072,24 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 4
-    description: Stairway up.
+  - direction: 0
+    description: Northern Plaza is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3909
-  - direction: 3
-    description: Stairway west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3906
+    to_room: 3969
   - direction: 2
     description: The Royal Inn is south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3941
+  - direction: 4
+    description: Stairway up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3909
   extra_descriptions: []
 - vnum: 3941
   name: The Royal Helium Inn
@@ -1368,12 +1332,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3951
-  - direction: 3
-    description: The eastern boulevard leads back into the city.
+  - direction: 2
+    description: The eastern boulevard leads south into the city.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3913
+  - direction: 3
+    description: The market district is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3924
   - direction: 4
     description: A stairway leads up.
     keywords: ''
@@ -1414,30 +1384,36 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3953
+  - direction: 1
+    description: The Central Tower is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3979
   - direction: 2
     description: The southern wall and gate are to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3956
-  - direction: 5
-    description: The stairs lead down.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3907
-  - direction: 4
-    description: The Residential District is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3944
   - direction: 3
     description: The Common Square is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3958
+  - direction: 4
+    description: The Residential District is above.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3944
+  - direction: 5
+    description: The stairs lead down.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3907
   extra_descriptions: []
 - vnum: 3953
   name: Shadowed Alley
@@ -1688,20 +1664,20 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
+  - direction: 0
+    description: The Grand Plaza is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3900
   - direction: 1
     description: The Military Barracks are to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3965
-  - direction: 4
-    description: The Grand Plaza is above.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3900
-  - direction: 5
-    description: Naval Command is below.
+  - direction: 2
+    description: The Naval Command area is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1758,18 +1734,24 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: You see the shipyards to the south.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3968
-  - direction: 4
-    description: The Airship Landing Platform is above.
+  - direction: 0
+    description: The Airship Landing Platform is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3964
+  - direction: 2
+    description: The Market District is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3920
+  - direction: 3
+    description: The shipyards are to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3968
   extra_descriptions: []
 - vnum: 3968
   name: Airship Shipyards
@@ -1782,8 +1764,8 @@ rooms:
   room_flags: 0
   sector_type: 2
   exits:
-  - direction: 0
-    description: Naval Command is to the north.
+  - direction: 1
+    description: Naval Command is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -1804,6 +1786,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3901
+  - direction: 2
+    description: The Western Thoroughfare is to the south.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3940
   - direction: 3
     description: The northern residential areas are to the west.
     keywords: ''
@@ -1982,12 +1970,12 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 5
-    description: The stairs lead down.
+  - direction: 3
+    description: South Plaza is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3906
+    to_room: 3952
   - direction: 4
     description: An administrative stairway continues upward.
     keywords: ''
@@ -2122,18 +2110,18 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
+  - direction: 0
+    description: The bath house is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3990
   - direction: 5
     description: You can go down.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3944
-  - direction: 1
-    description: The bath house is to the east.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3990
   extra_descriptions: []
 - vnum: 3988
   name: Training Hall
@@ -2180,8 +2168,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 3
-    description: Healer's Hall is to the west.
+  - direction: 2
+    description: Healer's Hall is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -2204,6 +2192,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3920
+  - direction: 2
+    description: A passage leads south to cultural buildings.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3998
   extra_descriptions: []
 - vnum: 3992
   name: City Administration
@@ -2334,6 +2328,12 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3912
+  - direction: 0
+    description: The Merchant Guild Hall is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3991
   extra_descriptions: []
 - vnum: 3999
   name: Hall of Antiquities
@@ -2346,8 +2346,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Theater is to the south.
+  - direction: 1
+    description: The Eastern Boulevard is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
