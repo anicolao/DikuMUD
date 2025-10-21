@@ -44,8 +44,8 @@ void init_obj_spec_procs(void)
     spec_proc_count = 0;
     
     /* Open the specials file */
-    if (!(fl = fopen("lib/tinyworld.specials", "r"))) {
-        slog("   No lib/tinyworld.specials file - no object special procedures loaded");
+    if (!(fl = fopen("tinyworld.specials", "r"))) {
+        slog("   No tinyworld.specials file - no object special procedures loaded");
         return;
     }
     
