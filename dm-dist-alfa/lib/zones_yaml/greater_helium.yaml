@@ -244,12 +244,6 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3900
-  - direction: 1
-    description: Eastern thoroughfare.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3940
   - direction: 4
     description: Stairs ascend to the guard tower.
     keywords: ''
