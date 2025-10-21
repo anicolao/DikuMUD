@@ -1,4 +1,5 @@
 *.backup
+*.bak
 __pycache__/
 tools/create_test_player
 tools/deduplicate_players
