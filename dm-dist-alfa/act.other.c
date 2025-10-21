@@ -606,6 +606,8 @@ void do_use(struct char_data *ch, char *argument, int cmd)
   char buf[100];
 	struct char_data *tmp_char;
   struct obj_data *tmp_object, *stick;
+  extern int execute_obj_spec_proc(struct char_data *ch, struct obj_data *obj, 
+                                     char *argument, int cmd);
 
   int bits;
 
@@ -618,6 +620,11 @@ void do_use(struct char_data *ch, char *argument, int cmd)
   }
 
 	stick = ch->equipment[HOLD];
+
+  /* Check for object-specific special procedures first */
+  if (execute_obj_spec_proc(ch, stick, argument, cmd)) {
+    return;  /* Special procedure handled the command */
+  }
 
   if (stick->obj_flags.type_flag == ITEM_STAFF)
   {

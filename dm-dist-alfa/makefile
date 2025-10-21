@@ -104,7 +104,7 @@ test: $(INTEGRATION_TEST_OUTPUTS) $(STANDALONE_TEST_OUTPUTS)
 	@echo "=========================================="
 	@python3 process_test_results.py
 
-dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o
+dmserver : comm.o act.comm.o act.informative.o act.movement.o act.obj1.o act.obj2.o act.offensive.o act.other.o act.social.o act.wizard.o handler.o db.o interpreter.o utility.o spec_assign.o shop.o limits.o mobact.o fight.o modify.o weather.o spell_parser.o spells1.o spells2.o reception.o constants.o spec_procs.o signals.o board.o mar_fiz_maz.o magic.o quest.o obj_spec_procs.o
 dmserver : changes.o
 	$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
@@ -173,6 +173,7 @@ mar_fiz_maz.o : mar_fiz_maz.c structs.h utils.h comm.h interpreter.h \
 changes.o : changes.c structs.h utils.h comm.h interpreter.h handler.h \
   db.h spells.h limits.h
 quest.o : quest.c structs.h utils.h comm.h db.h handler.h spells.h quest.h
+obj_spec_procs.o : obj_spec_procs.c structs.h utils.h comm.h db.h handler.h interpreter.h quest.h obj_spec_procs.h
 
 delplay.o : delplay.c structs.h
 

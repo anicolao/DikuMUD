@@ -204,6 +204,12 @@ void boot_db(void)
 	boot_quests();
 	slog("Assigning quest givers.");
 	assign_quest_givers();
+	
+	slog("Initializing object special procedures.");
+	{
+		extern void init_obj_spec_procs(void);
+		init_obj_spec_procs();
+	}
 
 	slog("Updating characters with saved items:");
 	update_obj_file();
