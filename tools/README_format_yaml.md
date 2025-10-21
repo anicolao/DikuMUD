@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `format_yaml.py` tool reformats YAML zone files to use literal block scalars for multi-line strings, making them much more readable and maintainable.
+The `format_yaml.py` tool reformats YAML zone files to use literal block scalars for multi-line strings, making them much more readable and maintainable. The tool is configured to match standard editor formatting conventions.
 
 ## Problem
 
@@ -25,10 +25,27 @@ description: |2-
      Steps lead down.
 ```
 
-The `|2-` notation means:
-- `|` = literal block scalar (preserves newlines as-is)
-- `2` = indentation indicator (content is indented by 2 spaces)
-- `-` = strip final newlines
+## Formatting Standards
+
+The tool produces YAML with these formatting conventions:
+
+1. **List indentation**: List items (`-`) are indented 2 spaces from their parent key
+2. **List content**: Properties within list items are indented 4 spaces from the parent key  
+3. **Nested lists**: Follow the same pattern recursively
+4. **Empty strings**: Use double quotes (`""`) instead of single quotes
+5. **Multi-line strings**: Use literal block scalars (`|`) for readability
+
+### Example
+
+```yaml
+rooms:
+  - vnum: 3001
+    name: The Temple
+    exits:
+      - direction: 0
+        keywords: ""
+        to_room: 3002
+```
 
 ## Usage
 
@@ -61,7 +78,9 @@ make build-worldfiles
 ## Technical Details
 
 - Uses `ruamel.yaml` library which provides better control over YAML formatting than PyYAML
-- Automatically detects multi-line strings (containing `\n`)
+- Automatically detects multi-line strings (containing `\n`) and converts them to literal block scalars
+- Empty strings are explicitly formatted with double quotes
+- Indent settings: `mapping=2, sequence=4, offset=2` for consistent formatting
 - Preserves the semantic meaning of the YAML (content is identical)
 - Only changes the presentation format
 - Compatible with all existing YAML parsing tools (PyYAML, ruamel.yaml, etc.)
@@ -70,6 +89,6 @@ make build-worldfiles
 
 Applied to `lesser_helium.yaml`:
 - Before: 5222 lines with escaped newlines and quoted strings
-- After: 5222 lines with literal block scalars
+- After: 5222 lines with literal block scalars and proper indentation
 - Validation: ✓ Passes all tests
 - Build: ✓ Successfully builds world files

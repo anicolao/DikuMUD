@@ -9,7 +9,7 @@ multi-line strings from escaped format to YAML's literal block scalar format.
 import sys
 from pathlib import Path
 from ruamel.yaml import YAML
-from ruamel.yaml.scalarstring import LiteralScalarString
+from ruamel.yaml.scalarstring import LiteralScalarString, DoubleQuotedScalarString
 
 
 def convert_multiline_to_literal(data):
@@ -18,14 +18,21 @@ def convert_multiline_to_literal(data):
     
     Multi-line strings (containing \\n) are converted to use YAML's | format
     which is much more readable than escaped strings.
+    Empty strings are converted to use double quotes.
     """
     if isinstance(data, dict):
         return {k: convert_multiline_to_literal(v) for k, v in data.items()}
     elif isinstance(data, list):
         return [convert_multiline_to_literal(item) for item in data]
-    elif isinstance(data, str) and '\n' in data:
-        # Convert multi-line strings to literal scalars
-        return LiteralScalarString(data)
+    elif isinstance(data, str):
+        if '\n' in data:
+            # Convert multi-line strings to literal scalars
+            return LiteralScalarString(data)
+        elif data == '':
+            # Convert empty strings to double-quoted strings
+            return DoubleQuotedScalarString(data)
+        else:
+            return data
     else:
         return data
 
@@ -52,7 +59,11 @@ def format_yaml_file(yaml_file, backup=True):
     yaml.preserve_quotes = False
     yaml.default_flow_style = False
     yaml.width = 4096  # Prevent line wrapping
-    yaml.indent(mapping=2, sequence=2, offset=0)
+    # Use offset=2 to indent list items by 2 spaces from their parent key
+    # sequence=4 ensures content within list items is properly indented at 4 spaces
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    # Configure to use double quotes for empty strings
+    yaml.default_style = None  # Let ruamel.yaml decide based on content
     
     try:
         # Load the YAML file
