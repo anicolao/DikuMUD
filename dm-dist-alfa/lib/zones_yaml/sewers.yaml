@@ -1970,8 +1970,9 @@ objects:
       ancient doors or chests in the deeper sections of the sewers.'
   affects: []
   special_procedure:
-    type: key_panel
+    type: use_target
     target_room: 3151
+    target_keywords: panel compartment door
     xp_reward: 75
     discovery_bit: 32
     consume_item: false
@@ -2045,8 +2046,9 @@ objects:
       securing items.'
   affects: []
   special_procedure:
-    type: valve_rope
+    type: use_target
     target_room: 3157
+    target_keywords: valve wheel mechanism
     xp_reward: 100
     discovery_bit: 31
     consume_item: true

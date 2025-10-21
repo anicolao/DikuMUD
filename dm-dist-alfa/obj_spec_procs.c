@@ -35,6 +35,7 @@ void init_obj_spec_procs(void)
     char buf[MAX_STRING_LENGTH];
     int vnum, target_room, xp_reward, discovery_bit, consume_item;
     char spec_type_str[256];
+    char keywords[MAX_STRING_LENGTH];
     struct obj_spec_proc_data *spec;
     extern void slog(char *str);
     
@@ -68,6 +69,11 @@ void init_obj_spec_procs(void)
                 break;
             sscanf(line, "%s %d %d %d %d", spec_type_str, &target_room, &xp_reward, &discovery_bit, &consume_item);
             
+            /* Read target keywords line */
+            if (!fgets(keywords, sizeof(keywords), fl))
+                break;
+            keywords[strcspn(keywords, "\n")] = '\0';  /* Remove newline */
+            
             /* Expand table if needed */
             if (spec_proc_count >= spec_proc_capacity) {
                 spec_proc_capacity *= 2;
@@ -82,15 +88,17 @@ void init_obj_spec_procs(void)
             spec->consume_item = consume_item;
             
             /* Determine spec type from string */
-            if (strcmp(spec_type_str, "valve_rope") == 0) {
-                spec->spec_type = SPEC_PROC_VALVE_ROPE;
-            } else if (strcmp(spec_type_str, "key_panel") == 0) {
-                spec->spec_type = SPEC_PROC_KEY_PANEL;
+            if (strcmp(spec_type_str, "use_target") == 0) {
+                spec->spec_type = SPEC_PROC_USE_TARGET;
             } else {
                 slog("Unknown special procedure type in tinyworld.specials");
                 spec_proc_count--;
                 continue;
             }
+            
+            /* Store target keywords */
+            CREATE(spec->target_keywords, char, strlen(keywords) + 1);
+            strcpy(spec->target_keywords, keywords);
             
             /* Read success message (tilde-terminated) */
             CREATE(spec->success_msg, char, MAX_SPEC_MSG_LEN);
@@ -128,6 +136,7 @@ void free_obj_spec_procs(void)
     
     if (spec_proc_table) {
         for (i = 0; i < spec_proc_count; i++) {
+            if (spec_proc_table[i].target_keywords) free(spec_proc_table[i].target_keywords);
             if (spec_proc_table[i].success_msg) free(spec_proc_table[i].success_msg);
             if (spec_proc_table[i].fail_msg) free(spec_proc_table[i].fail_msg);
             if (spec_proc_table[i].room_msg) free(spec_proc_table[i].room_msg);
@@ -239,13 +248,10 @@ int execute_obj_spec_proc(struct char_data *ch, struct obj_data *obj,
     if (!spec_data)
         return 0;
     
-    /* Execute the appropriate handler */
+    /* Execute the appropriate handler based on spec type */
     switch (spec_data->spec_type) {
-        case SPEC_PROC_VALVE_ROPE:
-            result = spec_proc_valve_rope(ch, obj, spec_data, argument);
-            break;
-        case SPEC_PROC_KEY_PANEL:
-            result = spec_proc_key_panel(ch, obj, spec_data, argument);
+        case SPEC_PROC_USE_TARGET:
+            result = spec_proc_use_target(ch, obj, spec_data, argument);
             break;
         default:
             return 0;
@@ -254,11 +260,14 @@ int execute_obj_spec_proc(struct char_data *ch, struct obj_data *obj,
     return result;
 }
 
-/* Handler for rope + valve procedure */
-int spec_proc_valve_rope(struct char_data *ch, struct obj_data *obj,
+/* Generic handler for use_target procedure - completely data-driven */
+int spec_proc_use_target(struct char_data *ch, struct obj_data *obj,
                          struct obj_spec_proc_data *spec_data, char *argument)
 {
-    char buf[MAX_STRING_LENGTH];
+    char *keyword;
+    char *arg_lower;
+    char *kw_copy;
+    int match_found = 0;
     
     /* Check if in the correct room */
     if (world[ch->in_room].number != spec_data->target_room) {
@@ -267,10 +276,39 @@ int spec_proc_valve_rope(struct char_data *ch, struct obj_data *obj,
         return 1;
     }
     
-    /* Check if argument mentions valve/wheel/mechanism */
-    if (!argument || (!strstr(argument, "valve") && !strstr(argument, "wheel") &&
-                      !strstr(argument, "mechanism"))) {
-        send_to_char("Use the rope with what?\r\n", ch);
+    /* If no argument provided, prompt for target */
+    if (!argument || !*argument) {
+        send_to_char("Use it with what?\r\n", ch);
+        return 1;
+    }
+    
+    /* Convert argument to lowercase for matching */
+    CREATE(arg_lower, char, strlen(argument) + 1);
+    strcpy(arg_lower, argument);
+    for (char *p = arg_lower; *p; p++) {
+        *p = tolower(*p);
+    }
+    
+    /* Check if argument matches any of the target keywords */
+    /* Keywords are space-separated in target_keywords field */
+    CREATE(kw_copy, char, strlen(spec_data->target_keywords) + 1);
+    strcpy(kw_copy, spec_data->target_keywords);
+    
+    keyword = strtok(kw_copy, " ");
+    while (keyword != NULL) {
+        if (strstr(arg_lower, keyword)) {
+            match_found = 1;
+            break;
+        }
+        keyword = strtok(NULL, " ");
+    }
+    
+    free(kw_copy);
+    free(arg_lower);
+    
+    /* If no keyword matched, fail */
+    if (!match_found) {
+        send_to_char("Use it with what?\r\n", ch);
         return 1;
     }
     
@@ -284,55 +322,10 @@ int spec_proc_valve_rope(struct char_data *ch, struct obj_data *obj,
     /* Grant discovery reward to character and group */
     grant_discovery_reward(ch, spec_data);
     
-    /* Consume the rope if specified */
+    /* Consume the item if specified */
     if (spec_data->consume_item) {
         extract_obj(obj);
     }
-    
-    return 1;
-}
-
-/* Handler for key + panel procedure */
-int spec_proc_key_panel(struct char_data *ch, struct obj_data *obj,
-                        struct obj_spec_proc_data *spec_data, char *argument)
-{
-    char buf[MAX_STRING_LENGTH];
-    struct obj_data *tool_set, *diagram;
-    
-    /* Check if in the correct room */
-    if (world[ch->in_room].number != spec_data->target_room) {
-        send_to_char(spec_data->fail_msg, ch);
-        send_to_char("\r\n", ch);
-        return 1;
-    }
-    
-    /* Check if argument mentions panel/compartment/door */
-    if (!argument || (!strstr(argument, "panel") && !strstr(argument, "compartment") &&
-                      !strstr(argument, "door"))) {
-        send_to_char("Use the key with what?\r\n", ch);
-        return 1;
-    }
-    
-    /* Success! Display success message */
-    send_to_char(spec_data->success_msg, ch);
-    send_to_char("\r\n", ch);
-    
-    /* Show room message */
-    act(spec_data->room_msg, FALSE, ch, obj, 0, TO_ROOM);
-    
-    /* Grant discovery reward to character and group */
-    grant_discovery_reward(ch, spec_data);
-    
-    /* Create the reward objects (ancient tool set and engineering diagram) */
-    /* These would be objects 3295 and 3296 based on design doc, but we'll use
-     * objects that exist: let's spawn some treasure as placeholder */
-    
-    /* Try to create ancient tool set (3233 - preserved rations is what exists) */
-    /* Actually, we should create objects that match the design doc */
-    /* For now, just send a message about finding items */
-    send_to_char("Inside the compartment, you find ancient engineering tools and diagrams!\r\n", ch);
-    
-    /* Note: Key is not consumed, so we don't extract it */
     
     return 1;
 }
