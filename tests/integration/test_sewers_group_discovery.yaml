@@ -1,0 +1,69 @@
+# Test: Group members receive discovery XP rewards
+# Tests that all grouped players in the same room get XP for discoveries
+
+setup:
+  start_room: 3150  # Lower Sewer Access
+
+steps:
+- command: "test_create_player warrior 3 test_group_leader"
+  match_output: "Created test player"
+
+- command: "test_create_player warrior 3 test_group_follower"
+  match_output: "Created test player"
+
+- command: "test_load_obj 3224"
+  match_output: "You create a coil of rope"
+
+- command: "get rope"
+  match_output: "You get a coil of rope"
+
+- command: "hold rope"
+  match_output: "You hold a coil of rope"
+
+- command: "s"
+  match_output: "Main Sewer Tunnel"
+
+- command: "s"
+  match_output: "Main Tunnel Junction"
+
+- command: "s"
+  match_output: "Southern Main Tunnel"
+
+- command: "s"
+  match_output: "Deep Sewer Chamber"
+
+- command: "test_switch test_group_follower"
+  match_output: "Switched to test_group_follower"
+
+- command: "s"
+  match_output: "Main Sewer Tunnel"
+
+- command: "s"
+  match_output: "Main Tunnel Junction"
+
+- command: "s"
+  match_output: "Southern Main Tunnel"
+
+- command: "s"
+  match_output: "Deep Sewer Chamber"
+
+- command: "follow test_group_leader"
+  match_output: "You now follow"
+
+- command: "test_switch test_group_leader"
+  match_output: "Switched to test_group_leader"
+
+- command: "use rope valve"
+  match_output: "You loop the rope through the pulley"
+
+- command: "score"
+  match_output: "You gain 100 experience"
+
+- command: "test_switch test_group_follower"
+  match_output: "Switched to test_group_follower"
+
+- command: "score"
+  match_output: "You gain 100 experience"
+
+- command: "score"
+  match_output: "PASS"

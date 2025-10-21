@@ -1,0 +1,58 @@
+# Test: Use iron key with maintenance panel in sewers
+# Tests the YAML-based object special procedure for the sewers deep discovery feature
+
+test:
+  id: test_sewers_key_discovery
+  description: "Verify iron key can be used with maintenance panel for XP reward"
+  author: Integration Test Framework
+  created: 2025-10-21
+  tags: [sewers, discovery, special_procedure]
+
+setup:
+  character:
+    name: KeyTester
+    password: test
+    class: warrior
+    level: 3
+  start_room: 3150  # Lower Sewer Access
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3221"
+    description: "Load an iron key for testing"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "get key"
+    description: "Pick up the key"
+    expected:
+      - pattern: "key"
+
+  - action: command
+    command: "hold key"
+    description: "Hold the key"
+    expected:
+      - pattern: "key"
+
+  - action: command
+    command: "use key panel"
+    description: "Try to use key when not in panel room - should fail"
+    expected:
+      - pattern: "near the maintenance panel"
+
+  - action: command
+    command: "s"
+    description: "Move south to Main Sewer Tunnel"
+    expected:
+      - pattern: "Main Sewer Tunnel"
+
+  - action: command
+    command: "use key panel"
+    description: "Use key with panel - should succeed"
+    expected:
+      - pattern: "insert the ancient iron key"
+        message: "Should unlock panel"
+      - pattern: "75 experience"
+        message: "Should gain discovery XP"

@@ -1,0 +1,76 @@
+# Test: Use rope with valve mechanism in sewers
+# Tests the YAML-based object special procedure for the sewers deep discovery feature
+
+test:
+  id: test_sewers_valve_discovery
+  description: "Verify rope can be used with valve mechanism for XP reward"
+  author: Integration Test Framework
+  created: 2025-10-21
+  tags: [sewers, discovery, special_procedure]
+
+setup:
+  character:
+    name: ValveTester
+    password: test
+    class: warrior
+    level: 3
+  start_room: 3150  # Lower Sewer Access
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3224"
+    description: "Load a rope for testing"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "get rope"
+    description: "Pick up the rope"
+    expected:
+      - pattern: "rope"
+
+  - action: command
+    command: "hold rope"
+    description: "Hold the rope"
+    expected:
+      - pattern: "rope"
+
+  - action: command
+    command: "use rope valve"
+    description: "Try to use rope when not in valve room - should fail"
+    expected:
+      - pattern: "near the valve mechanism"
+
+  - action: command
+    command: "s"
+    description: "Move south to Main Sewer Tunnel"
+    expected:
+      - pattern: "Main Sewer Tunnel"
+
+  - action: command
+    command: "s"
+    description: "Move south to Main Tunnel Junction"
+    expected:
+      - pattern: "Junction"
+
+  - action: command
+    command: "s"
+    description: "Move south to Southern Main Tunnel"
+    expected:
+      - pattern: "Southern Main Tunnel"
+
+  - action: command
+    command: "s"
+    description: "Move south to Deep Sewer Chamber"
+    expected:
+      - pattern: "Deep Sewer Chamber"
+
+  - action: command
+    command: "use rope valve"
+    description: "Use rope with valve - should succeed"
+    expected:
+      - pattern: "loop the rope through the pulley"
+        message: "Should activate valve mechanism"
+      - pattern: "100 experience"
+        message: "Should gain discovery XP"
