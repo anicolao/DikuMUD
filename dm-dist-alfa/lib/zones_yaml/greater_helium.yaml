@@ -386,18 +386,6 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: The boulevard continues eastward.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3913
-  - direction: 2
-    description: You see the entrance to the Noble Quarter.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3914
   - direction: 5
     description: The Music Hall is below.
     keywords: ''
@@ -416,20 +404,14 @@ rooms:
   room_flags: 0
   sector_type: 1
   exits:
-  - direction: 1
-    description: You see the eastern gate in the distance.
+  - direction: 0
+    description: The eastern gate is to the north.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3950
   - direction: 3
-    description: The Boulevard of Heroes continues west.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
-  - direction: 0
-    description: The Hall of Antiquities is to the north.
+    description: The Hall of Antiquities is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
@@ -446,12 +428,6 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 0
-    description: The Boulevard of Heroes is to the north.
-    keywords: ''
-    door_flag: 0
-    key_vnum: -1
-    to_room: 3912
   - direction: 1
     description: An elegant street leads into the heart of the Noble Quarter.
     keywords: ''
@@ -470,18 +446,24 @@ rooms:
   room_flags: 8
   sector_type: 0
   exits:
-  - direction: 4
-    description: You can go up.
+  - direction: 2
+    description: The market district is to the south.
     keywords: ''
     door_flag: 0
     key_vnum: -1
-    to_room: 3916
+    to_room: 3924
   - direction: 3
     description: The entrance to the Noble Quarter is to the west.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3914
+  - direction: 4
+    description: You can go up.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3916
   extra_descriptions: []
 - vnum: 3916
   name: Guild of Nobles
@@ -714,6 +696,18 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
+  - direction: 0
+    description: The Noble Quarter is to the north.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3915
+  - direction: 1
+    description: The Eastern Gate is to the east.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3950
   - direction: 3
     description: Market west.
     keywords: ''
@@ -1338,12 +1332,18 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3951
-  - direction: 3
-    description: The eastern boulevard leads back into the city.
+  - direction: 2
+    description: The eastern boulevard leads south into the city.
     keywords: ''
     door_flag: 0
     key_vnum: -1
     to_room: 3913
+  - direction: 3
+    description: The market district is to the west.
+    keywords: ''
+    door_flag: 0
+    key_vnum: -1
+    to_room: 3924
   - direction: 4
     description: A stairway leads up.
     keywords: ''
@@ -2346,8 +2346,8 @@ rooms:
   room_flags: 12
   sector_type: 0
   exits:
-  - direction: 2
-    description: The Theater is to the south.
+  - direction: 1
+    description: The Eastern Boulevard is to the east.
     keywords: ''
     door_flag: 0
     key_vnum: -1
