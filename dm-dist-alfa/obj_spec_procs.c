@@ -64,10 +64,16 @@ void init_obj_spec_procs(void)
         if (line[0] == '#') {
             vnum = atoi(line + 1);
             
-            /* Read spec type, target room, xp, discovery bit, consume flag */
+            /* Read spec type, target room, xp, discovery bit, consume flag, reward items */
             if (!fgets(line, sizeof(line), fl))
                 break;
-            sscanf(line, "%s %d %d %d %d", spec_type_str, &target_room, &xp_reward, &discovery_bit, &consume_item);
+            int reward_item1 = 0, reward_item2 = 0;
+            int scanned = sscanf(line, "%s %d %d %d %d %d %d", spec_type_str, &target_room, &xp_reward, &discovery_bit, &consume_item, &reward_item1, &reward_item2);
+            /* If old format (5 fields), reward items default to 0 */
+            if (scanned < 6) {
+                reward_item1 = 0;
+                reward_item2 = 0;
+            }
             
             /* Read target keywords line */
             if (!fgets(keywords, sizeof(keywords), fl))
@@ -86,6 +92,8 @@ void init_obj_spec_procs(void)
             spec->xp_reward = xp_reward;
             spec->discovery_bit = discovery_bit;
             spec->consume_item = consume_item;
+            spec->reward_item1 = reward_item1;
+            spec->reward_item2 = reward_item2;
             
             /* Determine spec type from string */
             if (strcmp(spec_type_str, "use_target") == 0) {
@@ -319,7 +327,33 @@ int spec_proc_use_target(struct char_data *ch, struct obj_data *obj,
     /* Show room message */
     act(spec_data->room_msg, FALSE, ch, obj, 0, TO_ROOM);
     
-    /* Grant discovery reward to character and group */
+    /* Give reward items if specified (only on first discovery) */
+    if (!is_quest_completed(ch, spec_data->discovery_bit)) {
+        extern struct obj_data *read_object(int nr, int type);
+        extern struct index_data *obj_index;
+        struct obj_data *reward_obj;
+        char buf[MAX_STRING_LENGTH];
+        
+        if (spec_data->reward_item1 > 0) {
+            reward_obj = read_object(spec_data->reward_item1, VIRTUAL);
+            if (reward_obj) {
+                obj_to_char(reward_obj, ch);
+                snprintf(buf, sizeof(buf), "You find %s!\r\n", reward_obj->short_description);
+                send_to_char(buf, ch);
+            }
+        }
+        
+        if (spec_data->reward_item2 > 0) {
+            reward_obj = read_object(spec_data->reward_item2, VIRTUAL);
+            if (reward_obj) {
+                obj_to_char(reward_obj, ch);
+                snprintf(buf, sizeof(buf), "You find %s!\r\n", reward_obj->short_description);
+                send_to_char(buf, ch);
+            }
+        }
+    }
+    
+    /* Grant discovery reward to character and group (this sets quest as completed) */
     grant_discovery_reward(ch, spec_data);
     
     /* Consume the item if specified */

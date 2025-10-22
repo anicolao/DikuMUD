@@ -25,6 +25,8 @@ struct obj_spec_proc_data {
     int xp_reward;              /* XP reward for first use (0 = no reward) */
     int discovery_bit;          /* Quest completion bit for tracking first use */
     int consume_item;           /* 1 if item is consumed on use, 0 otherwise */
+    int reward_item1;           /* First reward item vnum (0 = none) */
+    int reward_item2;           /* Second reward item vnum (0 = none) */
 };
 
 /* Function prototypes */

@@ -70,7 +70,24 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3153
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: channel channels water conduit
+    description: |
+      The water channels are carved into the stone floor with remarkable precision,
+      about a foot deep and running the length of the tunnel. Most are now dry,
+      with only fetid pools remaining in the lower sections. The craftsmanship
+      is exceptional - smooth, even surfaces that must have taken years to
+      complete. Along the eastern wall, partially obscured by slime and debris,
+      you notice what appears to be a maintenance access panel built into the
+      stonework.
+  - keywords: panel access maintenance door hatch compartment
+    description: |
+      Set into the wall is a sealed maintenance compartment, its metal door
+      corroded but intact. Ancient Martian engineering symbols are etched into
+      the surface - circles within circles, the mark of the master builders.
+      The compartment has a sturdy lock mechanism that appears functional despite
+      its age. An iron key would be needed to open it. You can see grooves in
+      the door's edges where it could be pried open with the right key.
 - vnum: 3152
   name: Eastern Side Passage
   description: '   This narrow passage splits off from the main tunnel.  The ceiling
@@ -145,11 +162,13 @@ rooms:
   description: '   This tight passage connects the eastern side passages.  The walls
     are rough
 
-    and unfinished, suggesting this was a secondary tunnel.  Small creatures have
+    and unfinished, suggesting this was a secondary tunnel.  Massive spider webs
 
-    made homes in crevices in the walls, and their droppings cover the floor.  The
+    stretch across the passage, their thick strands anchored to the walls and ceiling.
 
-    air is particularly stale here, with little circulation.'
+    Small creatures have made homes in crevices in the walls, and their droppings
+
+    cover the floor.  The air is particularly stale here, with little circulation.'
   zone: 31
   room_flags: 9
   sector_type: 0
@@ -166,7 +185,16 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3153
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: web webs silk strand strands
+    description: |
+      The spider webs are remarkably thick and strong, woven from silk that
+      has a slight metallic sheen in the dim light. The ancient Martians
+      prized spider silk for its strength and used it in their machinery -
+      processed correctly, these strands could serve as rope. The webbing
+      is sticky and tough, but a sharp blade could cut through it to harvest
+      usable lengths. Among the webbing, you notice the wrapped remains of
+      previous victims, including small bones and what might be metal objects.
 - vnum: 3155
   name: Southern Main Tunnel
   description: '   The main sewer tunnel continues here, gradually descending deeper
@@ -257,7 +285,24 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3160
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: pipe pipes drainage drain
+    description: |
+      The drainage pipes are ancient, their metal heavily oxidized but still
+      structurally sound. They emerge from the walls at various heights,
+      carrying whatever flows down from the city above. One larger pipe has
+      what appears to be a control mechanism mounted beside it - a valve
+      wheel assembly of some kind, long since fallen into disuse.
+  - keywords: valve wheel mechanism control machinery
+    description: |
+      An ancient water control mechanism is mounted on the wall beside a large
+      drainage pipe. At its center is a valve wheel, about two feet in diameter,
+      mounted horizontally on a corroded axle. The wheel is completely seized -
+      rust and mineral deposits have locked it in place. Above the wheel, you
+      notice a sturdy hook and pulley system. The floor shows wear patterns
+      suggesting this mechanism was operated using leverage - likely a rope
+      looped through the pulley to provide mechanical advantage. If freed, this
+      valve might still control water flow somewhere in the system.
 - vnum: 3158
   name: Western Sewer Tunnel
   description: '   This western branch of the sewer system shows more signs of collapse.  Several
@@ -285,7 +330,13 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3161
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: marks claw claws scratch scratches
+    description: |
+      The claw marks are deep gouges in the stone, made by something large
+      and powerful. They're relatively fresh - within the last few days. The
+      pattern suggests a banth or similar predator marking territory. You'd
+      best be on guard in this area.
 - vnum: 3159
   name: Small Side Den
   description: '   This small chamber has been turned into a den by some creature.  The
@@ -306,7 +357,15 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3157
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: nest debris remains scraps
+    description: |
+      The nest is a chaotic accumulation of materials the creature has
+      gathered: bones, torn fabric, bits of leather, and shiny objects that
+      caught its eye. Among the debris, you spot several items of interest -
+      scraps from kills, small coins, and what might be useful items. The
+      creature has been collecting for quite some time - there's likely more
+      hidden deeper in the pile.
 - vnum: 3160
   name: Deeper Sewer Passage
   description: '   You are now quite deep beneath the city.  The air is thin and difficult
@@ -341,7 +400,15 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3163
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: symbol symbols carving carvings marking markings
+    description: |
+      The symbols are ancient Martian engineering notation, used by the master
+      builders to mark their work. You recognize some of the patterns: water
+      flow indicators, structural load markers, and what appear to be system
+      diagrams. One set of symbols seems to indicate a controllable drainage
+      system - this passage may have once been subject to intentional flooding
+      and draining as part of the sewer's maintenance protocol.
 - vnum: 3161
   name: Collapsed Western Section
   description: '   This section has suffered severe collapse.  Large stones block
@@ -423,7 +490,14 @@ rooms:
     door_flag: 0
     key_vnum: -1
     to_room: 3160
-  extra_descriptions: []
+  extra_descriptions:
+  - keywords: niche niches artifact artifacts pottery containers
+    description: |
+      The wall niches contain various ancient artifacts from the early days of
+      Lesser Helium. Most are corroded beyond recognition, but some items still
+      show traces of the master craftsmanship of the ancient builders. Among the
+      broken pottery and rusted containers, you might find something of value if
+      you search carefully.
 - vnum: 3164
   name: Hidden Western Lair
   description: '   Beyond the collapsed section lies a more secure area.  This large
@@ -1976,6 +2050,8 @@ objects:
     xp_reward: 75
     discovery_bit: 32
     consume_item: false
+    reward_item1: 3237
+    reward_item2: 3238
     success_msg: "You insert the ancient iron key into the maintenance panel's lock. With a satisfying click, the corroded mechanism yields and the panel swings open, revealing a compartment that has been sealed for centuries!"
     fail_msg: "You need to be near the maintenance panel to use the key with it."
     room_msg: "$n unlocks an ancient maintenance panel with $p!"
@@ -2039,11 +2115,15 @@ objects:
   cost: 100
   rent: 25
   extra_descriptions:
-  - keywords: rope coil
-    description: 'This hemp rope is damp but still strong. It could be useful for
-      climbing or
-
-      securing items.'
+  - keywords: rope coil hemp
+    description: |
+      This hemp rope is damp but still strong, about twenty feet in length.
+      The construction is excellent - tightly woven and capable of supporting
+      significant weight. This is the kind of rope the ancient Martian engineers
+      used in their mechanical systems, particularly for operating seized
+      mechanisms through leverage. It could be looped through a pulley to
+      provide mechanical advantage for turning stubborn valve wheels or moving
+      heavy objects.
   affects: []
   special_procedure:
     type: use_target
@@ -2330,6 +2410,66 @@ objects:
       artisans. Such
 
       gems are highly prized by collectors and jewelers.'
+  affects: []
+- vnum: 3237
+  namelist: tools toolset ancient engineering maintenance
+  short_desc: an ancient engineering tool set
+  long_desc: A set of ancient engineering tools rests here, carefully preserved.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 800
+  rent: 150
+  extra_descriptions:
+  - keywords: tools toolset engineering ancient
+    description: |
+      This is a complete set of precision engineering tools from the early
+      days of Lesser Helium, over a thousand years old. The tools are made
+      of a metal alloy that has resisted corrosion remarkably well. The set
+      includes valve wrenches, calibration gauges, measurement devices, and
+      maintenance implements specific to ancient Martian water systems. To
+      a collector or modern engineer, these would be both historically
+      valuable and potentially useful - the ancient builders' techniques
+      were in many ways superior to those used today.
+  affects: []
+- vnum: 3238
+  namelist: diagram schematic blueprint paper ancient
+  short_desc: an ancient engineering diagram
+  long_desc: A weathered engineering diagram has been carefully stored here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 40
+  extra_descriptions:
+  - keywords: diagram schematic blueprint paper
+    description: |
+      The diagram is drawn on treated hide that has survived remarkably well.
+      The technical drawings are precise and detailed, showing both overview
+      and close-up views of the valve mechanism. Annotations in ancient script
+      provide operating instructions and maintenance procedures.
+      
+      The diagram shows a large valve wheel mounted horizontally, with a hook
+      and pulley assembly above it. The text explains: "When valve wheel becomes
+      seized through mineral deposit or corrosion, apply force through rope-and-
+      leverage system. Loop rope through overhead pulley, secure to wheel spoke,
+      and pull downward. Mechanical advantage will free wheel and allow operation."
+      
+      The diagram also shows the layout of maintenance compartments and their
+      lock mechanisms. This is exactly the kind of technical documentation that
+      would interest someone studying the old sewer systems.
   affects: []
 resets:
 # Close secret doors so they remain hidden
