@@ -1,0 +1,239 @@
+# Test: Deep discovery exploration in Lesser Helium Sewers
+# Tests the extra descriptions and discovery path for thorough explorers
+
+test:
+  id: test_sewers_deep_discovery_exploration
+  description: "Verify extra descriptions guide players through deep discovery path"
+  author: Integration Test Framework
+  created: 2025-10-22
+  tags: [sewers, discovery, exploration, extra_descriptions]
+
+setup:
+  character:
+    name: Explorer
+    password: test
+    class: warrior
+    level: 22  # Need level 22+ for 'load obj' command
+  start_room: 1200  # Start in well-lit Chat Room
+  gold: 0
+
+steps:
+  # Load a light source first
+  - action: command
+    command: "load obj 3225"
+    description: "Load an oil lantern for light"
+    expected:
+      - pattern: "Ok"
+
+  - action: command
+    command: "get lantern"
+    description: "Get the lantern"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "hold lantern"
+    description: "Hold the lantern for light"
+    expected:
+      - pattern: "."
+
+  # Now teleport to sewers
+  - action: command
+    command: "goto 3150"
+    description: "Teleport to Lower Sewer Access"
+    expected:
+      - pattern: "."
+
+  # Navigate to main tunnel and examine water channels
+  - action: command
+    command: "south"
+    description: "Enter main sewer tunnel"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "look channels"
+    description: "Examine water channels - should mention maintenance panel"
+    expected:
+      - pattern: "water channels"
+        message: "Should describe water channels"
+      - pattern: "panel"
+        message: "Should hint at panel"
+
+  - action: command
+    command: "look panel"
+    description: "Examine maintenance panel - should describe lock and key requirement"
+    expected:
+      - pattern: "compartment"
+        message: "Should describe compartment"
+      - pattern: "key"
+        message: "Should mention key needed"
+
+  # Navigate to spider area and look webs
+  - action: command
+    command: "east"
+    description: "Go to eastern passage"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go to spider tunnel"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "look webs"
+    description: "Examine spider webs - should mention silk can serve as rope"
+    expected:
+      - pattern: "thick and strong"
+        message: "Should describe web strength"
+      - pattern: "rope"
+        message: "Should hint at rope usage"
+
+  # Navigate to deep chamber and look valve
+  - action: command
+    command: "west"
+    description: "Return west"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go south to junction"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Continue south"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go to deep sewer chamber"
+    expected:
+      - pattern: "Deep Sewer Chamber"
+
+  - action: command
+    command: "look pipes"
+    description: "Examine drainage pipes - should mention valve"
+    expected:
+      - pattern: "drainage pipes"
+        message: "Should describe pipes"
+      - pattern: "valve"
+        message: "Should mention valve mechanism"
+
+  - action: command
+    command: "look valve"
+    description: "Examine valve mechanism - should describe pulley and rope usage"
+    expected:
+      - pattern: "valve wheel"
+        message: "Should describe valve"
+      - pattern: "pulley"
+        message: "Should mention pulley system"
+      - pattern: "rope"
+        message: "Should hint at rope usage"
+
+  # Check creature den
+  - action: command
+    command: "east"
+    description: "Go to side den"
+    expected:
+      - pattern: "Small Side Den"
+
+  - action: command
+    command: "look nest"
+    description: "Examine nest debris - should hint at collectibles"
+    expected:
+      - pattern: "nest"
+        message: "Should describe nest"
+
+  # Check deeper passage with symbols
+  - action: command
+    command: "west"
+    description: "Return west"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go to deeper passage"
+    expected:
+      - pattern: "Deeper Sewer Passage"
+
+  - action: command
+    command: "look symbols"
+    description: "Examine ancient symbols - should explain engineering notation"
+    expected:
+      - pattern: "Martian"
+        message: "Should identify symbols"
+      - pattern: "engineering"
+        message: "Should mention engineering"
+
+  # Check western tunnel claw marks
+  - action: command
+    command: "north"
+    description: "Return north"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "north"
+    description: "Continue north"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "west"
+    description: "Go west"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go to western tunnel"
+    expected:
+      - pattern: "Western Sewer Tunnel"
+
+  - action: command
+    command: "look marks"
+    description: "Examine claw marks - should warn about predators"
+    expected:
+      - pattern: "claw"
+        message: "Should describe marks"
+      - pattern: "banth"
+        message: "Should identify likely creature"
+
+  # Check storage chamber
+  - action: command
+    command: "north"
+    description: "Go back north"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "east"
+    description: "Go back east to chamber"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go south again"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "down"
+    description: "Go down to storage chamber"
+    expected:
+      - pattern: "Western Storage Chamber"
+
+  - action: command
+    command: "look niches"
+    description: "Examine wall niches - should describe ancient artifacts"
+    expected:
+      - pattern: "artifacts"
+        message: "Should describe artifacts"
