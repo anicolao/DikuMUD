@@ -75,6 +75,7 @@ void assign_command_pointers() {}
 void assign_spell_pointers() {}
 void boot_quests() {}
 void assign_quest_givers() {}
+void init_obj_spec_procs() {}
 void update_obj_file() {}
 void assign_mobiles() {}
 void assign_objects() {}

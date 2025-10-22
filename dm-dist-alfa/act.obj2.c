@@ -925,6 +925,21 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
 			sprintf(buffer,"You can't wear the %s.\n\r", fname(obj_object->name));
 			send_to_char(buffer, ch);
 		} break;
+		case HOLD: {  /* Case 17 - HOLD slot */
+			if (CAN_WEAR(obj_object,ITEM_HOLD)) {
+				if (ch->equipment[HOLD]) {
+					send_to_char("You are already holding something.\n\r", ch);
+				} else {
+					send_to_char("Ok.\n\r", ch);
+					perform_wear(ch,obj_object,keyword);
+					obj_from_char(obj_object);
+					equip_char(ch, obj_object, HOLD);
+				}
+			} else {
+				sprintf(buffer,"You can't hold the %s.\n\r", fname(obj_object->name));
+				send_to_char(buffer, ch);
+			}
+		} break;
 		default: {
 			slog("Unknown type called in wear.");
 		} break;
@@ -1022,7 +1037,7 @@ void do_grab(struct char_data *ch, char *argument, int cmd)
 	char arg2[MAX_STRING_LENGTH];
 	char buffer[MAX_STRING_LENGTH+33];
 	struct obj_data *obj_object;
-	int keyword = 13;
+	int keyword = HOLD;  /* Changed from 13 to HOLD (17) */
 
 
 	argument_interpreter(argument, arg1, arg2);
@@ -1033,7 +1048,7 @@ void do_grab(struct char_data *ch, char *argument, int cmd)
 			if (obj_object->obj_flags.type_flag == ITEM_LIGHT)
 				wear(ch, obj_object, WEAR_LIGHT);
 			else
-				wear(ch, obj_object, 13);
+				wear(ch, obj_object, HOLD);  /* Changed from 13 to HOLD */
 		} else {
 			sprintf(buffer, "You do not seem to have the '%s'.\n\r",arg1);
 			send_to_char(buffer,ch);

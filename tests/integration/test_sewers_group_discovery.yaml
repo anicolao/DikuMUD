@@ -1,0 +1,50 @@
+# Test: Group members receive discovery XP rewards
+# Tests that all grouped players in the same room get XP for discoveries
+
+test:
+  id: test_sewers_group_discovery
+  description: "Verify group members in same room receive discovery XP"
+  author: Integration Test Framework
+  created: 2025-10-21
+  tags: [sewers, discovery, special_procedure, group]
+
+setup:
+  character:
+    name: GroupLeader
+    password: test
+    class: warrior
+    level: 22  # Need level 22+ for 'load obj' command
+  start_room: 1200  # Start in well-lit Chat Room
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3224"
+    description: "Load a rope for testing"
+    expected:
+      - pattern: "."
+  
+  - action: command
+    command: "get rope"
+    description: "Get the rope"
+    expected:
+      - pattern: "."
+  
+  - action: command
+    command: "hold rope"
+    description: "Hold the rope"
+    expected:
+      - pattern: "."
+  
+  - action: command
+    command: "goto 3157"
+    description: "Teleport to Deep Sewer Chamber (valve room)"
+    expected:
+      - pattern: "."
+  
+  - action: command
+    command: "use rope valve"
+    description: "Use rope with valve - should succeed and grant XP"
+    expected:
+      - pattern: "loop the rope through the pulley"
+      - pattern: "You gain 100 experience"
