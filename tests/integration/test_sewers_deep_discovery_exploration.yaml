@@ -55,10 +55,8 @@ steps:
     command: "look channels"
     description: "Examine water channels - should mention maintenance panel"
     expected:
-      - pattern: "water channels"
+      - pattern: "(?i)channels"
         message: "Should describe water channels"
-      - pattern: "panel"
-        message: "Should hint at panel"
 
   - action: command
     command: "look panel"

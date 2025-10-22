@@ -1,0 +1,55 @@
+# Test: Basic extra description test for sewers
+# Simple test to verify extra descriptions work
+
+test:
+  id: test_sewers_extra_desc_basic
+  description: "Verify basic extra description in room 3151"
+  author: Integration Test Framework
+  created: 2025-10-22
+  tags: [sewers, extra_descriptions]
+
+setup:
+  character:
+    name: ExtraDescTester
+    password: test
+    class: warrior
+    level: 22
+  start_room: 1200
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3020"
+    description: "Load radium lamp"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "get lamp"
+    description: "Get lamp"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "hold lamp"
+    description: "Hold lamp"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "goto 3151"
+    description: "Go to room 3151"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "look"
+    description: "Look at room"
+    expected:
+      - pattern: "Main Sewer Tunnel"
+
+  - action: command
+    command: "look channel"
+    description: "Look at channel - should show extra description"
+    expected:
+      - pattern: "."
