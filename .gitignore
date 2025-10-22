@@ -8,3 +8,11 @@ dm-dist-alfa/test_dedup_lib/
 dm-dist-alfa/integration_test_outputs/
 dm-dist-alfa/integration_test_failures/
 dm-dist-alfa/dm-dist-alfa
+dm-dist-alfa/lib/tinyworld.*
+dm-dist-alfa/lib/pcobjs.obj
+dm-dist-alfa/lib/.worldfiles_built
+dm-dist-alfa/*.o
+dm-dist-alfa/dmserver
+dm-dist-alfa/delplay
+dm-dist-alfa/zone_layout_validator
+dm-dist-alfa/.validate-commands-passed
