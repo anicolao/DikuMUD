@@ -879,7 +879,9 @@ class WorldBuilder:
         """Build special procedure record."""
         lines = []
         lines.append(f"#{spec['vnum']}")
-        lines.append(f"{spec['type']} {spec['target_room']} {spec['xp_reward']} {spec['discovery_bit']} {1 if spec.get('consume_item', False) else 0}")
+        reward_item1 = spec.get('reward_item1', 0)
+        reward_item2 = spec.get('reward_item2', 0)
+        lines.append(f"{spec['type']} {spec['target_room']} {spec['xp_reward']} {spec['discovery_bit']} {1 if spec.get('consume_item', False) else 0} {reward_item1} {reward_item2}")
         lines.append(spec.get('target_keywords', ''))
         lines.append(f"{spec['success_msg']}~")
         lines.append(f"{spec['fail_msg']}~")

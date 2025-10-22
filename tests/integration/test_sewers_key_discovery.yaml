@@ -50,9 +50,19 @@ steps:
 
   - action: command
     command: "use key panel"
-    description: "Use key with panel - should succeed"
+    description: "Use key with panel - should succeed and give rewards"
     expected:
       - pattern: "insert the ancient iron key"
         message: "Should unlock panel"
       - pattern: "75 experience"
         message: "Should gain discovery XP"
+      - pattern: "ancient engineering tool set"
+        message: "Should find tool set"
+      - pattern: "ancient engineering diagram"
+        message: "Should find diagram"
+
+  - action: command
+    command: "inventory"
+    description: "Verify rewards are in inventory"
+    expected:
+      - pattern: "."

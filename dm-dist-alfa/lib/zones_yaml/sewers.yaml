@@ -2050,6 +2050,8 @@ objects:
     xp_reward: 75
     discovery_bit: 32
     consume_item: false
+    reward_item1: 3237
+    reward_item2: 3238
     success_msg: "You insert the ancient iron key into the maintenance panel's lock. With a satisfying click, the corroded mechanism yields and the panel swings open, revealing a compartment that has been sealed for centuries!"
     fail_msg: "You need to be near the maintenance panel to use the key with it."
     room_msg: "$n unlocks an ancient maintenance panel with $p!"
@@ -2408,6 +2410,66 @@ objects:
       artisans. Such
 
       gems are highly prized by collectors and jewelers.'
+  affects: []
+- vnum: 3237
+  namelist: tools toolset ancient engineering maintenance
+  short_desc: an ancient engineering tool set
+  long_desc: A set of ancient engineering tools rests here, carefully preserved.
+  action_desc: ''
+  type_flag: 1
+  extra_flags: 0
+  wear_flags: 1
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 15
+  cost: 800
+  rent: 150
+  extra_descriptions:
+  - keywords: tools toolset engineering ancient
+    description: |
+      This is a complete set of precision engineering tools from the early
+      days of Lesser Helium, over a thousand years old. The tools are made
+      of a metal alloy that has resisted corrosion remarkably well. The set
+      includes valve wrenches, calibration gauges, measurement devices, and
+      maintenance implements specific to ancient Martian water systems. To
+      a collector or modern engineer, these would be both historically
+      valuable and potentially useful - the ancient builders' techniques
+      were in many ways superior to those used today.
+  affects: []
+- vnum: 3238
+  namelist: diagram schematic blueprint paper ancient
+  short_desc: an ancient engineering diagram
+  long_desc: A weathered engineering diagram has been carefully stored here.
+  action_desc: ''
+  type_flag: 16
+  extra_flags: 0
+  wear_flags: 16385
+  value0: 0
+  value1: 0
+  value2: 0
+  value3: 0
+  weight: 1
+  cost: 200
+  rent: 40
+  extra_descriptions:
+  - keywords: diagram schematic blueprint paper
+    description: |
+      The diagram is drawn on treated hide that has survived remarkably well.
+      The technical drawings are precise and detailed, showing both overview
+      and close-up views of the valve mechanism. Annotations in ancient script
+      provide operating instructions and maintenance procedures.
+      
+      The diagram shows a large valve wheel mounted horizontally, with a hook
+      and pulley assembly above it. The text explains: "When valve wheel becomes
+      seized through mineral deposit or corrosion, apply force through rope-and-
+      leverage system. Loop rope through overhead pulley, secure to wheel spoke,
+      and pull downward. Mechanical advantage will free wheel and allow operation."
+      
+      The diagram also shows the layout of maintenance compartments and their
+      lock mechanisms. This is exactly the kind of technical documentation that
+      would interest someone studying the old sewer systems.
   affects: []
 resets:
 # Close secret doors so they remain hidden
