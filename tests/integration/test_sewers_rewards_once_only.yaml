@@ -1,0 +1,67 @@
+# Test: Verify rewards are only given once per character
+# Tests that using the iron key a second time doesn't give duplicate rewards
+
+test:
+  id: test_sewers_rewards_once_only
+  description: "Verify reward items are only given on first discovery"
+  author: Integration Test Framework
+  created: 2025-10-22
+  tags: [sewers, discovery, special_procedure, rewards]
+
+setup:
+  character:
+    name: RewardTester
+    password: test
+    class: warrior
+    level: 22
+  start_room: 1200
+  gold: 0
+
+steps:
+  - action: command
+    command: "load obj 3221"
+    description: "Load iron key"
+    expected:
+      - pattern: "Ok"
+
+  - action: command
+    command: "get key"
+    description: "Get the key"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "hold key"
+    description: "Hold the key"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "goto 3151"
+    description: "Go to panel room"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "use key panel"
+    description: "Use key first time - should get rewards"
+    expected:
+      - pattern: "75 experience"
+        message: "Should gain XP"
+      - pattern: "tool set"
+        message: "Should find tool set"
+      - pattern: "diagram"
+        message: "Should find diagram"
+
+  - action: command
+    command: "use key panel"
+    description: "Use key second time - should NOT get rewards again"
+    expected:
+      - pattern: "insert the ancient iron key"
+        message: "Panel still opens"
+
+  - action: command
+    command: "inventory"
+    description: "Check inventory - should have one set of rewards"
+    expected:
+      - pattern: "."
