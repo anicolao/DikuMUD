@@ -490,6 +490,12 @@ void point_update( void )
 
         for(jj = j->contains; jj; jj = next_thing2) {
 					next_thing2 = jj->next_content; /* Next in inventory */
+					
+					/* Check if we're about to move next_thing - if so, skip ahead */
+					if (jj == next_thing && next_thing) {
+						next_thing = next_thing->next;
+					}
+					
 					obj_from_obj(jj);
 
 					if (j->in_obj)

@@ -72,9 +72,14 @@ void assign_mobiles(void)
 /* assign special procedures to objects */
 void assign_objects(void)
 {
-	int board(struct char_data *ch, int cmd, char *arg);
-
-	obj_index[real_object(3099)].func = board;
+	/* Note: Object 3099 is a copper lamp that can be picked up.
+	 * The board special procedure should not be assigned to it.
+	 * If a bulletin board is needed, create a proper board object
+	 * that cannot be taken (no ITEM_TAKE flag) and assign the 
+	 * special procedure to that object instead.
+	 */
+	/* int board(struct char_data *ch, int cmd, char *arg); */
+	/* obj_index[real_object(3099)].func = board; */
 }
 
 
