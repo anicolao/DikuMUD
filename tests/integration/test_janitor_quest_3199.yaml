@@ -1,0 +1,67 @@
+# Test: Janitor Quest 3199 - Engineering Diagram Retrieval
+# Tests the hidden quest from janitor for returning the ancient engineering diagram
+
+test:
+  id: test_janitor_quest_3199
+  description: "Verify Quest 3199 can be obtained and completed with engineering diagram"
+  author: Integration Test Framework
+  created: 2025-10-22
+  tags: [quest, janitor, sewers, discovery]
+
+setup:
+  character:
+    name: QuestTester
+    password: test
+    class: warrior
+    level: 22
+  start_room: 3006  # Janitor's room in Lesser Helium
+  gold: 0
+
+steps:
+  # Get the quest from janitor
+  - action: command
+    command: "quest list"
+    description: "Check available quests from janitor"
+    expected:
+      - pattern: "3199"
+        message: "Quest 3199 should be available"
+
+  - action: command
+    command: "quest get 3199"
+    description: "Accept Quest 3199 from janitor"
+    expected:
+      - pattern: "cleaning these sewers"
+        message: "Should get janitor's quest text"
+      - pattern: "engineering documents"
+        message: "Should mention engineering documents"
+
+  # Get the diagram (simulate finding it)
+  - action: command
+    command: "load obj 3238"
+    description: "Load engineering diagram"
+    expected:
+      - pattern: "Ok"
+
+  - action: command
+    command: "get diagram"
+    description: "Get the diagram"
+    expected:
+      - pattern: "."
+
+  # Complete the quest
+  - action: command
+    command: "quest complete 3199"
+    description: "Complete Quest 3199 with diagram"
+    expected:
+      - pattern: "exactly what I've been looking for"
+        message: "Should get completion text"
+      - pattern: "400 experience"
+        message: "Should gain 400 XP"
+      - pattern: "200 gold"
+        message: "Should gain 200 gold"
+
+  - action: command
+    command: "inventory"
+    description: "Check reward item received"
+    expected:
+      - pattern: "."

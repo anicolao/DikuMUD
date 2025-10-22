@@ -42,7 +42,8 @@ void assign_mobiles(void)
 
 	mob_index[real_mobile(3060)].func = cityguard;
 	mob_index[real_mobile(3067)].func = cityguard;
-	mob_index[real_mobile(3061)].func = janitor;
+	/* Mob 3061 (janitor) is a quest giver, so no special procedure */
+	/* mob_index[real_mobile(3061)].func = janitor; */
 	mob_index[real_mobile(3062)].func = fido;
 	mob_index[real_mobile(3066)].func = fido;
 
