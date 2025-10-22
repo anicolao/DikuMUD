@@ -104,13 +104,7 @@ steps:
 
   - action: command
     command: "south"
-    description: "Continue south"
-    expected:
-      - pattern: "."
-
-  - action: command
-    command: "south"
-    description: "Go to deep sewer chamber"
+    description: "Continue south to deep sewer chamber"
     expected:
       - pattern: "."
 
@@ -190,14 +184,20 @@ steps:
       - pattern: "."
 
   - action: command
+    command: "north"
+    description: "Return to junction"
+    expected:
+      - pattern: "."
+
+  - action: command
     command: "west"
-    description: "Go west"
+    description: "Go west to dark corridor"
     expected:
       - pattern: "."
 
   - action: command
     command: "south"
-    description: "Go to western tunnel"
+    description: "Go south to western tunnel"
     expected:
       - pattern: "."
 
@@ -213,19 +213,31 @@ steps:
   # Check storage chamber
   - action: command
     command: "north"
-    description: "Go back north"
+    description: "Go back north to dark corridor"
     expected:
       - pattern: "."
 
   - action: command
     command: "east"
-    description: "Go back east to chamber"
+    description: "Go back east to junction"
     expected:
       - pattern: "."
 
   - action: command
     command: "south"
-    description: "Go south again"
+    description: "Go south"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go south to deep chamber"
+    expected:
+      - pattern: "."
+
+  - action: command
+    command: "south"
+    description: "Go south to deeper passage"
     expected:
       - pattern: "."
 
