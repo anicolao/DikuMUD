@@ -575,7 +575,11 @@ int game_loop(int s)
 		{
 			next_to_process = point->next;
 
-			if ((--(point->wait) <= 0) && get_from_q(&point->input, comm))
+			/* Decrement wait counter */
+			point->wait--;
+			
+			/* Process command if wait is done and there's a command in the queue */
+			if ((point->wait <= 0) && get_from_q(&point->input, comm))
 			{
 				if (point->character && point->connected == CON_PLYNG &&
 					point->character->specials.was_in_room !=	NOWHERE)
