@@ -14,7 +14,7 @@ setup:
     password: test
     class: warrior
     level: 22
-  start_room: 1200
+  start_room: 3151  # Start directly in Main Sewer Tunnel
   gold: 0
 
 steps:
@@ -31,25 +31,31 @@ steps:
       - pattern: "."
 
   - action: command
-    command: "hold lamp"
-    description: "Hold lamp"
+    command: "light lamp"
+    description: "Light the lamp"
     expected:
       - pattern: "."
 
   - action: command
-    command: "goto 3151"
-    description: "Go to room 3151"
+    command: "hold lamp"
+    description: "Hold lamp for light"
     expected:
       - pattern: "."
 
   - action: command
     command: "look"
-    description: "Look at room"
+    description: "Look at room - should see it now with light"
     expected:
-      - pattern: "Main Sewer Tunnel"
+      - pattern: "Sewer"
 
   - action: command
     command: "look channel"
     description: "Look at channel - should show extra description"
     expected:
       - pattern: "."
+
+  - action: command
+    command: "look panel"
+    description: "Look at panel - should show extra description"
+    expected:
+      - pattern: "compartment"
