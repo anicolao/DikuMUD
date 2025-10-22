@@ -2075,7 +2075,7 @@ mobiles:
       This humble red Martian servant has copper-red skin and wears a plain,
       worn harness. He moves about quietly, cleaning and maintaining the
       establishment with practiced efficiency.
-    action_flags: 0
+    action_flags: 1
     affection_flags: 0
     alignment: 900
     type: "simple"
@@ -2642,6 +2642,33 @@ mobiles:
       position: 8
       default_position: 8
       sex: 2
+  - vnum: 3145
+    namelist: "retired janitor old red martian man"
+    short_desc: "a retired old janitor"
+    long_desc: "An old retired janitor sits here, nursing a drink."
+    detailed_desc: |-
+      This elderly red Martian has copper-red skin weathered by years of hard
+      work. His worn harness shows the stains and scars of decades spent
+      maintaining the city's buildings and sewers. Now retired, he spends his
+      days in the inn's common room, sipping cheap wine and telling stories to
+      anyone who will listen. His eyes still light up when he talks about the
+      old sewer systems - he was one of the few who took pride in understanding
+      those ancient tunnels.
+    action_flags: 0
+    affection_flags: 0
+    alignment: 900
+    type: "simple"
+    simple:
+      level: 1
+      thac0: 20
+      ac: 9
+      hp_dice: "2d6+10"
+      damage_dice: "1d5+0"
+      gold: 15
+      experience: 100
+      position: 5
+      default_position: 5
+      sex: 1
 objects:
   - vnum: 3000
     namelist: "water barrel"
@@ -4536,6 +4563,11 @@ resets:
     arg3: 3007
   - command: "M"
     if_flag: 0
+    arg1: 3145
+    arg2: 1
+    arg3: 3007
+  - command: "M"
+    if_flag: 0
     arg1: 3065
     arg2: 2
     arg3: 3044
@@ -4999,15 +5031,15 @@ quests:
     complete_text: "The beast-handler accepts the dried meat with a grateful smile. 'Excellent! This will keep my calots well-fed and ready for duty. You've done Helium a great service. Take this as thanks.'"
     fail_text: "The beast-handler looks worried. 'My calots still need feeding. Please help if you can find dried meat from the carrion birds in the sewers.'"
   - qnum: 3199
-    giver: 3061
+    giver: 3145
     type: 62
     duration: 96
-    target: 3061
+    target: 3145
     item: 3238
     flags: 0
     reward_exp: 400
     reward_gold: 200
     reward_item: 3020
-    quest_text: "The janitor looks up from his work and studies you curiously. 'You know, I've been cleaning these sewers for years, and I'm certain there's more down there than anyone realizes. I've found fragments of old technical diagrams, but never a complete one. If you're the exploring type, and you happen to find any ancient engineering documents in the depths, I'd be very interested. I'd make it worth your while.'"
-    complete_text: "The janitor's eyes light up as he examines the diagram. 'This is exactly what I've been looking for! This shows the whole valve control system, the maintenance access points, everything! The city engineers will be fascinated by this. Thank you - you've helped uncover a piece of Lesser Helium's history. Here, take this as a token of my appreciation.'"
-    fail_text: "The janitor shakes his head. 'Still no luck finding those old documents? They're down there somewhere, in the deeper sections. Keep looking if you're interested.'"
+    quest_text: "The retired janitor looks up from his drink and studies you curiously. 'You know, I spent decades cleaning these sewers, and I'm certain there's more down there than anyone realizes. I've found fragments of old technical diagrams over the years, but never a complete one. If you're the exploring type, and you happen to find any ancient engineering documents in the depths, I'd be very interested. I'd make it worth your while.'"
+    complete_text: "The retired janitor's eyes light up as he examines the diagram. 'This is exactly what I've been looking for! This shows the whole valve control system, the maintenance access points, everything! The city engineers will be fascinated by this. Thank you - you've helped uncover a piece of Lesser Helium's history. Here, take this as a token of my appreciation.'"
+    fail_text: "The retired janitor shakes his head. 'Still no luck finding those old documents? They're down there somewhere, in the deeper sections. Keep looking if you're interested.'"

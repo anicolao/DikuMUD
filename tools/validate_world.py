@@ -36,7 +36,7 @@ class WorldValidator:
         # This list should be kept in sync with dm-dist-alfa/spec_assign.c
         self.assigned_spec_procedures = {
             1, 3005, 3020, 3021, 3022, 3023, 3024, 3025, 3026, 3027,
-            3060, 3062, 3066, 3067, 3143
+            3060, 3061, 3062, 3066, 3067, 3143
         }
     
     def error(self, msg: str):

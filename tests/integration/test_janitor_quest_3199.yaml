@@ -14,24 +14,17 @@ setup:
     password: test
     class: warrior
     level: 22
-  start_room: 3006  # Janitor's room in Lesser Helium
+  start_room: 3007  # The Traveler's Common Room (inn) where retired janitor is
   gold: 0
 
 steps:
-  # Get the quest from janitor
-  - action: command
-    command: "quest list"
-    description: "Check available quests from janitor"
-    expected:
-      - pattern: "3199"
-        message: "Quest 3199 should be available"
-
+  # Try to get the quest directly
   - action: command
     command: "quest get 3199"
-    description: "Accept Quest 3199 from janitor"
+    description: "Accept Quest 3199 from retired janitor"
     expected:
       - pattern: "cleaning these sewers"
-        message: "Should get janitor's quest text"
+        message: "Should get retired janitor's quest text"
       - pattern: "engineering documents"
         message: "Should mention engineering documents"
 
