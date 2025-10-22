@@ -241,6 +241,14 @@ void reset_time(void)
 
 	time_info = mud_time_passed(time(0), beginning_of_time);
 
+	/* Apply initial hour override if specified */
+	extern int initial_hour_override;
+	if (initial_hour_override >= 0) {
+		time_info.hours = initial_hour_override;
+		sprintf(buf, "   Overriding initial game hour to %d.", initial_hour_override);
+		slog(buf);
+	}
+
 /*
 	FILE *f1;
 	long current_time;
