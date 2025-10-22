@@ -14,13 +14,13 @@ setup:
     password: test
     class: warrior
     level: 22
-  start_room: 3007  # The Traveler's Common Room (inn) where retired janitor is
+  start_room: 3007 # The Traveler's Common Room (inn) where retired janitor is
   gold: 0
 
 steps:
   # Try to get the quest directly
   - action: command
-    command: "quest get 3199"
+    command: "ask retired quest"
     description: "Accept Quest 3199 from retired janitor"
     expected:
       - pattern: "cleaning these sewers"
@@ -43,7 +43,7 @@ steps:
 
   # Complete the quest
   - action: command
-    command: "quest complete 3199"
+    command: "give diagram retired"
     description: "Complete Quest 3199 with diagram"
     expected:
       - pattern: "exactly what I've been looking for"
