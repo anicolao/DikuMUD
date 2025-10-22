@@ -14,31 +14,31 @@ setup:
     password: test
     class: warrior
     level: 22
-  start_room: 3151  # Start directly in Main Sewer Tunnel
+  start_room: 1200  # Start in well-lit Chat Room
   gold: 0
 
 steps:
   - action: command
-    command: "load obj 3020"
-    description: "Load radium lamp"
+    command: "load obj 3531"
+    description: "Load glow crystal (same as guildmaster gives new players)"
     expected:
       - pattern: "."
 
   - action: command
-    command: "get lamp"
-    description: "Get lamp"
+    command: "get crystal"
+    description: "Get crystal"
     expected:
       - pattern: "."
 
   - action: command
-    command: "light lamp"
-    description: "Light the lamp"
+    command: "hold crystal"
+    description: "Hold crystal for light"
     expected:
       - pattern: "."
 
   - action: command
-    command: "hold lamp"
-    description: "Hold lamp for light"
+    command: "goto 3151"
+    description: "Teleport to Main Sewer Tunnel"
     expected:
       - pattern: "."
 

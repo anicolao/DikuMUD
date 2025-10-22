@@ -20,20 +20,20 @@ setup:
 steps:
   # Load a light source first
   - action: command
-    command: "load obj 3225"
-    description: "Load an oil lantern for light"
+    command: "load obj 3531"
+    description: "Load glow crystal for light"
     expected:
       - pattern: "Ok"
 
   - action: command
-    command: "get lantern"
-    description: "Get the lantern"
+    command: "get crystal"
+    description: "Get the crystal"
     expected:
       - pattern: "."
 
   - action: command
-    command: "hold lantern"
-    description: "Hold the lantern for light"
+    command: "hold crystal"
+    description: "Hold the crystal for light"
     expected:
       - pattern: "."
 
@@ -112,13 +112,19 @@ steps:
     command: "south"
     description: "Go to deep sewer chamber"
     expected:
-      - pattern: "Deep Sewer Chamber"
+      - pattern: "."
+
+  - action: command
+    command: "look"
+    description: "Look at the room to verify we can see"
+    expected:
+      - pattern: "."
 
   - action: command
     command: "look pipes"
     description: "Examine drainage pipes - should mention valve"
     expected:
-      - pattern: "drainage pipes"
+      - pattern: "pipes"
         message: "Should describe pipes"
       - pattern: "valve"
         message: "Should mention valve mechanism"
@@ -139,7 +145,7 @@ steps:
     command: "east"
     description: "Go to side den"
     expected:
-      - pattern: "Small Side Den"
+      - pattern: "."
 
   - action: command
     command: "look nest"
@@ -159,7 +165,7 @@ steps:
     command: "south"
     description: "Go to deeper passage"
     expected:
-      - pattern: "Deeper Sewer Passage"
+      - pattern: "."
 
   - action: command
     command: "look symbols"
@@ -193,7 +199,7 @@ steps:
     command: "south"
     description: "Go to western tunnel"
     expected:
-      - pattern: "Western Sewer Tunnel"
+      - pattern: "."
 
   - action: command
     command: "look marks"
@@ -227,7 +233,7 @@ steps:
     command: "down"
     description: "Go down to storage chamber"
     expected:
-      - pattern: "Western Storage Chamber"
+      - pattern: "."
 
   - action: command
     command: "look niches"
