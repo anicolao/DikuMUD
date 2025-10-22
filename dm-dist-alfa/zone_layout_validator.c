@@ -27,6 +27,9 @@
 extern struct room_data *world;
 extern int top_of_world;
 
+/* Initial hour override variable - not used by validator but needed by db.o */
+int initial_hour_override = -1;
+
 /* Coordinate structure for rooms */
 struct room_coordinate {
 	int x;
