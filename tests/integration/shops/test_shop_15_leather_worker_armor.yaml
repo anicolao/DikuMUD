@@ -23,6 +23,7 @@ setup:
     level: 1
   start_room: 3035  # The Leather Worker's Shop
   gold: 1000
+  initial_hour: 10  # Set to hour when shop is open (8-14, 15-21)
 
 steps:
   # Step 1: Verify the leather worker is present
@@ -32,13 +33,13 @@ steps:
       - pattern: "Leather|leather|Worker|worker"
         message: "Leather worker should be visible in the room"
 
-  # Step 2: Verify shopkeeper responds (shop has limited hours: 8-14 and 15-21)
+  # Step 2: Verify shopkeeper responds and shows items (shop is now open)
   - action: command
-    description: "Try to list items (shop has limited operating hours)"
+    description: "List items for sale (shop is set to open hours)"
     command: "list"
     expected:
-      - pattern: "studded|harness|helm|boots|gloves|sleeves|Come back later"
-        message: "Shop should respond (either with items or closed message)"
+      - pattern: "studded|harness|helm|boots|gloves|sleeves"
+        message: "Shop should list studded armor items"
 
 result:
   should_pass: true

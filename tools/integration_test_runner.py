@@ -49,6 +49,7 @@ class ServerManager:
         self.port = None
         self.spin_mode = spin_mode  # Enable spin mode for faster testing
         self.test_extensions = None  # Test-specific zone extensions
+        self.initial_hour = None  # Initial game hour to set (None = use default)
         # Background output capture
         self.stdout_data = []
         self.stderr_data = []
@@ -268,6 +269,8 @@ class ServerManager:
         cmd = [self.server_path, '-p', str(port), '-d', 'test_lib']
         if self.spin_mode:
             cmd.append('-spin')  # Enable spin mode for maximum speed
+        if self.initial_hour is not None:
+            cmd.extend(['-h', str(self.initial_hour)])  # Set initial game hour
         
         if os.getenv('DEBUG_OUTPUT'):
             print(f"\n***** Starting server with command: {' '.join(cmd)}")
@@ -1176,6 +1179,14 @@ class TestRunner:
                     'extension_file': ext_file
                 })
             self.server_manager.set_test_extensions(test_extensions)
+        
+        # Check for initial_hour in setup
+        if 'setup' in test_def and 'initial_hour' in test_def['setup']:
+            self.server_manager.initial_hour = test_def['setup']['initial_hour']
+            print(f"  Setting initial game hour to {self.server_manager.initial_hour}")
+        else:
+            # Reset to None for tests that don't specify it
+            self.server_manager.initial_hour = None
         
         try:
             self.server_manager.create_test_player(char_name, char_pass, start_room, char_level)

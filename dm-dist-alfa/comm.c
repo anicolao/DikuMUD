@@ -49,6 +49,7 @@ extern int errno;    /* Why isn't this done in errno.h on alfa??? */
 extern struct room_data *world;	  /* In db.c */
 extern int top_of_world;            /* In db.c */
 extern struct time_info_data time_info;  /* In db.c */
+int initial_hour_override = -1;  /* -1 means no override */
 extern char help[];
 extern bool wizlock;
 
@@ -139,6 +140,24 @@ int main(int argc, char **argv)
 					exit(0);
 				}
 			break;
+			case 'h':
+				if (*(argv[pos] + 2))
+					initial_hour_override = atoi(argv[pos] + 2);
+				else if (++pos < argc)
+					initial_hour_override = atoi(argv[pos]);
+				else
+				{
+					slog("Hour value expected after option -h.");
+					exit(0);
+				}
+				if (initial_hour_override < 0 || initial_hour_override > 23)
+				{
+					slog("Hour value must be between 0 and 23.");
+					exit(0);
+				}
+				sprintf(buf, "Initial game hour set to %d.", initial_hour_override);
+				slog(buf);
+			break;
 			case 's':
 				/* Check if this is -spin or just -s */
 				if (strcmp(argv[pos], "-spin") == 0)
@@ -175,7 +194,7 @@ int main(int argc, char **argv)
 	if (pos < argc)
 		if (!isdigit(*argv[pos]))
 		{
-			fprintf(stderr, "Usage: %s [-l] [-s] [-spin] [-d pathname] [-p port] [ port # ]\n", 
+			fprintf(stderr, "Usage: %s [-l] [-s] [-spin] [-d pathname] [-h hour] [-p port] [ port # ]\n", 
 				argv[0]);
 			exit(0);
 		}
